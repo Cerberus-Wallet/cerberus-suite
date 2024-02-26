@@ -6,7 +6,9 @@ export const GoBackIcon = () => {
     const navigation = useNavigation();
 
     const handleGoBack = () => {
-        navigation.goBack();
+        if (navigation.canGoBack()) {
+            navigation.goBack();
+        }
     };
 
     return (
