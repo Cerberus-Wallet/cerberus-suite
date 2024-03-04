@@ -1,19 +1,71 @@
 name: "[Test] suite-native Android E2E"
-on:
-  push:
-    branches:
-      - "*"
+on: [push, pull_request]
 
 jobs:
-  run_android_e2e:
-    timeout-minutes: 90
-    runs-on: ubuntu-latest
+  # build_test_app:
+  #   timeout-minutes: 90
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout project
+  #       uses: actions/checkout@v4
+  #       with:
+  #         submodules: "true"
 
+  #     - name: Get build hash
+  #       id: get_build_hash
+  #       run: echo "build_hash=${{hashFiles('suite-native/app/package.json')}}-${{hashFiles('suite-native/app/app.config.ts')}}" >> $GITHUB_OUTPUT
+
+  #     - name: Get build hash
+  #       run: echo "${{steps.get_build_hash.outputs.build_hash}}"
+
+  #     - name: Install node and yarn
+  #       uses: actions/setup-node@v4
+  #       with:
+  #         node-version-file: ".nvmrc"
+  #         cache: yarn
+
+  #     - name: Cache node modules
+  #       uses: actions/cache@v4
+  #       with:
+  #         path: node_modules
+  #         key: node_modules-${{hashFiles('yarn.lock')}}
+  #         restore-keys: node_modules- # Take any latest cache if failed to find it for current yarn.lock
+
+  #     - name: Install Yarn dependencies
+  #       run: yarn install && yarn build:libs
+
+  #     - name: Setup Java
+  #       uses: actions/setup-java@v3
+  #       with:
+  #         distribution: temurin
+  #         java-version: 17
+
+  #     - name: Prebuild native expo project
+  #       working-directory: ./suite-native/app
+  #       run: yarn prebuild
+
+  #     - name: Detox build
+  #       run: ../../node_modules/.bin/detox build --configuration android.emu.release
+  #       working-directory: ./suite-native/app
+
+  #     - name: Save build to cache
+  #       uses: actions/cache/save@v4
+  #       with:
+  #         path: |
+  #           suite-native/app/android/app/build/
+  #         key: android_test_build
+
+  run_android_e2e_tests:
+    runs-on: ubuntu-latest
+    # needs: build_test_app
     steps:
       - name: Checkout project
         uses: actions/checkout@v4
         with:
           submodules: "true"
+
+      - name: Check disk
+        run: df -h
 
       - name: Install node and yarn
         uses: actions/setup-node@v4
@@ -21,41 +73,53 @@ jobs:
           node-version-file: ".nvmrc"
           cache: yarn
 
-      - name: Install Yarn dependencies
-        run: yarn install
+      - name: Check disk
+        run: df -h
 
-      - name: Setup Java
-        uses: actions/setup-java@v3
+      - name: Cache node modules
+        uses: actions/cache@v4
         with:
-          distribution: temurin
-          java-version: 17
+          path: node_modules
+          key: node_modules-${{hashFiles('yarn.lock')}}
+          restore-keys: node_modules- # Take any latest cache if failed to find it for current yarn.lock
 
-      - name: Prebuild native expo project
+      # - name: Yarn install
+      #   run: yarn install
+
+      - name: Check disk
+        run: df -h
+
+      - name: Expo prebuild
         working-directory: ./suite-native/app
         run: yarn prebuild
 
-      - name: Cache Detox build
-        id: cache-detox-build
-        uses: actions/cache@v3
-        with:
-          path: android/build
-          key: ${{ runner.os }}-detox-build
-          restore-keys: |
-            ${{ runner.os }}-detox-build
-
-      - name: Detox build
-        run: yarn ../../node_modules/.bin/detox build --configuration android.emu.release
-        working-directory: ./suite-native/app
-
-      - name: Get device name
+      - name: Get device name from detox config file
         id: device
         run: node -e "console.log('AVD_NAME=' + require('./suite-native/app/.detoxrc').devices.emulator.device.avdName)" >> $GITHUB_OUTPUT
 
-      - name: Detox test
+      - name: Enable KVM
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+
+      - name: read build from cache
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            suite-native/app/android/app/build/
+          key: android_test_build
+
+      - name: Run Detox E2E Android tests
         uses: reactivecircus/android-emulator-runner@v2
-        working-directory: ./suite-native/app
         with:
           api-level: 31
           arch: x86_64
+          target: default
+          working-directory: suite-native/app
+          ram-size: 4096M
+          force-avd-creation: true
+          emulator-boot-timeout: 900 # 15min
+          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           avd-name: ${{ steps.device.outputs.AVD_NAME }}
-          script: yarn ../../node_modules/.bin/detox test --configuration android.emu.release --headless --record-logs all
+          script: df -h && ../../node_modules/.bin/detox test --configuration android.emu.release --headless --record-logs all
