@@ -151,7 +151,7 @@ export const SettingsDevice = () => {
 
             <SettingsSection title={<Translation id="TR_ADVANCED" />} icon="GHOST">
                 <WipeDevice isDeviceLocked={isDeviceLocked} />
-                <WipeCode isDeviceLocked={isDeviceLocked} />
+                {!bootloaderMode && !initializeMode && <WipeCode isDeviceLocked={isDeviceLocked} />}
                 <CustomFirmware />
                 {supportsDeviceAuthentication && <DeviceAuthenticityOptOut />}
             </SettingsSection>
