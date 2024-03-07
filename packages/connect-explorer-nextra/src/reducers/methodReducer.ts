@@ -1,41 +1,31 @@
 import {
-    TAB_CHANGE,
     FIELD_CHANGE,
     FIELD_DATA_CHANGE,
     ADD_BATCH,
     REMOVE_BATCH,
     RESPONSE,
+    SET_METHOD,
 } from '../actions/methodActions';
-import { ON_LOCATION_CHANGE } from '../actions';
-import config from '../data/methods/index';
 import type { Action, Field, FieldWithBundle } from '../types';
 
 export interface MethodState {
     name?: string;
-    url?: string;
-    description?: string;
     submitButton: any;
     fields: (Field<any> | FieldWithBundle<any>)[];
     params: any;
-    tab: string;
     javascriptCode?: string;
     response?: any;
     addressValidation?: boolean;
-    docs?: string;
 }
 
 const initialState: MethodState = {
     name: undefined,
-    url: undefined,
-    description: undefined,
     submitButton: null,
     fields: [],
     params: {},
-    tab: 'code',
     javascriptCode: undefined,
     response: undefined,
     addressValidation: false,
-    docs: undefined,
 };
 
 const getParam = (field: Field<any>, $params: Record<string, any> = {}) => {
@@ -214,9 +204,7 @@ const onFieldDataChange = (state: MethodState, _field: any, data: any) => {
 };
 
 // initialization
-const getMethodState = (url: string) => {
-    // find data in config
-    const methodConfig = config.find(m => m.url === url);
+const getMethodState = (methodConfig?: any) => {
     if (!methodConfig) return initialState;
     // clone object
     const state = {
@@ -226,7 +214,6 @@ const getMethodState = (url: string) => {
 
     // set default values
     state.fields = state.fields.map(f => setAffectedValues(state, prepareBundle(f)));
-    state.tab = initialState.tab;
 
     // set method params
     return updateParams(state);
@@ -255,14 +242,8 @@ const onRemoveBatch = (state: MethodState, _field: any, _batch: any) => {
 
 export default function method(state: MethodState = initialState, action: Action) {
     switch (action.type) {
-        case ON_LOCATION_CHANGE:
-            return getMethodState(action.payload.pathname);
-
-        case TAB_CHANGE:
-            return {
-                ...state,
-                tab: action.tab,
-            };
+        case SET_METHOD:
+            return getMethodState(action.methodConfig);
 
         case FIELD_CHANGE:
             return onFieldChange(state, action.field, action.value);
