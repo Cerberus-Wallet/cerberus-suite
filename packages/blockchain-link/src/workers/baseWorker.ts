@@ -94,13 +94,19 @@ export abstract class BaseWorker<API> {
             }
 
             const endpoints = prioritizeEndpoints(urls);
-            this.connectPromise = this.connectRecursive(endpoints).then(api => {
-                this.debug('Connected');
-                this.api = api;
-                this.connectPromise = undefined;
+            this.connectPromise = this.connectRecursive(endpoints)
+                .then(api => {
+                    this.debug('Connected');
+                    this.api = api;
+                    this.connectPromise = undefined;
 
-                return api;
-            });
+                    return api;
+                })
+                .catch(error => {
+                    // Rethrow error and clean connectPromise, so it does not block future tries
+                    this.connectPromise = undefined;
+                    throw error;
+                });
         }
 
         return this.connectPromise;
