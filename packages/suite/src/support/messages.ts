@@ -2546,7 +2546,7 @@ export default defineMessages({
     TR_ENTER_WIPECODE: {
         defaultMessage: 'Enter Wipe Code',
         description: 'Text for Header and Button when submitting wipe code',
-        id: 'TR_ENTER_PIN',
+        id: 'TR_ENTER_WIPECODE',
     },
 
     TR_ENTER_SEED_WORDS_INSTRUCTION: {
