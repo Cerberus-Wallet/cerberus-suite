@@ -70,6 +70,7 @@ jobs:
           url: https://${{ env.DEV_SERVER_HOSTNAME }}/connect/${{ steps.extract_branch.outputs.branch }}
           __TREZOR_CONNECT_SRC: https://${{ env.DEV_SERVER_HOSTNAME }}/connect/${{ steps.extract_branch.outputs.branch }}/
           CONNECT_EXPLORER_ASSET_PREFIX: https://${{ env.DEV_SERVER_HOSTNAME }}/connect/${{ steps.extract_branch.outputs.branch }}/
+          CONNECT_EXPLORER_BASE_PATH: /connect/${{ steps.extract_branch.outputs.branch }}
         run: |
           yarn workspace @trezor/connect-explorer-nextra build
 
@@ -96,7 +97,7 @@ jobs:
           cp -R ./packages/connect-iframe/build/* tmp_build_directory/
           cp -R ./packages/connect-popup/build/* tmp_build_directory/
           cp -R ./packages/connect-web/build/* tmp_build_directory/
-          cp -R ./packages/connect-explorer/build/* tmp_build_directory/
+          cp -R ./packages/connect-explorer-nextra/build/* tmp_build_directory/
           aws s3 sync --delete tmp_build_directory/ "${DEPLOY_PATH}"
 
       - name: Upload artifacts
