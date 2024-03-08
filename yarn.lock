@@ -10032,6 +10032,8 @@ __metadata:
     redux-logger: "npm:^3.0.6"
     redux-thunk: "npm:^2.4.2"
     styled-components: "npm:^5.3.10"
+    webpack: "npm:^5.90.3"
+    webpack-cli: "npm:^5.1.4"
   languageName: unknown
   linkType: soft
 

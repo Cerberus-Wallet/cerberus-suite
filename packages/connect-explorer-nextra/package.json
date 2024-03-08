@@ -6,6 +6,7 @@
     "scripts": {
         "dev": "next",
         "build": "next build && rm -rf build && mv out build",
+        "build:webextension": "yarn build && yarn g:rimraf build-webextension && TS_NODE_PROJECT=\"tsconfig.json\" yarn webpack --config ./webpack/webextension.webpack.config.ts && bash ./webpack/replace-next-filenames.sh",
         "start": "next start",
         "lint:js": "yarn g:eslint '**/*{.ts,.tsx}'",
         "lint:styles": "npx stylelint './src/**/*{.ts,.tsx}' --cache --config ../../.stylelintrc",
@@ -28,7 +29,9 @@
         "redux": "^4.2.1",
         "redux-logger": "^3.0.6",
         "redux-thunk": "^2.4.2",
-        "styled-components": "^5.3.10"
+        "styled-components": "^5.3.10",
+        "webpack": "^5.90.3",
+        "webpack-cli": "^5.1.4"
     },
     "devDependencies": {
         "@types/redux-logger": "^3.0.11"
