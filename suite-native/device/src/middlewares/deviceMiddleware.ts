@@ -13,6 +13,7 @@ import {
 } from '@suite-common/wallet-core';
 import { FeatureFlag, selectIsFeatureFlagEnabled } from '@suite-native/feature-flags';
 import { requestPrioritizedDeviceAccess } from '@suite-native/device-mutex';
+import { selectIsOnboardingFinished } from '@suite-native/module-settings';
 
 import { wipeDisconnectedDevicesDataThunk } from '../deviceThunks';
 
@@ -52,8 +53,10 @@ export const prepareDeviceMiddleware = createMiddlewareWithExtraDeps(
             dispatch(selectDeviceThunk(action.payload));
         }
 
+        const isOnboardingFinished = selectIsOnboardingFinished(getState());
+
         // Request authorization of a newly acquired device.
-        if (deviceActions.selectDevice.match(action) && !device?.state) {
+        if (deviceActions.selectDevice.match(action) && !device?.state && isOnboardingFinished) {
             requestPrioritizedDeviceAccess(() => dispatch(authorizeDevice()));
         }
 
