@@ -44,7 +44,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          echo -e "\enableScripts: false" >> .yarnrc.yml
+          echo -e "\nenableScripts: false" >> .yarnrc.yml
           yarn workspaces focus @trezor/connect-iframe @trezor/connect-web @trezor/connect-popup @trezor/connect-webextension @trezor/connect-explorer-nextra
 
       - name: Build connect-web
