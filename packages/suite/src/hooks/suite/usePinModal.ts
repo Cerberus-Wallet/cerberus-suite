@@ -6,22 +6,24 @@ export const usePin = () => {
 
     const pinRequestType = buttonRequests[buttonRequests.length - 1];
     const invalidCounter = buttonRequests.filter(r => r.code === 'ui-invalid_pin').length || 0;
+    const newPinRequestTypes = ['PinMatrixRequestType_NewFirst', 'PinMatrixRequestType_NewSecond'];
+    const newWipeCodeRequestTypes = [
+        'PinMatrixRequestType_WipeCodeFirst',
+        'PinMatrixRequestType_WipeCodeSecond',
+    ];
 
-    const isExtended =
-        (pinRequestType?.code &&
-            ['PinMatrixRequestType_NewFirst', 'PinMatrixRequestType_NewSecond'].includes(
-                pinRequestType.code,
-            )) ||
+    // 3 cases when we want to show left column
+    // 1) and 2) - Setting a new pin: 1 entry, 2nd (confirmation) entry
+    // 3) Invalid pin (It doesn't seem to work anymore) instead separate PinMismatchModal is shown
+    const isRequestingNewPinCode =
+        (pinRequestType?.code && newPinRequestTypes.includes(pinRequestType.code)) ||
         invalidCounter > 0;
 
     const isWipeCode =
-        pinRequestType?.code &&
-        ['PinMatrixRequestType_WipeCodeFirst', 'PinMatrixRequestType_WipeCodeSecond'].includes(
-            pinRequestType?.code,
-        );
+        pinRequestType?.code && newWipeCodeRequestTypes.includes(pinRequestType?.code);
 
     return {
-        isExtended,
+        isRequestingNewPinCode,
         isWipeCode,
         invalidCounter,
     };

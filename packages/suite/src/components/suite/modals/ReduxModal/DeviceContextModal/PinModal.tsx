@@ -22,15 +22,11 @@ interface PinModalProps extends ModalProps {
 }
 
 export const PinModal = ({ device, ...rest }: PinModalProps) => {
-    const { isExtended, isWipeCode, invalidCounter } = usePin();
+    const { isRequestingNewPinCode, isWipeCode, invalidCounter } = usePin();
 
     if (!device.features) return null;
 
     const onCancel = () => TrezorConnect.cancel('pin-cancelled');
-
-    // 3 cases when we want to show left column
-    // 1) and 2) - Setting a new pin: 1 entry, 2nd (confirmation) entry
-    // 3) Invalid pin (It doesn't seem to work anymore) instead separate PinMismatchModal is shown
 
     return (
         <StyledModal
@@ -44,10 +40,14 @@ export const PinModal = ({ device, ...rest }: PinModalProps) => {
             onCancel={onCancel}
             isCancelable
             data-test="@modal/pin"
-            $isExtended={isExtended}
+            $isExtended={isRequestingNewPinCode}
             {...rest}
         >
-            <PinMatrix device={device} hideExplanation={!isExtended} invalid={invalidCounter > 0} />
+            <PinMatrix
+                device={device}
+                hideExplanation={!isRequestingNewPinCode}
+                invalid={invalidCounter > 0}
+            />
         </StyledModal>
     );
 };

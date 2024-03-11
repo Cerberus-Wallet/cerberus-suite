@@ -56,11 +56,12 @@ export const PinInput = ({ isSubmitting, onPinSubmit }: PinInputProps) => {
     const getTranslationId = () => {
         if (isSubmitting) {
             return 'TR_VERIFYING_PIN';
-        } else if (isWipeCode) {
-            return 'TR_ENTER_WIPECODE';
-        } else {
-            return 'TR_ENTER_PIN';
         }
+        if (isWipeCode) {
+            return 'TR_ENTER_WIPECODE';
+        }
+
+        return 'TR_ENTER_PIN';
     };
 
     const onPinBackspace = useCallback(() => {
