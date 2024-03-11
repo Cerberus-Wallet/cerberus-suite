@@ -25,6 +25,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           lfs: true
+          submodules: recursive
 
       - name: Configure aws credentials
         uses: aws-actions/configure-aws-credentials@v4
@@ -41,13 +42,21 @@ jobs:
         with:
           node-version-file: ".nvmrc"
 
+      - name: Install dependencies
+        run: |
+          echo -e "\enableScripts: false" >> .yarnrc.yml
+          yarn workspaces focus @trezor/connect-iframe @trezor/connect-web @trezor/connect-popup @trezor/connect-webextension @trezor/connect-explorer-nextra
+
       - name: Build connect-web
         run: |
-          git submodule update --init --recursive
-          yarn install --immutable
-          yarn build:libs
           yarn workspace @trezor/connect-web build
+
+      - name: Build connect-iframe
+        run: |
           yarn workspace @trezor/connect-iframe build
+
+      - name: Build connect-popup
+        run: |
           yarn workspace @trezor/connect-popup build
 
       - name: Build connect-explorer
@@ -61,7 +70,6 @@ jobs:
         run: |
           yarn workspace @trezor/connect-explorer-nextra build
 
-      # this step should upload build result to s3 bucket DEV_SERVER_HOSTNAME using awscli
       - name: Upload connect-explorer-nextra to dev.suite.sldev.cz
         env:
           DEPLOY_PATH: s3://${{ env.DEV_SERVER_HOSTNAME }}/connect-nextra/${{ steps.extract_branch.outputs.branch }}
