@@ -95,11 +95,11 @@ const Container = styled.div`
     position: relative;
     background: ${({ theme }) => theme.backgroundSurfaceElevation2};
     border-radius: 12px;
-    flex: 1;
     width: 100%;
     padding: 10px;
     word-wrap: break-word;
     word-break: break-all;
+    min-height: 150px;
 
     ul,
     ol {

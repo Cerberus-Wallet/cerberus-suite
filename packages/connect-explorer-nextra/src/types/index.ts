@@ -55,6 +55,7 @@ interface Batch<Value> {
 export interface FieldWithBundle<Value> {
     name: 'bundle';
     type: 'array';
+    optional?: boolean;
     items: Field<Value>[][];
     batch: Batch<Value>[];
 }
