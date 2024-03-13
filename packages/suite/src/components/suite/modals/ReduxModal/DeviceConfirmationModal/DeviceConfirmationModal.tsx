@@ -3,7 +3,7 @@ import { NoBackupModal } from 'src/components/suite/modals';
 
 import type { ReduxModalProps } from '../ReduxModal';
 
-/** Modals requested from `trezor-connect` */
+/** Modals requested from `cerberus-connect` */
 export const DeviceConfirmationModal = ({
     windowType,
 }: ReduxModalProps<typeof MODAL.CONTEXT_DEVICE_CONFIRMATION>) => {

@@ -16,7 +16,7 @@ export default {
             description: "m/44'/1729'/0'",
             params: {
                 path: "m/44'/1729'/0'",
-                showOnTrezor: false,
+                showOnCerberus: false,
             },
             result: {
                 address: 'tz1ckrgqGGGBt4jGDmwFhtXc1LNpZJUnA9F2',
@@ -26,7 +26,7 @@ export default {
             description: "m/44'/1729'/1'",
             params: {
                 path: "m/44'/1729'/1'",
-                showOnTrezor: false,
+                showOnCerberus: false,
             },
             result: {
                 address: 'tz1cTfmc5uuBr2DmHDgkXTAoEcufvXLwq5TP',
@@ -36,7 +36,7 @@ export default {
             description: "m/44'/1729'",
             params: {
                 path: "m/44'/1729'",
-                showOnTrezor: false,
+                showOnCerberus: false,
             },
             result: false,
         },
@@ -44,7 +44,7 @@ export default {
             description: "m/44'/1729'/0",
             params: {
                 path: "m/44'/1729'/0",
-                showOnTrezor: false,
+                showOnCerberus: false,
             },
             result: false,
         },

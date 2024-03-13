@@ -3,11 +3,11 @@ import { createPortal } from 'react-dom';
 import { useIntl } from 'react-intl';
 import styled from 'styled-components';
 
-import TrezorConnect from '@cerberus/connect';
+import CerberusConnect from '@cerberus/connect';
 import {
     ConfirmOnDevice,
-    Modal as TrezorModal,
-    ModalProps as TrezorModalProps,
+    Modal as CerberusModal,
+    ModalProps as CerberusModalProps,
 } from '@cerberus/components';
 import { Translation } from 'src/components/suite';
 import { selectIsActionAbortable } from 'src/reducers/suite/suiteReducer';
@@ -18,7 +18,7 @@ import { useModalTarget } from 'src/support/suite/ModalContext';
 import { ModalEnvironment } from '../../ModalEnvironment';
 import { Modal } from '../../Modal/Modal';
 
-const StyledTrezorModal = styled(TrezorModal)`
+const StyledCerberusModal = styled(CerberusModal)`
     ${Modal.Header} {
         padding: 24px 24px 0;
     }
@@ -33,7 +33,7 @@ export interface DevicePromptModalProps {
     isPillShown?: boolean;
     isConfirmed?: boolean;
     pillTitle?: string;
-    renderer?: ComponentType<TrezorModalProps>;
+    renderer?: ComponentType<CerberusModalProps>;
     isAbortable?: boolean;
     onAbort?: () => void;
     className?: string;
@@ -58,7 +58,7 @@ const DevicePromptModalRenderer = ({
     const intl = useIntl();
 
     if (!onAbort) {
-        onAbort = () => TrezorConnect.cancel(intl.formatMessage(messages.TR_CANCELLED));
+        onAbort = () => CerberusConnect.cancel(intl.formatMessage(messages.TR_CANCELLED));
     }
 
     if (!modalTarget) return null;
@@ -67,7 +67,7 @@ const DevicePromptModalRenderer = ({
 
     const modalComponent = (
         <ModalEnvironment>
-            <StyledTrezorModal
+            <StyledCerberusModal
                 modalPrompt={
                     isPillShown && (
                         <ConfirmOnDevice

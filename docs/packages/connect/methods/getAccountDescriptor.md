@@ -3,7 +3,7 @@
 Gets an descriptor of specified account.
 
 ```javascript
-const result = await TrezorConnect.getAccountDescriptor(params);
+const result = await CerberusConnect.getAccountDescriptor(params);
 ```
 
 ### Params
@@ -20,7 +20,7 @@ const result = await TrezorConnect.getAccountDescriptor(params);
 Get descriptor of first bitcoin account
 
 ```javascript
-TrezorConnect.getAccountDescriptor({
+CerberusConnect.getAccountDescriptor({
     path: "m/49'/0'/0'",
     coin: 'btc',
 });

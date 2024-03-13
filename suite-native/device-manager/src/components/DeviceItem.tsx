@@ -12,13 +12,13 @@ import {
     selectDeviceThunk,
 } from '@suite-common/wallet-core';
 import { Icon } from '@suite-common/icons';
-import { TrezorDevice } from '@suite-common/suite-types';
+import { CerberusDevice } from '@suite-common/suite-types';
 
 import { useDeviceManager } from '../hooks/useDeviceManager';
 import { DeviceItemContent } from './DeviceItemContent';
 
 type DeviceItemProps = {
-    id: TrezorDevice['id'];
+    id: CerberusDevice['id'];
 };
 
 const deviceItemWrapperStyle = prepareNativeStyle(utils => ({

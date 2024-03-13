@@ -301,7 +301,7 @@ const fixtures = [
         },
     },
     {
-        // taken from TrezorConnect fixtures signTransactionsMultisig.js. There is interesting part signatures: ['', '', ''];
+        // taken from CerberusConnect fixtures signTransactionsMultisig.js. There is interesting part signatures: ['', '', ''];
         name: 'MultisigRedeemScriptType',
         message: {
             HDNodeType,
@@ -401,7 +401,7 @@ const fixtures = [
                 },
             ],
             // point of interest.
-            // signatures are repeated bytes. if they sent from TrezorConnect as empty strings, encoding them as bytes makes trezor not accept this message
+            // signatures are repeated bytes. if they sent from CerberusConnect as empty strings, encoding them as bytes makes cerberus not accept this message
             signatures: ['', '', ''],
             m: 2,
         },

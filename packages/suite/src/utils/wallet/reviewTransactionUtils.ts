@@ -3,7 +3,7 @@ import { fromWei, toWei } from 'web3-utils';
 import { CardanoOutput } from '@cerberus/connect';
 import { getFirmwareVersion } from '@cerberus/device-utils';
 import { versionUtils } from '@cerberus/utils';
-import { TrezorDevice } from 'src/types/suite/index';
+import { CerberusDevice } from 'src/types/suite/index';
 import { FormState, PrecomposedTransactionFinal, TxFinalCardano } from 'src/types/wallet/sendForm';
 import { Account } from 'src/types/wallet/index';
 import { getShortFingerprint, isCardanoTx } from '@suite-common/wallet-utils';
@@ -17,14 +17,14 @@ export const getOutputState = (index: number, buttonRequestsCount: number) => {
     return undefined;
 };
 
-export const getIsUpdatedSendFlow = (device: TrezorDevice) => {
+export const getIsUpdatedSendFlow = (device: CerberusDevice) => {
     const firmwareVersion = getFirmwareVersion(device);
 
     return versionUtils.isNewerOrEqual(firmwareVersion, '2.6.0');
 };
 
 export const getIsUpdatedEthereumSendFlow = (
-    device: TrezorDevice,
+    device: CerberusDevice,
     network: Account['networkType'],
 ) => {
     if (network !== 'ethereum') return false;
@@ -314,7 +314,7 @@ const constructNewFlow = ({
 export const constructOutputs = ({
     device,
     ...params
-}: ConstructOutputsParams & { device: TrezorDevice }) => {
+}: ConstructOutputsParams & { device: CerberusDevice }) => {
     const isUpdatedSendFlow = getIsUpdatedSendFlow(device); // >= 2.6.0
     const isUpdatedEthereumSendFlow = getIsUpdatedEthereumSendFlow(
         device,

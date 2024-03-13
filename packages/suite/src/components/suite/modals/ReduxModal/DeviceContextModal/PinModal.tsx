@@ -2,12 +2,12 @@ import { useSelector } from 'react-redux';
 
 import styled from 'styled-components';
 
-import TrezorConnect from '@cerberus/connect';
+import CerberusConnect from '@cerberus/connect';
 import { selectDeviceButtonRequests } from '@suite-common/wallet-core';
 
 import { PinMatrix, Modal, Translation, ModalProps } from 'src/components/suite';
 import { PIN_MATRIX_MAX_WIDTH } from 'src/components/suite/PinMatrix/PinMatrix';
-import { TrezorDevice } from 'src/types/suite';
+import { CerberusDevice } from 'src/types/suite';
 
 const StyledModal = styled(Modal)<{ $isExtended: boolean }>`
     width: unset;
@@ -21,7 +21,7 @@ const StyledModal = styled(Modal)<{ $isExtended: boolean }>`
 `;
 
 interface PinModalProps extends ModalProps {
-    device: TrezorDevice;
+    device: CerberusDevice;
 }
 
 export const PinModal = ({ device, ...rest }: PinModalProps) => {
@@ -32,7 +32,7 @@ export const PinModal = ({ device, ...rest }: PinModalProps) => {
 
     if (!device.features) return null;
 
-    const onCancel = () => TrezorConnect.cancel('pin-cancelled');
+    const onCancel = () => CerberusConnect.cancel('pin-cancelled');
 
     // 3 cases when we want to show left column
     // 1) and 2) - Setting a new pin: 1 entry, 2nd (confirmation) entry

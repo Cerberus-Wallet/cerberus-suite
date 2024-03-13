@@ -37,7 +37,7 @@ export * from './components/modals/Modal/Backdrop';
 export * from './components/modals/DialogModal/DialogModal';
 export * from './components/assets/CoinLogo/CoinLogo';
 export * from './components/assets/AssetShareIndicator/AssetShareIndicator';
-export * from './components/assets/TrezorLogo/TrezorLogo';
+export * from './components/assets/CerberusLogo/CerberusLogo';
 export * from './components/loaders/Spinner/Spinner';
 export * from './components/loaders/ProgressBar/ProgressBar';
 export * from './components/loaders/ProgressPie/ProgressPie';

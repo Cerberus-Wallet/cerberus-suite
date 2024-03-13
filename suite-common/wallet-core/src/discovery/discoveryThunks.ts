@@ -1,9 +1,9 @@
 import { createThunk } from '@suite-common/redux-utils';
 import { DiscoveryStatus } from '@suite-common/wallet-constants';
 import { notificationsActions } from '@suite-common/toast-notifications';
-import TrezorConnect, { AccountInfo, BundleProgress, UI } from '@cerberus/connect';
-import { TrezorDevice } from '@suite-common/suite-types';
-import { getDerivationType, isTrezorConnectBackendType } from '@suite-common/wallet-utils';
+import CerberusConnect, { AccountInfo, BundleProgress, UI } from '@cerberus/connect';
+import { CerberusDevice } from '@suite-common/suite-types';
+import { getDerivationType, isCerberusConnectBackendType } from '@suite-common/wallet-utils';
 import { Discovery, DiscoveryItem, PartialDiscovery } from '@suite-common/wallet-types';
 import { getTxsPerPage } from '@suite-common/suite-utils';
 import { networksCompatibility, NetworkSymbol } from '@suite-common/wallet-config';
@@ -34,7 +34,7 @@ export const LIMIT = 10;
 
 export const filterUnavailableNetworks = (
     enabledNetworks: NetworkSymbol[],
-    device?: TrezorDevice,
+    device?: CerberusDevice,
 ) =>
     networksCompatibility.filter(n => {
         const firmwareVersion = getFirmwareVersion(device);
@@ -47,7 +47,7 @@ export const filterUnavailableNetworks = (
                 versionUtils.isNewerOrEqual(firmwareVersion, n.support[internalModel])); // device version is newer or equal to support field in networks => supported
 
         return (
-            isTrezorConnectBackendType(n.backendType) && // exclude accounts with unsupported backend type
+            isCerberusConnectBackendType(n.backendType) && // exclude accounts with unsupported backend type
             enabledNetworks.includes(n.symbol) &&
             !n.isHidden &&
             !device?.unavailableCapabilities?.[n.accountType!] && // exclude by account types (ex: taproot)
@@ -169,7 +169,7 @@ export const stopDiscoveryThunk = createThunk(
                     status: DiscoveryStatus.STOPPING,
                 }),
             );
-            TrezorConnect.cancel('discovery_interrupted');
+            CerberusConnect.cancel('discovery_interrupted');
 
             return discovery.running.promise;
         }
@@ -178,7 +178,7 @@ export const stopDiscoveryThunk = createThunk(
 
 export const getBundleThunk = createThunk(
     `${DISCOVERY_MODULE_PREFIX}/getBundle`,
-    ({ discovery, device }: { discovery: Discovery; device: TrezorDevice }, { getState }) => {
+    ({ discovery, device }: { discovery: Discovery; device: CerberusDevice }, { getState }) => {
         const bundle: DiscoveryItem[] = [];
         const accounts = selectAccounts(getState());
         // find all accounts
@@ -245,10 +245,10 @@ export const getBundleThunk = createThunk(
 export const getAvailableCardanoDerivationsThunk = createThunk(
     `${DISCOVERY_MODULE_PREFIX}/getAvailableCardanoDerivations`,
     async (
-        { deviceState, device }: { deviceState: string; device: TrezorDevice },
+        { deviceState, device }: { deviceState: string; device: CerberusDevice },
         { dispatch },
     ): Promise<('normal' | 'legacy' | 'ledger')[] | undefined> => {
-        // If icarus and icarus-trezor derivations return same pub key
+        // If icarus and icarus-cerberus derivations return same pub key
         // we can skip derivation of the latter as it would discover same accounts.
         // Ledger derivation will always result in different pub key except in shamir where all derivations are the same
         const commonParams = {
@@ -258,24 +258,24 @@ export const getAvailableCardanoDerivationsThunk = createThunk(
             skipFinalReload: true,
             path: "m/1852'/1815'/0'",
         };
-        const icarusPubKeyResult = await TrezorConnect.cardanoGetPublicKey({
+        const icarusPubKeyResult = await CerberusConnect.cardanoGetPublicKey({
             ...commonParams,
             derivationType: getDerivationType('normal'),
         });
 
-        const icarusTrezorPubKeyResult = await TrezorConnect.cardanoGetPublicKey({
+        const icarusCerberusPubKeyResult = await CerberusConnect.cardanoGetPublicKey({
             ...commonParams,
             derivationType: getDerivationType('legacy'),
         });
 
-        const ledgerPubKeyResult = await TrezorConnect.cardanoGetPublicKey({
+        const ledgerPubKeyResult = await CerberusConnect.cardanoGetPublicKey({
             ...commonParams,
             derivationType: getDerivationType('ledger'),
         });
 
         if (
             !icarusPubKeyResult.success ||
-            !icarusTrezorPubKeyResult.success ||
+            !icarusCerberusPubKeyResult.success ||
             !ledgerPubKeyResult.success
         ) {
             let error: string | undefined;
@@ -284,7 +284,7 @@ export const getAvailableCardanoDerivationsThunk = createThunk(
             // extract error from first failed cardanoGetPublicKey request
             const derivationFail = [
                 icarusPubKeyResult,
-                icarusTrezorPubKeyResult,
+                icarusCerberusPubKeyResult,
                 ledgerPubKeyResult,
             ].find(r => !r.success);
             if (derivationFail && !derivationFail.success) {
@@ -305,14 +305,14 @@ export const getAvailableCardanoDerivationsThunk = createThunk(
         }
 
         const icarusPubKey = icarusPubKeyResult.payload.publicKey;
-        const icarusTrezorPubKey = icarusTrezorPubKeyResult.payload.publicKey;
+        const icarusCerberusPubKey = icarusCerberusPubKeyResult.payload.publicKey;
         const ledgerPubKey = ledgerPubKeyResult.payload.publicKey;
 
-        if (icarusPubKey === icarusTrezorPubKey && icarusPubKey === ledgerPubKey) {
+        if (icarusPubKey === icarusCerberusPubKey && icarusPubKey === ledgerPubKey) {
             // all pub keys are the same
             return ['normal'];
         }
-        if (icarusPubKey === icarusTrezorPubKey) {
+        if (icarusPubKey === icarusCerberusPubKey) {
             // ledger pub key is different
             return ['normal', 'ledger'];
         }
@@ -398,7 +398,7 @@ export const startDiscoveryThunk = createThunk(
             discovery.networks.find(n => n === 'ada' || n === 'tada') &&
             availableCardanoDerivations === undefined
         ) {
-            // check if discovery of legacy (icarus-trezor) or ledger accounts is needed and update discovery accordingly
+            // check if discovery of legacy (icarus-cerberus) or ledger accounts is needed and update discovery accordingly
             availableCardanoDerivations = await dispatch(
                 getAvailableCardanoDerivationsThunk({ deviceState, device }),
             ).unwrap();
@@ -427,7 +427,7 @@ export const startDiscoveryThunk = createThunk(
         if (bundle.length === 0) {
             if (discovery.status <= DiscoveryStatus.RUNNING && device.connected) {
                 // call getFeatures to release device session
-                await TrezorConnect.getFeatures({
+                await CerberusConnect.getFeatures({
                     device,
                     keepSession: false,
                     useEmptyPassphrase: device.useEmptyPassphrase,
@@ -475,8 +475,8 @@ export const startDiscoveryThunk = createThunk(
             );
         };
 
-        TrezorConnect.on<AccountInfo | null>(UI.BUNDLE_PROGRESS, onBundleProgress);
-        const result = await TrezorConnect.getAccountInfo({
+        CerberusConnect.on<AccountInfo | null>(UI.BUNDLE_PROGRESS, onBundleProgress);
+        const result = await CerberusConnect.getAccountInfo({
             device,
             bundle,
             keepSession: true,
@@ -484,7 +484,7 @@ export const startDiscoveryThunk = createThunk(
             useEmptyPassphrase: device.useEmptyPassphrase,
         });
 
-        TrezorConnect.off(UI.BUNDLE_PROGRESS, onBundleProgress);
+        CerberusConnect.off(UI.BUNDLE_PROGRESS, onBundleProgress);
 
         // process response
         if (result.success) {
@@ -537,7 +537,7 @@ export const startDiscoveryThunk = createThunk(
                     if (!coins || !Array.isArray(coins)) {
                         // throw error to prevent execution. error will be processed in lower block
                         throw new Error(
-                            `Unexpected JSON error response from TrezorConnect: ${result.payload.error}`,
+                            `Unexpected JSON error response from CerberusConnect: ${result.payload.error}`,
                         );
                     }
                     const failed: Discovery['failed'] = coins.map(c => ({
@@ -573,7 +573,7 @@ export const startDiscoveryThunk = createThunk(
 
             if (result.payload.error && device.connected) {
                 // call getFeatures to release device session
-                await TrezorConnect.getFeatures({
+                await CerberusConnect.getFeatures({
                     device,
                     keepSession: false,
                     useEmptyPassphrase: device.useEmptyPassphrase,
@@ -601,7 +601,7 @@ export const startDiscoveryThunk = createThunk(
 export const createDiscoveryThunk = createThunk(
     `${DISCOVERY_MODULE_PREFIX}/create`,
     (
-        { deviceState, device }: { deviceState: string; device: TrezorDevice },
+        { deviceState, device }: { deviceState: string; device: CerberusDevice },
         { dispatch, getState, extra },
     ) => {
         const {

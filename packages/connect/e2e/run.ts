@@ -3,7 +3,7 @@ import { runCLI, getVersion as getJestVersion } from 'jest';
 import webpack from 'webpack';
 import karma from 'karma';
 
-import { TrezorUserEnvLink, Firmwares } from '@cerberus/trezor-user-env-link';
+import { CerberusUserEnvLink, Firmwares } from '@cerberus/cerberus-user-env-link';
 
 import argv from './jest.config';
 
@@ -12,8 +12,8 @@ const firmwareUrl = process.env.TESTS_FIRMWARE_URL;
 const firmwareModel = process.env.TESTS_FIRMWARE_MODEL;
 
 /**
- * Translate test command arguments into trezor-user-env options.
- * TODO: this code might be refactored and moved into TrezorUserEnvLink class later
+ * Translate test command arguments into cerberus-user-env options.
+ * TODO: this code might be refactored and moved into CerberusUserEnvLink class later
  */
 const getEmulatorOptions = (availableFirmwares: Firmwares) => {
     const getLatestFirmware = (model: keyof Firmwares) =>
@@ -64,15 +64,15 @@ const getEmulatorOptions = (availableFirmwares: Firmwares) => {
 };
 
 (async () => {
-    // Before actual tests start, establish connection with trezor-user-env
-    await TrezorUserEnvLink.connect();
+    // Before actual tests start, establish connection with cerberus-user-env
+    await CerberusUserEnvLink.connect();
 
     // Cerberus-user-env loads available firmwares upon start allowing us to translate process.env variables
     // into specific firmware versions
-    if (!TrezorUserEnvLink.firmwares) {
+    if (!CerberusUserEnvLink.firmwares) {
         throw new Error('firmwares not loaded');
     }
-    const emulatorStartOpts = getEmulatorOptions(TrezorUserEnvLink.firmwares);
+    const emulatorStartOpts = getEmulatorOptions(CerberusUserEnvLink.firmwares);
 
     argv.globals = {
         emulatorStartOpts,

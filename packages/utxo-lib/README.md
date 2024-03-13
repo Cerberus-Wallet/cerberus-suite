@@ -22,7 +22,7 @@ _You probably don't want to use this package directly. Try one of the alternativ
 This is the fifth and hopefully the ultimate attempt to fork and maintain `bitcoinjs-lib`.
 
 1. https://www.npmjs.com/package/bitcoinjs-lib-zcash
-1. https://github.com/Cerberus-Wallet/bitcoinjs-trezor
+1. https://github.com/Cerberus-Wallet/bitcoinjs-cerberus
 1. https://github.com/BitGo/bitgo-utxo-lib
 1. https://github.com/Cerberus-Wallet/cerberus-utxo-lib
 

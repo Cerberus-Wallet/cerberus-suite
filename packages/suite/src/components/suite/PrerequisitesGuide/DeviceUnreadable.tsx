@@ -12,7 +12,7 @@ import {
 } from 'src/components/suite/troubleshooting/tips';
 import { useDispatch } from 'src/hooks/suite';
 import { notificationsActions } from '@suite-common/toast-notifications';
-import type { TrezorDevice } from 'src/types/suite';
+import type { CerberusDevice } from 'src/types/suite';
 
 // linux web
 const UdevWeb = () => (
@@ -98,7 +98,7 @@ const UdevDesktop = () => {
 };
 
 interface DeviceUnreadableProps {
-    device?: TrezorDevice; // this should be actually UnreadableDevice, but it is not worth type casting
+    device?: CerberusDevice; // this should be actually UnreadableDevice, but it is not worth type casting
     isWebUsbTransport: boolean;
 }
 
@@ -116,7 +116,7 @@ export const DeviceUnreadable = ({ device, isWebUsbTransport }: DeviceUnreadable
         );
     }
 
-    // this error is dispatched by trezord when udev rules are missing
+    // this error is dispatched by cerberusd when udev rules are missing
     if (isLinux() && device?.error === 'LIBUSB_ERROR_ACCESS') {
         return <> {isDesktop() ? <UdevDesktop /> : <UdevWeb />}</>;
     }

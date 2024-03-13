@@ -3,7 +3,7 @@
 Display native script components on Cerberus, display the calculated native script hash and return the hash to the caller.
 
 ```javascript
-const result = await TrezorConnect.cardanoGetNativeScriptHash(params);
+const result = await CerberusConnect.cardanoGetNativeScriptHash(params);
 ```
 
 ### Params
@@ -33,7 +33,7 @@ const result = await TrezorConnect.cardanoGetNativeScriptHash(params);
 Get native script hash of a simple PUB_KEY script:
 
 ```javascript
-TrezorConnect.cardanoGetNativeScriptHash({
+CerberusConnect.cardanoGetNativeScriptHash({
     script: {
         type: CardanoNativeScriptType.PUB_KEY,
         keyHash: 'c4b9265645fde9536c0795adbcc5291767a0c61fd62448341d7e0386',
@@ -45,7 +45,7 @@ TrezorConnect.cardanoGetNativeScriptHash({
 Get native script hash of a nested script:
 
 ```javascript
-TrezorConnect.cardanoGetAddress({
+CerberusConnect.cardanoGetAddress({
     script: {
         type: CardanoNativeScriptType.ALL,
         scripts: [

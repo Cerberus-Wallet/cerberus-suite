@@ -5,7 +5,7 @@ import {
     firmwareActionsPrefix,
 } from '@suite-common/wallet-core';
 import * as deviceUtils from '@suite-common/suite-utils';
-import TrezorConnect from '@cerberus/connect';
+import CerberusConnect from '@cerberus/connect';
 import { analytics, EventType } from '@cerberus/suite-analytics';
 import { notificationsActions } from '@suite-common/toast-notifications';
 
@@ -16,11 +16,11 @@ import * as DEVICE from 'src/constants/suite/device';
 import { createThunk } from '@suite-common/redux-utils';
 
 export const applySettings =
-    (params: Parameters<typeof TrezorConnect.applySettings>[0]) =>
+    (params: Parameters<typeof CerberusConnect.applySettings>[0]) =>
     async (dispatch: Dispatch, getState: GetState) => {
         const device = selectDevice(getState());
         if (!device) return;
-        const result = await TrezorConnect.applySettings({
+        const result = await CerberusConnect.applySettings({
             device: {
                 path: device.path,
             },
@@ -36,13 +36,13 @@ export const applySettings =
     };
 
 export const changePin =
-    (params: Parameters<typeof TrezorConnect.changePin>[0] = {}, skipSuccessToast?: boolean) =>
+    (params: Parameters<typeof CerberusConnect.changePin>[0] = {}, skipSuccessToast?: boolean) =>
     async (dispatch: Dispatch, getState: GetState) => {
         const device = selectDevice(getState());
 
         if (!device) return;
 
-        const result = await TrezorConnect.changePin({
+        const result = await CerberusConnect.changePin({
             device: {
                 path: device.path,
             },
@@ -69,13 +69,13 @@ export const changePin =
     };
 
 export const changeWipeCode =
-    ({ remove }: Parameters<typeof TrezorConnect.changeWipeCode>[0] = {}) =>
+    ({ remove }: Parameters<typeof CerberusConnect.changeWipeCode>[0] = {}) =>
     async (dispatch: Dispatch, getState: GetState) => {
         const device = selectDevice(getState());
 
         if (!device) return;
 
-        const result = await TrezorConnect.changeWipeCode({
+        const result = await CerberusConnect.changeWipeCode({
             device: {
                 path: device.path,
             },
@@ -102,7 +102,7 @@ export const wipeDevice = () => async (dispatch: Dispatch, getState: GetState) =
     // collect devices with old "device.id" to be removed (see description below)
     const deviceInstances = deviceUtils.getDeviceInstances(device, devices);
 
-    const result = await TrezorConnect.wipeDevice({
+    const result = await CerberusConnect.wipeDevice({
         device: {
             path: device.path,
         },
@@ -145,7 +145,7 @@ export const wipeDevice = () => async (dispatch: Dispatch, getState: GetState) =
 };
 
 export const resetDevice =
-    (params: Parameters<typeof TrezorConnect.resetDevice>[0] = {}) =>
+    (params: Parameters<typeof CerberusConnect.resetDevice>[0] = {}) =>
     async (dispatch: Dispatch, getState: GetState) => {
         const device = selectDevice(getState());
 
@@ -158,7 +158,7 @@ export const resetDevice =
             passphrase_protection: DEVICE.DEFAULT_PASSPHRASE_PROTECTION,
         };
 
-        const result = await TrezorConnect.resetDevice({
+        const result = await CerberusConnect.resetDevice({
             device: {
                 path: device.path,
             },
@@ -184,12 +184,12 @@ export const resetDevice =
 
 export const changeLanguage = createThunk(
     `${firmwareActionsPrefix}/update-firmware-language`,
-    async (params: Parameters<typeof TrezorConnect.changeLanguage>[0], { dispatch, getState }) => {
+    async (params: Parameters<typeof CerberusConnect.changeLanguage>[0], { dispatch, getState }) => {
         const device = selectDevice(getState());
 
         if (!device) return;
 
-        const result = await TrezorConnect.changeLanguage({
+        const result = await CerberusConnect.changeLanguage({
             device: {
                 path: device.path,
             },

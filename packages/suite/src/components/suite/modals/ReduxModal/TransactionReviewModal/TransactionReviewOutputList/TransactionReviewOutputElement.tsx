@@ -81,7 +81,7 @@ const OutputRight = styled.div`
     text-align: left;
 `;
 
-const CardanoTrezorAmountWrapper = styled.div`
+const CardanoCerberusAmountWrapper = styled.div`
     margin-top: 10px;
 `;
 
@@ -241,22 +241,22 @@ export const TransactionReviewOutputElement = forwardRef<
                                 </TruncateWrapper>
                             </OutputValue>
                             {network === 'cardano' && cardanoFingerprint && (
-                                <CardanoTrezorAmountWrapper>
+                                <CardanoCerberusAmountWrapper>
                                     <OutputHeadline>
                                         <Translation id="TR_CARDANO_FINGERPRINT_HEADLINE" />
                                     </OutputHeadline>
                                     <OutputValue>{cardanoFingerprint}</OutputValue>
-                                </CardanoTrezorAmountWrapper>
+                                </CardanoCerberusAmountWrapper>
                             )}
                             {network === 'cardano' && token && token.decimals !== 0 && (
-                                <CardanoTrezorAmountWrapper>
+                                <CardanoCerberusAmountWrapper>
                                     <OutputHeadline>
                                         <Translation id="TR_CARDANO_CERBERUS_AMOUNT_HEADLINE" />
                                     </OutputHeadline>
                                     <OutputValue>
                                         {amountToSatoshi(line.value, token.decimals)}
                                     </OutputValue>
-                                </CardanoTrezorAmountWrapper>
+                                </CardanoCerberusAmountWrapper>
                             )}
                         </OutputRightLine>
                     ))}

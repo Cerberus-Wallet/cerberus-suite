@@ -22,7 +22,7 @@ describe('Sign/Verify actions', () => {
     });
 
     it('showAddress', async () => {
-        testMocks.setTrezorConnectFixtures({
+        testMocks.setCerberusConnectFixtures({
             success: true,
             payload: { address: ADDRESS },
         });
@@ -31,7 +31,7 @@ describe('Sign/Verify actions', () => {
     });
 
     it('sign', async () => {
-        testMocks.setTrezorConnectFixtures({
+        testMocks.setCerberusConnectFixtures({
             success: true,
             payload: {
                 address: ADDRESS,
@@ -43,7 +43,7 @@ describe('Sign/Verify actions', () => {
     });
 
     it('verify', async () => {
-        testMocks.setTrezorConnectFixtures({
+        testMocks.setCerberusConnectFixtures({
             success: true,
             payload: { message: MESSAGE },
         });

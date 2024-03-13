@@ -1,12 +1,12 @@
 const GITHUB_REPO_INFO = {
-    owner: 'trezor',
-    repo: 'trezor-suite',
+    owner: 'cerberus',
+    repo: 'cerberus-suite',
 };
 
 export const GITHUB_REPO_URL = `https://github.com/${GITHUB_REPO_INFO.owner}/${GITHUB_REPO_INFO.repo}`;
 export const GITHUB_API_REPO_URL = `https://api.github.com/repos/${GITHUB_REPO_INFO.owner}/${GITHUB_REPO_INFO.repo}`;
 
-export const GITHUB_ROADMAP_URL = 'https://github.com/orgs/trezor/projects/28?fullscreen=true';
+export const GITHUB_ROADMAP_URL = 'https://github.com/orgs/cerberus/projects/28?fullscreen=true';
 export const GITHUB_FW_COMMIT_URL = 'https://github.com/Cerberus-Wallet/cerberus-firmware/commit/';
 export const GITHUB_FW_BINARIES_URL =
     'https://github.com/Cerberus-Wallet/webwallet-data/tree/master/firmware';

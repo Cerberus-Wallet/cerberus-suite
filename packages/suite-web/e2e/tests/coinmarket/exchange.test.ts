@@ -150,11 +150,11 @@ describe.skip('Coinmarket exchange', () => {
             });
 
         // Confirming the transaction
-        cy.getTestElement('@coinmarket/exchange/offers/confirm-on-trezor-button').click();
+        cy.getTestElement('@coinmarket/exchange/offers/confirm-on-cerberus-button').click();
         cy.getTestElement('@prompts/confirm-on-device');
         cy.task('pressYes');
         cy.getTestElement('@coinmarket/exchange/offers/continue-transaction-button').click();
-        cy.getTestElement('@coinmarket/exchange/offers/confirm-on-trezor-and-send').click();
+        cy.getTestElement('@coinmarket/exchange/offers/confirm-on-cerberus-and-send').click();
 
         // Verification modal opens
         cy.get('[class*="OutputElement__OutputWrapper"]')

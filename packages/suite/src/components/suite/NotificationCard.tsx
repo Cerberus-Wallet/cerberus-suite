@@ -12,7 +12,7 @@ import {
     ElevationContext,
 } from '@cerberus/components';
 import { Elevation, borders, spacingsPx, typography } from '@cerberus/theme';
-import { TrezorLink } from './TrezorLink';
+import { CerberusLink } from './CerberusLink';
 import { UIVariant } from '@cerberus/components/src/config/types';
 
 // TODO: move to components
@@ -119,9 +119,9 @@ const Body = styled.div`
 const CardButton = ({ href, ...props }: ButtonType) => {
     if (href) {
         return (
-            <TrezorLink variant="nostyle" href={href}>
+            <CerberusLink variant="nostyle" href={href}>
                 <Button {...props} />
-            </TrezorLink>
+            </CerberusLink>
         );
     }
 

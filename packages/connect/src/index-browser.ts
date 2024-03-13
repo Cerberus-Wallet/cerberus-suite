@@ -6,7 +6,7 @@ const fallback = () => {
     throw TypedError('Method_InvalidPackage');
 };
 
-const TrezorConnect = factory({
+const CerberusConnect = factory({
     eventEmitter: {
         on: fallback,
         off: fallback,
@@ -25,5 +25,5 @@ const TrezorConnect = factory({
     dispose: fallback,
 });
 
-export default TrezorConnect;
+export default CerberusConnect;
 export * from './exports';

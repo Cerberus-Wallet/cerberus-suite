@@ -104,7 +104,7 @@ const getSerializedErc20Transfer = (token: TokenInfo, to: string, amount: string
     return `0x${ERC20_TRANSFER}${erc20recipient}${erc20amount}`;
 };
 
-// TrezorConnect.blockchainEstimateFee for ETH
+// CerberusConnect.blockchainEstimateFee for ETH
 export const getEthereumEstimateFeeParams = (
     to: string,
     amount: string,

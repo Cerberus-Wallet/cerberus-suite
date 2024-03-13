@@ -2,13 +2,13 @@
 
 set -e
 
-echo "trezor-connect.js size check"
+echo "cerberus-connect.js size check"
 
 parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 
-du -h "$parent_path/../build/trezor-connect.js"
+du -h "$parent_path/../build/cerberus-connect.js"
 
-SIZE_S=$(du -s "$parent_path/../build/trezor-connect.js" | cut -f1)
+SIZE_S=$(du -s "$parent_path/../build/cerberus-connect.js" | cut -f1)
 # at time of creating this script size was 320
 # if you have considerably more, there is a chance that you accidentally included
 # parts of code that shouldn't be in this build.

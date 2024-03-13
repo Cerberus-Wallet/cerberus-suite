@@ -8,7 +8,7 @@ import { selectDeviceRequestedPin } from '@suite-common/wallet-core';
 
 import { PIN_HELP_URL } from '../constants/pinFormConstants';
 
-export const ConnectingTrezorHelp = () => {
+export const ConnectingCerberusHelp = () => {
     const { translate } = useTranslate();
 
     const [isHelperBottomSheetVisible, setIsHelperBottomSheetVisible] = useState(false);

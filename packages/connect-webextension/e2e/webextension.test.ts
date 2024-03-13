@@ -2,7 +2,7 @@
 import { test, expect, chromium } from '@playwright/test';
 import path from 'path';
 
-import { TrezorUserEnvLink } from '@cerberus/trezor-user-env-link';
+import { CerberusUserEnvLink } from '@cerberus/cerberus-user-env-link';
 import { ensureDirectoryExists } from '@cerberus/node-utils';
 
 let dir: string;
@@ -11,18 +11,18 @@ test.beforeAll(async () => {
 });
 
 test('Basic web extension MV2', async () => {
-    await TrezorUserEnvLink.connect();
-    await TrezorUserEnvLink.send({
+    await CerberusUserEnvLink.connect();
+    await CerberusUserEnvLink.send({
         type: 'bridge-stop',
     });
-    await TrezorUserEnvLink.send({
+    await CerberusUserEnvLink.send({
         type: 'emulator-stop',
     });
-    await TrezorUserEnvLink.send({
+    await CerberusUserEnvLink.send({
         type: 'emulator-start',
         wipe: true,
     });
-    await TrezorUserEnvLink.send({
+    await CerberusUserEnvLink.send({
         type: 'emulator-setup',
         mnemonic: 'alcohol woman abuse must during monitor noble actual mixed trade anger aisle',
         pin: '',
@@ -30,7 +30,7 @@ test('Basic web extension MV2', async () => {
         label: 'My Trevor',
         needs_backup: false,
     });
-    await TrezorUserEnvLink.send({
+    await CerberusUserEnvLink.send({
         type: 'bridge-start',
     });
 
@@ -98,7 +98,7 @@ test('Basic web extension MV2', async () => {
 
     await Promise.all([
         popup.waitForEvent('close'),
-        TrezorUserEnvLink.send({ type: 'emulator-press-yes' }),
+        CerberusUserEnvLink.send({ type: 'emulator-press-yes' }),
     ]);
 
     await page.waitForSelector('text=3AnYTd2FGxJLNKL1AzxfW3FJMntp9D2KKX');
@@ -107,18 +107,18 @@ test('Basic web extension MV2', async () => {
 });
 
 test('Basic web extension MV3', async () => {
-    await TrezorUserEnvLink.connect();
-    await TrezorUserEnvLink.send({
+    await CerberusUserEnvLink.connect();
+    await CerberusUserEnvLink.send({
         type: 'bridge-stop',
     });
-    await TrezorUserEnvLink.send({
+    await CerberusUserEnvLink.send({
         type: 'emulator-stop',
     });
-    await TrezorUserEnvLink.send({
+    await CerberusUserEnvLink.send({
         type: 'emulator-start',
         wipe: true,
     });
-    await TrezorUserEnvLink.send({
+    await CerberusUserEnvLink.send({
         type: 'emulator-setup',
         mnemonic: 'alcohol woman abuse must during monitor noble actual mixed trade anger aisle',
         pin: '',
@@ -126,7 +126,7 @@ test('Basic web extension MV3', async () => {
         label: 'My Trevor',
         needs_backup: false,
     });
-    await TrezorUserEnvLink.send({
+    await CerberusUserEnvLink.send({
         type: 'bridge-start',
     });
 
@@ -187,7 +187,7 @@ test('Basic web extension MV3', async () => {
 
     await Promise.all([
         popup.waitForEvent('close'),
-        TrezorUserEnvLink.send({ type: 'emulator-press-yes' }),
+        CerberusUserEnvLink.send({ type: 'emulator-press-yes' }),
     ]);
 
     await browserContext.close();

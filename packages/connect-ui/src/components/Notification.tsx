@@ -155,7 +155,7 @@ export const SuspiciousOriginNotification = () => (
         body="You are interacting with a suspicious 3rd party application. If you continue your coins might be in danger. Proceed at your own risk"
         // cta={{
         //     desc: 'Learn more',
-        //     url: 'todo: some explanation to trezor-wiki about phishing would be useful',
+        //     url: 'todo: some explanation to cerberus-wiki about phishing would be useful',
         // }}
     />
 );

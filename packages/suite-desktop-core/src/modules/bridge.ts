@@ -1,7 +1,7 @@
 /**
  * Bridge runner
  */
-import { TrezordNode } from '@cerberus/transport-bridge';
+import { CerberusdNode } from '@cerberus/transport-bridge';
 
 import { app, ipcMain } from '../typed-electron';
 import { BridgeProcess } from '../libs/processes/BridgeProcess';
@@ -18,7 +18,7 @@ const bridgeNodeTest = app.commandLine.hasSwitch('bridge-node-test');
 export const SERVICE_NAME = 'bridge';
 
 const handleBridgeStatus = async (
-    bridge: BridgeProcess | TrezordNode,
+    bridge: BridgeProcess | CerberusdNode,
     mainWindow: Dependencies['mainWindow'],
 ) => {
     const { logger } = global;
@@ -32,7 +32,7 @@ const handleBridgeStatus = async (
     return status;
 };
 
-const start = async (bridge: BridgeProcess | TrezordNode) => {
+const start = async (bridge: BridgeProcess | CerberusdNode) => {
     if (bridgeDev) {
         await bridge.startDev();
     } else if (bridgeTest) {
@@ -44,7 +44,7 @@ const start = async (bridge: BridgeProcess | TrezordNode) => {
 
 const getBridgeInstance = () => {
     if (bridgeNode || bridgeNodeTest) {
-        return new TrezordNode({ port: 21325, api: bridgeNodeTest ? 'udp' : 'usb' });
+        return new CerberusdNode({ port: 21325, api: bridgeNodeTest ? 'udp' : 'usb' });
     }
 
     return new BridgeProcess();

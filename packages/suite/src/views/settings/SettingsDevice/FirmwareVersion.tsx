@@ -10,7 +10,7 @@ import {
     SectionItem,
     TextColumn,
     Translation,
-    TrezorLink,
+    CerberusLink,
 } from 'src/components/suite';
 import { useDevice, useDispatch } from 'src/hooks/suite';
 import { goto } from 'src/actions/suite/routerActions';
@@ -107,9 +107,9 @@ export const FirmwareVersion = ({ isDeviceLocked }: FirmwareVersionProps) => {
                                     version: (
                                         <VersionTooltip content={revision} disabled={!revision}>
                                             {revision ? (
-                                                <TrezorLink href={changelogUrl} variant="nostyle">
+                                                <CerberusLink href={changelogUrl} variant="nostyle">
                                                     <GithubButton />
-                                                </TrezorLink>
+                                                </CerberusLink>
                                             ) : (
                                                 // remove the link if revision is unknown (in bootloader mode)
                                                 <GithubButton />

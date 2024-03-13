@@ -2,18 +2,18 @@
 
 [![Build Status](https://github.com/Cerberus-Wallet/cerberus-suite/actions/workflows/connect-test.yml/badge.svg)](https://github.com/Cerberus-Wallet/cerberus-suite/actions/workflows/connect-test.yml)
 [![NPM](https://img.shields.io/npm/v/@cerberus/connect-webextension.svg)](https://www.npmjs.org/package/@cerberus/connect-webextension)
-[![Known Vulnerabilities](https://snyk.io/test/github/trezor/connect-webextension/badge.svg?targetFile=package.json)](https://snyk.io/test/github/trezor/trezor-suite?targetFile=packages/connect-webextension/package.json)
+[![Known Vulnerabilities](https://snyk.io/test/github/cerberus/connect-webextension/badge.svg?targetFile=package.json)](https://snyk.io/test/github/cerberus/cerberus-suite?targetFile=packages/connect-webextension/package.json)
 
 The @cerberus/connect-webextension package provides an implementation of @cerberus/connect designed specifically for use within web extensions. Key features include:
 
 -   Compatibility with service worker environments.
--   Full access to the TrezorConnect API.
+-   Full access to the CerberusConnect API.
 -   Automatic handling of pop-up windows for user approvals on cerberus.uraanai.com.
 -   Direct response delivery to the calling script.
 
 ## Using the Library
 
-At the moment only bundles `build/trezor-connect-webextension.js` and `build/trezor-connect-webextension.min.js` are published.
+At the moment only bundles `build/cerberus-connect-webextension.js` and `build/cerberus-connect-webextension.min.js` are published.
 
 ### Option 1: Using Scripting Permissions
 
@@ -32,7 +32,7 @@ For a seamless integration, especially with background processes, modify your ex
 In your serviceWorker.js, use importScripts to import the library. Ensure you replace <path> with the actual path to the library file:
 
 ```javascript
-importScripts('<path>/trezor-connect-webextension.js');
+importScripts('<path>/cerberus-connect-webextension.js');
 ```
 
 ### Option 2: Manual Content Script Injection
@@ -67,4 +67,4 @@ Amend your manifest.json to include the script as a content script. Replace <pat
 -   `yarn workspace @cerberus/connect-iframe build:core-module`
 -   `yarn workspace @cerberus/connect-popup dev`
 
-After completing these steps, you can import from @cerberus/connect-webextension or directly use the built file `build/trezor-connect-webextension.js`. The popup will run on your localhost, and you can specify it in the TrezorConnect.init({ connectSrc: ... }).
+After completing these steps, you can import from @cerberus/connect-webextension or directly use the built file `build/cerberus-connect-webextension.js`. The popup will run on your localhost, and you can specify it in the CerberusConnect.init({ connectSrc: ... }).

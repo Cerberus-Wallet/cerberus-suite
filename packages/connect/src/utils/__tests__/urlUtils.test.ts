@@ -28,20 +28,20 @@ describe('utils/urlUtils', () => {
 
     it('getOnionDomain', () => {
         const dict = {
-            'cerberus.uraanai.com': 'trezor.onion',
+            'cerberus.uraanai.com': 'cerberus.onion',
         };
         // expect(getOnionDomain('cerberus.uraanai.com', dict)).toEqual('cerberus.uraanai.com');
-        expect(getOnionDomain('https://cerberus.uraanai.com', dict)).toEqual('http://trezor.onion');
-        expect(getOnionDomain('http://cerberus.uraanai.com', dict)).toEqual('http://trezor.onion');
+        expect(getOnionDomain('https://cerberus.uraanai.com', dict)).toEqual('http://cerberus.onion');
+        expect(getOnionDomain('http://cerberus.uraanai.com', dict)).toEqual('http://cerberus.onion');
         expect(getOnionDomain('http://connect.cerberus.uraanai.com', dict)).toEqual(
-            'http://connect.trezor.onion',
+            'http://connect.cerberus.onion',
         );
         expect(getOnionDomain('http://foo.bar.connect.cerberus.uraanai.com/9/?query=1#hash2', dict)).toEqual(
-            'http://foo.bar.connect.trezor.onion/9/?query=1#hash2',
+            'http://foo.bar.connect.cerberus.onion/9/?query=1#hash2',
         );
-        expect(getOnionDomain('wss://cerberus.uraanai.com', dict)).toEqual('ws://trezor.onion');
+        expect(getOnionDomain('wss://cerberus.uraanai.com', dict)).toEqual('ws://cerberus.onion');
         expect(getOnionDomain('ws://foo.bar.cerberus.uraanai.com/?foo=bar', dict)).toEqual(
-            'ws://foo.bar.trezor.onion/?foo=bar',
+            'ws://foo.bar.cerberus.onion/?foo=bar',
         );
     });
 });

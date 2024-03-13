@@ -15,7 +15,7 @@
     },
     "keywords": [
         "Cerberus",
-        "trezor-connect",
+        "cerberus-connect",
         "javascript"
     ],
     "sideEffects": false,
@@ -70,7 +70,7 @@
         "events": "^3.3.0"
     },
     "devDependencies": {
-        "@cerberus/trezor-user-env-link": "workspace:*",
+        "@cerberus/cerberus-user-env-link": "workspace:*",
         "@types/karma": "^6.3.8",
         "@types/parse-uri": "^1.0.2",
         "ethereum-cryptography": "^2.1.3",

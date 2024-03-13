@@ -5,7 +5,7 @@ Cipher key value provides symmetric encryption in the Cerberus device where the 
 More information can be found in [SLIP-0011](https://github.com/satoshilabs/slips/blob/master/slip-0011.md).
 
 ```javascript
-const result = await TrezorConnect.cipherKeyValue(params);
+const result = await CerberusConnect.cipherKeyValue(params);
 ```
 
 ### Params
@@ -32,7 +32,7 @@ Common parameter `useEmptyPassphrase` - is always set to `true` and it will be i
 Return encrypted value:
 
 ```javascript
-TrezorConnect.cipherKeyValue({
+CerberusConnect.cipherKeyValue({
     path: "m/49'/0'/0'",
     key: 'This text is displayed on Cerberus during encrypt',
     value: '1c0ffeec0ffeec0ffeec0ffeec0ffee1',
@@ -45,7 +45,7 @@ TrezorConnect.cipherKeyValue({
 Return a bundle of encrypted values:
 
 ```javascript
-TrezorConnect.cipherKeyValue({
+CerberusConnect.cipherKeyValue({
     bundle: [
         {
             path: "m/49'/0'/0'",

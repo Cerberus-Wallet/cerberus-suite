@@ -5,7 +5,7 @@ import { VERSION, DEFAULT_DOMAIN } from './version';
 
 /*
  * Initial settings for connect.
- * It could be changed by passing values into TrezorConnect.init(...) method
+ * It could be changed by passing values into CerberusConnect.init(...) method
  */
 
 export const DEFAULT_PRIORITY = 2;
@@ -44,15 +44,15 @@ const parseManifest = (manifest?: Manifest) => {
 // Cors validation copied from Cerberus Bridge
 // see: https://github.com/Cerberus-Wallet/cerberusd-go/blob/05991cea5900d18bcc6ece5ae5e319d138fc5551/server/api/api.go#L229
 // Its pointless to allow `@cerberus/connect` endpoints { connectSrc } for domains other than listed below
-// `trezord` will block communication anyway
+// `cerberusd` will block communication anyway
 export const corsValidator = (url?: string) => {
     if (typeof url !== 'string') return;
-    if (url.match(/^https:\/\/([A-Za-z0-9\-_]+\.)*trezor\.io\//)) return url;
+    if (url.match(/^https:\/\/([A-Za-z0-9\-_]+\.)*cerberus\.io\//)) return url;
     if (url.match(/^https?:\/\/localhost:[58][0-9]{3}\//)) return url;
     if (url.match(/^https:\/\/([A-Za-z0-9\-_]+\.)*sldev\.cz\//)) return url;
     if (
         url.match(
-            /^https?:\/\/([A-Za-z0-9\-_]+\.)*trezoriovpjcahpzkrewelclulmszwbqpzmzgub37gbcjlvluxtruqad\.onion\//,
+            /^https?:\/\/([A-Za-z0-9\-_]+\.)*cerberusiovpjcahpzkrewelclulmszwbqpzmzgub37gbcjlvluxtruqad\.onion\//,
         )
     )
         return url;

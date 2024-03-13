@@ -4,7 +4,7 @@ Asks device to sign given transaction. User is asked to confirm all transaction
 details on Cerberus.
 
 ```javascript
-const result = await TrezorConnect.tezosSignTransaction(params);
+const result = await CerberusConnect.tezosSignTransaction(params);
 ```
 
 ### Params
@@ -23,7 +23,7 @@ const result = await TrezorConnect.tezosSignTransaction(params);
 Sign transaction operation
 
 ```javascript
-TrezorConnect.tezosSignTransaction({
+CerberusConnect.tezosSignTransaction({
     path: "m/44'/1729'/10'",
     branch: 'BLGUkzwvguFu8ei8eLW3KgCbdtrMmv1UCqMvUpHHTGq1UPxypHS',
     operation: {
@@ -43,7 +43,7 @@ TrezorConnect.tezosSignTransaction({
 Sign the first transaction of the account with reveal operation
 
 ```javascript
-TrezorConnect.tezosSignTransaction({
+CerberusConnect.tezosSignTransaction({
     path: "m/44'/1729'/10'",
     branch: 'BLGUkzwvguFu8ei8eLW3KgCbdtrMmv1UCqMvUpHHTGq1UPxypHS',
     operation: {
@@ -71,7 +71,7 @@ TrezorConnect.tezosSignTransaction({
 Sign origination operation
 
 ```javascript
-TrezorConnect.tezosSignTransaction({
+CerberusConnect.tezosSignTransaction({
     path: "m/44'/1729'/0'",
     branch: 'BLHRTdZ5vUKSDbkp5vcG1m6ZTST4SRiHWUhGodysLTbvACwi77d',
     operation: {
@@ -93,7 +93,7 @@ TrezorConnect.tezosSignTransaction({
 Sign delegation operation
 
 ```javascript
-TrezorConnect.tezosSignTransaction({
+CerberusConnect.tezosSignTransaction({
     path: "m/44'/1729'/0'",
     branch: 'BMXAKyvzcH1sGQMqpvqXsZGskYU4GuY9Y14c9g3LcNzMRtfLzFa',
     operation: {
@@ -112,7 +112,7 @@ TrezorConnect.tezosSignTransaction({
 Sign delegation from a KT account (smart contract with `manager.tz` script)
 
 ```javascript
-TrezorConnect.tezosSignTransaction({
+CerberusConnect.tezosSignTransaction({
     path: "m/44'/1729'/0'",
     branch: 'BMdPMLXNyMTDp4vR6g7y8mWPk7KZbjoXH3gyWD1Tze43UE3BaPm',
     operation: {
@@ -135,7 +135,7 @@ TrezorConnect.tezosSignTransaction({
 Sign cancel delegation from a KT account (smart contract with `manager.tz` script)
 
 ```javascript
-TrezorConnect.tezosSignTransaction({
+CerberusConnect.tezosSignTransaction({
     path: "m/44'/1729'/0'",
     branch: 'BL6oaFJeEjtYxafJqEL8hXvSCZmM5d4quyAqjzkBhXvrX97JbQs',
     operation: {
@@ -158,7 +158,7 @@ TrezorConnect.tezosSignTransaction({
 Sign transaction operation from a KT account (smart contract with `manager.tz` script) to a tz account (implicit account)
 
 ```javascript
-TrezorConnect.tezosSignTransaction({
+CerberusConnect.tezosSignTransaction({
     path: "m/44'/1729'/0'",
     branch: 'BMCKRpEsFYQTdZy8BSLuFqkHmxwXrnRpKncdoVMbeGoggLG3bND',
     operation: {
@@ -184,7 +184,7 @@ TrezorConnect.tezosSignTransaction({
 Sign transaction operation from a KT account (smart contract with `manager.tz` script) to another KT account (smart contract with `manager.tz` script)
 
 ```javascript
-TrezorConnect.tezosSignTransaction({
+CerberusConnect.tezosSignTransaction({
     path: "m/44'/1729'/0'",
     branch: 'BMCKRpEsFYQTdZy8BSLuFqkHmxwXrnRpKncdoVMbeGoggLG3bND',
     operation: {

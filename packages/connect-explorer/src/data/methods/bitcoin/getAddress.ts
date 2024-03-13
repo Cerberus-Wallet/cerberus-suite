@@ -20,7 +20,7 @@ const batch = [
         })),
     },
     {
-        name: 'showOnTrezor',
+        name: 'showOnCerberus',
         label: 'Show on Cerberus',
         type: 'checkbox',
         value: true,

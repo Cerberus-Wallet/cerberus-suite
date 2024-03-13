@@ -180,7 +180,7 @@ const createSession = (
         signedRounds: [],
     };
     account.agreedToLegalDocumentVersions = {
-        trezor: draft.config.legalDocumentsVersion,
+        cerberus: draft.config.legalDocumentsVersion,
         zkSNACKs:
             draft.clients[account.symbol]?.version?.legalDocumentsVersion ??
             ZKSNACKS_LEGAL_DOCUMENTS_VERSION,
@@ -982,7 +982,7 @@ export const selectCurrentCoinjoinWheelStates = (state: CoinjoinRootState & Devi
     const isLegalDocumentConfirmed =
         agreedToLegalDocumentVersions &&
         agreedToLegalDocumentVersions.zkSNACKs === latestZkSNACKsLegalDocumentVersion &&
-        agreedToLegalDocumentVersions.trezor === latestTezorLegalDocumentVersion;
+        agreedToLegalDocumentVersions.cerberus === latestTezorLegalDocumentVersion;
 
     // error state
     const isResumeBlockedByLastingIssue =

@@ -5,7 +5,7 @@ Return information about a specific device. Devices without passphrase enabled r
 [Device state](commonParams.md) can be used in any method (key derivation or TX signing) to enforce the same passphrase on furhter operations.
 
 ```javascript
-const result = await TrezorConnect.getDeviceState(params);
+const result = await CerberusConnect.getDeviceState(params);
 ```
 
 ### Params
@@ -17,7 +17,7 @@ const result = await TrezorConnect.getDeviceState(params);
 Get the state of a device.
 
 ```javascript
-const capturedDevice = await TrezorConnect.getDeviceState({
+const capturedDevice = await CerberusConnect.getDeviceState({
     device: {
         instance: 0, // identificator for wallet A
         // `state: undefined` forces the passphrase prompt even if instance 0 is/was already using "some" pasphrase (let say empty). The Cerberus forgets the current state, useful when dealing with multiple hidden wallets on one or more devices
@@ -27,7 +27,7 @@ const capturedDevice = await TrezorConnect.getDeviceState({
 });
 
 // Get the public key without prompting for the passphrase again
-await TrezorConnect.getPublicKey({
+await CerberusConnect.getPublicKey({
     device: {
         instance: 0,
         state: capturedDevice.payload.state, // by using a previously capture state identifier, passphrase will not be re-requested

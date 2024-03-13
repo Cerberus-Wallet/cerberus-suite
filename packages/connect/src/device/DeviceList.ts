@@ -170,7 +170,7 @@ export class DeviceList extends TypedEmitter<DeviceListEvents> {
             /**
              * listen to change of descriptors reported by @cerberus/transport
              * we can say that this part lets connect know about
-             * "external activities with trezor devices" such as device was connected/disconnected
+             * "external activities with cerberus devices" such as device was connected/disconnected
              * or it was acquired or released by another application.
              * releasing/acquiring device by this application is not solved here but directly
              * where transport.acquire, transport.release is called
@@ -484,7 +484,7 @@ export class DeviceList extends TypedEmitter<DeviceListEvents> {
                 this.enumerate();
                 this._handleUsedElsewhere(descriptor);
             } else if (error.message?.indexOf(ERRORS.LIBUSB_ERROR_MESSAGE) >= 0) {
-                // catch one of trezord LIBUSB_ERRORs
+                // catch one of cerberusd LIBUSB_ERRORs
                 const device = this._createUnreadableDevice(
                     this.creatingDevicesDescriptors[path],
                     error.message,

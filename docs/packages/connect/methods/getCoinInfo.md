@@ -3,7 +3,7 @@
 Returns information about a specified coin from the [coins.json](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect-common/files/coins.json) file.
 
 ```javascript
-const result = await TrezorConnect.getCoinInfo(params);
+const result = await CerberusConnect.getCoinInfo(params);
 ```
 
 ### Params
@@ -19,7 +19,7 @@ const result = await TrezorConnect.getCoinInfo(params);
 Get coin info for Bitcoin.
 
 ```javascript
-TrezorConnect.getCoinInfo({
+CerberusConnect.getCoinInfo({
     coin: 'btc',
 });
 ```
@@ -58,7 +58,7 @@ Result for Bitcoin
         segwit: true,
         shortcut: "BTC",
         slip44: 0,
-        support: Object { connect: true, trezor1: "1.5.2", trezor2: "2.0.5", … },
+        support: Object { connect: true, cerberus1: "1.5.2", cerberus2: "2.0.5", … },
         type: "bitcoin",
         xPubMagic: 76067358,
         xPubMagicSegwit: 77429938,

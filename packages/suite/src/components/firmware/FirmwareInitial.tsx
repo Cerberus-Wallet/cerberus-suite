@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { ExtendedMessageDescriptor } from '@suite-common/intl-types';
 import { getFwUpdateVersion } from '@suite-common/suite-utils';
 import { Note, variables } from '@cerberus/components';
-import { AcquiredDevice, TrezorDevice } from '@suite-common/suite-types';
+import { AcquiredDevice, CerberusDevice } from '@suite-common/suite-types';
 import {
     getFirmwareVersion,
     hasBitcoinOnlyFirmware,
@@ -126,8 +126,8 @@ const getNoFirmwareInstalledSubheading = (device: AcquiredDevice) => {
 };
 
 interface FirmwareInitialProps {
-    cachedDevice?: TrezorDevice;
-    setCachedDevice: Dispatch<SetStateAction<TrezorDevice | undefined>>;
+    cachedDevice?: CerberusDevice;
+    setCachedDevice: Dispatch<SetStateAction<CerberusDevice | undefined>>;
     // This component is shared between Onboarding flow and standalone fw update modal with few minor UI changes
     // If it is set to true, then you know it is being rendered in standalone fw update modal
     standaloneFwUpdate?: boolean;

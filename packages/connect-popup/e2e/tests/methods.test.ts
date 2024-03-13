@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
 
-import { TrezorUserEnvLink } from '@cerberus/trezor-user-env-link';
+import { CerberusUserEnvLink } from '@cerberus/cerberus-user-env-link';
 import { fixtures } from './__fixtures__/methods';
 import { buildOverview } from '../support/buildOverview';
 import { ensureDirectoryExists } from '@cerberus/node-utils';
@@ -17,14 +17,14 @@ let context: any = null;
 const isWebExtension = process.env.IS_WEBEXTENSION === 'true';
 
 const screenshotEmu = async (path: string) => {
-    const { response } = await TrezorUserEnvLink.send({
+    const { response } = await CerberusUserEnvLink.send({
         type: 'emulator-get-screenshot',
     });
     emuScreenshots[path] = response;
 };
 
 test.beforeAll(async () => {
-    await TrezorUserEnvLink.connect();
+    await CerberusUserEnvLink.connect();
     log(`isWebExtension: ${isWebExtension}`);
     log(`connectSrc: ${connectSrc}`);
     log(`url: ${url}`);
@@ -63,21 +63,21 @@ filteredFixtures.forEach(f => {
         // FIXME: always reset for now, due to flaky tests with bridge bug
         if (true || JSON.stringify(device) !== JSON.stringify(f.device) || retry) {
             device = f.device;
-            await TrezorUserEnvLink.api.stopBridge();
-            await TrezorUserEnvLink.api.stopEmu();
-            await TrezorUserEnvLink.api.startEmu({
+            await CerberusUserEnvLink.api.stopBridge();
+            await CerberusUserEnvLink.api.stopEmu();
+            await CerberusUserEnvLink.api.startEmu({
                 wipe: true,
                 save_screenshots: true,
             });
             // @ts-expect-error
             if (!f.device.wiped) {
                 // @ts-expect-error
-                await TrezorUserEnvLink.api.setupEmu({
+                await CerberusUserEnvLink.api.setupEmu({
                     ...f.device,
                 });
-                await TrezorUserEnvLink.send({ type: 'emulator-allow-unsafe-paths' });
+                await CerberusUserEnvLink.send({ type: 'emulator-allow-unsafe-paths' });
             }
-            await TrezorUserEnvLink.api.startBridge();
+            await CerberusUserEnvLink.api.startBridge();
         }
 
         const screenshotsPath = await ensureDirectoryExists(`./e2e/screenshots/${f.url}`);
@@ -176,7 +176,7 @@ filteredFixtures.forEach(f => {
             if (v.nextEmu) {
                 // useful for debugging tests
                 // await popup.pause();
-                await TrezorUserEnvLink.send(v.nextEmu);
+                await CerberusUserEnvLink.send(v.nextEmu);
             }
         }
 

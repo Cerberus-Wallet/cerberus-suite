@@ -3,21 +3,21 @@ import path from 'path';
 import TerserPlugin from 'terser-webpack-plugin';
 import prod from './prod.webpack.config';
 
-// Generate inline script hosted on https://connect.cerberus.uraanai.com/X/trezor-connect.js
+// Generate inline script hosted on https://connect.cerberus.uraanai.com/X/cerberus-connect.js
 // This is compiled and polyfilled npm package without Core logic
 
 const config: webpack.Configuration = {
     target: 'web',
     mode: 'production',
     entry: {
-        'trezor-connect': path.resolve(__dirname, '../src/index.ts'),
-        'trezor-connect.min': path.resolve(__dirname, '../src/index.ts'),
+        'cerberus-connect': path.resolve(__dirname, '../src/index.ts'),
+        'cerberus-connect.min': path.resolve(__dirname, '../src/index.ts'),
     },
     output: {
         filename: '[name].js',
         path: path.resolve(__dirname, '../build'),
         publicPath: './',
-        library: 'TrezorConnect',
+        library: 'CerberusConnect',
         libraryTarget: 'umd',
         libraryExport: 'default',
     },
@@ -29,7 +29,7 @@ const config: webpack.Configuration = {
     optimization: {
         minimizer: [
             new TerserPlugin({
-                exclude: /trezor-connect.js/,
+                exclude: /cerberus-connect.js/,
                 extractComments: false,
                 terserOptions: {
                     format: {

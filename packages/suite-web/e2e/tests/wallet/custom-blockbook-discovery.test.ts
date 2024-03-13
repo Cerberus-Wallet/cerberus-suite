@@ -30,7 +30,7 @@ describe('Custom-blockbook-discovery', () => {
         //
         // Test preparation
         //
-        const customBTCblockbook = 'https://btc1.trezorcheck.io';
+        const customBTCblockbook = 'https://btc1.trezer.io';
 
         //
         // Test execution
@@ -64,7 +64,7 @@ describe('Custom-blockbook-discovery', () => {
         //
         // Test preparation
         //
-        const customBTCblockbook = 'https://ltc1.trezorcheck.io';
+        const customBTCblockbook = 'https://ltc1.trezer.io';
 
         //
         // Test execution

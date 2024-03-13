@@ -151,7 +151,7 @@ describe('Interceptor', () => {
     describe('WebSocket', () => {
         const createWebSocket = (options: any = {}) =>
             new Promise<void>((resolve, reject) => {
-                const ws = new WebSocket('wss://tbtc1.trezorcheck.io/websocket', {
+                const ws = new WebSocket('wss://tbtc1.trezer.io/websocket', {
                     headers: {
                         'User-Agent': 'Cerberus Suite',
                         ...options,
@@ -271,7 +271,7 @@ describe('Interceptor', () => {
                 fetchHeaders(serverUrl, {
                     method: 'POST',
                     body: JSON.stringify({ test: 'test' }),
-                    headers: { 'User-Agent': 'TrezorSuite' },
+                    headers: { 'User-Agent': 'CerberusSuite' },
                 }),
             ).resolves.toEqual({
                 host,
@@ -280,7 +280,7 @@ describe('Interceptor', () => {
                 connection: 'close',
                 'content-length': '15',
                 'content-type': 'text/plain;charset=UTF-8',
-                'user-agent': 'TrezorSuite',
+                'user-agent': 'CerberusSuite',
             });
 
             // restricted headers
@@ -289,7 +289,7 @@ describe('Interceptor', () => {
                     method: 'POST',
                     body: JSON.stringify({ test: 'test' }),
                     headers: {
-                        'User-Agent': 'TrezorSuite',
+                        'User-Agent': 'CerberusSuite',
                         'Allowed-Headers': 'AcCePt-EnCoDiNg;content-type;Content-Length;HOST', // case insensitive
                     },
                 }),
@@ -308,14 +308,14 @@ describe('Interceptor', () => {
             await expect(
                 fetchHeaders(serverUrl, {
                     method: 'GET',
-                    headers: { 'User-Agent': 'TrezorSuite' },
+                    headers: { 'User-Agent': 'CerberusSuite' },
                 }),
             ).resolves.toEqual({
                 host,
                 accept: '*/*',
                 'accept-encoding': 'gzip,deflate',
                 connection: 'close',
-                'user-agent': 'TrezorSuite',
+                'user-agent': 'CerberusSuite',
             });
 
             // restricted headers
@@ -323,7 +323,7 @@ describe('Interceptor', () => {
                 fetchHeaders(serverUrl, {
                     method: 'GET',
                     headers: {
-                        'User-Agent': 'TrezorSuite',
+                        'User-Agent': 'CerberusSuite',
                         'Allowed-Headers': 'Accept-Encoding;Content-Type;Content-Length;Host',
                     },
                 }),

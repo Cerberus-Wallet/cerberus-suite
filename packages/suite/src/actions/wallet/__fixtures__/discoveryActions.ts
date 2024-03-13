@@ -182,25 +182,25 @@ export const fixtures = [
     },
 ];
 
-// Trigger is called from test after account creation (TrezorConnect progress event)
-// since TrezorConnect.cancel is an async method it will be resolved later, even after few more "progress events"
-// If mocked TrezorConnect is requested for a next account which was found in fixture "connect.interruption" field it will throw "discovery_interrupted" error
+// Trigger is called from test after account creation (CerberusConnect progress event)
+// since CerberusConnect.cancel is an async method it will be resolved later, even after few more "progress events"
+// If mocked CerberusConnect is requested for a next account which was found in fixture "connect.interruption" field it will throw "discovery_interrupted" error
 // To understand this logic here's a simplified description based on 'Multiple interruptions' test:
-// 1. TrezorConnect.getAccountInfo received first bundle: ["m/84'/0'/0'", "m/49'/0'/0'", "m/44'/0'/0'"....]
-// 2. Account "m/84'/0'/0'" is emitted by TrezorConnect progress event and account is created in reducer
+// 1. CerberusConnect.getAccountInfo received first bundle: ["m/84'/0'/0'", "m/49'/0'/0'", "m/44'/0'/0'"....]
+// 2. Account "m/84'/0'/0'" is emitted by CerberusConnect progress event and account is created in reducer
 // 3. ACCOUNT.CREATE action is captured by test and its path is matching the first item in "trigger" field, Discovery.stop() is called
-// 4. Discovery process has now status = DISCOVERY.STOPPING, from now on it will ignore any progress event until TrezorConnect return response (success = false)
-// 5. Returned error from TrezorConnect has a "discovery_interrupted" error. Discovery process status in now = DISCOVERY.STOPPED
+// 4. Discovery process has now status = DISCOVERY.STOPPING, from now on it will ignore any progress event until CerberusConnect return response (success = false)
+// 5. Returned error from CerberusConnect has a "discovery_interrupted" error. Discovery process status in now = DISCOVERY.STOPPED
 // 6. Since test captured DISCOVERY.STOP action and previous actions (DISCOVERY.INTERRUPTED) was present, test will start new iteration (restart discovery)
-// 7. TrezorConnect.getAccountInfo received a second bundle. Account "m/84'/0'/0'" is already created so bundle starts with "m/84'/0'/1'" and is followed by missing accounts: "m/49'/0'/0'", "m/44'/0'/0'"...
+// 7. CerberusConnect.getAccountInfo received a second bundle. Account "m/84'/0'/0'" is already created so bundle starts with "m/84'/0'/1'" and is followed by missing accounts: "m/49'/0'/0'", "m/44'/0'/0'"...
 // 8. Second bundle is completed without interruption. Created accounts: ["m/84'/0'/0'", "m/84'/0'/1'", "m/49'/0'/0'", "m/44'/0'/0'"....], Discovery process requests for another bundle.
-// 9. TrezorConnect.getAccountInfo received third bundle. Bundle starts with ["m/84'/0'/2'", "m/49'/0'/1'", "m/44'/0'/1'"...]
-// 10. Account "m/84'/0'/2'" is created in reducer, interruption is triggered from test, TrezorConnect is requested for "m/49'/0'/1'" and throws error...
+// 9. CerberusConnect.getAccountInfo received third bundle. Bundle starts with ["m/84'/0'/2'", "m/49'/0'/1'", "m/44'/0'/1'"...]
+// 10. Account "m/84'/0'/2'" is created in reducer, interruption is triggered from test, CerberusConnect is requested for "m/49'/0'/1'" and throws error...
 // ...and so on, until discovery calls completeDiscovery action
 export const interruptionFixtures = [
     {
         description:
-            'Interruption triggered after 1st account, rejected error from TrezorConnect after 3rd account',
+            'Interruption triggered after 1st account, rejected error from CerberusConnect after 3rd account',
         connect: {
             success: true,
             interruption: ["m/44'/0'/0'"],

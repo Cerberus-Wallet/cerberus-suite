@@ -1,6 +1,6 @@
-import { TrezorConnect } from '../../..';
+import { CerberusConnect } from '../../..';
 
-export const management = async (api: TrezorConnect) => {
+export const management = async (api: CerberusConnect) => {
     const reset = await api.resetDevice({
         strength: 1,
         label: 'My Cerberus',

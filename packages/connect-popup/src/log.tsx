@@ -153,7 +153,7 @@ const DebugCenter = () => {
                     buttons={
                         <DownloadButton
                             array={orderByTimestamp(logs)}
-                            filename="trezor-connect-logs.json"
+                            filename="cerberus-connect-logs.json"
                         />
                     }
                 >

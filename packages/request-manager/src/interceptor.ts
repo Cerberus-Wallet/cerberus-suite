@@ -40,7 +40,7 @@ const isWhitelistedHost = (hostname: unknown, whitelist: string[] = ['127.0.0.1'
     whitelist.some(url => url === hostname || hostname.endsWith(url));
 
 const interceptNetSocketConnect = (context: InterceptorContext) => {
-    // To avoid disclosure that the request was sent by trezor-suite
+    // To avoid disclosure that the request was sent by cerberus-suite
     // remove headers added by underlying libs before they are sent to the server.
     // 1. nodejs http always(!) adds "Connection: close" header
     //    https://github.com/nodejs/node/blob/e48763840625c037282681456ecd1e1cb034f636/lib/_http_outgoing.js#L508-L510
@@ -226,7 +226,7 @@ const overloadWebsocketHandshake = (
 ) => {
     // @cerberus/blockchain-link is adding an SocksProxyAgent to each connection
     // related to https://github.com/Cerberus-Wallet/cerberus-suite/issues/7689
-    // this condition should be removed once suite will stop using TrezorConnect.setProxy
+    // this condition should be removed once suite will stop using CerberusConnect.setProxy
     if (
         typeof url === 'object' &&
         isWhitelistedHost(url.host, context.whitelistedHosts) &&

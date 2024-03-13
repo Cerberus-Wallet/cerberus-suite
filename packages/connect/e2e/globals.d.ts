@@ -16,7 +16,7 @@ declare namespace globalThis {
         setup: (controller: any, options: any) => any;
         skipTest: (rules: any) => any;
         conditionalTest: (rules: any, ...args: any[]) => any;
-        initTrezorConnect: (controller: any, options?: any) => any;
+        initCerberusConnect: (controller: any, options?: any) => any;
     };
 
     type LegacyResult = {
@@ -36,7 +36,7 @@ declare namespace globalThis {
     };
 
     type TestCase = {
-        // method: keyof typeof TrezorConnect;
+        // method: keyof typeof CerberusConnect;
         method: string;
         setup: {
             mnemonic?: string;

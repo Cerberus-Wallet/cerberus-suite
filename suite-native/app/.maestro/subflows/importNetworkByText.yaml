@@ -1,4 +1,4 @@
-appId: io.trezor.suite.${ENV}
+appId: io.cerberus.suite.${ENV}
 ---
 - scrollUntilVisible:
       element:

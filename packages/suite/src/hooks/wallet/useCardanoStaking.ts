@@ -13,7 +13,7 @@ import {
     getAddressParameters,
 } from '@suite-common/wallet-utils';
 import { notificationsActions } from '@suite-common/toast-notifications';
-import trezorConnect, { PROTO } from '@cerberus/connect';
+import cerberusConnect, { PROTO } from '@cerberus/connect';
 import { addFakePendingCardanoTxThunk, selectDevice } from '@suite-common/wallet-core';
 
 import { ActionAvailability, CardanoStaking } from 'src/types/wallet/cardanoStaking';
@@ -92,12 +92,12 @@ export const useCardanoStaking = (): CardanoStaking => {
     } = account.misc.staking;
 
     const cardanoNetwork = account.symbol === 'ada' ? 'mainnet' : 'preview';
-    const { trezorPools, isFetchLoading, isFetchError } = cardanoStaking[cardanoNetwork];
+    const { cerberusPools, isFetchLoading, isFetchError } = cardanoStaking[cardanoNetwork];
     const currentPool =
-        registeredPoolId && trezorPools
-            ? trezorPools?.pools.find(p => p.bech32 === registeredPoolId)
+        registeredPoolId && cerberusPools
+            ? cerberusPools?.pools.find(p => p.bech32 === registeredPoolId)
             : null;
-    const isStakingOnTrezorPool = !isFetchLoading && !isFetchError ? !!currentPool : true; // fallback to true to prevent flickering in UI while we fetch the data
+    const isStakingOnCerberusPool = !isFetchLoading && !isFetchError ? !!currentPool : true; // fallback to true to prevent flickering in UI while we fetch the data
     const isCurrentPoolOversaturated = currentPool ? isPoolOverSaturated(currentPool) : false;
     const prepareTxPlan = useCallback(
         async (action: 'delegate' | 'withdrawal') => {
@@ -106,8 +106,8 @@ export const useCardanoStaking = (): CardanoStaking => {
 
             const addressParameters = getAddressParameters(account, changeAddress.path);
 
-            const pool = trezorPools
-                ? getStakePoolForDelegation(trezorPools, account.balance).hex
+            const pool = cerberusPools
+                ? getStakePoolForDelegation(cerberusPools, account.balance).hex
                 : '';
 
             const certificates =
@@ -125,7 +125,7 @@ export const useCardanoStaking = (): CardanoStaking => {
                       ]
                     : [];
 
-            const response = await trezorConnect.cardanoComposeTransaction({
+            const response = await cerberusConnect.cardanoComposeTransaction({
                 account: {
                     addresses: account.addresses,
                     descriptor: account.descriptor,
@@ -142,7 +142,7 @@ export const useCardanoStaking = (): CardanoStaking => {
 
             return { txPlan: response.payload[0], certificates, withdrawals };
         },
-        [account, stakingPath, isStakingActive, rewardsAmount, stakeAddress, trezorPools],
+        [account, stakingPath, isStakingActive, rewardsAmount, stakeAddress, cerberusPools],
     );
 
     const calculateFeeAndDeposit = useCallback(
@@ -195,7 +195,7 @@ export const useCardanoStaking = (): CardanoStaking => {
             if (!txPlan || txPlan.type === 'nonfinal') return;
             if (txPlan.type === 'error') throw new Error(txPlan.error);
 
-            const res = await trezorConnect.cardanoSignTransaction({
+            const res = await cerberusConnect.cardanoSignTransaction({
                 signingMode: PROTO.CardanoTxSigningMode.ORDINARY_TRANSACTION,
                 device,
                 useEmptyPassphrase: device?.useEmptyPassphrase,
@@ -221,7 +221,7 @@ export const useCardanoStaking = (): CardanoStaking => {
                     }),
                 );
             } else {
-                const sentTx = await trezorConnect.pushTransaction({
+                const sentTx = await cerberusConnect.pushTransaction({
                     tx: res.payload.serializedTx,
                     coin: account.symbol,
                 });
@@ -299,12 +299,12 @@ export const useCardanoStaking = (): CardanoStaking => {
         isFetchError,
         rewards: rewardsAmount,
         address: stakeAddress,
-        isStakingOnTrezorPool,
+        isStakingOnCerberusPool,
         isCurrentPoolOversaturated,
         delegate,
         withdraw,
         calculateFeeAndDeposit,
-        trezorPools,
+        cerberusPools,
         error,
     };
 };

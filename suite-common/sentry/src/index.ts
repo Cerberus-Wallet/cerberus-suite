@@ -66,7 +66,7 @@ const beforeBreadcrumb: Options['beforeBreadcrumb'] = breadcrumb => {
     // filter out analytics requests and image fetches
     const isAnalytics =
         breadcrumb.category === 'fetch' &&
-        breadcrumb.data?.url?.contains?.('data.trezorcheck.io/suite/log');
+        breadcrumb.data?.url?.contains?.('data.trezer.io/suite/log');
     const isImageFetch =
         breadcrumb.category === 'xhr' && breadcrumb.data?.url?.contains?.('/assets/');
     const isConsole = breadcrumb.category === 'console';

@@ -1,5 +1,5 @@
 /**
- * Set TrezorConnect manifest.
+ * Set CerberusConnect manifest.
  */
 
 import type { Manifest } from '../settings';

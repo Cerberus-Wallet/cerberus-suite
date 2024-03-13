@@ -1,6 +1,6 @@
 import BigNumber from 'bignumber.js';
 
-import TrezorConnect, { SignedTransaction } from '@cerberus/connect';
+import CerberusConnect, { SignedTransaction } from '@cerberus/connect';
 import {
     selectDevice,
     replaceTransactionThunk,
@@ -38,9 +38,9 @@ export const cancelSignTx = (isSuccessTx?: boolean) => (dispatch: Dispatch, getS
     const { signedTx, precomposedForm } = getState().wallet.stake;
     dispatch(stakeActions.requestSignTransaction());
     dispatch(stakeActions.requestPushTransaction());
-    // if transaction is not signed yet interrupt signing in TrezorConnect
+    // if transaction is not signed yet interrupt signing in CerberusConnect
     if (!signedTx) {
-        TrezorConnect.cancel('tx-cancelled');
+        CerberusConnect.cancel('tx-cancelled');
 
         return;
     }
@@ -62,7 +62,7 @@ const pushTransaction =
         const device = selectDevice(getState());
         if (!signedTx || !precomposedTx || !account) return;
 
-        const sentTx = await TrezorConnect.pushTransaction(signedTx);
+        const sentTx = await CerberusConnect.pushTransaction(signedTx);
 
         // close modal regardless result
         dispatch(modalActions.onCancel());
@@ -166,7 +166,7 @@ export const signTransaction =
         );
 
         // TransactionReviewModal has 2 steps: signing and pushing
-        // TrezorConnect emits UI.CLOSE_UI.WINDOW after the signing process
+        // CerberusConnect emits UI.CLOSE_UI.WINDOW after the signing process
         // this action is blocked by modalActions.preserve()
         dispatch(modalActions.preserve());
 
@@ -191,7 +191,7 @@ export const signTransaction =
             return;
         }
 
-        // store serializedTx in reducer (TrezorConnect.pushTransaction params) to be used in TransactionReviewModal and pushTransaction method
+        // store serializedTx in reducer (CerberusConnect.pushTransaction params) to be used in TransactionReviewModal and pushTransaction method
         dispatch(
             stakeActions.requestPushTransaction({
                 tx: serializedTx,

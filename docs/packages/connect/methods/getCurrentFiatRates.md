@@ -3,7 +3,7 @@
 Retrieves current selected exchange rates for selected coin.
 
 ```javascript
-const result = await TrezorConnect.blockchainGetCurrentFiatRates(params);
+const result = await CerberusConnect.blockchainGetCurrentFiatRates(params);
 ```
 
 ### Params
@@ -20,7 +20,7 @@ const result = await TrezorConnect.blockchainGetCurrentFiatRates(params);
 Return current EUR, USD, BTC exchange rates for ETH:
 
 ```javascript
-const result = await TrezorConnect.blockchainGetCurrentFiatRates({
+const result = await CerberusConnect.blockchainGetCurrentFiatRates({
     currencies: ['EUR', 'CZK', 'BTC'],
     coin: 'ETH',
 });

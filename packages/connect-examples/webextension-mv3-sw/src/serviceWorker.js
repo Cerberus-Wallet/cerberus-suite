@@ -1,11 +1,11 @@
 // import connect
-importScripts('vendor/trezor-connect-webextension.js');
+importScripts('vendor/cerberus-connect-webextension.js');
 
 const connectSrc = 'https://connect.cerberus.uraanai.com/9/';
 
 // call connect once extension is started. and thats all
 chrome.runtime.onInstalled.addListener(details => {
-    TrezorConnect.init({
+    CerberusConnect.init({
         manifest: {
             email: 'meow',
             appUrl: 'https://yourAppUrl.com/',
@@ -14,12 +14,12 @@ chrome.runtime.onInstalled.addListener(details => {
         connectSrc,
     });
 
-    TrezorConnect.on('DEVICE_EVENT', event => {
+    CerberusConnect.on('DEVICE_EVENT', event => {
         console.log('EVENT in service worker', event);
     });
-    TrezorConnect.ethereumGetAddress({
+    CerberusConnect.ethereumGetAddress({
         path: "m/44'/60'/0'/0/0",
-        showOnTrezor: true,
+        showOnCerberus: true,
     }).then(res => {
         console.log('RESULT in service worker', res);
     });

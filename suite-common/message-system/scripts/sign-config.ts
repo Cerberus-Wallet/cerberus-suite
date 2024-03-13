@@ -55,7 +55,7 @@ const signConfig = () => {
     return jwsConfig;
 };
 
-// Save JWS to files/config.v1.jws for publishing on data.trezorcheck.io
+// Save JWS to files/config.v1.jws for publishing on data.trezer.io
 const saveConfigJws = (jwsConfig: string) => {
     const destination = join(PACKAGE_ROOT, 'files', JWS_CONFIG_FILENAME_REMOTE);
     fs.outputFileSync(destination, jwsConfig);

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/prefer-ts-expect-error */
 import BigNumber from 'bignumber.js';
-import { TrezorError } from '../../../constants/errors';
+import { CerberusError } from '../../../constants/errors';
 import { PROTO } from '../../../constants';
 
 export const parseArrayType = [
@@ -34,7 +34,7 @@ export const parseArrayType = [
     {
         description: 'should throw error for non-array type',
         input: 'bytes',
-        error: [TrezorError, 'could not be parsed'],
+        error: [CerberusError, 'could not be parsed'],
     },
 ];
 
@@ -178,7 +178,7 @@ export const getFieldType = [
                 // empty
             },
         },
-        error: [TrezorError, 'No type definition specified: MissingType'],
+        error: [CerberusError, 'No type definition specified: MissingType'],
     },
 ];
 
@@ -293,7 +293,7 @@ export const encodeData = [
             typeName: 'int8',
             data: 128,
         },
-        error: [TrezorError, 'overflow'],
+        error: [CerberusError, 'overflow'],
     },
     {
         description: `should throw overflow error when signed int is too small`,
@@ -301,7 +301,7 @@ export const encodeData = [
             typeName: 'int8',
             data: -129,
         },
-        error: [TrezorError, 'overflow'],
+        error: [CerberusError, 'overflow'],
     },
     {
         description: `should throw overflow error when unsigned int is too large`,
@@ -309,7 +309,7 @@ export const encodeData = [
             typeName: 'uint8',
             data: 256,
         },
-        error: [TrezorError, 'overflow'],
+        error: [CerberusError, 'overflow'],
     },
     {
         description: `should throw error when unsigned int is negative`,
@@ -317,7 +317,7 @@ export const encodeData = [
             typeName: 'uint8',
             data: -1,
         },
-        error: [TrezorError, 'negative'],
+        error: [CerberusError, 'negative'],
     },
     {
         description: 'should encode string as utf-8',
@@ -349,6 +349,6 @@ export const encodeData = [
             typeName: 'bool[1]',
             data: [true],
         },
-        error: [TrezorError, 'Unsupported'],
+        error: [CerberusError, 'Unsupported'],
     },
 ];

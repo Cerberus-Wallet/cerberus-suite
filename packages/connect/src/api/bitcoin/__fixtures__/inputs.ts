@@ -1,4 +1,4 @@
-export const validateTrezorInputs = [
+export const validateCerberusInputs = [
     {
         description: 'valid input',
         params: [

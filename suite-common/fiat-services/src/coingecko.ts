@@ -6,7 +6,7 @@ import { RateLimiter } from './limiter';
 import { fetchUrl } from './fetch';
 
 // a proxy for https://api.coingecko.com/api/v3
-// const COINGECKO_API_BASE_URL = 'https://cdn.trezorcheck.io/dynamic/coingecko/api/v3';
+// const COINGECKO_API_BASE_URL = 'https://cdn.trezer.io/dynamic/coingecko/api/v3';
 const COINGECKO_API_BASE_URL = 'https://api.coingecko.com/api/v3';
 
 interface HistoricalResponse extends LastWeekRates {

@@ -17,7 +17,7 @@ export const DEVICE = {
 
     LOADING: 'device-loading',
 
-    // trezor-link events in protobuf format
+    // cerberus-link events in protobuf format
     BUTTON: 'button',
     PIN: 'pin',
     PASSPHRASE: 'passphrase',

@@ -5,7 +5,7 @@ import {
     Page,
 } from '@playwright/test';
 
-import { TrezorUserEnvLink } from '@cerberus/trezor-user-env-link/src';
+import { CerberusUserEnvLink } from '@cerberus/cerberus-user-env-link/src';
 
 import { launchSuite, rmDirRecursive } from '../../support/common';
 import { onDashboardPage } from '../../support/pageActions/dashboardActions';
@@ -18,9 +18,9 @@ let window: Page;
 let localDataDir: string;
 
 testPlaywright.beforeAll(async () => {
-    await TrezorUserEnvLink.api.trezorUserEnvConnect();
-    await TrezorUserEnvLink.api.startEmu({ wipe: true });
-    await TrezorUserEnvLink.api.setupEmu({
+    await CerberusUserEnvLink.api.cerberusUserEnvConnect();
+    await CerberusUserEnvLink.api.startEmu({ wipe: true });
+    await CerberusUserEnvLink.api.setupEmu({
         needs_backup: true,
         mnemonic:
             'cloth trim improve bag pigeon party wave mechanic beyond clean cake maze protect left assist carry guitar bridge nest faith critic excuse tooth dutch',
@@ -31,7 +31,7 @@ testPlaywright.beforeAll(async () => {
 
 testPlaywright.afterAll(() => {
     electronApp.close();
-    TrezorUserEnvLink.api.stopEmu();
+    CerberusUserEnvLink.api.stopEmu();
 });
 
 /**

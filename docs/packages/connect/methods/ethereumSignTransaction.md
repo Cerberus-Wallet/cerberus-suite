@@ -4,7 +4,7 @@ Asks device to sign given transaction using the private key derived by given BIP
 details on Cerberus.
 
 ```javascript
-const result = await TrezorConnect.ethereumSignTransaction(params);
+const result = await CerberusConnect.ethereumSignTransaction(params);
 ```
 
 ### Params
@@ -26,7 +26,7 @@ const result = await TrezorConnect.ethereumSignTransaction(params);
 If both parameters `maxFeePerGas` and `maxPriorityFeePerGas` are defined, transaction will be signed as the new type introduced in [EIP1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md).
 
 ```javascript
-TrezorConnect.ethereumSignTransaction({
+CerberusConnect.ethereumSignTransaction({
     path: "m/44'/60'/0'",
     transaction: {
         to: '0xd0d6d6c5fe4a677d343cc433536bb717bae167dd',
@@ -46,7 +46,7 @@ TrezorConnect.ethereumSignTransaction({
 For T1B1 and T2T1 with firmware older than 2.4.2 (but supported newer firmware versions too).
 
 ```javascript
-TrezorConnect.ethereumSignTransaction({
+CerberusConnect.ethereumSignTransaction({
     path: "m/44'/60'/0'",
     transaction: {
         to: '0x7314e0f1c0e28474bdb6be3e2c3e0453255188f8',

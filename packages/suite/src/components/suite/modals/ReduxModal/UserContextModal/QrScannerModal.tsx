@@ -6,7 +6,7 @@ import { HELP_CENTER_QR_CODE_URL } from '@cerberus/urls';
 import { Icon, colors, Paragraph, Button, Textarea, SelectBar } from '@cerberus/components';
 import { UserContextPayload } from '@suite-common/suite-types';
 
-import { TrezorLink, Translation, Modal, BundleLoader } from 'src/components/suite';
+import { CerberusLink, Translation, Modal, BundleLoader } from 'src/components/suite';
 import { useTranslation } from 'src/hooks/suite';
 
 const QrReader = lazy(() => import(/* webpackChunkName: "react-qr-reader" */ 'react-qr-reader'));
@@ -170,13 +170,13 @@ export const QrScannerModal = ({ onCancel, decision, allowPaste }: QrScannerModa
                     {!isPasteMode && (
                         <Description>
                             <Translation id="TR_FOR_EASIER_AND_SAFER_INPUT" />
-                            <TrezorLink
+                            <CerberusLink
                                 icon="EXTERNAL_LINK"
                                 type="hint"
                                 href={HELP_CENTER_QR_CODE_URL}
                             >
                                 <Translation id="TR_LEARN_MORE" />
-                            </TrezorLink>
+                            </CerberusLink>
                         </Description>
                     )}
                 </DescriptionWrapper>

@@ -15,7 +15,7 @@ export const POPUP = {
     INIT: 'popup-init',
     // Error message from popup to window.opener. Could be thrown during popup initialization process (POPUP.INIT)
     ERROR: 'popup-error',
-    // Message to webextensions, opens "trezor-usb-permission.html" within webextension
+    // Message to webextensions, opens "cerberus-usb-permission.html" within webextension
     EXTENSION_USB_PERMISSIONS: 'open-usb-permissions',
     // Message called from both [popup > iframe] then [iframe > popup] in this exact order.
     // Firstly popup call iframe to resolve popup promise in Core

@@ -6,7 +6,7 @@ import {
 
 import { Account, Discovery, FeeInfo } from '@suite-common/wallet-types';
 import { NetworkSymbol } from '@suite-common/wallet-config';
-import { TrezorDevice, UserContextPayload } from '@suite-common/suite-types';
+import { CerberusDevice, UserContextPayload } from '@suite-common/suite-types';
 import { BlockchainBlock, ConnectSettings, Manifest, PROTO } from '@cerberus/connect';
 import { FiatCurrencyCode } from '@suite-common/suite-config';
 
@@ -27,13 +27,13 @@ export type ExtraDependencies = {
             block: BlockchainBlock;
             timestamp: number;
         }>;
-        cardanoFetchTrezorPools: SuiteCompatibleThunk<'tADA' | 'ADA'>;
+        cardanoFetchCerberusPools: SuiteCompatibleThunk<'tADA' | 'ADA'>;
         initMetadata: SuiteCompatibleThunk<boolean>;
         fetchAndSaveMetadata: SuiteCompatibleThunk<string>;
     };
     selectors: {
         selectFeeInfo: (networkSymbol: NetworkSymbol) => SuiteCompatibleSelector<FeeInfo>;
-        selectDevices: SuiteCompatibleSelector<TrezorDevice[]>;
+        selectDevices: SuiteCompatibleSelector<CerberusDevice[]>;
         selectBitcoinAmountUnit: SuiteCompatibleSelector<PROTO.AmountUnit>;
         selectEnabledNetworks: SuiteCompatibleSelector<NetworkSymbol[]>;
         selectLocalCurrency: SuiteCompatibleSelector<FiatCurrencyCode>;
@@ -42,7 +42,7 @@ export type ExtraDependencies = {
         // but this is exactly what I need to get DebugModeOptions type instead of any
         selectDebugSettings: SuiteCompatibleSelector<any>;
         selectDesktopBinDir: SuiteCompatibleSelector<string | undefined>;
-        selectDevice: SuiteCompatibleSelector<TrezorDevice | undefined>;
+        selectDevice: SuiteCompatibleSelector<CerberusDevice | undefined>;
         selectRouterApp: SuiteCompatibleSelector<string>;
         selectMetadata: SuiteCompatibleSelector<any>;
         selectDeviceDiscovery: SuiteCompatibleSelector<Discovery | undefined>;
@@ -65,8 +65,8 @@ export type ExtraDependencies = {
               }>;
         lockDevice: ActionCreatorWithPreparedPayload<[payload: boolean], boolean>;
         appChanged: ActionCreatorWithPayload<unknown>;
-        setSelectedDevice: ActionCreatorWithPayload<TrezorDevice | undefined>;
-        updateSelectedDevice: ActionCreatorWithPayload<TrezorDevice | undefined>;
+        setSelectedDevice: ActionCreatorWithPayload<CerberusDevice | undefined>;
+        updateSelectedDevice: ActionCreatorWithPayload<CerberusDevice | undefined>;
         requestAuthConfirm: ActionCreatorWithoutPayload;
         onModalCancel: ActionCreatorWithoutPayload;
         openModal: ActionCreatorWithPayload<UserContextPayload>;

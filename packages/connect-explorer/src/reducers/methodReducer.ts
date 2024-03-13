@@ -98,7 +98,7 @@ const updateJavascript = (state: MethodState) => {
 
     return {
         ...state,
-        javascriptCode: `TrezorConnect.${state.name}(${code});`,
+        javascriptCode: `CerberusConnect.${state.name}(${code});`,
     };
 };
 

@@ -1,5 +1,5 @@
 import { initMessageSystemThunk } from '@suite-common/message-system';
-import * as trezorConnectActions from '@suite-common/connect-init';
+import * as cerberusConnectActions from '@suite-common/connect-init';
 import {
     initBlockchainThunk,
     initDevices,
@@ -50,7 +50,7 @@ export const init = () => async (dispatch: Dispatch, getState: GetState) => {
     try {
         // it is necessary to unwrap the result here because init calls async thunk from redux-toolkit which is always resolved
         // see more details here: https://redux-toolkit.js.org/api/createAsyncThunk#unwrapping-result-actions
-        await dispatch(trezorConnectActions.connectInitThunk()).unwrap();
+        await dispatch(cerberusConnectActions.connectInitThunk()).unwrap();
     } catch (err) {
         dispatch({ type: SUITE.ERROR, error: err.message });
         throw err;

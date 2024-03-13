@@ -1,7 +1,7 @@
 // origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/webusb/button.js
 
 const render = (className = '', url: string) => {
-    const query = className || '.trezor-webusb-button';
+    const query = className || '.cerberus-webusb-button';
     const buttons = document.querySelectorAll(query);
     const src = `${url}?${Date.now()}`;
 

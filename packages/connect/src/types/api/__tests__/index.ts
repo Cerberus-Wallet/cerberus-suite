@@ -1,11 +1,11 @@
-// TrezorConnect API types tests
+// CerberusConnect API types tests
 
 import {
-    TrezorConnect,
+    CerberusConnect,
     // Exported types // TODO: breaking change missing ex: EthereumAddress
 } from '../../..';
 
-export const init = async (api: TrezorConnect) => {
+export const init = async (api: CerberusConnect) => {
     const manifest = { appUrl: '', email: '' };
     api.init({ manifest });
     // @ts-expect-error

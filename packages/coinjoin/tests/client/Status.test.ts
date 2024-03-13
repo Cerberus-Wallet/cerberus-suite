@@ -294,7 +294,7 @@ describe('Status', () => {
                     ...AFFILIATE_INFO,
                     AffiliateData:
                         coordinatorRequestSpy.mock.calls.length > 3 // return affiliateData after 3rd iteration
-                            ? { [round.Id]: { trezor: affiliateDataBase64 } }
+                            ? { [round.Id]: { cerberus: affiliateDataBase64 } }
                             : AFFILIATE_INFO.AffiliateData,
                 },
             });

@@ -58,7 +58,7 @@ export class Logger implements ILogger {
             colors: true,
             writeToConsole: !app?.commandLine.hasSwitch('log-no-print'),
             writeToDisk: app?.commandLine.hasSwitch('log-write'),
-            outputFile: app?.commandLine.getSwitchValue('log-file') || 'trezor-suite-log-%tt.txt',
+            outputFile: app?.commandLine.getSwitchValue('log-file') || 'cerberus-suite-log-%tt.txt',
             outputPath:
                 app?.commandLine.getSwitchValue('log-path') ||
                 (userDataDir ? `${userDataDir}/logs` : process.cwd()),

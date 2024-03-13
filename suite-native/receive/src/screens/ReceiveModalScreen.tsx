@@ -4,7 +4,7 @@ import { Dimensions } from 'react-native';
 
 import { CommonActions, RouteProp, useNavigation, useRoute } from '@react-navigation/native';
 
-import TrezorConnect from '@cerberus/connect';
+import CerberusConnect from '@cerberus/connect';
 import { BoxSkeleton, Card, HStack, Text, VStack } from '@suite-native/atoms';
 import {
     RootStackParamList,
@@ -72,8 +72,8 @@ const ReceiveModalScreenSubHeader = ({ accountKey, tokenContract }: ScreenSubHea
 
     useEffect(() => {
         const unsubscribe = navigation.addListener('beforeRemove', () => {
-            // When leaving the screen, cancel the request for address on trezor device
-            TrezorConnect.cancel();
+            // When leaving the screen, cancel the request for address on cerberus device
+            CerberusConnect.cancel();
         });
 
         return unsubscribe;

@@ -19,7 +19,7 @@ const customFirmwareBuild =
     !firmware ||
     process.env.TESTS_CUSTOM_FIRMWARE_BUILD ||
     process.env.TESTS_FIRMWARE?.includes('master') ||
-    // integration tests in trezor-firmware repo use 2.99.99 version
+    // integration tests in cerberus-firmware repo use 2.99.99 version
     process.env.TESTS_FIRMWARE === '2.99.99';
 
 export default {

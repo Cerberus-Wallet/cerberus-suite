@@ -1,6 +1,6 @@
-import { TrezorConnect } from '../../..';
+import { CerberusConnect } from '../../..';
 
-export const stellarGetAddress = async (api: TrezorConnect) => {
+export const stellarGetAddress = async (api: CerberusConnect) => {
     // regular
     const singleAddress = await api.stellarGetAddress({ path: 'm/44' });
     if (singleAddress.success) {
@@ -39,7 +39,7 @@ export const stellarGetAddress = async (api: TrezorConnect) => {
         skipFinalReload: false,
         path: 'm/44',
         address: 'a',
-        showOnTrezor: true,
+        showOnCerberus: true,
     });
 
     // with invalid params
@@ -53,7 +53,7 @@ export const stellarGetAddress = async (api: TrezorConnect) => {
     api.stellarGetAddress({ bundle: 1 });
 };
 
-export const stellarSignTransaction = async (api: TrezorConnect) => {
+export const stellarSignTransaction = async (api: CerberusConnect) => {
     const sign = await api.stellarSignTransaction({
         path: 'm/44',
         networkPassphrase: 'Test SDF Network ; September 2015',

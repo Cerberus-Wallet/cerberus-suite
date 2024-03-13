@@ -17,9 +17,9 @@ export type ReduxModalProps<
 /** Modals initiated by redux state.modal */
 export const ReduxModal = (modal: ReduxModalProps) => {
     switch (modal.context) {
-        case MODAL.CONTEXT_DEVICE: // Modals requested by Device from `trezor-connect`
+        case MODAL.CONTEXT_DEVICE: // Modals requested by Device from `cerberus-connect`
             return <DeviceContextModal {...modal} />;
-        case MODAL.CONTEXT_DEVICE_CONFIRMATION: // Modals requested from `trezor-connect`
+        case MODAL.CONTEXT_DEVICE_CONFIRMATION: // Modals requested from `cerberus-connect`
             return <DeviceConfirmationModal {...modal} />;
         case MODAL.CONTEXT_USER: // Modals opened as result of user action
             return <UserContextModal {...modal} />;

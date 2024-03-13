@@ -9,7 +9,7 @@ import { createThunk } from '@suite-common/redux-utils';
 import { FiatCurrencyCode } from '@suite-common/suite-config';
 import { Account } from '@suite-common/wallet-types';
 import { isTestnet } from '@suite-common/wallet-utils';
-import TrezorConnect, { AccountTransaction } from '@cerberus/connect';
+import CerberusConnect, { AccountTransaction } from '@cerberus/connect';
 import { selectCoinDefinition, transactionsActions } from '@suite-common/wallet-core';
 import { networks } from '@suite-common/wallet-config';
 
@@ -32,7 +32,7 @@ export const updateTxsFiatRatesThunk = createThunk(
         if (txs?.length === 0 || isTestnet(account.symbol)) return;
 
         const timestamps = txs.map(tx => tx.blockTime!);
-        const response = await TrezorConnect.blockchainGetFiatRatesForTimestamps({
+        const response = await CerberusConnect.blockchainGetFiatRatesForTimestamps({
             coin: account.symbol,
             timestamps,
             currencies: [localCurrency],
@@ -72,7 +72,7 @@ const fetchFiatRate = async (
 
     if (networks[symbol].testnet) return null;
 
-    const { success, payload } = await TrezorConnect.blockchainGetCurrentFiatRates({
+    const { success, payload } = await CerberusConnect.blockchainGetCurrentFiatRates({
         coin: symbol,
         token: tokenAddress,
         currencies: [fiatCurrency],
@@ -99,7 +99,7 @@ const fetchLastWeekRate = async (
 
     if (networks[symbol].testnet) return null;
 
-    const { success, payload } = await TrezorConnect.blockchainGetFiatRatesForTimestamps({
+    const { success, payload } = await CerberusConnect.blockchainGetFiatRatesForTimestamps({
         coin: symbol,
         token: tokenAddress,
         timestamps,

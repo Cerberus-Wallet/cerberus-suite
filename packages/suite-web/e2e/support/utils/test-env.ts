@@ -4,7 +4,7 @@
  * @example cy.resetDb()
  */
 export const resetDb = () => {
-    const request = indexedDB.deleteDatabase('trezor-suite');
+    const request = indexedDB.deleteDatabase('cerberus-suite');
 
     request.onerror = function () {
         return cy;

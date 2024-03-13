@@ -4,7 +4,7 @@ import { toggleRememberDevice } from '@suite-common/wallet-core';
 import { isDeviceRemembered } from '@suite-common/suite-utils';
 
 import { useDispatch, useDevice } from 'src/hooks/suite';
-import { TrezorDevice } from 'src/types/suite';
+import { CerberusDevice } from 'src/types/suite';
 import { CoinjoinAccountDiscoveryProgress } from 'src/components/wallet';
 import { RememberWallet } from './RememberWallet';
 
@@ -18,7 +18,7 @@ export const CoinjoinAccountDiscovery = () => {
     const deviceRemembered = isDeviceRemembered(device);
     const isRememberVisible = device && (!deviceRemembered || shouldRememberCardPersist);
 
-    const toggleRemember = (device: TrezorDevice) => {
+    const toggleRemember = (device: CerberusDevice) => {
         dispatch(toggleRememberDevice({ device }));
         setShouldRememberCardPersist(true);
     };

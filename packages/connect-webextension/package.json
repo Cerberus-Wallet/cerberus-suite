@@ -15,15 +15,15 @@
     },
     "keywords": [
         "Cerberus",
-        "trezor-connect",
+        "cerberus-connect",
         "javascript",
         "serviceworker",
         "webextension"
     ],
     "main": "lib/index",
     "files": [
-        "build/trezor-connect-webextension.js",
-        "build/trezor-connect-webextension.min.js",
+        "build/cerberus-connect-webextension.js",
+        "build/cerberus-connect-webextension.min.js",
         "build/content-script.js",
         "lib/"
     ],
@@ -50,7 +50,7 @@
         "@playwright/browser-webkit": "^1.41.2",
         "@playwright/test": "^1.41.2",
         "@cerberus/node-utils": "workspace:*",
-        "@cerberus/trezor-user-env-link": "workspace:*",
+        "@cerberus/cerberus-user-env-link": "workspace:*",
         "@types/chrome": "^0.0.260",
         "copy-webpack-plugin": "^12.0.2",
         "terser-webpack-plugin": "^5.3.9",

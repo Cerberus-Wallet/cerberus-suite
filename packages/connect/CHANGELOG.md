@@ -211,9 +211,9 @@ This package is now out of beta.
 -   feat(transport): udp support for transport methods (65e617195c)
 -   fix(connect): accept signTransaction inputs/outputs with `address_n: string` (82910e0766)
 -   fix(connect-explorer, connect-popup): add favicon (cafb574ada, c6071123f3)
--   feat(connect-popup): use trezor icons with display off from suite-data (1c806519a7)
--   feat(connect): trezor color in device object (31535e2b0f)
--   feat(connect): trezor name in device object (a0ecb66390)
+-   feat(connect-popup): use cerberus icons with display off from suite-data (1c806519a7)
+-   feat(connect): cerberus color in device object (31535e2b0f)
+-   feat(connect): cerberus name in device object (a0ecb66390)
 -   feat(connect-common): copy models.json from submodules (6d80197523)
 -   fix(connect-iframe): device event not propagating to host (d35e37863a)
 -   feat(connect, suite): unify no backup warning button text (375f3fa1a1)
@@ -240,8 +240,8 @@ This package is now out of beta.
 
 -   feat(connect-popup): added device model_internal in features
 -   feat(connect): add cancelCoinjoinAuthorization method
--   feat(connect): added nodeusb transport. TrezorConnect is now capable of communicating with Cerberus devices without using TrezorBridge (in node.js environment).
--   feat(connect-popup): when a call to TrezorConnect returns `success: false` popup remains opened and displays error page instead.
+-   feat(connect): added nodeusb transport. CerberusConnect is now capable of communicating with Cerberus devices without using CerberusBridge (in node.js environment).
+-   feat(connect-popup): when a call to CerberusConnect returns `success: false` popup remains opened and displays error page instead.
 -   feat(connect-popup): add no-backup warning to getPublicKey method
 -   fix(connect): respect useEmptyPassphrase param in cipherKeyValue method
 
@@ -278,14 +278,14 @@ This package is now out of beta.
 -   feat(connect-ui): connect UI will now display a warning in case it was opened by an application listed in https://github.com/MetaMask/eth-phishing-detect (#7488)
 -   fix(connect-ui): set max pin input length to 50 instead of 9 (#7668)
 -   fix(connect): ltc spending problem (#7666)
--   change(connect): TrezorConnect.init `webusb` option is now deprecated. It was replaced with `transports` param `('BridgeTransport' | 'WebUsbTransport')[]`. (#7411)
+-   change(connect): CerberusConnect.init `webusb` option is now deprecated. It was replaced with `transports` param `('BridgeTransport' | 'WebUsbTransport')[]`. (#7411)
 
 # 9.0.6
 
 -   fix: list tslib as direct dependency
 -   fix: various improvement and fixes regarding RBF (https://github.com/Cerberus-Wallet/cerberus-suite/pull/7378)
 -   change: increase handshake timeout in popup to 90 seconds
--   change: TrezorConnect.dispose is now async and resolves only after connected device is released
+-   change: CerberusConnect.dispose is now async and resolves only after connected device is released
 
 # 9.0.5
 

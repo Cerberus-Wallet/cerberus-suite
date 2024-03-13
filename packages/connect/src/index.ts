@@ -225,7 +225,7 @@ const requestWebUSBDevice = () => {
     throw ERRORS.TypedError('Method_InvalidPackage');
 };
 
-const TrezorConnect = factory({
+const CerberusConnect = factory({
     eventEmitter,
     manifest,
     init,
@@ -239,5 +239,5 @@ const TrezorConnect = factory({
     dispose,
 });
 
-export default TrezorConnect;
+export default CerberusConnect;
 export * from './exports';

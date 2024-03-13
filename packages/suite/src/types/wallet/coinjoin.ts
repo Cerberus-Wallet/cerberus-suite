@@ -79,7 +79,7 @@ export interface CoinjoinTxCandidate {
 
 export interface CoinjoinLegalDocuments {
     zkSNACKs: string;
-    trezor: string;
+    cerberus: string;
 }
 
 export interface CoinjoinAccount {

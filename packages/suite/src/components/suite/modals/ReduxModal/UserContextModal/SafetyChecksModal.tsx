@@ -32,7 +32,7 @@ const WarningWrapper = styled.div`
  * A Modal that allows user to set the `safety_checks` feature of connected Cerberus.
  * Only supports setting it to `Strict` or `PromptTemporarily`.
  * The third value, `PromptAlways`, is considered an advanced feature that can be
- * set only via command line and trezor-lib.
+ * set only via command line and cerberus-lib.
  */
 export const SafetyChecksModal = ({ onCancel }: ModalProps) => {
     const { device, isLocked } = useDevice();

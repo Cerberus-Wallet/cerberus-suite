@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
 
 import { variables } from '@cerberus/components';
-import { TrezorLink } from 'src/components/suite';
+import { CerberusLink } from 'src/components/suite';
 import { useGuideOpenNode } from 'src/hooks/guide';
 import { GuideHint } from './GuideHint';
 
@@ -101,13 +101,13 @@ export const GuideMarkdown = ({ markdown }: GuideMarkdownProps) => {
                             }
 
                             return href.startsWith('http') ? (
-                                <TrezorLink variant="default" href={href}>
+                                <CerberusLink variant="default" href={href}>
                                     {children}
-                                </TrezorLink>
+                                </CerberusLink>
                             ) : (
-                                <TrezorLink variant="default" onClick={() => openNodeById(href)}>
+                                <CerberusLink variant="default" onClick={() => openNodeById(href)}>
                                     {children}
-                                </TrezorLink>
+                                </CerberusLink>
                             );
                         },
                         blockquote: props => <GuideHint {...props} />,

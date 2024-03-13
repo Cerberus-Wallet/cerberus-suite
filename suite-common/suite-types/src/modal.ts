@@ -3,7 +3,7 @@ import { Account, WalletAccountTransaction } from '@suite-common/wallet-types';
 import { RequestEnableTorResponse } from '@suite-common/suite-config';
 
 import { Route } from './route';
-import { TrezorDevice } from './device';
+import { CerberusDevice } from './device';
 
 export type UserContextPayload =
     | {
@@ -31,12 +31,12 @@ export type UserContextPayload =
       }
     | {
           type: 'passphrase-duplicate';
-          device: TrezorDevice;
-          duplicate: TrezorDevice;
+          device: CerberusDevice;
+          duplicate: CerberusDevice;
       }
     | {
           type: 'add-account';
-          device: TrezorDevice;
+          device: CerberusDevice;
           symbol?: Account['symbol'];
           noRedirect?: boolean;
       }

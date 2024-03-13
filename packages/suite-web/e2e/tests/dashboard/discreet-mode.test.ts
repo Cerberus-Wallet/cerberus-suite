@@ -17,7 +17,7 @@ describe('Dashboard', () => {
         cy.passThroughInitialRun();
 
         requests = [];
-        cy.interceptDataTrezorIo(requests);
+        cy.interceptDataCerberusIo(requests);
     });
 
     /*

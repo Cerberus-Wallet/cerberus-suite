@@ -5,15 +5,15 @@ import { Button, Image } from '@cerberus/components';
 
 import { Translation, Modal } from 'src/components/suite';
 import { useDevice, useDispatch } from 'src/hooks/suite';
-import { TrezorDevice } from 'src/types/suite';
+import { CerberusDevice } from 'src/types/suite';
 
 const StyledImage = styled(Image)`
     margin: 14px 0;
 `;
 
 type PassphraseDuplicateModalProps = {
-    device: TrezorDevice;
-    duplicate: TrezorDevice;
+    device: CerberusDevice;
+    duplicate: CerberusDevice;
 };
 
 export const PassphraseDuplicateModal = ({ device, duplicate }: PassphraseDuplicateModalProps) => {

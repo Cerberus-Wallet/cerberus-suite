@@ -16,9 +16,9 @@ import {
     requireReferencedTransactions,
     getReferencedTransactions,
     transformReferencedTransactions,
-    inputToTrezor,
+    inputToCerberus,
     validateHDOutput,
-    outputToTrezor,
+    outputToCerberus,
     enhanceSignTx,
     signTx,
     signTxLegacy,
@@ -160,14 +160,14 @@ export default class ComposeTransaction extends AbstractMethod<'composeTransacti
             if (tx.type === 'final') {
                 return {
                     ...tx,
-                    inputs: tx.inputs.map(inp => inputToTrezor(inp, this.params.sequence)),
-                    outputs: tx.outputs.map(outputToTrezor),
+                    inputs: tx.inputs.map(inp => inputToCerberus(inp, this.params.sequence)),
+                    outputs: tx.outputs.map(outputToCerberus),
                 };
             }
             if (tx.type === 'nonfinal') {
                 return {
                     ...tx,
-                    inputs: tx.inputs.map(inp => inputToTrezor(inp, this.params.sequence)),
+                    inputs: tx.inputs.map(inp => inputToCerberus(inp, this.params.sequence)),
                 };
             }
 
@@ -361,8 +361,8 @@ export default class ComposeTransaction extends AbstractMethod<'composeTransacti
         const { coinInfo } = this.params;
 
         const options = enhanceSignTx({}, coinInfo);
-        const inputs = tx.inputs.map(inp => inputToTrezor(inp, this.params.sequence));
-        const outputs = tx.outputs.map(outputToTrezor);
+        const inputs = tx.inputs.map(inp => inputToCerberus(inp, this.params.sequence));
+        const outputs = tx.outputs.map(outputToCerberus);
 
         let refTxs: RefTransaction[] = [];
         const requiredRefTxs = requireReferencedTransactions(inputs, options, coinInfo);

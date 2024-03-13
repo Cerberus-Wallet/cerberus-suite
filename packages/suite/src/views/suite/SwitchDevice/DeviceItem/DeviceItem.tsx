@@ -22,7 +22,7 @@ import { ColHeader } from './ColHeader';
 import { AddWalletButton } from './AddWalletButton';
 import { DeviceHeaderButton } from './DeviceHeaderButton';
 
-import type { TrezorDevice, AcquiredDevice, ForegroundAppProps } from 'src/types/suite';
+import type { CerberusDevice, AcquiredDevice, ForegroundAppProps } from 'src/types/suite';
 import type { getBackgroundRoute } from 'src/utils/suite/router';
 import { spacingsPx } from '@cerberus/theme';
 import { DeviceStatusText } from './DeviceStatusText';
@@ -126,7 +126,7 @@ const StyledImage = styled(Image)`
 `;
 
 interface DeviceItemProps {
-    device: TrezorDevice;
+    device: CerberusDevice;
     instances: AcquiredDevice[];
     onCancel: ForegroundAppProps['onCancel'];
     backgroundRoute: ReturnType<typeof getBackgroundRoute>;
@@ -258,7 +258,7 @@ export const DeviceItem = ({ device, instances, onCancel, backgroundRoute }: Dev
                                         <ColRememberHeader
                                             tooltipOpenGuide={instance => (
                                                 <OpenGuideFromTooltip
-                                                    id="/1_initialize-and-secure-your-trezor/8_remember-and-eject.md"
+                                                    id="/1_initialize-and-secure-your-cerberus/8_remember-and-eject.md"
                                                     instance={instance}
                                                 />
                                             )}
@@ -271,7 +271,7 @@ export const DeviceItem = ({ device, instances, onCancel, backgroundRoute }: Dev
                                         <ColEjectHeader
                                             tooltipOpenGuide={instance => (
                                                 <OpenGuideFromTooltip
-                                                    id="/1_initialize-and-secure-your-trezor/8_remember-and-eject.md"
+                                                    id="/1_initialize-and-secure-your-cerberus/8_remember-and-eject.md"
                                                     instance={instance}
                                                 />
                                             )}

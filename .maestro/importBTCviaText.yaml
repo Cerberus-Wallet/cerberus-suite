@@ -6,7 +6,7 @@
 # 6. Fill in a valid BTC XPUB and confirm
 # 7. Verify that coin has been synced
 
-appId: io.trezor.suite.develop
+appId: io.cerberus.suite.develop
 ---
 - launchApp:
       clearState: true

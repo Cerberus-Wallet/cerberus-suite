@@ -3,7 +3,7 @@
     "version": "9.0.22",
     "author": "Cerberus <info@cerberus.uraanai.com>",
     "homepage": "https://github.com/Cerberus-Wallet/cerberus-suite/tree/develop/packages/utils",
-    "description": "A collection of typescript utils that are intended to be used across trezor-suite monorepo.",
+    "description": "A collection of typescript utils that are intended to be used across cerberus-suite monorepo.",
     "npmPublishAccess": "public",
     "license": "SEE LICENSE IN LICENSE.md",
     "repository": {

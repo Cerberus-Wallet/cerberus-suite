@@ -1,6 +1,6 @@
-import { TrezorConnect } from '../../..';
+import { CerberusConnect } from '../../..';
 
-export const eosGetPublicKey = async (api: TrezorConnect) => {
+export const eosGetPublicKey = async (api: CerberusConnect) => {
     // regular
     const singlePK = await api.eosGetPublicKey({ path: 'm/44' });
     if (singlePK.success) {
@@ -29,7 +29,7 @@ export const eosGetPublicKey = async (api: TrezorConnect) => {
     }
 };
 
-export const eosSignTransaction = async (api: TrezorConnect) => {
+export const eosSignTransaction = async (api: CerberusConnect) => {
     const common = {
         account: 'eosio.token',
         authorization: [

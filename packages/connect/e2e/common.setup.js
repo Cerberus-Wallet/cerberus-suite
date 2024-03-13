@@ -1,8 +1,8 @@
-import TrezorConnect from '../src';
+import CerberusConnect from '../src';
 import { versionUtils } from '@cerberus/utils';
 import { UI } from '../src/events';
 import { toHardened, getHDPath } from '../src/utils/pathUtils';
-import { TrezorUserEnvLink } from '@cerberus/trezor-user-env-link';
+import { CerberusUserEnvLink } from '@cerberus/cerberus-user-env-link';
 
 const MNEMONICS = {
     mnemonic_all: 'all all all all all all all all all all all all',
@@ -15,22 +15,22 @@ const emulatorStartOpts = process.env.emulatorStartOpts || global.emulatorStartO
 const firmware = emulatorStartOpts.version;
 
 const getController = name => {
-    TrezorUserEnvLink.on('error', error => {
-        console.error('TrezorUserEnvLink WS error', error);
+    CerberusUserEnvLink.on('error', error => {
+        console.error('CerberusUserEnvLink WS error', error);
     });
-    TrezorUserEnvLink.on('disconnect', () => {
-        console.error('TrezorUserEnvLink WS disconnected');
+    CerberusUserEnvLink.on('disconnect', () => {
+        console.error('CerberusUserEnvLink WS disconnected');
     });
 
-    TrezorUserEnvLink.state = {};
+    CerberusUserEnvLink.state = {};
 
-    return TrezorUserEnvLink;
+    return CerberusUserEnvLink;
 };
 
-const setup = async (TrezorUserEnvLink, options) => {
-    const { state } = TrezorUserEnvLink;
+const setup = async (CerberusUserEnvLink, options) => {
+    const { state } = CerberusUserEnvLink;
 
-    await TrezorUserEnvLink.connect();
+    await CerberusUserEnvLink.connect();
 
     if (
         state.mnemonic === options.mnemonic &&
@@ -43,25 +43,25 @@ const setup = async (TrezorUserEnvLink, options) => {
 
     if (!options.mnemonic) return true; // skip setup if test is not using the device (composeTransaction)
 
-    await TrezorUserEnvLink.api.stopEmu();
+    await CerberusUserEnvLink.api.stopEmu();
 
-    // after bridge is stopped, trezor-user-env automatically resolves to use udp transport.
+    // after bridge is stopped, cerberus-user-env automatically resolves to use udp transport.
     // this is actually good as we avoid possible race conditions when setting up emulator for
     // the test using the same transport
-    await TrezorUserEnvLink.api.stopBridge();
+    await CerberusUserEnvLink.api.stopBridge();
 
-    await TrezorUserEnvLink.api.startEmu(emulatorStartOpts);
+    await CerberusUserEnvLink.api.startEmu(emulatorStartOpts);
 
     const mnemonic =
         typeof options.mnemonic === 'string' && options.mnemonic.indexOf(' ') > 0
             ? options.mnemonic
             : MNEMONICS[options.mnemonic];
 
-    await TrezorUserEnvLink.api.setupEmu({
+    await CerberusUserEnvLink.api.setupEmu({
         mnemonic,
         pin: options.pin || '',
         passphrase_protection: !!options.passphrase_protection,
-        label: options.label || 'TrezorT',
+        label: options.label || 'CerberusT',
         needs_backup: false,
         options,
     });
@@ -69,22 +69,22 @@ const setup = async (TrezorUserEnvLink, options) => {
     if (options.settings) {
         // allow apply-settings to fail, older FW may not know some flags yet
         try {
-            await TrezorUserEnvLink.send({ type: 'emulator-apply-settings', ...options.settings });
+            await CerberusUserEnvLink.send({ type: 'emulator-apply-settings', ...options.settings });
         } catch (e) {
             console.warn('Setup apply settings failed', options.settings, e.message);
         }
     }
 
-    TrezorUserEnvLink.state = options;
+    CerberusUserEnvLink.state = options;
 
     // after all is done, start bridge again
-    await TrezorUserEnvLink.api.startBridge();
+    await CerberusUserEnvLink.api.startBridge();
 };
 
-const initTrezorConnect = async (TrezorUserEnvLink, options) => {
-    TrezorConnect.removeAllListeners();
+const initCerberusConnect = async (CerberusUserEnvLink, options) => {
+    CerberusConnect.removeAllListeners();
 
-    TrezorConnect.on('device-connect', device => {
+    CerberusConnect.on('device-connect', device => {
         const { major_version, minor_version, patch_version, internal_model, revision } =
             device.features;
         // eslint-disable-next-line no-console
@@ -97,18 +97,18 @@ const initTrezorConnect = async (TrezorUserEnvLink, options) => {
         });
     });
 
-    TrezorConnect.on(UI.REQUEST_CONFIRMATION, () => {
-        TrezorConnect.uiResponse({
+    CerberusConnect.on(UI.REQUEST_CONFIRMATION, () => {
+        CerberusConnect.uiResponse({
             type: UI.RECEIVE_CONFIRMATION,
             payload: true,
         });
     });
 
-    TrezorConnect.on(UI.REQUEST_BUTTON, () => {
-        setTimeout(() => TrezorUserEnvLink.send({ type: 'emulator-press-yes' }), 1);
+    CerberusConnect.on(UI.REQUEST_BUTTON, () => {
+        setTimeout(() => CerberusUserEnvLink.send({ type: 'emulator-press-yes' }), 1);
     });
 
-    await TrezorConnect.init({
+    await CerberusConnect.init({
         manifest: {
             appUrl: 'tests.connect.cerberus.uraanai.com',
             email: 'tests@connect.cerberus.uraanai.com',
@@ -192,7 +192,7 @@ global.Cerberus = {
     setup,
     skipTest,
     conditionalTest,
-    initTrezorConnect,
+    initCerberusConnect,
 };
 
 const ADDRESS_N = getHDPath;

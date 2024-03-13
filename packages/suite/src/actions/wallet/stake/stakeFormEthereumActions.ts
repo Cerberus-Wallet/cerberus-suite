@@ -1,7 +1,7 @@
 import BigNumber from 'bignumber.js';
 import { toWei } from 'web3-utils';
 
-import TrezorConnect, { FeeLevel } from '@cerberus/connect';
+import CerberusConnect, { FeeLevel } from '@cerberus/connect';
 import { notificationsActions } from '@suite-common/toast-notifications';
 import {
     calculateTotal,
@@ -252,7 +252,7 @@ export const signTransaction =
             nonce = formValues.rbfParams.ethereumNonce.toString();
         }
 
-        // transform to TrezorConnect.ethereumSignTransaction params
+        // transform to CerberusConnect.ethereumSignTransaction params
         const { ethereumStakeType } = formValues;
         let txData;
         if (ethereumStakeType === 'stake') {
@@ -308,7 +308,7 @@ export const signTransaction =
             return;
         }
 
-        const signedTx = await TrezorConnect.ethereumSignTransaction({
+        const signedTx = await CerberusConnect.ethereumSignTransaction({
             device: {
                 path: device.path,
                 instance: device.instance,

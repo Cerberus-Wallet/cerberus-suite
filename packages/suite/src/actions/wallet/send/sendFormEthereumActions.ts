@@ -1,7 +1,7 @@
 import BigNumber from 'bignumber.js';
 import { toWei } from 'web3-utils';
 
-import TrezorConnect, { FeeLevel, TokenInfo } from '@cerberus/connect';
+import CerberusConnect, { FeeLevel, TokenInfo } from '@cerberus/connect';
 import { notificationsActions } from '@suite-common/toast-notifications';
 import {
     calculateTotal,
@@ -123,7 +123,7 @@ export const composeTransaction =
 
         // gasLimit calculation based on address, amount and data size
         // amount in essential for a proper calculation of gasLimit (via blockbook/geth)
-        const estimatedFee = await TrezorConnect.blockchainEstimateFee({
+        const estimatedFee = await CerberusConnect.blockchainEstimateFee({
             coin: account.symbol,
             request: {
                 blocks: [2],
@@ -264,7 +264,7 @@ export const signTransaction =
             nonce = formValues.rbfParams.ethereumNonce.toString();
         }
 
-        // transform to TrezorConnect.ethereumSignTransaction params
+        // transform to CerberusConnect.ethereumSignTransaction params
         const transaction = prepareEthereumTransaction({
             token: transactionInfo.token,
             chainId: network.chainId,
@@ -276,7 +276,7 @@ export const signTransaction =
             nonce,
         });
 
-        const signedTx = await TrezorConnect.ethereumSignTransaction({
+        const signedTx = await CerberusConnect.ethereumSignTransaction({
             device: {
                 path: device.path,
                 instance: device.instance,

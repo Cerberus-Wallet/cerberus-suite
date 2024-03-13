@@ -6,7 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 import { Box, Button, HStack, IconButton } from '@suite-native/atoms';
 import { useFormContext } from '@suite-native/forms';
 import { useTranslate } from '@suite-native/intl';
-import TrezorConnect, { UI } from '@cerberus/connect';
+import CerberusConnect, { UI } from '@cerberus/connect';
 import {
     ConnectDeviceStackParamList,
     ConnectDeviceStackRoutes,
@@ -65,13 +65,13 @@ export const PinFormControlButtons = () => {
     }, [openLink, reset, showAlert, translate]);
 
     useEffect(() => {
-        TrezorConnect.on(UI.INVALID_PIN, handleInvalidPin);
+        CerberusConnect.on(UI.INVALID_PIN, handleInvalidPin);
 
-        return () => TrezorConnect.off(UI.INVALID_PIN, handleInvalidPin);
+        return () => CerberusConnect.off(UI.INVALID_PIN, handleInvalidPin);
     }, [handleInvalidPin]);
 
     const onSubmit = handleSubmit(values => {
-        TrezorConnect.uiResponse({ type: UI.RECEIVE_PIN, payload: values.pin });
+        CerberusConnect.uiResponse({ type: UI.RECEIVE_PIN, payload: values.pin });
     });
 
     const handleDelete = () => {

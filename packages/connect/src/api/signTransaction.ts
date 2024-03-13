@@ -15,9 +15,9 @@ import {
     transformReferencedTransactions,
     getOrigTransactions,
     transformOrigTransactions,
-    validateTrezorInputs,
-    validateTrezorOutputs,
-    enhanceTrezorInputs,
+    validateCerberusInputs,
+    validateCerberusOutputs,
+    enhanceCerberusInputs,
     enhanceSignTx,
     signTx,
     signTxLegacy,
@@ -88,8 +88,8 @@ export default class SignTransaction extends AbstractMethod<'signTransaction', P
         this.firmwareRange = getFirmwareRange(this.name, coinInfo, this.firmwareRange);
         this.preauthorized = payload.preauthorized;
 
-        const inputs = validateTrezorInputs(payload.inputs, coinInfo);
-        const outputs = validateTrezorOutputs(payload.outputs, coinInfo);
+        const inputs = validateCerberusInputs(payload.inputs, coinInfo);
+        const outputs = validateCerberusOutputs(payload.outputs, coinInfo);
 
         if (payload.refTxs && payload.account?.transactions) {
             console.warn(
@@ -200,7 +200,7 @@ export default class SignTransaction extends AbstractMethod<'signTransaction', P
                   .getTransactionHexes(refTxsIds)
                   .then(parseTransactionHexes(coinInfo.network))
                   .then(rawTxs => {
-                      enhanceTrezorInputs(this.params.inputs, rawTxs);
+                      enhanceCerberusInputs(this.params.inputs, rawTxs);
 
                       return transformReferencedTransactions(rawTxs);
                   });

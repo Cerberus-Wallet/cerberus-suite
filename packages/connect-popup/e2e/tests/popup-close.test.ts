@@ -1,5 +1,5 @@
 import { test, expect, Page, BrowserContext } from '@playwright/test';
-import { TrezorUserEnvLink } from '@cerberus/trezor-user-env-link';
+import { CerberusUserEnvLink } from '@cerberus/cerberus-user-env-link';
 import { createDeferred, Deferred, addDashesToSpaces } from '@cerberus/utils';
 import {
     findElementByDataTest,
@@ -17,7 +17,7 @@ const url = process.env.URL || 'http://localhost:8088/';
 const isWebExtension = process.env.IS_WEBEXTENSION === 'true';
 const connectSrc = process.env.CERBERUS_CONNECT_SRC;
 
-const WAIT_AFTER_TEST = 3000; // how long test should wait for more potential trezord requests
+const WAIT_AFTER_TEST = 3000; // how long test should wait for more potential cerberusd requests
 
 interface Response {
     url: string;
@@ -39,7 +39,7 @@ let explorerPage: Page;
 let explorerUrl: string;
 
 test.beforeAll(async () => {
-    await TrezorUserEnvLink.connect();
+    await CerberusUserEnvLink.connect();
     log(`isWebExtension: ${isWebExtension}`);
     log(`connectSrc: ${connectSrc}`);
     log(`url: ${url}`);
@@ -55,15 +55,15 @@ test.beforeAll(async () => {
         releasePromise = createDeferred();
 
         log('beforeEach', 'stopBridge');
-        await TrezorUserEnvLink.api.stopBridge();
+        await CerberusUserEnvLink.api.stopBridge();
         log('beforeEach', 'stopEmu');
-        await TrezorUserEnvLink.api.stopEmu();
+        await CerberusUserEnvLink.api.stopEmu();
         log('beforeEach', 'startEmu');
-        await TrezorUserEnvLink.api.startEmu({
+        await CerberusUserEnvLink.api.startEmu({
             wipe: true,
         });
         log('beforeEach', 'setupEmu');
-        await TrezorUserEnvLink.api.setupEmu({
+        await CerberusUserEnvLink.api.setupEmu({
             mnemonic:
                 'alcohol woman abuse must during monitor noble actual mixed trade anger aisle',
             pin: '',
@@ -72,7 +72,7 @@ test.beforeAll(async () => {
             needs_backup: false,
         });
         log('beforeEach', 'startBridge');
-        await TrezorUserEnvLink.api.startBridge(bridgeVersion);
+        await CerberusUserEnvLink.api.startBridge(bridgeVersion);
 
         const contexts = await getContexts(page, url, isWebExtension);
         browserContext = contexts.browserContext;
@@ -189,9 +189,9 @@ test.beforeAll(async () => {
         await popup.waitForSelector('button.confirm', { state: 'visible', timeout: 40000 });
         await popup.click('button.confirm');
         await popup.waitForSelector('.follow-device >> visible=true');
-        await TrezorUserEnvLink.send({ type: 'emulator-press-yes' });
-        await TrezorUserEnvLink.send({ type: 'emulator-press-yes' });
-        await TrezorUserEnvLink.send({ type: 'emulator-press-yes' });
+        await CerberusUserEnvLink.send({ type: 'emulator-press-yes' });
+        await CerberusUserEnvLink.send({ type: 'emulator-press-yes' });
+        await CerberusUserEnvLink.send({ type: 'emulator-press-yes' });
         await explorerPage.waitForSelector('text=Message verified');
         if (context) {
             // BrowserContext has to start fresh each test.
@@ -226,8 +226,8 @@ test.beforeAll(async () => {
         log(`test: ${test.info().title}`);
 
         log('user canceled dialog on device');
-        await TrezorUserEnvLink.send({ type: 'emulator-press-no' });
-        await TrezorUserEnvLink.send({ type: 'emulator-press-yes' });
+        await CerberusUserEnvLink.send({ type: 'emulator-press-no' });
+        await CerberusUserEnvLink.send({ type: 'emulator-press-yes' });
 
         await explorerPage.waitForTimeout(WAIT_AFTER_TEST);
 
@@ -253,7 +253,7 @@ test.beforeAll(async () => {
         log(`test: ${test.info().title}`);
 
         log('user canceled interaction on device');
-        await TrezorUserEnvLink.api.stopEmu();
+        await CerberusUserEnvLink.api.stopEmu();
         await explorerPage.waitForTimeout(WAIT_AFTER_TEST);
 
         responses.forEach(response => {
@@ -281,29 +281,29 @@ test.beforeAll(async () => {
         await explorerPage.waitForSelector('text=device disconnected during action');
 
         log('starting emulator');
-        await TrezorUserEnvLink.api.startEmu();
+        await CerberusUserEnvLink.api.startEmu();
     });
 
     // todo: this one is somewhat flaky. tends to produce "RuntimeError - Emulator proces died" error
-    test.skip(`trezor bridge ${bridgeVersion} was killed during action`, async ({ page }) => {
+    test.skip(`cerberus bridge ${bridgeVersion} was killed during action`, async ({ page }) => {
         // user canceled interaction on device
-        await TrezorUserEnvLink.send({ type: 'bridge-stop' });
+        await CerberusUserEnvLink.send({ type: 'bridge-stop' });
         await popupClosedPromise;
 
         await page.waitForSelector('text=Aborted');
 
         // todo: emulator stop should not be needed. this indicate some kind of bug
-        await TrezorUserEnvLink.api.stopEmu();
+        await CerberusUserEnvLink.api.stopEmu();
 
-        await TrezorUserEnvLink.api.startBridge();
+        await CerberusUserEnvLink.api.startBridge();
 
         // todo: see previous comment, emulator should be already running
-        await TrezorUserEnvLink.api.startEmu();
+        await CerberusUserEnvLink.api.startEmu();
     });
 
     // reloading page might end with "closed device" error from here:
     // https://github.com/Cerberus-Wallet/cerberusd-go/blob/106e5e9af3573ac2b27ebf2082bbee91650949bf/usb/libusb.go#L511
-    // this was probably targeted by this (never merged) trezor-bridge PR https://github.com/Cerberus-Wallet/cerberusd-go/pull/156
+    // this was probably targeted by this (never merged) cerberus-bridge PR https://github.com/Cerberus-Wallet/cerberusd-go/pull/156
     test.skip(`client (connect-explorer) is reloaded by user while popup is active. bridge version ${bridgeVersion}`, async ({
         page,
     }) => {
@@ -326,9 +326,9 @@ test.beforeAll(async () => {
     test('when user cancels permissions in popup it closes automatically', async () => {
         log(`test: ${test.info().title}`);
 
-        await TrezorUserEnvLink.api.pressYes();
-        await TrezorUserEnvLink.api.pressYes();
-        await TrezorUserEnvLink.api.pressYes();
+        await CerberusUserEnvLink.api.pressYes();
+        await CerberusUserEnvLink.api.pressYes();
+        await CerberusUserEnvLink.api.pressYes();
 
         popupClosedPromise = new Promise(resolve => {
             popup.on('close', () => resolve(undefined));
@@ -362,9 +362,9 @@ test.beforeAll(async () => {
         test.skip(isWebExtension, 'todo: skip for now');
         log(`test: ${test.info().title}`);
 
-        await TrezorUserEnvLink.api.pressYes();
-        await TrezorUserEnvLink.api.pressYes();
-        await TrezorUserEnvLink.api.pressYes();
+        await CerberusUserEnvLink.api.pressYes();
+        await CerberusUserEnvLink.api.pressYes();
+        await CerberusUserEnvLink.api.pressYes();
 
         popupClosedPromise = new Promise(resolve => {
             popup.on('close', () => resolve(undefined));
@@ -401,8 +401,8 @@ test.beforeAll(async () => {
         log(`test: ${test.info().title}`);
 
         log('rejecting request in device by pressing no');
-        await TrezorUserEnvLink.api.pressNo();
-        await TrezorUserEnvLink.api.pressYes();
+        await CerberusUserEnvLink.api.pressNo();
+        await CerberusUserEnvLink.api.pressYes();
 
         log('waiting for error page is displayed');
         await findElementByDataTest(popup, '@connect-ui/error');
@@ -428,9 +428,9 @@ test.beforeAll(async () => {
         test.skip(isWebExtension, 'todo: skip for now');
         log(`test: ${test.info().title}`);
 
-        await TrezorUserEnvLink.api.pressYes();
-        await TrezorUserEnvLink.api.pressYes();
-        await TrezorUserEnvLink.api.pressYes();
+        await CerberusUserEnvLink.api.pressYes();
+        await CerberusUserEnvLink.api.pressYes();
+        await CerberusUserEnvLink.api.pressYes();
 
         popupClosedPromise = new Promise(resolve => {
             popup.on('close', () => resolve(undefined));
@@ -461,7 +461,7 @@ test.beforeAll(async () => {
         await waitAndClick(popup, ['@export-address/confirm-button']);
 
         // Confirm right address is displayed.
-        await TrezorUserEnvLink.api.pressYes();
+        await CerberusUserEnvLink.api.pressYes();
 
         // Popup should be closed now.
         await popupClosedPromise;
@@ -476,9 +476,9 @@ test.beforeAll(async () => {
 
         // We need to skip the after flow because this test closes 3rd party window and there is not window to continue with.
         test.info().annotations.push({ type: 'skip-after-flow' });
-        await TrezorUserEnvLink.api.pressYes();
-        await TrezorUserEnvLink.api.pressYes();
-        await TrezorUserEnvLink.api.pressYes();
+        await CerberusUserEnvLink.api.pressYes();
+        await CerberusUserEnvLink.api.pressYes();
+        await CerberusUserEnvLink.api.pressYes();
 
         popupClosedPromise = new Promise(resolve => {
             popup.on('close', () => resolve(undefined));

@@ -149,7 +149,7 @@ Browser (User Agent), System and HW specifications, Suite version, instance id s
   { time: 1634644853744, type: @analytics/init },
   { time: 1634644854072, type: @desktop-update/not-available },
   { time: 1634644854166, type: iframe-loaded },
-  { time: 1634644854168, type: @suite/trezor-connect-initialized },
+  { time: 1634644854168, type: @suite/cerberus-connect-initialized },
   { time: 1634644854187, type: @blockchain/update-fee },
   { action: {}, time: 1634644854188, type: @suite/app-changed },
   { time: 1634644854189, type: @router/location-change },

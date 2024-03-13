@@ -26,7 +26,7 @@ export const UnexpectedDeviceState = ({
                     items={[TROUBLESHOOTING_TIP_BRIDGE_STATUS, TROUBLESHOOTING_TIP_BRIDGE_INSTALL]}
                 />
 
-                {/* <Button onClick={() => TrezorConnect.disableWebUSB()}>
+                {/* <Button onClick={() => CerberusConnect.disableWebUSB()}>
                         <Translation id="TR_TRY_BRIDGE" />
                     </Button> */}
             </>

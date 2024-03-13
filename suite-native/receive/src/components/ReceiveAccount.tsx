@@ -13,7 +13,7 @@ import { AccountKey, TokenAddress } from '@suite-common/wallet-types';
 import { useTranslate } from '@suite-native/intl';
 
 import { useAccountReceiveAddress } from '../hooks/useAccountReceiveAddress';
-import { ConfirmOnTrezorImage } from './ConfirmOnTrezorImage';
+import { ConfirmOnCerberusImage } from './ConfirmOnCerberusImage';
 import { ReceiveAddressCard } from './ReceiveAddressCard';
 import { ReceiveAccountDetailsCard } from './ReceiveAccountDetailsCard';
 import { hasReceiveAddressButtonRequest } from '../hooks/receiveSelectors';
@@ -46,7 +46,7 @@ export const ReceiveAccount = ({ accountKey, tokenContract }: AccountReceiveProp
         dispatch(removeButtonRequests({ device }));
     };
 
-    const isConfirmOnTrezorReady =
+    const isConfirmOnCerberusReady =
         isUnverifiedAddressRevealed && !isReceiveApproved && hasReceiveButtonRequest;
 
     return (
@@ -68,7 +68,7 @@ export const ReceiveAccount = ({ accountKey, tokenContract }: AccountReceiveProp
                 />
             </VStack>
 
-            {isConfirmOnTrezorReady && <ConfirmOnTrezorImage />}
+            {isConfirmOnCerberusReady && <ConfirmOnCerberusImage />}
         </Box>
     );
 };

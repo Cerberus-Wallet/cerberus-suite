@@ -33,7 +33,7 @@ export const ConnectingDeviceScreen = () => {
                         <Translation id="moduleConnectDevice.connectingDeviceScreen.title" />
                     </Text>
                     <Box paddingBottom="small" paddingLeft="small">
-                        <Icon name="trezor" size="extraLarge" />
+                        <Icon name="cerberus" size="extraLarge" />
                     </Box>
                 </Box>
                 <Text variant="highlight" color="textSubdued">

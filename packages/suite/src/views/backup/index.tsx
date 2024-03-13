@@ -7,7 +7,7 @@ import { selectDevice } from '@suite-common/wallet-core';
 import { useDispatch, useSelector } from 'src/hooks/suite';
 import { backupDevice } from 'src/actions/backup/backupActions';
 import { changePin } from 'src/actions/settings/deviceSettingsActions';
-import { Loading, Translation, TrezorLink, Modal } from 'src/components/suite';
+import { Loading, Translation, CerberusLink, Modal } from 'src/components/suite';
 import { PreBackupCheckboxes, AfterBackupCheckboxes } from 'src/components/backup';
 import { canStart, canContinue } from 'src/utils/backup';
 import { selectLocks } from 'src/reducers/suite/suiteReducer';
@@ -127,9 +127,9 @@ export const Backup = ({ cancelable, onCancel }: ForegroundAppProps) => {
                         <StyledImage image="UNI_ERROR" />
                         <StyledP data-test="@backup/already-failed-message">
                             <Translation id="BACKUP_BACKUP_ALREADY_FAILED_DESCRIPTION" />
-                            <TrezorLink icon="EXTERNAL_LINK" href={HELP_CENTER_FAILED_BACKUP_URL}>
+                            <CerberusLink icon="EXTERNAL_LINK" href={HELP_CENTER_FAILED_BACKUP_URL}>
                                 <Translation id="TR_LEARN_MORE" />
-                            </TrezorLink>
+                            </CerberusLink>
                         </StyledP>
                     </VerticalCenter>
                 ) : (

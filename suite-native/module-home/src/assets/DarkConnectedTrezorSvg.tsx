@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Svg, { G, Path, Defs, ClipPath, SvgProps } from 'react-native-svg';
 
-export const DarkConnectedTrezorSvg = (props: SvgProps) => (
+export const DarkConnectedCerberusSvg = (props: SvgProps) => (
     <Svg width={216} height={205} viewBox="0 0 216 205" fill="none" {...props}>
         <G clipPath="url(#clip0_21584_4790)">
             <Path

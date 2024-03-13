@@ -43,7 +43,7 @@ export type RunOptions = {
     onlyOneActivity?: boolean;
 
     // cancel popup request when we are sure that there is no need to authenticate
-    // Method gets called after run() fetch new Features but before trezor-link dispatch "acquire" event
+    // Method gets called after run() fetch new Features but before cerberus-link dispatch "acquire" event
     cancelPopupRequest?: () => any;
 
     keepSession?: boolean;

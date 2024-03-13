@@ -206,7 +206,7 @@ const saveTxSignatures = (
         if (!signature) {
             throw ERRORS.TypedError(
                 'Runtime',
-                'saveTxSignatures: Unexpected null in trezor:TxRequestSerialized signature.',
+                'saveTxSignatures: Unexpected null in cerberus:TxRequestSerialized signature.',
             );
         }
         signatures[signature_index] = signature;

@@ -30,7 +30,7 @@ export const DiscoveryAssetsLoader = ({ numberOfAssets }: { numberOfAssets: numb
             ))}
 
             <HStack justifyContent="center">
-                <Icon size="mediumLarge" name="trezor" />
+                <Icon size="mediumLarge" name="cerberus" />
                 <Text variant="callout">{discoveryProgressText}</Text>
             </HStack>
         </>

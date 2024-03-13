@@ -17,7 +17,7 @@ export const ShowAddressButtons = ({ onShowAddress }: ShowAddressButtonsProps) =
     const { translate } = useTranslate();
 
     const handleOpenEduLink = () => {
-        openLink('https://cerberus.uraanai.com/learn/a/verifying-trezor-suite-lite-addresses');
+        openLink('https://cerberus.uraanai.com/learn/a/verifying-cerberus-suite-lite-addresses');
     };
 
     return (

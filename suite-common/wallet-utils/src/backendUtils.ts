@@ -45,10 +45,10 @@ export const getCustomBackends = (blockchains: BlockchainNetworks): CustomBacken
 
 export const isElectrumUrl = (value: string) => !!parseElectrumUrl(value);
 
-// check if account.backendType or NETWORK.accountType.backendType is supported by TrezorConnect api (defined in CERBERUS_CONNECT_BACKENDS)
+// check if account.backendType or NETWORK.accountType.backendType is supported by CerberusConnect api (defined in CERBERUS_CONNECT_BACKENDS)
 // if it's not then different (non-standard) api should be used for fetching data
-export const isTrezorConnectBackendType = (type?: BackendType) => {
-    if (!type) return true; // use TrezorConnect by default if not defined
+export const isCerberusConnectBackendType = (type?: BackendType) => {
+    if (!type) return true; // use CerberusConnect by default if not defined
 
     return !!CERBERUS_CONNECT_BACKENDS.find(b => b === type);
 };

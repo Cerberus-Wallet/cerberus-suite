@@ -6,7 +6,7 @@ import { Select, variables } from '@cerberus/components';
 import { bip39 } from '@cerberus/crypto-utils';
 import { useTranslation } from 'src/hooks/suite/useTranslation';
 import { useKeyPress } from 'react-use';
-import TrezorConnect, { UI } from '@cerberus/connect';
+import CerberusConnect, { UI } from '@cerberus/connect';
 import { createTimeoutPromise } from '@cerberus/utils';
 
 const options = bip39.map(item => ({ label: item, value: item }));
@@ -77,7 +77,7 @@ export const WordInput = memo(() => {
                 }
                 onChange={async (item: Option, ref?: SelectInstance<Option, boolean> | null) => {
                     await createTimeoutPromise(600);
-                    TrezorConnect.uiResponse({ type: UI.RECEIVE_WORD, payload: item.value });
+                    CerberusConnect.uiResponse({ type: UI.RECEIVE_WORD, payload: item.value });
                     ref?.clearValue();
                 }}
                 components={{ MenuList }}

@@ -34,10 +34,10 @@ export type CardanoStaking = {
     fee?: string;
     deposit?: string;
     registeredPoolId: string | null;
-    isStakingOnTrezorPool: boolean | null;
+    isStakingOnCerberusPool: boolean | null;
     isFetchError: boolean;
     isCurrentPoolOversaturated: boolean;
-    trezorPools: PoolsResponse | undefined;
+    cerberusPools: PoolsResponse | undefined;
     isActive: boolean;
     rewards: string;
     delegate(): void;

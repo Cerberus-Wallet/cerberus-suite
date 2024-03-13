@@ -1,9 +1,9 @@
 import { useMemo, ReactNode } from 'react';
 import styled from 'styled-components';
-import { Translation, TrezorLink } from 'src/components/suite';
+import { Translation, CerberusLink } from 'src/components/suite';
 import { variables, Button, CollapsibleBox } from '@cerberus/components';
 import { CERBERUS_SUPPORT_URL } from '@cerberus/urls';
-import TrezorConnect from '@cerberus/connect';
+import CerberusConnect from '@cerberus/connect';
 import { isAndroid } from '@cerberus/env-utils';
 
 const WhiteCollapsibleBox = styled(CollapsibleBox)`
@@ -134,7 +134,7 @@ export const TroubleshootingTips = ({
                 <StyledButton
                     variant="secondary"
                     data-test="@onboarding/try-bridge-button"
-                    onClick={() => TrezorConnect.disableWebUSB()}
+                    onClick={() => CerberusConnect.disableWebUSB()}
                 >
                     <Translation id="TR_DISABLE_WEBUSB_TRY_BRIDGE" />
                 </StyledButton>
@@ -145,11 +145,11 @@ export const TroubleshootingTips = ({
                     <Translation id="TR_ONBOARDING_TROUBLESHOOTING_FAILED" />
                 </FooterText>
 
-                <TrezorLink variant="nostyle" href={CERBERUS_SUPPORT_URL}>
+                <CerberusLink variant="nostyle" href={CERBERUS_SUPPORT_URL}>
                     <Button variant="tertiary" size="small">
                         <Translation id="TR_CONTACT_SUPPORT" />
                     </Button>
-                </TrezorLink>
+                </CerberusLink>
             </ContactSupport>
         </WhiteCollapsibleBox>
     );

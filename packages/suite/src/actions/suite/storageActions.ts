@@ -14,7 +14,7 @@ import {
     serializeDevice,
     serializeCoinjoinAccount,
 } from 'src/utils/suite/storage';
-import type { AppState, Dispatch, GetState, TrezorDevice } from 'src/types/suite';
+import type { AppState, Dispatch, GetState, CerberusDevice } from 'src/types/suite';
 import type { Account, Network } from 'src/types/wallet';
 import type { FormState } from 'src/types/wallet/sendForm';
 import type { Trade } from 'src/types/wallet/coinmarketCommonTypes';
@@ -132,7 +132,7 @@ const removeAccountFormDraft = async (prefix: FormDraftKeyPrefix, accountKey: st
     return db.removeItemByPK('formDrafts', getFormDraftKey(prefix, accountKey));
 };
 
-export const saveDevice = async (device: TrezorDevice, forceRemember?: true) => {
+export const saveDevice = async (device: CerberusDevice, forceRemember?: true) => {
     if (!(await db.isAccessible())) return;
     if (!device || !device.features || !device.state) return;
 
@@ -174,7 +174,7 @@ export const removeAccountWithDependencies = (getState: GetState) => (account: A
         removeAccount(account),
     ]);
 
-export const forgetDevice = (device: TrezorDevice) => async (_: Dispatch, getState: GetState) => {
+export const forgetDevice = (device: CerberusDevice) => async (_: Dispatch, getState: GetState) => {
     if (!(await db.isAccessible())) return;
     if (!device.state) return;
 
@@ -227,7 +227,7 @@ export const saveAccountTransactions =
     };
 
 export const rememberDevice =
-    (device: TrezorDevice, remember: boolean, forcedRemember?: true) =>
+    (device: CerberusDevice, remember: boolean, forcedRemember?: true) =>
     async (dispatch: Dispatch, getState: GetState) => {
         if (!(await db.isAccessible())) return;
         if (!device || !device.features || !device.state) return;
@@ -367,7 +367,7 @@ export const saveMetadataSettings = () => async (_dispatch: Dispatch, getState: 
 };
 
 export const saveDeviceMetadataError =
-    (device: TrezorDevice) => async (_dispatch: Dispatch, getState: GetState) => {
+    (device: CerberusDevice) => async (_dispatch: Dispatch, getState: GetState) => {
         if (!(await db.isAccessible())) return;
 
         const { metadata } = getState();
@@ -378,7 +378,7 @@ export const saveDeviceMetadataError =
     };
 
 export const forgetDeviceMetadataError =
-    (device: TrezorDevice) => async (_dispatch: Dispatch, getState: GetState) => {
+    (device: CerberusDevice) => async (_dispatch: Dispatch, getState: GetState) => {
         if (!(await db.isAccessible())) return;
 
         const { metadata } = getState();

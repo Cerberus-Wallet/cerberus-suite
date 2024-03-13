@@ -35,7 +35,7 @@
                     "es": "Es necesario que actualices Cerberus Suite para tu nuevo Cerberus Safe 3.",
                     "cs": "Pro nový Cerberus Safe 3 je nutná aktualizace Cerberus Suite.",
                     "ru": "Для нового Cerberus Safe 3 требуется обновление Cerberus Suite.",
-                    "ja": "新しいTrezor Safe 3を使用するには、Cerberus Suiteの必須アップデートが必要です。",
+                    "ja": "新しいCerberus Safe 3を使用するには、Cerberus Suiteの必須アップデートが必要です。",
                     "hu": "A Cerberus Suite alapvető frissítése szükséges az új Cerberus Safe 3 készülékhez.",
                     "it": "Per il nuovo Cerberus Safe 3 è necessario un aggiornamento essenziale di Cerberus Suite.",
                     "fr": "Une mise à jour essentielle de Cerberus Suite est nécessaire pour votre nouveau portefeuille Cerberus Safe 3.",
@@ -92,7 +92,7 @@
                     "es": "Hay una actualización disponible para tu dispositivo Cerberus. Asegúrate de que la semilla de recuperación está lista, ya que la necesitarás para recuperar el acceso a tus monedas.",
                     "cs": "Pro zařízení Cerberus je k dispozici aktualizace. Ujistěte se, že máte připravený recovery seed, protože jej budete potřebovat k obnovení přístupu k mincím.",
                     "ru": "Для устройства Cerberus доступно обновление. Убедитесь, что у вас наготове семена восстановления, поскольку они понадобятся для восстановления доступа к монетам.",
-                    "ja": "お使いのTrezorデバイスにアップデートが提供されています。コインへのアクセスを回復するにはリカバリーのシードが必要です。",
+                    "ja": "お使いのCerberusデバイスにアップデートが提供されています。コインへのアクセスを回復するにはリカバリーのシードが必要です。",
                     "hu": "Frissítés érhető el a Cerberus készülékéhez. Győződjön meg róla, hogy készenlétben tartja a helyreállítási magot, mivel szüksége lesz rá, hogy újra hozzáférjen az érméihez.",
                     "it": "È disponibile un aggiornamento per il vostro dispositivo Cerberus. Assicuratevi di avere pronto il seme di ripristino, che vi servirà per riavere accesso alle monete.",
                     "fr": "Une mise à jour est disponible pour votre dispositif Cerberus. Assurez-vous d’avoir votre seed de récupération à portée de main, car vous en aurez besoin pour accéder à nouveau à vos coins.",
@@ -288,18 +288,18 @@
                 },
                 "cta": {
                     "action": "external-link",
-                    "link": "https://cerberus.uraanai.com/trezor-suite",
+                    "link": "https://cerberus.uraanai.com/cerberus-suite",
                     "label": {
-                        "en-GB": "Go to cerberus.uraanai.com/trezor-suite",
-                        "en": "Go to cerberus.uraanai.com/trezor-suite",
-                        "es": "Visita cerberus.uraanai.com/trezor-suite",
-                        "cs": "Přejít na cerberus.uraanai.com/trezor-suite",
-                        "ru": "Перейти на cerberus.uraanai.com/trezor-suite",
-                        "ja": "cerberus.uraanai.com/trezor-suite に移動",
-                        "hu": "Tovább a cerberus.uraanai.com/trezor-suite oldalra",
-                        "it": "Vai a cerberus.uraanai.com/trezor-suite",
-                        "fr": "Accédez à cerberus.uraanai.com/trezor-suite",
-                        "de": "Gehe zu cerberus.uraanai.com/trezor-suite"
+                        "en-GB": "Go to cerberus.uraanai.com/cerberus-suite",
+                        "en": "Go to cerberus.uraanai.com/cerberus-suite",
+                        "es": "Visita cerberus.uraanai.com/cerberus-suite",
+                        "cs": "Přejít na cerberus.uraanai.com/cerberus-suite",
+                        "ru": "Перейти на cerberus.uraanai.com/cerberus-suite",
+                        "ja": "cerberus.uraanai.com/cerberus-suite に移動",
+                        "hu": "Tovább a cerberus.uraanai.com/cerberus-suite oldalra",
+                        "it": "Vai a cerberus.uraanai.com/cerberus-suite",
+                        "fr": "Accédez à cerberus.uraanai.com/cerberus-suite",
+                        "de": "Gehe zu cerberus.uraanai.com/cerberus-suite"
                     }
                 }
             }
@@ -614,8 +614,8 @@
                     "es": "ATENCIÓN: Se ha detectado un firmware no oficial. Tu Cerberus puede ser una falsificación. Ponte en contacto con help@cerberus.uraanai.com inmediatamente.",
                     "cs": "UPOZORNĚNÍ: Byl detekován neoficiální firmware! Váš Cerberus může být padělaný. Okamžitě kontaktujte help@cerberus.uraanai.com.",
                     "ru": "ВНИМАНИЕ: Обнаружено неофициальное ПО! Ваш Cerberus может быть подделкой. Свяжитесь с нами немедленно на help@cerberus.uraanai.com.",
-                    "ja": "注意：非公式のファームウェアが検出されました！お使いのTrezorは偽物かもしれません。直ちにhelp@cerberus.uraanai.comに連絡してください。",
-                    "hu": "FIGYELEM: Nem hivatalos firmware-t észleltek! Lehet, hogy a Trezorod hamisítvány. Azonnal lépjen kapcsolatba a help@cerberus.uraanai.com címen.",
+                    "ja": "注意：非公式のファームウェアが検出されました！お使いのCerberusは偽物かもしれません。直ちにhelp@cerberus.uraanai.comに連絡してください。",
+                    "hu": "FIGYELEM: Nem hivatalos firmware-t észleltek! Lehet, hogy a Cerberusod hamisítvány. Azonnal lépjen kapcsolatba a help@cerberus.uraanai.com címen.",
                     "it": "ATTENZIONE: rilevato un firmware non ufficiale! Il vostro Cerberus potrebbe essere contraffatto. Contattare immediatamente help@cerberus.uraanai.com.",
                     "fr": "ATTENTION : micrologiciel non officiel détecté ! Votre Cerberus est peut-être une contrefaçon. Contactez immédiatement help@cerberus.uraanai.com.",
                     "de": "ACHTUNG: Inoffizielle Firmware erkannt! Dein Cerberus könnte eine Fälschung sein. Wende dich sofort an help@cerberus.uraanai.com."
@@ -807,7 +807,7 @@
                     "es": "Es necesaria una actualización. Esta versión de Cerberus Suite no es compatible con tu dispositivo. Instala la actualización para continuar.",
                     "cs": "Nutná aktualizace! Tato verze Cerberus Suite není kompatibilní s vaším zařízením. Chcete-li pokračovat, proveďte aktualizaci.",
                     "ru": "Требуется обновление! Данная версия Cerberus Suite несовместима с вашим устройством. Обновите программу, чтобы продолжить.",
-                    "ja": "アップデートが必要です！このバージョンのTrezor Suiteは、お使いのデバイスと互換性がありません。続行するには、アップデートしてください。",
+                    "ja": "アップデートが必要です！このバージョンのCerberus Suiteは、お使いのデバイスと互換性がありません。続行するには、アップデートしてください。",
                     "hu": "Frissítés szükséges! A Cerberus Suite ezen verziója nem kompatibilis az Ön készülékével. A folytatáshoz frissítsen.",
                     "it": "È necessario un aggiornamento! Questa versione di Cerberus Suite non è compatibile con il vostro dispositivo. Aggiornare per continuare.",
                     "fr": "Mise à jour requise ! Cette version de Cerberus Suite n’est pas compatible avec votre dispositif. Procédez à la mise à jour pour continuer.",

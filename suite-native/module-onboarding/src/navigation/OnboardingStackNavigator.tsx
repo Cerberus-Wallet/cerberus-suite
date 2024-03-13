@@ -10,7 +10,7 @@ import { WelcomeScreen } from '../screens/WelcomeScreen';
 import { TrackBalancesScreen } from '../screens/TrackBalancesScreen';
 import { FeatureReceiveScreen } from '../screens/FeatureReceiveScreen';
 import { AnalyticsConsentScreen } from '../screens/AnalyticsConsentScreen';
-import { ConnectTrezorScreen } from '../screens/ConnectTrezorScreen';
+import { ConnectCerberusScreen } from '../screens/ConnectCerberusScreen';
 
 export const OnboardingStack = createNativeStackNavigator<OnboardingStackParamList>();
 
@@ -29,8 +29,8 @@ export const OnboardingStackNavigator = () => (
             component={FeatureReceiveScreen}
         />
         <OnboardingStack.Screen
-            name={OnboardingStackRoutes.ConnectTrezor}
-            component={ConnectTrezorScreen}
+            name={OnboardingStackRoutes.ConnectCerberus}
+            component={ConnectCerberusScreen}
         />
         <OnboardingStack.Screen
             name={OnboardingStackRoutes.AnalyticsConsent}

@@ -4,7 +4,7 @@ Display requested public key on device and returns it to caller.
 User is presented with a description of the requested public key and asked to confirm the export.
 
 ```javascript
-const result = await TrezorConnect.tezosGetPublicKey(params);
+const result = await CerberusConnect.tezosGetPublicKey(params);
 ```
 
 ### Params
@@ -14,19 +14,19 @@ const result = await TrezorConnect.tezosGetPublicKey(params);
 #### Exporting single public key
 
 -   `path` — _required_ `string | Array<number>` minimum length is `3`. [read more](../path.md)
--   `showOnTrezor` — _optional_ `boolean` determines if public key will be displayed on device.
+-   `showOnCerberus` — _optional_ `boolean` determines if public key will be displayed on device.
 -   `chunkify` — _optional_ `boolean` determines if address will be displayed in chunks of 4 characters. Default is set to `false`
 
 #### Exporting bundle of public keys
 
--   `bundle` - `Array` of Objects with `path` and `showOnTrezor` fields
+-   `bundle` - `Array` of Objects with `path` and `showOnCerberus` fields
 
 ### Example
 
 Result with only one public key
 
 ```javascript
-TrezorConnect.tezosGetPublicKey({
+CerberusConnect.tezosGetPublicKey({
     path: "m/49'/1729'/0'",
 });
 ```
@@ -34,7 +34,7 @@ TrezorConnect.tezosGetPublicKey({
 Result with bundle of public keys
 
 ```javascript
-TrezorConnect.tezosGetPublicKey({
+CerberusConnect.tezosGetPublicKey({
     bundle: [
         { path: "m/49'/1729'/0'" }, // account 1
         { path: "m/49'/1729'/1'" }, // account 2

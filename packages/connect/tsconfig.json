@@ -12,6 +12,6 @@
         { "path": "../transport" },
         { "path": "../utils" },
         { "path": "../utxo-lib" },
-        { "path": "../trezor-user-env-link" }
+        { "path": "../cerberus-user-env-link" }
     ]
 }

@@ -16,7 +16,7 @@ export default {
             description: "m/44'/1729'/0'",
             params: {
                 path: "m/44'/1729'/0'",
-                showOnTrezor: false,
+                showOnCerberus: false,
             },
             result: {
                 publicKey: 'edpkuxZ5W8c2jmcaGuCFZxRDSWxS7hp98zcwj2YpUZkJWs5F7UMuF6',
@@ -26,7 +26,7 @@ export default {
             description: "m/44'/1729'/1'",
             params: {
                 path: "m/44'/1729'/1'",
-                showOnTrezor: false,
+                showOnCerberus: false,
             },
             result: {
                 publicKey: 'edpkuVKVFyqTnp4axajmxTnCcSHN7v1kRhVpBC25GEZQVT2ZzSpdJY',
@@ -36,7 +36,7 @@ export default {
             description: "m/44'/1729'",
             params: {
                 path: "m/44'/1729'",
-                showOnTrezor: false,
+                showOnCerberus: false,
             },
             result: false,
         },
@@ -44,7 +44,7 @@ export default {
             description: "m/44'/1729'/0",
             params: {
                 path: "m/44'/1729'/0",
-                showOnTrezor: false,
+                showOnCerberus: false,
             },
             result: false,
         },

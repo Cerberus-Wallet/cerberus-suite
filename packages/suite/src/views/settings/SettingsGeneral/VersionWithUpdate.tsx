@@ -8,7 +8,7 @@ import {
     SectionItem,
     TextColumn,
     Translation,
-    TrezorLink,
+    CerberusLink,
 } from 'src/components/suite';
 import { useDispatch, useSelector } from 'src/hooks/suite';
 import { UpdateState } from 'src/reducers/suite/desktopUpdateReducer';
@@ -55,7 +55,7 @@ export const VersionWithUpdate = () => {
                             id="TR_YOUR_CURRENT_VERSION"
                             values={{
                                 version: (
-                                    <TrezorLink href={getReleaseUrl(appVersion)} variant="nostyle">
+                                    <CerberusLink href={getReleaseUrl(appVersion)} variant="nostyle">
                                         <Button
                                             variant="tertiary"
                                             size="tiny"
@@ -65,7 +65,7 @@ export const VersionWithUpdate = () => {
                                             {appVersion}
                                             {isDevEnv && '-dev'}
                                         </Button>
-                                    </TrezorLink>
+                                    </CerberusLink>
                                 ),
                             }}
                         />
@@ -81,7 +81,7 @@ export const VersionWithUpdate = () => {
                                         id={getUpdateStateMessage(desktopUpdate.state)}
                                         values={{
                                             version: (
-                                                <TrezorLink
+                                                <CerberusLink
                                                     href={getReleaseUrl(appVersion)}
                                                     variant="nostyle"
                                                 >
@@ -93,7 +93,7 @@ export const VersionWithUpdate = () => {
                                                     >
                                                         {desktopUpdate.latest.version}
                                                     </Button>
-                                                </TrezorLink>
+                                                </CerberusLink>
                                             ),
                                         }}
                                     />

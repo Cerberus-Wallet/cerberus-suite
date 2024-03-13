@@ -3,7 +3,7 @@ import { BLOCKCHAIN_EVENT, DEVICE_EVENT, TRANSPORT_EVENT, UI_EVENT } from '@cerb
 
 import { connectInitThunk } from '../connectInitThunks';
 
-describe('TrezorConnect Actions', () => {
+describe('CerberusConnect Actions', () => {
     let store = configureMockStore();
 
     beforeEach(() => {
@@ -11,7 +11,7 @@ describe('TrezorConnect Actions', () => {
     });
 
     it('Success', async () => {
-        console.warn(testMocks.getTrezorConnectMock().setTestFixtures);
+        console.warn(testMocks.getCerberusConnectMock().setTestFixtures);
         await store.dispatch(connectInitThunk());
         const expectedActions = [
             {
@@ -30,7 +30,7 @@ describe('TrezorConnect Actions', () => {
 
     it('Error', async () => {
         const errorFixture = new Error('Iframe error');
-        testMocks.setTrezorConnectFixtures(() => {
+        testMocks.setCerberusConnectFixtures(() => {
             throw errorFixture;
         });
         await store.dispatch(connectInitThunk());
@@ -56,7 +56,7 @@ describe('TrezorConnect Actions', () => {
             message: 'Iframe error',
             code: 'SomeCode',
         };
-        testMocks.setTrezorConnectFixtures(() => {
+        testMocks.setCerberusConnectFixtures(() => {
             throw errorFixture;
         });
         await store.dispatch(connectInitThunk());
@@ -79,7 +79,7 @@ describe('TrezorConnect Actions', () => {
 
     it('Error as string', async () => {
         const errorFixture = 'Iframe error';
-        testMocks.setTrezorConnectFixtures(() => {
+        testMocks.setCerberusConnectFixtures(() => {
             throw errorFixture;
         });
         await store.dispatch(connectInitThunk());
@@ -106,7 +106,7 @@ describe('TrezorConnect Actions', () => {
         expect(() => store.dispatch(connectInitThunk())).not.toThrow();
 
         const actions = store.getActions();
-        const { emitTestEvent } = testMocks.getTrezorConnectMock();
+        const { emitTestEvent } = testMocks.getCerberusConnectMock();
 
         expect(actions.pop()).toMatchObject({ type: connectInitThunk.pending.type });
         emitTestEvent(DEVICE_EVENT, { type: DEVICE_EVENT });
@@ -122,9 +122,9 @@ describe('TrezorConnect Actions', () => {
     });
 
     it('Wrapped method', async () => {
-        testMocks.setTrezorConnectFixtures();
+        testMocks.setCerberusConnectFixtures();
         await store.dispatch(connectInitThunk());
-        await testMocks.getTrezorConnectMock().getFeatures();
+        await testMocks.getCerberusConnectMock().getFeatures();
         const actions = store.getActions();
         // check actions in reversed order
         expect(actions.pop()).toEqual({

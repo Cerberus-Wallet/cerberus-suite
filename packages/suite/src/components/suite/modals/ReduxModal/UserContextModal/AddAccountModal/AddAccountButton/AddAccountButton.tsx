@@ -24,7 +24,7 @@ const verifyAvailability = ({
     if (unavailableCapability === 'update-required') {
         return 'TR_ACCOUNT_TYPE_UPDATE_REQUIRED';
     }
-    if (unavailableCapability === 'trezor-connect-outdated') {
+    if (unavailableCapability === 'cerberus-connect-outdated') {
         return 'FW_CAPABILITY_CONNECT_OUTDATED';
     }
     if (unavailableCapability === 'no-capability') {

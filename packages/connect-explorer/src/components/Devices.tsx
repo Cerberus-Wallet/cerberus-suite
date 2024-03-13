@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { useActions, useSelector } from '../hooks';
-import * as trezorConnectActions from '../actions/trezorConnectActions';
+import * as cerberusConnectActions from '../actions/cerberusConnectActions';
 
 const Nav = styled.nav`
     width: 100%;
@@ -49,7 +49,7 @@ const Devices = () => {
         connect: state.connect,
     }));
     const { onSelectDevice } = useActions({
-        ...trezorConnectActions,
+        ...cerberusConnectActions,
     });
 
     const { devices } = connect;

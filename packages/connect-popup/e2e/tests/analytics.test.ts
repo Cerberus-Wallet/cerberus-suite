@@ -1,31 +1,31 @@
 import { test, expect } from '@playwright/test';
 
-import { TrezorUserEnvLink } from '@cerberus/trezor-user-env-link';
+import { CerberusUserEnvLink } from '@cerberus/cerberus-user-env-link';
 
 const url = process.env.URL || 'http://localhost:8088/';
 
 test.beforeAll(async () => {
-    await TrezorUserEnvLink.connect();
+    await CerberusUserEnvLink.connect();
 });
 
 test('reporting', async ({ page }) => {
-    await TrezorUserEnvLink.api.stopBridge();
-    await TrezorUserEnvLink.api.stopEmu();
-    await TrezorUserEnvLink.api.startEmu({
+    await CerberusUserEnvLink.api.stopBridge();
+    await CerberusUserEnvLink.api.stopEmu();
+    await CerberusUserEnvLink.api.startEmu({
         wipe: true,
         save_screenshots: true,
     });
 
-    await TrezorUserEnvLink.api.setupEmu({
+    await CerberusUserEnvLink.api.setupEmu({
         mnemonic: 'alcohol woman abuse must during monitor noble actual mixed trade anger aisle',
         pin: '',
         passphrase_protection: true,
         label: 'My Trevor',
         needs_backup: false,
     });
-    await TrezorUserEnvLink.send({ type: 'emulator-allow-unsafe-paths' });
+    await CerberusUserEnvLink.send({ type: 'emulator-allow-unsafe-paths' });
 
-    await TrezorUserEnvLink.api.startBridge();
+    await CerberusUserEnvLink.api.startBridge();
 
     await page.goto(`${url}#/method/getAddress`);
 
@@ -41,8 +41,8 @@ test('reporting', async ({ page }) => {
     // Subscribe to requests
     let requests = [];
     popup.on('request', request => {
-        // ignore other than data trezor requests
-        if (!request.url().startsWith('https://data.trezorcheck.io/')) {
+        // ignore other than data cerberus requests
+        if (!request.url().startsWith('https://data.trezer.io/')) {
             return;
         }
         requests.push({ url: request.url() });

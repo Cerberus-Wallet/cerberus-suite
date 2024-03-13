@@ -4,7 +4,7 @@ Change device flags. This methods allows you to set a mark on device (number) wh
 previously set flag.
 
 ```javascript
-const result = await TrezorConnect.applyFlags(params);
+const result = await CerberusConnect.applyFlags(params);
 ```
 
 ### Params

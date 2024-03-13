@@ -27,7 +27,7 @@ import * as autoUpdater from './auto-updater';
 import * as store from './store';
 import * as udevInstall from './udev-install';
 import * as userData from './user-data';
-import * as trezorConnect from './trezor-connect';
+import * as cerberusConnect from './cerberus-connect';
 import * as devTools from './dev-tools';
 import * as requestInterceptor from './request-interceptor';
 import * as coinjoin from './coinjoin';
@@ -57,7 +57,7 @@ const MODULES = [
     store,
     udevInstall,
     userData,
-    trezorConnect,
+    cerberusConnect,
     devTools,
     requestInterceptor,
     coinjoin,

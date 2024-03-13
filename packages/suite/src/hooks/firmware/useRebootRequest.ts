@@ -5,7 +5,7 @@ import { valid, satisfies } from 'semver';
 import { rebootToBootloader } from '@suite-common/wallet-core';
 import { getFirmwareVersion } from '@cerberus/device-utils';
 
-import type { TrezorDevice } from 'src/types/suite';
+import type { CerberusDevice } from 'src/types/suite';
 import { useDispatch, useSelector } from 'src/hooks/suite';
 import { SUITE } from 'src/actions/suite/constants';
 import { isWebUsb } from 'src/utils/suite/transport';
@@ -19,7 +19,7 @@ export type RebootRequest = {
 };
 
 export const useRebootRequest = (
-    device: TrezorDevice | undefined,
+    device: CerberusDevice | undefined,
     requestedMode: RebootRequestedMode,
 ): RebootRequest => {
     const [phase, setPhase] = useState<RebootPhase>('initial');

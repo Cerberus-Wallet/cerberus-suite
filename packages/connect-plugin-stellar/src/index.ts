@@ -12,7 +12,7 @@ import {
 import BigNumber from 'bignumber.js';
 
 /**
- * Transforms Signer to TrezorConnect.StellarTransaction.Signer
+ * Transforms Signer to CerberusConnect.StellarTransaction.Signer
  * @param {Signer} signer
  * @returns { type: 1 | 2 | 3, key: string, weight: number }
  */
@@ -41,7 +41,7 @@ const transformSigner = (signer: Signer) => {
 };
 
 /**
- * Transforms Asset to TrezorConnect.StellarTransaction.Asset
+ * Transforms Asset to CerberusConnect.StellarTransaction.Asset
  * @param {Asset} asset
  * @returns { type: 0 | 1 | 2, code: string, issuer?: string }
  */
@@ -68,7 +68,7 @@ const transformAsset = (asset: Asset) => {
 const transformAmount = (amount: number) => new BigNumber(amount).times(10000000).toString();
 
 /**
- * Transforms Memo to TrezorConnect.StellarTransaction.Memo
+ * Transforms Memo to CerberusConnect.StellarTransaction.Memo
  * @param {string} type
  * @returns {string}
  */
@@ -90,7 +90,7 @@ const transformMemo = (memo: Memo) => {
 };
 
 /**
- * Transforms Transaction.timeBounds to TrezorConnect.StellarTransaction.timebounds
+ * Transforms Transaction.timeBounds to CerberusConnect.StellarTransaction.timebounds
  * @param {string} path
  * @param {Transaction.timeBounds} timebounds
  * @returns {minTime: number, maxTime: number}
@@ -106,10 +106,10 @@ const transformTimebounds = (timebounds: Transaction['timeBounds']) => {
 };
 
 /**
- * Transforms Transaction to TrezorConnect.StellarTransaction
+ * Transforms Transaction to CerberusConnect.StellarTransaction
  * @param {string} path
  * @param {Transaction} transaction
- * @returns {TrezorConnect.StellarTransaction}
+ * @returns {CerberusConnect.StellarTransaction}
  */
 export const transformTransaction = (path: string, transaction: Transaction) => {
     const amounts = [

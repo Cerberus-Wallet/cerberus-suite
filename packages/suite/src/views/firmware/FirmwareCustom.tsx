@@ -11,7 +11,7 @@ import { DeviceAcquire } from 'src/views/suite/device-acquire';
 import { DeviceUnknown } from 'src/views/suite/device-unknown';
 import { DeviceUnreadable } from 'src/views/suite/device-unreadable';
 import { closeModalApp } from 'src/actions/suite/routerActions';
-import type { TrezorDevice } from 'src/types/suite';
+import type { CerberusDevice } from 'src/types/suite';
 import { ConnectDevicePromptManager, OnboardingStepBox } from 'src/components/onboarding';
 import { useCachedDevice } from 'src/hooks/firmware/useCachedDevice';
 import {
@@ -74,7 +74,7 @@ export const FirmwareCustom = () => {
         resetReducer();
     }, [dispatch, liveDevice, resetReducer]);
 
-    const shouldDisplayConnectPrompt = (device?: TrezorDevice) =>
+    const shouldDisplayConnectPrompt = (device?: CerberusDevice) =>
         !device?.connected || !device?.features;
 
     const isCancelable = [

@@ -1,12 +1,12 @@
 import { Translation } from 'src/components/suite';
-import { TrezorDevice } from 'src/types/suite';
+import { CerberusDevice } from 'src/types/suite';
 import { useDiscovery, useDispatch } from 'src/hooks/suite';
 import { openModal } from 'src/actions/suite/modalActions';
 
 import { Tooltip, ButtonProps, IconButton, Button } from '@cerberus/components';
 import { DiscoveryStatus } from '@suite-common/wallet-constants';
 
-const getExplanationMessage = (device: TrezorDevice | undefined, discoveryIsRunning: boolean) => {
+const getExplanationMessage = (device: CerberusDevice | undefined, discoveryIsRunning: boolean) => {
     let message;
     if (device && !device.connected) {
         message = <Translation id="TR_TO_ADD_NEW_ACCOUNT_PLEASE_CONNECT" />;
@@ -18,7 +18,7 @@ const getExplanationMessage = (device: TrezorDevice | undefined, discoveryIsRunn
 };
 
 interface AddAccountButtonProps extends Omit<ButtonProps, 'children'> {
-    device: TrezorDevice | undefined;
+    device: CerberusDevice | undefined;
     closeMenu?: () => void;
     isDisabled?: boolean;
     isFullWidth?: boolean;

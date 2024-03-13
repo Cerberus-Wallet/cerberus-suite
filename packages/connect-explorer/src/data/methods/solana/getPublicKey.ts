@@ -8,14 +8,14 @@ const getAddress = {
     value: `m/44'/501'/0'/0'`,
 };
 
-const showOnTrezor = {
-    name: 'showOnTrezor',
+const showOnCerberus = {
+    name: 'showOnCerberus',
     label: 'Show on Cerberus',
     type: 'checkbox',
     value: true,
 };
 
-const batch = [getAddress, showOnTrezor];
+const batch = [getAddress, showOnCerberus];
 
 export default [
     {

@@ -4,7 +4,7 @@ import * as deviceUtils from '@suite-common/suite-utils';
 import { IconButton } from '@cerberus/components';
 
 import { NotificationCard, Translation } from 'src/components/suite';
-import { TrezorDevice } from 'src/types/suite';
+import { CerberusDevice } from 'src/types/suite';
 
 const GrayNotificationCard = styled(NotificationCard)`
     background: ${({ theme }) => theme.BG_GREY};
@@ -12,7 +12,7 @@ const GrayNotificationCard = styled(NotificationCard)`
 `;
 interface DeviceHeaderButtonProps {
     needsAttention: boolean;
-    device: TrezorDevice;
+    device: CerberusDevice;
     onSolveIssueClick: () => void;
     onDeviceSettingsClick: () => void;
 }

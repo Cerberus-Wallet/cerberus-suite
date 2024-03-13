@@ -7,7 +7,7 @@ import { SUITE_URL } from '@cerberus/urls';
 
 import { useDispatch } from 'src/hooks/suite/useDispatch';
 import { setFlag } from 'src/actions/suite/suiteActions';
-import { Translation, TrezorLink } from 'src/components/suite';
+import { Translation, CerberusLink } from 'src/components/suite';
 import { SCREEN_QUERY } from '@cerberus/components/src/config/variables';
 
 const Container = styled(motion.div)`
@@ -150,7 +150,7 @@ export const DesktopSuiteBanner = () => {
                             </Paragraph>
                         </TextContainer>
 
-                        <TrezorLink
+                        <CerberusLink
                             href={SUITE_URL}
                             variant="nostyle"
                             onClick={() =>
@@ -162,7 +162,7 @@ export const DesktopSuiteBanner = () => {
                             <StyledButton>
                                 <Translation id="TR_DESKTOP_APP_PROMO_GET" />
                             </StyledButton>
-                        </TrezorLink>
+                        </CerberusLink>
 
                         <OSIcons>
                             <Icon icon="OS_MAC" />

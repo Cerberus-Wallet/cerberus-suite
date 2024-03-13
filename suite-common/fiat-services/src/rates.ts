@@ -2,7 +2,7 @@ import { getUnixTime, subWeeks } from 'date-fns';
 
 import type { TickerId, LastWeekRates } from '@suite-common/wallet-types';
 import { FiatCurrencyCode } from '@suite-common/suite-config';
-import TrezorConnect from '@cerberus/connect';
+import CerberusConnect from '@cerberus/connect';
 import { scheduleAction } from '@cerberus/utils';
 
 import * as coingeckoService from './coingecko';
@@ -17,7 +17,7 @@ const getConnectFiatRatesForTimestamp = (
 ) =>
     scheduleAction(
         () =>
-            TrezorConnect.blockchainGetFiatRatesForTimestamps({
+            CerberusConnect.blockchainGetFiatRatesForTimestamps({
                 coin: ticker.symbol,
                 token: ticker.tokenAddress,
                 timestamps,
@@ -34,7 +34,7 @@ export const fetchCurrentFiatRates = async (
 ): Promise<number | null | undefined> => {
     const responseConnect = await scheduleAction(
         () =>
-            TrezorConnect.blockchainGetCurrentFiatRates({
+            CerberusConnect.blockchainGetCurrentFiatRates({
                 coin: ticker.symbol,
                 token: ticker.tokenAddress,
                 currencies: [currency],

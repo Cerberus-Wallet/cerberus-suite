@@ -1,10 +1,10 @@
-import TrezorConnect from '../../../src';
+import CerberusConnect from '../../../src';
 
-const { getController, setup, conditionalTest, initTrezorConnect } = global.Cerberus;
+const { getController, setup, conditionalTest, initCerberusConnect } = global.Cerberus;
 
 const controller = getController('setBusy');
 
-describe('TrezorConnect.setBusy', () => {
+describe('CerberusConnect.setBusy', () => {
     beforeAll(async () => {
         await setup(controller, {
             mnemonic: 'mnemonic_all',
@@ -13,22 +13,22 @@ describe('TrezorConnect.setBusy', () => {
                 auto_lock_delay_ms: 10000,
             },
         });
-        await initTrezorConnect(controller);
+        await initCerberusConnect(controller);
     });
 
     afterAll(async () => {
         controller.dispose();
-        await TrezorConnect.dispose();
+        await CerberusConnect.dispose();
     });
 
     conditionalTest(['1', '<2.5.3'], 'setBusy timeout', async () => {
         let busy = false;
-        TrezorConnect.on('DEVICE_EVENT', event => {
+        CerberusConnect.on('DEVICE_EVENT', event => {
             if ('features' in event.payload) {
                 busy = event.payload.features!.busy!;
             }
         });
-        const setBusy = await TrezorConnect.setBusy({
+        const setBusy = await CerberusConnect.setBusy({
             expiry_ms: 3000,
             keepSession: true, // keep session
         });
@@ -39,27 +39,27 @@ describe('TrezorConnect.setBusy', () => {
         // wait for expiry
         await new Promise(resolve => setTimeout(resolve, 3000));
 
-        const features = await TrezorConnect.getFeatures();
+        const features = await CerberusConnect.getFeatures();
         if (!features.success) throw new Error(features.payload.error);
         expect(features.payload.busy).toBe(false);
     });
 
     conditionalTest(['1', '<2.5.3'], 'setBusy interruption', async () => {
-        const busy = await TrezorConnect.setBusy({
+        const busy = await CerberusConnect.setBusy({
             expiry_ms: 5000,
         });
         if (!busy.success) throw new Error(busy.payload.error);
 
-        let features: Awaited<ReturnType<typeof TrezorConnect.getFeatures>>;
+        let features: Awaited<ReturnType<typeof CerberusConnect.getFeatures>>;
 
-        features = await TrezorConnect.getFeatures();
+        features = await CerberusConnect.getFeatures();
         if (!features.success) throw new Error(features.payload.error);
         expect(features.payload.busy).toBe(true);
 
         // reset expiry
-        await TrezorConnect.setBusy({});
+        await CerberusConnect.setBusy({});
 
-        features = await TrezorConnect.getFeatures();
+        features = await CerberusConnect.getFeatures();
         if (!features.success) throw new Error(features.payload.error);
         // not busy
         expect(features.payload.busy).toBe(false);
@@ -69,13 +69,13 @@ describe('TrezorConnect.setBusy', () => {
         await new Promise(resolve => setTimeout(resolve, 11000)); // wait for auto-lock
 
         let busy = false;
-        TrezorConnect.on('DEVICE_EVENT', event => {
+        CerberusConnect.on('DEVICE_EVENT', event => {
             if ('features' in event.payload) {
                 busy = event.payload.features!.busy!;
             }
         });
 
-        const setBusy = await TrezorConnect.setBusy({
+        const setBusy = await CerberusConnect.setBusy({
             expiry_ms: 15000,
             keepSession: true, // keep session
         });
@@ -86,7 +86,7 @@ describe('TrezorConnect.setBusy', () => {
         await new Promise(resolve => setTimeout(resolve, 1000)); // cool off
 
         // reset expiry
-        await TrezorConnect.setBusy({});
+        await CerberusConnect.setBusy({});
 
         expect(busy).toBe(false);
     });

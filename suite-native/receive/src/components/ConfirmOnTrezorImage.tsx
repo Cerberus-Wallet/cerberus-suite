@@ -4,7 +4,7 @@ import React, { useMemo, useState } from 'react';
 
 import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 
-import { ConfirmOnTrezorBottomSheet } from './ConfirmOnTrezorBottomSheet';
+import { ConfirmOnCerberusBottomSheet } from './ConfirmOnCerberusBottomSheet';
 
 const imageContainerStyle = prepareNativeStyle(utils => ({
     position: 'absolute',
@@ -13,11 +13,11 @@ const imageContainerStyle = prepareNativeStyle(utils => ({
     alignItems: 'center',
 }));
 
-export const ConfirmOnTrezorImage = () => {
+export const ConfirmOnCerberusImage = () => {
     const [isBottomSheetOpened, setIsBottomSheetOpened] = useState(false);
     const { applyStyle } = useNativeStyles();
 
-    const imageSource = useMemo(() => require('../../assets/confirmOnTrezor.png'), []);
+    const imageSource = useMemo(() => require('../../assets/confirmOnCerberus.png'), []);
 
     const handleImagePress = () => {
         setIsBottomSheetOpened(true);
@@ -38,7 +38,7 @@ export const ConfirmOnTrezorImage = () => {
                     <Image source={imageSource} />
                 </Pressable>
             </Animated.View>
-            <ConfirmOnTrezorBottomSheet
+            <ConfirmOnCerberusBottomSheet
                 isOpened={isBottomSheetOpened}
                 onClose={handleCloseBottomSheet}
             />

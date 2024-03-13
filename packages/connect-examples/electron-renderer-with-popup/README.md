@@ -7,7 +7,7 @@ This application can be also developed and published in browser since it doesn't
 Note that @cerberus/connect is included in index.html script tag
 
 ```
-    <script type="text/javascript" src="https://connect.cerberus.uraanai.com/9/trezor-connect.js"></script>
+    <script type="text/javascript" src="https://connect.cerberus.uraanai.com/9/cerberus-connect.js"></script>
 ```
 
 ## Install

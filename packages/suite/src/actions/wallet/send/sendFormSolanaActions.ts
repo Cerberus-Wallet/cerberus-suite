@@ -1,4 +1,4 @@
-import TrezorConnect, { FeeLevel } from '@cerberus/connect';
+import CerberusConnect, { FeeLevel } from '@cerberus/connect';
 import type { TokenInfo, TokenAccount } from '@cerberus/blockchain-link-types';
 import {
     FormState,
@@ -97,7 +97,7 @@ const fetchAccountOwnerAndTokenInfoForAddress = async (
     let accountOwner: string | undefined;
     let tokenInfo: TokenAccount | undefined;
 
-    const accountInfoResponse = await TrezorConnect.getAccountInfo({
+    const accountInfoResponse = await CerberusConnect.getAccountInfo({
         coin: symbol,
         descriptor: address,
         details: 'tokens',
@@ -180,7 +180,7 @@ export const composeTransaction =
             // if the recipient account has no owner, it means it's a new account and needs the token account to be created
             (recipientAccountOwner === SYSTEM_PROGRAM_PUBLIC_KEY || recipientAccountOwner == null);
 
-        const estimatedFee = await TrezorConnect.blockchainEstimateFee({
+        const estimatedFee = await CerberusConnect.blockchainEstimateFee({
             coin: account.symbol,
             request: {
                 specific: {
@@ -295,7 +295,7 @@ export const signTransaction =
 
         const serializedTx = tx.serializeMessage().toString('hex');
 
-        const signature = await TrezorConnect.solanaSignTransaction({
+        const signature = await CerberusConnect.solanaSignTransaction({
             device: {
                 path: device.path,
                 instance: device.instance,

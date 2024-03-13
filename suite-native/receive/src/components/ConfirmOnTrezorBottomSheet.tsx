@@ -3,7 +3,7 @@ import { useTranslate } from '@suite-native/intl';
 
 import { ReceiveAddressBottomSheetHeader } from './ReceiveAddressBottomSheetHeader';
 
-export const ConfirmOnTrezorBottomSheet = ({
+export const ConfirmOnCerberusBottomSheet = ({
     isOpened,
     onClose,
 }: {
@@ -21,9 +21,9 @@ export const ConfirmOnTrezorBottomSheet = ({
         >
             <VStack spacing="large">
                 <ReceiveAddressBottomSheetHeader
-                    title={translate('moduleReceive.bottomSheets.confirmOnTrezor.title')}
+                    title={translate('moduleReceive.bottomSheets.confirmOnCerberus.title')}
                     description={translate(
-                        'moduleReceive.bottomSheets.confirmOnTrezor.description',
+                        'moduleReceive.bottomSheets.confirmOnCerberus.description',
                     )}
                 />
                 <Box flex={1}>

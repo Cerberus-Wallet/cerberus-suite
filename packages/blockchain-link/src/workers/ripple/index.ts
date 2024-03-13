@@ -441,7 +441,7 @@ class RippleWorker extends BaseWorker<RippleAPI> {
             connectionTimeout: this.settings.timeout || DEFAULT_TIMEOUT, // connectionTimeout is used only for connection
         };
         // proxy agent is available only in suite because of the patch.
-        // it will fail in standalone trezor-connect implementation where this patch is not present.
+        // it will fail in standalone cerberus-connect implementation where this patch is not present.
         // TODO: https://github.com/Cerberus-Wallet/cerberus-suite/issues/4942
         if (RippleAPI._ALLOW_AGENT) {
             options.agent = this.proxyAgent;

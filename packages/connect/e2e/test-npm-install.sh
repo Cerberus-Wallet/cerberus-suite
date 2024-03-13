@@ -18,6 +18,6 @@ npm install @cerberus/connect-web --save
 
 cat package.json
 
-echo "const TrezorConnect = require('@cerberus/connect')" > ./index.js
+echo "const CerberusConnect = require('@cerberus/connect')" > ./index.js
 node index.js
 

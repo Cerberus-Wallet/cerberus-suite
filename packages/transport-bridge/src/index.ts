@@ -1,1 +1,1 @@
-export { TrezordNode } from './http';
+export { CerberusdNode } from './http';

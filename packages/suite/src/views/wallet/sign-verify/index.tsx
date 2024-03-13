@@ -311,7 +311,7 @@ const SignVerify = () => {
                         isCompleted={isCompleted}
                         isSubmitting={isSubmitting}
                         isSignPage={isSignPage}
-                        isTrezorLocked={isLocked()}
+                        isCerberusLocked={isLocked()}
                         resetForm={resetForm}
                         closeScreen={closeScreen}
                     />

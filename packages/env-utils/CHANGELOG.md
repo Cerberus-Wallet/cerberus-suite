@@ -44,7 +44,7 @@
 -   fix(env-utils): prevent react-native dependencies to be bundled in suite-desktop (818d91047)
 -   chore(dependencies): remove unnecessary exception for no-extraneous-dependencies (21f1424b0)
 -   chore(suite): add suite version and commit hash to env utils (aec3d373d)
--   chore(suite): move env util from suite to trezor package to make it reusable for native (c22aa6c31)
+-   chore(suite): move env util from suite to cerberus package to make it reusable for native (c22aa6c31)
 
 # 1.0.1
 

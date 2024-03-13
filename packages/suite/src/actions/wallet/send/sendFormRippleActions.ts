@@ -1,6 +1,6 @@
 import BigNumber from 'bignumber.js';
 
-import TrezorConnect, { FeeLevel, RipplePayment } from '@cerberus/connect';
+import CerberusConnect, { FeeLevel, RipplePayment } from '@cerberus/connect';
 import { notificationsActions } from '@suite-common/toast-notifications';
 import {
     calculateTotal,
@@ -111,7 +111,7 @@ export const composeTransaction =
         // additional check if recipient address is empty
         // it will set requiredAmount to recipient account reserve value
         if (address) {
-            const accountResponse = await TrezorConnect.getAccountInfo({
+            const accountResponse = await CerberusConnect.getAccountInfo({
                 descriptor: address,
                 coin: account.symbol,
                 suppressBackupWarning: true,
@@ -204,7 +204,7 @@ export const signTransaction =
             payment.destinationTag = parseInt(formValues.rippleDestinationTag, 10);
         }
 
-        const signedTx = await TrezorConnect.rippleSignTransaction({
+        const signedTx = await CerberusConnect.rippleSignTransaction({
             device: {
                 path: device.path,
                 instance: device.instance,

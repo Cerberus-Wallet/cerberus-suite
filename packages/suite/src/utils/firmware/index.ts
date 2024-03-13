@@ -1,7 +1,7 @@
 import { valid, satisfies } from 'semver';
 import { getFirmwareVersion } from '@cerberus/device-utils';
 
-import { type AppState, type TrezorDevice, type ExtendedMessageDescriptor } from 'src/types/suite';
+import { type AppState, type CerberusDevice, type ExtendedMessageDescriptor } from 'src/types/suite';
 import { DeviceModelInternal, FirmwareType } from '@cerberus/connect';
 
 export const getFormattedFingerprint = (fingerprint: string) =>
@@ -83,7 +83,7 @@ export const parseFirmwareFormat = (fw: ArrayBuffer): FirmwareFormat | undefined
 
 export const validateFirmware = (
     fw: ArrayBuffer,
-    device: TrezorDevice | undefined,
+    device: CerberusDevice | undefined,
 ): ExtendedMessageDescriptor['id'] | undefined => {
     const deviceModelInternal = device?.features?.internal_model;
 

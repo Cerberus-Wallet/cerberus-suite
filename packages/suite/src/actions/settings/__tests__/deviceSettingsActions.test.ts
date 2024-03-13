@@ -1,6 +1,6 @@
 import { testMocks } from '@suite-common/test-utils';
 import { prepareDeviceReducer, deviceActions } from '@suite-common/wallet-core';
-import TrezorConnect from '@cerberus/connect';
+import CerberusConnect from '@cerberus/connect';
 
 import { configureStore } from 'src/support/tests/configureStore';
 import suiteReducer from 'src/reducers/suite/suiteReducer';
@@ -63,9 +63,9 @@ describe('DeviceSettings Actions', () => {
 
                 return Promise.resolve(f.mocks) as any;
             };
-            jest.spyOn(TrezorConnect, 'applySettings').mockImplementation(mock);
-            jest.spyOn(TrezorConnect, 'wipeDevice').mockImplementation(mock);
-            jest.spyOn(TrezorConnect, 'changePin').mockImplementation(mock);
+            jest.spyOn(CerberusConnect, 'applySettings').mockImplementation(mock);
+            jest.spyOn(CerberusConnect, 'wipeDevice').mockImplementation(mock);
+            jest.spyOn(CerberusConnect, 'changePin').mockImplementation(mock);
 
             await store.dispatch(f.action());
 

@@ -24,7 +24,7 @@ import {
 } from '../coinjoinClientActions';
 import * as fixtures from '../__fixtures__/coinjoinClientActions';
 
-const TrezorConnect = testMocks.getTrezorConnectMock();
+const CerberusConnect = testMocks.getCerberusConnectMock();
 jest.mock('src/services/coinjoin/coinjoinService', () => {
     const mock = jest.requireActual('../__fixtures__/mockCoinjoinService');
 
@@ -95,7 +95,7 @@ describe('coinjoinClientActions', () => {
     fixtures.onCoinjoinRoundChanged.forEach(f => {
         it(`onCoinjoinRoundChanged: ${f.description}`, async () => {
             const store = initStore(f.state as Wallet);
-            testMocks.setTrezorConnectFixtures(f.connect);
+            testMocks.setCerberusConnectFixtures(f.connect);
 
             if (Array.isArray(f.params)) {
                 await promiseAllSequence(
@@ -115,14 +115,14 @@ describe('coinjoinClientActions', () => {
             const actions = store.getActions();
             expect(actions.map(a => a.type)).toEqual(f.result.actions);
 
-            if (typeof f.result.trezorConnectCalledTimes === 'number') {
-                expect(TrezorConnect.setBusy).toHaveBeenCalledTimes(
-                    f.result.trezorConnectCalledTimes,
+            if (typeof f.result.cerberusConnectCalledTimes === 'number') {
+                expect(CerberusConnect.setBusy).toHaveBeenCalledTimes(
+                    f.result.cerberusConnectCalledTimes,
                 );
             }
-            if (f.result.trezorConnectCallsWith) {
-                expect(TrezorConnect.setBusy).toHaveBeenLastCalledWith(
-                    expect.objectContaining(f.result.trezorConnectCallsWith),
+            if (f.result.cerberusConnectCallsWith) {
+                expect(CerberusConnect.setBusy).toHaveBeenLastCalledWith(
+                    expect.objectContaining(f.result.cerberusConnectCallsWith),
                 );
             }
         });
@@ -131,14 +131,14 @@ describe('coinjoinClientActions', () => {
     fixtures.getOwnershipProof.forEach(f => {
         it(`getOwnershipProof: ${f.description}`, async () => {
             const store = initStore(f.state as any); // params are incomplete
-            testMocks.setTrezorConnectFixtures(f.connect);
+            testMocks.setCerberusConnectFixtures(f.connect);
 
             const response = await store.dispatch(onCoinjoinClientRequest(f.params as any));
 
             expect(response).toMatchObject(f.result.response);
 
-            expect(TrezorConnect.getOwnershipProof).toHaveBeenCalledTimes(
-                f.result.trezorConnectCalledTimes,
+            expect(CerberusConnect.getOwnershipProof).toHaveBeenCalledTimes(
+                f.result.cerberusConnectCalledTimes,
             );
         });
     });
@@ -146,18 +146,18 @@ describe('coinjoinClientActions', () => {
     fixtures.signCoinjoinTx.forEach(f => {
         it(`signCoinjoinTx: ${f.description}`, async () => {
             const store = initStore(f.state as any);
-            testMocks.setTrezorConnectFixtures(f.connect);
+            testMocks.setCerberusConnectFixtures(f.connect);
 
             const [response] = await store.dispatch(
                 onCoinjoinClientRequest([f.params as any]), // params are incomplete
             );
 
-            expect(TrezorConnect.signTransaction).toHaveBeenCalledTimes(
-                f.result.trezorConnectCalledTimes,
+            expect(CerberusConnect.signTransaction).toHaveBeenCalledTimes(
+                f.result.cerberusConnectCalledTimes,
             );
 
-            f.result.trezorConnectCalledWith.forEach((params, index) => {
-                expect(TrezorConnect.signTransaction.mock.calls[index][0]).toMatchObject(params);
+            f.result.cerberusConnectCalledWith.forEach((params, index) => {
+                expect(CerberusConnect.signTransaction.mock.calls[index][0]).toMatchObject(params);
             });
 
             expect(response).toMatchObject(f.result.response);
@@ -391,7 +391,7 @@ describe('coinjoinClientActions', () => {
             accounts: [{ key: 'account-A', symbol: 'btc' }],
         } as any);
 
-        testMocks.setTrezorConnectFixtures([{ success: false }]);
+        testMocks.setCerberusConnectFixtures([{ success: false }]);
 
         await store.dispatch(initCoinjoinService('btc'));
 
@@ -403,7 +403,7 @@ describe('coinjoinClientActions', () => {
             accounts: [{ key: 'account-A', symbol: 'btc', deviceState: 'device-state' }],
         } as any);
 
-        testMocks.setTrezorConnectFixtures([
+        testMocks.setCerberusConnectFixtures([
             { success: false, payload: { error: 'Firmware error' } },
         ]);
 
@@ -411,7 +411,7 @@ describe('coinjoinClientActions', () => {
 
         store.dispatch(stopCoinjoinSession('account-A'));
 
-        expect(TrezorConnect.cancelCoinjoinAuthorization).toHaveBeenCalledTimes(1);
+        expect(CerberusConnect.cancelCoinjoinAuthorization).toHaveBeenCalledTimes(1);
     });
 
     it('stopCoinjoinSession but not cancel authorization', async () => {
@@ -445,7 +445,7 @@ describe('coinjoinClientActions', () => {
 
         store.dispatch(stopCoinjoinSession('account-A'));
 
-        expect(TrezorConnect.cancelCoinjoinAuthorization).toHaveBeenCalledTimes(0);
+        expect(CerberusConnect.cancelCoinjoinAuthorization).toHaveBeenCalledTimes(0);
     });
 
     it('CoinjoinClient events', async () => {

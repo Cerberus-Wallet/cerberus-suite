@@ -2,7 +2,7 @@ import { MMKV } from 'react-native-mmkv';
 
 import { atomWithStorage, createJSONStorage } from 'jotai/utils';
 
-const UNECRYPTED_STORAGE_ID = 'trezorSuite-app-unecrypted-storage';
+const UNECRYPTED_STORAGE_ID = 'cerberusSuite-app-unecrypted-storage';
 
 export const unecryptedJotaiStorage = new MMKV({
     id: UNECRYPTED_STORAGE_ID,

@@ -1,4 +1,4 @@
-// todo: use some trezor collor pallete, certainly exists
+// todo: use some cerberus collor pallete, certainly exists
 
 export const color_white = '#ffffff';
 export const color_white_smoke = ' #F5F5F5';

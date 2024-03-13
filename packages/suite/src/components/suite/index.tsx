@@ -27,7 +27,7 @@ import {
 import { FormattedCryptoAmount } from './FormattedCryptoAmount';
 import { FormattedNftAmount } from './FormattedNftAmount';
 import { Sign } from './Sign';
-import { TrezorLink } from './TrezorLink';
+import { CerberusLink } from './CerberusLink';
 import { ReadMoreLink } from './ReadMoreLink';
 import { Modal, ModalProps } from './modals/Modal/Modal';
 import { FormattedDate } from './FormattedDate';
@@ -85,7 +85,7 @@ export {
     PriceTicker,
     Sign,
     ReadMoreLink,
-    TrezorLink,
+    CerberusLink,
     Modal,
     FormattedDate,
     FormattedDateWithBullet,

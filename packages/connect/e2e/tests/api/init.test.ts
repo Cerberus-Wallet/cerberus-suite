@@ -1,38 +1,38 @@
-import TrezorConnect from '../../../src';
+import CerberusConnect from '../../../src';
 
 // error thrown by .init()
 const INIT_ERROR = { code: 'Init_ManifestMissing' };
 
-describe('TrezorConnect.init', () => {
+describe('CerberusConnect.init', () => {
     afterEach(async () => {
-        await TrezorConnect.dispose();
+        await CerberusConnect.dispose();
     });
 
     beforeAll(() => {
-        // use local build, not trezor connect version hosted on trezor.connect.io
+        // use local build, not cerberus connect version hosted on cerberus.connect.io
         // @ts-expect-error
         global.__CERBERUS_CONNECT_SRC = process.env.CERBERUS_CONNECT_SRC;
     });
 
     it('calling method before .init() and/or .manifest()', async () => {
-        const { payload } = await TrezorConnect.getCoinInfo({ coin: 'btc' });
+        const { payload } = await CerberusConnect.getCoinInfo({ coin: 'btc' });
         expect(payload).toMatchObject(INIT_ERROR);
     });
 
-    it('missing manifest in TrezorConnect.init', async () => {
+    it('missing manifest in CerberusConnect.init', async () => {
         try {
             // @ts-expect-error
-            await TrezorConnect.init();
+            await CerberusConnect.init();
             throw new Error('Should not be resolved');
         } catch (error) {
             expect(error).toMatchObject(INIT_ERROR);
         }
     });
 
-    it('invalid manifest in TrezorConnect.init', async () => {
+    it('invalid manifest in CerberusConnect.init', async () => {
         try {
             // @ts-expect-error
-            await TrezorConnect.init({ manifest: {} });
+            await CerberusConnect.init({ manifest: {} });
             throw new Error('Should not be resolved');
         } catch (error) {
             expect(error).toMatchObject(INIT_ERROR);
@@ -40,12 +40,12 @@ describe('TrezorConnect.init', () => {
     });
 
     it('calling .init() multiple times', async () => {
-        await TrezorConnect.init({
+        await CerberusConnect.init({
             manifest: { appUrl: 'a', email: 'b' },
         });
 
         try {
-            await TrezorConnect.init({ manifest: { appUrl: 'a', email: 'b' } });
+            await CerberusConnect.init({ manifest: { appUrl: 'a', email: 'b' } });
             throw new Error('Should not be resolved');
         } catch (error) {
             expect(error).toMatchObject({ code: 'Init_AlreadyInitialized' });
@@ -53,20 +53,20 @@ describe('TrezorConnect.init', () => {
     });
 
     it('init success', async () => {
-        await TrezorConnect.init({ manifest: { appUrl: 'a', email: 'b' } });
+        await CerberusConnect.init({ manifest: { appUrl: 'a', email: 'b' } });
 
-        const resp = await TrezorConnect.getCoinInfo({ coin: 'btc' });
+        const resp = await CerberusConnect.getCoinInfo({ coin: 'btc' });
         expect(resp).toMatchObject({
             payload: { type: 'bitcoin', shortcut: 'BTC' },
         });
     });
 
     it('manifest success', async () => {
-        TrezorConnect.manifest({
+        CerberusConnect.manifest({
             appUrl: 'a',
             email: 'b',
         });
-        const resp = await TrezorConnect.getCoinInfo({ coin: 'btc' });
+        const resp = await CerberusConnect.getCoinInfo({ coin: 'btc' });
         expect(resp).toMatchObject({
             payload: { type: 'bitcoin', shortcut: 'BTC' },
         });

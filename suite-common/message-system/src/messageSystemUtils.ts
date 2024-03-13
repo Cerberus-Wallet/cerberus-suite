@@ -11,7 +11,7 @@ import {
     Environment as EnvironmentType,
 } from '@cerberus/env-utils';
 import type {
-    TrezorDevice,
+    CerberusDevice,
     Duration,
     MessageSystem,
     Message,
@@ -62,7 +62,7 @@ type CurrentSettings = {
 type Options = {
     settings: CurrentSettings;
     transport?: Partial<TransportInfo>;
-    device?: TrezorDevice;
+    device?: CerberusDevice;
 };
 
 /**
@@ -154,7 +154,7 @@ export const validateTransportCompatibility = (
 
 export const validateDeviceCompatibility = (
     deviceConditions: Device[],
-    device?: TrezorDevice,
+    device?: CerberusDevice,
 ): boolean => {
     // if device conditions are empty, then device should be empty
     if (!deviceConditions.length) {

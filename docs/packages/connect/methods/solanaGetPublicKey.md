@@ -3,7 +3,7 @@
 Display requested public key derived by given [BIP44 path](../path.md) on device and return it to the caller. User is presented with a description of the requested public key and asked to confirm the export on Cerberus.
 
 ```javascript
-const result = await TrezorConnect.solanaGetPublicKey(params);
+const result = await CerberusConnect.solanaGetPublicKey(params);
 ```
 
 ### Params
@@ -15,18 +15,18 @@ const result = await TrezorConnect.solanaGetPublicKey(params);
 #### Exporting single key
 
 -   `path` — _required_ `string | Array<number>` minimum length is `2`. [read more](../path.md)
--   `showOnTrezor` — _optional_ `boolean` determines if public key will be displayed on device. Default is set to `true`
+-   `showOnCerberus` — _optional_ `boolean` determines if public key will be displayed on device. Default is set to `true`
 
 #### Exporting bundle of public keys
 
--   `bundle` - `Array` of Objects with `path` and `showOnTrezor` fields
+-   `bundle` - `Array` of Objects with `path` and `showOnCerberus` fields
 
 ### Example
 
 Display public key of first Solana account:
 
 ```javascript
-TrezorConnect.solanaGetPublicKey({
+CerberusConnect.solanaGetPublicKey({
     path: "m/44'/501'/0'/0'",
 });
 ```
@@ -34,11 +34,11 @@ TrezorConnect.solanaGetPublicKey({
 Return a bundle of Solana public keys without displaying them on device:
 
 ```javascript
-TrezorConnect.solanaGetPublicKey({
+CerberusConnect.solanaGetPublicKey({
     bundle: [
-        { path: "m/44'/501'/0'", showOnTrezor: false }, // account 1
-        { path: "m/44'/501'/1'", showOnTrezor: false }, // account 2
-        { path: "m/44'/501'/2'", showOnTrezor: false }, // account 3
+        { path: "m/44'/501'/0'", showOnCerberus: false }, // account 1
+        { path: "m/44'/501'/1'", showOnCerberus: false }, // account 2
+        { path: "m/44'/501'/2'", showOnCerberus: false }, // account 3
     ],
 });
 ```

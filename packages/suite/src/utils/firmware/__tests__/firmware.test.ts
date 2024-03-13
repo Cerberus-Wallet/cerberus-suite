@@ -1,4 +1,4 @@
-import { TrezorDevice } from 'src/types/suite';
+import { CerberusDevice } from 'src/types/suite';
 import { getFormattedFingerprint, validateFirmware } from '..';
 import { DeviceModelInternal } from '@cerberus/connect';
 
@@ -34,7 +34,7 @@ describe('validateFirmware', () => {
     it('should return TR_FIRMWARE_VALIDATION_UNRECOGNIZED_FORMAT if firmware format is unrecognized', () => {
         const fw = new ArrayBuffer(20);
 
-        const device = { features: { internal_model: DeviceModelInternal.T2T1 } } as TrezorDevice;
+        const device = { features: { internal_model: DeviceModelInternal.T2T1 } } as CerberusDevice;
 
         expect(validateFirmware(fw, device)).toBe('TR_FIRMWARE_VALIDATION_UNRECOGNIZED_FORMAT');
     });
@@ -42,7 +42,7 @@ describe('validateFirmware', () => {
     it('should return TR_FIRMWARE_VALIDATION_UNMATCHING_DEVICE if firmware format does not match the device model', () => {
         const fw = getT1V2FW();
 
-        const device = { features: { internal_model: DeviceModelInternal.T2B1 } } as TrezorDevice;
+        const device = { features: { internal_model: DeviceModelInternal.T2B1 } } as CerberusDevice;
 
         expect(validateFirmware(fw, device)).toBe('TR_FIRMWARE_VALIDATION_UNMATCHING_DEVICE');
     });
@@ -57,7 +57,7 @@ describe('validateFirmware', () => {
                 minor_version: 6,
                 patch_version: 0,
             },
-        } as TrezorDevice;
+        } as CerberusDevice;
 
         expect(validateFirmware(fw, device)).toBe('TR_FIRMWARE_VALIDATION_T1_V2');
     });
@@ -72,7 +72,7 @@ describe('validateFirmware', () => {
                 minor_version: 8,
                 patch_version: 3,
             },
-        } as TrezorDevice;
+        } as CerberusDevice;
 
         expect(validateFirmware(fw, device)).toBe(undefined);
     });

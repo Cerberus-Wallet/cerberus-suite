@@ -32,18 +32,18 @@ Import from your selected package
 
 ```javascript
 // in node
-import TrezorConnect from '@cerberus/connect';
+import CerberusConnect from '@cerberus/connect';
 // or in web based
-import TrezorConnect from '@cerberus/connect-web';
+import CerberusConnect from '@cerberus/connect-web';
 // or in webextension service worker
-import TrezorConnect from '@cerberus/connect-webextension';
+import CerberusConnect from '@cerberus/connect-webextension';
 ```
 
 Initialize in project
 
 ```javascript
-TrezorConnect.init({
-    lazyLoad: true, // this param will prevent iframe injection until TrezorConnect.method will be called
+CerberusConnect.init({
+    lazyLoad: true, // this param will prevent iframe injection until CerberusConnect.method will be called
     manifest: {
         email: 'developer@xyz.com',
         appUrl: 'http://your.application.com',
@@ -56,7 +56,7 @@ This provides us with the **ability to reach you in case of any required mainten
 This subscription is mandatory. Cerberus Connect raises an error that reads "Manifest not set" if manifest is not provided. It can be either set via `manifest` method or passed as a param in `init` method.
 
 ```javascript
-TrezorConnect.manifest({
+CerberusConnect.manifest({
     email: 'developer@xyz.com',
     appUrl: 'http://your.application.com',
 });
@@ -92,7 +92,7 @@ into your app. User input, if needed, is served by popup.html page opened on cer
 
 ### Webextension
 
-In case of `@cerberus/connect-webextension`, TrezorConnect object is created in a service worker. In this env we can't inject iframe so in order to uphold the same security model as with
+In case of `@cerberus/connect-webextension`, CerberusConnect object is created in a service worker. In this env we can't inject iframe so in order to uphold the same security model as with
 `@cerberus/connect-web` we open popup.html and load core SDK logic into it. This however does not build persistent connection between SDK and 3rd party application meaning that events cannot be used.
 
 ![connect schema when used in webextension](./schema-connect-webextension.jpg =950x432)

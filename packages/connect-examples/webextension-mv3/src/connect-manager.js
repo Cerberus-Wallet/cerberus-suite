@@ -1,6 +1,6 @@
 const DEFAULT_SRC = 'https://connect.cerberus.uraanai.com/9/';
 
-window.TrezorConnect.init({
+window.CerberusConnect.init({
     lazyLoad: true,
     manifest: {
         email: 'developer@xyz.com',
@@ -11,8 +11,8 @@ window.TrezorConnect.init({
 
 const getAddressButton = document.getElementById('get-address');
 getAddressButton.addEventListener('click', () => {
-    window.TrezorConnect.getAddress({
-        showOnTrezor: true,
+    window.CerberusConnect.getAddress({
+        showOnCerberus: true,
         path: "m/49'/0'/0'/0/0",
         coin: 'btc',
     }).then(res => {
@@ -23,7 +23,7 @@ getAddressButton.addEventListener('click', () => {
 
 const getFeaturesButton = document.getElementById('get-features');
 getFeaturesButton.addEventListener('click', () => {
-    window.TrezorConnect.getFeatures().then(res => {
+    window.CerberusConnect.getFeatures().then(res => {
         console.info(res);
         document.getElementById('result').innerText = JSON.stringify(res);
     });

@@ -6,7 +6,7 @@ export enum EventType {
     WatchPortfolioTimeframeChange = 'watch_portfolio/timeframe_change',
     CreateReceiveAddress = 'create_receive_address',
     CreateReceiveAddressShowAddress = 'create_receive_address/show_address',
-    ConfirmedReceiveAdress = 'receiveAddress/confirm_on_trezor',
+    ConfirmedReceiveAdress = 'receiveAddress/confirm_on_cerberus',
     AssetDetail = 'asset_detail',
     AssetDetailTimeframeChange = 'asset_detail/timeframe_change',
     TransactionDetail = 'transaction_detail',

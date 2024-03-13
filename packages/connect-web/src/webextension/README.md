@@ -39,15 +39,15 @@ Basic implementation is same for both Google Chrome & Firefox. However, few addi
             "background": {
                 "scripts": [
                     "[myExtensionIndexFile]index.js",
-                    "[pathToTrezorConnect]/index.js"
+                    "[pathToCerberusConnect]/index.js"
                 ]
             }
         }
         ```
 
-    - Include `trezor-content-script.js` in a `"content-scripts"`
+    - Include `cerberus-content-script.js` in a `"content-scripts"`
 
-        Cerberus Connect may present a popup tab for certain actions. Since your code & Connect is running in a background script you need to allow communication between popup tab and background script explicitly using this Javascript [file](./trezor-content-script.js).
+        Cerberus Connect may present a popup tab for certain actions. Since your code & Connect is running in a background script you need to allow communication between popup tab and background script explicitly using this Javascript [file](./cerberus-content-script.js).
 
         ```JSON
         {
@@ -56,21 +56,21 @@ Basic implementation is same for both Google Chrome & Firefox. However, few addi
                 "matches": [
                     "*://connect.cerberus.uraanai.com/*/popup.html"
                 ],
-                "js": ["trezor-content-script.js"]
+                "js": ["cerberus-content-script.js"]
                 }
             ],
         }
         ```
 
-        Snippet above is basically saying _"Inject `trezor-content-script.js` into `connect.cerberus.uraanai.com/*/popup.html`"_.
+        Snippet above is basically saying _"Inject `cerberus-content-script.js` into `connect.cerberus.uraanai.com/*/popup.html`"_.
 
 2. Now you're able to use Cerberus Connect in your code
 
-    You can access `TrezorConnect` as a global variable if you included Cerberus Connect in your project manually
+    You can access `CerberusConnect` as a global variable if you included Cerberus Connect in your project manually
 
     ```javascript
     function onClick() {
-        TrezorConnect.getAddress({
+        CerberusConnect.getAddress({
             path: "m/49'/0'/0'/0/0",
         })
             .then(response => {
@@ -80,12 +80,12 @@ Basic implementation is same for both Google Chrome & Firefox. However, few addi
                 chrome.notifications.create(new Date().getTime().toString(), {
                     type: 'basic',
                     iconUrl: 'icons/48.png',
-                    title: 'TrezorConnect',
+                    title: 'CerberusConnect',
                     message,
                 });
             })
             .catch(error => {
-                console.error('TrezorConnectError', error);
+                console.error('CerberusConnectError', error);
             });
     }
     chrome.browserAction.onClicked.addListener(onClick);
@@ -94,10 +94,10 @@ Basic implementation is same for both Google Chrome & Firefox. However, few addi
     If you're using a package manager you will probably want to import Cerberus Connect into your code using an `import` statement
 
     ```javascript
-    import TrezorConnect from '@cerberus/connect'; // Import Cerberus Connect
+    import CerberusConnect from '@cerberus/connect'; // Import Cerberus Connect
 
     function onClick() {
-        TrezorConnect.getAddress({
+        CerberusConnect.getAddress({
             path: "m/49'/0'/0'/0/0",
         })
             .then(response => {
@@ -107,12 +107,12 @@ Basic implementation is same for both Google Chrome & Firefox. However, few addi
                 chrome.notifications.create(new Date().getTime().toString(), {
                     type: 'basic',
                     iconUrl: 'icons/48.png',
-                    title: 'TrezorConnect',
+                    title: 'CerberusConnect',
                     message,
                 });
             })
             .catch(error => {
-                console.error('TrezorConnectError', error);
+                console.error('CerberusConnectError', error);
             });
     }
     chrome.browserAction.onClicked.addListener(onClick);
@@ -123,8 +123,8 @@ However, if you're creating a Google Chrome extension you must complete one addi
 
 ## Google Chrome WebUSB
 
-Chrome extension requires a special `trezor-usb-permissions.html` file served from the root of your extension. You can get the file [here](./trezor-usb-permissions.html).
+Chrome extension requires a special `cerberus-usb-permissions.html` file served from the root of your extension. You can get the file [here](./cerberus-usb-permissions.html).
 
 This page will be displayed in case where user is using Cerberus without `Cerberus Bridge` installed and `navigator.usb` is available.
 
-Lastly, you have to place [this](./trezor-usb-permissions.js) Javascript file into your `vendor/` directory. This directory could be changed, but then you need to remember to change script src accordingly inside `trezor-usb-permissions.html` file.
+Lastly, you have to place [this](./cerberus-usb-permissions.js) Javascript file into your `vendor/` directory. This directory could be changed, but then you need to remember to change script src accordingly inside `cerberus-usb-permissions.html` file.

@@ -293,7 +293,7 @@ const selectDevice = [
         },
     },
     {
-        description: `two instances of device (@suite TrezorDevice)`,
+        description: `two instances of device (@suite CerberusDevice)`,
         state: {
             device: {
                 devices: [
@@ -752,7 +752,7 @@ const acquireDevice = [
         result: SUITE.LOCK_DEVICE,
     },
     {
-        description: `with TrezorConnect error`,
+        description: `with CerberusConnect error`,
         state: {
             device: {
                 selectedDevice: SUITE_DEVICE,
@@ -916,7 +916,7 @@ const authorizeDevice = [
         ],
     },
     {
-        description: `with TrezorConnect error`,
+        description: `with CerberusConnect error`,
         suiteState: {
             selectedDevice: getSuiteDevice({
                 connected: true,

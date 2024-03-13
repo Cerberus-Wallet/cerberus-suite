@@ -1,8 +1,8 @@
 import { Account, Network, NetworkSymbol } from 'src/types/wallet';
 import { NETWORKS } from 'src/config/wallet';
-import TrezorConnect, { TokenInfo } from '@cerberus/connect';
+import CerberusConnect, { TokenInfo } from '@cerberus/connect';
 import regional from 'src/constants/wallet/coinmarket/regional';
-import { TrezorDevice } from 'src/types/suite';
+import { CerberusDevice } from 'src/types/suite';
 import { CryptoSymbol } from 'invity-api';
 import {
     networkToCryptoSymbol,
@@ -146,7 +146,7 @@ export const getCountryLabelParts = (label: string) => {
 export const getComposeAddressPlaceholder = async (
     account: Account,
     network: Network,
-    device?: TrezorDevice,
+    device?: CerberusDevice,
     accounts?: Account[],
     chunkify?: boolean,
 ) => {
@@ -174,13 +174,13 @@ export const getComposeAddressPlaceholder = async (
                 if (legacyAccount?.addresses?.unused[0]) {
                     return legacyAccount?.addresses?.unused[0].address;
                 }
-                // if it is not discovered, get an address from trezor
-                const result = await TrezorConnect.getAddress({
+                // if it is not discovered, get an address from cerberus
+                const result = await CerberusConnect.getAddress({
                     device,
                     coin: legacy.symbol,
                     path: `${legacy.bip43Path.replace('i', '0')}/0/0`,
                     useEmptyPassphrase: device.useEmptyPassphrase,
-                    showOnTrezor: false,
+                    showOnCerberus: false,
                     chunkify,
                 });
                 if (result.success) {

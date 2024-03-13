@@ -19,7 +19,7 @@ import {
     HiddenPlaceholder,
 } from 'src/components/suite';
 import { useDispatch, useSelector } from 'src/hooks/suite';
-import { TrezorDevice, AcquiredDevice } from 'src/types/suite';
+import { CerberusDevice, AcquiredDevice } from 'src/types/suite';
 import { selectLabelingDataForWallet } from 'src/reducers/suite/metadataReducer';
 import { useWalletLabeling } from '../../../../components/suite/labeling/WalletLabeling';
 import { METADATA_LABELING } from 'src/actions/suite/constants';
@@ -74,7 +74,7 @@ interface WalletInstanceProps {
     instance: AcquiredDevice;
     enabled: boolean;
     selected: boolean;
-    selectDeviceInstance: (instance: TrezorDevice) => void;
+    selectDeviceInstance: (instance: CerberusDevice) => void;
     index: number; // used only in data-test
 }
 

@@ -1,6 +1,6 @@
-import { TrezorConnect } from '../../..';
+import { CerberusConnect } from '../../..';
 
-export const tezosGetAddress = async (api: TrezorConnect) => {
+export const tezosGetAddress = async (api: CerberusConnect) => {
     // regular
     const singleAddress = await api.tezosGetAddress({ path: 'm/44' });
     if (singleAddress.success) {
@@ -39,7 +39,7 @@ export const tezosGetAddress = async (api: TrezorConnect) => {
         skipFinalReload: false,
         path: 'm/44',
         address: 'a',
-        showOnTrezor: true,
+        showOnCerberus: true,
     });
 
     // with invalid params
@@ -53,7 +53,7 @@ export const tezosGetAddress = async (api: TrezorConnect) => {
     api.tezosGetAddress({ bundle: 1 });
 };
 
-export const tezosGetPublicKey = async (api: TrezorConnect) => {
+export const tezosGetPublicKey = async (api: CerberusConnect) => {
     // regular
     const singlePK = await api.tezosGetPublicKey({ path: 'm/44' });
     if (singlePK.success) {
@@ -80,7 +80,7 @@ export const tezosGetPublicKey = async (api: TrezorConnect) => {
     }
 };
 
-export const tezosSignTransaction = async (api: TrezorConnect) => {
+export const tezosSignTransaction = async (api: CerberusConnect) => {
     const sign = await api.tezosSignTransaction({
         path: "m/44'/1729'/10'",
         branch: 'BLGUkzwvguFu8ei8eLW3KgCbdtrMmv1UCqMvUpHHTGq1UPxypHS',

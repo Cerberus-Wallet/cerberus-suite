@@ -4,7 +4,7 @@
 
 Library for low-level communication with Cerberus.
 
-Intended as a "building block" for other packages - it is used in ~~trezor.js~~ (deprecated) and [@cerberus/connect](https://github.com/Cerberus-Wallet/cerberus-suite/tree/develop/packages/connect).
+Intended as a "building block" for other packages - it is used in ~~cerberus.js~~ (deprecated) and [@cerberus/connect](https://github.com/Cerberus-Wallet/cerberus-suite/tree/develop/packages/connect).
 
 _You probably don't want to use this package directly._ For communication with Cerberus via a more high-level API, use [@cerberus/connect](https://github.com/Cerberus-Wallet/cerberus-suite/tree/develop/packages/connect).
 
@@ -26,7 +26,7 @@ firmware repo are semi-automatically translated to ~~Flow~~ and TypeScript defin
 
 ### The short version
 
-In order to be able to use new features of trezor-firmware you need to update protobuf definitions.
+In order to be able to use new features of cerberus-firmware you need to update protobuf definitions.
 
 1. `git submodule update --init --recursive` to initialize cerberus-common submodule
 1. `yarn update-submodules` to update cerberus-common submodule
@@ -36,7 +36,7 @@ In order to be able to use new features of trezor-firmware you need to update pr
 
 The beginning and source of truth are the `.proto` definitions in the [firmware repository](https://github.com/Cerberus-Wallet/cerberus-firmware/tree/main/common/protob). These are duplicated as read-only in the [cerberus-common](https://github.com/Cerberus-Wallet/cerberus-common) repository.
 
-`cerberus-common` is included in `trezor-suite` as a git submodule mounted at `packages/transport/cerberus-common`.`
+`cerberus-common` is included in `cerberus-suite` as a git submodule mounted at `packages/transport/cerberus-common`.`
 
 Here, `.proto` definitions are translated to a JSON format using [pbjs](https://www.npmjs.com/package/pbjs) package. This JSON is used on runtime by the `@cerberus/transport` package
 for (de)serialization logic and to generate Typescript definitions.

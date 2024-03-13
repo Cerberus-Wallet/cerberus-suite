@@ -2,9 +2,9 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import { Button } from '@cerberus/components';
 import { GITHUB_FW_BINARIES_URL } from '@cerberus/urls';
-import { Translation, TrezorLink } from 'src/components/suite';
+import { Translation, CerberusLink } from 'src/components/suite';
 import { DropZone } from 'src/components/suite/DropZone';
-import type { TrezorDevice, ExtendedMessageDescriptor } from 'src/types/suite';
+import type { CerberusDevice, ExtendedMessageDescriptor } from 'src/types/suite';
 import { validateFirmware } from 'src/utils/firmware';
 import { InstructionStep } from 'src/components/suite/InstructionStep';
 
@@ -12,7 +12,7 @@ const Container = styled.div`
     width: 100%;
 `;
 
-const StyledLink = styled(TrezorLink)`
+const StyledLink = styled(CerberusLink)`
     margin-left: 6px;
 `;
 
@@ -25,7 +25,7 @@ const InstallButton = styled(Button)`
 `;
 
 type SelectCustomFirmwareProps = {
-    device?: TrezorDevice;
+    device?: CerberusDevice;
     onSuccess: (fw: ArrayBuffer) => void;
 };
 

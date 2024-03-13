@@ -100,7 +100,7 @@ describe('Coinmarket Exchange Actions', () => {
         ];
 
         setFetchMock({
-            'https://exchange.trezorcheck.io/api/v2/exchange/list': { ok: true, response: exchangeList },
+            'https://exchange.trezer.io/api/v2/exchange/list': { ok: true, response: exchangeList },
         });
 
         const store = initStore(getInitialState());

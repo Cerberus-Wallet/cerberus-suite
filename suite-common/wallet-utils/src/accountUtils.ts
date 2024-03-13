@@ -26,7 +26,7 @@ import {
     FiatRates,
 } from '@suite-common/wallet-types';
 import { FiatCurrencyCode } from '@suite-common/suite-config';
-import { TrezorDevice } from '@suite-common/suite-types';
+import { CerberusDevice } from '@suite-common/suite-types';
 import { ACCOUNT_TYPE } from '@suite-common/wallet-constants';
 import {
     HELP_CENTER_ADDRESSES_URL,
@@ -398,7 +398,7 @@ export const findAccountsByAddress = (
             return a.descriptor === address;
         });
 
-export const findAccountDevice = (account: Account, devices: TrezorDevice[]) =>
+export const findAccountDevice = (account: Account, devices: CerberusDevice[]) =>
     devices.find(d => d.state === account.deviceState);
 
 export const getAllAccounts = (deviceState: string | typeof undefined, accounts: Account[]) => {

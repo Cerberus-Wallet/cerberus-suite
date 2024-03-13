@@ -17,9 +17,9 @@ const { getSuiteDevice } = testMocks;
 
 const deviceReducer = prepareDeviceReducer(extraDependencies);
 
-const TrezorConnect = testMocks.getTrezorConnectMock();
+const CerberusConnect = testMocks.getCerberusConnectMock();
 
-const setTrezorConnectFixtures = (fixture?: any) => {
+const setCerberusConnectFixtures = (fixture?: any) => {
     let buttonRequest: ((e?: any) => any) | undefined;
 
     const getAddress = (_params: any) => {
@@ -45,15 +45,15 @@ const setTrezorConnectFixtures = (fixture?: any) => {
         };
     };
 
-    jest.spyOn(TrezorConnect, 'on').mockImplementation((event: string, cb) => {
+    jest.spyOn(CerberusConnect, 'on').mockImplementation((event: string, cb) => {
         if (event === 'ui-button') buttonRequest = cb;
     });
-    jest.spyOn(TrezorConnect, 'off').mockImplementation(() => {
+    jest.spyOn(CerberusConnect, 'off').mockImplementation(() => {
         buttonRequest = undefined;
     });
-    jest.spyOn(TrezorConnect, 'getAddress').mockImplementation(getAddress);
-    jest.spyOn(TrezorConnect, 'ethereumGetAddress').mockImplementation(getAddress);
-    jest.spyOn(TrezorConnect, 'rippleGetAddress').mockImplementation(getAddress);
+    jest.spyOn(CerberusConnect, 'getAddress').mockImplementation(getAddress);
+    jest.spyOn(CerberusConnect, 'ethereumGetAddress').mockImplementation(getAddress);
+    jest.spyOn(CerberusConnect, 'rippleGetAddress').mockImplementation(getAddress);
 };
 
 type ReceiveState = ReturnType<typeof receiveReducer>;
@@ -135,7 +135,7 @@ const initStore = (state: State) => {
 describe('ReceiveActions', () => {
     fixtures.forEach(f => {
         it(f.description, async () => {
-            setTrezorConnectFixtures(f.mocks);
+            setCerberusConnectFixtures(f.mocks);
             const state = getInitialState(f.initialState as any);
             const store = initStore(state);
             await store.dispatch(connectInitThunk());
@@ -148,7 +148,7 @@ describe('ReceiveActions', () => {
     });
 
     it('show unverified address then verify', async () => {
-        setTrezorConnectFixtures();
+        setCerberusConnectFixtures();
         const state = getInitialState({});
         const store = initStore(state);
         await store.dispatch(connectInitThunk());

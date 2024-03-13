@@ -3,7 +3,7 @@
 This method initiates pin change sequence.
 
 ```javascript
-const result = await TrezorConnect.changePin(params);
+const result = await CerberusConnect.changePin(params);
 ```
 
 ### Params

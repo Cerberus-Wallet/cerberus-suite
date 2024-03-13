@@ -5,7 +5,7 @@ import {
     FiatValue,
     FormattedCryptoAmount,
     QuestionTooltip,
-    TrezorLink,
+    CerberusLink,
 } from 'src/components/suite';
 import { Account } from 'src/types/wallet';
 import { useSelector } from 'src/hooks/suite';
@@ -197,7 +197,7 @@ export const TokenList = ({
                                             </Col>
                                         )}
                                         <Col isTestnet={isTestnet} justify="right">
-                                            <TrezorLink
+                                            <CerberusLink
                                                 href={`${explorerUrl}${t.contract}${explorerUrlQueryString}`}
                                             >
                                                 <Icon
@@ -205,7 +205,7 @@ export const TokenList = ({
                                                     size={16}
                                                     color={theme.TYPE_LIGHT_GREY}
                                                 />
-                                            </TrezorLink>
+                                            </CerberusLink>
                                         </Col>
                                     </Fragment>
                                 );

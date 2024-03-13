@@ -12,15 +12,15 @@ import type { ComposeOutput, ComposeResultFinal } from '../../types/api/composeT
 /** *****
  * SignTransaction: validation
  ****** */
-export const validateTrezorOutputs = (
+export const validateCerberusOutputs = (
     outputs: ProtoWithDerivationPath<PROTO.TxOutputType>[],
     coinInfo: BitcoinNetworkInfo,
 ): PROTO.TxOutputType[] => {
-    const trezorOutputs = outputs
+    const cerberusOutputs = outputs
         .map(o => fixPath(o))
         .map(o => convertMultisigPubKey(coinInfo.network, o));
 
-    trezorOutputs.forEach(output => {
+    cerberusOutputs.forEach(output => {
         validateParams(output, [
             { name: 'address_n', type: 'array' },
             { name: 'address', type: 'string' },
@@ -56,7 +56,7 @@ export const validateTrezorOutputs = (
         }
     });
 
-    return trezorOutputs;
+    return cerberusOutputs;
 };
 
 /** *****
@@ -124,7 +124,7 @@ export const validateHDOutput = (
 /** *****
  * Transform the result of @cerberus/utxo-lib `composeTx` to Cerberus protobuf
  ****** */
-export const outputToTrezor = (
+export const outputToCerberus = (
     output: ComposeResultFinal['outputs'][number],
 ): PROTO.TxOutputType => {
     if (output.type === 'opreturn') {

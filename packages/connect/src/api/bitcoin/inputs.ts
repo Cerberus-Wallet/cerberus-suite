@@ -17,7 +17,7 @@ import type { PROTO } from '../../constants';
 /** *****
  * SignTx: validation
  ****** */
-export const validateTrezorInputs = (
+export const validateCerberusInputs = (
     inputs: ProtoWithDerivationPath<PROTO.TxInputType>[],
     coinInfo: BitcoinNetworkInfo,
 ): PROTO.TxInputType[] =>
@@ -54,15 +54,15 @@ export const validateTrezorInputs = (
             return input;
         });
 
-// this method exist as a workaround for breaking change described in validateTrezorInputs
+// this method exist as a workaround for breaking change described in validateCerberusInputs
 // TODO: it could be removed after another major version release.
-export const enhanceTrezorInputs = (
+export const enhanceCerberusInputs = (
     inputs: PROTO.TxInputType[],
     rawTxs: BitcoinJsTransaction[],
 ) => {
     inputs.forEach(input => {
         if (!input.amount) {
-            console.warn('TrezorConnect.singTransaction deprecation: missing input amount.');
+            console.warn('CerberusConnect.singTransaction deprecation: missing input amount.');
             const refTx = rawTxs.find(t => t.getId() === input.prev_hash);
             if (refTx && refTx.outs[input.prev_index]) {
                 input.amount = refTx.outs[input.prev_index].value;
@@ -74,7 +74,7 @@ export const enhanceTrezorInputs = (
 /** *****
  * Transform from @cerberus/utxo-lib/compose format to Cerberus
  ****** */
-export const inputToTrezor = (input: ComposeUtxo, sequence = 0xffffffff): PROTO.TxInputType => {
+export const inputToCerberus = (input: ComposeUtxo, sequence = 0xffffffff): PROTO.TxInputType => {
     const address_n = getHDPath(input.path);
 
     return {

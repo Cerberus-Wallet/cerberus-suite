@@ -7,7 +7,7 @@ import child_process from 'child_process';
 import yargs from 'yargs/yargs';
 import path from 'path';
 import fs from 'fs';
-import { TrezorUserEnvLink } from '@cerberus/trezor-user-env-link';
+import { CerberusUserEnvLink } from '@cerberus/cerberus-user-env-link';
 
 import cypressConfig from './cypress.config';
 
@@ -66,7 +66,7 @@ const getTestFiles = async (): Promise<string[]> => {
 };
 
 const runTests = async () => {
-    await TrezorUserEnvLink.connect();
+    await CerberusUserEnvLink.connect();
 
     const {
         BROWSER = 'chrome',

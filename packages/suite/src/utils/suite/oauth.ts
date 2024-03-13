@@ -123,7 +123,7 @@ const getWebHandlerInstance = (
     webHandlerInstance = (e: MessageEvent<Message>) => {
         if (window.location.origin !== e.origin) return;
         if (!e.data.search && !e.data.hash) return;
-        if (e.data.key !== 'trezor-oauth') return;
+        if (e.data.key !== 'cerberus-oauth') return;
 
         handleResponse(
             e.data,

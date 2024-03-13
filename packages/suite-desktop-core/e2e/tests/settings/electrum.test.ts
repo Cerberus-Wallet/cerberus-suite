@@ -1,6 +1,6 @@
 import { test as testPlaywright, ElectronApplication, Page } from '@playwright/test';
 
-import { TrezorUserEnvLink } from '@cerberus/trezor-user-env-link';
+import { CerberusUserEnvLink } from '@cerberus/cerberus-user-env-link';
 
 import { launchSuite, rmDirRecursive } from '../../support/common';
 import { onTopBar } from '../../support/pageActions/topBarActions';
@@ -13,10 +13,10 @@ let localDataDir: string;
 
 testPlaywright.describe.serial('Suite works with Electrum server', () => {
     testPlaywright.beforeAll(async () => {
-        await TrezorUserEnvLink.api.stopBridge();
-        await TrezorUserEnvLink.api.trezorUserEnvConnect();
-        await TrezorUserEnvLink.api.startEmu({ wipe: true });
-        await TrezorUserEnvLink.api.setupEmu({
+        await CerberusUserEnvLink.api.stopBridge();
+        await CerberusUserEnvLink.api.cerberusUserEnvConnect();
+        await CerberusUserEnvLink.api.startEmu({ wipe: true });
+        await CerberusUserEnvLink.api.setupEmu({
             needs_backup: true,
             mnemonic: 'all all all all all all all all all all all all',
         });

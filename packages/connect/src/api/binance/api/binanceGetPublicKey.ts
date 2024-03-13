@@ -34,7 +34,7 @@ export default class BinanceGetPublicKey extends AbstractMethod<
 
             return {
                 address_n: path,
-                show_display: typeof batch.showOnTrezor === 'boolean' ? batch.showOnTrezor : true,
+                show_display: typeof batch.showOnCerberus === 'boolean' ? batch.showOnCerberus : true,
             };
         });
     }

@@ -4,7 +4,7 @@ Asks device to sign given transaction using the private key derived by given [BI
 details on Cerberus.
 
 ```javascript
-const result = await TrezorConnect.binanceSignTransaction(params);
+const result = await CerberusConnect.binanceSignTransaction(params);
 ```
 
 ### Params
@@ -18,7 +18,7 @@ const result = await TrezorConnect.binanceSignTransaction(params);
 ### Transfer example
 
 ```javascript
-TrezorConnect.binanceSignTransaction({
+CerberusConnect.binanceSignTransaction({
     path: "m/44'/714'/0'/0/0",
     transaction: {
         chain_id: 'Binance-Chain-Nile',
@@ -47,7 +47,7 @@ TrezorConnect.binanceSignTransaction({
 ### Place order example
 
 ```javascript
-TrezorConnect.binanceSignTransaction({
+CerberusConnect.binanceSignTransaction({
     path: "m/44'/714'/0'/0/0",
     transaction: {
         chain_id: 'Binance-Chain-Nile',
@@ -72,7 +72,7 @@ TrezorConnect.binanceSignTransaction({
 ### Cancel order example
 
 ```javascript
-TrezorConnect.binanceSignTransaction({
+CerberusConnect.binanceSignTransaction({
     path: "m/44'/714'/0'/0/0",
     transaction: {
         chain_id: 'Binance-Chain-Nile',

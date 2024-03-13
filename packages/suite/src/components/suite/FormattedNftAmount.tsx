@@ -6,7 +6,7 @@ import { TokenTransfer } from '@cerberus/connect';
 
 import { HiddenPlaceholder, Sign } from 'src/components/suite';
 // importing directly, otherwise unit tests fail, seems to be a styled-components issue
-import { TrezorLink } from 'src/components/suite/TrezorLink';
+import { CerberusLink } from 'src/components/suite/CerberusLink';
 import { useSelector } from 'src/hooks/suite/useSelector';
 import { variables } from '@cerberus/components';
 
@@ -22,7 +22,7 @@ const Symbol = styled.div`
     max-width: 120px;
 `;
 
-const StyledTrezorLink = styled(TrezorLink)`
+const StyledCerberusLink = styled(CerberusLink)`
     color: ${({ theme }) => theme.TYPE_GREEN};
     text-decoration: underline;
     display: flex;
@@ -73,10 +73,10 @@ export const FormattedNftAmount = ({
                 {signValue ? <Sign value={signValue} /> : null}
                 ID:&nbsp;
                 {isWithLink ? (
-                    <StyledTrezorLink href={explorerUrl}>
+                    <StyledCerberusLink href={explorerUrl}>
                         {idComponent}
                         {symbolComponent}
-                    </StyledTrezorLink>
+                    </StyledCerberusLink>
                 ) : (
                     <NoLink>
                         {idComponent}

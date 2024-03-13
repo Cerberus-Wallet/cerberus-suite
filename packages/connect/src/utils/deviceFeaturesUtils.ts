@@ -117,7 +117,7 @@ export const getUnavailableCapabilities = (features: Features, coins: CoinInfo[]
         }
         if (max && !versionUtils.isNewerOrEqual(max, fw)) {
             s.capabilities.forEach(m => {
-                list[m] = 'trezor-connect-outdated';
+                list[m] = 'cerberus-connect-outdated';
             });
         }
     });

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Paragraph } from '@cerberus/components';
 import { Translation } from 'src/components/suite/Translation';
 import { DeviceConfirmImage, Modal, ModalProps } from 'src/components/suite';
-import { TrezorDevice } from 'src/types/suite';
+import { CerberusDevice } from 'src/types/suite';
 
 const Divider = styled.div`
     margin-bottom: 10px;
@@ -14,7 +14,7 @@ const StyledModal = styled(Modal)`
 `;
 
 interface PinInvalidModalProps extends ModalProps {
-    device: TrezorDevice;
+    device: CerberusDevice;
 }
 
 export const PinInvalidModal = ({ device, ...rest }: PinInvalidModalProps) => (

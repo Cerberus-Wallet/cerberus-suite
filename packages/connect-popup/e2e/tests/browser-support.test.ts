@@ -1,6 +1,6 @@
 import { test, expect, Page, devices } from '@playwright/test';
 import { ensureDirectoryExists } from '@cerberus/node-utils';
-import { TrezorUserEnvLink } from '@cerberus/trezor-user-env-link';
+import { CerberusUserEnvLink } from '@cerberus/cerberus-user-env-link';
 
 const url = process.env.URL || 'http://localhost:8088/';
 
@@ -25,9 +25,9 @@ const openPopup = async (page: Page) =>
     )[0];
 
 test.beforeAll(async () => {
-    await TrezorUserEnvLink.connect();
-    await TrezorUserEnvLink.api.stopBridge();
-    await TrezorUserEnvLink.api.stopEmu();
+    await CerberusUserEnvLink.connect();
+    await CerberusUserEnvLink.api.stopBridge();
+    await CerberusUserEnvLink.api.stopEmu();
 });
 
 test('unsupported browser', async ({ browser }) => {

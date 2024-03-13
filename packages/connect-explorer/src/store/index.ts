@@ -2,10 +2,10 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import { createLogger } from 'redux-logger';
 import reducers from '../reducers';
-import { trezorConnectMiddleware } from '../middlewares/trezorConnectMiddleware';
+import { cerberusConnectMiddleware } from '../middlewares/cerberusConnectMiddleware';
 
 const enhancers: any[] = [];
-const middleware = [thunk, trezorConnectMiddleware];
+const middleware = [thunk, cerberusConnectMiddleware];
 
 let composedEnhancers: any;
 if (process.env.NODE_ENV === 'development') {

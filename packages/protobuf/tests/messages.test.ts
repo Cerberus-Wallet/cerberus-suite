@@ -6,7 +6,7 @@ const json = {
     nested: {
         hw: {
             nested: {
-                trezor: {
+                cerberus: {
                     nested: {
                         messages: {
                             nested: {

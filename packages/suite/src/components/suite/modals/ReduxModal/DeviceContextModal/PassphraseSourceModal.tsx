@@ -6,7 +6,7 @@ import { selectIsDiscoveryAuthConfirmationRequired } from '@suite-common/wallet-
 import { Translation } from 'src/components/suite/Translation';
 import { DeviceConfirmImage } from 'src/components/suite';
 import { useSelector } from 'src/hooks/suite';
-import type { TrezorDevice } from 'src/types/suite';
+import type { CerberusDevice } from 'src/types/suite';
 import { DevicePromptModal } from './DevicePromptModal';
 
 const StyledDevicePromptModal = styled(DevicePromptModal)`
@@ -19,7 +19,7 @@ const StyledH2 = styled(H2)`
 `;
 
 interface PassphraseSourceModalProps {
-    device: TrezorDevice;
+    device: CerberusDevice;
 }
 
 /**

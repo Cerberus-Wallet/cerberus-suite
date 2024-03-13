@@ -4,6 +4,6 @@ interface Window {
 
     // Needed for Cypress
     Cypress?: any;
-    TrezorConnect?: any;
+    CerberusConnect?: any;
     store?: any;
 }

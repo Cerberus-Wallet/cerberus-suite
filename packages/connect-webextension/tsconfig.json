@@ -12,6 +12,6 @@
         { "path": "../connect-web" },
         { "path": "../utils" },
         { "path": "../node-utils" },
-        { "path": "../trezor-user-env-link" }
+        { "path": "../cerberus-user-env-link" }
     ]
 }

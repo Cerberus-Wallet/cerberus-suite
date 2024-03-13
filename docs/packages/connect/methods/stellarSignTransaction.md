@@ -4,7 +4,7 @@ Asks device to sign given transaction. User is asked to confirm all transaction
 details on Cerberus.
 
 ```javascript
-const result = await TrezorConnect.stellarSignTransaction(params);
+const result = await CerberusConnect.stellarSignTransaction(params);
 ```
 
 ### Params
@@ -19,19 +19,19 @@ const result = await TrezorConnect.stellarSignTransaction(params);
 
 ### Stellar SDK compatibility
 
-`@stellar/stellar-sdk` is not a part of `trezor-connect` repository.
-To transform `StellarSDK.Transaction` object into `TrezorConnect.StellarTransaction`, install [@cerberus/connect-plugin-stellar](https://github.com/Cerberus-Wallet/cerberus-suite/tree/develop/packages/connect-plugin-stellar) into your project.
+`@stellar/stellar-sdk` is not a part of `cerberus-connect` repository.
+To transform `StellarSDK.Transaction` object into `CerberusConnect.StellarTransaction`, install [@cerberus/connect-plugin-stellar](https://github.com/Cerberus-Wallet/cerberus-suite/tree/develop/packages/connect-plugin-stellar) into your project.
 
 ```javascript
 import * as StellarSDK from '@stellar/stellar-sdk';
-import transformTrezorTransaction from '<path-to-plugin>/index.js';
+import transformCerberusTransaction from '<path-to-plugin>/index.js';
 
 const tx = new StellarSdk.TransactionBuilder(...);
 ...
 tx.build();
 
-const params = transformTrezorTransaction(tx);
-const result = TrezorConnect.stellarSignTransaction(params);
+const params = transformCerberusTransaction(tx);
+const result = CerberusConnect.stellarSignTransaction(params);
 
 if (result.success) {
     tx.addSignature('account-public-key', result.payload.signature);
@@ -41,7 +41,7 @@ if (result.success) {
 ### Example
 
 ```javascript
-TrezorConnect.stellarSignTransaction(
+CerberusConnect.stellarSignTransaction(
     path: "m/44'/148'/0'",
     networkPassphrase: "Test SDF Network ; September 2015",
     transaction: {

@@ -1,6 +1,6 @@
 import { DeviceModelInternal } from '@cerberus/connect';
 
-// original trezor images has to be first as they are send to device as '0' and the default image from fw is used
+// original cerberus images has to be first as they are send to device as '0' and the default image from fw is used
 export const homescreens = {
     [DeviceModelInternal.T1B1]: [
         'original_t1b1', // note - has to be first
@@ -55,7 +55,7 @@ export const homescreens = {
     ],
     [DeviceModelInternal.T2T1]: [
         'original_t2t1', // note - has to be first
-        'trezor-3d',
+        'cerberus-3d',
         'pigeon',
         'smile-1',
         'stain-1',

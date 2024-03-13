@@ -5,4 +5,4 @@
 
 # Version 8 and lower
 
-For deployment process of trezor-connect v8 refer to [trezor/connect repository](https://github.com/Cerberus-Wallet/connect/blob/develop/docs/deployment/index.md)
+For deployment process of cerberus-connect v8 refer to [cerberus/connect repository](https://github.com/Cerberus-Wallet/connect/blob/develop/docs/deployment/index.md)

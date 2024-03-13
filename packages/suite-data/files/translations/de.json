@@ -1725,7 +1725,7 @@
   "TR_TAPROOT_BANNER_POINT_1": "Nur Kleinbuchstaben: geringere Wahrscheinlichkeit von Überprüfungsfehlern",
   "TR_TAPROOT_BANNER_POINT_2": "Verbesserter Datenschutz für alle Bitcoin-Transaktionen",
   "TR_TAPROOT_BANNER_TITLE": "Taproot-Konten",
-  "TR_TERMS_AND_PRIVACY_CONFIRMATION": "Ich stimme den <trezor>Cerberus Suite Bedingungen</trezor> und den <coordinator>zkSNACKs Coordinator Bedingungen</coordinator> zu",
+  "TR_TERMS_AND_PRIVACY_CONFIRMATION": "Ich stimme den <cerberus>Cerberus Suite Bedingungen</cerberus> und den <coordinator>zkSNACKs Coordinator Bedingungen</coordinator> zu",
   "TR_TERMS_OF_USE_INVITY": "Geschäftsbedingungen",
   "TR_TESTNET_COINS": "Testnet-Coins",
   "TR_TESTNET_COINS_DESCRIPTION": "Diese Coins werden nur zu Testzwecken verwendet und haben keinen Wert.",

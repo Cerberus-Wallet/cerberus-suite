@@ -57,7 +57,7 @@ _Device and backend connection is not required for this case since all data are 
 -   `send-max` - spends all available inputs from account
     -   `type` - _required_ with `send-max` value
     -   `address` - _required_ `string` recipient address
--   `opreturn` - [read more](https://cerberus.uraanai.com/learn/a/use-op_return-in-trezor-suite-app)
+-   `opreturn` - [read more](https://cerberus.uraanai.com/learn/a/use-op_return-in-cerberus-suite-app)
     -   `type` - _required_ with `opreturn` value
     -   `dataHex` - _required_ `hexadecimal string` with arbitrary data
 -   `payment-noaddress` - incomplete output, target address is not known yet. used only in precompose
@@ -73,7 +73,7 @@ _Device and backend connection is not required for this case since all data are 
 Send 0.002 BTC to "18WL2iZKmpDYWk1oFavJapdLALxwSjcSk2"
 
 ```javascript
-TrezorConnect.composeTransaction({
+CerberusConnect.composeTransaction({
     outputs: [
         { amount: "200000", address: "18WL2iZKmpDYWk1oFavJapdLALxwSjcSk2" }
     ]
@@ -113,7 +113,7 @@ Error
 Prepare multiple variants of the same transaction
 
 ```javascript
-TrezorConnect.composeTransaction({
+CerberusConnect.composeTransaction({
     outputs: [{ amount: '200000', address: 'tb1q9l0rk0gkgn73d0gc57qn3t3cwvucaj3h8wtrlu' }],
     coin: 'btc',
     account: {

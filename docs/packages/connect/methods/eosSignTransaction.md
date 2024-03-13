@@ -4,7 +4,7 @@ Asks device to sign given transaction using the private key derived by given [BI
 details on Cerberus.
 
 ```javascript
-const result = await TrezorConnect.eosSignTransaction(params);
+const result = await CerberusConnect.eosSignTransaction(params);
 ```
 
 ### Params
@@ -20,7 +20,7 @@ const result = await TrezorConnect.eosSignTransaction(params);
 ### Transfer example
 
 ```javascript
-TrezorConnect.eosSignTransaction({
+CerberusConnect.eosSignTransaction({
     path: "m/44'/194'/0'/0/0",
     transaction: {
         chainId: 'cf057bbfb72640471fd910bcb67639c22df9f92470936cddc1ade0e2f2e7dc4f',

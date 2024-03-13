@@ -189,7 +189,7 @@ export const DemoScreen = () => {
                                 <TextButton
                                     variant={variant}
                                     key={buttonSize}
-                                    iconLeft="trezorT"
+                                    iconLeft="cerberusT"
                                     size={buttonSize}
                                 >
                                     {buttonSize}

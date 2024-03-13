@@ -6,14 +6,14 @@
 
 [Optional common params](commonParams.md)
 
--   `challenge` — _required_ `string` a random 32-byte challenge which is return form successful [TrezorConnect.firmwareUpdate](./firmwareUpdate) call
+-   `challenge` — _required_ `string` a random 32-byte challenge which is return form successful [CerberusConnect.firmwareUpdate](./firmwareUpdate) call
 
 ### Example
 
-Get hash of firmware installed in trezor device. It can be used to verify authenticity of firmware binaries intended to be installed.
+Get hash of firmware installed in cerberus device. It can be used to verify authenticity of firmware binaries intended to be installed.
 
 ```javascript
-TrezorConnect.getFirmwareHash({
+CerberusConnect.getFirmwareHash({
     challenge: '430d1ca5302edb40ac605e0ba61dc50928779336fdd02b688a833564c178307c',
 });
 ```

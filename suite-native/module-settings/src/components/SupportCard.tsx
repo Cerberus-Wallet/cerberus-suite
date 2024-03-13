@@ -12,7 +12,7 @@ export const SupportCard = () => {
     const { applyStyle } = useNativeStyles();
     const openLink = useOpenLink();
 
-    const handleOpenSupportLink = () => openLink('https://cerberus.uraanai.com/learn/c/trezor-suite-lite');
+    const handleOpenSupportLink = () => openLink('https://cerberus.uraanai.com/learn/c/cerberus-suite-lite');
 
     return (
         <Card style={applyStyle(supportCardStyle)}>

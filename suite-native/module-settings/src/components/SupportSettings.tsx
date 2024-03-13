@@ -6,7 +6,7 @@ import {
     SettingsStackRoutes,
     StackToStackCompositeNavigationProps,
 } from '@suite-native/navigation';
-import { TrezorSuiteLiteHeader } from '@suite-native/atoms';
+import { CerberusSuiteLiteHeader } from '@suite-native/atoms';
 
 import { SettingsSection } from './SettingsSection';
 import { SettingsSectionItem } from './SettingsSectionItem';
@@ -32,10 +32,10 @@ export const SupportSettings = () => {
             <SettingsSectionItem
                 title={
                     <>
-                        About <TrezorSuiteLiteHeader textVariant="body" />
+                        About <CerberusSuiteLiteHeader textVariant="body" />
                     </>
                 }
-                iconName="trezorT"
+                iconName="cerberusT"
                 onPress={() => navigation.navigate(SettingsStackRoutes.SettingsAbout)}
             />
         </SettingsSection>

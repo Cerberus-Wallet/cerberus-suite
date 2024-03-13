@@ -10,12 +10,12 @@ import {
     PORTFOLIO_TRACKER_DEVICE_ID,
     selectDeviceLabelById,
 } from '@suite-common/wallet-core';
-import { TrezorDevice } from '@suite-common/suite-types';
+import { CerberusDevice } from '@suite-common/suite-types';
 import { TypographyStyle } from '@cerberus/theme';
 import { useActiveColorScheme } from '@suite-native/theme';
 
 type DeviceItemContentProps = {
-    deviceId?: TrezorDevice['id'];
+    deviceId?: CerberusDevice['id'];
     isPortfolioLabelDisplayed?: boolean;
     headerTextVariant?: TypographyStyle;
 };
@@ -27,11 +27,11 @@ const DeviceItemIcon = ({ deviceId }: DeviceItemIconProps) => {
 
     // TODO: when we enable remember mode, icon representing disconnected device have to be handled.
     const connectedDeviceIcon: IconName =
-        activeColorScheme === 'standard' ? 'trezorConnectedLight' : 'trezorConnectedDark';
+        activeColorScheme === 'standard' ? 'cerberusConnectedLight' : 'cerberusConnectedDark';
 
     switch (deviceId) {
         case undefined:
-            return <Icon name="trezor" color="iconDefault" />;
+            return <Icon name="cerberus" color="iconDefault" />;
         case PORTFOLIO_TRACKER_DEVICE_ID:
             return <Icon name="database" color="iconDefault" />;
         default:

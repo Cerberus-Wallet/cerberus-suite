@@ -55,7 +55,7 @@ export default class GetPublicKey extends AbstractMethod<'getPublicKey', Params[
             return {
                 address_n,
                 coin_name: coinInfo?.name,
-                show_display: batch.showOnTrezor,
+                show_display: batch.showOnCerberus,
                 script_type: batch.scriptType,
                 ignore_xpub_magic: batch.ignoreXpubMagic,
                 ecdsa_curve_name: batch.ecdsaCurveName,

@@ -1,4 +1,4 @@
-import TrezorConnect, { AccountInfo, TokenInfo } from '@cerberus/connect';
+import CerberusConnect, { AccountInfo, TokenInfo } from '@cerberus/connect';
 import { Account, AccountKey } from '@suite-common/wallet-types';
 import { networksCompatibility as NETWORKS } from '@suite-common/wallet-config';
 import {
@@ -10,7 +10,7 @@ import {
     getAreSatoshisUsed,
     isAccountOutdated,
     isPending,
-    isTrezorConnectBackendType,
+    isCerberusConnectBackendType,
 } from '@suite-common/wallet-utils';
 import { getTxsPerPage } from '@suite-common/suite-utils';
 import { createThunk } from '@suite-common/redux-utils';
@@ -51,7 +51,7 @@ const fetchAccountTokens = async (account: Account, payloadTokens: AccountInfo['
         account.tokens?.filter(t => !payloadTokens?.find(p => p.contract === t.contract)) ?? [];
 
     const promises = customTokens.map(t =>
-        TrezorConnect.getAccountInfo({
+        CerberusConnect.getAccountInfo({
             coin: account.symbol,
             descriptor: account.descriptor,
             details: 'tokenBalances',
@@ -82,10 +82,10 @@ export const fetchAndUpdateAccountThunk = createThunk(
         const account = selectAccountByKey(getState(), accountKey);
 
         if (!account) return;
-        if (!isTrezorConnectBackendType(account.backendType)) return; // skip unsupported backend type
+        if (!isCerberusConnectBackendType(account.backendType)) return; // skip unsupported backend type
         // first basic check, traffic optimization
         // basic check returns only small amount of data without full transaction history
-        const basic = await TrezorConnect.getAccountInfo({
+        const basic = await CerberusConnect.getAccountInfo({
             coin: account.symbol,
             descriptor: account.descriptor,
             details: 'basic',
@@ -105,7 +105,7 @@ export const fetchAndUpdateAccountThunk = createThunk(
                 ? account.history.unconfirmed
                 : getTxsPerPage(account.networkType);
 
-        const response = await TrezorConnect.getAccountInfo({
+        const response = await CerberusConnect.getAccountInfo({
             coin: account.symbol,
             descriptor: account.descriptor,
             details: 'txs',

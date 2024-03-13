@@ -7,7 +7,7 @@ import {
 /**
  * Communication channel between:
  * - here: chrome message port (in service worker)
- * - peer: window.onMessage in trezor-content-script
+ * - peer: window.onMessage in cerberus-content-script
  */
 export class ServiceWorkerWindowChannel<
     IncomingMessages extends { type: string },

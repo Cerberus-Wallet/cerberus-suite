@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { H2, variables } from '@cerberus/components';
 import { Translation } from 'src/components/suite/Translation';
 import { DeviceConfirmImage } from 'src/components/suite';
-import { TrezorDevice } from 'src/types/suite';
+import { CerberusDevice } from 'src/types/suite';
 import { DevicePromptModal, DevicePromptModalProps } from './DevicePromptModal';
 
 const StyledDevicePromptModal = styled(DevicePromptModal)`
@@ -21,7 +21,7 @@ const StyledH1 = styled(H2)`
 `;
 
 interface ConfirmActionProps extends DevicePromptModalProps {
-    device: TrezorDevice;
+    device: CerberusDevice;
 }
 
 export const ConfirmActionModal = ({ device, ...rest }: ConfirmActionProps) => (

@@ -6,7 +6,7 @@ import { FiatCurrencyCode } from '@suite-common/suite-config';
 import { NetworkSymbol, getNetworkType } from '@suite-common/wallet-config';
 import { formatNetworkAmount } from '@suite-common/wallet-utils';
 import { AccountBalanceHistory as AccountMovementHistory } from '@cerberus/blockchain-link';
-import TrezorConnect from '@cerberus/connect';
+import CerberusConnect from '@cerberus/connect';
 import { getFiatRatesForTimestamps } from '@suite-common/fiat-services';
 import {
     AccountBalanceHistory,
@@ -57,7 +57,7 @@ export const getLatestAccountBalance = async ({
 }) => {
     const networkType = getNetworkType(coin);
 
-    const accountInfo = await TrezorConnect.getAccountInfo({
+    const accountInfo = await CerberusConnect.getAccountInfo({
         coin,
         descriptor,
         suppressBackupWarning: true,
@@ -103,7 +103,7 @@ export const getAccountBalanceHistory = async ({
                 descriptor,
             });
         }
-        const connectBalanceHistory = await TrezorConnect.blockchainGetAccountBalanceHistory({
+        const connectBalanceHistory = await CerberusConnect.blockchainGetAccountBalanceHistory({
             coin,
             descriptor,
             to: endTimeFrameTimestamp,

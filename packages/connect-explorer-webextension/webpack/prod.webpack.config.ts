@@ -118,15 +118,15 @@ const config: webpack.Configuration = {
         new CopyPlugin({
             patterns: [
                 {
-                    from: path.join(CONNECT_WEB_EXTENSION_PATH, 'trezor-content-script.js'),
+                    from: path.join(CONNECT_WEB_EXTENSION_PATH, 'cerberus-content-script.js'),
                     to: `${DIST}/vendor`,
                 },
                 {
-                    from: path.join(CONNECT_WEB_EXTENSION_PATH, 'trezor-usb-permissions.js'),
+                    from: path.join(CONNECT_WEB_EXTENSION_PATH, 'cerberus-usb-permissions.js'),
                     to: `${DIST}/vendor`,
                 },
                 {
-                    from: path.join(CONNECT_WEB_EXTENSION_PATH, 'trezor-usb-permissions.html'),
+                    from: path.join(CONNECT_WEB_EXTENSION_PATH, 'cerberus-usb-permissions.html'),
                     to: `${DIST}`,
                 },
             ],

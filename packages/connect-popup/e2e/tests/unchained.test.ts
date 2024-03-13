@@ -1,16 +1,16 @@
 /* eslint no-await-in-loop: 0 */
 
 import { test, expect, Page } from '@playwright/test';
-import { TrezorUserEnvLink } from '@cerberus/trezor-user-env-link';
+import { CerberusUserEnvLink } from '@cerberus/cerberus-user-env-link';
 
 const connectUrl = process.env.URL
     ? process.env.URL.replace('connect-explorer', 'connect')
     : 'https://connect.cerberus.uraanai.com/9/';
 
-const url = `https://unchained-capital.github.io/caravan?trezor-connect-src=${connectUrl}`;
+const url = `https://unchained-capital.github.io/caravan?cerberus-connect-src=${connectUrl}`;
 
 test.beforeAll(async () => {
-    await TrezorUserEnvLink.connect();
+    await CerberusUserEnvLink.connect();
 });
 
 const handleAnalyticsConfirm = async (popup: Page) => {
@@ -94,18 +94,18 @@ const signTransaction = async (page: Page, iteration: number) => {
         timeout: 40000,
         strict: false,
     });
-    let confirmOnTrezorScreenStilVisible = true;
-    while (confirmOnTrezorScreenStilVisible) {
+    let confirmOnCerberusScreenStilVisible = true;
+    while (confirmOnCerberusScreenStilVisible) {
         try {
             await popup.waitForSelector('//p[contains(., "Check recipient")]', {
                 state: 'visible',
                 timeout: 501,
                 strict: false,
             });
-            await TrezorUserEnvLink.send({ type: 'emulator-press-yes' });
+            await CerberusUserEnvLink.send({ type: 'emulator-press-yes' });
             await popup.waitForTimeout(501);
         } catch (err) {
-            confirmOnTrezorScreenStilVisible = false;
+            confirmOnCerberusScreenStilVisible = false;
         }
     }
 
@@ -114,17 +114,17 @@ const signTransaction = async (page: Page, iteration: number) => {
         timeout: 501,
         strict: false,
     });
-    await TrezorUserEnvLink.send({ type: 'emulator-press-yes' });
+    await CerberusUserEnvLink.send({ type: 'emulator-press-yes' });
     await assertSuccess(page);
 };
 
 test.beforeEach(async () => {
-    await TrezorUserEnvLink.api.stopBridge();
-    await TrezorUserEnvLink.api.stopEmu();
-    await TrezorUserEnvLink.api.startEmu({
+    await CerberusUserEnvLink.api.stopBridge();
+    await CerberusUserEnvLink.api.stopEmu();
+    await CerberusUserEnvLink.api.startEmu({
         wipe: true,
     });
-    await TrezorUserEnvLink.api.setupEmu({
+    await CerberusUserEnvLink.api.setupEmu({
         mnemonic:
             'merge alley lucky axis penalty manage latin gasp virus captain wheel deal chase fragile chapter boss zero dirt stadium tooth physical valve kid plunge',
         pin: '',
@@ -132,7 +132,7 @@ test.beforeEach(async () => {
         label: 'My Trevor',
         needs_backup: false,
     });
-    await TrezorUserEnvLink.api.startBridge();
+    await CerberusUserEnvLink.api.startBridge();
 });
 
 /**
@@ -154,8 +154,8 @@ test('Verify unchained test suite', async ({ browser }) => {
     await page.goto(url);
     await page.getByRole('link', { name: 'tested' }).click();
     await page.locator(keystoreInput).click();
-    // select trezor
-    await page.locator('[data-value="trezor"]').click();
+    // select cerberus
+    await page.locator('[data-value="cerberus"]').click();
     // detect the model version
     await page.locator('button', { hasText: 'Detect' }).click();
     await expect(page.locator('input[name="version"]')).not.toHaveText('Version');

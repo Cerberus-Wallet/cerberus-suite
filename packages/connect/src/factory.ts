@@ -1,20 +1,20 @@
 import { UI } from './events';
 import type { EventEmitter } from 'events';
-import type { TrezorConnect } from './types';
+import type { CerberusConnect } from './types';
 import type { CallMethod } from './events/call';
 
 interface Dependencies {
     call: CallMethod;
     eventEmitter: EventEmitter;
-    manifest: TrezorConnect['manifest'];
-    init: TrezorConnect['init'];
-    requestLogin: TrezorConnect['requestLogin'];
-    uiResponse: TrezorConnect['uiResponse'];
-    renderWebUSBButton: TrezorConnect['renderWebUSBButton'];
-    disableWebUSB: TrezorConnect['disableWebUSB'];
-    requestWebUSBDevice: TrezorConnect['requestWebUSBDevice'];
-    cancel: TrezorConnect['cancel'];
-    dispose: TrezorConnect['dispose'];
+    manifest: CerberusConnect['manifest'];
+    init: CerberusConnect['init'];
+    requestLogin: CerberusConnect['requestLogin'];
+    uiResponse: CerberusConnect['uiResponse'];
+    renderWebUSBButton: CerberusConnect['renderWebUSBButton'];
+    disableWebUSB: CerberusConnect['disableWebUSB'];
+    requestWebUSBDevice: CerberusConnect['requestWebUSBDevice'];
+    cancel: CerberusConnect['cancel'];
+    dispose: CerberusConnect['dispose'];
 }
 
 export const factory = ({
@@ -29,8 +29,8 @@ export const factory = ({
     requestWebUSBDevice,
     cancel,
     dispose,
-}: Dependencies): TrezorConnect => {
-    const api: TrezorConnect = {
+}: Dependencies): CerberusConnect => {
+    const api: CerberusConnect = {
         manifest,
         init,
         getSettings: () => call({ method: 'getSettings' }),

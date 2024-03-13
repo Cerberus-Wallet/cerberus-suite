@@ -41,8 +41,8 @@ async function getValidationCheckRuns({ pagesToFetch }: { pagesToFetch: number }
         const response = await octokit.request(
             'GET /repos/{owner}/{repo}/actions/workflows/{workflow_id}/runs',
             {
-                owner: 'trezor',
-                repo: 'trezor-suite',
+                owner: 'cerberus',
+                repo: 'cerberus-suite',
                 headers: {
                     'X-GitHub-Api-Version': '2022-11-28',
                 },

@@ -1,6 +1,6 @@
 import { test as testPlaywright, ElectronApplication, Page } from '@playwright/test';
 
-import { TrezorUserEnvLink } from '@cerberus/trezor-user-env-link/src';
+import { CerberusUserEnvLink } from '@cerberus/cerberus-user-env-link/src';
 
 import { launchSuite, rmDirRecursive } from '../../support/common';
 import { onDashboardPage } from '../../support/pageActions/dashboardActions';
@@ -10,9 +10,9 @@ let window: Page;
 let localDataDir: string;
 
 testPlaywright.beforeAll(async () => {
-    await TrezorUserEnvLink.api.trezorUserEnvConnect();
-    await TrezorUserEnvLink.api.startEmu({ wipe: true });
-    await TrezorUserEnvLink.api.setupEmu({
+    await CerberusUserEnvLink.api.cerberusUserEnvConnect();
+    await CerberusUserEnvLink.api.startEmu({ wipe: true });
+    await CerberusUserEnvLink.api.setupEmu({
         needs_backup: true,
         mnemonic: 'all all all all all all all all all all all all',
     });

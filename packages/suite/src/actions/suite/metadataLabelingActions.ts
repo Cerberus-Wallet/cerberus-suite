@@ -1,10 +1,10 @@
-import TrezorConnect from '@cerberus/connect';
+import CerberusConnect from '@cerberus/connect';
 import { cloneObject } from '@cerberus/utils';
 
 import { selectDevices, selectDevice, selectDeviceByState } from '@suite-common/wallet-core';
 
 import { METADATA, METADATA_LABELING } from 'src/actions/suite/constants';
-import { Dispatch, GetState, TrezorDevice } from 'src/types/suite';
+import { Dispatch, GetState, CerberusDevice } from 'src/types/suite';
 import {
     MetadataProvider,
     MetadataAddPayload,
@@ -136,7 +136,7 @@ export const setAccountMetadataKey =
  * Fill any record in reducer that may have metadata with metadata keys (not values).
  */
 const syncMetadataKeys =
-    (device: TrezorDevice, encryptionVersion = METADATA_LABELING.ENCRYPTION_VERSION) =>
+    (device: CerberusDevice, encryptionVersion = METADATA_LABELING.ENCRYPTION_VERSION) =>
     (dispatch: Dispatch, getState: GetState) => {
         if (!device.metadata[METADATA_LABELING.ENCRYPTION_VERSION]) {
             return;
@@ -435,11 +435,11 @@ export const addAccountMetadata =
  * Generate device master-key
  * */
 export const setDeviceMetadataKey =
-    (device: TrezorDevice, encryptionVersion = METADATA_LABELING.ENCRYPTION_VERSION) =>
+    (device: CerberusDevice, encryptionVersion = METADATA_LABELING.ENCRYPTION_VERSION) =>
     async (dispatch: Dispatch, getState: GetState) => {
         if (!device.state || !device.connected) return;
 
-        const result = await TrezorConnect.cipherKeyValue({
+        const result = await CerberusConnect.cipherKeyValue({
             device: {
                 path: device.path,
                 state: device.state,

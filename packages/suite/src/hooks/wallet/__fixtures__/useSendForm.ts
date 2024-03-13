@@ -703,7 +703,7 @@ export const setMax = [
             composeTransactionCalls: 1,
             composeTransactionParams: {
                 account: {
-                    // only utxos with enough anonymity are used in TrezorConnect.composeTransaction
+                    // only utxos with enough anonymity are used in CerberusConnect.composeTransaction
                     // see sendFormBitcoinActions
                     utxo: [UTXO.BB, UTXO.DD],
                 },

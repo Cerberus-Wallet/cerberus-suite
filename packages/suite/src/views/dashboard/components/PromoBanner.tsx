@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 import { SUITE_MOBILE_APP_STORE, SUITE_MOBILE_PLAY_STORE, SUITE_URL } from '@cerberus/urls';
 import { EventType, analytics } from '@cerberus/suite-analytics';
 import { Button, Icon, Image, Tooltip, variables } from '@cerberus/components';
-import { Translation, QrCode, TrezorLink } from 'src/components/suite';
+import { Translation, QrCode, CerberusLink } from 'src/components/suite';
 import { isWeb } from '@cerberus/env-utils';
 import { useLayoutSize } from 'src/hooks/suite/useLayoutSize';
 import { HORIZONTAL_LAYOUT_PADDINGS } from 'src/constants/suite/layout';
@@ -67,7 +67,7 @@ const OSIcons = styled.div`
     opacity: 0.7;
 `;
 
-const StyledLink = styled(TrezorLink)`
+const StyledLink = styled(CerberusLink)`
     margin-left: auto;
 `;
 
@@ -164,7 +164,7 @@ const StoreBadge = ({
             onShow={() => setShowQr(type)}
             onHide={() => setShowQr(undefined)}
         >
-            <TrezorLink
+            <CerberusLink
                 href={url}
                 variant="nostyle"
                 onClick={() =>
@@ -177,7 +177,7 @@ const StoreBadge = ({
                 }
             >
                 <Badge image={`${image}_BADGE`} height={35} isHighlighted={showQR === type} />
-            </TrezorLink>
+            </CerberusLink>
         </StyledTooltip>
     );
 };

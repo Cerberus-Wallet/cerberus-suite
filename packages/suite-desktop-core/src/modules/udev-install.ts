@@ -6,7 +6,7 @@ import { app, ipcMain } from '../typed-electron';
 
 import type { Module } from './index';
 
-const FILE_NAME = '51-trezor.rules';
+const FILE_NAME = '51-cerberus.rules';
 
 const fileExists = async (filePath: string) => {
     try {

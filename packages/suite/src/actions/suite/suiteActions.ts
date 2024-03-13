@@ -288,7 +288,7 @@ export const setDebugMode = (payload: Partial<DebugModeOptions>): SuiteAction =>
 });
 
 /**
- * Called from multiple places before and after TrezorConnect call
+ * Called from multiple places before and after CerberusConnect call
  * Prevent from mad clicking
  * Set `lock` field in suite reducer
  * @returns {SuiteAction}
@@ -299,7 +299,7 @@ export const lockUI = (payload: boolean): SuiteAction => ({
 });
 
 /**
- * Prevent TrezorConnect multiple calls
+ * Prevent CerberusConnect multiple calls
  * Called before and after specific process, like onboarding
  * Set `lock` field in suite reducer
  * @returns {SuiteAction}

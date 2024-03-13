@@ -54,7 +54,7 @@ export default class CardanoGetAddress extends AbstractMethod<'cardanoGetAddress
                     typeof batch.derivationType !== 'undefined'
                         ? batch.derivationType
                         : PROTO.CardanoDerivationType.ICARUS_CERBERUS,
-                show_display: typeof batch.showOnTrezor === 'boolean' ? batch.showOnTrezor : true,
+                show_display: typeof batch.showOnCerberus === 'boolean' ? batch.showOnCerberus : true,
                 chunkify: typeof batch.chunkify === 'boolean' ? batch.chunkify : false,
             };
         });

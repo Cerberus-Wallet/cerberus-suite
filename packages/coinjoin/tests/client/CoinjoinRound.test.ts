@@ -1,4 +1,4 @@
-import * as trezorUtils from '@cerberus/utils';
+import * as cerberusUtils from '@cerberus/utils';
 
 import { createServer } from '../mocks/server';
 import { DEFAULT_ROUND, createCoinjoinRound } from '../fixtures/round.fixture';
@@ -188,7 +188,7 @@ describe(`CoinjoinRound`, () => {
 
     it('onPhaseChange lock cool off resolved', async () => {
         const delayMock = jest
-            .spyOn(trezorUtils, 'getRandomNumberInRange')
+            .spyOn(cerberusUtils, 'getRandomNumberInRange')
             .mockImplementation(() => 800);
 
         const constantsMock = jest
@@ -396,7 +396,7 @@ describe(`CoinjoinRound`, () => {
 
     it('unregisterAccount when round is locked', async () => {
         const delayMock = jest
-            .spyOn(trezorUtils, 'getRandomNumberInRange')
+            .spyOn(cerberusUtils, 'getRandomNumberInRange')
             .mockImplementation(() => 800);
 
         const constantsMock = jest

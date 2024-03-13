@@ -61,7 +61,7 @@ export const SuiteBanners = () => {
         banner = <NoBackup />;
         priority = 70;
     } else if (device?.connected && device?.features?.safety_checks === 'PromptAlways') {
-        // PromptAlways could only be set via trezorctl. Warn user unconditionally.
+        // PromptAlways could only be set via cerberusctl. Warn user unconditionally.
         banner = <SafetyChecksBanner />;
         priority = 50;
     } else if (

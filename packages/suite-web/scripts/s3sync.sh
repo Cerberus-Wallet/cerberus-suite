@@ -22,7 +22,7 @@ SOURCE=../build/
 
 # Set destination
 if [ "x$1" == "xstaging-wallet" ]; then
-    BUCKET=stage.mytrezor.com
+    BUCKET=stage.mycerberus.com
     DISTRIBUTION_ID=E24M0QWO692FQL
     DESTDIR=/wallet/web
 elif [ "x$1" == "xstaging-suite" ]; then

@@ -8,7 +8,7 @@
         "suite-build"
     ],
     "license": "SEE LICENSE IN LICENSE.md",
-    "description": "trezor suite build",
+    "description": "cerberus suite build",
     "scripts": {
         "base": "TS_NODE_PROJECT=\"tsconfig.json\" webpack --config ./webpack.config.ts",
         "web": "PROJECT=web yarn run base",

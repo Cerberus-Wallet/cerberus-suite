@@ -2,7 +2,7 @@
 
 import * as protobuf from 'protobufjs/light';
 
-import type { MessageFromTrezor } from './types';
+import type { MessageFromCerberus } from './types';
 
 const primitiveTypes = [
     'bool',
@@ -58,7 +58,7 @@ export const createMessageFromType = (messages: protobuf.Root, typeId: number) =
     const messageName = MessageType.valuesById[typeId].replace(
         'MessageType_',
         '',
-    ) as MessageFromTrezor['type'];
+    ) as MessageFromCerberus['type'];
 
     const Message = messages.lookupType(messageName);
 

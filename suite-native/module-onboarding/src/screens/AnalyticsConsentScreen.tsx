@@ -136,7 +136,7 @@ export const AnalyticsConsentScreen = () => {
                 justifyContent="space-between"
                 style={applyStyle(cardStyle)}
             >
-                <Icon size="extraLarge" name="trezor" color="iconDefault" />
+                <Icon size="extraLarge" name="cerberus" color="iconDefault" />
                 <Text variant="titleMedium" style={applyStyle(titleStyle)}>
                     <Translation id="moduleOnboarding.analyticsConsentScreen.title" />
                 </Text>
@@ -191,7 +191,7 @@ export const AnalyticsConsentScreen = () => {
                             values={{
                                 securityLink: chunks => (
                                     <Link
-                                        href="https://data.trezorcheck.io/legal/privacy-policy.html"
+                                        href="https://data.trezer.io/legal/privacy-policy.html"
                                         label={chunks}
                                     />
                                 ),

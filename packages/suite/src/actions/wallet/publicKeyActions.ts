@@ -1,6 +1,6 @@
 import { UserContextPayload } from '@suite-common/suite-types';
 import { notificationsActions } from '@suite-common/toast-notifications';
-import TrezorConnect, { Success, Unsuccessful } from '@cerberus/connect';
+import CerberusConnect, { Success, Unsuccessful } from '@cerberus/connect';
 import { selectDevice } from '@suite-common/wallet-core';
 import { getDerivationType } from '@suite-common/wallet-utils';
 
@@ -33,7 +33,7 @@ export const showXpub = () => async (dispatch: Dispatch, getState: GetState) => 
         device,
         path: account.path,
         useEmptyPassphrase: device.useEmptyPassphrase,
-        showOnTrezor: true,
+        showOnCerberus: true,
         derivationType: getDerivationType(account.accountType),
     };
 
@@ -41,13 +41,13 @@ export const showXpub = () => async (dispatch: Dispatch, getState: GetState) => 
 
     switch (account.networkType) {
         case 'bitcoin':
-            response = await TrezorConnect.getPublicKey(params);
+            response = await CerberusConnect.getPublicKey(params);
             break;
         case 'cardano':
-            response = await TrezorConnect.cardanoGetPublicKey(params);
+            response = await CerberusConnect.cardanoGetPublicKey(params);
             break;
         case 'solana':
-            response = await TrezorConnect.solanaGetPublicKey(params);
+            response = await CerberusConnect.solanaGetPublicKey(params);
             break;
         default:
             response = {

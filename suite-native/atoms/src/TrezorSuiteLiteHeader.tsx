@@ -3,13 +3,13 @@ import { Translation } from '@suite-native/intl';
 
 import { Text } from './Text';
 
-type TrezorSuiteLiteHeaderProps = {
+type CerberusSuiteLiteHeaderProps = {
     textVariant?: TypographyStyle;
 };
 
-export const TrezorSuiteLiteHeader = ({
+export const CerberusSuiteLiteHeader = ({
     textVariant = 'titleSmall',
-}: TrezorSuiteLiteHeaderProps) => (
+}: CerberusSuiteLiteHeaderProps) => (
     <Text variant={textVariant} color="textSecondaryHighlight" textAlign="center">
         <Translation
             id="generic.header"

@@ -63,7 +63,7 @@ class InvityAPI {
     unknownCountry = 'unknown';
 
     servers = {
-        production: 'https://exchange.trezorcheck.io',
+        production: 'https://exchange.trezer.io',
         staging: 'https://staging-exchange.invity.io',
         dev: 'https://dev-exchange.invity.io',
         localhost: 'http://localhost:3330',
@@ -104,10 +104,10 @@ class InvityAPI {
     private P2P_TRADE = '/api/p2p/trade';
 
     private SAVINGS_LIST = '/api/savings/list';
-    private SAVINGS_INIT = '/api/savings/trezor/init';
-    private SAVINGS_TRADE = '/api/savings/trezor/trade';
+    private SAVINGS_INIT = '/api/savings/cerberus/init';
+    private SAVINGS_TRADE = '/api/savings/cerberus/trade';
     private SAVINGS_WATCH_ITEM = '/api/savings/watch-item';
-    private SAVINGS_WATCH_KYC = '/api/savings/trezor/watch-kyc';
+    private SAVINGS_WATCH_KYC = '/api/savings/cerberus/watch-kyc';
 
     private static accountDescriptor: string;
     private static apiKey: string;

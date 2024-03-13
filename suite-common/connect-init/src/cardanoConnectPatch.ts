@@ -1,6 +1,6 @@
-import TrezorConnect from '@cerberus/connect';
+import CerberusConnect from '@cerberus/connect';
 
-type ConnectKey = keyof typeof TrezorConnect;
+type ConnectKey = keyof typeof CerberusConnect;
 
 // List of methods that doesn't work with additional `useCardanoDerivation` param
 // (eg. because they don't accept options object as a param)
@@ -36,13 +36,13 @@ export const cardanoConnectPatch = (getEnabledNetworks: () => string[]) => {
     // Pass additional parameter `useCardanoDerivation` to Cerberus Connect methods
     // in order to enable cardano derivation on a device
     // https://github.com/Cerberus-Wallet/cerberus-firmware/blob/main/core/src/apps/cardano/README.md#seed-derivation-schemes
-    Object.keys(TrezorConnect)
+    Object.keys(CerberusConnect)
         .filter(k => !blacklist.includes(k as ConnectKey))
         .forEach(key => {
             // typescript complains about params and return type, need to be "any"
-            const original: any = TrezorConnect[key as ConnectKey];
+            const original: any = CerberusConnect[key as ConnectKey];
             if (!original) return;
-            (TrezorConnect[key as ConnectKey] as any) = async (params: any) => {
+            (CerberusConnect[key as ConnectKey] as any) = async (params: any) => {
                 const enabledNetworks = getEnabledNetworks();
                 const cardanoEnabled = !!enabledNetworks.find(a => a === 'ada' || a === 'tada');
                 const result = await original({

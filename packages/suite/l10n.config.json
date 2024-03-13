@@ -3,7 +3,7 @@
     "extractedMessagesFilePattern": "master.json",
     "localesOutputDir": "../suite-data/files/translations/",
     "project": {
-        "identifier": "trezor-suite",
+        "identifier": "cerberus-suite",
         "filename": "master",
         "apiKeyEnv": "CROWDIN_API_KEY",
         "loginEnv": "CROWDIN_LOGIN"

@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { getCheckBackupUrl } from '@suite-common/suite-utils';
 import { Button, H2, Paragraph, Image } from '@cerberus/components';
 import { pickByDeviceModel } from '@cerberus/device-utils';
-import TrezorConnect, { DeviceModelInternal } from '@cerberus/connect';
+import CerberusConnect, { DeviceModelInternal } from '@cerberus/connect';
 
 import { SelectWordCount, SelectRecoveryType } from 'src/components/recovery';
 import { Loading, Translation, CheckItem, Modal } from 'src/components/suite';
@@ -264,7 +264,7 @@ export const Recovery = ({ onCancel }: ForegroundAppProps) => {
             isCancelable
             onCancel={() => {
                 if (['in-progress', 'waiting-for-confirmation'].includes(recovery.status)) {
-                    TrezorConnect.cancel(intl.formatMessage(messages.TR_CANCELLED));
+                    CerberusConnect.cancel(intl.formatMessage(messages.TR_CANCELLED));
                 } else {
                     onCancel();
                 }

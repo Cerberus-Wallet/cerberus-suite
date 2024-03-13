@@ -5,13 +5,13 @@ import { analytics } from '@cerberus/suite-analytics';
 import { DOCS_ANALYTICS_URL, DATA_TOS_URL } from '@cerberus/urls';
 import { selectIsAnalyticsConfirmed } from '@suite-common/analytics';
 import { rerun } from 'src/actions/recovery/recoveryActions';
-import { PrerequisitesGuide, TrezorLink } from 'src/components/suite';
+import { PrerequisitesGuide, CerberusLink } from 'src/components/suite';
 import { useDispatch, useSelector } from 'src/hooks/suite';
 import { selectPrerequisite } from 'src/reducers/suite/suiteReducer';
 import { SecurityCheck } from '../onboarding/steps/SecurityCheck/SecurityCheck';
 import { typography } from '@cerberus/theme';
 
-const StyledTrezorLink = styled(TrezorLink)`
+const StyledCerberusLink = styled(CerberusLink)`
     color: ${({ theme }) => theme.TYPE_LIGHT_GREY};
     ${typography.hint}
 `;
@@ -40,14 +40,14 @@ export const StartContent = () => {
             <DataAnalytics
                 onConfirm={onConfirm}
                 analyticsLink={(chunks: ReactNode[]) => (
-                    <StyledTrezorLink variant="underline" href={DOCS_ANALYTICS_URL}>
+                    <StyledCerberusLink variant="underline" href={DOCS_ANALYTICS_URL}>
                         {chunks}
-                    </StyledTrezorLink>
+                    </StyledCerberusLink>
                 )}
                 tosLink={(chunks: ReactNode[]) => (
-                    <StyledTrezorLink variant="underline" href={DATA_TOS_URL}>
+                    <StyledCerberusLink variant="underline" href={DATA_TOS_URL}>
                         {chunks}
-                    </StyledTrezorLink>
+                    </StyledCerberusLink>
                 )}
             />
         );

@@ -85,7 +85,7 @@ export default class EthereumSignTransaction extends AbstractMethod<
         // TODO: this should be removed after next major/minor version (or after few months)
         // TODO: add "required: true" to chainId validation
         if (typeof tx.chainId !== 'number') {
-            console.warn('TrezorConnect.ethereumSignTransaction: Missing chainId parameter!');
+            console.warn('CerberusConnect.ethereumSignTransaction: Missing chainId parameter!');
         }
     }
 

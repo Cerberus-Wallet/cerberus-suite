@@ -7,18 +7,18 @@ import { addMatchImageSnapshotPlugin } from 'cypress-image-snapshot/plugin';
 import { BridgeTransport } from '@cerberus/transport';
 import * as messages from '@cerberus/protobuf/src/messages';
 
-import { TrezorUserEnvLink } from '@cerberus/trezor-user-env-link';
+import { CerberusUserEnvLink } from '@cerberus/cerberus-user-env-link';
 import * as metadataUtils from '@cerberus/suite/src/utils/suite/metadata';
 
 import {
-    TrezorBridgeMock,
+    CerberusBridgeMock,
     DropboxMock,
     GoogleMock,
     BackendWebsocketServerMock,
 } from '@cerberus/e2e-utils';
 
 const mocked = {
-    bridge: new TrezorBridgeMock(),
+    bridge: new CerberusBridgeMock(),
     dropbox: new DropboxMock(),
     google: new GoogleMock(),
 };
@@ -235,11 +235,11 @@ export default defineConfig({
                 get({ key }: { key: string }): any {
                     return store[key];
                 },
-                ...TrezorUserEnvLink.api,
-                async setupEmu(opts: Parameters<typeof TrezorUserEnvLink.api.setupEmu>[0]) {
-                    await TrezorUserEnvLink.api.setupEmu(opts);
+                ...CerberusUserEnvLink.api,
+                async setupEmu(opts: Parameters<typeof CerberusUserEnvLink.api.setupEmu>[0]) {
+                    await CerberusUserEnvLink.api.setupEmu(opts);
 
-                    return TrezorUserEnvLink.api.startBridge();
+                    return CerberusUserEnvLink.api.startBridge();
                 },
             });
         },

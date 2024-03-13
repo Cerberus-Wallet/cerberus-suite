@@ -7,9 +7,9 @@ import { suiteNativeVersion } from './package.json';
 type BuildType = 'debug' | 'develop' | 'production';
 
 const bundleIdentifiers = {
-    debug: 'io.trezor.suite.debug',
-    develop: 'io.trezor.suite.develop',
-    production: 'io.trezor.suite',
+    debug: 'io.cerberus.suite.debug',
+    develop: 'io.cerberus.suite.develop',
+    production: 'io.cerberus.suite',
 } as const satisfies Record<BuildType, string>;
 
 const appIconsIos = {
@@ -59,7 +59,7 @@ export default ({ config }: ConfigContext): ExpoConfig => {
         ...config,
         name,
         slug,
-        owner: 'trezorcompany',
+        owner: 'cerberuscompany',
         version: suiteNativeVersion,
         splash: {
             image: './assets/splash_icon.png',
@@ -95,7 +95,7 @@ export default ({ config }: ConfigContext): ExpoConfig => {
                         localhost: {
                             NSExceptionAllowsInsecureHTTPLoads: true,
                         },
-                        'data.trezorcheck.io': {
+                        'data.trezer.io': {
                             NSExceptionAllowsInsecureHTTPLoads: true,
                             NSIncludesSubdomains: true,
                         },

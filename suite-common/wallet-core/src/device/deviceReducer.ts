@@ -7,7 +7,7 @@ import { getFirmwareVersion, getFirmwareVersionArray } from '@cerberus/device-ut
 import { Network, networks } from '@suite-common/wallet-config';
 import { versionUtils } from '@cerberus/utils';
 import { createReducerWithExtraDeps } from '@suite-common/redux-utils';
-import { TrezorDevice, AcquiredDevice, ButtonRequest } from '@suite-common/suite-types';
+import { CerberusDevice, AcquiredDevice, ButtonRequest } from '@suite-common/suite-types';
 import {
     deviceAuthenticityActions,
     StoredAuthenticateDeviceResult,
@@ -17,8 +17,8 @@ import { deviceActions } from './deviceActions';
 import { PORTFOLIO_TRACKER_DEVICE_ID, PORTFOLIO_TRACKER_DEVICE_STATE } from './deviceConstants';
 
 export type State = {
-    devices: TrezorDevice[];
-    selectedDevice?: TrezorDevice;
+    devices: CerberusDevice[];
+    selectedDevice?: CerberusDevice;
     deviceAuthenticity?: Record<string, StoredAuthenticateDeviceResult>;
 };
 
@@ -26,8 +26,8 @@ const initialState: State = { devices: [], selectedDevice: undefined };
 
 export type DeviceRootState = {
     device: {
-        devices: TrezorDevice[];
-        selectedDevice?: TrezorDevice;
+        devices: CerberusDevice[];
+        selectedDevice?: CerberusDevice;
         deviceAuthenticity?: State['deviceAuthenticity'];
     };
 };
@@ -45,9 +45,9 @@ export const isUnlocked = (features: Features): boolean =>
  * Local utility: set updated fields for device
  * @param {AcquiredDevice} device
  * @param {Partial<AcquiredDevice>} upcoming
- * @returns {TrezorDevice}
+ * @returns {CerberusDevice}
  */
-const merge = (device: AcquiredDevice, upcoming: Partial<AcquiredDevice>): TrezorDevice => ({
+const merge = (device: AcquiredDevice, upcoming: Partial<AcquiredDevice>): CerberusDevice => ({
     ...device,
     ...upcoming,
     id: upcoming.id ?? device.id,
@@ -105,7 +105,7 @@ const connectDevice = (draft: State, device: Device) => {
     );
     // get not affected devices
     // and exclude unacquired devices with current "device_id" (they will become acquired)
-    const otherDevices: TrezorDevice[] = draft.devices.filter(
+    const otherDevices: CerberusDevice[] = draft.devices.filter(
         d => affectedDevices.indexOf(d as AcquiredDevice) < 0 && unacquiredDevices.indexOf(d) < 0,
     );
 
@@ -115,7 +115,7 @@ const connectDevice = (draft: State, device: Device) => {
     otherDevices.forEach(d => draft.devices.push(d));
 
     // prepare new device
-    const newDevice: TrezorDevice = {
+    const newDevice: CerberusDevice = {
         ...device,
         useEmptyPassphrase: isUnlocked(device.features) && !features.passphrase_protection,
         remember: false,
@@ -162,13 +162,13 @@ const connectDevice = (draft: State, device: Device) => {
 /**
  * Action handler: DEVICE.CHANGED
  * @param {State} draft
- * @param {(Device | TrezorDevice)} device
+ * @param {(Device | CerberusDevice)} device
  * @param {Partial<AcquiredDevice>} [extended]
  * @returns
  */
 const changeDevice = (
     draft: State,
-    device: Device | TrezorDevice,
+    device: Device | CerberusDevice,
     extended?: Partial<AcquiredDevice>,
 ) => {
     // change only acquired devices
@@ -251,10 +251,10 @@ const disconnectDevice = (draft: State, device: Device) => {
 /**
  * Action handler: SUITE.SELECT_DEVICE
  * @param {State} draft
- * @param {TrezorDevice} [device]
+ * @param {CerberusDevice} [device]
  * @returns
  */
-const updateTimestamp = (draft: State, device?: TrezorDevice) => {
+const updateTimestamp = (draft: State, device?: CerberusDevice) => {
     // only acquired devices
     if (!device || !device.features) return;
     const index = deviceUtils.findInstanceIndex(draft.devices, device);
@@ -266,14 +266,14 @@ const updateTimestamp = (draft: State, device?: TrezorDevice) => {
 /**
  * Action handler: SUITE.RECEIVE_PASSPHRASE_MODE + SUITE.UPDATE_PASSPHRASE_MODE
  * @param {State} draft
- * @param {TrezorDevice} device
+ * @param {CerberusDevice} device
  * @param {boolean} hidden
  * @param {boolean} [alwaysOnDevice=false]
  * @returns
  */
 const changePassphraseMode = (
     draft: State,
-    device: TrezorDevice,
+    device: CerberusDevice,
     hidden: boolean,
     alwaysOnDevice = false,
 ) => {
@@ -299,11 +299,11 @@ const changePassphraseMode = (
 /**
  * Action handler: SUITE.AUTH_DEVICE
  * @param {State} draft
- * @param {TrezorDevice} device
+ * @param {CerberusDevice} device
  * @param {string} state
  * @returns
  */
-const authDevice = (draft: State, device: TrezorDevice, state: string) => {
+const authDevice = (draft: State, device: CerberusDevice, state: string) => {
     // only acquired devices
     if (!device || !device.features) return;
     const index = deviceUtils.findInstanceIndex(draft.devices, device);
@@ -316,10 +316,10 @@ const authDevice = (draft: State, device: TrezorDevice, state: string) => {
 /**
  * Action handler: SUITE.AUTH_FAILED
  * @param {State} draft
- * @param {TrezorDevice} device
+ * @param {CerberusDevice} device
  * @returns
  */
-const authFailed = (draft: State, device: TrezorDevice) => {
+const authFailed = (draft: State, device: CerberusDevice) => {
     // only acquired devices
     if (!device || !device.features) return;
     const index = deviceUtils.findInstanceIndex(draft.devices, device);
@@ -330,11 +330,11 @@ const authFailed = (draft: State, device: TrezorDevice) => {
 /**
  * Action handler: SUITE.RECEIVE_AUTH_CONFIRM
  * @param {State} draft
- * @param {TrezorDevice} device
+ * @param {CerberusDevice} device
  * @param {boolean} success
  * @returns
  */
-const authConfirm = (draft: State, device: TrezorDevice, success: boolean) => {
+const authConfirm = (draft: State, device: CerberusDevice, success: boolean) => {
     // only acquired devices
     if (!device || !device.features) return;
     const index = deviceUtils.findInstanceIndex(draft.devices, device);
@@ -347,16 +347,16 @@ const authConfirm = (draft: State, device: TrezorDevice, success: boolean) => {
 /**
  * Action handler: SUITE.CREATE_DEVICE_INSTANCE
  * @param {State} draft
- * @param {TrezorDevice} device
+ * @param {CerberusDevice} device
  * @returns
  */
-const createInstance = (draft: State, device: TrezorDevice) => {
+const createInstance = (draft: State, device: CerberusDevice) => {
     // only acquired devices
     if (!device || !device.features) return;
 
     const isPortfolioTrackerDevice = device.id === PORTFOLIO_TRACKER_DEVICE_ID;
 
-    const newDevice: TrezorDevice = {
+    const newDevice: CerberusDevice = {
         ...device,
         passphraseOnDevice: false,
         remember: false,
@@ -376,12 +376,12 @@ const createInstance = (draft: State, device: TrezorDevice) => {
  * Action handler: SUITE.REMEMBER_DEVICE
  * Set `remember` field for a single device instance
  * @param {State} draft
- * @param {TrezorDevice} device
+ * @param {CerberusDevice} device
  * @param {boolean} remember
  */
 const remember = (
     draft: State,
-    device: TrezorDevice,
+    device: CerberusDevice,
     shouldRemember: boolean,
     forceRemember?: true,
 ) => {
@@ -400,10 +400,10 @@ const remember = (
  * Action handler: SUITE.FORGET_DEVICE
  * Remove all device instances
  * @param {State} draft
- * @param {TrezorDevice} device
+ * @param {CerberusDevice} device
  * @returns
  */
-const forget = (draft: State, device: TrezorDevice) => {
+const forget = (draft: State, device: CerberusDevice) => {
     // only acquired devices
     if (!device || !device.features) return;
     const index = deviceUtils.findInstanceIndex(draft.devices, device);
@@ -425,14 +425,14 @@ const forget = (draft: State, device: TrezorDevice) => {
     }
 };
 
-const forgetAndDisconnect = (draft: State, device: TrezorDevice) => {
+const forgetAndDisconnect = (draft: State, device: CerberusDevice) => {
     forget(draft, device);
     disconnectDevice(draft, device);
 };
 
 const addButtonRequest = (
     draft: State,
-    device: TrezorDevice | undefined,
+    device: CerberusDevice | undefined,
     buttonRequest?: ButtonRequest,
 ) => {
     // only acquired devices
@@ -450,7 +450,7 @@ const addButtonRequest = (
 
 export const setDeviceAuthenticity = (
     draft: State,
-    device: TrezorDevice,
+    device: CerberusDevice,
     result?: StoredAuthenticateDeviceResult,
 ) => {
     if (!device.id) return;
@@ -659,7 +659,7 @@ export const selectDeviceSupportedNetworks = (state: DeviceRootState) => {
         .filter(Boolean) as Network['symbol'][]; // Filter out null values
 };
 
-export const selectDeviceById = (state: DeviceRootState, deviceId: TrezorDevice['id']) =>
+export const selectDeviceById = (state: DeviceRootState, deviceId: CerberusDevice['id']) =>
     state.device.devices.find(device => device.id === deviceId);
 
 export const selectDeviceAuthenticity = (state: DeviceRootState) => {
@@ -674,7 +674,7 @@ export const selectIsPortfolioTrackerDevice = (state: DeviceRootState) => {
     return device?.id === PORTFOLIO_TRACKER_DEVICE_ID;
 };
 
-export const selectDeviceLabelById = (state: DeviceRootState, id: TrezorDevice['id']) => {
+export const selectDeviceLabelById = (state: DeviceRootState, id: CerberusDevice['id']) => {
     const device = selectDeviceById(state, id);
 
     return device?.label ?? null;
@@ -682,7 +682,7 @@ export const selectDeviceLabelById = (state: DeviceRootState, id: TrezorDevice['
 
 export const selectDeviceNameById = (
     state: DeviceRootState,
-    id: TrezorDevice['id'],
+    id: CerberusDevice['id'],
 ): string | null => {
     const device = selectDeviceById(state, id);
 
@@ -701,7 +701,7 @@ export const selectDeviceId = (state: DeviceRootState) => {
     return selectedDevice?.id ?? null;
 };
 
-export const selectDeviceModelById = (state: DeviceRootState, id: TrezorDevice['id']) => {
+export const selectDeviceModelById = (state: DeviceRootState, id: CerberusDevice['id']) => {
     const device = selectDeviceById(state, id);
 
     return device?.features?.internal_model ?? null;

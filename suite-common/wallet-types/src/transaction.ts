@@ -61,7 +61,7 @@ export interface FeeInfo {
     maxFee: number;
     dustLimit?: number; // coin dust limit
     feeLimit?: number; // eth gas limit
-    levels: FeeLevel[]; // fee levels are predefined in @cerberus/connect > trezor-firmware/common
+    levels: FeeLevel[]; // fee levels are predefined in @cerberus/connect > cerberus-firmware/common
 }
 
 export type NetworksFees = Record<NetworkSymbol, FeeInfo>;

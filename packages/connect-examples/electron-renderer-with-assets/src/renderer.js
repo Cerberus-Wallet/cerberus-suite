@@ -1,4 +1,4 @@
-import TrezorConnect, {
+import CerberusConnect, {
     TRANSPORT_EVENT,
     UI,
     UI_EVENT,
@@ -21,10 +21,10 @@ const printLog = data => {
 // SETUP @cerberus/connect
 
 // Listen to TRANSPORT_EVENT
-TrezorConnect.on(TRANSPORT_EVENT, event => {
+CerberusConnect.on(TRANSPORT_EVENT, event => {
     printLog(event.type);
     if (event.type === TRANSPORT.ERROR) {
-        // trezor-bridge not installed
+        // cerberus-bridge not installed
         printLog('Transport is missing');
     }
     if (event.type === TRANSPORT.START) {
@@ -33,27 +33,27 @@ TrezorConnect.on(TRANSPORT_EVENT, event => {
 });
 
 // Listen to DEVICE_EVENT
-TrezorConnect.on(DEVICE_EVENT, event => {
+CerberusConnect.on(DEVICE_EVENT, event => {
     printLog(event.type);
 
     // not obvious event
     if (event.type === DEVICE.CONNECT_UNACQUIRED) {
         // connected device is unknown or busy
         // most common reasons is that either device is currently used somewhere else
-        // or app refreshed during call and trezor-bridge didn't managed to release the session
+        // or app refreshed during call and cerberus-bridge didn't managed to release the session
         // render "Acquire device" button and after click try to fetch device features using:
-        // TrezorConnect.getFeatures();
+        // CerberusConnect.getFeatures();
     }
 });
 
 // Listen to UI_EVENT
 // most common requests
-TrezorConnect.on(UI_EVENT, event => {
+CerberusConnect.on(UI_EVENT, event => {
     printLog(event);
 
     if (event.type === UI.REQUEST_PIN) {
         // example how to respond to pin request
-        TrezorConnect.uiResponse({ type: UI.RECEIVE_PIN, payload: '1234' });
+        CerberusConnect.uiResponse({ type: UI.RECEIVE_PIN, payload: '1234' });
     }
 
     if (event.type === UI.REQUEST_PASSPHRASE) {
@@ -61,13 +61,13 @@ TrezorConnect.on(UI_EVENT, event => {
             // device does support entering passphrase on device
             // let user choose where to enter
             // if he choose to do it on device respond with:
-            TrezorConnect.uiResponse({
+            CerberusConnect.uiResponse({
                 type: UI.RECEIVE_PASSPHRASE,
                 payload: { passphraseOnDevice: true, value: '' },
             });
         } else {
             // example how to respond to passphrase request from regular UI input (form)
-            TrezorConnect.uiResponse({
+            CerberusConnect.uiResponse({
                 type: UI.RECEIVE_PASSPHRASE,
                 payload: { value: 'type your passphrase here', save: true },
             });
@@ -78,7 +78,7 @@ TrezorConnect.on(UI_EVENT, event => {
         if (event.payload.devices.length > 0) {
             // more then one device connected
             // example how to respond to select device
-            TrezorConnect.uiResponse({
+            CerberusConnect.uiResponse({
                 type: UI.RECEIVE_DEVICE,
                 payload: event.payload.devices[0],
             });
@@ -92,18 +92,18 @@ TrezorConnect.on(UI_EVENT, event => {
     // warn user about it
     if (event.type === UI.REQUEST_CONFIRMATION) {
         // payload: true - user decides to continue anyway
-        TrezorConnect.uiResponse({ type: UI.RECEIVE_CONFIRMATION, payload: true });
+        CerberusConnect.uiResponse({ type: UI.RECEIVE_CONFIRMATION, payload: true });
     }
 });
 
-console.log('TrezorConnect', TrezorConnect);
-// Initialize TrezorConnect
-TrezorConnect.init({
-    connectSrc: 'trezor-connect-bundled/',
+console.log('CerberusConnect', CerberusConnect);
+// Initialize CerberusConnect
+CerberusConnect.init({
+    connectSrc: 'cerberus-connect-bundled/',
     popup: false, // render your own UI
     debug: false, // see what's going on inside connect
     // lazyLoad: true, // set to "false" (default) if you want to start communication with bridge on application start (and detect connected device right away)
-    // set it to "true", then @cerberus/connect will not be initialized until you call some TrezorConnect.method()
+    // set it to "true", then @cerberus/connect will not be initialized until you call some CerberusConnect.method()
     // this is useful when you don't know if you are dealing with Cerberus user
     manifest: {
         email: 'email@developer.com',
@@ -112,10 +112,10 @@ TrezorConnect.init({
     transports: ['BridgeTransport'],
 })
     .then(() => {
-        printLog('TrezorConnect is ready!');
+        printLog('CerberusConnect is ready!');
     })
     .catch(error => {
-        printLog('TrezorConnect init error', `TrezorConnect init error:${error}`);
+        printLog('CerberusConnect init error', `CerberusConnect init error:${error}`);
     });
 
 // click to get public key
@@ -123,7 +123,7 @@ const btn = document.getElementById('get-xpub');
 btn.onclick = () => {
     console.log('click');
     printLog('c');
-    TrezorConnect.getPublicKey({
+    CerberusConnect.getPublicKey({
         path: "m/49'/0'/0'",
         coin: 'btc',
     }).then(response => {

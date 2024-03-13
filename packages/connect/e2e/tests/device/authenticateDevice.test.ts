@@ -1,20 +1,20 @@
-import TrezorConnect from '../../../src';
+import CerberusConnect from '../../../src';
 
-const { getController, setup, initTrezorConnect } = global.Cerberus;
+const { getController, setup, initCerberusConnect } = global.Cerberus;
 
 const controller = getController();
 
-describe('TrezorConnect.authenticateDevice', () => {
+describe('CerberusConnect.authenticateDevice', () => {
     beforeAll(async () => {
         await setup(controller, {
             mnemonic: 'mnemonic_all',
         });
-        await initTrezorConnect(controller);
+        await initCerberusConnect(controller);
     });
 
     afterAll(async () => {
         controller.dispose();
-        await TrezorConnect.dispose();
+        await CerberusConnect.dispose();
     });
 
     // NOTE: emulator uses different provisioning keys than production FW (different than ./data/deviceAuthenticityConfig)
@@ -32,7 +32,7 @@ describe('TrezorConnect.authenticateDevice', () => {
     };
 
     it('validation successful', async () => {
-        const result = await TrezorConnect.authenticateDevice({
+        const result = await CerberusConnect.authenticateDevice({
             config,
         });
 
@@ -42,7 +42,7 @@ describe('TrezorConnect.authenticateDevice', () => {
     });
 
     it('validation unsuccessful (rootPubKey not found)', async () => {
-        const result = await TrezorConnect.authenticateDevice({
+        const result = await CerberusConnect.authenticateDevice({
             config: {
                 ...config,
                 T2B1: {
@@ -59,7 +59,7 @@ describe('TrezorConnect.authenticateDevice', () => {
     });
 
     it('sanity check unsuccessful (caPubkey not found)', async () => {
-        const result = await TrezorConnect.authenticateDevice({
+        const result = await CerberusConnect.authenticateDevice({
             config: {
                 ...config,
                 T2B1: {

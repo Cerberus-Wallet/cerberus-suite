@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import TrezorConnect from '@cerberus/connect';
+import CerberusConnect from '@cerberus/connect';
 import { Paragraph } from '@cerberus/components';
 import { HELP_CENTER_ADVANCED_RECOVERY_URL } from '@cerberus/urls';
 import {
     Translation,
     WordInputAdvanced,
-    TrezorLink,
+    CerberusLink,
     Modal,
     ModalProps,
 } from 'src/components/suite';
@@ -33,7 +33,7 @@ export const WordAdvancedModal = ({ count, ...rest }: WordAdvancedModalProps) =>
         <Modal
             heading={<Translation id="TR_FOLLOW_INSTRUCTIONS_ON_DEVICE" />}
             description={<Translation id="TR_ADVANCED_RECOVERY_TEXT" />}
-            onCancel={() => TrezorConnect.cancel(intl.formatMessage(messages.TR_CANCELLED))}
+            onCancel={() => CerberusConnect.cancel(intl.formatMessage(messages.TR_CANCELLED))}
             isCancelable
             totalProgressBarSteps={5}
             currentProgressBarStep={4}
@@ -44,9 +44,9 @@ export const WordAdvancedModal = ({ count, ...rest }: WordAdvancedModalProps) =>
                 <BottomText>
                     <Paragraph type="label">
                         <Translation id="TR_ADVANCED_RECOVERY_NOT_SURE" />{' '}
-                        <TrezorLink type="label" href={HELP_CENTER_ADVANCED_RECOVERY_URL}>
+                        <CerberusLink type="label" href={HELP_CENTER_ADVANCED_RECOVERY_URL}>
                             <Translation id="TR_LEARN_MORE" />
-                        </TrezorLink>
+                        </CerberusLink>
                     </Paragraph>
                 </BottomText>
             </ContentWrapper>

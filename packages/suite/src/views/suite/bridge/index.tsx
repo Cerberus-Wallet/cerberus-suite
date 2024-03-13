@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import { DATA_URL, HELP_CENTER_TOR_URL, GITHUB_BRIDGE_CHANGELOG_URL } from '@cerberus/urls';
-import { Translation, TrezorLink, Modal, Metadata } from 'src/components/suite';
+import { Translation, CerberusLink, Modal, Metadata } from 'src/components/suite';
 import { Button, Paragraph, Link, Select, Image, variables, Spinner } from '@cerberus/components';
 import { goto } from 'src/actions/suite/routerActions';
 import { isDesktop, isWeb } from '@cerberus/env-utils';
@@ -172,21 +172,21 @@ export const InstallBridge = () => {
                             data-test="@bridge/installers"
                         />
 
-                        <TrezorLink variant="nostyle" href={`${data.uri}${target.value}`}>
+                        <CerberusLink variant="nostyle" href={`${data.uri}${target.value}`}>
                             <DownloadBridgeButton data-test="@bridge/download-button">
                                 <Translation
                                     id="TR_DOWNLOAD_LATEST_BRIDGE"
                                     values={{ version: data.latestVersion }}
                                 />
                             </DownloadBridgeButton>
-                        </TrezorLink>
+                        </CerberusLink>
                     </Download>
                 )}
                 {isWeb() && isTorEnabled && (
                     <Paragraph>
-                        <TrezorLink href={HELP_CENTER_TOR_URL}>
+                        <CerberusLink href={HELP_CENTER_TOR_URL}>
                             <Translation id="TR_TOR_BRIDGE" />
-                        </TrezorLink>
+                        </CerberusLink>
                     </Paragraph>
                 )}
             </Content>
@@ -215,11 +215,11 @@ export const InstallBridge = () => {
                         </Col>
                         <Col justify="flex-end">
                             {data && target?.signature && (
-                                <TrezorLink variant="nostyle" href={data.uri + target.signature}>
+                                <CerberusLink variant="nostyle" href={data.uri + target.signature}>
                                     <StyledButton icon="SIGNATURE" variant="tertiary">
                                         <Translation id="TR_CHECK_PGP_SIGNATURE" />
                                     </StyledButton>
-                                </TrezorLink>
+                                </CerberusLink>
                             )}
                         </Col>
                     </>

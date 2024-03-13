@@ -1,2 +1,2 @@
-// Import TrezorConnect.
-importScripts('vendor/trezor-connect-webextension.js');
+// Import CerberusConnect.
+importScripts('vendor/cerberus-connect-webextension.js');

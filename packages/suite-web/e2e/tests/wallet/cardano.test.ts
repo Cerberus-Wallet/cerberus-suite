@@ -7,7 +7,7 @@ describe('Cardano', () => {
 
         cy.task('setupEmu', {
             // todo: setup emu with 24 words mnemonic so that we can test different cardano derivation and its 'auto-discovery; feature
-            // this is not possible at the moment, probably needs to be implemented in trezor-user-env
+            // this is not possible at the moment, probably needs to be implemented in cerberus-user-env
             // mnemonic: 'clot trim improve bag pigeon party wave mechanic beyond clean cake maze protect left assist carry guitar bridge nest faith critic excuse tooth dutch',
         });
         cy.task('startBridge');

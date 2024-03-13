@@ -36,7 +36,7 @@ import {
 } from 'src/utils/suite/sentry';
 import { AppState, Action, Dispatch } from 'src/types/suite';
 
-const deviceContextName = 'trezor-device';
+const deviceContextName = 'cerberus-device';
 
 const breadcrumbActions = [
     SUITE.SET_LANGUAGE,

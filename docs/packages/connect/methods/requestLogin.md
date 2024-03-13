@@ -16,7 +16,7 @@ of
 [SLIP-0013: Authentication using deterministic hierarchy](https://github.com/satoshilabs/slips/blob/master/slip-0013.md).
 
 ```javascript
-const result = await TrezorConnect.requestLogin(params);
+const result = await CerberusConnect.requestLogin(params);
 ```
 
 ### Params
@@ -39,7 +39,7 @@ Common parameter `useEmptyPassphrase` - is always set to `true` and it will be i
 ###### Login using server-side async challenge
 
 ```javascript
-TrezorConnect.requestLogin({
+CerberusConnect.requestLogin({
     callback: function () {
         // here should be a request to server to fetch "challengeHidden" and "challengeVisual"
         return {
@@ -53,7 +53,7 @@ TrezorConnect.requestLogin({
 ###### Login without async challenge
 
 ```javascript
-TrezorConnect.requestLogin({
+CerberusConnect.requestLogin({
     challengeHidden: '0123456789abcdef',
     challengeVisual: 'Login to',
 });

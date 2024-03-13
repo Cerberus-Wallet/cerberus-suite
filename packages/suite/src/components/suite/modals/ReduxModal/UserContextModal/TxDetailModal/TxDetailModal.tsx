@@ -15,7 +15,7 @@ import {
     selectAllPendingTransactions,
     selectIsPhishingTransaction,
 } from '@suite-common/wallet-core';
-import { Translation, Modal, TrezorLink } from 'src/components/suite';
+import { Translation, Modal, CerberusLink } from 'src/components/suite';
 import { WalletAccountTransaction } from 'src/types/wallet';
 import { BasicTxDetails } from './BasicTxDetails';
 import { AdvancedTxDetails, TabID } from './AdvancedTxDetails/AdvancedTxDetails';
@@ -39,7 +39,7 @@ const PhishingBanner = styled.div`
     ${typography.hint};
 `;
 
-const HelpLink = styled(TrezorLink)`
+const HelpLink = styled(CerberusLink)`
     color: ${({ theme }) => theme.textDefault};
     ${typography.hint}
 `;

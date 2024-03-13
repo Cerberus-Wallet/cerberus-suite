@@ -4,7 +4,7 @@ import { useIntl } from 'react-intl';
 import styled from 'styled-components';
 
 import { variables, PassphraseTypeCard } from '@cerberus/components';
-import TrezorConnect from '@cerberus/connect';
+import CerberusConnect from '@cerberus/connect';
 import * as deviceUtils from '@suite-common/suite-utils';
 import {
     selectIsDiscoveryAuthConfirmationRequired,
@@ -14,7 +14,7 @@ import {
 
 import { useSelector, useDispatch } from 'src/hooks/suite';
 import { Translation, Modal } from 'src/components/suite';
-import type { TrezorDevice } from 'src/types/suite';
+import type { CerberusDevice } from 'src/types/suite';
 import { OpenGuideFromTooltip } from 'src/components/guide';
 import messages from 'src/support/messages';
 
@@ -49,7 +49,7 @@ const SmallModal = styled(Modal)`
 `;
 
 interface PassphraseModalProps {
-    device: TrezorDevice;
+    device: CerberusDevice;
 }
 
 export const PassphraseModal = ({ device }: PassphraseModalProps) => {
@@ -73,7 +73,7 @@ export const PassphraseModal = ({ device }: PassphraseModalProps) => {
 
     const intl = useIntl();
 
-    const onCancel = () => TrezorConnect.cancel(intl.formatMessage(messages.TR_CANCELLED));
+    const onCancel = () => CerberusConnect.cancel(intl.formatMessage(messages.TR_CANCELLED));
 
     const onSubmit = useCallback(
         (value: string, passphraseOnDevice?: boolean) => {
@@ -84,8 +84,8 @@ export const PassphraseModal = ({ device }: PassphraseModalProps) => {
     );
 
     const onRecreate = useCallback(() => {
-        // Cancel TrezorConnect request and pass error to suiteAction.authConfirm
-        TrezorConnect.cancel('auth-confirm-cancel');
+        // Cancel CerberusConnect request and pass error to suiteAction.authConfirm
+        CerberusConnect.cancel('auth-confirm-cancel');
     }, []);
 
     if (submitted) {
@@ -124,7 +124,7 @@ export const PassphraseModal = ({ device }: PassphraseModalProps) => {
                     learnMoreTooltipOnClick={instance => (
                         <OpenGuideFromTooltip
                             dataTest="@tooltip/guideAnchor"
-                            id="/1_initialize-and-secure-your-trezor/6_passphrase.md"
+                            id="/1_initialize-and-secure-your-cerberus/6_passphrase.md"
                             instance={instance}
                         />
                     )}
@@ -153,7 +153,7 @@ export const PassphraseModal = ({ device }: PassphraseModalProps) => {
                     learnMoreTooltipOnClick={instance => (
                         <OpenGuideFromTooltip
                             dataTest="@tooltip/guideAnchor"
-                            id="/1_initialize-and-secure-your-trezor/6_passphrase.md"
+                            id="/1_initialize-and-secure-your-cerberus/6_passphrase.md"
                             instance={instance}
                         />
                     )}
@@ -190,7 +190,7 @@ export const PassphraseModal = ({ device }: PassphraseModalProps) => {
                         learnMoreTooltipOnClick={instance => (
                             <OpenGuideFromTooltip
                                 dataTest="@tooltip/guideAnchor"
-                                id="/1_initialize-and-secure-your-trezor/6_passphrase.md"
+                                id="/1_initialize-and-secure-your-cerberus/6_passphrase.md"
                                 instance={instance}
                             />
                         )}

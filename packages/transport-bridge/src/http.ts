@@ -10,10 +10,10 @@ const defaults = {
 
 const str = (value: Record<string, any> | string) => JSON.stringify(value);
 
-export class TrezordNode {
+export class CerberusdNode {
     /** versioning, baked in by webpack */
     version = '3.0.0';
-    serviceName = 'trezord-node';
+    serviceName = 'cerberusd-node';
     /** last known descriptors state */
     descriptors: string;
     /** pending /listen subscriptions that are supposed to be resolved whenever descriptors change is detected */

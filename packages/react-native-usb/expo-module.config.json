@@ -4,6 +4,6 @@
         "modules": ["ReactNativeUsbModule"]
     },
     "android": {
-        "modules": ["io.trezor.rnusb.ReactNativeUsbModule"]
+        "modules": ["io.cerberus.rnusb.ReactNativeUsbModule"]
     }
 }

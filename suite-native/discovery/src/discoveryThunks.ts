@@ -17,7 +17,7 @@ import {
     selectDeviceAccountsForNetworkSymbolAndAccountType,
 } from '@suite-common/wallet-core';
 import { selectIsAccountAlreadyDiscovered } from '@suite-native/accounts';
-import TrezorConnect from '@cerberus/connect';
+import CerberusConnect from '@cerberus/connect';
 import { Account, DiscoveryItem } from '@suite-common/wallet-types';
 import { getDerivationType } from '@suite-common/wallet-utils';
 import { AccountType, Network, NetworkSymbol, getNetworkType } from '@suite-common/wallet-config';
@@ -141,7 +141,7 @@ const addAccountsByDescriptorThunk = createThunk(
         },
         { dispatch },
     ) => {
-        const { success, payload: accountInfo } = await TrezorConnect.getAccountInfo({
+        const { success, payload: accountInfo } = await CerberusConnect.getAccountInfo({
             coin: bundleItem.coin,
             descriptor: bundleItem.descriptor,
             useEmptyPassphrase: true,
@@ -189,7 +189,7 @@ const discoverAccountsByDescriptorThunk = createThunk(
         }
 
         for (const bundleItem of descriptorsBundle) {
-            const { success, payload: accountInfo } = await TrezorConnect.getAccountInfo({
+            const { success, payload: accountInfo } = await CerberusConnect.getAccountInfo({
                 coin: bundleItem.coin,
                 descriptor: bundleItem.descriptor,
                 useEmptyPassphrase: true,

@@ -4,7 +4,7 @@ Asks device to sign given transaction. User is asked to confirm all transaction
 details on Cerberus.
 
 ```javascript
-const result = await TrezorConnect.nemSignTransaction(params);
+const result = await CerberusConnect.nemSignTransaction(params);
 ```
 
 ### Params
@@ -34,7 +34,7 @@ function hexlify(str) {
     return result;
 }
 
-TrezorConnect.nemSignTransaction(
+CerberusConnect.nemSignTransaction(
     path: "m/44'/1'/0'/0'/0'",
     transaction: {
         timeStamp: 74649215,
@@ -55,7 +55,7 @@ TrezorConnect.nemSignTransaction(
 Sign mosaic transaction
 
 ```javascript
-TrezorConnect.nemSignTransaction(
+CerberusConnect.nemSignTransaction(
     path: "m/44'/1'/0'/0'/0'",
     transaction: {
         timeStamp: 76809215,

@@ -1,15 +1,15 @@
 import { serializeError } from '../constants/errors';
 import type { IFRAME } from './iframe';
-import type { TrezorConnect } from '../types/api';
+import type { CerberusConnect } from '../types/api';
 import type { CommonParams } from '../types/params';
 
-// conditionally unwrap TrezorConnect api method Success<T> response
+// conditionally unwrap CerberusConnect api method Success<T> response
 type UnwrappedResponse<T> =
     T extends Promise<infer R> ? (R extends { success: true; payload: infer P } ? P : never) : void;
 
 // https://github.com/microsoft/TypeScript/issues/32164
 // there is no native way how to get Parameters<Fn> for overloaded function
-// current TrezorConnect api methods have exactly 2 overloads (if any)
+// current CerberusConnect api methods have exactly 2 overloads (if any)
 type OverloadedMethod<T, E extends Record<string, string>> = T extends {
     (params: infer P1): infer R1;
     (params: infer P2): infer R2;
@@ -29,11 +29,11 @@ type IsMethodCallable<T> = T extends (...args: any[]) => infer R
         : never
     : never;
 
-// map TrezorConnect api with unwrapped methods
+// map CerberusConnect api with unwrapped methods
 type CallApi = {
-    [K in keyof TrezorConnect]: IsMethodCallable<TrezorConnect[K]> extends never
+    [K in keyof CerberusConnect]: IsMethodCallable<CerberusConnect[K]> extends never
         ? never
-        : UnwrappedMethod<TrezorConnect[K], { method: K }>;
+        : UnwrappedMethod<CerberusConnect[K], { method: K }>;
 };
 
 export type CallMethodUnion = CallApi[keyof CallApi];

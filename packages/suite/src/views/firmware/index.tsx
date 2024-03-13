@@ -6,7 +6,7 @@ import { acquireDevice, selectDevice } from '@suite-common/wallet-core';
 import { ConfirmOnDevice, variables } from '@cerberus/components';
 
 import { closeModalApp } from 'src/actions/suite/routerActions';
-import { TrezorDevice } from 'src/types/suite';
+import { CerberusDevice } from 'src/types/suite';
 import {
     CheckSeedStep,
     FirmwareCloseButton,
@@ -63,7 +63,7 @@ export const Firmware = ({ shouldSwitchFirmwareType }: FirmwareProps) => {
         resetReducer();
     };
 
-    const [cachedDevice, setCachedDevice] = useState<TrezorDevice | undefined>(device);
+    const [cachedDevice, setCachedDevice] = useState<CerberusDevice | undefined>(device);
 
     // some of the application states can be reused here.
     // some don't make sense handling here as they are handled somewhere up the tree

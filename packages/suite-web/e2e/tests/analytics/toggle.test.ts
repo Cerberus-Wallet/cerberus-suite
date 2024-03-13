@@ -20,7 +20,7 @@ describe('Analytics Toggle - Enablement and Disablement', () => {
     });
 
     it('should respect disabled analytics in onboarding with following enabling in settings', () => {
-        cy.interceptDataTrezorIo(requests).as('data-fetch');
+        cy.interceptDataCerberusIo(requests).as('data-fetch');
 
         cy.prefixedVisit('/');
 
@@ -111,7 +111,7 @@ describe('Analytics Toggle - Enablement and Disablement', () => {
     });
 
     it('should respect enabled analytics in onboarding with following disabling in settings', () => {
-        cy.interceptDataTrezorIo(requests).as('data-fetch');
+        cy.interceptDataCerberusIo(requests).as('data-fetch');
 
         cy.prefixedVisit('/');
 

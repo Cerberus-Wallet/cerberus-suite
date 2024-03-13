@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { Button } from '@cerberus/components';
 
-import * as trezorConnectActions from '../actions/trezorConnectActions';
+import * as cerberusConnectActions from '../actions/cerberusConnectActions';
 import { useSelector, useActions } from '../hooks';
 
 import { Row } from './fields/Row';
@@ -30,8 +30,8 @@ export const Settings = () => {
 
     const isHandshakeConfirmed = useSelector(state => state.connect?.isHandshakeConfirmed || false);
     const actions = useActions({
-        onSubmitInit: trezorConnectActions.onSubmitInit,
-        onFieldChange: trezorConnectActions.onConnectOptionChange,
+        onSubmitInit: cerberusConnectActions.onSubmitInit,
+        onFieldChange: cerberusConnectActions.onConnectOptionChange,
     });
 
     const submitButton = 'Init Connect';

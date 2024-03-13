@@ -23,12 +23,12 @@ describe('cardanoStakingReducer reducer', () => {
             } as any),
         ).toEqual({
             mainnet: {
-                trezorPools: undefined,
+                cerberusPools: undefined,
                 isFetchError: false,
                 isFetchLoading: false,
             },
             preview: {
-                trezorPools: undefined,
+                cerberusPools: undefined,
                 isFetchError: false,
                 isFetchLoading: false,
             },
@@ -54,7 +54,7 @@ describe('cardanoStakingReducer reducer', () => {
                         },
                     ],
                     mainnet: {
-                        trezorPools: {
+                        cerberusPools: {
                             pools: [],
                             next: { hex: 'a', bech32: 'b', live_stake: 'a', saturation: 'a' },
                         },
@@ -62,7 +62,7 @@ describe('cardanoStakingReducer reducer', () => {
                         isFetchLoading: false,
                     },
                     preview: {
-                        trezorPools: {
+                        cerberusPools: {
                             pools: [],
                             next: { hex: 'a', bech32: 'b', live_stake: 'a', saturation: 'a' },
                         },
@@ -78,7 +78,7 @@ describe('cardanoStakingReducer reducer', () => {
         ).toEqual({
             pendingTx: [],
             mainnet: {
-                trezorPools: {
+                cerberusPools: {
                     pools: [],
                     next: { hex: 'a', bech32: 'b', live_stake: 'a', saturation: 'a' },
                 },
@@ -86,7 +86,7 @@ describe('cardanoStakingReducer reducer', () => {
                 isFetchLoading: false,
             },
             preview: {
-                trezorPools: {
+                cerberusPools: {
                     pools: [],
                     next: { hex: 'a', bech32: 'b', live_stake: 'a', saturation: 'a' },
                 },
@@ -105,12 +105,12 @@ describe('cardanoStakingReducer reducer', () => {
             } as any),
         ).toEqual({
             mainnet: {
-                trezorPools: undefined,
+                cerberusPools: undefined,
                 isFetchError: false,
                 isFetchLoading: true,
             },
             preview: {
-                trezorPools: undefined,
+                cerberusPools: undefined,
                 isFetchError: false,
                 isFetchLoading: false,
             },
@@ -127,12 +127,12 @@ describe('cardanoStakingReducer reducer', () => {
             } as any),
         ).toEqual({
             mainnet: {
-                trezorPools: undefined,
+                cerberusPools: undefined,
                 isFetchError: false,
                 isFetchLoading: false,
             },
             preview: {
-                trezorPools: undefined,
+                cerberusPools: undefined,
                 isFetchError: false,
                 isFetchLoading: true,
             },
@@ -149,12 +149,12 @@ describe('cardanoStakingReducer reducer', () => {
             } as any),
         ).toEqual({
             mainnet: {
-                trezorPools: undefined,
+                cerberusPools: undefined,
                 isFetchError: true,
                 isFetchLoading: false,
             },
             preview: {
-                trezorPools: undefined,
+                cerberusPools: undefined,
                 isFetchError: false,
                 isFetchLoading: false,
             },
@@ -171,12 +171,12 @@ describe('cardanoStakingReducer reducer', () => {
             } as any),
         ).toEqual({
             mainnet: {
-                trezorPools: undefined,
+                cerberusPools: undefined,
                 isFetchError: true,
                 isFetchLoading: false,
             },
             preview: {
-                trezorPools: undefined,
+                cerberusPools: undefined,
                 isFetchError: false,
                 isFetchLoading: false,
             },
@@ -189,7 +189,7 @@ describe('cardanoStakingReducer reducer', () => {
             reducer(undefined, {
                 type: CARDANO_STAKING.SET_CERBERUS_POOLS,
                 network: 'mainnet',
-                trezorPools: {
+                cerberusPools: {
                     next: {
                         hex: 'a0',
                         bech32: 'b0',
@@ -215,12 +215,12 @@ describe('cardanoStakingReducer reducer', () => {
         ).toEqual({
             pendingTx: [],
             preview: {
-                trezorPools: undefined,
+                cerberusPools: undefined,
                 isFetchError: false,
                 isFetchLoading: false,
             },
             mainnet: {
-                trezorPools: {
+                cerberusPools: {
                     next: {
                         hex: 'a0',
                         bech32: 'b0',
@@ -253,7 +253,7 @@ describe('cardanoStakingReducer reducer', () => {
             reducer(undefined, {
                 type: CARDANO_STAKING.SET_CERBERUS_POOLS,
                 network: 'preview',
-                trezorPools: {
+                cerberusPools: {
                     next: {
                         hex: 'a0',
                         bech32: 'b0',
@@ -278,7 +278,7 @@ describe('cardanoStakingReducer reducer', () => {
             } as any),
         ).toEqual({
             preview: {
-                trezorPools: {
+                cerberusPools: {
                     next: {
                         hex: 'a0',
                         bech32: 'b0',
@@ -304,7 +304,7 @@ describe('cardanoStakingReducer reducer', () => {
                 isFetchLoading: false,
             },
             mainnet: {
-                trezorPools: undefined,
+                cerberusPools: undefined,
                 isFetchError: false,
                 isFetchLoading: false,
             },

@@ -8,6 +8,6 @@
         { "path": "../protobuf" },
         { "path": "../protocol" },
         { "path": "../utils" },
-        { "path": "../trezor-user-env-link" }
+        { "path": "../cerberus-user-env-link" }
     ]
 }

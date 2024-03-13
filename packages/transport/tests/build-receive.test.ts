@@ -91,7 +91,7 @@ const fixtures = Array(100)
     }));
 
 const parsedMessages = protobuf.Root.fromJSON({
-    nested: { hw: { nested: { trezor: { nested: { messages: { nested: messages } } } } } },
+    nested: { hw: { nested: { cerberus: { nested: { messages: { nested: messages } } } } } },
 });
 
 describe('encoding json -> protobuf -> json', () => {

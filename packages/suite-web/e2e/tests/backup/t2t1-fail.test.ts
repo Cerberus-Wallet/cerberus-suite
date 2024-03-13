@@ -16,7 +16,7 @@ describe('Backup fail', () => {
         cy.passThroughInitialRun();
 
         requests = [];
-        cy.interceptDataTrezorIo(requests);
+        cy.interceptDataCerberusIo(requests);
     });
 
     it('Backup failed - device disconnected during action', () => {

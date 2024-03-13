@@ -67,7 +67,7 @@ export default class GetAddress extends AbstractMethod<'getAddress', Params[]> {
             return {
                 address_n: path,
                 address: batch.address,
-                show_display: typeof batch.showOnTrezor === 'boolean' ? batch.showOnTrezor : true,
+                show_display: typeof batch.showOnCerberus === 'boolean' ? batch.showOnCerberus : true,
                 multisig: batch.multisig,
                 script_type: batch.scriptType,
                 coinInfo,

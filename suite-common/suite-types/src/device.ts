@@ -48,4 +48,4 @@ export type UnknownDevice = UnknownDeviceBase & ExtendedDevice;
 
 export type UnreadableDevice = UnreadableDeviceBase & ExtendedDevice;
 
-export type TrezorDevice = AcquiredDevice | UnknownDevice | UnreadableDevice;
+export type CerberusDevice = AcquiredDevice | UnknownDevice | UnreadableDevice;

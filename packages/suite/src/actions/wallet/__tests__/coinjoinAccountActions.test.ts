@@ -64,7 +64,7 @@ describe('coinjoinAccountActions', () => {
     fixtures.createCoinjoinAccount.forEach(f => {
         it(`createCoinjoinAccount: ${f.description}`, async () => {
             const store = initStore();
-            testMocks.setTrezorConnectFixtures(f.connect);
+            testMocks.setCerberusConnectFixtures(f.connect);
             jest.spyOn(console, 'log').mockImplementation(() => {});
 
             await store.dispatch(coinjoinAccountActions.createCoinjoinAccount(f.params as any)); // params are incomplete
@@ -77,7 +77,7 @@ describe('coinjoinAccountActions', () => {
     fixtures.startCoinjoinSession.forEach(f => {
         it(`startCoinjoinSession: ${f.description}`, async () => {
             const store = initStore(f.state as Wallet);
-            testMocks.setTrezorConnectFixtures(f.connect);
+            testMocks.setCerberusConnectFixtures(f.connect);
             // @ts-expect-error params are incomplete
             await store.dispatch(coinjoinAccountActions.startCoinjoinSession(f.params, {}));
 

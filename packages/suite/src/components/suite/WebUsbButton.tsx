@@ -1,4 +1,4 @@
-import TrezorConnect from '@cerberus/connect';
+import CerberusConnect from '@cerberus/connect';
 import { ButtonProps, Button } from '@cerberus/components';
 import { Translation } from './Translation';
 
@@ -10,7 +10,7 @@ export const WebUsbButton = (props: Omit<ButtonProps, 'children'>) => (
             variant="primary"
             onClick={e => {
                 e.stopPropagation();
-                TrezorConnect.requestWebUSBDevice();
+                CerberusConnect.requestWebUSBDevice();
             }}
             size="small"
         >

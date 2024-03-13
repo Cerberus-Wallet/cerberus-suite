@@ -12,7 +12,7 @@ To run the explorer locally:
 ## Examples
 
 -   [production](https://connect.cerberus.uraanai.com/9/). This build allows working with restricted methods (management) since it is hosted on a whitelisted domain.
--   [non-whitelisted domain](https://trezor.github.io/trezor-suite/connect-explorer), which is pointing to the latest stable version of [@cerberus/connect](../connect). This build effectively simulates 3rd party integration.
+-   [non-whitelisted domain](https://cerberus.github.io/cerberus-suite/connect-explorer), which is pointing to the latest stable version of [@cerberus/connect](../connect). This build effectively simulates 3rd party integration.
 -   [develop](https://suite.corp.sldev.cz/connect-explorer/develop) Branches builds available for here for internal use.
 
 ## Webusb

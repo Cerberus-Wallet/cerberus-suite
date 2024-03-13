@@ -4,7 +4,7 @@ Display requested public key derived by given [BIP44 path](../path.md) on device
 User is presented with a description of the requested public key and asked to confirm the export.
 
 ```javascript
-const result = await TrezorConnect.eosGetPublicKey(params);
+const result = await CerberusConnect.eosGetPublicKey(params);
 ```
 
 ### Params
@@ -14,19 +14,19 @@ const result = await TrezorConnect.eosGetPublicKey(params);
 #### Exporting single address
 
 -   `path` — _required_ `string | Array<number>` minimum length is `5`. [read more](../path.md)
--   `showOnTrezor` — _optional_ `boolean` determines if address will be displayed on device. Default is set to `true`
+-   `showOnCerberus` — _optional_ `boolean` determines if address will be displayed on device. Default is set to `true`
 -   `chunkify` — _optional_ `boolean` determines if address will be displayed in chunks of 4 characters. Default is set to `false`
 
 #### Exporting bundle of addresses
 
--   `bundle` - `Array` of Objects with `path` and `showOnTrezor` fields
+-   `bundle` - `Array` of Objects with `path` and `showOnCerberus` fields
 
 ### Example
 
 Displays public key derived from BIP44 path:
 
 ```javascript
-TrezorConnect.eosGetPublicKey({
+CerberusConnect.eosGetPublicKey({
     path: "m/44'/194'/0'/0/0",
 });
 ```
@@ -34,11 +34,11 @@ TrezorConnect.eosGetPublicKey({
 Return a bundle of public keys without displaying them on device:
 
 ```javascript
-TrezorConnect.eosGetPublicKey({
+CerberusConnect.eosGetPublicKey({
     bundle: [
-        { path: "m/44'/194'/0'/0/0", showOnTrezor: false }, // public key 1
-        { path: "m/44'/194'/0'/0/1", showOnTrezor: false }, // public key 2
-        { path: "m/44'/194'/0'/0/2", showOnTrezor: false }, // public key 3
+        { path: "m/44'/194'/0'/0/0", showOnCerberus: false }, // public key 1
+        { path: "m/44'/194'/0'/0/1", showOnCerberus: false }, // public key 2
+        { path: "m/44'/194'/0'/0/2", showOnCerberus: false }, // public key 3
     ],
 });
 ```

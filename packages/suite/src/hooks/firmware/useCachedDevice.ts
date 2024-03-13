@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react';
 import { useFirmware } from 'src/hooks/suite';
-import type { TrezorDevice } from 'src/types/suite';
+import type { CerberusDevice } from 'src/types/suite';
 
 /**
  * Device caching logic, should be equivalent to the one in suite/src/components/firmware/FirmwareInitial.tsx.
  * If verified, it can replace that one as well.
  */
-export const useCachedDevice = (liveDevice?: TrezorDevice) => {
+export const useCachedDevice = (liveDevice?: CerberusDevice) => {
     const { status } = useFirmware();
-    const [cachedDevice, setCachedDevice] = useState<TrezorDevice | undefined>(liveDevice);
+    const [cachedDevice, setCachedDevice] = useState<CerberusDevice | undefined>(liveDevice);
     useEffect(() => {
         // When user choses to install a new firmware update we will ask him/her to reconnect a device in bootloader mode.
         // This prompt (to reconnect a device in bootloader mode) is shown in modal which is visually layer above the content.

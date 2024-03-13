@@ -17,7 +17,7 @@ export const HowToUpdateBottomSheet = ({
     const openLink = useOpenLink();
 
     const handleHelpClick = () => {
-        openLink('https://cerberus.uraanai.com/learn/a/update-trezor-device-firmware');
+        openLink('https://cerberus.uraanai.com/learn/a/update-cerberus-device-firmware');
         onClose(false);
     };
 

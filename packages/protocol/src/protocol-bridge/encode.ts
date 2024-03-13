@@ -1,7 +1,7 @@
 import { HEADER_SIZE } from './constants';
 import { TransportProtocolEncode } from '../types';
 
-// this file is basically combination of "trezor v1 protocol" and "bridge protocol"
+// this file is basically combination of "cerberus v1 protocol" and "bridge protocol"
 // there is actually no officially described bridge protocol, but in fact there is one
 // it is because bridge does some parts of the protocol itself (like chunking)
 export const encode: TransportProtocolEncode = (data, options) => {

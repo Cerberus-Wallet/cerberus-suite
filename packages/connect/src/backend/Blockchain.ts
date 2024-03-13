@@ -85,7 +85,7 @@ export class Blockchain {
         });
     }
 
-    onError(error: ERRORS.TrezorError) {
+    onError(error: ERRORS.CerberusError) {
         const pendingSubscriptions =
             this.link.listenerCount('block') ||
             this.link.listenerCount('notification') ||

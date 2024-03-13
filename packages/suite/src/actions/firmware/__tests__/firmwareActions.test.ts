@@ -76,7 +76,7 @@ describe('Firmware Actions', () => {
     actions.forEach(f => {
         it(f.description, async () => {
             // set fixtures
-            testMocks.setTrezorConnectFixtures(f.mocks?.connect);
+            testMocks.setCerberusConnectFixtures(f.mocks?.connect);
 
             const state = getInitialState(f.initialState);
             const store = mockStore(state);

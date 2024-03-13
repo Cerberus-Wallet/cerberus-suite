@@ -28,7 +28,7 @@ echo 'syntax = "proto2";' > "$DIST"/messages.proto
 echo 'import "google/protobuf/descriptor.proto";' >> "$DIST"/messages.proto
 echo "Build proto file from $SRC"
 grep -hv -e '^import ' -e '^syntax' -e '^package' -e 'option java_' "$SRC"/messages*.proto \
-| sed 's/ hw\.trezor\.messages\.common\./ /' \
+| sed 's/ hw\.cerberus\.messages\.common\./ /' \
 | sed 's/ common\./ /' \
 | sed 's/ ethereum_definitions\./ /' \
 | sed 's/ management\./ /' \

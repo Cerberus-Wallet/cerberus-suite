@@ -33,7 +33,7 @@ import { Discovery } from '@suite-common/wallet-types';
 import { getPhysicalDeviceUniqueIds } from '@suite-common/suite-utils';
 
 import { getIsTorEnabled } from 'src/utils/suite/tor';
-import { AppState, TrezorDevice } from 'src/types/suite';
+import { AppState, CerberusDevice } from 'src/types/suite';
 import { METADATA_LABELING } from 'src/actions/suite/constants';
 import { Account } from 'src/types/wallet';
 import { selectLabelingDataForWallet } from 'src/reducers/suite/metadataReducer';
@@ -89,7 +89,7 @@ export const redactDiscovery = (discovery: DeepPartial<Discovery> | undefined) =
     };
 };
 
-export const redactDevice = (device: DeepPartial<TrezorDevice> | undefined) => {
+export const redactDevice = (device: DeepPartial<CerberusDevice> | undefined) => {
     if (!device) return undefined;
 
     return {
@@ -222,7 +222,7 @@ export const getApplicationInfo = (state: AppState, hideSensitiveInfo: boolean) 
         .map(({ coin }) => coin)
         .filter(coin => state.wallet.settings.enabledNetworks.includes(coin)),
     devices: getPhysicalDeviceUniqueIds(selectDevices(state))
-        .map(id => selectDevices(state).find(device => device.id === id) as TrezorDevice) // filter unique devices
+        .map(id => selectDevices(state).find(device => device.id === id) as CerberusDevice) // filter unique devices
         .concat(selectDevices(state).filter(device => device.id === null)) // add devices in bootloader mode
         .map(device => ({
             id: hideSensitiveInfo ? REDACTED_REPLACEMENT : device.id,

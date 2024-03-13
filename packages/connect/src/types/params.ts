@@ -67,7 +67,7 @@ export type GetAddress = Static<typeof GetAddress>;
 export const GetAddress = Type.Object({
     path: DerivationPath,
     address: Type.Optional(Type.String()),
-    showOnTrezor: Type.Optional(Type.Boolean()),
+    showOnCerberus: Type.Optional(Type.Boolean()),
     chunkify: Type.Optional(Type.Boolean()),
     useEventListener: Type.Optional(Type.Boolean()),
 });
@@ -82,7 +82,7 @@ export interface Address {
 export type GetPublicKey = Static<typeof GetPublicKey>;
 export const GetPublicKey = Type.Object({
     path: DerivationPath,
-    showOnTrezor: Type.Optional(Type.Boolean()),
+    showOnCerberus: Type.Optional(Type.Boolean()),
     suppressBackupWarning: Type.Optional(Type.Boolean()),
     chunkify: Type.Optional(Type.Boolean()),
 });

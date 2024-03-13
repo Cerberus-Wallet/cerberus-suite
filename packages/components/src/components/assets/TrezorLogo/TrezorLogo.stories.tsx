@@ -1,13 +1,13 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { TrezorLogo as TrezorLogoComponent, TrezorLogoProps } from '../../../index';
+import { CerberusLogo as CerberusLogoComponent, CerberusLogoProps } from '../../../index';
 
 const meta: Meta = {
-    title: 'Assets/TrezorLogo',
-    component: TrezorLogoComponent,
+    title: 'Assets/CerberusLogo',
+    component: CerberusLogoComponent,
 } as Meta;
 export default meta;
 
-export const TrezorLogo: StoryObj<TrezorLogoProps> = {
+export const CerberusLogo: StoryObj<CerberusLogoProps> = {
     args: {
         type: 'horizontal',
         width: 100,

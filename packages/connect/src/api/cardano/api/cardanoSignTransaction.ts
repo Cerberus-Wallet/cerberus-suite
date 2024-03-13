@@ -2,7 +2,7 @@
 
 // allow for...of statements
 
-import { trezorUtils } from '@fivebinaries/coin-selection';
+import { cerberusUtils } from '@fivebinaries/coin-selection';
 
 import { AbstractMethod } from '../../../core/AbstractMethod';
 import { getFirmwareRange } from '../../common/paramsValidator';
@@ -510,7 +510,7 @@ export default class CardanoSignTransaction extends AbstractMethod<
             );
         }
 
-        const serializedTx = trezorUtils.signTransaction(unsignedTx.body, witnesses, { testnet });
+        const serializedTx = cerberusUtils.signTransaction(unsignedTx.body, witnesses, { testnet });
 
         return {
             ...result,

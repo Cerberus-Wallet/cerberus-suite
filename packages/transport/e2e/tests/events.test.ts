@@ -1,5 +1,5 @@
 import * as messages from '@cerberus/protobuf/messages.json';
-import { TrezorUserEnvLink } from '@cerberus/trezor-user-env-link';
+import { CerberusUserEnvLink } from '@cerberus/cerberus-user-env-link';
 
 // testing build. yarn workspace @cerberus/transport build:lib is a required step therefore
 import { BridgeTransport, Descriptor } from '../../lib';
@@ -13,7 +13,7 @@ const emulatorSetupOpts = {
     mnemonic: mnemonicAll,
     pin: '',
     passphrase_protection: false,
-    label: 'TrezorT',
+    label: 'CerberusT',
     needs_backup: true,
 };
 
@@ -43,21 +43,21 @@ describe('bridge', () => {
     let descriptors: any[];
 
     beforeAll(async () => {
-        await TrezorUserEnvLink.connect();
+        await CerberusUserEnvLink.connect();
     });
 
     afterAll(async () => {
-        await TrezorUserEnvLink.send({ type: 'emulator-stop' });
-        await TrezorUserEnvLink.send({ type: 'bridge-stop' });
-        TrezorUserEnvLink.disconnect();
+        await CerberusUserEnvLink.send({ type: 'emulator-stop' });
+        await CerberusUserEnvLink.send({ type: 'bridge-stop' });
+        CerberusUserEnvLink.disconnect();
     });
 
     beforeEach(async () => {
-        await TrezorUserEnvLink.send({ type: 'emulator-stop' });
-        await TrezorUserEnvLink.send({ type: 'bridge-stop' });
-        await TrezorUserEnvLink.send({ type: 'emulator-start', ...emulatorStartOpts });
-        await TrezorUserEnvLink.send({ type: 'emulator-setup', ...emulatorSetupOpts });
-        await TrezorUserEnvLink.send({ type: 'bridge-start' });
+        await CerberusUserEnvLink.send({ type: 'emulator-stop' });
+        await CerberusUserEnvLink.send({ type: 'bridge-stop' });
+        await CerberusUserEnvLink.send({ type: 'emulator-start', ...emulatorStartOpts });
+        await CerberusUserEnvLink.send({ type: 'emulator-setup', ...emulatorSetupOpts });
+        await CerberusUserEnvLink.send({ type: 'bridge-start' });
 
         bridge1 = new BridgeTransport({ messages });
         bridge2 = new BridgeTransport({ messages });

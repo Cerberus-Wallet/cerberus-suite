@@ -37,9 +37,9 @@ const switchToPopupTab = event => {
 
 window.addEventListener('message', event => {
     if (event.data === 'usb-permissions-init') {
-        const iframe = document.getElementById('trezor-usb-permissions');
+        const iframe = document.getElementById('cerberus-usb-permissions');
         if (!iframe || !(iframe instanceof HTMLIFrameElement)) {
-            throw new Error('trezor-usb-permissions missing or incorrect dom type');
+            throw new Error('cerberus-usb-permissions missing or incorrect dom type');
         }
         iframe.contentWindow.postMessage(
             {
@@ -56,7 +56,7 @@ window.addEventListener('message', event => {
 window.addEventListener('beforeunload', switchToPopupTab);
 window.addEventListener('load', () => {
     const instance = document.createElement('iframe');
-    instance.id = 'trezor-usb-permissions';
+    instance.id = 'cerberus-usb-permissions';
     instance.frameBorder = '0';
     instance.width = '100%';
     instance.height = '100%';

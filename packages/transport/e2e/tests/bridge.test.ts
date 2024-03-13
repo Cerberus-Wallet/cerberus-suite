@@ -1,6 +1,6 @@
 import * as messages from '@cerberus/protobuf/messages.json';
 // testing build. yarn workspace @cerberus/transport build:lib is a required step therefore
-import { TrezorUserEnvLink } from '@cerberus/trezor-user-env-link';
+import { CerberusUserEnvLink } from '@cerberus/cerberus-user-env-link';
 
 // testing build. yarn workspace @cerberus/transport build:lib is a required step therefore
 import { BridgeTransport } from '../../lib';
@@ -14,7 +14,7 @@ const emulatorSetupOpts = {
     mnemonic: mnemonicAll,
     pin: '',
     passphrase_protection: false,
-    label: 'TrezorT',
+    label: 'CerberusT',
     needs_backup: true,
 };
 
@@ -22,17 +22,17 @@ const emulatorStartOpts = { version: '2-main', wipe: true };
 
 describe('bridge', () => {
     beforeAll(async () => {
-        await TrezorUserEnvLink.connect();
+        await CerberusUserEnvLink.connect();
     });
 
     afterAll(async () => {
-        await TrezorUserEnvLink.send({ type: 'emulator-stop' });
-        await TrezorUserEnvLink.send({ type: 'bridge-stop' });
-        TrezorUserEnvLink.disconnect();
+        await CerberusUserEnvLink.send({ type: 'emulator-stop' });
+        await CerberusUserEnvLink.send({ type: 'bridge-stop' });
+        CerberusUserEnvLink.disconnect();
     });
 
     // there might be more versions of bridge out there, see https://github.com/Cerberus-Wallet/webwallet-data/tree/master/bridge
-    // but they are not available from trezor-user-env, see https://github.com/Cerberus-Wallet/cerberus-user-env/tree/master/src/binaries/trezord-go/bin
+    // but they are not available from cerberus-user-env, see https://github.com/Cerberus-Wallet/cerberus-user-env/tree/master/src/binaries/cerberusd-go/bin
     ['2.0.26', '2.0.27', undefined].forEach(bridgeVersion => {
         describe(bridgeVersion || 'latest', () => {
             let bridge: any;
@@ -40,11 +40,11 @@ describe('bridge', () => {
             let session: any;
             beforeEach(async () => {
                 // todo: swapping emulator-stop and bridge-stop line can simulate "emulator process died" error
-                await TrezorUserEnvLink.send({ type: 'emulator-stop' });
-                await TrezorUserEnvLink.send({ type: 'bridge-stop' });
-                await TrezorUserEnvLink.send({ type: 'emulator-start', ...emulatorStartOpts });
-                await TrezorUserEnvLink.send({ type: 'emulator-setup', ...emulatorSetupOpts });
-                await TrezorUserEnvLink.send({ type: 'bridge-start', version: bridgeVersion });
+                await CerberusUserEnvLink.send({ type: 'emulator-stop' });
+                await CerberusUserEnvLink.send({ type: 'bridge-stop' });
+                await CerberusUserEnvLink.send({ type: 'emulator-start', ...emulatorStartOpts });
+                await CerberusUserEnvLink.send({ type: 'emulator-setup', ...emulatorSetupOpts });
+                await CerberusUserEnvLink.send({ type: 'bridge-start', version: bridgeVersion });
 
                 bridge = new BridgeTransport({ messages });
                 await bridge.init().promise;
@@ -84,7 +84,7 @@ describe('bridge', () => {
                         type: 'Features',
                         message: {
                             vendor: 'cerberus.uraanai.com',
-                            label: 'TrezorT',
+                            label: 'CerberusT',
                         },
                     },
                 });
@@ -102,7 +102,7 @@ describe('bridge', () => {
                         type: 'Features',
                         message: {
                             vendor: 'cerberus.uraanai.com',
-                            label: 'TrezorT',
+                            label: 'CerberusT',
                         },
                     },
                 });
@@ -149,7 +149,7 @@ describe('bridge', () => {
                         type: 'Features',
                         message: {
                             vendor: 'cerberus.uraanai.com',
-                            label: 'TrezorT',
+                            label: 'CerberusT',
                         },
                     },
                 });
@@ -193,7 +193,7 @@ describe('bridge', () => {
                         type: 'Features',
                         message: {
                             vendor: 'cerberus.uraanai.com',
-                            label: 'TrezorT',
+                            label: 'CerberusT',
                         },
                     },
                 });

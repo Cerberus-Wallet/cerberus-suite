@@ -7,9 +7,9 @@ import type { DocsAction } from '../actions/docsActions';
 import type { DOMAction } from '../actions/DOMActions';
 import type { MethodAction } from '../actions/methodActions';
 import type { RouterAction } from '../actions/routerActions';
-import type { TrezorConnectAction } from '../actions/trezorConnectActions';
+import type { CerberusConnectAction } from '../actions/cerberusConnectActions';
 
-export type Action = DocsAction | DOMAction | MethodAction | RouterAction | TrezorConnectAction;
+export type Action = DocsAction | DOMAction | MethodAction | RouterAction | CerberusConnectAction;
 
 export type AppState = AppState$;
 export type GetState = () => AppState$;
@@ -18,7 +18,7 @@ export interface Dispatch extends ThunkDispatch<AppState$, any, Action> {
     <Action>(action: Action): Action extends (...args: any) => infer R ? R : Action;
 }
 
-export type TrezorConnectDevice = KnownDevice | UnknownDevice | UnreadableDevice;
+export type CerberusConnectDevice = KnownDevice | UnknownDevice | UnreadableDevice;
 
 export interface FieldData {
     value: string;

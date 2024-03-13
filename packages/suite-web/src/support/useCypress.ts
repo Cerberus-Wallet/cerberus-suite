@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
-import TrezorConnect from '@cerberus/connect';
+import CerberusConnect from '@cerberus/connect';
 import { useStore } from 'react-redux';
 
 /**
  * Utility for running tests in Cypress.
- * Used to augment window object with redux store and TrezorConnect instance to make it accessible in tests
+ * Used to augment window object with redux store and CerberusConnect instance to make it accessible in tests
  */
 export const useCypress = () => {
     const store = useStore();
@@ -12,11 +12,11 @@ export const useCypress = () => {
     useEffect(() => {
         if (typeof window !== 'undefined' && window.Cypress) {
             window.store = store;
-            window.TrezorConnect = TrezorConnect;
+            window.CerberusConnect = CerberusConnect;
 
             return () => {
                 delete window.store;
-                delete window.TrezorConnect;
+                delete window.CerberusConnect;
             };
         }
     }, [store]);

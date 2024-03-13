@@ -1,5 +1,5 @@
 // upstream: https://github.com/bitcoinjs/bitcoinjs-lib/blob/master/ts_src/bufferutils.ts
-// fork: https://github.com/Cerberus-Wallet/cerberus-utxo-lib/blob/trezor/src/bufferutils.js
+// fork: https://github.com/Cerberus-Wallet/cerberus-utxo-lib/blob/cerberus/src/bufferutils.js
 // differences:
 // - added `BufferReader` "readInt64", "readUInt16" and "readUInt64String" methods.
 // - added `BufferWritter` "writeInt64", "writeUInt16" methods.

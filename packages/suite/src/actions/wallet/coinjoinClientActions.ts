@@ -1,4 +1,4 @@
-import TrezorConnect from '@cerberus/connect';
+import CerberusConnect from '@cerberus/connect';
 import {
     CoinjoinStatusEvent,
     CoinjoinClientVersion,
@@ -245,7 +245,7 @@ export const setBusyScreen =
                     return Promise.resolve();
                 }
 
-                return TrezorConnect.setBusy({
+                return CerberusConnect.setBusy({
                     device: {
                         path: device?.path,
                     },
@@ -328,7 +328,7 @@ export const stopCoinjoinSession =
         }
 
         if (shouldCancelAuthorization) {
-            const result = await TrezorConnect.cancelCoinjoinAuthorization({
+            const result = await CerberusConnect.cancelCoinjoinAuthorization({
                 device,
                 useEmptyPassphrase: device?.useEmptyPassphrase,
             });
@@ -466,7 +466,7 @@ const getOwnershipProof =
             true,
         );
 
-        // prepare array of parameters for TrezorConnect, grouped by TrezorDevice
+        // prepare array of parameters for CerberusConnect, grouped by CerberusDevice
         const groupParamsByDevice = Object.keys(groupUtxosByAccount).flatMap(key => {
             const coinjoinAccount = coinjoin.accounts.find(r => r.key === key);
             const realAccount = accounts.find(a => a.key === key);
@@ -513,7 +513,7 @@ const getOwnershipProof =
         // process all bundles in sequence one device by one, fill the response object
         await promiseAllSequence(
             groupParamsByDevice.map(({ device, bundle, utxos }) => async () => {
-                const proof = await TrezorConnect.getOwnershipProof({
+                const proof = await CerberusConnect.getOwnershipProof({
                     device,
                     bundle,
                 });
@@ -638,7 +638,7 @@ const signCoinjoinTx =
                             }),
                         );
 
-                        const signTx = await TrezorConnect.signTransaction({
+                        const signTx = await CerberusConnect.signTransaction({
                             device,
                             useEmptyPassphrase: device?.useEmptyPassphrase,
                             inputs: tx.inputs,

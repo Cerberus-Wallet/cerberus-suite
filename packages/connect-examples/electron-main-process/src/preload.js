@@ -1,7 +1,7 @@
 const { ipcRenderer, contextBridge } = require('electron');
 
-contextBridge.exposeInMainWorld('TrezorConnect', {
-    init: () => ipcRenderer.send('trezor-connect', 'init'),
-    receive: fn => ipcRenderer.on('trezor-connect', fn),
-    send: data => ipcRenderer.send('trezor-connect', data),
+contextBridge.exposeInMainWorld('CerberusConnect', {
+    init: () => ipcRenderer.send('cerberus-connect', 'init'),
+    receive: fn => ipcRenderer.on('cerberus-connect', fn),
+    send: data => ipcRenderer.send('cerberus-connect', data),
 });

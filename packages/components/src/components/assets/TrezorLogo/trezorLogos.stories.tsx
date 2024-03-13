@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Meta, StoryObj } from '@storybook/react';
-import { TrezorLogo } from '../../../index';
+import { CerberusLogo } from '../../../index';
 import { StoryColumn } from '../../../support/Story';
 
 interface WrapperProps {
@@ -16,7 +16,7 @@ const LogoWrapper = styled.div<WrapperProps>`
 `;
 
 const meta: Meta = {
-    title: 'Assets/TrezorLogos',
+    title: 'Assets/CerberusLogos',
 } as Meta;
 export default meta;
 
@@ -24,23 +24,23 @@ export const All: StoryObj = {
     render: () => (
         <StoryColumn minWidth={400}>
             <LogoWrapper>
-                <TrezorLogo
+                <CerberusLogo
                     type="horizontal"
                     width="200px"
-                    data-test="trezor-logo-horizontal-black"
+                    data-test="cerberus-logo-horizontal-black"
                 />
-                <TrezorLogo type="vertical" width="120px" data-test="trezor-logo-vertical-black" />
-                <TrezorLogo type="symbol" width="50px" data-test="trezor-logo-symbol-black" />
-                <TrezorLogo type="suite" width="200px" data-test="trezor-suite-logo-black" />
-                <TrezorLogo
+                <CerberusLogo type="vertical" width="120px" data-test="cerberus-logo-vertical-black" />
+                <CerberusLogo type="symbol" width="50px" data-test="cerberus-logo-symbol-black" />
+                <CerberusLogo type="suite" width="200px" data-test="cerberus-suite-logo-black" />
+                <CerberusLogo
                     type="suite_square"
                     width="50px"
-                    data-test="trezor-suite-square-logo-white"
+                    data-test="cerberus-suite-square-logo-white"
                 />
-                <TrezorLogo
+                <CerberusLogo
                     type="suite_compact"
                     width="200px"
-                    data-test="trezor-suite-compact-logo-white"
+                    data-test="cerberus-suite-compact-logo-white"
                 />
             </LogoWrapper>
         </StoryColumn>

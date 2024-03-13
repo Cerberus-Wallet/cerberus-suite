@@ -5,10 +5,10 @@ import { selectDevice } from '@suite-common/wallet-core';
 import { SUITE } from 'src/actions/suite/constants';
 
 import { useSelector } from './useSelector';
-import { TrezorDevice } from '@suite-common/suite-types';
+import { CerberusDevice } from '@suite-common/suite-types';
 
 type Result = {
-    device?: TrezorDevice;
+    device?: CerberusDevice;
     isLocked: (ignoreDisconnectedDevice?: boolean) => boolean;
 };
 

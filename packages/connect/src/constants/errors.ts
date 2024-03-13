@@ -1,6 +1,6 @@
 export const ERROR_CODES = {
-    Init_NotInitialized: 'TrezorConnect not initialized', // race condition: call on not initialized Core (usually hot-reloading)
-    Init_AlreadyInitialized: 'TrezorConnect has been already initialized', // thrown by .init called multiple times
+    Init_NotInitialized: 'CerberusConnect not initialized', // race condition: call on not initialized Core (usually hot-reloading)
+    Init_AlreadyInitialized: 'CerberusConnect has been already initialized', // thrown by .init called multiple times
     Init_IframeBlocked: 'Iframe blocked', // iframe injection blocked (ad-blocker)
     Init_IframeTimeout: 'Iframe timeout', // iframe didn't load in specified time
     Init_ManifestMissing:
@@ -9,7 +9,7 @@ export const ERROR_CODES = {
     Popup_ConnectionMissing: 'Unable to establish connection with iframe', // thrown by popup
 
     Transport_Missing: 'Transport is missing', // no transport available
-    Transport_InvalidProtobuf: '', // generic error from transport layer (trezor-link)
+    Transport_InvalidProtobuf: '', // generic error from transport layer (cerberus-link)
 
     Method_InvalidPackage:
         'This package is not suitable to work with browser. Use @cerberus/connect-web package instead', // thrown by node and react-native env while using regular 'web' package
@@ -43,7 +43,7 @@ export const ERROR_CODES = {
     Device_CallInProgress: 'Device call in progress', // thrown when trying to make another call while current is still running
 };
 
-export class TrezorError extends Error {
+export class CerberusError extends Error {
     code: string;
 
     message: string;
@@ -56,7 +56,7 @@ export class TrezorError extends Error {
 }
 
 export const TypedError = (id: keyof typeof ERROR_CODES, message?: string) =>
-    new TrezorError(id, message || ERROR_CODES[id]);
+    new CerberusError(id, message || ERROR_CODES[id]);
 
 // serialize Error/TypeError object into payload error type (Error object/class is converted to string while sent via postMessage)
 export const serializeError = (payload: any) => {
@@ -67,6 +67,6 @@ export const serializeError = (payload: any) => {
     return payload;
 };
 
-// trezord error prefix.
+// cerberusd error prefix.
 // user has insufficient permissions. may occur in Linux (missing udev rules), Windows and MacOS.
 export const LIBUSB_ERROR_MESSAGE = 'LIBUSB_ERROR';

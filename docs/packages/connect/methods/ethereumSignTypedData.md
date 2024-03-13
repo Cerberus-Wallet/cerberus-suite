@@ -5,7 +5,7 @@ Asks device to sign an [EIP-712](https://eips.ethereum.org/EIPS/eip-712) typed d
 User is asked to confirm all signing details on T2T1.
 
 ```javascript
-const result = await TrezorConnect.ethereumSignTypedData(params);
+const result = await CerberusConnect.ethereumSignTypedData(params);
 ```
 
 > :warning: **Supported only by T2T1 with Firmware 2.4.3 or higher!**
@@ -81,7 +81,7 @@ const eip712Data = {
 const transformTypedDataPlugin = require('@cerberus/connect-plugin-ethereum');
 const { domain_separator_hash, message_hash } = transformTypedDataPlugin(eip712Data, true);
 
-TrezorConnect.ethereumSignTypedData({
+CerberusConnect.ethereumSignTypedData({
     path: "m/44'/60'/0'",
     data: eip712Data,
     metamask_v4_compat: true,

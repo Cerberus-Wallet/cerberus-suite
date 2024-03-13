@@ -11,10 +11,10 @@ export enum Flags {
     // hasFlag = 1 << 2,
 }
 
-export const isFlagPresent = (flag: AnyFlag, trezorSavedNumber: number) =>
-    (trezorSavedNumber & Flags[flag]) === Flags[flag];
+export const isFlagPresent = (flag: AnyFlag, cerberusSavedNumber: number) =>
+    (cerberusSavedNumber & Flags[flag]) === Flags[flag];
 
-export const addToFlags = (flag: AnyFlag, trezorSavedNumber: number) =>
-    trezorSavedNumber | Flags[flag];
+export const addToFlags = (flag: AnyFlag, cerberusSavedNumber: number) =>
+    cerberusSavedNumber | Flags[flag];
 
-// note that trezor does not allow to remove flag, so we do not implement "removeFromFlags" method
+// note that cerberus does not allow to remove flag, so we do not implement "removeFromFlags" method

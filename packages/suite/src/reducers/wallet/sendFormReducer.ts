@@ -13,7 +13,7 @@ export interface SendState {
     sendRaw?: boolean;
     precomposedTx?: PrecomposedTransactionFinal | TxFinalCardano;
     precomposedForm?: FormState;
-    signedTx?: { tx: string; coin: string }; // payload for TrezorConnect.pushTransaction
+    signedTx?: { tx: string; coin: string }; // payload for CerberusConnect.pushTransaction
 }
 
 export const initialState: SendState = {

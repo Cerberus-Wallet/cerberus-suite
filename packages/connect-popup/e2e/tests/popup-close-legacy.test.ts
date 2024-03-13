@@ -1,17 +1,17 @@
 import { test, expect, Page } from '@playwright/test';
-import { TrezorUserEnvLink } from '@cerberus/trezor-user-env-link';
+import { CerberusUserEnvLink } from '@cerberus/cerberus-user-env-link';
 import { createDeferred, Deferred } from '@cerberus/utils';
 import { log } from '../support/helpers';
 
 const BRIDGE_VERSION = '2.0.31';
-const WAIT_AFTER_TEST = 3000; // how long test should wait for more potential trezord requests
+const WAIT_AFTER_TEST = 3000; // how long test should wait for more potential cerberusd requests
 const CONNECT_LEGACY_VERSION = '9.0.10';
 
 // With this test we want to make sure that we are not breaking legacy 3rd party integrations with new popup behaviors.
 // So we use old npm version of connect with the current version of popup.
 const url =
     process.env.URL ||
-    `https://suite.corp.sldev.cz/connect/npm-release/connect-${CONNECT_LEGACY_VERSION}/?trezor-connect-src=http://localhost:8088/`;
+    `https://suite.corp.sldev.cz/connect/npm-release/connect-${CONNECT_LEGACY_VERSION}/?cerberus-connect-src=http://localhost:8088/`;
 
 console.log('Test run with connect-explorer url: ', url);
 
@@ -31,31 +31,31 @@ let popup: Page;
 let popupClosedPromise: Promise<undefined> | undefined;
 
 test.beforeAll(async () => {
-    await TrezorUserEnvLink.connect();
+    await CerberusUserEnvLink.connect();
 });
 
 test.beforeAll(async () => {
     log('beforeAll', 'start');
-    await TrezorUserEnvLink.connect();
+    await CerberusUserEnvLink.connect();
 });
 
 test.beforeEach(async ({ page }) => {
     requests = [];
     responses = [];
     releasePromise = createDeferred();
-    await TrezorUserEnvLink.api.stopBridge();
-    await TrezorUserEnvLink.api.stopEmu();
-    await TrezorUserEnvLink.api.startEmu({
+    await CerberusUserEnvLink.api.stopBridge();
+    await CerberusUserEnvLink.api.stopEmu();
+    await CerberusUserEnvLink.api.startEmu({
         wipe: true,
     });
-    await TrezorUserEnvLink.api.setupEmu({
+    await CerberusUserEnvLink.api.setupEmu({
         mnemonic: 'alcohol woman abuse must during monitor noble actual mixed trade anger aisle',
         pin: '',
         passphrase_protection: false,
         label: 'My Trevor',
         needs_backup: false,
     });
-    await TrezorUserEnvLink.api.startBridge(BRIDGE_VERSION);
+    await CerberusUserEnvLink.api.startBridge(BRIDGE_VERSION);
     log('beforeEach', 'go to: ', `${url}#/method/verifyMessage`);
     await page.goto(`${url}#/method/verifyMessage`);
     log('beforeEach', 'waitForSelector: ', "button[data-test='@submit-button']");
@@ -140,9 +140,9 @@ test.afterEach(async ({ page }) => {
     log('afterEach', 'waitForSelector: ', '.follow-device >> visible=true');
     await popup.waitForSelector('.follow-device >> visible=true');
     log('afterEach', 'click on yes');
-    await TrezorUserEnvLink.send({ type: 'emulator-press-yes' });
-    await TrezorUserEnvLink.send({ type: 'emulator-press-yes' });
-    await TrezorUserEnvLink.send({ type: 'emulator-press-yes' });
+    await CerberusUserEnvLink.send({ type: 'emulator-press-yes' });
+    await CerberusUserEnvLink.send({ type: 'emulator-press-yes' });
+    await CerberusUserEnvLink.send({ type: 'emulator-press-yes' });
     await page.waitForSelector('text=Message verified');
 });
 
@@ -166,8 +166,8 @@ test(`device dialog canceled by user with bridge version ${BRIDGE_VERSION}`, asy
 
     log('user canceled dialog on device');
     // user canceled dialog on device
-    await TrezorUserEnvLink.send({ type: 'emulator-press-no' });
-    await TrezorUserEnvLink.send({ type: 'emulator-press-yes' });
+    await CerberusUserEnvLink.send({ type: 'emulator-press-no' });
+    await CerberusUserEnvLink.send({ type: 'emulator-press-yes' });
     await page.waitForTimeout(WAIT_AFTER_TEST);
 
     responses.forEach(response => {
@@ -190,7 +190,7 @@ test(`device disconnected during device interaction with bridge version ${BRIDGE
 
     log('user canceled interaction on device');
     // user canceled interaction on device
-    await TrezorUserEnvLink.api.stopEmu();
+    await CerberusUserEnvLink.api.stopEmu();
     await page.waitForTimeout(WAIT_AFTER_TEST);
 
     responses.forEach(response => {
@@ -209,7 +209,7 @@ test(`device disconnected during device interaction with bridge version ${BRIDGE
 
     await page.waitForSelector('text=device disconnected during action');
 
-    await TrezorUserEnvLink.api.startEmu();
+    await CerberusUserEnvLink.api.startEmu();
 });
 
 test.skip(`popup is reloaded by user. bridge version ${BRIDGE_VERSION}`, async () => {
@@ -226,9 +226,9 @@ test.skip(`popup is reloaded by user. bridge version ${BRIDGE_VERSION}`, async (
 test.skip('when user cancels permissions in popup it closes automatically', async ({ page }) => {
     log('start', test.info().title);
 
-    await TrezorUserEnvLink.api.pressYes();
-    await TrezorUserEnvLink.api.pressYes();
-    await TrezorUserEnvLink.api.pressYes();
+    await CerberusUserEnvLink.api.pressYes();
+    await CerberusUserEnvLink.api.pressYes();
+    await CerberusUserEnvLink.api.pressYes();
 
     popupClosedPromise = new Promise(resolve => {
         popup.on('close', () => resolve(undefined));
@@ -262,9 +262,9 @@ test.skip('when user cancels Export Bitcoin address dialog in popup it closes au
 }) => {
     log('start', test.info().title);
 
-    await TrezorUserEnvLink.api.pressYes();
-    await TrezorUserEnvLink.api.pressYes();
-    await TrezorUserEnvLink.api.pressYes();
+    await CerberusUserEnvLink.api.pressYes();
+    await CerberusUserEnvLink.api.pressYes();
+    await CerberusUserEnvLink.api.pressYes();
 
     popupClosedPromise = new Promise(resolve => {
         popup.on('close', () => resolve(undefined));

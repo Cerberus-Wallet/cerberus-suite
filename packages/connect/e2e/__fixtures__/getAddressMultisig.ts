@@ -32,7 +32,7 @@ export default {
                 path: [1],
                 multisig,
                 scriptType: 'SPENDMULTISIG',
-                showOnTrezor: true,
+                showOnCerberus: true,
             },
             result: {
                 address: '3E7GDtuHqnqPmDgwH59pVC7AvySiSkbibz',
@@ -44,7 +44,7 @@ export default {
                 path: [2],
                 multisig,
                 scriptType: 'SPENDMULTISIG',
-                showOnTrezor: true,
+                showOnCerberus: true,
             },
             result: {
                 address: '3E7GDtuHqnqPmDgwH59pVC7AvySiSkbibz',
@@ -56,7 +56,7 @@ export default {
                 path: [3],
                 multisig,
                 scriptType: 'SPENDMULTISIG',
-                showOnTrezor: true,
+                showOnCerberus: true,
             },
             result: {
                 address: '3E7GDtuHqnqPmDgwH59pVC7AvySiSkbibz',

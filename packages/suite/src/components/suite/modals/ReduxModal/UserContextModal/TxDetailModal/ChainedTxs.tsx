@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { variables } from '@cerberus/components';
 import { ChainedTransactions } from '@suite-common/wallet-types';
 
-import { TrezorLink, Translation } from 'src/components/suite';
+import { CerberusLink, Translation } from 'src/components/suite';
 import { TransactionItem } from 'src/components/wallet/TransactionItem/TransactionItem';
 import { Network } from 'src/types/wallet';
 import { AffectedTransactionItem } from './ChangeFee/AffectedTransactionItem';
@@ -25,7 +25,7 @@ const Label = styled(Header)`
     padding: 12px 20px;
 `;
 
-const StyledTrezorLink = styled(TrezorLink)`
+const StyledCerberusLink = styled(CerberusLink)`
     width: 100%;
 `;
 
@@ -68,7 +68,7 @@ export const ChainedTxs = ({ txs, network, explorerUrl }: ChainedTxsProps) => (
             </Label>
         )}
         {txs.own.map((tx, index) => (
-            <StyledTrezorLink key={tx.txid} href={`${explorerUrl}${tx.txid}`} variant="nostyle">
+            <StyledCerberusLink key={tx.txid} href={`${explorerUrl}${tx.txid}`} variant="nostyle">
                 <ChainedTransactionItem
                     key={tx.txid}
                     transaction={tx}
@@ -78,7 +78,7 @@ export const ChainedTxs = ({ txs, network, explorerUrl }: ChainedTxsProps) => (
                     accountKey={`${tx.descriptor}-${tx.symbol}-${tx.deviceState}`}
                     index={index}
                 />
-            </StyledTrezorLink>
+            </StyledCerberusLink>
         ))}
 
         {txs.others.length > 0 && (
@@ -87,9 +87,9 @@ export const ChainedTxs = ({ txs, network, explorerUrl }: ChainedTxsProps) => (
             </Label>
         )}
         {txs.others.map(tx => (
-            <StyledTrezorLink key={tx.txid} href={`${explorerUrl}${tx.txid}`} variant="nostyle">
+            <StyledCerberusLink key={tx.txid} href={`${explorerUrl}${tx.txid}`} variant="nostyle">
                 <StyledAffectedTransactionItem tx={tx} />
-            </StyledTrezorLink>
+            </StyledCerberusLink>
         ))}
     </Wrapper>
 );

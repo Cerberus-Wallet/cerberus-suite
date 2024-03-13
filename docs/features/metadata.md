@@ -3,7 +3,7 @@
 Metadata is a feature that allows the user to associate persistent data with their wallets, accounts, receive addresses, and outputs.
 Cerberus Suite refers to metadata as to "labeling" in the user interface.
 
-For non-technical introduction, see [Cerberus Learn](https://cerberus.uraanai.com/learn/a/labels-in-trezor-suite-app).
+For non-technical introduction, see [Cerberus Learn](https://cerberus.uraanai.com/learn/a/labels-in-cerberus-suite-app).
 
 ## Data stores
 

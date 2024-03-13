@@ -1,5 +1,5 @@
 // unit test for discovery actions
-// data provided by TrezorConnect are mocked
+// data provided by CerberusConnect are mocked
 
 import {
     prepareDiscoveryReducer,
@@ -17,7 +17,7 @@ import { testMocks } from '@suite-common/test-utils';
 import { notificationsActions } from '@suite-common/toast-notifications';
 import { DiscoveryStatus } from '@suite-common/wallet-constants';
 import * as discoveryActions from '@suite-common/wallet-core';
-import TrezorConnect from '@cerberus/connect';
+import CerberusConnect from '@cerberus/connect';
 
 import { configureStore, filterThunkActionTypes } from 'src/support/tests/configureStore';
 import walletSettingsReducer from 'src/reducers/wallet/settingsReducer';
@@ -43,23 +43,23 @@ type Fixture = Partial<Omit<FixtureType, 'connect'>> & {
 };
 type FixtureInput = Fixture | Promise<Fixture> | ((..._args: any[]) => any);
 
-const setTrezorConnectFixtures = (input?: FixtureInput) => {
+const setCerberusConnectFixtures = (input?: FixtureInput) => {
     let progressCallback = (..._args: any[]): any => {};
 
     let fixture = input;
-    const updateTrezorConnectFixtures = (input?: FixtureInput) => {
+    const updateCerberusConnectFixtures = (input?: FixtureInput) => {
         fixture = input;
     };
 
     // mocked function
     const mockedGetAccountInfo = (
-        params: Parameters<(typeof TrezorConnect)['getAccountInfo']>[0],
+        params: Parameters<(typeof CerberusConnect)['getAccountInfo']>[0],
     ) => {
         // this error applies only for tests
         if (typeof fixture === 'undefined') {
             return paramsError('Default error. Fixtures not set');
         }
-        // this promise will be resolved by TrezorConnect.cancel
+        // this promise will be resolved by CerberusConnect.cancel
         if (fixture instanceof Promise) {
             return fixture;
         }
@@ -156,17 +156,17 @@ const setTrezorConnectFixtures = (input?: FixtureInput) => {
         return paramsError('Fixture response not defined');
     };
 
-    jest.spyOn(TrezorConnect, 'on').mockImplementation((_event, cb) => {
+    jest.spyOn(CerberusConnect, 'on').mockImplementation((_event, cb) => {
         progressCallback = cb;
     });
-    jest.spyOn(TrezorConnect, 'off').mockImplementation(() => {
+    jest.spyOn(CerberusConnect, 'off').mockImplementation(() => {
         progressCallback = () => {};
     });
-    jest.spyOn(TrezorConnect, 'getAccountInfo').mockImplementation(mockedGetAccountInfo);
+    jest.spyOn(CerberusConnect, 'getAccountInfo').mockImplementation(mockedGetAccountInfo);
 
     return {
         mockedGetAccountInfo,
-        updateTrezorConnectFixtures,
+        updateCerberusConnectFixtures,
     };
 };
 
@@ -216,7 +216,7 @@ describe('Discovery Actions', () => {
     fixtures.forEach(f => {
         it(f.description, async () => {
             // set fixtures in @cerberus/connect
-            setTrezorConnectFixtures(f);
+            setCerberusConnectFixtures(f);
             const store = initStore(getInitialState(f.device));
             if (f.enabledNetworks) {
                 store.dispatch(
@@ -249,7 +249,7 @@ describe('Discovery Actions', () => {
     interruptionFixtures.forEach(f => {
         it(`Start/stop/change networks/start: ${f.description}`, async () => {
             // @ts-expect-error fixtures connect.interruption ...
-            setTrezorConnectFixtures(f);
+            setCerberusConnectFixtures(f);
             const store = initStore();
             // additional action listener for triggering "discovery.stop" action
             store.subscribe(() => {
@@ -301,7 +301,7 @@ describe('Discovery Actions', () => {
 
     changeNetworksFixtures.forEach(f => {
         it(`Change network: ${f.description}`, async () => {
-            setTrezorConnectFixtures(f);
+            setCerberusConnectFixtures(f);
             const state = getInitialState();
             const store = initStore(state);
             // additional action listener for triggering "discovery.updateNetworkSettings" action
@@ -436,7 +436,7 @@ describe('Discovery Actions', () => {
             setTimeout(() => resolve(paramsError('discovery_interrupted')), 100);
         });
         // set fixtures in @cerberus/connect
-        setTrezorConnectFixtures(f);
+        setCerberusConnectFixtures(f);
         const store = initStore();
         store.dispatch(
             createDiscoveryThunk({
@@ -468,7 +468,7 @@ describe('Discovery Actions', () => {
 
     it('Restart discovery (clear failed fields)', async () => {
         // fail on first account
-        setTrezorConnectFixtures({
+        setCerberusConnectFixtures({
             connect: { success: true, failedAccounts: ["m/84'/0'/0'"] },
         });
         const state = getInitialState();
@@ -487,7 +487,7 @@ describe('Discovery Actions', () => {
         expect(store.getState().wallet.discovery[0].failed.length).toBeGreaterThan(0);
 
         // change fixtures, this time no fail
-        setTrezorConnectFixtures({
+        setCerberusConnectFixtures({
             connect: { success: true },
         });
         // restart
@@ -503,19 +503,19 @@ describe('Discovery Actions', () => {
         await store.dispatch(restartDiscoveryThunk());
     });
 
-    it(`TrezorConnect responded with success but discovery was removed`, async () => {
+    it(`CerberusConnect responded with success but discovery was removed`, async () => {
         const f = new Promise<any>(resolve => {
             setTimeout(() => resolve({ success: true }), 100);
         });
         // set fixtures in @cerberus/connect
-        setTrezorConnectFixtures(f);
+        setCerberusConnectFixtures(f);
 
         const store = initStore();
         store.subscribe(() => {
             const actions = store.getActions();
             const a = actions[actions.length - 1];
             if (a.type === discoveryActions.updateDiscovery.type && a.payload.status === 1) {
-                // catch bundle update called from 'start()' and remove discovery before TrezorConnect response
+                // catch bundle update called from 'start()' and remove discovery before CerberusConnect response
                 store.dispatch(discoveryActions.removeDiscovery('device-state'));
             }
         });
@@ -530,19 +530,19 @@ describe('Discovery Actions', () => {
         expect(action?.type).toEqual(discoveryActions.removeDiscovery.type);
     });
 
-    it(`TrezorConnect responded with success but discovery is not running`, async () => {
+    it(`CerberusConnect responded with success but discovery is not running`, async () => {
         const f = new Promise<any>(resolve => {
             setTimeout(() => resolve({ success: true }), 100);
         });
         // set fixtures in @cerberus/connect
-        setTrezorConnectFixtures(f);
+        setCerberusConnectFixtures(f);
 
         const store = initStore();
         store.subscribe(() => {
             const actions = filterThunkActionTypes(store.getActions());
             const a = actions[actions.length - 1];
             if (a.type === discoveryActions.updateDiscovery.type && a.payload.status === 1) {
-                // catch bundle update called from 'start()' and stop discovery before TrezorConnect response
+                // catch bundle update called from 'start()' and stop discovery before CerberusConnect response
                 store.dispatch(
                     discoveryActions.updateDiscovery({
                         deviceState: 'device-state',
@@ -563,10 +563,10 @@ describe('Discovery Actions', () => {
     });
 
     it('Discovery completed but device is not connected anymore', async () => {
-        setTrezorConnectFixtures({
+        setCerberusConnectFixtures({
             connect: { success: true },
         });
-        const mockedGetFeatures = jest.spyOn(TrezorConnect, 'getFeatures');
+        const mockedGetFeatures = jest.spyOn(CerberusConnect, 'getFeatures');
         const store = initStore();
         store.dispatch(
             createDiscoveryThunk({
@@ -591,7 +591,7 @@ describe('Discovery Actions', () => {
             );
         });
         // set fixtures in @cerberus/connect
-        setTrezorConnectFixtures(f);
+        setCerberusConnectFixtures(f);
 
         const store = initStore();
         store.dispatch(
@@ -610,7 +610,7 @@ describe('Discovery Actions', () => {
             setTimeout(() => resolve(paramsError('{}', 'Method_Discovery_BundleException')), 100);
         });
         // set fixtures in @cerberus/connect
-        setTrezorConnectFixtures(f);
+        setCerberusConnectFixtures(f);
 
         const store = initStore();
         store.dispatch(
@@ -624,8 +624,8 @@ describe('Discovery Actions', () => {
         expect(action?.type).toEqual(notificationsActions.addToast.type);
     });
 
-    it('TrezorConnect did not emit any progress event', async () => {
-        jest.spyOn(TrezorConnect, 'getAccountInfo').mockImplementation(() =>
+    it('CerberusConnect did not emit any progress event', async () => {
+        jest.spyOn(CerberusConnect, 'getAccountInfo').mockImplementation(() =>
             Promise.resolve({
                 success: true,
                 payload: [null],
@@ -647,11 +647,11 @@ describe('Discovery Actions', () => {
 
     it('All accounts failed in runtime', async () => {
         // set empty fixtures in @cerberus/connect, update them in custom mock below
-        const { mockedGetAccountInfo, updateTrezorConnectFixtures } = setTrezorConnectFixtures();
-        jest.spyOn(TrezorConnect, 'getAccountInfo').mockImplementation(params => {
+        const { mockedGetAccountInfo, updateCerberusConnectFixtures } = setCerberusConnectFixtures();
+        jest.spyOn(CerberusConnect, 'getAccountInfo').mockImplementation(params => {
             // prepare response (all failed)
             const failedAccounts = params.bundle.map(({ path }) => path as string);
-            updateTrezorConnectFixtures({
+            updateCerberusConnectFixtures({
                 connect: {
                     success: true,
                     failedAccounts,
@@ -678,7 +678,7 @@ describe('Discovery Actions', () => {
     });
 
     it('All accounts failed in first iteration', async () => {
-        jest.spyOn(TrezorConnect, 'getAccountInfo').mockImplementation(params => {
+        jest.spyOn(CerberusConnect, 'getAccountInfo').mockImplementation(params => {
             // prepare json response
             const failedAccounts: any[] = [];
             for (let i = 0; i < params.bundle.length; i++) {
@@ -711,7 +711,7 @@ describe('Discovery Actions', () => {
     });
 
     it('selectIsDiscoveryAuthConfirmationRequired', async () => {
-        setTrezorConnectFixtures({
+        setCerberusConnectFixtures({
             connect: { success: true },
         });
         const state = getInitialState();

@@ -3,7 +3,7 @@ import {
     AccountLabels,
     WalletLabels,
 } from '@suite-common/metadata-types';
-import { TrezorConnect } from '@cerberus/connect';
+import { CerberusConnect } from '@cerberus/connect';
 
 export const FORMAT_VERSION = '1.0.0';
 
@@ -18,7 +18,7 @@ export const ENCRYPTION_VERSION: MetadataEncryptionVersion = 1;
 
 export const ENCRYPTION_VERSION_CONFIGS: Record<
     MetadataEncryptionVersion,
-    Parameters<TrezorConnect['cipherKeyValue']>[0]['bundle'][0]
+    Parameters<CerberusConnect['cipherKeyValue']>[0]['bundle'][0]
 > = {
     1: {
         path: ENABLE_LABELING_PATH,

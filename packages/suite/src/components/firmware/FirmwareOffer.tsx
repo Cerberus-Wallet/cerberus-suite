@@ -10,7 +10,7 @@ import { getFirmwareVersion } from '@cerberus/device-utils';
 import { AcquiredDevice } from '@suite-common/suite-types';
 import { FirmwareType } from '@cerberus/connect';
 
-import { Translation, TrezorLink } from 'src/components/suite';
+import { Translation, CerberusLink } from 'src/components/suite';
 import { FirmwareChangelog } from 'src/components/firmware';
 import { useFirmware, useTranslation, useSelector } from 'src/hooks/suite';
 import { getSuiteFirmwareTypeString } from 'src/utils/firmware';
@@ -44,7 +44,7 @@ const Label = styled.div`
     font-size: ${variables.FONT_SIZE.TINY};
 `;
 
-const StyledLink = styled(TrezorLink)`
+const StyledLink = styled(CerberusLink)`
     margin-left: auto;
     text-decoration: underline;
 

@@ -1,5 +1,5 @@
 import { testMocks } from '@suite-common/test-utils';
-import type { TrezorDevice } from 'src/types/suite';
+import type { CerberusDevice } from 'src/types/suite';
 import { DeviceModelInternal, type FirmwareRelease } from '@cerberus/connect';
 import * as URLS from '@cerberus/urls';
 
@@ -507,12 +507,12 @@ const parseFirmwareChangelog = [
             min_bridge_version: [2, 0, 25],
             min_firmware_version: [1, 6, 2],
             min_bootloader_version: [1, 5, 0],
-            url: 'firmware/1/trezor-1.9.4.bin',
-            url_bitcoinonly: 'firmware/1/trezor-1.9.4-bitcoinonly.bin',
+            url: 'firmware/1/cerberus-1.9.4.bin',
+            url_bitcoinonly: 'firmware/1/cerberus-1.9.4-bitcoinonly.bin',
             fingerprint: '867017bd784cc4e9ce6f0875c61ea86f89b19380d54045c34608b85472998000',
             fingerprint_bitcoinonly:
                 '3f73dfbcfc48f66c8814f6562524d81888230e0acd1c19b52b6e8772c6c67e7f',
-            notes: 'https://blog.cerberus.uraanai.com/trezor-suite-and-firmware-updates-rbf-and-spending-now-live-c2f69c42d7f7',
+            notes: 'https://blog.cerberus.uraanai.com/cerberus-suite-and-firmware-updates-rbf-and-spending-now-live-c2f69c42d7f7',
             changelog:
                 '* Replacement transaction signing for replace-by-fee.\n* Support for Output Descriptors export.\n* Show Ypub/Zpub correctly for multisig GetAddress.\n* Show amounts in mBTC, uBTC and sat denominations.',
         } as FirmwareRelease,
@@ -523,8 +523,8 @@ const parseFirmwareChangelog = [
                 'Show Ypub/Zpub correctly for multisig GetAddress.',
                 'Show amounts in mBTC, uBTC and sat denominations.',
             ],
-            notes: 'https://blog.cerberus.uraanai.com/trezor-suite-and-firmware-updates-rbf-and-spending-now-live-c2f69c42d7f7',
-            url: 'firmware/1/trezor-1.9.4.bin',
+            notes: 'https://blog.cerberus.uraanai.com/cerberus-suite-and-firmware-updates-rbf-and-spending-now-live-c2f69c42d7f7',
+            url: 'firmware/1/cerberus-1.9.4.bin',
             versionString: '1.9.4',
         },
     },
@@ -542,7 +542,7 @@ const getChangelogUrl = [
             features: {
                 internal_model: DeviceModelInternal.T2B1,
             },
-        } as TrezorDevice,
+        } as CerberusDevice,
         revision: 'ab12cd',
         result: 'https://github.com/Cerberus-Wallet/cerberus-firmware/blob/ab12cd/core/CHANGELOG.T2B1.md',
     },
@@ -553,7 +553,7 @@ const getChangelogUrl = [
             features: {
                 internal_model: DeviceModelInternal.T1B1,
             },
-        } as TrezorDevice,
+        } as CerberusDevice,
         result: 'https://github.com/Cerberus-Wallet/cerberus-firmware/blob/main/legacy/firmware/CHANGELOG.md',
     },
     {
@@ -563,7 +563,7 @@ const getChangelogUrl = [
             features: {
                 internal_model: DeviceModelInternal.T2T1,
             },
-        } as TrezorDevice,
+        } as CerberusDevice,
         result: 'https://github.com/Cerberus-Wallet/cerberus-firmware/blob/main/core/CHANGELOG.T2T1.md',
     },
 ];
@@ -581,7 +581,7 @@ const getCheckBackupUrl = [
             features: {
                 internal_model: DeviceModelInternal.T2B1,
             },
-        } as TrezorDevice,
+        } as CerberusDevice,
         result: URLS[`HELP_CENTER_DRY_RUN_${DeviceModelInternal.T2B1}_URL`],
     },
 ];
@@ -599,7 +599,7 @@ const getPackagingUrl = [
             features: {
                 internal_model: DeviceModelInternal.T2B1,
             },
-        } as TrezorDevice,
+        } as CerberusDevice,
         result: URLS[`HELP_CENTER_PACKAGING_${DeviceModelInternal.T2B1}_URL`],
     },
 ];
@@ -617,7 +617,7 @@ const getFirmwareDowngradeUrl = [
             features: {
                 internal_model: DeviceModelInternal.T2B1,
             },
-        } as TrezorDevice,
+        } as CerberusDevice,
         result: URLS[`HELP_CENTER_FW_DOWNGRADE_${DeviceModelInternal.T2B1}_URL`],
     },
 ];

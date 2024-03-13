@@ -3,7 +3,7 @@
 This method initiates wipe code change sequence.
 
 ```javascript
-const result = await TrezorConnect.changeWipeCode(params);
+const result = await CerberusConnect.changeWipeCode(params);
 ```
 
 ### Params

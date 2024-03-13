@@ -146,17 +146,17 @@ const config: webpack.Configuration = {
                 {
                     from: path.join(
                         CONNECT_WEB_EXTENSION_PACKAGE_PATH,
-                        'trezor-connect-webextension.js',
+                        'cerberus-connect-webextension.js',
                     ),
                     to: `${DIST}/vendor`,
                     info: { minimized: false },
                 },
                 {
-                    from: path.join(CONNECT_WEB_EXTENSION_PATH, 'trezor-usb-permissions.js'),
+                    from: path.join(CONNECT_WEB_EXTENSION_PATH, 'cerberus-usb-permissions.js'),
                     to: `${DIST}/vendor`,
                 },
                 {
-                    from: path.join(CONNECT_WEB_EXTENSION_PATH, 'trezor-usb-permissions.html'),
+                    from: path.join(CONNECT_WEB_EXTENSION_PATH, 'cerberus-usb-permissions.html'),
                     to: `${DIST}`,
                 },
                 {

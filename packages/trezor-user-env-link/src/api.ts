@@ -191,12 +191,12 @@ export const api = (controller: any) => ({
 
         return null;
     },
-    trezorUserEnvConnect: async () => {
+    cerberusUserEnvConnect: async () => {
         await controller.connect();
 
         return null;
     },
-    trezorUserEnvDisconnect: async () => {
+    cerberusUserEnvDisconnect: async () => {
         await controller.disconnect();
 
         return null;

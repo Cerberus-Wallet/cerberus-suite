@@ -1,11 +1,11 @@
-import TrezorConnect from '../../../src';
+import CerberusConnect from '../../../src';
 
-const { getController, setup, conditionalTest, initTrezorConnect } = global.Cerberus;
+const { getController, setup, conditionalTest, initCerberusConnect } = global.Cerberus;
 const { ADDRESS_N } = global.TestUtils;
 
 const controller = getController('applyFlags');
 
-describe('TrezorConnect.authorizeCoinjoin', () => {
+describe('CerberusConnect.authorizeCoinjoin', () => {
     beforeAll(async () => {
         await setup(controller, {
             mnemonic: 'mnemonic_all',
@@ -18,11 +18,11 @@ describe('TrezorConnect.authorizeCoinjoin', () => {
 
     beforeEach(async () => {
         // restart connect for each test (working with event listeners)
-        await TrezorConnect.dispose();
+        await CerberusConnect.dispose();
 
-        await initTrezorConnect(controller, { debug: false });
+        await initCerberusConnect(controller, { debug: false });
 
-        TrezorConnect.on('DEVICE_EVENT', ev => {
+        CerberusConnect.on('DEVICE_EVENT', ev => {
             if ('code' in ev.payload && ev.payload.code === 'ButtonRequest_PinEntry') {
                 controller.send({ type: 'emulator-input', value: '1234' });
             }
@@ -31,17 +31,17 @@ describe('TrezorConnect.authorizeCoinjoin', () => {
 
     afterAll(async () => {
         controller.dispose();
-        await TrezorConnect.dispose();
+        await CerberusConnect.dispose();
     });
 
     conditionalTest(['1', '<2.5.4'], 'Coinjoin success', async () => {
         // unlocked path is required for tx validation
-        const unlockPath = await TrezorConnect.unlockPath({
+        const unlockPath = await CerberusConnect.unlockPath({
             path: ADDRESS_N("m/10025'"),
         });
         if (!unlockPath.success) throw new Error(unlockPath.payload.error);
 
-        const auth = await TrezorConnect.authorizeCoinjoin({
+        const auth = await CerberusConnect.authorizeCoinjoin({
             coordinator: 'www.example.com',
             maxRounds: 2,
             maxCoordinatorFeeRate: 500000, // 5% => 0.005 * 10**8;
@@ -56,16 +56,16 @@ describe('TrezorConnect.authorizeCoinjoin', () => {
 
         await new Promise(resolve => setTimeout(resolve, 11000)); // wait for auto-lock
 
-        // remove all button listeners from initTrezorConnect (common.setup)
+        // remove all button listeners from initCerberusConnect (common.setup)
         // DebugLink decision SHOULD NOT! be required after authorization
-        TrezorConnect.removeAllListeners();
+        CerberusConnect.removeAllListeners();
 
-        await TrezorConnect.setBusy({ expiry_ms: 5000 });
+        await CerberusConnect.setBusy({ expiry_ms: 5000 });
 
         const commitmentData =
             '0f7777772e6578616d706c652e636f6d0000000000000000000000000000000000000000000000000000000000000001';
 
-        const proof = await TrezorConnect.getOwnershipProof({
+        const proof = await CerberusConnect.getOwnershipProof({
             coin: 'Testnet',
             path: ADDRESS_N("m/10025'/1'/0'/1'/1/0"),
             scriptType: 'SPENDTAPROOT',
@@ -87,7 +87,7 @@ describe('TrezorConnect.authorizeCoinjoin', () => {
                 'acd30aece582fd3e8153d00e53bd438a4dd83b09151163675fba2ceeffd8cfb33e296ba32838aeaea900a20f5fc1bf5d0989377c5becc90f0066b9dbd473444a',
         };
 
-        const params: Parameters<typeof TrezorConnect.signTransaction>[0] = {
+        const params: Parameters<typeof CerberusConnect.signTransaction>[0] = {
             inputs: [
                 {
                     // seed "alcohol woman abuse must during monitor noble actual mixed trade anger aisle"
@@ -157,7 +157,7 @@ describe('TrezorConnect.authorizeCoinjoin', () => {
 
         // ButtonRequests during signing is not emitted because of preauthorization
 
-        const round1 = await TrezorConnect.signTransaction(params);
+        const round1 = await CerberusConnect.signTransaction(params);
         expect(round1.payload).toMatchObject({
             signatures: [
                 undefined,
@@ -167,18 +167,18 @@ describe('TrezorConnect.authorizeCoinjoin', () => {
         });
 
         // sign again ...
-        const round2 = await TrezorConnect.signTransaction(params);
+        const round2 = await CerberusConnect.signTransaction(params);
         expect(round2.success).toBe(true);
 
         // ... and again, fees should exceed maxRounds
 
         // authorized coinjoin rounds already consumed, device will raise pin again
-        TrezorConnect.on('DEVICE_EVENT', ev => {
+        CerberusConnect.on('DEVICE_EVENT', ev => {
             if ('code' in ev.payload && ev.payload.code === 'ButtonRequest_PinEntry') {
                 controller.send({ type: 'emulator-input', value: '1234' });
             }
         });
-        const round3 = await TrezorConnect.signTransaction(params);
+        const round3 = await CerberusConnect.signTransaction(params);
         expect(round3.success).toBe(false);
         expect(round3.payload).toMatchObject({ error: 'No preauthorized operation' });
     });
@@ -186,9 +186,9 @@ describe('TrezorConnect.authorizeCoinjoin', () => {
     conditionalTest(['1', '<2.5.4'], 'Authorize and re-authorize', async () => {
         const confirmationScreensCount = 1;
         // setup two wallets, 1 with and 1 without passphrase
-        await TrezorConnect.applySettings({ use_passphrase: true });
+        await CerberusConnect.applySettings({ use_passphrase: true });
 
-        const walletDefault = await TrezorConnect.getDeviceState({
+        const walletDefault = await CerberusConnect.getDeviceState({
             device: {
                 instance: 0,
                 state: undefined, // reset state from previous tests on this instance
@@ -196,8 +196,8 @@ describe('TrezorConnect.authorizeCoinjoin', () => {
             useEmptyPassphrase: true,
         });
 
-        TrezorConnect.on('ui-request_passphrase', () => {
-            TrezorConnect.uiResponse({
+        CerberusConnect.on('ui-request_passphrase', () => {
+            CerberusConnect.uiResponse({
                 type: 'ui-receive_passphrase',
                 payload: {
                     passphraseOnDevice: false,
@@ -205,7 +205,7 @@ describe('TrezorConnect.authorizeCoinjoin', () => {
                 },
             });
         });
-        const walletA = await TrezorConnect.getDeviceState({
+        const walletA = await CerberusConnect.getDeviceState({
             device: {
                 instance: 1,
                 state: undefined, // reset state from previous tests on this instance
@@ -228,10 +228,10 @@ describe('TrezorConnect.authorizeCoinjoin', () => {
 
         // watch for button requests
         const spy = typeof jest !== 'undefined' ? jest.fn() : jasmine.createSpy('on.button');
-        TrezorConnect.on('button', spy);
+        CerberusConnect.on('button', spy);
 
         // authorize no passphrase wallet
-        await TrezorConnect.authorizeCoinjoin({
+        await CerberusConnect.authorizeCoinjoin({
             ...params,
             device: { instance: 0, state: walletDefault.payload.state },
             useEmptyPassphrase: true,
@@ -240,7 +240,7 @@ describe('TrezorConnect.authorizeCoinjoin', () => {
         expect(spy).toHaveBeenCalledTimes(1 * confirmationScreensCount);
 
         // re-authorize
-        await TrezorConnect.authorizeCoinjoin({
+        await CerberusConnect.authorizeCoinjoin({
             ...params,
             device: { instance: 0, state: walletDefault.payload.state },
             useEmptyPassphrase: true,
@@ -250,7 +250,7 @@ describe('TrezorConnect.authorizeCoinjoin', () => {
         expect(spy).toHaveBeenCalledTimes(1 * confirmationScreensCount); // no more button requests
 
         // authorize passphrase wallet
-        await TrezorConnect.authorizeCoinjoin({
+        await CerberusConnect.authorizeCoinjoin({
             ...params,
             device: { instance: 1, state: walletA.payload.state },
         });
@@ -258,14 +258,14 @@ describe('TrezorConnect.authorizeCoinjoin', () => {
         expect(spy).toHaveBeenCalledTimes(2 * confirmationScreensCount);
 
         // re-authorize passphrase wallet
-        await TrezorConnect.authorizeCoinjoin({
+        await CerberusConnect.authorizeCoinjoin({
             ...params,
             device: { instance: 1, state: walletA.payload.state },
             preauthorized: true,
         });
 
         // re-authorize no passphrase wallet again
-        await TrezorConnect.authorizeCoinjoin({
+        await CerberusConnect.authorizeCoinjoin({
             ...params,
             device: { instance: 0, state: walletDefault.payload.state },
             useEmptyPassphrase: true,
@@ -273,7 +273,7 @@ describe('TrezorConnect.authorizeCoinjoin', () => {
         });
 
         // re-authorize passphrase wallet again
-        await TrezorConnect.authorizeCoinjoin({
+        await CerberusConnect.authorizeCoinjoin({
             ...params,
             device: { instance: 1, state: walletA.payload.state },
             preauthorized: true,
@@ -282,6 +282,6 @@ describe('TrezorConnect.authorizeCoinjoin', () => {
         expect(spy).toHaveBeenCalledTimes(2 * confirmationScreensCount); // no more button requests
 
         // disable passphrase for future tests
-        await TrezorConnect.applySettings({ use_passphrase: false });
+        await CerberusConnect.applySettings({ use_passphrase: false });
     });
 });

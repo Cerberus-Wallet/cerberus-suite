@@ -25,7 +25,7 @@ export const LOCK_ROUTER = '@suite/lock-router';
 export const LOCK_TYPE = {
     NONE: 0,
     ROUTER: 1, // restricted route changes, all other actions are possible
-    DEVICE: 2, // restricted device call (TrezorConnect)
+    DEVICE: 2, // restricted device call (CerberusConnect)
     UI: 3, // restricted most of the UI actions (buttons, keyboard etc.)
 } as const;
 export const REQUEST_DEVICE_RECONNECT = '@suite/request-device-reconnect';

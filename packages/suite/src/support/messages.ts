@@ -4388,7 +4388,7 @@ export default defineMessages({
     FW_CAPABILITY_CONNECT_OUTDATED: {
         id: 'FW_CAPABILITY_CONNECT_OUTDATED',
         defaultMessage: 'Application update required',
-        description: 'Firmware is too NEW use this coin (trezor-connect is outdated)',
+        description: 'Firmware is too NEW use this coin (cerberus-connect is outdated)',
     },
     MODAL_ADD_ACCOUNT_NO_ACCOUNT: {
         id: 'MODAL_ADD_ACCOUNT_NO_ACCOUNT',
@@ -7667,7 +7667,7 @@ export default defineMessages({
         id: 'TR_TERMS_AND_PRIVACY_CONFIRMATION',
         description: 'Checkbox in coinjoin settings',
         defaultMessage:
-            'I agree to the <trezor>Cerberus Suite Terms</trezor> and <coordinator>zkSNACKs Coordinator Terms</coordinator>',
+            'I agree to the <cerberus>Cerberus Suite Terms</cerberus> and <coordinator>zkSNACKs Coordinator Terms</coordinator>',
     },
     TR_CONFIRM_CONDITIONS: {
         id: 'TR_CONFIRM_CONDITIONS',

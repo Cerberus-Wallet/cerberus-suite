@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { useNavigation } from '@react-navigation/native';
 
-import { Button, TrezorSuiteLiteHeader } from '@suite-native/atoms';
+import { Button, CerberusSuiteLiteHeader } from '@suite-native/atoms';
 import { accountsActions, AccountsRootState, selectAccountByKey } from '@suite-common/wallet-core';
 import { AccountKey } from '@suite-common/wallet-types';
 import {
@@ -49,7 +49,7 @@ export const AccountSettingsRemoveCoinButton = ({
             pictogramVariant: 'red',
             title: (
                 <>
-                    Do you really want to remove this coin from <TrezorSuiteLiteHeader />?
+                    Do you really want to remove this coin from <CerberusSuiteLiteHeader />?
                 </>
             ),
             description:

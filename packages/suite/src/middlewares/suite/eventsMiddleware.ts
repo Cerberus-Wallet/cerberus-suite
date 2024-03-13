@@ -32,7 +32,7 @@ const eventsMiddleware =
         }
 
         if (action.type === DEVICE.CONNECT || action.type === DEVICE.CONNECT_UNACQUIRED) {
-            // get TrezorDevice from @cerberus/connect:Device object
+            // get CerberusDevice from @cerberus/connect:Device object
             const devices = selectDevices(api.getState());
             const device = devices.find(d => d.path === action.payload.path);
             if (!device) return action; // this shouldn't happen

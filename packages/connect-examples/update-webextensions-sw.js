@@ -8,16 +8,16 @@ const fetch = require('node-fetch');
 
 const rootPaths = ['webextension-mv3-sw'];
 
-const trezorConnectSrcIndex = process.argv.indexOf('--trezor-connect-src');
+const cerberusConnectSrcIndex = process.argv.indexOf('--cerberus-connect-src');
 const buildFolderIndex = process.argv.indexOf('--build-folder');
 const npmSrcIndex = process.argv.indexOf('--npm-src');
 
 const DEFAULT_SRC = 'https://connect.cerberus.uraanai.com/9/';
-let trezorConnectSrc = DEFAULT_SRC;
+let cerberusConnectSrc = DEFAULT_SRC;
 
-if (trezorConnectSrcIndex > -1) {
-    trezorConnectSrc = process.argv[trezorConnectSrcIndex + 1];
-    console.log('trezorConnectSrc: ', trezorConnectSrc);
+if (cerberusConnectSrcIndex > -1) {
+    cerberusConnectSrc = process.argv[cerberusConnectSrcIndex + 1];
+    console.log('cerberusConnectSrc: ', cerberusConnectSrc);
 }
 
 let buildFolder = 'build';
@@ -48,12 +48,12 @@ rootPaths.forEach(dir => {
     if (npmSrc) {
         fetch(npmSrc).then(res => {
             const dest = fs.createWriteStream(
-                path.join(rootPath, buildFolder, 'vendor', 'trezor-connect-webextension.js'),
+                path.join(rootPath, buildFolder, 'vendor', 'cerberus-connect-webextension.js'),
             );
             res.body.pipe(dest);
         });
     } else {
-        ['trezor-connect-webextension.js', 'trezor-connect-webextension-proxy.js'].forEach(p => {
+        ['cerberus-connect-webextension.js', 'cerberus-connect-webextension-proxy.js'].forEach(p => {
             fs.copyFileSync(
                 path.join(__dirname, '../connect-webextension', 'build', p),
                 path.join(rootPath, buildFolder, 'vendor', p),
@@ -74,7 +74,7 @@ rootPaths.forEach(dir => {
                 return;
             }
 
-            const replaced = contents.replace(DEFAULT_SRC, trezorConnectSrc);
+            const replaced = contents.replace(DEFAULT_SRC, cerberusConnectSrc);
 
             fs.writeFile(path.join(rootPath, buildFolder, p), replaced, 'utf-8', err => {
                 if (err) {

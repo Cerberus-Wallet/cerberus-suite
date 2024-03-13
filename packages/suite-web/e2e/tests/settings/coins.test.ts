@@ -16,7 +16,7 @@ describe('Coin Settings', () => {
         cy.passThroughInitialRun();
 
         requests = [];
-        cy.interceptDataTrezorIo(requests);
+        cy.interceptDataCerberusIo(requests);
     });
 
     it('go to wallet settings page, check BTC, activate all coins, deactivate all coins, set custom backend', () => {
@@ -34,14 +34,14 @@ describe('Coin Settings', () => {
             'vtc',
             'zec',
             'ada',
-            // 'sol', FIXME: disabled till available in trezor-user-env
+            // 'sol', FIXME: disabled till available in cerberus-user-env
             'test',
             'tsep',
             'tgor',
             'thol',
             'txrp',
             'tada',
-            // 'dsol', FIXME: disabled till available in trezor-user-env
+            // 'dsol', FIXME: disabled till available in cerberus-user-env
         ];
 
         // only btc is selected by default;

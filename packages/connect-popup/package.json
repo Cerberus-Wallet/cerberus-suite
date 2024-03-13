@@ -33,7 +33,7 @@
         "@playwright/browser-webkit": "^1.41.2",
         "@playwright/test": "^1.41.2",
         "@cerberus/node-utils": "workspace:*",
-        "@cerberus/trezor-user-env-link": "workspace:*",
+        "@cerberus/cerberus-user-env-link": "workspace:*",
         "@cerberus/utils": "workspace:*",
         "@types/react": "18.2.55",
         "copy-webpack-plugin": "^12.0.2",

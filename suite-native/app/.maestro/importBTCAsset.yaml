@@ -3,7 +3,7 @@
 # 2. Import BTC asset via text
 # 3. Verify that asset has been synced
 
-appId: io.trezor.suite.${ENV}
+appId: io.cerberus.suite.${ENV}
 env:
     NETWORK: 'Bitcoin'
     COIN_ADDRESS: 'zpub6rszzdAK6RuafeRwyN8z1cgWcXCuKbLmjjfnrW4fWKtcoXQ8787214pNJjnBG5UATyghuNzjn6Lfp5k5xymrLFJnCy46bMYJPyZsbpFGagT'

@@ -42,7 +42,7 @@ const initStore = (state: State) => {
     return store;
 };
 
-describe('TrezorConnect Actions', () => {
+describe('CerberusConnect Actions', () => {
     it('Success', () => {
         const state = getInitialState();
         const store = initStore(state);
@@ -50,7 +50,7 @@ describe('TrezorConnect Actions', () => {
     });
 
     it('Error', async () => {
-        testMocks.setTrezorConnectFixtures(() => {
+        testMocks.setCerberusConnectFixtures(() => {
             throw new Error('Iframe error');
         });
         const state = getInitialState();
@@ -63,7 +63,7 @@ describe('TrezorConnect Actions', () => {
     });
 
     it('TypedError', async () => {
-        testMocks.setTrezorConnectFixtures(() => ({
+        testMocks.setCerberusConnectFixtures(() => ({
             message: 'Iframe error',
             code: 'SomeCode',
         }));
@@ -77,7 +77,7 @@ describe('TrezorConnect Actions', () => {
     });
 
     it('Error as string', async () => {
-        testMocks.setTrezorConnectFixtures(() => 'Iframe error');
+        testMocks.setCerberusConnectFixtures(() => 'Iframe error');
         const state = getInitialState();
         const store = initStore(state);
         try {
@@ -95,7 +95,7 @@ describe('TrezorConnect Actions', () => {
         expect(() => store.dispatch(connectInitThunk())).not.toThrow();
 
         const actions = store.getActions();
-        const { emitTestEvent } = testMocks.getTrezorConnectMock();
+        const { emitTestEvent } = testMocks.getCerberusConnectMock();
 
         emitTestEvent(DEVICE_EVENT, { type: DEVICE_EVENT });
         expect(actions.pop()).toEqual({ type: DEVICE_EVENT });
@@ -113,7 +113,7 @@ describe('TrezorConnect Actions', () => {
         const state = getInitialState();
         const store = initStore(state);
         await store.dispatch(connectInitThunk());
-        await testMocks.getTrezorConnectMock().getFeatures();
+        await testMocks.getCerberusConnectMock().getFeatures();
         const actions = store.getActions();
         // check actions in reversed order
         expect(actions.pop()).toEqual({

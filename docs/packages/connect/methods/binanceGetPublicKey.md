@@ -4,7 +4,7 @@ Display requested public key derived by given [BIP44 path](../path.md) on device
 User is presented with a description of the requested public key and asked to confirm the export.
 
 ```javascript
-const result = await TrezorConnect.binanceGetPublicKey(params);
+const result = await CerberusConnect.binanceGetPublicKey(params);
 ```
 
 ### Params
@@ -14,18 +14,18 @@ const result = await TrezorConnect.binanceGetPublicKey(params);
 #### Exporting single address
 
 -   `path` — _required_ `string | Array<number>` minimum length is `5`. [read more](../path.md)
--   `showOnTrezor` — _optional_ `boolean` determines if address will be displayed on device. Default is set to `true`
+-   `showOnCerberus` — _optional_ `boolean` determines if address will be displayed on device. Default is set to `true`
 
 #### Exporting bundle of addresses
 
--   `bundle` - `Array` of Objects with `path` and `showOnTrezor` fields
+-   `bundle` - `Array` of Objects with `path` and `showOnCerberus` fields
 
 ### Example
 
 Displays public key derived from BIP44 path:
 
 ```javascript
-TrezorConnect.binanceGetPublicKey({
+CerberusConnect.binanceGetPublicKey({
     path: "m/44'/714'/0'/0/0",
 });
 ```
@@ -33,11 +33,11 @@ TrezorConnect.binanceGetPublicKey({
 Return a bundle of public keys without displaying them on device:
 
 ```javascript
-TrezorConnect.binanceGetPublicKey({
+CerberusConnect.binanceGetPublicKey({
     bundle: [
-        { path: "m/44'/714'/0'/0/0", showOnTrezor: false }, // public key 1
-        { path: "m/44'/714'/1'/0/0", showOnTrezor: false }, // public key 2
-        { path: "m/44'/714'/2'/0/0", showOnTrezor: false }, // public key 3
+        { path: "m/44'/714'/0'/0/0", showOnCerberus: false }, // public key 1
+        { path: "m/44'/714'/1'/0/0", showOnCerberus: false }, // public key 2
+        { path: "m/44'/714'/2'/0/0", showOnCerberus: false }, // public key 3
     ],
 });
 ```

@@ -4,7 +4,7 @@ Asks device to sign given transaction. User is asked to confirm all transaction
 details on Cerberus.
 
 ```javascript
-const result = await TrezorConnect.rippleSignTransaction(params);
+const result = await CerberusConnect.rippleSignTransaction(params);
 ```
 
 ### Params
@@ -20,7 +20,7 @@ const result = await TrezorConnect.rippleSignTransaction(params);
 ### Example
 
 ```javascript
-TrezorConnect.rippleSignTransaction(
+CerberusConnect.rippleSignTransaction(
     path: "m/44'/144'/0'/0/0",
     transaction: {
         fee: '100000',

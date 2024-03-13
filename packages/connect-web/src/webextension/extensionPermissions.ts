@@ -4,7 +4,7 @@ import { config } from '@cerberus/connect/lib/data/config';
 import { WEBEXTENSION } from '@cerberus/connect/lib/events';
 
 // This file is hosted on https://connect.cerberus.uraanai.com/*/extension-permissions.html
-// It's included WITHIN webextension application in trezor-usb-permissions.html to allow pairing webusb and cerberus.uraanai.com domain properly.
+// It's included WITHIN webextension application in cerberus-usb-permissions.html to allow pairing webusb and cerberus.uraanai.com domain properly.
 
 // send message from iframe to parent
 export const sendMessage = (message: string, origin: string) => {

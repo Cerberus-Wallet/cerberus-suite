@@ -10,7 +10,7 @@ import {
     Screen,
     StackToStackCompositeScreenProps,
 } from '@suite-native/navigation';
-import TrezorConnect, { AccountInfo } from '@cerberus/connect';
+import CerberusConnect, { AccountInfo } from '@cerberus/connect';
 import { TokenAddress } from '@suite-common/wallet-types';
 
 import { AccountImportLoader } from '../components/AccountImportLoader';
@@ -65,7 +65,7 @@ export const AccountImportLoadingScreen = ({
 
         const getAccountInfo = async () => {
             const [fetchedAccountInfo] = await Promise.all([
-                TrezorConnect.getAccountInfo({
+                CerberusConnect.getAccountInfo({
                     coin: networkSymbol,
                     descriptor: xpubAddress,
                     details: 'txs',

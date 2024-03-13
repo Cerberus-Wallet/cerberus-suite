@@ -146,14 +146,14 @@ export const selectDevice = (payload: UiRequestSelectDevice['payload']) => {
         }
 
         const deviceIcon = document.createElement('span');
-        deviceIcon.className = 'trezor_icon';
+        deviceIcon.className = 'cerberus_icon';
 
         const { features } = device;
 
         if (features) {
-            deviceIcon.classList.add(`trezor_icon_${features.internal_model.toLowerCase()}`);
+            deviceIcon.classList.add(`cerberus_icon_${features.internal_model.toLowerCase()}`);
         } else {
-            deviceIcon.classList.add('trezor_icon_unknown');
+            deviceIcon.classList.add('cerberus_icon_unknown');
         }
 
         const deviceName = document.createElement('span');

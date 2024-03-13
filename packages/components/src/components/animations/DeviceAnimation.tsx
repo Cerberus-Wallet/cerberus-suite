@@ -64,7 +64,7 @@ export const DeviceAnimation = forwardRef<HTMLVideoElement, DeviceAnimationProps
                     >
                         <source
                             src={resolveStaticPath(
-                                `videos/device/trezor_${deviceModelInternal.toLowerCase()}_${type.toLowerCase()}${theme}.webm`,
+                                `videos/device/cerberus_${deviceModelInternal.toLowerCase()}_${type.toLowerCase()}${theme}.webm`,
                             )}
                             type="video/webm"
                         />
@@ -83,7 +83,7 @@ export const DeviceAnimation = forwardRef<HTMLVideoElement, DeviceAnimationProps
                     >
                         <source
                             src={resolveStaticPath(
-                                `videos/device/trezor_${DeviceModelInternal.T1B1.toLowerCase()}_${type.toLowerCase()}${theme}.webm`,
+                                `videos/device/cerberus_${DeviceModelInternal.T1B1.toLowerCase()}_${type.toLowerCase()}${theme}.webm`,
                             )}
                             type="video/webm"
                         />
@@ -99,7 +99,7 @@ export const DeviceAnimation = forwardRef<HTMLVideoElement, DeviceAnimationProps
                     >
                         <source
                             src={resolveStaticPath(
-                                `videos/device/trezor_${deviceModelInternal.toLowerCase()}_hologram.webm`,
+                                `videos/device/cerberus_${deviceModelInternal.toLowerCase()}_hologram.webm`,
                             )}
                             type="video/webm"
                         />
@@ -117,7 +117,7 @@ export const DeviceAnimation = forwardRef<HTMLVideoElement, DeviceAnimationProps
                     >
                         <source
                             src={resolveStaticPath(
-                                `videos/device/trezor_${DeviceModelInternal.T2B1.toLowerCase()}_rotate_color_${
+                                `videos/device/cerberus_${DeviceModelInternal.T2B1.toLowerCase()}_rotate_color_${
                                     // if device unit color is not set, use first color available
                                     deviceUnitColor ?? 1
                                 }.webm`,

@@ -20,7 +20,7 @@ describe('Backup success', () => {
         cy.passThroughInitialRun();
 
         requests = [];
-        cy.interceptDataTrezorIo(requests);
+        cy.interceptDataCerberusIo(requests);
     });
 
     it('Successful backup happy path', () => {

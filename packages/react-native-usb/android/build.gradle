@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'maven-publish'
 
-group = 'io.trezor.rnusb'
+group = 'io.cerberus.rnusb'
 version = '0.1.0'
 
 buildscript {
@@ -62,7 +62,7 @@ android {
     jvmTarget = JavaVersion.VERSION_17.majorVersion
   }
 
-  namespace "io.trezor.rnusb"
+  namespace "io.cerberus.rnusb"
   defaultConfig {
     minSdkVersion safeExtGet("minSdkVersion", 21)
     targetSdkVersion safeExtGet("targetSdkVersion", 33)

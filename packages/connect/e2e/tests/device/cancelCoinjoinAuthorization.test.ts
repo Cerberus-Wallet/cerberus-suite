@@ -1,9 +1,9 @@
-import TrezorConnect, { Success, PROTO, Unsuccessful } from '../../../src';
+import CerberusConnect, { Success, PROTO, Unsuccessful } from '../../../src';
 
 const { ADDRESS_N } = global.TestUtils;
-const { getController, setup, conditionalTest, initTrezorConnect } = global.Cerberus;
+const { getController, setup, conditionalTest, initCerberusConnect } = global.Cerberus;
 
-describe('TrezorConnect.cancelCoinjoinAuthorization', () => {
+describe('CerberusConnect.cancelCoinjoinAuthorization', () => {
     const controller = getController();
 
     beforeAll(async () => {
@@ -14,17 +14,17 @@ describe('TrezorConnect.cancelCoinjoinAuthorization', () => {
 
     beforeEach(async () => {
         // restart connect for each test (working with event listeners)
-        await TrezorConnect.dispose();
-        await initTrezorConnect(controller, { debug: false });
+        await CerberusConnect.dispose();
+        await initCerberusConnect(controller, { debug: false });
     });
 
     afterAll(async () => {
         controller.dispose();
-        await TrezorConnect.dispose();
+        await CerberusConnect.dispose();
     });
 
     conditionalTest(['1', '<2.5.4'], 'Cancel authorization works', async () => {
-        const auth = await TrezorConnect.authorizeCoinjoin({
+        const auth = await CerberusConnect.authorizeCoinjoin({
             coordinator: 'www.example.com',
             maxRounds: 2,
             maxCoordinatorFeeRate: 500000, // 5% => 0.005 * 10**8;
@@ -40,7 +40,7 @@ describe('TrezorConnect.cancelCoinjoinAuthorization', () => {
         const commitmentData =
             '0f7777772e6578616d706c652e636f6d0000000000000000000000000000000000000000000000000000000000000001';
 
-        const proof = await TrezorConnect.getOwnershipProof({
+        const proof = await CerberusConnect.getOwnershipProof({
             coin: 'Testnet',
             path: ADDRESS_N("m/10025'/1'/0'/1'/1/0"),
             scriptType: 'SPENDTAPROOT',
@@ -51,13 +51,13 @@ describe('TrezorConnect.cancelCoinjoinAuthorization', () => {
 
         expect(proof.success).toBe(true);
 
-        const cancelAuthResult = await TrezorConnect.cancelCoinjoinAuthorization({});
+        const cancelAuthResult = await CerberusConnect.cancelCoinjoinAuthorization({});
         expect(cancelAuthResult.success).toBe(true);
         expect((cancelAuthResult as Success<PROTO.Success>).payload.message).toBe(
             'Authorization cancelled',
         );
 
-        const proof2 = await TrezorConnect.getOwnershipProof({
+        const proof2 = await CerberusConnect.getOwnershipProof({
             coin: 'Testnet',
             path: ADDRESS_N("m/10025'/1'/0'/1'/1/0"),
             scriptType: 'SPENDTAPROOT',

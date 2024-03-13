@@ -47,7 +47,7 @@ export default class FirmwareUpdate extends AbstractMethod<'firmwareUpdate', Par
                 // either receive version and btcOnly
                 version: payload.version,
                 btcOnly: payload.btcOnly,
-                baseUrl: payload.baseUrl || 'https://data.trezorcheck.io',
+                baseUrl: payload.baseUrl || 'https://data.trezer.io',
                 intermediaryVersion: payload.intermediaryVersion,
             };
         }

@@ -28,7 +28,7 @@ export const CardanoGetAddress = Type.Object({
     protocolMagic: Type.Number(),
     networkId: Type.Number(),
     address: Type.Optional(Type.String()),
-    showOnTrezor: Type.Optional(Type.Boolean()),
+    showOnCerberus: Type.Optional(Type.Boolean()),
     derivationType: Type.Optional(PROTO.EnumCardanoDerivationType),
     chunkify: Type.Optional(Type.Boolean()),
 });

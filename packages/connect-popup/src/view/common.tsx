@@ -207,7 +207,7 @@ export const postMessageToParent = (message: CoreEventMessage) => {
         // post message to parent and wait for POPUP.INIT message
         window.opener.postMessage(message, '*');
     } else {
-        // webextensions doesn't have "window.opener" reference and expect this message in "content-script" above popup [see: packages/connect-web/src/webextension/trezor-content-script.js]
+        // webextensions doesn't have "window.opener" reference and expect this message in "content-script" above popup [see: packages/connect-web/src/webextension/cerberus-content-script.js]
         // future communication channel with webextension iframe will be "ChromePort"
 
         // and electron (electron which uses connect hosted outside)

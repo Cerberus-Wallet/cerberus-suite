@@ -181,7 +181,7 @@ const mockFetch = (data: any) =>
 
 describe('Storage actions', () => {
     // afterEach(async () => {
-    //     await indexedDB.deleteDatabase('trezor-suite');
+    //     await indexedDB.deleteDatabase('cerberus-suite');
     // });
 
     it('should store wallet settings in the db and update them automatically', async () => {

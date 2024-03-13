@@ -1,6 +1,6 @@
 import * as yup from 'yup';
 
-import { isAscii, isHex } from '@trezor/utils';
+import { isAscii, isHex } from '@cerberus/utils';
 
 yup.setLocale({
     string: {

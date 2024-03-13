@@ -1,19 +1,19 @@
-import TrezorConnect, {
+import CerberusConnect, {
     DEVICE,
     DEVICE_EVENT,
     TRANSPORT_EVENT,
     WEBEXTENSION,
 } from '@cerberus/connect-web';
 
-import { TrezorConnectDevice, Dispatch, Field, GetState } from '../types';
+import { CerberusConnectDevice, Dispatch, Field, GetState } from '../types';
 import * as ACTIONS from './index';
 
-type ConnectOptions = Parameters<(typeof TrezorConnect)['init']>[0];
-export type TrezorConnectAction =
+type ConnectOptions = Parameters<(typeof CerberusConnect)['init']>[0];
+export type CerberusConnectAction =
     | { type: typeof ACTIONS.ON_SELECT_DEVICE; path: string }
-    | { type: typeof DEVICE.CONNECT; device: TrezorConnectDevice }
-    | { type: typeof DEVICE.CONNECT_UNACQUIRED; device: TrezorConnectDevice }
-    | { type: typeof DEVICE.DISCONNECT; device: TrezorConnectDevice }
+    | { type: typeof DEVICE.CONNECT; device: CerberusConnectDevice }
+    | { type: typeof DEVICE.CONNECT_UNACQUIRED; device: CerberusConnectDevice }
+    | { type: typeof DEVICE.DISCONNECT; device: CerberusConnectDevice }
     | { type: typeof ACTIONS.ON_CHANGE_CONNECT_OPTIONS; payload: ConnectOptions }
     | { type: typeof ACTIONS.ON_HANDSHAKE_CONFIRMED }
     | {
@@ -37,27 +37,27 @@ export const onConnectOptionChange = (option: string, value: any) => ({
 });
 
 export const init =
-    (options: Partial<Parameters<(typeof TrezorConnect)['init']>[0]> = {}) =>
+    (options: Partial<Parameters<(typeof CerberusConnect)['init']>[0]> = {}) =>
     async (dispatch: Dispatch) => {
-        window.TrezorConnect = TrezorConnect;
+        window.CerberusConnect = CerberusConnect;
 
         // The event `WEBEXTENSION.CHANNEL_HANDSHAKE_CONFIRM` is coming from @cerberus/connect-webextension/proxy
         // that is replacing @cerberus/connect-web when connect-explorer is run in connect-explorer-webextension
         // so Typescript cannot recognize it.
-        (TrezorConnect.on as any)(WEBEXTENSION.CHANNEL_HANDSHAKE_CONFIRM, event => {
+        (CerberusConnect.on as any)(WEBEXTENSION.CHANNEL_HANDSHAKE_CONFIRM, event => {
             if (event.type === WEBEXTENSION.CHANNEL_HANDSHAKE_CONFIRM) {
                 dispatch({ type: ACTIONS.ON_HANDSHAKE_CONFIRMED });
             }
         });
 
-        TrezorConnect.on(DEVICE_EVENT, event => {
+        CerberusConnect.on(DEVICE_EVENT, event => {
             dispatch({
                 type: event.type,
                 device: event.payload,
             });
         });
 
-        TrezorConnect.on(TRANSPORT_EVENT, _event => {
+        CerberusConnect.on(TRANSPORT_EVENT, _event => {
             // this type of event should not be emitted in "popup mode"
         });
 
@@ -97,7 +97,7 @@ export const init =
         };
 
         try {
-            await TrezorConnect.init(connectOptions);
+            await CerberusConnect.init(connectOptions);
         } catch (err) {
             console.log('ERROR', err);
 
@@ -109,8 +109,8 @@ export const init =
 
 export const onSubmitInit = () => async (dispatch: Dispatch, getState: GetState) => {
     const { connect } = getState();
-    // Disposing TrezorConnect to init it again.
-    await TrezorConnect.dispose();
+    // Disposing CerberusConnect to init it again.
+    await CerberusConnect.dispose();
 
     return dispatch(init(connect.options));
 };

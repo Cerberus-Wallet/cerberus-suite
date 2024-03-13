@@ -1,4 +1,4 @@
-import { TrezorConnect, PROTO } from '../../..';
+import { CerberusConnect, PROTO } from '../../..';
 
 const {
     CardanoAddressType,
@@ -11,7 +11,7 @@ const {
     CardanoTxSigningMode,
 } = PROTO;
 
-export const cardanoGetAddress = async (api: TrezorConnect) => {
+export const cardanoGetAddress = async (api: CerberusConnect) => {
     // regular
     const singleAddress = await api.cardanoGetAddress({
         addressParameters: {
@@ -146,7 +146,7 @@ export const cardanoGetAddress = async (api: TrezorConnect) => {
         address: 'a',
         protocolMagic: 0,
         networkId: 0,
-        showOnTrezor: true,
+        showOnCerberus: true,
     });
 
     // with invalid params
@@ -160,7 +160,7 @@ export const cardanoGetAddress = async (api: TrezorConnect) => {
     api.cardanoGetAddress({ bundle: 1 });
 };
 
-export const cardanoGetNativeScriptHash = async (api: TrezorConnect) => {
+export const cardanoGetNativeScriptHash = async (api: CerberusConnect) => {
     const result = await api.cardanoGetNativeScriptHash({
         script: {
             type: CardanoNativeScriptType.PUB_KEY,
@@ -191,7 +191,7 @@ export const cardanoGetNativeScriptHash = async (api: TrezorConnect) => {
     }
 };
 
-export const cardanoGetPublicKey = async (api: TrezorConnect) => {
+export const cardanoGetPublicKey = async (api: CerberusConnect) => {
     // regular
     const singlePK = await api.cardanoGetPublicKey({ path: 'm/44' });
     if (singlePK.success) {
@@ -220,7 +220,7 @@ export const cardanoGetPublicKey = async (api: TrezorConnect) => {
     }
 };
 
-export const cardanoSignTransaction = async (api: TrezorConnect) => {
+export const cardanoSignTransaction = async (api: CerberusConnect) => {
     const sign = await api.cardanoSignTransaction({
         inputs: [
             {

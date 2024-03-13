@@ -46,7 +46,7 @@ describe('buttonRequest middleware', () => {
         const store = initStore(getInitialState());
         await store.dispatch(connectInitThunk());
         const call = store.dispatch(deviceSettingsActions.changePin({ remove: false }));
-        const { emitTestEvent } = testMocks.getTrezorConnectMock();
+        const { emitTestEvent } = testMocks.getCerberusConnectMock();
         // fake few ui events, just like when user is changing PIN
         emitTestEvent(UI_EVENT, {
             type: UI.REQUEST_BUTTON,

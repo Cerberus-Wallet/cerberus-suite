@@ -34,7 +34,7 @@ export default class EosGetPublicKey extends AbstractMethod<
 
             return {
                 address_n: path,
-                show_display: typeof batch.showOnTrezor === 'boolean' ? batch.showOnTrezor : false,
+                show_display: typeof batch.showOnCerberus === 'boolean' ? batch.showOnCerberus : false,
                 chunkify: typeof batch.chunkify === 'boolean' ? batch.chunkify : false,
             };
         });

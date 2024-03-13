@@ -106,7 +106,7 @@ const config: webpack.Configuration = {
                     to: `${DIST}/fonts`,
                 },
                 {
-                    from: path.join(__dirname, '../../suite-data/files/images/png/trezor-*'),
+                    from: path.join(__dirname, '../../suite-data/files/images/png/cerberus-*'),
                     to: `${DIST}/images/[name][ext]`,
                 },
                 {

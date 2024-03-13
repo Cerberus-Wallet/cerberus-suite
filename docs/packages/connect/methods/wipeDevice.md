@@ -3,7 +3,7 @@
 Reset device to factory defaults and remove all private data.
 
 ```javascript
-const result = await TrezorConnect.wipeDevice(params);
+const result = await CerberusConnect.wipeDevice(params);
 ```
 
 ### Params
@@ -16,7 +16,7 @@ Common parameter `allowSeedlessDevice` - is set to `true`
 ### Example
 
 ```javascript
-TrezorConnect.wipeDevice();
+CerberusConnect.wipeDevice();
 ```
 
 ### Result

@@ -20,9 +20,9 @@ import * as fixtures from '../__fixtures__/metadataActions';
 
 const deviceReducer = prepareDeviceReducer(extraDependencies);
 
-const TrezorConnect = testMocks.getTrezorConnectMock();
+const CerberusConnect = testMocks.getCerberusConnectMock();
 
-jest.spyOn(TrezorConnect, 'cipherKeyValue').mockImplementation(() =>
+jest.spyOn(CerberusConnect, 'cipherKeyValue').mockImplementation(() =>
     Promise.resolve({
         success: true,
         payload: {

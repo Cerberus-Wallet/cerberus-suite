@@ -1,4 +1,4 @@
-import TrezorConnect, { PROTO } from '@cerberus/connect';
+import CerberusConnect, { PROTO } from '@cerberus/connect';
 import {
     isTestnet,
     getDerivationType,
@@ -46,7 +46,7 @@ export const composeTransaction =
 
         const addressParameters = getAddressParameters(account, changeAddress.path);
 
-        const response = await TrezorConnect.cardanoComposeTransaction({
+        const response = await CerberusConnect.cardanoComposeTransaction({
             feeLevels: predefinedLevels,
             outputs,
             account: {
@@ -137,7 +137,7 @@ export const signTransaction =
         if (account.networkType !== 'cardano') return;
 
         // todo: add chunkify once we allow it for Cardano
-        const res = await TrezorConnect.cardanoSignTransaction({
+        const res = await CerberusConnect.cardanoSignTransaction({
             signingMode: PROTO.CardanoTxSigningMode.ORDINARY_TRANSACTION,
             device: {
                 path: device.path,

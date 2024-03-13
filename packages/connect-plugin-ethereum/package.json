@@ -14,7 +14,7 @@
     },
     "keywords": [
         "Cerberus",
-        "trezor-connect",
+        "cerberus-connect",
         "Ethereum"
     ],
     "sideEffects": false,

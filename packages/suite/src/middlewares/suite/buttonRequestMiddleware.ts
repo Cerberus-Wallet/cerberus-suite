@@ -1,7 +1,7 @@
 import { MiddlewareAPI } from 'redux';
 
 import { selectDevice, deviceActions } from '@suite-common/wallet-core';
-import TrezorConnect, { UI } from '@cerberus/connect';
+import CerberusConnect, { UI } from '@cerberus/connect';
 
 import { SUITE } from 'src/actions/suite/constants';
 import { AppState, Action, Dispatch } from 'src/types/suite';
@@ -23,7 +23,7 @@ const buttonRequest =
                 device.passphraseOnDevice &&
                 device.features.capabilities?.includes('Capability_PassphraseEntry')
             ) {
-                TrezorConnect.uiResponse({
+                CerberusConnect.uiResponse({
                     type: UI.RECEIVE_PASSPHRASE,
                     payload: {
                         value: '',

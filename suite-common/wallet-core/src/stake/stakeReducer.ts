@@ -7,7 +7,7 @@ import { stakeActions } from './stakeActions';
 export interface StakeState {
     precomposedTx?: PrecomposedTransactionFinal;
     precomposedForm?: StakeFormState;
-    signedTx?: { tx: string; coin: string }; // payload for TrezorConnect.pushTransaction
+    signedTx?: { tx: string; coin: string }; // payload for CerberusConnect.pushTransaction
 }
 
 export const stakeInitialState: StakeState = {

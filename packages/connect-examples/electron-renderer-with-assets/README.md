@@ -4,7 +4,7 @@
 
 This application can be also developed in browser since it doesn't require any electron specific behavior.
 
-However publishing as website will not work since `trezord` will ignore HttpRequests sent from websites other than `localhost` or `cerberus.uraanai.com`
+However publishing as website will not work since `cerberusd` will ignore HttpRequests sent from websites other than `localhost` or `cerberus.uraanai.com`
 
 ## Install
 
@@ -12,7 +12,7 @@ However publishing as website will not work since `trezord` will ignore HttpRequ
 
 ## Build @cerberus/connect files
 
-This will compile @cerberus/connect into `./assets/trezor-connect` directory
+This will compile @cerberus/connect into `./assets/cerberus-connect` directory
 
 `yarn build:connect`
 

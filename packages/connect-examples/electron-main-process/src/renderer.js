@@ -12,8 +12,8 @@ const printLog = data => {
 // click to get public key
 const btn = document.getElementById('get-xpub');
 btn.onclick = () => {
-    // send request to trezor-connect
-    window.TrezorConnect.send({
+    // send request to cerberus-connect
+    window.CerberusConnect.send({
         method: 'getPublicKey',
         params: {
             path: "m/49'/0'/0'",
@@ -22,10 +22,10 @@ btn.onclick = () => {
     });
 };
 
-// receive data from TrezorConnect
-window.TrezorConnect.receive((event, message) => {
+// receive data from CerberusConnect
+window.CerberusConnect.receive((event, message) => {
     printLog(message);
 });
 
-// init TrezorConnect in electron main process
-window.TrezorConnect.init();
+// init CerberusConnect in electron main process
+window.CerberusConnect.init();

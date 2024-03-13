@@ -3,7 +3,7 @@
 # 2. Import BTC asset via text
 # 3. Show a fresh receive address
 
-appId: io.trezor.suite.${ENV}
+appId: io.cerberus.suite.${ENV}
 ---
 - launchApp:
       clearState: true

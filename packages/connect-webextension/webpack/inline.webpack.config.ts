@@ -4,23 +4,23 @@ import CopyPlugin from 'copy-webpack-plugin';
 
 import prod from './prod.webpack.config';
 
-// Generate inline script hosted on https://connect.cerberus.uraanai.com/X/trezor-connect-webextension.js
+// Generate inline script hosted on https://connect.cerberus.uraanai.com/X/cerberus-connect-webextension.js
 // This is compiled and polyfilled npm package without Core logic
 
 const config: webpack.Configuration = {
     target: 'web',
     mode: 'production',
     entry: {
-        'trezor-connect-webextension': path.resolve(__dirname, '../src/index.ts'),
-        'trezor-connect-webextension.min': path.resolve(__dirname, '../src/index.ts'),
-        'trezor-connect-webextension-proxy': path.resolve(__dirname, '../src/proxy/index.ts'),
-        'trezor-connect-webextension-proxy.min': path.resolve(__dirname, '../src/proxy/index.ts'),
+        'cerberus-connect-webextension': path.resolve(__dirname, '../src/index.ts'),
+        'cerberus-connect-webextension.min': path.resolve(__dirname, '../src/index.ts'),
+        'cerberus-connect-webextension-proxy': path.resolve(__dirname, '../src/proxy/index.ts'),
+        'cerberus-connect-webextension-proxy.min': path.resolve(__dirname, '../src/proxy/index.ts'),
     },
     output: {
         filename: '[name].js',
         path: path.resolve(__dirname, '../build'),
         publicPath: './',
-        library: 'TrezorConnect',
+        library: 'CerberusConnect',
         libraryTarget: 'umd',
         libraryExport: 'default',
     },

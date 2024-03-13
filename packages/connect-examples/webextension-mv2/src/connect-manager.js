@@ -20,12 +20,12 @@ chrome.runtime.onMessage.addListener((message, sender) => {
     } else if (type === 'connectLoaded') {
         const connectLoaded = document.createElement('div');
         connectLoaded.setAttribute('data-test', 'connect-loaded');
-        connectLoaded.innerText = 'TrezorConnect is loaded';
+        connectLoaded.innerText = 'CerberusConnect is loaded';
         connectLoaded.style.display = 'block';
         document.body.appendChild(connectLoaded);
     }
 });
 
 // When page is loaded send message to background script to get reference so when
-// TrezorConnect is loaded we know it and can call it.
+// CerberusConnect is loaded we know it and can call it.
 sendMessageToBackground('pageLoaded');

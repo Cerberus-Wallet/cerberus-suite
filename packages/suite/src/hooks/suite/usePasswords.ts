@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import crypto from 'crypto';
 
-import TrezorConnect from '@cerberus/connect';
+import CerberusConnect from '@cerberus/connect';
 import { selectDevice } from '@suite-common/wallet-core';
 
 import { useSelector, useDispatch } from 'src/hooks/suite';
@@ -32,7 +32,7 @@ export const usePasswords = () => {
     const connect = () => {
         setFileName('');
         setProviderConnecting(true);
-        TrezorConnect.cipherKeyValue({
+        CerberusConnect.cipherKeyValue({
             device: { path: device?.path },
             override: true,
             useEmptyPassphrase: true,

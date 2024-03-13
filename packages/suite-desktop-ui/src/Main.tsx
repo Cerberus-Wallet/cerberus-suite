@@ -8,7 +8,7 @@ import { SENTRY_CONFIG } from '@suite-common/sentry';
 import { desktopApi } from '@cerberus/suite-desktop-api';
 import { FormatterProvider } from '@suite-common/formatters';
 import { createIpcProxy } from '@cerberus/ipc-proxy';
-import TrezorConnect from '@cerberus/connect';
+import CerberusConnect from '@cerberus/connect';
 
 import { initStore } from 'src/reducers/store';
 import { preloadStore } from 'src/support/suite/preloadStore';
@@ -122,11 +122,11 @@ export const init = async (container: HTMLElement) => {
     store.dispatch(desktopHandshake(loadModules.payload));
 
     // create ipc-proxy for @cerberus/connect
-    const proxy = await createIpcProxy<typeof TrezorConnect>('TrezorConnect');
+    const proxy = await createIpcProxy<typeof CerberusConnect>('CerberusConnect');
     // override each method of @cerberus/connect using ipc-proxy
-    Object.keys(TrezorConnect).forEach(method => {
+    Object.keys(CerberusConnect).forEach(method => {
         // @ts-expect-error key vs union of values endless problem
-        TrezorConnect[method] = proxy[method];
+        CerberusConnect[method] = proxy[method];
     });
 
     // finally render whole app

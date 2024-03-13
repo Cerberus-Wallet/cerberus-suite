@@ -41,7 +41,7 @@ interface ButtonRowProps {
     isCompleted: boolean;
     isSubmitting: boolean;
     isSignPage: boolean;
-    isTrezorLocked: boolean;
+    isCerberusLocked: boolean;
     resetForm: () => void;
     closeScreen: (withCopy?: boolean) => void;
 }
@@ -50,7 +50,7 @@ export const ButtonRow = ({
     isCompleted,
     isSubmitting,
     isSignPage,
-    isTrezorLocked,
+    isCerberusLocked,
     resetForm,
     closeScreen,
 }: ButtonRowProps) => {
@@ -114,7 +114,7 @@ export const ButtonRow = ({
                     type="submit"
                     variant="primary"
                     iconSize={20}
-                    isDisabled={isTrezorLocked}
+                    isDisabled={isCerberusLocked}
                     isLoading={isSubmitting}
                     data-test="@sign-verify/submit"
                 >

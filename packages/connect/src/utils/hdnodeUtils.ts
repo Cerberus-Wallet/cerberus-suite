@@ -36,7 +36,7 @@ export const convertXpub = (
     return node.toBase58();
 };
 
-// stupid hack, because older (1.7.1, 2.0.8) trezor FW serializes all xpubs with bitcoin magic
+// stupid hack, because older (1.7.1, 2.0.8) cerberus FW serializes all xpubs with bitcoin magic
 export const convertBitcoinXpub = (xpub: string, network: Network) => {
     if (network.bip32.public === 0x0488b21e) {
         // it's bitcoin-like => return xpub

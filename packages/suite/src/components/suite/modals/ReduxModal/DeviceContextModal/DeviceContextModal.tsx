@@ -1,6 +1,6 @@
 import { useIntl } from 'react-intl';
 
-import TrezorConnect, { UI } from '@cerberus/connect';
+import CerberusConnect, { UI } from '@cerberus/connect';
 import { selectDevice } from '@suite-common/wallet-core';
 import messages from 'src/support/messages';
 import { MODAL } from 'src/actions/suite/constants';
@@ -21,7 +21,7 @@ import {
 } from 'src/components/suite/modals';
 import type { ReduxModalProps } from '../ReduxModal';
 
-/** Modals requested by Device from `trezor-connect` */
+/** Modals requested by Device from `cerberus-connect` */
 export const DeviceContextModal = ({
     windowType,
     renderer,
@@ -32,7 +32,7 @@ export const DeviceContextModal = ({
 
     if (!device) return null;
 
-    const abort = () => TrezorConnect.cancel(intl.formatMessage(messages.TR_CANCELLED));
+    const abort = () => CerberusConnect.cancel(intl.formatMessage(messages.TR_CANCELLED));
 
     switch (windowType) {
         // T1B1 firmware

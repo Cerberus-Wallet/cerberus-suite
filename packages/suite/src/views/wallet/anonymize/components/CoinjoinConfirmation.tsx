@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'src/hooks/suite';
 import styled from 'styled-components';
 
 import { Account } from '@suite-common/wallet-types';
-import { Translation, TrezorLink } from 'src/components/suite';
+import { Translation, CerberusLink } from 'src/components/suite';
 import { Error } from 'src/components/suite/Error';
 import {
     Button,
@@ -183,10 +183,10 @@ export const CoinjoinConfirmation = ({ account }: CoinjoinConfirmationProps) => 
                                     {chunks}
                                 </Link>
                             ),
-                            trezor: chunks => (
-                                <TrezorLink href={DATA_TOS_URL} variant="underline">
+                            cerberus: chunks => (
+                                <CerberusLink href={DATA_TOS_URL} variant="underline">
                                     {chunks}
-                                </TrezorLink>
+                                </CerberusLink>
                             ),
                         }}
                     />

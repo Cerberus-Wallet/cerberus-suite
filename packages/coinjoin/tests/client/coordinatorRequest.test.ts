@@ -189,7 +189,7 @@ describe('http', () => {
                             },
                         },
                         affiliateData: {
-                            abcd01234: { trezor: 'base64data', foo: 1 },
+                            abcd01234: { cerberus: 'base64data', foo: 1 },
                         },
                     },
                 });
@@ -222,7 +222,7 @@ describe('http', () => {
                     },
                 },
                 AffiliateData: {
-                    abcd01234: { trezor: 'base64data', foo: 1 },
+                    abcd01234: { cerberus: 'base64data', foo: 1 },
                 },
             },
         });

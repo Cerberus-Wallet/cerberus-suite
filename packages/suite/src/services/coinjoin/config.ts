@@ -3,9 +3,9 @@ import {
     COORDINATOR_FEE_RATE_FALLBACK,
     MIN_ALLOWED_AMOUNT_FALLBACK,
     MAX_ALLOWED_AMOUNT_FALLBACK,
-} from '@trezor/coinjoin/src/constants';
-import type { CoinjoinBackendSettings, CoinjoinClientSettings } from '@trezor/coinjoin';
-import type { PartialRecord } from '@trezor/type-utils';
+} from '@cerberus/coinjoin/src/constants';
+import type { CoinjoinBackendSettings, CoinjoinClientSettings } from '@cerberus/coinjoin';
+import type { PartialRecord } from '@cerberus/type-utils';
 import type { CoinjoinServerEnvironment } from 'src/types/wallet/coinjoin';
 import type { NetworkSymbol } from '@suite-common/wallet-config';
 
@@ -22,14 +22,14 @@ export const COINJOIN_NETWORKS: PartialRecord<NetworkSymbol, ServerEnvironment> 
             coordinatorUrl: 'https://wasabiwallet.io/wabisabi/',
             wabisabiBackendUrl: 'https://wasabiwallet.io/',
             blockbookUrls: [
-                'https://btc1.trezorcheck.io',
+                'https://btc1.trezor.io',
                 'https://btc2.trezor.io',
                 'https://btc3.trezor.io',
                 'https://btc4.trezor.io',
                 'https://btc5.trezor.io',
             ],
             onionDomains: {
-                'trezor.io': 'trezoriovpjcahpzkrewelclulmszwbqpzmzgub37gbcjlvluxtruqad.onion',
+                'cerberus.uraanai.com': 'cerberusiovpjcahpzkrewelclulmszwbqpzmzgub37gbcjlvluxtruqad.onion',
                 'wasabiwallet.io': 'wasabiukrxmkdgve5kynjztuovbg43uxcbcxn6y2okcrsg7gb6jdmbad.onion',
             },
             /* 28.02.2023 */
@@ -57,9 +57,9 @@ export const COINJOIN_NETWORKS: PartialRecord<NetworkSymbol, ServerEnvironment> 
             coordinatorUrl: 'https://wasabiwallet.co/wabisabi/',
             // backend settings
             wabisabiBackendUrl: 'https://wasabiwallet.co/',
-            blockbookUrls: ['https://tbtc1.trezorcheck.io', 'https://tbtc2.trezor.io'],
+            blockbookUrls: ['https://tbtc1.trezor.io', 'https://tbtc2.trezor.io'],
             onionDomains: {
-                'trezor.io': 'trezoriovpjcahpzkrewelclulmszwbqpzmzgub37gbcjlvluxtruqad.onion',
+                'cerberus.uraanai.com': 'cerberusiovpjcahpzkrewelclulmszwbqpzmzgub37gbcjlvluxtruqad.onion',
                 'wasabiwallet.co': 'testwnp3fugjln6vh5vpj7mvq3lkqqwjj3c2aafyu7laxz42kgwh2rad.onion',
             },
             /* */
@@ -104,7 +104,7 @@ export const COINJOIN_NETWORKS: PartialRecord<NetworkSymbol, ServerEnvironment> 
             coordinatorUrl: 'https://dev-coinjoin-testnet.trezor.io/wabisabi/',
             // backend settings
             wabisabiBackendUrl: 'https://dev-coinjoin-testnet.trezor.io/',
-            blockbookUrls: ['https://tbtc1.trezorcheck.io', 'https://tbtc2.trezor.io'],
+            blockbookUrls: ['https://tbtc1.trezor.io', 'https://tbtc2.trezor.io'],
             baseBlockHeight: 2349000,
             baseBlockHash: '0000000000000014af3e6e1a3f0a24be7bc65998b9bc01e4a05b134a89d304bf',
             filtersBatchSize: 5000,

@@ -1,6 +1,6 @@
-import { TrezorConnect } from '../../..';
+import { CerberusConnect } from '../../..';
 
-export const blockchainEstimateFee = async (api: TrezorConnect) => {
+export const blockchainEstimateFee = async (api: CerberusConnect) => {
     const simple = await api.blockchainEstimateFee({ coin: 'btc' });
     if (simple.success) {
         const { payload } = simple;
@@ -69,7 +69,7 @@ export const blockchainEstimateFee = async (api: TrezorConnect) => {
     });
 };
 
-export const blockchainGetTransactions = async (api: TrezorConnect) => {
+export const blockchainGetTransactions = async (api: CerberusConnect) => {
     const txs = await api.blockchainGetTransactions({ coin: 'btc', txs: ['txid'] });
     if (txs.success) {
         txs.payload.forEach(raw => {
@@ -80,7 +80,7 @@ export const blockchainGetTransactions = async (api: TrezorConnect) => {
     }
 };
 
-export const others = async (api: TrezorConnect) => {
+export const others = async (api: CerberusConnect) => {
     const accounts = [
         {
             descriptor: 'xpub',
@@ -140,7 +140,7 @@ export const others = async (api: TrezorConnect) => {
         coin: 'btc',
         blockchainLink: {
             type: 'blockbook',
-            url: ['https://btc1.trezorcheck.io/'],
+            url: ['https://btc1.trezer.io/'],
         },
     });
 };

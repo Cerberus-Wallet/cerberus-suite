@@ -1,5 +1,5 @@
 import { OnboardingAnalytics } from '@cerberus/suite-analytics';
-import TrezorConnect from '@cerberus/connect';
+import CerberusConnect from '@cerberus/connect';
 import { selectDevice } from '@suite-common/wallet-core';
 
 import { ONBOARDING } from 'src/actions/onboarding/constants';
@@ -119,7 +119,7 @@ const beginOnboardingTutorial = () => async (dispatch: Dispatch, getState: GetSt
 
     dispatch(setDeviceTutorialStatus('active'));
 
-    const { success } = await TrezorConnect.showDeviceTutorial({ device });
+    const { success } = await CerberusConnect.showDeviceTutorial({ device });
 
     if (success) {
         dispatch(setDeviceTutorialStatus('completed'));

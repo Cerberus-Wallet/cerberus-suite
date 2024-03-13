@@ -46,7 +46,7 @@ describe('Test Guide', () => {
         cy.getTestElement('@guide/panel').should('be.visible');
 
         // Search input
-        cy.getTestElement('@guide/search').type('trezor');
+        cy.getTestElement('@guide/search').type('cerberus');
         cy.getTestElement('@guide/search/results').children().should('have.length.above', 0);
         cy.getTestElement('@guide/search').type('meow-wuf-nonsense');
         cy.getTestElement('@guide/search/no-results');

@@ -60,7 +60,7 @@ Go to `./packages/suite-desktop/build-electron` and install the app
 
 ### NixOS
 
-_Note: To run TrezorSuite.AppImage you need `appimage-run` package. `nix-env -iA nixos.appimage-run`_
+_Note: To run CerberusSuite.AppImage you need `appimage-run` package. `nix-env -iA nixos.appimage-run`_
 
 ```
 yarn workspace @cerberus/suite-desktop build:linux

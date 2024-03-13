@@ -6,7 +6,7 @@ import {
     SectionItem,
     TextColumn,
     Translation,
-    TrezorLink,
+    CerberusLink,
 } from 'src/components/suite';
 import { useDevice, useDispatch } from 'src/hooks/suite';
 import { goto } from 'src/actions/suite/routerActions';
@@ -69,7 +69,7 @@ export const FirmwareTypeChange = ({ isDeviceLocked }: FirmwareTypeProps) => {
                                 id="TR_YOUR_FIRMWARE_TYPE"
                                 values={{
                                     version: (
-                                        <TrezorLink href={HELP_FIRMWARE_TYPE} variant="nostyle">
+                                        <CerberusLink href={HELP_FIRMWARE_TYPE} variant="nostyle">
                                             <Button
                                                 variant="tertiary"
                                                 size="tiny"
@@ -78,7 +78,7 @@ export const FirmwareTypeChange = ({ isDeviceLocked }: FirmwareTypeProps) => {
                                             >
                                                 <Translation id={currentFwType} />
                                             </Button>
-                                        </TrezorLink>
+                                        </CerberusLink>
                                     ),
                                 }}
                             />

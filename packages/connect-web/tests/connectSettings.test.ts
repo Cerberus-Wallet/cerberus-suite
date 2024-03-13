@@ -18,27 +18,27 @@ describe('connect-web parseConnectSettings', () => {
     });
 
     it('parseConnectSettings: connect src in location.search', () => {
-        window.location = { search: 'trezor-connect-src=https://connect.cerberus.uraanai.com/beta.1/' };
+        window.location = { search: 'cerberus-connect-src=https://connect.cerberus.uraanai.com/beta.1/' };
         expect(parseConnectSettings({}).connectSrc).toEqual('https://connect.cerberus.uraanai.com/beta.1/');
 
         window.location = {
-            search: 'foo=bar&trezor-connect-src=https://connect.cerberus.uraanai.com/beta.2/',
+            search: 'foo=bar&cerberus-connect-src=https://connect.cerberus.uraanai.com/beta.2/',
         };
         expect(parseConnectSettings({}).connectSrc).toEqual('https://connect.cerberus.uraanai.com/beta.2/');
 
         window.location = {
-            search: 'trezor-connect-src=https://connect.cerberus.uraanai.com/beta.3/&foo=bar',
+            search: 'cerberus-connect-src=https://connect.cerberus.uraanai.com/beta.3/&foo=bar',
         };
         expect(parseConnectSettings({}).connectSrc).toEqual('https://connect.cerberus.uraanai.com/beta.3/');
 
         window.location = {
-            search: 'trezor-connect-src=https%3A%2F%2Fconnect.cerberus.uraanai.com%2Fbeta.encoded%2F',
+            search: 'cerberus-connect-src=https%3A%2F%2Fconnect.cerberus.uraanai.com%2Fbeta.encoded%2F',
         }; // encoded
         expect(parseConnectSettings({}).connectSrc).toEqual(
             'https://connect.cerberus.uraanai.com/beta.encoded/',
         );
 
-        window.location = { search: 'trezor-connect-src=https://connect-beta.trezor.oi/beta.3/' }; // invalid domain "io"
+        window.location = { search: 'cerberus-connect-src=https://connect-beta.cerberus.oi/beta.3/' }; // invalid domain "io"
         expect(parseConnectSettings({}).connectSrc).toEqual(undefined);
     });
 
@@ -46,7 +46,7 @@ describe('connect-web parseConnectSettings', () => {
         window.__CERBERUS_CONNECT_SRC = 'https://connect.cerberus.uraanai.com/beta.4/';
         expect(parseConnectSettings({}).connectSrc).toEqual('https://connect.cerberus.uraanai.com/beta.4/');
 
-        window.__CERBERUS_CONNECT_SRC = 'https://connect-beta.trezor.oi/beta.4/'; // invalid domain
+        window.__CERBERUS_CONNECT_SRC = 'https://connect-beta.cerberus.oi/beta.4/'; // invalid domain
         expect(parseConnectSettings({}).connectSrc).toEqual(undefined);
 
         delete window.__CERBERUS_CONNECT_SRC; // restore

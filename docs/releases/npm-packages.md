@@ -1,6 +1,6 @@
 # Publishing @cerberus package to npm registry
 
-`yarn npm publish` should be done only on [gitlab CI](https://gitlab.com/satoshilabs/trezor/trezor-suite/-/pipelines/) in `deploy npm` phase.
+`yarn npm publish` should be done only on [gitlab CI](https://gitlab.com/satoshilabs/cerberus/cerberus-suite/-/pipelines/) in `deploy npm` phase.
 
 ### Purpose
 

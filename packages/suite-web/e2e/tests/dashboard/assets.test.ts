@@ -18,7 +18,7 @@ describe('Assets', () => {
         cy.viewport(1440, 2560).resetDb();
 
         requests = [];
-        cy.interceptDataTrezorIo(requests);
+        cy.interceptDataCerberusIo(requests);
     });
 
     it('checks that BTC and ETH accounts are available', () => {

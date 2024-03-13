@@ -1,7 +1,7 @@
 import type { TransportInfo } from '@cerberus/connect';
 import { DefinedUnionMember } from '@cerberus/type-utils';
 import { RouterState } from 'src/reducers/suite/routerReducer';
-import type { TrezorDevice, AppState } from 'src/types/suite';
+import type { CerberusDevice, AppState } from 'src/types/suite';
 
 export const getPrerequisiteName = ({
     router,
@@ -9,7 +9,7 @@ export const getPrerequisiteName = ({
     transport,
 }: {
     router: AppState['router'];
-    device?: TrezorDevice;
+    device?: CerberusDevice;
     transport?: Partial<TransportInfo>;
 }) => {
     if (!router || router.app === 'unknown') return;

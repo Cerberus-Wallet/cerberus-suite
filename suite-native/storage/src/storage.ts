@@ -10,7 +10,7 @@ import { Storage } from 'redux-persist';
 import { unecryptedJotaiStorage } from './atomWithUnecryptedStorage';
 
 export const ENCRYPTION_KEY = 'STORAGE_ENCRYPTION_KEY';
-export const ENCRYPTED_STORAGE_ID = 'trezorSuite-app-storage';
+export const ENCRYPTED_STORAGE_ID = 'cerberusSuite-app-storage';
 
 export const retrieveStorageEncryptionKey = async () => {
     let secureKey = await SecureStore.getItemAsync(ENCRYPTION_KEY);

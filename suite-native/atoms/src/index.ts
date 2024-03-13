@@ -35,7 +35,7 @@ export * from './Loader';
 export * from './Toggle';
 export * from './Pictogram';
 export * from './RoundedIcon';
-export * from './TrezorSuiteLiteHeader';
+export * from './CerberusSuiteLiteHeader';
 export * from './Skeleton/BoxSkeleton';
 export * from './Skeleton/ListItemSkeleton';
 export * from './BulletListItem';

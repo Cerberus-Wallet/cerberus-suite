@@ -2,9 +2,9 @@ import { useEffect, useCallback } from 'react';
 import styled from 'styled-components';
 import { HELP_CENTER_ADVANCED_RECOVERY_URL } from '@cerberus/urls';
 import { Button, PinButton, KEYBOARD_CODE } from '@cerberus/components';
-import { Translation, TrezorLink, DeviceMatrixExplanation } from 'src/components/suite';
+import { Translation, CerberusLink, DeviceMatrixExplanation } from 'src/components/suite';
 import { createTimeoutPromise } from '@cerberus/utils';
-import TrezorConnect, { DeviceModelInternal, UI } from '@cerberus/connect';
+import CerberusConnect, { DeviceModelInternal, UI } from '@cerberus/connect';
 
 const Wrapper = styled.div`
     display: flex;
@@ -37,7 +37,7 @@ interface WordInputAdvancedProps {
 export const WordInputAdvanced = ({ count }: WordInputAdvancedProps) => {
     const onSubmit = useCallback(async (value: string) => {
         await createTimeoutPromise(600);
-        TrezorConnect.uiResponse({ type: UI.RECEIVE_WORD, payload: value });
+        CerberusConnect.uiResponse({ type: UI.RECEIVE_WORD, payload: value });
     }, []);
 
     const backspace = useCallback(() => {
@@ -113,12 +113,12 @@ export const WordInputAdvanced = ({ count }: WordInputAdvancedProps) => {
                     {
                         key: '2',
                         title: (
-                            <TrezorLink
+                            <CerberusLink
                                 variant="underline"
                                 href={HELP_CENTER_ADVANCED_RECOVERY_URL}
                             >
                                 <Translation id="TR_LEARN_ADVANCED_RECOVERY" />
-                            </TrezorLink>
+                            </CerberusLink>
                         ),
                         icon: 'INFO',
                     },

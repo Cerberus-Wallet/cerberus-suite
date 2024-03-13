@@ -316,7 +316,7 @@ const requestWebUSBDevice = async () => {
     }
 };
 
-const TrezorConnect = factory({
+const CerberusConnect = factory({
     eventEmitter,
     manifest,
     init,
@@ -330,5 +330,5 @@ const TrezorConnect = factory({
     dispose,
 });
 
-export default TrezorConnect;
+export default CerberusConnect;
 export * from '@cerberus/connect/lib/exports';

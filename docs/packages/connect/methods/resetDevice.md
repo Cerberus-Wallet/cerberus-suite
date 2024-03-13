@@ -3,7 +3,7 @@
 Perform device setup and generate new seed.
 
 ```javascript
-const result = await TrezorConnect.resetDevice(params);
+const result = await CerberusConnect.resetDevice(params);
 ```
 
 ### Params
@@ -21,7 +21,7 @@ const result = await TrezorConnect.resetDevice(params);
 ### Example
 
 ```javascript
-TrezorConnect.resetDevice({
+CerberusConnect.resetDevice({
     label: 'My fancy Cerberus',
 });
 ```

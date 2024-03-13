@@ -5,7 +5,7 @@ export default {
     },
     tests: [
         {
-            description: 'trezor pubkey - ok',
+            description: 'cerberus pubkey - ok',
             params: {
                 coin: 'Bitcoin',
                 address: '3CwYaeWxhpXXiHue3ciQez1DLaTEAXcKa1',
@@ -20,7 +20,7 @@ export default {
             },
         },
         {
-            description: 'trezor pubkey - wrong sig',
+            description: 'cerberus pubkey - wrong sig',
             params: {
                 coin: 'Bitcoin',
                 address: '3CwYaeWxhpXXiHue3ciQez1DLaTEAXcKa1',
@@ -33,7 +33,7 @@ export default {
             result: false,
         },
         {
-            description: 'trezor pubkey - wrong msg',
+            description: 'cerberus pubkey - wrong msg',
             params: {
                 coin: 'Bitcoin',
                 address: '3CwYaeWxhpXXiHue3ciQez1DLaTEAXcKa1',

@@ -77,7 +77,7 @@
   "LOG_INCLUDE_BALANCE_DESCRIPTION": "Povolenie tejto funkcie spôsobí zahrnutie do logu citlivých údajov ako sú zostatky na Vašich účtoch, ID transakcií, štítky zariadení, ID zariadení  a verejné adresy. Pokiaľ Váš problém nesúvisí z vyššie uvedeným, vypnite túto funkciu.",
   "LOG_INCLUDE_BALANCE_TITLE": "Zahrnúť citlivé údaje",
   "MAX_FEE": "Maximálny poplatok",
-  "METADATA_MODAL_DESCRIPTION": "Vyberte poskytovateľa cloudových služieb pre ukladanie štítkov. Vaše dáta sú šifrované Vašim Trezorom.",
+  "METADATA_MODAL_DESCRIPTION": "Vyberte poskytovateľa cloudových služieb pre ukladanie štítkov. Vaše dáta sú šifrované Vašim Cerberusom.",
   "METADATA_MODAL_HEADING": "Uloženie štítkov",
   "METADATA_PROVIDER_AUTH_ERROR": "Synchronizacia popiskov s cloudovým úložiskom {provider} sa nepodarila. Užívateľ bol odhlásený.",
   "METADATA_PROVIDER_NOT_FOUND_ERROR": "Nepodarilo sa nájsť metadáta u poskytovateľa cloudu.",

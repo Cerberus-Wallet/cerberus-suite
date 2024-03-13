@@ -1,4 +1,4 @@
-import TrezorConnect, { AuthenticateDeviceResult } from '@cerberus/connect';
+import CerberusConnect, { AuthenticateDeviceResult } from '@cerberus/connect';
 import { createThunk } from '@suite-common/redux-utils';
 import { notificationsActions, ToastPayload } from '@suite-common/toast-notifications';
 
@@ -18,7 +18,7 @@ export const checkDeviceAuthenticityThunk = createThunk<{
             throw new Error('device is not connected');
         }
 
-        const result = await TrezorConnect.authenticateDevice({
+        const result = await CerberusConnect.authenticateDevice({
             device: {
                 path: device.path,
             },

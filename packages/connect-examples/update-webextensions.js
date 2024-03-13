@@ -8,16 +8,16 @@ const fetch = require('node-fetch');
 
 const rootPaths = ['webextension-mv2', 'webextension-mv3'];
 
-const trezorConnectSrcIndex = process.argv.indexOf('--trezor-connect-src');
+const cerberusConnectSrcIndex = process.argv.indexOf('--cerberus-connect-src');
 const buildFolderIndex = process.argv.indexOf('--build-folder');
 const npmSrcIndex = process.argv.indexOf('--npm-src');
 
 const DEFAULT_SRC = 'https://connect.cerberus.uraanai.com/9/';
-let trezorConnectSrc = DEFAULT_SRC;
+let cerberusConnectSrc = DEFAULT_SRC;
 
-if (trezorConnectSrcIndex > -1) {
-    trezorConnectSrc = process.argv[trezorConnectSrcIndex + 1];
-    console.log('trezorConnectSrc: ', trezorConnectSrc);
+if (cerberusConnectSrcIndex > -1) {
+    cerberusConnectSrc = process.argv[cerberusConnectSrcIndex + 1];
+    console.log('cerberusConnectSrc: ', cerberusConnectSrc);
 }
 
 let buildFolder = 'build';
@@ -37,10 +37,10 @@ rootPaths.forEach(dir => {
     const buildPath = path.join(rootPath, buildFolder);
     const vendorPath = path.join(buildPath, 'vendor');
 
-    const inlineScriptPath = path.join(vendorPath, 'trezor-connect.js');
-    const usbPermissionsScriptPath = path.join(vendorPath, 'trezor-usb-permissions.js');
-    const usbPermissionsHtmlPath = path.join(rootPath, 'trezor-usb-permissions.html');
-    const contentScriptPath = path.join(vendorPath, 'trezor-content-script.js');
+    const inlineScriptPath = path.join(vendorPath, 'cerberus-connect.js');
+    const usbPermissionsScriptPath = path.join(vendorPath, 'cerberus-usb-permissions.js');
+    const usbPermissionsHtmlPath = path.join(rootPath, 'cerberus-usb-permissions.html');
+    const contentScriptPath = path.join(vendorPath, 'cerberus-content-script.js');
     const backgroundScriptPath = path.join(rootPath, 'background.js');
 
     fs.rmSync(buildPath, { recursive: true, force: true });
@@ -61,22 +61,22 @@ rootPaths.forEach(dir => {
 
     const srcPath = path.join(__dirname, '../connect-web');
 
-    ['trezor-content-script.js'].forEach(p => {
+    ['cerberus-content-script.js'].forEach(p => {
         fs.copyFileSync(
             path.join(srcPath, 'src', 'webextension', p),
             path.join(rootPath, buildFolder, 'vendor', p),
         );
     });
 
-    ['trezor-usb-permissions.js'].forEach(p => {
+    ['cerberus-usb-permissions.js'].forEach(p => {
         let content = fs.readFileSync(path.join(srcPath, 'src', 'webextension', p), 'utf-8');
-        if (trezorConnectSrc !== DEFAULT_SRC) {
-            content = content.replace(/^const url = .*$/gm, `const url = '${trezorConnectSrc}';`);
+        if (cerberusConnectSrc !== DEFAULT_SRC) {
+            content = content.replace(/^const url = .*$/gm, `const url = '${cerberusConnectSrc}';`);
         }
         fs.writeFileSync(path.join(rootPath, buildFolder, 'vendor', p), content, 'utf-8');
     });
 
-    ['trezor-usb-permissions.html'].forEach(p => {
+    ['cerberus-usb-permissions.html'].forEach(p => {
         fs.copyFileSync(
             path.join(srcPath, 'src', 'webextension', p),
             path.join(rootPath, buildFolder, p),
@@ -86,12 +86,12 @@ rootPaths.forEach(dir => {
     if (npmSrc) {
         fetch(npmSrc).then(res => {
             const dest = fs.createWriteStream(
-                path.join(rootPath, buildFolder, 'vendor', 'trezor-connect.js'),
+                path.join(rootPath, buildFolder, 'vendor', 'cerberus-connect.js'),
             );
             res.body.pipe(dest);
         });
     } else {
-        ['trezor-connect.js'].forEach(p => {
+        ['cerberus-connect.js'].forEach(p => {
             fs.copyFileSync(
                 path.join(srcPath, 'build', p),
                 path.join(rootPath, buildFolder, 'vendor', p),
@@ -112,7 +112,7 @@ rootPaths.forEach(dir => {
                 return;
             }
 
-            const replaced = contents.replace(DEFAULT_SRC, trezorConnectSrc);
+            const replaced = contents.replace(DEFAULT_SRC, cerberusConnectSrc);
 
             fs.writeFile(path.join(rootPath, buildFolder, p), replaced, 'utf-8', err => {
                 if (err) {

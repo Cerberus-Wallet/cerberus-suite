@@ -1,6 +1,6 @@
 import { createAction } from '@reduxjs/toolkit';
 
-import TrezorConnect, { UI } from '@cerberus/connect';
+import CerberusConnect, { UI } from '@cerberus/connect';
 import { createDeferred, DeferredResponse } from '@cerberus/utils';
 import { UserContextPayload } from '@suite-common/suite-types';
 
@@ -29,11 +29,11 @@ export const preserve = () => ({ type: MODAL.PRESERVE });
  * @returns
  */
 export const onPinSubmit = (payload: string) => () => {
-    TrezorConnect.uiResponse({ type: UI.RECEIVE_PIN, payload });
+    CerberusConnect.uiResponse({ type: UI.RECEIVE_PIN, payload });
 };
 
 export const onReceiveConfirmation = (confirmation: boolean) => (dispatch: Dispatch) => {
-    TrezorConnect.uiResponse({
+    CerberusConnect.uiResponse({
         type: UI.RECEIVE_CONFIRMATION,
         payload: confirmation,
     });

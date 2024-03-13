@@ -119,7 +119,7 @@ export class DropboxMock {
                                     metadata: {
                                         '.tag': 'file',
                                         name: query,
-                                        path_lower: `/apps/trezor/${query}`,
+                                        path_lower: `/apps/cerberus/${query}`,
                                         path_display: `/Apps/CERBERUS/${query}`,
                                         id: 'id:foo-id',
                                         client_modified: '2020-10-07T09:52:45Z',
@@ -146,7 +146,7 @@ export class DropboxMock {
             // @ts-expect-error
             const dropboxApiArgs = JSON.parse(req.headers['dropbox-api-arg']);
             const { path } = dropboxApiArgs;
-            const name = path.replace('/apps/trezor', '');
+            const name = path.replace('/apps/cerberus', '');
 
             const file = this.files[name];
 

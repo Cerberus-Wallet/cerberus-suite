@@ -1,12 +1,12 @@
 import { createThunk } from '@suite-common/redux-utils';
-import TrezorConnect, {
+import CerberusConnect, {
     Device,
     CardanoAddress,
     Address,
     Response as ConnectResponse,
     UI,
 } from '@cerberus/connect';
-import { TrezorDevice } from '@suite-common/suite-types';
+import { CerberusDevice } from '@suite-common/suite-types';
 import { analytics, EventType } from '@cerberus/suite-analytics';
 import { notificationsActions } from '@suite-common/toast-notifications';
 import {
@@ -43,19 +43,19 @@ import { selectAccountByKey } from '../accounts/accountsReducer';
  * Called from:
  * - `@cerberus/connect` events handler `handleDeviceConnect`, `handleDeviceDisconnect`
  * - from user action in `@suite-components/DeviceMenu`
- * @param {(Device | TrezorDevice | undefined)} device
+ * @param {(Device | CerberusDevice | undefined)} device
  */
 export const selectDeviceThunk = createThunk(
     `${MODULE_PREFIX}/selectDevice`,
-    (device: Device | TrezorDevice | undefined, { dispatch, getState }) => {
-        let payload: TrezorDevice | typeof undefined;
+    (device: Device | CerberusDevice | undefined, { dispatch, getState }) => {
+        let payload: CerberusDevice | typeof undefined;
         const devices = selectDevices(getState());
 
         if (device) {
-            // "ts" is one of the field which distinguish Device from TrezorDevice
+            // "ts" is one of the field which distinguish Device from CerberusDevice
             // (device from connect doesn't have timestampp but suite device has)
             if ('ts' in device) {
-                // requested device is a @suite TrezorDevice type. get exact instance from reducer
+                // requested device is a @suite CerberusDevice type. get exact instance from reducer
                 payload = getSelectedDevice(device, devices);
             } else {
                 // requested device is a @cerberus/connect Device type
@@ -80,7 +80,7 @@ export const selectDeviceThunk = createThunk(
  */
 export const toggleRememberDevice = createThunk(
     `${MODULE_PREFIX}/toggleRememberDevice`,
-    ({ device, forceRemember }: { device: TrezorDevice; forceRemember?: true }, { dispatch }) => {
+    ({ device, forceRemember }: { device: CerberusDevice; forceRemember?: true }, { dispatch }) => {
         analytics.report({
             type: device.remember ? EventType.SwitchDeviceForget : EventType.SwitchDeviceRemember,
         });
@@ -107,12 +107,12 @@ export const createDeviceInstance = createThunk(
         {
             device,
             useEmptyPassphrase = false,
-        }: { device: TrezorDevice; useEmptyPassphrase?: boolean },
+        }: { device: CerberusDevice; useEmptyPassphrase?: boolean },
         { dispatch, getState },
     ) => {
         if (!device.features) return;
         if (!device.features.passphrase_protection) {
-            const response = await TrezorConnect.applySettings({
+            const response = await CerberusConnect.applySettings({
                 device,
                 use_passphrase: true,
             });
@@ -257,12 +257,12 @@ export const observeSelectedDevice = () => (dispatch: any, getState: any) => {
  */
 export const acquireDevice = createThunk(
     `${MODULE_PREFIX}/acquireDevice`,
-    async (requestedDevice: TrezorDevice | undefined, { dispatch, getState }) => {
+    async (requestedDevice: CerberusDevice | undefined, { dispatch, getState }) => {
         const selectedDevice = selectDeviceSelector(getState());
         if (!selectedDevice && !requestedDevice) return;
         const device = requestedDevice || selectedDevice;
 
-        const response = await TrezorConnect.getFeatures({
+        const response = await CerberusConnect.getFeatures({
             device,
             useEmptyPassphrase: true,
         });
@@ -306,7 +306,7 @@ export const authorizeDevice = createThunk(
             await dispatch(checkFirmwareAuthenticity());
         }
 
-        const response = await TrezorConnect.getDeviceState({
+        const response = await CerberusConnect.getDeviceState({
             device: {
                 path: device.path,
                 instance: device.instance,
@@ -323,7 +323,7 @@ export const authorizeDevice = createThunk(
             const duplicate = devices?.find(
                 d => d.state && d.state.split(':')[0] === s && d.instance !== device.instance,
             );
-            // get fresh data from reducer, `useEmptyPassphrase` might be changed after TrezorConnect call
+            // get fresh data from reducer, `useEmptyPassphrase` might be changed after CerberusConnect call
             const freshDeviceData = getSelectedDevice(device, devices);
             if (duplicate) {
                 if (freshDeviceData!.useEmptyPassphrase) {
@@ -340,7 +340,7 @@ export const authorizeDevice = createThunk(
                 return false;
             }
 
-            dispatch(deviceActions.authDevice({ device: freshDeviceData as TrezorDevice, state }));
+            dispatch(deviceActions.authDevice({ device: freshDeviceData as CerberusDevice, state }));
 
             return true;
         }
@@ -363,7 +363,7 @@ export const authConfirm = createThunk(
         const device = selectDeviceSelector(getState());
         if (!device) return false;
 
-        const response = await TrezorConnect.getDeviceState({
+        const response = await CerberusConnect.getDeviceState({
             device: {
                 path: device.path,
                 instance: device.instance,
@@ -407,7 +407,7 @@ export const authConfirm = createThunk(
 export const switchDuplicatedDevice = createThunk(
     `${MODULE_PREFIX}/switchDuplicatedDevice`,
     async (
-        { device, duplicate }: { device: TrezorDevice; duplicate: TrezorDevice },
+        { device, duplicate }: { device: CerberusDevice; duplicate: CerberusDevice },
         { dispatch, extra },
     ) => {
         const {
@@ -416,7 +416,7 @@ export const switchDuplicatedDevice = createThunk(
         // close modal
         dispatch(onModalCancel());
         // release session from authorizeDevice
-        await TrezorConnect.getFeatures({
+        await CerberusConnect.getFeatures({
             device,
             keepSession: false,
         });
@@ -496,10 +496,10 @@ export const confirmAddressOnDeviceThunk = createThunk(
 
         switch (account.networkType) {
             case 'ethereum':
-                response = await TrezorConnect.ethereumGetAddress(params);
+                response = await CerberusConnect.ethereumGetAddress(params);
                 break;
             case 'cardano':
-                response = TrezorConnect.cardanoGetAddress({
+                response = CerberusConnect.cardanoGetAddress({
                     device,
                     useEmptyPassphrase: device.useEmptyPassphrase,
                     addressParameters: {
@@ -514,13 +514,13 @@ export const confirmAddressOnDeviceThunk = createThunk(
                 });
                 break;
             case 'ripple':
-                response = TrezorConnect.rippleGetAddress(params);
+                response = CerberusConnect.rippleGetAddress(params);
                 break;
             case 'bitcoin':
-                response = TrezorConnect.getAddress(params);
+                response = CerberusConnect.getAddress(params);
                 break;
             case 'solana':
-                response = TrezorConnect.solanaGetAddress(params);
+                response = CerberusConnect.solanaGetAddress(params);
                 break;
             default:
                 response = {
@@ -552,7 +552,7 @@ export const onPassphraseSubmit = createThunk(
             );
         }
 
-        TrezorConnect.uiResponse({
+        CerberusConnect.uiResponse({
             type: UI.RECEIVE_PASSPHRASE,
             payload: {
                 value,

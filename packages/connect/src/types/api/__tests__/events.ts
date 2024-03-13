@@ -1,5 +1,5 @@
 import {
-    TrezorConnect,
+    CerberusConnect,
     UI_EVENT,
     DEVICE_EVENT,
     TRANSPORT_EVENT,
@@ -11,7 +11,7 @@ import {
     Address,
 } from '../../..';
 
-export const events = (api: TrezorConnect) => {
+export const events = (api: CerberusConnect) => {
     api.on(DEVICE_EVENT, event => {
         event.type.toLowerCase();
         if (event.type === 'button') {

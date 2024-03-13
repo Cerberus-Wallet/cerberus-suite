@@ -7,8 +7,8 @@ const getAddress = {
     type: 'input',
     value: `m/44'/501'/0'/0'`,
 };
-const showOnTrezor = {
-    name: 'showOnTrezor',
+const showOnCerberus = {
+    name: 'showOnCerberus',
     label: 'Show on Cerberus',
     type: 'checkbox',
     value: true,
@@ -21,7 +21,7 @@ const chunkify = {
     value: false,
 };
 
-const batch = [getAddress, showOnTrezor, chunkify];
+const batch = [getAddress, showOnCerberus, chunkify];
 
 export default [
     {

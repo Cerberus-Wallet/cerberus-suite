@@ -66,7 +66,7 @@ export const BiometricOverlay = () => {
     return (
         <>
             <Box style={applyStyle(overlayWrapperStyle)}>
-                <Icon name="trezor" size="extraLarge" color="iconDefault" />
+                <Icon name="cerberus" size="extraLarge" color="iconDefault" />
             </Box>
             {isBiometricsAuthenticationCanceled && (
                 <TouchableOpacity onPress={handleReenable} style={applyStyle(bottomWrapperStyle)}>

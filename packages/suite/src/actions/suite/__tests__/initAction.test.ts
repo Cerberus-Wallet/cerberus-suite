@@ -21,7 +21,7 @@ import {
     periodicCheckTokenDefinitionsThunk,
 } from '@suite-common/wallet-core';
 import { analyticsActions, prepareAnalyticsReducer } from '@suite-common/analytics';
-import TrezorConnect from '@cerberus/connect';
+import CerberusConnect from '@cerberus/connect';
 
 import { configureStore } from 'src/support/tests/configureStore';
 import { SUITE, ROUTER } from 'src/actions/suite/constants';
@@ -73,7 +73,7 @@ type Fixture = {
         initialPath?: string;
         expectedApp?: AppState['router']['app'];
         initialRun?: boolean;
-        trezorConnectError?: string;
+        cerberusConnectError?: string;
     };
 };
 
@@ -203,9 +203,9 @@ const fixtures: Fixture[] = [
         ],
     },
     {
-        description: 'TrezorConnect.init throws',
+        description: 'CerberusConnect.init throws',
         options: {
-            trezorConnectError: 'is broken',
+            cerberusConnectError: 'is broken',
             initialPath: '/version',
             expectedApp: 'version',
         },
@@ -252,15 +252,15 @@ describe('Suite init action', () => {
                 require('src/support/history').default.location.pathname = options.initialPath;
             }
 
-            if (options?.trezorConnectError) {
-                jest.spyOn(TrezorConnect, 'init').mockImplementation(() => {
-                    throw new Error(options.trezorConnectError);
+            if (options?.cerberusConnectError) {
+                jest.spyOn(CerberusConnect, 'init').mockImplementation(() => {
+                    throw new Error(options.cerberusConnectError);
                 });
 
                 try {
                     await store.dispatch(init());
                 } catch (err) {
-                    expect(err.message).toEqual(options.trezorConnectError);
+                    expect(err.message).toEqual(options.cerberusConnectError);
                 }
             } else {
                 await expect(store.dispatch(init())).resolves.not.toThrow();

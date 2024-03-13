@@ -130,7 +130,7 @@ class DropboxProvider extends AbstractMetadataProvider {
                 const matchLegacy = result.matches.find(
                     m =>
                         'metadata' in m.metadata &&
-                        m.metadata.metadata.path_lower === `/apps/trezor/${file}`,
+                        m.metadata.metadata.path_lower === `/apps/cerberus/${file}`,
                 );
 
                 // fail if it is in neither

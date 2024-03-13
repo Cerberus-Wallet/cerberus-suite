@@ -1,12 +1,12 @@
 import { A, G, pipe } from '@mobily/ts-belt';
 
 import { DiscoveryItem } from '@suite-common/wallet-types';
-import TrezorConnect from '@cerberus/connect';
+import CerberusConnect from '@cerberus/connect';
 
 import { DiscoveryDescriptorItem } from './types';
 
 export const fetchBundleDescriptors = async (bundle: DiscoveryItem[]) => {
-    const { success, payload } = await TrezorConnect.getAccountDescriptor({
+    const { success, payload } = await CerberusConnect.getAccountDescriptor({
         bundle,
         skipFinalReload: true,
     });

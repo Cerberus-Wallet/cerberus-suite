@@ -2,7 +2,7 @@ import { BaseProcess, Status } from './BaseProcess';
 
 export class BridgeProcess extends BaseProcess {
     constructor() {
-        super('bridge', 'trezord', {
+        super('bridge', 'cerberusd', {
             startupCooldown: 3,
         });
     }

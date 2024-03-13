@@ -55,7 +55,7 @@ describe('Passphrase', () => {
         cy.task('pressYes');
         cy.task('pressYes');
 
-        cy.interceptDataTrezorIo(requests);
+        cy.interceptDataCerberusIo(requests);
 
         cy.getTestElement('@dashboard/wallet-ready');
         // go to wallet

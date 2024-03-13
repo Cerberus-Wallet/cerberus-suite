@@ -1,5 +1,5 @@
 import { deviceActions, selectDevice } from '@suite-common/wallet-core';
-import TrezorConnect, { UI, RecoveryDevice, DeviceModelInternal } from '@cerberus/connect';
+import CerberusConnect, { UI, RecoveryDevice, DeviceModelInternal } from '@cerberus/connect';
 import { analytics, EventType } from '@cerberus/suite-analytics';
 
 import { RECOVERY } from 'src/actions/recovery/constants';
@@ -49,7 +49,7 @@ const setStatus = (status: SeedInputStatus): RecoveryAction => ({
 });
 
 const submit = (word: string) => () => {
-    TrezorConnect.uiResponse({ type: UI.RECEIVE_WORD, payload: word });
+    CerberusConnect.uiResponse({ type: UI.RECEIVE_WORD, payload: word });
 };
 
 const checkSeed = () => async (dispatch: Dispatch, getState: GetState) => {
@@ -66,7 +66,7 @@ const checkSeed = () => async (dispatch: Dispatch, getState: GetState) => {
         dispatch(setStatus('in-progress'));
     }
 
-    const response = await TrezorConnect.recoveryDevice({
+    const response = await CerberusConnect.recoveryDevice({
         dry_run: true,
         type: advancedRecovery ? 1 : 0,
         word_count: wordsCount,
@@ -115,7 +115,7 @@ const recoverDevice = () => async (dispatch: Dispatch, getState: GetState) => {
         params.u2f_counter = Math.floor(Date.now() / 1000);
     }
 
-    const response = await TrezorConnect.recoveryDevice({
+    const response = await CerberusConnect.recoveryDevice({
         ...params,
         device: {
             path: device.path,
@@ -152,7 +152,7 @@ const rerun = () => async (dispatch: Dispatch, getState: GetState) => {
 
     // user might have proceeded with recovery on screen which means that we need to
     // reload fresh features before deciding what to do
-    const response = await TrezorConnect.getFeatures({
+    const response = await CerberusConnect.getFeatures({
         device: {
             path: device.path,
         },

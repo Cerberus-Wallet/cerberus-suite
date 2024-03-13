@@ -5,7 +5,7 @@
     "homepage": "https://github.com/Cerberus-Wallet/cerberus-suite/tree/develop/packages/connect-common",
     "keywords": [
         "Cerberus",
-        "trezor-connect"
+        "cerberus-connect"
     ],
     "repository": {
         "type": "git",
@@ -16,7 +16,7 @@
     },
     "npmPublishAccess": "public",
     "license": "SEE LICENSE IN LICENSE.md",
-    "description": "Collection of assets and utils used by trezor-connect library.",
+    "description": "Collection of assets and utils used by cerberus-connect library.",
     "main": "./src/index.ts",
     "files": [
         "lib/",

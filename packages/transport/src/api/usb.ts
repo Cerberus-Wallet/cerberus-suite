@@ -273,15 +273,15 @@ export class UsbApi extends AbstractApi {
     }
 
     private filterDevices(devices: USBDevice[]) {
-        const trezorDevices = devices.filter(dev => {
-            const isTrezor = CERBERUS_USB_DESCRIPTORS.some(
+        const cerberusDevices = devices.filter(dev => {
+            const isCerberus = CERBERUS_USB_DESCRIPTORS.some(
                 desc => dev.vendorId === desc.vendorId && dev.productId === desc.productId,
             );
 
-            return isTrezor;
+            return isCerberus;
         });
-        const hidDevices = trezorDevices.filter(dev => this.deviceIsHid(dev));
-        const nonHidDevices = trezorDevices.filter(dev => !this.deviceIsHid(dev));
+        const hidDevices = cerberusDevices.filter(dev => this.deviceIsHid(dev));
+        const nonHidDevices = cerberusDevices.filter(dev => !this.deviceIsHid(dev));
 
         return [hidDevices, nonHidDevices];
     }

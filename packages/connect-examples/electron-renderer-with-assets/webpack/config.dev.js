@@ -32,7 +32,7 @@ module.exports = {
             patterns: [
                 {
                     from: path.join(__dirname, '..', '..', '..', 'connect-iframe', 'build'),
-                    to: path.join(__dirname, '../build-renderer/trezor-connect-bundled'),
+                    to: path.join(__dirname, '../build-renderer/cerberus-connect-bundled'),
                 },
             ],
         }),

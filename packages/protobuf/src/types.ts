@@ -1,6 +1,6 @@
 import * as Messages from './messages';
 
-export type MessageFromTrezor = {
+export type MessageFromCerberus = {
     type: keyof Messages.MessageType;
     message: Record<string, unknown>;
 };

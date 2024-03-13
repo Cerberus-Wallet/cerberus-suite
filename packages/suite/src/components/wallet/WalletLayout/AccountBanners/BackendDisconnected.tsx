@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { NotificationCard, Translation } from 'src/components/suite';
 import { useDispatch, useSelector } from 'src/hooks/suite';
 import { reconnectBlockchainThunk } from '@suite-common/wallet-core';
-import { isTrezorConnectBackendType } from '@suite-common/wallet-utils';
+import { isCerberusConnectBackendType } from '@suite-common/wallet-utils';
 import type { NetworkSymbol } from '@suite-common/wallet-config';
 
 const DisconnectedNotification = ({
@@ -67,7 +67,7 @@ export const BackendDisconnected = () => {
     if (selectedAccount.status !== 'loaded') return null;
 
     // TODO handle non-standard backends differently
-    if (!isTrezorConnectBackendType(selectedAccount.account.backendType)) return null;
+    if (!isCerberusConnectBackendType(selectedAccount.account.backendType)) return null;
 
     const { symbol } = selectedAccount.network;
     const chain = blockchain[symbol];

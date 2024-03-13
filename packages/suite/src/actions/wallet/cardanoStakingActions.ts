@@ -14,7 +14,7 @@ export type CardanoStakingAction =
     | { type: typeof CARDANO_STAKING.REMOVE_PENDING_STAKE_TX; accountKey: string }
     | {
           type: typeof CARDANO_STAKING.SET_CERBERUS_POOLS;
-          trezorPools: PoolsResponse;
+          cerberusPools: PoolsResponse;
           network: CardanoNetwork;
       }
     | { type: typeof CARDANO_STAKING.SET_FETCH_ERROR; error: boolean; network: CardanoNetwork }
@@ -99,7 +99,7 @@ export const validatePendingStakeTxOnTx =
         }
     };
 
-export const fetchTrezorPools = (network: 'ADA' | 'tADA') => async (dispatch: Dispatch) => {
+export const fetchCerberusPools = (network: 'ADA' | 'tADA') => async (dispatch: Dispatch) => {
     const cardanoNetwork = network === 'ADA' ? 'mainnet' : 'preview';
 
     dispatch({
@@ -121,12 +121,12 @@ export const fetchTrezorPools = (network: 'ADA' | 'tADA') => async (dispatch: Di
         if (!responseJson || !('next' in responseJson) || !('pools' in responseJson)) {
             // todo: even if this happens, error will be overridden by this bug
             // https://github.com/Cerberus-Wallet/cerberus-suite/issues/5485
-            throw new Error('Cardano: fetchTrezorPools: Invalid data format');
+            throw new Error('Cardano: fetchCerberusPools: Invalid data format');
         }
 
         dispatch({
             type: CARDANO_STAKING.SET_CERBERUS_POOLS,
-            trezorPools: responseJson as PoolsResponse,
+            cerberusPools: responseJson as PoolsResponse,
             network: cardanoNetwork,
         });
     } catch (err) {

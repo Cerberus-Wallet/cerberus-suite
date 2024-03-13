@@ -33,7 +33,7 @@
     "submit": {
         "develop": {
             "ios": {
-                "bundleIdentifier": "io.trezor.suite.develop",
+                "bundleIdentifier": "io.cerberus.suite.develop",
                 "ascAppId": "1631884497",
                 "appleTeamId": "C3P22XVH2C"
             }
@@ -44,7 +44,7 @@
                 "changesNotSentForReview": true
             },
             "ios": {
-                "bundleIdentifier": "io.trezor.suite",
+                "bundleIdentifier": "io.cerberus.suite",
                 "ascAppId": "1631884497",
                 "appleTeamId": "C3P22XVH2C"
             }

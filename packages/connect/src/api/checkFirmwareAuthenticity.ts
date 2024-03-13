@@ -32,8 +32,8 @@ export default class CheckFirmwareAuthenticity extends AbstractMethod<'checkFirm
 
         const deviceModelPath = `${device.features.internal_model}`.toLowerCase();
 
-        const baseUrl = `https://data.trezorcheck.io/firmware/${deviceModelPath}`;
-        const fwUrl = `${baseUrl}/trezor-${deviceModelPath}-${firmwareVersion}${
+        const baseUrl = `https://data.trezer.io/firmware/${deviceModelPath}`;
+        const fwUrl = `${baseUrl}/cerberus-${deviceModelPath}-${firmwareVersion}${
             device.firmwareType === FirmwareType.BitcoinOnly ? '-bitcoinonly.bin' : '.bin'
         }`;
 

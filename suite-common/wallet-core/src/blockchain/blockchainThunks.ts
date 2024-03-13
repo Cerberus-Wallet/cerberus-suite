@@ -10,9 +10,9 @@ import {
     getBackendFromSettings,
     getCustomBackends,
     getNetwork,
-    isTrezorConnectBackendType,
+    isCerberusConnectBackendType,
 } from '@suite-common/wallet-utils';
-import TrezorConnect, {
+import CerberusConnect, {
     BlockchainBlock,
     BlockchainError,
     BlockchainNotification,
@@ -31,7 +31,7 @@ import { selectBlockchainState, selectNetworkBlockchainInfo } from './blockchain
 const ACCOUNTS_SYNC_INTERVAL = 60 * 1000;
 
 // Conditionally subscribe to blockchain backend
-// called after TrezorConnect.init successfully emits TRANSPORT.START event
+// called after CerberusConnect.init successfully emits TRANSPORT.START event
 // checks if there are discovery processes loaded from LocalStorage
 // if so starts subscription to proper networks
 
@@ -48,7 +48,7 @@ export const preloadFeeInfoThunk = createThunk(
         // Fetch default fee levels
         const networks = networksCompatibility.filter(n => !n.isHidden && !n.accountType);
         const promises = networks.map(network =>
-            TrezorConnect.blockchainEstimateFee({
+            CerberusConnect.blockchainEstimateFee({
                 coin: network.symbol,
                 request: {
                     feeLevels: 'preloaded',
@@ -98,7 +98,7 @@ export const updateFeeInfoThunk = createThunk(
             // NOTE: ethereum smart fees are not implemented properly in @cerberus/connect Issue: https://github.com/Cerberus-Wallet/cerberus-suite/issues/5340
             // create raw call to @cerberus/blockchain-link, receive data and create FeeLevel.normal from it
 
-            const result = await TrezorConnect.blockchainEstimateFee({
+            const result = await CerberusConnect.blockchainEstimateFee({
                 coin: network.symbol,
                 request: {
                     blocks: [2],
@@ -119,7 +119,7 @@ export const updateFeeInfoThunk = createThunk(
                 };
             }
         } else {
-            const result = await TrezorConnect.blockchainEstimateFee({
+            const result = await CerberusConnect.blockchainEstimateFee({
                 coin: network.symbol,
                 request: {
                     feeLevels: 'smart',
@@ -145,16 +145,16 @@ export const updateFeeInfoThunk = createThunk(
     },
 );
 
-// call TrezorConnect.unsubscribe, it doesn't cost anything and should emit BLOCKCHAIN.CONNECT or BLOCKCHAIN.ERROR event
+// call CerberusConnect.unsubscribe, it doesn't cost anything and should emit BLOCKCHAIN.CONNECT or BLOCKCHAIN.ERROR event
 export const reconnectBlockchainThunk = createThunk(
     `${blockchainActionsPrefix}/reconnectBlockchainThunk`,
-    (coin: NetworkSymbol) => TrezorConnect.blockchainUnsubscribeFiatRates({ coin }),
+    (coin: NetworkSymbol) => CerberusConnect.blockchainUnsubscribeFiatRates({ coin }),
 );
 
 const setBackendsToConnect = (backends: CustomBackend[]) =>
     Promise.all(
         backends.map(({ coin, type, urls }) =>
-            TrezorConnect.blockchainSetCustomBackend({
+            CerberusConnect.blockchainSetCustomBackend({
                 coin,
                 blockchainLink: {
                     type,
@@ -214,10 +214,10 @@ export const subscribeBlockchainThunk = createThunk(
         const accountsToSubscribe = findAccountsByNetwork(
             symbol,
             selectAccounts(getState()),
-        ).filter(a => isTrezorConnectBackendType(a.backendType)); // do not subscribe accounts with unsupported backend type
+        ).filter(a => isCerberusConnectBackendType(a.backendType)); // do not subscribe accounts with unsupported backend type
         if (!accountsToSubscribe.length) return;
 
-        return TrezorConnect.blockchainSubscribe({
+        return CerberusConnect.blockchainSubscribe({
             accounts: accountsToSubscribe,
             coin: symbol,
         });
@@ -234,18 +234,18 @@ export const unsubscribeBlockchainThunk = createThunk(
         const accounts = selectAccounts(getState());
         const promises = symbols.map(symbol => {
             const accountsToSubscribe = findAccountsByNetwork(symbol, accounts).filter(a =>
-                isTrezorConnectBackendType(a.backendType),
+                isCerberusConnectBackendType(a.backendType),
             ); // do not unsubscribe accounts with unsupported backend type
             if (accountsToSubscribe.length) {
                 // there are some accounts left, update subscription
-                return TrezorConnect.blockchainSubscribe({
+                return CerberusConnect.blockchainSubscribe({
                     accounts: accountsToSubscribe,
                     coin: symbol,
                 });
             }
 
             // there are no accounts left for this coin, disconnect backend
-            return TrezorConnect.blockchainDisconnect({ coin: symbol });
+            return CerberusConnect.blockchainDisconnect({ coin: symbol });
         });
 
         return Promise.all(promises as Promise<any>[]);

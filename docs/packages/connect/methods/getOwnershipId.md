@@ -3,7 +3,7 @@
 Export SLIP-0019 ownership identifier. [Read more](https://github.com/satoshilabs/slips/blob/master/slip-0019.md#ownership-identifier)
 
 ```javascript
-const result = await TrezorConnect.getOwnershipId(params);
+const result = await CerberusConnect.getOwnershipId(params);
 ```
 
 > :note: **Supported only by T2T1 with Firmware 2.4.4 or higher!**
@@ -30,7 +30,7 @@ const result = await TrezorConnect.getOwnershipId(params);
 Display id of the first bitcoin address:
 
 ```javascript
-TrezorConnect.getOwnershipId({
+CerberusConnect.getOwnershipId({
     path: "m/86'/0'/0'/0/0",
 });
 ```
@@ -38,7 +38,7 @@ TrezorConnect.getOwnershipId({
 Return a bundle of ids:
 
 ```javascript
-TrezorConnect.getOwnershipId({
+CerberusConnect.getOwnershipId({
     bundle: [
         { path: "m/86'/0'/0'/0/0" }, // taproot
         { path: "m/84'/0'/0'/0/0" }, // bech32

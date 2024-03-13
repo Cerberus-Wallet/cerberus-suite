@@ -1,10 +1,10 @@
 # @cerberus/suite-web e2e tests
 
-@cerberus/suite-web uses [Cypress](https://docs.cypress.io/guides/overview/why-cypress.html) to run e2e tests. It also uses [trezor-user-env](https://github.com/Cerberus-Wallet/cerberus-user-env) which is [daily built](https://gitlab.com/satoshilabs/trezor/trezor-user-env/-/pipelines) into a docker image providing all the necessary instrumentation required to run tests (bridge and emulators).
+@cerberus/suite-web uses [Cypress](https://docs.cypress.io/guides/overview/why-cypress.html) to run e2e tests. It also uses [cerberus-user-env](https://github.com/Cerberus-Wallet/cerberus-user-env) which is [daily built](https://gitlab.com/satoshilabs/cerberus/cerberus-user-env/-/pipelines) into a docker image providing all the necessary instrumentation required to run tests (bridge and emulators).
 
 ## Run it locally
 
-_Note: All paths below are relative to the root of trezor-suite repository, if not specified otherwise._
+_Note: All paths below are relative to the root of cerberus-suite repository, if not specified otherwise._
 
 ### On Linux
 
@@ -75,7 +75,7 @@ _Note: All paths below are relative to the root of trezor-suite repository, if n
 -   [Docker](https://docs.docker.com/desktop/mac/install/)
 -   [XQuartz](https://www.xquartz.org/) (to share your screen with Docker)
 -   [Cerberus user env](https://github.com/Cerberus-Wallet/cerberus-user-env)
--   No other instance of `Suite` or `trezord` service is running
+-   No other instance of `Suite` or `cerberusd` service is running
 
 Steps:
 
@@ -88,7 +88,7 @@ Steps:
 1. In the terminal window, set two environment variables:
     - ``export HOSTNAME=`hostname` ``
     - `export DISPLAY=${HOSTNAME}:0`
-1. In terminal window, navigate to `trezor-user-env` repo root and run `./run.sh`.
+1. In terminal window, navigate to `cerberus-user-env` repo root and run `./run.sh`.
 1. In another window, run web `Suite` with `yarn suite:dev`.
 1. In a third window, run `npx cypress open --project packages/suite-web/e2e --config 'baseUrl=http://localhost:8000'`.
 
@@ -96,8 +96,8 @@ Steps:
 
 -   `Cypress could not verify that this server is running ...`
     -   make sure that the localhost is actually running and is accessible via browser
--   `tests fail at the very beginning on screen with "Use trezor here" button`
-    -   make sure that no other instance of `Suite` or `trezord` is running
+-   `tests fail at the very beginning on screen with "Use cerberus here" button`
+    -   make sure that no other instance of `Suite` or `cerberusd` is running
 
 ---
 

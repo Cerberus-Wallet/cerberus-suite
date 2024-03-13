@@ -1,4 +1,4 @@
-import TrezorConnect from '@cerberus/connect-web';
+import CerberusConnect from '@cerberus/connect-web';
 import { loadDocs } from './docsActions';
 
 import { GetState, Dispatch, Field } from '../types';
@@ -61,11 +61,11 @@ export const onSubmit = () => async (dispatch: Dispatch, getState: GetState) => 
     const { method } = getState();
     if (!method?.name) throw new Error('method name not specified');
 
-    const connectMethod = TrezorConnect[method.name];
+    const connectMethod = CerberusConnect[method.name];
     if (typeof connectMethod !== 'function') {
         dispatch(
             onResponse({
-                error: `Method "${connectMethod}" not found in TrezorConnect`,
+                error: `Method "${connectMethod}" not found in CerberusConnect`,
             }),
         );
 

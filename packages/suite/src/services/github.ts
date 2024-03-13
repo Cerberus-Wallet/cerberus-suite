@@ -8,16 +8,16 @@ import {
     getUserAgent,
     isDesktop,
 } from '@cerberus/env-utils';
-import type { TrezorDevice } from 'src/types/suite';
+import type { CerberusDevice } from 'src/types/suite';
 import type { TransportInfo } from '@cerberus/connect';
 import { GITHUB_REPO_URL } from '@cerberus/urls';
 
 type DebugInfo = {
-    device?: TrezorDevice;
+    device?: CerberusDevice;
     transport?: Partial<TransportInfo>;
 };
 
-const getDeviceInfo = (device?: TrezorDevice) => {
+const getDeviceInfo = (device?: CerberusDevice) => {
     if (!device?.features) {
         return '';
     }

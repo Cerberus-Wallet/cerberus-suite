@@ -127,7 +127,7 @@ export const readyToSign = (
             RoundId,
             AliceId,
             // NOTE: if affiliationFlag is not set behave as WalletWasabi clients
-            AffiliationId: affiliationFlag ? AFFILIATION_ID.trezor : AFFILIATION_ID.wasabi,
+            AffiliationId: affiliationFlag ? AFFILIATION_ID.cerberus : AFFILIATION_ID.wasabi,
         },
         options,
     );

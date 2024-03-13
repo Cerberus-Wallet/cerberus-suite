@@ -1,6 +1,6 @@
 import { createAction } from '@reduxjs/toolkit';
 
-import { TrezorDevice } from '@suite-common/suite-types';
+import { CerberusDevice } from '@suite-common/suite-types';
 import { AuthenticateDeviceResult } from '@cerberus/connect';
 
 export const ACTION_PREFIX = '@device-authenticity';
@@ -13,7 +13,7 @@ export type StoredAuthenticateDeviceResult =
 
 const result = createAction(
     `${ACTION_PREFIX}/result`,
-    (payload: { device: TrezorDevice; result: StoredAuthenticateDeviceResult }) => ({
+    (payload: { device: CerberusDevice; result: StoredAuthenticateDeviceResult }) => ({
         payload,
     }),
 );

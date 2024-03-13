@@ -10,7 +10,7 @@ const {
     CardanoTxSigningMode,
 } = MessagesSchema;
 
-// vectors from https://github.com/Cerberus-Wallet/cerberus-firmware/tree/main/python/trezorlib/tests/device_tests/test_msg_cardano_sign_transaction.py
+// vectors from https://github.com/Cerberus-Wallet/cerberus-firmware/tree/main/python/cerberuslib/tests/device_tests/test_msg_cardano_sign_transaction.py
 
 const SAMPLE_INPUTS = {
     byron_input: {

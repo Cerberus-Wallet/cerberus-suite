@@ -1,11 +1,11 @@
-import { TrezorDevice } from '@suite-common/suite-types';
+import { CerberusDevice } from '@suite-common/suite-types';
 import { notificationsActions } from '@suite-common/toast-notifications';
 import { configureMockStore, testMocks } from '@suite-common/test-utils';
 
 import { deviceAuthenticityActions } from '../src/deviceAuthenticityActions';
 import { checkDeviceAuthenticityThunk } from '../src/deviceAuthenticityThunks';
 
-const initStore = (device?: TrezorDevice) =>
+const initStore = (device?: CerberusDevice) =>
     configureMockStore({
         extra: {
             selectors: {
@@ -89,7 +89,7 @@ describe('Check device authenticity', () => {
     fixtures.forEach(f => {
         it(f.description, async () => {
             const store = initStore(f.device);
-            testMocks.setTrezorConnectFixtures(f.connectResponse);
+            testMocks.setCerberusConnectFixtures(f.connectResponse);
             await store.dispatch(
                 checkDeviceAuthenticityThunk({
                     allowDebugKeys: false,

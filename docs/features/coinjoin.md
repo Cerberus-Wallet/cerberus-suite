@@ -8,7 +8,7 @@ For development and e2e purposes you can use local version of coinjoin backend (
 
 1. run `./docker/docker-coinjoin-backend.sh`
 
-    > If you are using `trezor-user-env` make sure that it's started with `-r` option (disabled regtest)
+    > If you are using `cerberus-user-env` make sure that it's started with `-r` option (disabled regtest)
     >
     > Pull and run docker image of https://github.com/Cerberus-Wallet/coinjoin-backend
     >

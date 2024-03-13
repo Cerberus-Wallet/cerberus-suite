@@ -18,7 +18,7 @@ Welcome to the Cerberus Suite repository! This repository contains the source co
 
 ### Getting started
 
--   `git clone git@github.com:trezor/trezor-suite.git`
+-   `git clone git@github.com:cerberus/cerberus-suite.git`
 -   `git submodule update --init --recursive`
 -   `git lfs install` // Set up Git LFS for your user account. You only need to run this once per user account.
 -   `git lfs pull`

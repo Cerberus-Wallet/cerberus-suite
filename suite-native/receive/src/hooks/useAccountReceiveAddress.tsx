@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigation } from '@react-navigation/native';
 
 import { useAlert } from '@suite-native/alerts';
-import TrezorConnect from '@cerberus/connect';
+import CerberusConnect from '@cerberus/connect';
 import {
     AccountsRootState,
     selectAccountByKey,
@@ -90,7 +90,7 @@ export const useAccountReceiveAddress = (accountKey: AccountKey) => {
                     pictogramVariant: 'red',
                     primaryButtonTitle: 'Cancel',
                     onPressPrimaryButton: () => {
-                        TrezorConnect.cancel();
+                        CerberusConnect.cancel();
                         navigation.goBack();
                         setIsUnverifiedAddressRevealed(false);
                     },

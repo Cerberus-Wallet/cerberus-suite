@@ -1,9 +1,9 @@
 import { useMemo, ReactNode } from 'react';
 import styled from 'styled-components';
 
-import { TrezorLogo, Button, variables } from '@cerberus/components';
+import { CerberusLogo, Button, variables } from '@cerberus/components';
 import { CERBERUS_SUPPORT_URL } from '@cerberus/urls';
-import { TrezorLink, Translation } from 'src/components/suite';
+import { CerberusLink, Translation } from 'src/components/suite';
 import { OnboardingProgressBar } from 'src/components/onboarding';
 import { useSelector, useOnboarding } from 'src/hooks/suite';
 import { MAX_ONBOARDING_WIDTH } from 'src/constants/suite/layout';
@@ -149,9 +149,9 @@ export const OnboardingLayout = ({ children }: OnboardingLayoutProps) => {
                         <ContentWrapper id="layout-scroll">
                             <Header>
                                 <LogoHeaderRow>
-                                    <TrezorLogo type="suite" width="128px" />
+                                    <CerberusLogo type="suite" width="128px" />
 
-                                    <TrezorLink
+                                    <CerberusLink
                                         type="hint"
                                         variant="nostyle"
                                         href={CERBERUS_SUPPORT_URL}
@@ -164,7 +164,7 @@ export const OnboardingLayout = ({ children }: OnboardingLayoutProps) => {
                                         >
                                             <Translation id="TR_HELP" />
                                         </Button>
-                                    </TrezorLink>
+                                    </CerberusLink>
                                 </LogoHeaderRow>
 
                                 <ProgressBarRow>

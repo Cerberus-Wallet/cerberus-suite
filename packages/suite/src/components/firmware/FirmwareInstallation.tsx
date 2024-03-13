@@ -5,13 +5,13 @@ import { Translation, WebUsbButton } from 'src/components/suite';
 import { useDevice, useFirmware } from 'src/hooks/suite';
 import { FirmwareOffer, FirmwareProgressBar, ReconnectDevicePrompt } from 'src/components/firmware';
 import { OnboardingStepBox } from 'src/components/onboarding';
-import { TrezorDevice } from 'src/types/suite';
+import { CerberusDevice } from 'src/types/suite';
 import { selectIsActionAbortable } from 'src/reducers/suite/suiteReducer';
 import { useSelector } from 'src/hooks/suite/useSelector';
 import { DeviceModelInternal } from '@cerberus/connect';
 
 interface FirmwareInstallationProps {
-    cachedDevice?: TrezorDevice;
+    cachedDevice?: CerberusDevice;
     // This component is shared between Onboarding flow and standalone fw update modal with few minor UI changes
     // If it is set to true, then you know it is being rendered in standalone fw update modal
     standaloneFwUpdate?: boolean;

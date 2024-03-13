@@ -4,7 +4,7 @@
 # 3. Import another BTC asset via text again
 # 4. Verify that both assets have been synced once before
 
-appId: io.trezor.suite.${ENV}
+appId: io.cerberus.suite.${ENV}
 env:
     NETWORK: 'Bitcoin'
 ---

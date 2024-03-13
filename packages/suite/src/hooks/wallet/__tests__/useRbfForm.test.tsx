@@ -1,4 +1,4 @@
-import TrezorConnect from '@cerberus/connect';
+import CerberusConnect from '@cerberus/connect';
 import { screen } from '@testing-library/react';
 import { configureMockStore, initPreloadedState } from '@suite-common/test-utils';
 import * as fixtures from '../__fixtures__/useRbfForm';
@@ -27,7 +27,7 @@ jest.mock('cross-fetch', () => ({
     default: () => Promise.resolve({ ok: false }),
 }));
 
-// TrezorConnect.composeTransaction is trying to connect to blockchain, to get current block height.
+// CerberusConnect.composeTransaction is trying to connect to blockchain, to get current block height.
 // Mock whole module to avoid internet connection.
 jest.mock('@cerberus/blockchain-link', () => ({
     __esModule: true,
@@ -104,7 +104,7 @@ const Component = ({ callback }: { callback: TestCallback }) => {
 
 describe('useRbfForm hook', () => {
     beforeAll(async () => {
-        await TrezorConnect.init({
+        await CerberusConnect.init({
             transportReconnect: false,
             pendingTransportEvent: false,
             manifest: {
@@ -115,7 +115,7 @@ describe('useRbfForm hook', () => {
         jest.spyOn(window, 'scrollTo').mockImplementation(() => {});
     });
     afterAll(async () => {
-        await TrezorConnect.dispose();
+        await CerberusConnect.dispose();
     });
     afterEach(() => {
         jest.clearAllMocks();
@@ -133,12 +133,12 @@ describe('useRbfForm hook', () => {
                 </ChangeFee>,
             );
 
-            const composeTransactionSpy = jest.spyOn(TrezorConnect, 'composeTransaction');
+            const composeTransactionSpy = jest.spyOn(CerberusConnect, 'composeTransaction');
 
             // mock responses from 'signTransaction'.
             // response doesn't matter. parameters are tested.
             const signTransactionMock = jest
-                .spyOn(TrezorConnect, 'signTransaction')
+                .spyOn(CerberusConnect, 'signTransaction')
                 .mockImplementation(() =>
                     Promise.resolve({
                         success: false,

@@ -17,7 +17,7 @@
         { "path": "../transport" },
         { "path": "../urls" },
         { "path": "../node-utils" },
-        { "path": "../trezor-user-env-link" },
+        { "path": "../cerberus-user-env-link" },
         { "path": "../utils" }
     ]
 }

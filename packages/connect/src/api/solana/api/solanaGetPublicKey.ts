@@ -36,7 +36,7 @@ export default class SolanaGetPublicKey extends AbstractMethod<
 
             return {
                 address_n: path,
-                show_display: typeof batch.showOnTrezor === 'boolean' ? batch.showOnTrezor : false,
+                show_display: typeof batch.showOnCerberus === 'boolean' ? batch.showOnCerberus : false,
             };
         });
     }

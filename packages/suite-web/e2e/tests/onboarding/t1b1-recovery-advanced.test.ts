@@ -43,7 +43,7 @@ describe('Onboarding - recover wallet T1B1', () => {
         cy.task('pressYes');
         cy.getTestElement('@word-input-select/input');
 
-        // todo: finish reading from device. needs support in trezor-user-env
+        // todo: finish reading from device. needs support in cerberus-user-env
     });
 });
 

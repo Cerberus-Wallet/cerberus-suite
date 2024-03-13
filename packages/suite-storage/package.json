@@ -8,7 +8,7 @@
         "suite-storage"
     ],
     "license": "SEE LICENSE IN LICENSE.md",
-    "description": "trezor suite storage",
+    "description": "cerberus suite storage",
     "scripts": {
         "lint:js": "yarn g:eslint '**/*.{ts,tsx,js}'",
         "type-check": "yarn g:tsc --build tsconfig.json",

@@ -1,4 +1,4 @@
-package io.trezor.rnusb
+package io.cerberus.rnusb
 
 import android.content.BroadcastReceiver
 import android.content.Context

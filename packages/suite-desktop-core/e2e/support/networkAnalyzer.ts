@@ -12,7 +12,7 @@ export class NetworkAnalyzer {
         return new Promise((resolve, reject) => {
             try {
                 // When running in Tests the electron process has name `electron`,
-                // but when running without the tests is is `trezor-su`.
+                // but when running without the tests is is `cerberus-su`.
                 exec('lsof -i TCP | grep electron', (_, stdout) => {
                     const outputGroupParser = (message: string) =>
                         message && message.trim().match(/electron .*/gm);

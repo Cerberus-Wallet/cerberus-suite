@@ -1,4 +1,4 @@
-import { trezorUtils, CoinSelectionError } from '@fivebinaries/coin-selection';
+import { cerberusUtils, CoinSelectionError } from '@fivebinaries/coin-selection';
 
 import { AbstractMethod } from '../../../core/AbstractMethod';
 import { validateParams } from '../../common/paramsValidator';
@@ -78,11 +78,11 @@ export default class CardanoComposeTransaction extends AbstractMethod<
                               type: txPlan.type,
                               bytes: txPlan.tx.size,
                               ttl: txPlan.ttl,
-                              inputs: trezorUtils.transformToTrezorInputs(
+                              inputs: cerberusUtils.transformToCerberusInputs(
                                   txPlan.inputs,
                                   account.utxo,
                               ),
-                              outputs: trezorUtils.transformToTrezorOutputs(
+                              outputs: cerberusUtils.transformToCerberusOutputs(
                                   txPlan.outputs,
                                   addressParameters,
                               ),

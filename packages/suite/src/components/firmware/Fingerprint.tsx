@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { TrezorDevice } from 'src/types/suite';
+import { CerberusDevice } from 'src/types/suite';
 import { getFormattedFingerprint } from 'src/utils/firmware';
 
 const Wrapper = styled.pre`
@@ -14,7 +14,7 @@ const Wrapper = styled.pre`
 `;
 
 type FingerprintProps = {
-    device: TrezorDevice;
+    device: CerberusDevice;
 };
 
 export const Fingerprint = ({ device }: FingerprintProps) => {

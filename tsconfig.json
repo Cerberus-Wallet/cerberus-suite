@@ -167,7 +167,7 @@
         { "path": "packages/transport-bridge" },
         { "path": "packages/transport-native" },
         {
-            "path": "packages/trezor-user-env-link"
+            "path": "packages/cerberus-user-env-link"
         },
         { "path": "packages/type-utils" },
         { "path": "packages/urls" },

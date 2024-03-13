@@ -1725,7 +1725,7 @@
   "TR_TAPROOT_BANNER_POINT_1": "Somente letras minúsculas = <strong>menor chance de erros de revisão</strong>",
   "TR_TAPROOT_BANNER_POINT_2": "Privacidade melhorada para todas as transações Bitcoin",
   "TR_TAPROOT_BANNER_TITLE": "Novo no Cerberus Suite: Contas Taproot!",
-  "TR_TERMS_AND_PRIVACY_CONFIRMATION": "Concordo com os Termos <trezor>Cerberus Suite</trezor> e <coordinator>zkSNACKs Coordinator</coordinator>",
+  "TR_TERMS_AND_PRIVACY_CONFIRMATION": "Concordo com os Termos <cerberus>Cerberus Suite</cerberus> e <coordinator>zkSNACKs Coordinator</coordinator>",
   "TR_TERMS_OF_USE_INVITY": "Termos de Uso",
   "TR_TESTNET_COINS": "Moedas de teste",
   "TR_TESTNET_COINS_DESCRIPTION": "Estas moedas são utilizadas apenas para testes e não têm qualquer valor.",

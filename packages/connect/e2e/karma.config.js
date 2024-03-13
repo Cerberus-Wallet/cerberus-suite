@@ -116,10 +116,10 @@ module.exports = config => {
                     Buffer: ['buffer', 'Buffer'],
                     process: 'process/browser',
                 }),
-                // replace TrezorConnect module used in ./tests/common.setup.js
+                // replace CerberusConnect module used in ./tests/common.setup.js
                 new webpack.NormalModuleReplacementPlugin(
                     /^(\.\.\/)+src$/,
-                    path.join(__dirname, '../../connect-web/build/trezor-connect.js'),
+                    path.join(__dirname, '../../connect-web/build/cerberus-connect.js'),
                 ),
 
                 // replace ws module used in ./tests/websocket-client.js

@@ -45,7 +45,7 @@ export const Transport = () => {
             <SectionItem data-test="@settings/debug/transport">
                 <TextColumn
                     title="Transports"
-                    description="You may override TrezorConnect default settings here. Select preferred transports that are to be used. You will need to reload after changes"
+                    description="You may override CerberusConnect default settings here. Select preferred transports that are to be used. You will need to reload after changes"
                 />
             </SectionItem>
             {/* todo: make it drag and drop sortable */}

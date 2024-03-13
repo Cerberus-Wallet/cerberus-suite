@@ -2,7 +2,7 @@ import * as protobuf from 'protobufjs/light';
 import { scheduleAction, ScheduleActionParams, ScheduledAction, Deferred } from '@cerberus/utils';
 import { TypedEmitter } from '@cerberus/utils';
 import { PROTOCOL_MALFORMED, TransportProtocol } from '@cerberus/protocol';
-import { MessageFromTrezor } from '@cerberus/protobuf';
+import { MessageFromCerberus } from '@cerberus/protobuf';
 
 import {
     Session,
@@ -294,7 +294,7 @@ export abstract class AbstractTransport extends TypedEmitter<{
         session: string;
         protocol?: TransportProtocol;
     }): AbortableCall<
-        MessageFromTrezor,
+        MessageFromCerberus,
         // bridge
         | typeof ERRORS.HTTP_ERROR
         | typeof ERRORS.WRONG_RESULT_TYPE
@@ -318,7 +318,7 @@ export abstract class AbstractTransport extends TypedEmitter<{
         data: Record<string, unknown>;
         protocol?: TransportProtocol;
     }): AbortableCall<
-        MessageFromTrezor,
+        MessageFromCerberus,
         // bridge
         | typeof ERRORS.HTTP_ERROR
         | typeof ERRORS.WRONG_RESULT_TYPE

@@ -27,7 +27,7 @@
         { "path": "../protobuf" },
         { "path": "../suite-analytics" },
         { "path": "../transport" },
-        { "path": "../trezor-user-env-link" },
+        { "path": "../cerberus-user-env-link" },
         { "path": "../utils" }
     ]
 }

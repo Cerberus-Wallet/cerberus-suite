@@ -1,6 +1,6 @@
 import BigNumber from 'bignumber.js';
 
-import TrezorConnect, { FeeLevel, Params, PROTO, SignTransaction } from '@cerberus/connect';
+import CerberusConnect, { FeeLevel, Params, PROTO, SignTransaction } from '@cerberus/connect';
 import { notificationsActions } from '@suite-common/toast-notifications';
 import {
     formatNetworkAmount,
@@ -94,7 +94,7 @@ export const composeTransaction =
             coin: account.symbol,
         };
 
-        const response = await TrezorConnect.composeTransaction({
+        const response = await CerberusConnect.composeTransaction({
             ...params,
             account: params.account, // needs to be present in order to correct resolve of @cerberus/connect params overload
         });
@@ -138,7 +138,7 @@ export const composeTransaction =
             // check if any custom level is possible
             const customLevelsResponse =
                 customLevels.length > 0
-                    ? await TrezorConnect.composeTransaction({
+                    ? await CerberusConnect.composeTransaction({
                           ...params,
                           account: params.account, // needs to be present in order to correct resolve type of @cerberus/connect params overload
                           feeLevels: customLevels,
@@ -244,7 +244,7 @@ export const signTransaction =
             }
 
             // override inputs and outputs of precomposed transaction
-            // NOTE: RBF inputs/outputs required are to be in the same exact order as in original tx (covered by TrezorConnect.composeTransaction.skipPermutation param)
+            // NOTE: RBF inputs/outputs required are to be in the same exact order as in original tx (covered by CerberusConnect.composeTransaction.skipPermutation param)
             // possible variations:
             // it's possible to add new utxo not related to the original tx at the end of the list
             // it's possible to add change-output if it not exists in original tx AND new utxo was added/used
@@ -296,7 +296,7 @@ export const signTransaction =
             ...signEnhancement,
         };
 
-        const response = await TrezorConnect.signTransaction(signPayload);
+        const response = await CerberusConnect.signTransaction(signPayload);
         if (!response.success) {
             // catch manual error from TransactionReviewModal
             if (response.payload.error === 'tx-cancelled') return;

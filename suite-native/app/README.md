@@ -27,7 +27,7 @@ Transport layer not working for iOS but it's possible to run app in watch-only m
 
 1. Install CocoaPods dependencies - `yarn pods` (it's necessary to do this every time native dependencies are changed)
 2. Run packager - `yarn start`
-3. Open `ios/TrezorSuite.xcworkspace` in Xcode
+3. Open `ios/CerberusSuite.xcworkspace` in Xcode
 4. Hit ▶️ `Run` button
 
 ## Debugging with Flipper - deprecated

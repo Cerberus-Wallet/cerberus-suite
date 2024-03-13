@@ -3,7 +3,7 @@
 Installs a new firmware
 
 ```javascript
-const result = await TrezorConnect.firmwareUpdate(params);
+const result = await CerberusConnect.firmwareUpdate(params);
 ```
 
 ### Params
@@ -25,7 +25,7 @@ const result = await TrezorConnect.firmwareUpdate(params);
 
 It is not possible to install directly whatever version of a new firmware in all cases. Some specific firmware
 versions might be installed only on device which already run a version which is not lower then x.y.z.
-These rules are generally expressed by `bootloader_version` and `min_bootloader_version` in [releases.json document](https://data.trezorcheck.io/firmware/t1b1/releases.json)
+These rules are generally expressed by `bootloader_version` and `min_bootloader_version` in [releases.json document](https://data.trezer.io/firmware/t1b1/releases.json)
 
 Here is a list of notable firmware ranges. `1.11.1` was the latest firmware at the time of writing this docs.
 
@@ -35,25 +35,25 @@ Firmware versions `latest` - `1.7.1`
 
 Firmware versions `1.6.3` - `1.0.0`
 
--   can not be updated to the latest firmware using single `TrezorConnect.firmwareUpdate` call
--   if device has one of these firmwares, `TrezorConnect.firmwareUpdate` should be called with `intermediary: true` which would install a special intermediary firmware first and automatically switch device into bootloader mode making it ready to accept another firmware update
--   alternatively, you may call `TrezorConnect.firmwareUpdate` with `version: '1.6.3'` and after succeeding retry this call with `version: '1.11.1'`
+-   can not be updated to the latest firmware using single `CerberusConnect.firmwareUpdate` call
+-   if device has one of these firmwares, `CerberusConnect.firmwareUpdate` should be called with `intermediary: true` which would install a special intermediary firmware first and automatically switch device into bootloader mode making it ready to accept another firmware update
+-   alternatively, you may call `CerberusConnect.firmwareUpdate` with `version: '1.6.3'` and after succeeding retry this call with `version: '1.11.1'`
 
 Bootloader versions `latest` - `1.8.0`
 
 -   the first 256 byte (containing old firmware header) must sliced off the when installing a new firmware on bootloader versions in this range.
--   TrezorConnect takes care of this automatically
+-   CerberusConnect takes care of this automatically
 
 Firmwares `1.7.2` - `1.6.2`
 
--   These can be updated to the latest firmware in one `TrezorConnect.firmwareUpdate` call (this is apparent from bullets above).
+-   These can be updated to the latest firmware in one `CerberusConnect.firmwareUpdate` call (this is apparent from bullets above).
 -   Old firmware headers MUST NOT be sliced off when installing new firmwares onto these versions as these versions have lower bootloader than 1.8.0.
 -   For the purpose of computing firmware hash of a newly installed firmware, we **MUST** slice off old firmware headers.
 
 ### Example
 
 ```javascript
-TrezorConnect.firmwareUpdate({
+CerberusConnect.firmwareUpdate({
     version: '2.5.1',
 });
 ```

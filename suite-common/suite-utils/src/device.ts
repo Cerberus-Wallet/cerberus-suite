@@ -4,17 +4,17 @@ import {
     FirmwareRelease,
     DeviceModelInternal,
 } from '@cerberus/connect';
-import { TrezorDevice, AcquiredDevice } from '@suite-common/suite-types';
+import { CerberusDevice, AcquiredDevice } from '@suite-common/suite-types';
 import * as URLS from '@cerberus/urls';
 
 /**
  * Used in Welcome step in Onboarding
  * Status 'ok' or 'initialized' is what we expect, 'bootloader', 'seedless' and 'unreadable' are no go
  *
- * @param {(TrezorDevice | undefined)} device
+ * @param {(CerberusDevice | undefined)} device
  * @returns
  */
-export const getConnectedDeviceStatus = (device: TrezorDevice | undefined) => {
+export const getConnectedDeviceStatus = (device: CerberusDevice | undefined) => {
     if (!device) return null;
 
     const isInBlWithFwPresent =
@@ -28,7 +28,7 @@ export const getConnectedDeviceStatus = (device: TrezorDevice | undefined) => {
     return 'ok';
 };
 
-export const getStatus = (device: TrezorDevice) => {
+export const getStatus = (device: CerberusDevice) => {
     if (device.type === 'acquired') {
         if (!device.connected) {
             return 'disconnected';
@@ -115,15 +115,15 @@ export const getDeviceNeedsAttentionMessage = (deviceStatus: ReturnType<typeof g
     }
 };
 
-export const isDeviceRemembered = (device?: TrezorDevice): boolean => !!device?.remember;
+export const isDeviceRemembered = (device?: CerberusDevice): boolean => !!device?.remember;
 
-export const isDeviceAccessible = (device?: TrezorDevice) => {
+export const isDeviceAccessible = (device?: CerberusDevice) => {
     if (!device || !device.features) return false;
 
     return device.mode === 'normal' && device.firmware !== 'required';
 };
 
-export const isSelectedInstance = (selected?: TrezorDevice, device?: TrezorDevice) =>
+export const isSelectedInstance = (selected?: CerberusDevice, device?: CerberusDevice) =>
     !!(
         selected &&
         device &&
@@ -134,7 +134,7 @@ export const isSelectedInstance = (selected?: TrezorDevice, device?: TrezorDevic
         selected.instance === device.instance
     );
 
-export const isSelectedDevice = (selected?: TrezorDevice | Device, device?: TrezorDevice) => {
+export const isSelectedDevice = (selected?: CerberusDevice | Device, device?: CerberusDevice) => {
     if (!selected || !device) return false;
     if (!selected.id || selected.mode === 'bootloader') return selected.path === device.path;
 
@@ -148,7 +148,7 @@ export const getCoinUnavailabilityMessage = (reason: UnavailableCapability) => {
     switch (reason) {
         case 'update-required':
             return 'FW_CAPABILITY_UPDATE_REQUIRED';
-        case 'trezor-connect-outdated':
+        case 'cerberus-connect-outdated':
             return 'FW_CAPABILITY_CONNECT_OUTDATED';
         // no default
     }
@@ -156,11 +156,11 @@ export const getCoinUnavailabilityMessage = (reason: UnavailableCapability) => {
 
 /**
  * Generate new instance number
- * @param {TrezorDevice[]} devices
+ * @param {CerberusDevice[]} devices
  * @param {AcquiredDevice} device
  * @returns number
  */
-export const getNewInstanceNumber = (devices: TrezorDevice[], device: TrezorDevice | Device) => {
+export const getNewInstanceNumber = (devices: CerberusDevice[], device: CerberusDevice | Device) => {
     if (!device.features) return undefined;
     // find all instances with device "device_id"
     // and sort them by instance number
@@ -183,7 +183,7 @@ export const getNewInstanceNumber = (devices: TrezorDevice[], device: TrezorDevi
     return instance > 0 ? instance : undefined;
 };
 
-export const getNewWalletNumber = (devices: TrezorDevice[], device: TrezorDevice) => {
+export const getNewWalletNumber = (devices: CerberusDevice[], device: CerberusDevice) => {
     const relevantDevices = devices
         .filter(d => d.features && d.id === device.id && d.walletNumber && !d.useEmptyPassphrase)
         .sort((a, b) =>
@@ -195,10 +195,10 @@ export const getNewWalletNumber = (devices: TrezorDevice[], device: TrezorDevice
 
 /**
  * Find exact instance index
- * @param {TrezorDevice[]} draft
+ * @param {CerberusDevice[]} draft
  * @param {AcquiredDevice} device
  */
-export const findInstanceIndex = (draft: TrezorDevice[], device: AcquiredDevice) =>
+export const findInstanceIndex = (draft: CerberusDevice[], device: AcquiredDevice) =>
     draft.findIndex(
         d => d.features && d.id && d.id === device.id && d.instance === device.instance,
     );
@@ -206,14 +206,14 @@ export const findInstanceIndex = (draft: TrezorDevice[], device: AcquiredDevice)
 /**
  * Utility for retrieving fresh data from the "devices" reducer
  * It's used for keep "suite" reducer synchronized via `suiteMiddleware > suiteActions.observeSelectedDevice`
- * @param {(TrezorDevice)} device
- * @param {TrezorDevice[]} devices
- * @returns {TrezorDevice | undefined }
+ * @param {(CerberusDevice)} device
+ * @param {CerberusDevice[]} devices
+ * @returns {CerberusDevice | undefined }
  */
 export const getSelectedDevice = (
-    device: TrezorDevice,
-    devices: TrezorDevice[],
-): TrezorDevice | undefined => {
+    device: CerberusDevice,
+    devices: CerberusDevice[],
+): CerberusDevice | undefined => {
     // selected device is not acquired
     if (!device.features) return devices.find(d => d.path === device.path);
     const { path, instance } = device;
@@ -235,7 +235,7 @@ export const getSelectedDevice = (
     });
 };
 
-export const getChangelogUrl = (device: TrezorDevice, revision?: string | null) => {
+export const getChangelogUrl = (device: CerberusDevice, revision?: string | null) => {
     const deviceModelInternal = device.features?.internal_model;
     const commit = revision || 'main';
     const isDeviceWithLegacyFirmware = deviceModelInternal === DeviceModelInternal.T1B1;
@@ -247,7 +247,7 @@ export const getChangelogUrl = (device: TrezorDevice, revision?: string | null) 
     return `https://github.com/Cerberus-Wallet/cerberus-firmware/blob/${commit}/${folder}/${changelogFile}`;
 };
 
-export const getCheckBackupUrl = (device?: TrezorDevice) => {
+export const getCheckBackupUrl = (device?: CerberusDevice) => {
     const deviceModelInternal = device?.features?.internal_model;
 
     if (!deviceModelInternal) {
@@ -257,7 +257,7 @@ export const getCheckBackupUrl = (device?: TrezorDevice) => {
     return URLS[`HELP_CENTER_DRY_RUN_${deviceModelInternal}_URL`];
 };
 
-export const getPackagingUrl = (device?: TrezorDevice) => {
+export const getPackagingUrl = (device?: CerberusDevice) => {
     const deviceModelInternal = device?.features?.internal_model;
 
     if (!deviceModelInternal) {
@@ -267,7 +267,7 @@ export const getPackagingUrl = (device?: TrezorDevice) => {
     return URLS[`HELP_CENTER_PACKAGING_${deviceModelInternal}_URL`];
 };
 
-export const getFirmwareDowngradeUrl = (device?: TrezorDevice) => {
+export const getFirmwareDowngradeUrl = (device?: CerberusDevice) => {
     const deviceModelInternal = device?.features?.internal_model;
 
     if (!deviceModelInternal) {
@@ -280,10 +280,10 @@ export const getFirmwareDowngradeUrl = (device?: TrezorDevice) => {
 /**
  * Used by suiteActions
  * Sort devices by "ts" (timestamp) field
- * @param {TrezorDevice[]} devices
- * @returns {TrezorDevice[]}
+ * @param {CerberusDevice[]} devices
+ * @returns {CerberusDevice[]}
  */
-export const sortByTimestamp = (devices: TrezorDevice[]): TrezorDevice[] =>
+export const sortByTimestamp = (devices: CerberusDevice[]): CerberusDevice[] =>
     // Node.js v11+ changed sort algo https://github.com/nodejs/node/pull/22754#issuecomment-423452575
     // In unit tests some devices have undefined ts
     devices.sort((a, b) => {
@@ -294,7 +294,7 @@ export const sortByTimestamp = (devices: TrezorDevice[]): TrezorDevice[] =>
         return b.ts - a.ts;
     });
 
-export const sortByPriority = (a: TrezorDevice, b: TrezorDevice) => {
+export const sortByPriority = (a: CerberusDevice, b: CerberusDevice) => {
     // sort by priority:
     // 1. unacquired
     // 2. force remembered
@@ -333,14 +333,14 @@ export const sortByPriority = (a: TrezorDevice, b: TrezorDevice) => {
 
 /**
  * Returns all device instances sorted by `instance` field
- * @param {TrezorDevice | undefined} device
- * @param {TrezorDevice[]} devices
+ * @param {CerberusDevice | undefined} device
+ * @param {CerberusDevice[]} devices
  * @param {boolean} exclude - excludes `device` from results
- * @returns {TrezorDevice[]}
+ * @returns {CerberusDevice[]}
  */
 export const getDeviceInstances = (
-    device: TrezorDevice,
-    devices: TrezorDevice[],
+    device: CerberusDevice,
+    devices: CerberusDevice[],
     exclude = false,
 ): AcquiredDevice[] => {
     if (!device || !device.features || !device.id) return [];
@@ -362,10 +362,10 @@ export const getDeviceInstances = (
 
 /**
  * Returns first available instance for each device sorted by priority
- * @param {TrezorDevice[]} devices
- * @returns {TrezorDevice[]}
+ * @param {CerberusDevice[]} devices
+ * @returns {CerberusDevice[]}
  */
-export const getFirstDeviceInstance = (devices: TrezorDevice[]) =>
+export const getFirstDeviceInstance = (devices: CerberusDevice[]) =>
     // filter device instances
     devices
         .reduce((result, dev) => {
@@ -378,7 +378,7 @@ export const getFirstDeviceInstance = (devices: TrezorDevice[]) =>
 
             // base (np passphrase) or first passphrase instance
             return result.concat(instances[0]);
-        }, [] as TrezorDevice[])
+        }, [] as CerberusDevice[])
         .sort(sortByPriority);
 
 export const getPhysicalDeviceUniqueIds = (devices: Device[]) =>

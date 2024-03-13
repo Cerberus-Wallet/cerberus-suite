@@ -30,7 +30,7 @@
 
     firmware binaries are bundled as application resources in `bin` directory, full path depends on OS but it could be found on the as level as `app.asar` file, and they are downloaded using `fs.readFile` API. see @cerberus/connect/src/utils/assets
 
-### - Cerberus Bridge (trezord)
+### - Cerberus Bridge (cerberusd)
 
 ### - Tor
 
@@ -38,8 +38,8 @@
 
 | Environment           | App ID                 | App name             | User data dir name            |
 | --------------------- | ---------------------- | -------------------- | ----------------------------- |
-| production (codesign) | `com.trezor.suite`     | `Cerberus Suite`       | `@cerberus/suite-desktop`       |
-| development (sldev)   | `com.trezor.suite.dev` | `Cerberus Suite Dev`   | `@cerberus/suite-desktop-dev`   |
+| production (codesign) | `com.cerberus.suite`     | `Cerberus Suite`       | `@cerberus/suite-desktop`       |
+| development (sldev)   | `com.cerberus.suite.dev` | `Cerberus Suite Dev`   | `@cerberus/suite-desktop-dev`   |
 | local                 | `com.github.Electron`  | `Cerberus Suite Local` | `@cerberus/suite-desktop-local` |
 
 Suite app name and ID are set by the environment so that Suite uses different user data dir and it's not mixed between environments. The main benefit is that you can switch back and forth between Suite dev versions without losing your remembered production wallets. One disadvantage of this solution is checking of other instance running is not so straightforward between environments.
@@ -100,7 +100,7 @@ Available flags:
 | `--log-level=NAME`    | Set the logging level. Available levels are [name (value)]: error (1), warn (2), info(3), debug (4). All logs with a value equal or lower to the selected log level will be displayed. |
 | `--log-write`         | Write log to disk                                                                                                                                                                      |
 | `--log-ui`            | Enables printing of UI console messages in the console.                                                                                                                                |
-| `--log-file=FILENAME` | Name of the output file (defaults to `trezor-suite-log-%tt.txt`)                                                                                                                       |
+| `--log-file=FILENAME` | Name of the output file (defaults to `cerberus-suite-log-%tt.txt`)                                                                                                                       |
 | `--log-path=PATHNAME` | Path for the output file (defaults to `/logs` subfolder of Suite data directory or current working directory)                                                                          |
 | `--enable-updater`    | Enables the auto updater (if disabled in feature flags)                                                                                                                                |
 | `--disable-updater`   | Disables the auto updater (if enabled in feature flags)                                                                                                                                |

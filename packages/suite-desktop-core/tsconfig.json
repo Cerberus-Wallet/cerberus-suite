@@ -31,7 +31,7 @@
         { "path": "../transport-bridge" },
         { "path": "../urls" },
         { "path": "../utils" },
-        { "path": "../trezor-user-env-link" },
+        { "path": "../cerberus-user-env-link" },
         { "path": "../type-utils" }
     ]
 }

@@ -44,7 +44,7 @@ export default class CardanoGetPublicKey extends AbstractMethod<'cardanoGetPubli
                     typeof batch.derivationType !== 'undefined'
                         ? batch.derivationType
                         : PROTO.CardanoDerivationType.ICARUS_CERBERUS,
-                show_display: typeof batch.showOnTrezor === 'boolean' ? batch.showOnTrezor : false,
+                show_display: typeof batch.showOnCerberus === 'boolean' ? batch.showOnCerberus : false,
                 suppress_backup_warning: batch.suppressBackupWarning,
             };
         });

@@ -11,12 +11,12 @@ const info: UdevInfo = {
         {
             name: 'RPM package',
             platform: ['rpm32', 'rpm64'],
-            url: '/udev/trezor-udev-2-1.noarch.rpm',
+            url: '/udev/cerberus-udev-2-1.noarch.rpm',
         },
         {
             name: 'DEB package',
             platform: ['deb32', 'deb64'],
-            url: '/udev/trezor-udev_2_all.deb',
+            url: '/udev/cerberus-udev_2_all.deb',
         },
     ],
 };

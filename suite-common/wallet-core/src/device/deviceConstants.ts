@@ -1,4 +1,4 @@
-import { TrezorDevice } from '@suite-common/suite-types';
+import { CerberusDevice } from '@suite-common/suite-types';
 import { DeviceModelInternal } from '@cerberus/connect';
 
 // These hidden device constants are used in mobile app to hold all imported accounts.
@@ -8,7 +8,7 @@ import { DeviceModelInternal } from '@cerberus/connect';
 export const PORTFOLIO_TRACKER_DEVICE_ID = 'hiddenDeviceWithImportedAccounts';
 export const PORTFOLIO_TRACKER_DEVICE_STATE = `state@${PORTFOLIO_TRACKER_DEVICE_ID}:1`;
 
-export const portfolioTrackerDevice: TrezorDevice = {
+export const portfolioTrackerDevice: CerberusDevice = {
     type: 'acquired',
     id: PORTFOLIO_TRACKER_DEVICE_ID,
     status: 'available',

@@ -3,7 +3,7 @@ import { fromWei } from 'web3-utils';
 import { format } from 'date-fns';
 import BigNumber from 'bignumber.js';
 
-import { trezorLogo } from '@suite-common/suite-constants';
+import { cerberusLogo } from '@suite-common/suite-constants';
 import { TransactionTarget } from '@cerberus/connect';
 import { Network } from '@suite-common/wallet-config';
 import {
@@ -370,7 +370,7 @@ const preparePdf = (data: Data, tokenDefinitions: TokenDefinitions): TDocumentDe
                         margin: [39, 12, 0, 0],
                     },
                     {
-                        image: `data:image/png;base64,${trezorLogo}`,
+                        image: `data:image/png;base64,${cerberusLogo}`,
                         width: 140,
                         alignment: 'right',
                         margin: [0, 10, 25, 0],

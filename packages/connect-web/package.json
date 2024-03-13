@@ -15,7 +15,7 @@
     },
     "keywords": [
         "Cerberus",
-        "trezor-connect",
+        "cerberus-connect",
         "javascript"
     ],
     "sideEffects": false,

@@ -1,5 +1,5 @@
 import { TokenAddress } from '@suite-common/wallet-types';
-import { Color } from '@trezor/theme';
+import { Color } from '@cerberus/theme';
 
 import { IconName, FlagIconName, CryptoIconName } from './icons';
 

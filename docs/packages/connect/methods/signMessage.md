@@ -3,7 +3,7 @@
 Asks device to sign a message using the private key derived by given BIP32 path.
 
 ```javascript
-const result = await TrezorConnect.signMessage(params);
+const result = await CerberusConnect.signMessage(params);
 ```
 
 ### Params
@@ -20,7 +20,7 @@ const result = await TrezorConnect.signMessage(params);
 ### Example
 
 ```javascript
-TrezorConnect.signMessage({
+CerberusConnect.signMessage({
     path: "m/44'/0'/0'",
     message: 'example message',
 });

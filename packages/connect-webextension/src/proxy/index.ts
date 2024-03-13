@@ -45,7 +45,7 @@ const cancel = () => {
 const init = (settings: Partial<ConnectSettings> = {}): Promise<void> => {
     if (!_channel) {
         _channel = new WindowServiceWorkerChannel({
-            name: 'trezor-connect-proxy',
+            name: 'cerberus-connect-proxy',
             channel: {
                 here: '@cerberus/connect-foreground-proxy',
                 peer: '@cerberus/connect-service-worker-proxy',
@@ -113,7 +113,7 @@ const requestWebUSBDevice = () => {
     throw ERRORS.TypedError('Method_InvalidPackage');
 };
 
-const TrezorConnect = factory({
+const CerberusConnect = factory({
     eventEmitter,
     manifest,
     init,
@@ -128,5 +128,5 @@ const TrezorConnect = factory({
 });
 
 // eslint-disable-next-line import/no-default-export
-export default TrezorConnect;
+export default CerberusConnect;
 export * from '@cerberus/connect/lib/exports';

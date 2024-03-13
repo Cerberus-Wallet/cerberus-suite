@@ -75,7 +75,7 @@ export class PopupManager extends EventEmitter {
 
         if (this.settings.env === 'webextension') {
             this.channel = new ServiceWorkerWindowChannel<CoreEventMessage>({
-                name: 'trezor-connect',
+                name: 'cerberus-connect',
                 channel: {
                     here: '@cerberus/connect-webextension',
                     peer: '@cerberus/connect-content-script',
@@ -294,7 +294,7 @@ export class PopupManager extends EventEmitter {
             this.handshakePromise?.resolve();
         } else if (message.type === POPUP.CLOSED) {
             // When popup is closed we should create a not-real response as if the request was interrupted.
-            // Because when popup closes and TrezorConnect is living there it cannot respond, but we know
+            // Because when popup closes and CerberusConnect is living there it cannot respond, but we know
             // it was interrupted so we safely fake it.
             this.channel.resolveMessagePromises({
                 code: 'Method_Interrupted',
@@ -319,7 +319,7 @@ export class PopupManager extends EventEmitter {
                 tabs => {
                     chrome.tabs.create(
                         {
-                            url: 'trezor-usb-permissions.html',
+                            url: 'cerberus-usb-permissions.html',
                             index: tabs[0].index + 1,
                         },
                         _tab => {

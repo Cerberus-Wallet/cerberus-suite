@@ -6,7 +6,7 @@ const isCodesignBuild = process.env.IS_CODESIGN_BUILD === 'true';
 // to be able to use patterns like ${author} and ${arch}
 module.exports = {
     // distingush between dev and prod builds
-    appId: `io.trezor.TrezorSuite${isCodesignBuild ? '' : '.dev'}`,
+    appId: `io.cerberus.CerberusSuite${isCodesignBuild ? '' : '.dev'}`,
     extraMetadata: {
         version: suiteVersion,
         // distingush between dev and prod builds so different userDataDir is used
@@ -53,8 +53,8 @@ module.exports = {
     },
     publish: {
         provider: 'github',
-        repo: 'trezor-suite',
-        owner: 'trezor',
+        repo: 'cerberus-suite',
+        owner: 'cerberus',
     },
     dmg: {
         sign: false,
@@ -142,7 +142,7 @@ module.exports = {
         ],
         icon: 'build/static/images/desktop/512x512.png',
         artifactName: 'Cerberus-Suite-${version}-linux-${arch}.${ext}',
-        executableName: 'trezor-suite',
+        executableName: 'cerberus-suite',
         category: 'Utility',
         target: ['AppImage'],
     },

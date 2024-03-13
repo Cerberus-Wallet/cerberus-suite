@@ -7,7 +7,7 @@ import { selectDevicesCount, selectDevice, acquireDevice } from '@suite-common/w
 import * as deviceUtils from '@suite-common/suite-utils';
 import type { Timeout } from '@cerberus/type-utils';
 import { SHAKE } from 'src/support/suite/styles/animations';
-import { TrezorDevice } from 'src/types/suite';
+import { CerberusDevice } from 'src/types/suite';
 import { goto } from 'src/actions/suite/routerActions';
 import { useDispatch, useSelector } from 'src/hooks/suite';
 
@@ -84,7 +84,7 @@ const DeviceDetail = styled.div`
     align-self: center;
 `;
 
-const needsRefresh = (device?: TrezorDevice) => {
+const needsRefresh = (device?: CerberusDevice) => {
     if (!device) return false;
 
     const deviceStatus = deviceUtils.getStatus(device);

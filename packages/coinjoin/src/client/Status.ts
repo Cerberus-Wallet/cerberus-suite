@@ -174,12 +174,12 @@ export class Status extends TypedEmitter<StatusEvents> {
         // add matching coinjoinRequest to rounds
         status.RoundStates.forEach(round => {
             const roundRequest = status.AffiliateInformation?.AffiliateData[round.Id];
-            round.AffiliateRequest = roundRequest?.trezor;
+            round.AffiliateRequest = roundRequest?.cerberus;
         });
 
         // report affiliate server status
         const runningAffiliateServer =
-            !!status.AffiliateInformation?.RunningAffiliateServers.includes('trezor');
+            !!status.AffiliateInformation?.RunningAffiliateServers.includes('cerberus');
         if (this.runningAffiliateServer !== runningAffiliateServer) {
             this.emit('affiliate-server', runningAffiliateServer);
         }

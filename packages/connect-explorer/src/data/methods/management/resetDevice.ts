@@ -13,7 +13,7 @@ export default [
                 label: 'Label',
                 type: 'input',
                 optional: true,
-                value: 'Meow trezor',
+                value: 'Meow cerberus',
             },
             {
                 name: 'pin_protection',

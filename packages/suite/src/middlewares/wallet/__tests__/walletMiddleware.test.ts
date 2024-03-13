@@ -18,7 +18,7 @@ import * as fixtures from '../__fixtures__/walletMiddleware';
 
 const { getWalletAccount } = testMocks;
 
-const TrezorConnect = testMocks.getTrezorConnectMock();
+const CerberusConnect = testMocks.getCerberusConnectMock();
 
 type AccountsState = ReturnType<typeof accountsReducer>;
 type SettingsState = ReturnType<typeof walletSettingsReducer>;
@@ -115,11 +115,11 @@ describe('walletMiddleware', () => {
 
             const { subscribe, disconnect } = f.result;
             if (subscribe) {
-                expect(TrezorConnect.blockchainSubscribe).toHaveBeenCalledTimes(subscribe.called);
+                expect(CerberusConnect.blockchainSubscribe).toHaveBeenCalledTimes(subscribe.called);
                 if (subscribe.called) {
                     // @ts-expect-error
                     const accounts = subscribe.accounts?.map(a => getWalletAccount(a));
-                    expect(TrezorConnect.blockchainSubscribe).toHaveBeenLastCalledWith({
+                    expect(CerberusConnect.blockchainSubscribe).toHaveBeenLastCalledWith({
                         accounts,
                         coin: subscribe.coin,
                     });
@@ -127,7 +127,7 @@ describe('walletMiddleware', () => {
             }
 
             if (disconnect) {
-                expect(TrezorConnect.blockchainDisconnect).toHaveBeenCalledTimes(disconnect.called);
+                expect(CerberusConnect.blockchainDisconnect).toHaveBeenCalledTimes(disconnect.called);
             }
         });
     });

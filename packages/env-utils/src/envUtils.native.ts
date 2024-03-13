@@ -46,7 +46,7 @@ const getScreenHeight = () => Dimensions.get('screen').height;
 const getLocationOrigin = () => '';
 
 // can be used e.g. by deep linking
-const getLocationHostname = () => 'trezorsuiteapp';
+const getLocationHostname = () => 'cerberussuiteapp';
 
 const getProcessPlatform = () => '';
 

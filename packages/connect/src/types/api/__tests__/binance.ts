@@ -1,6 +1,6 @@
-import { TrezorConnect } from '../../..';
+import { CerberusConnect } from '../../..';
 
-export const binanceGetAddress = async (api: TrezorConnect) => {
+export const binanceGetAddress = async (api: CerberusConnect) => {
     // regular
     const singleAddress = await api.binanceGetAddress({ path: 'm/44' });
     if (singleAddress.success) {
@@ -39,7 +39,7 @@ export const binanceGetAddress = async (api: TrezorConnect) => {
         skipFinalReload: false,
         path: 'm/44',
         address: 'a',
-        showOnTrezor: true,
+        showOnCerberus: true,
     });
 
     // with invalid params
@@ -53,7 +53,7 @@ export const binanceGetAddress = async (api: TrezorConnect) => {
     api.binanceGetAddress({ bundle: 1 });
 };
 
-export const binanceGetPublicKey = async (api: TrezorConnect) => {
+export const binanceGetPublicKey = async (api: CerberusConnect) => {
     // regular
     const singlePK = await api.binanceGetPublicKey({ path: 'm/44' });
     if (singlePK.success) {
@@ -80,7 +80,7 @@ export const binanceGetPublicKey = async (api: TrezorConnect) => {
     }
 };
 
-export const binanceSignTransaction = async (api: TrezorConnect) => {
+export const binanceSignTransaction = async (api: CerberusConnect) => {
     const sign = await api.binanceSignTransaction({
         path: 'm/44',
         transaction: {

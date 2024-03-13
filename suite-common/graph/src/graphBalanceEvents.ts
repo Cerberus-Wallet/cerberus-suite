@@ -2,7 +2,7 @@ import { A, pipe } from '@mobily/ts-belt';
 import { fromUnixTime, getUnixTime } from 'date-fns';
 
 import { NetworkSymbol, getNetworkType } from '@suite-common/wallet-config';
-import TrezorConnect from '@cerberus/connect';
+import CerberusConnect from '@cerberus/connect';
 import { AccountBalanceHistory as AccountMovementHistory } from '@cerberus/blockchain-link';
 import {
     AccountBalanceHistory,
@@ -121,7 +121,7 @@ export const getAccountMovementEvents = async ({
                 descriptor,
             });
         }
-        const connectBalanceHistory = await TrezorConnect.blockchainGetAccountBalanceHistory({
+        const connectBalanceHistory = await CerberusConnect.blockchainGetAccountBalanceHistory({
             coin,
             descriptor,
             from: startOfTimeFrameDate ? getUnixTime(startOfTimeFrameDate) : undefined,

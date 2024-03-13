@@ -44,7 +44,7 @@ export const en = {
                 alert: 'This requires access to Cerberus Suite coin addresses.',
             },
             connectOrImportCrossroads: {
-                gotMyTrezor: {
+                gotMyCerberus: {
                     title: 'Connect my Cerberus',
                     description: 'Manage your coins with your Cerberus connected.',
                     connectButton: 'Connect Cerberus',
@@ -173,7 +173,7 @@ export const en = {
                 description: 'The last account you created for this coin has no transactions yet.',
                 actionPrimary: 'Close',
                 actionSecondary: 'Learn more',
-                actionSecondaryUrl: 'https://cerberus.uraanai.com/learn/a/multiple-accounts-in-trezor-suite',
+                actionSecondaryUrl: 'https://cerberus.uraanai.com/learn/a/multiple-accounts-in-cerberus-suite',
             },
             generalError: {
                 title: 'We couldn’t add your account.',
@@ -337,7 +337,7 @@ export const en = {
             },
         },
         bottomSheets: {
-            confirmOnTrezor: {
+            confirmOnCerberus: {
                 title: 'Confirm on Cerberus',
                 description:
                     'Go to your device and verify that the receive address on your Cerberus matches the one displayed here.',
@@ -455,11 +455,11 @@ export const en = {
         welcomeScreen: {
             welcome: 'Welcome to ',
             subtitle: 'Securely track, manage & receive crypto on the go ',
-            trezorLink: 'Don’t have a Cerberus? <trezorLink>Get one here.</trezorLink>',
+            cerberusLink: 'Don’t have a Cerberus? <cerberusLink>Get one here.</cerberusLink>',
 
             nextButton: 'Get started',
         },
-        connectTrezorScreen: {
+        connectCerberusScreen: {
             title: 'Connect',
             subtitle:
                 'Manage your portfolio with your Cerberus hardware wallet connected directly to your mobile device.',

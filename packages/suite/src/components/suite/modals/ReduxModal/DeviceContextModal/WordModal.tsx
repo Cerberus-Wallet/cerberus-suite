@@ -1,4 +1,4 @@
-import TrezorConnect from '@cerberus/connect';
+import CerberusConnect from '@cerberus/connect';
 import { Translation, WordInput, Modal, ModalProps } from 'src/components/suite';
 import styled from 'styled-components';
 import { useIntl } from 'react-intl';
@@ -21,7 +21,7 @@ export const WordModal = (props: ModalProps) => {
                     <Translation id="TR_RANDOM_SEED_WORDS_DISCLAIMER" />
                 </>
             }
-            onCancel={() => TrezorConnect.cancel(intl.formatMessage(messages.TR_CANCELLED))}
+            onCancel={() => CerberusConnect.cancel(intl.formatMessage(messages.TR_CANCELLED))}
             isCancelable
             totalProgressBarSteps={5}
             currentProgressBarStep={4}

@@ -1,6 +1,6 @@
-import { TrezorConnect, NEM } from '../../..';
+import { CerberusConnect, NEM } from '../../..';
 
-export const nemGetAddress = async (api: TrezorConnect) => {
+export const nemGetAddress = async (api: CerberusConnect) => {
     // regular
     const singleAddress = await api.nemGetAddress({ path: 'm/44', network: 1 });
 
@@ -44,7 +44,7 @@ export const nemGetAddress = async (api: TrezorConnect) => {
         path: 'm/44',
         network: 1,
         address: 'a',
-        showOnTrezor: true,
+        showOnCerberus: true,
     });
 
     // with invalid params
@@ -58,7 +58,7 @@ export const nemGetAddress = async (api: TrezorConnect) => {
     api.nemGetAddress({ bundle: 1 });
 };
 
-export const nemSignTransaction = async (api: TrezorConnect) => {
+export const nemSignTransaction = async (api: CerberusConnect) => {
     const common = {
         version: NEM.TxVersion.testnet,
         timeStamp: 74649215,

@@ -1,5 +1,5 @@
 /**
- * Initializes TrezorConnect.
+ * Initializes CerberusConnect.
  * `manifest` is required
  */
 

@@ -36,7 +36,7 @@ import { Account } from '@suite-common/wallet-types';
 
 /*
     In analytics middleware we may intercept actions we would like to log. For example:
-    - trezor model
+    - cerberus model
     - firmware version
     - transport (webusb/bridge) and its version
     - backup type (shamir/bip39)

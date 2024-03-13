@@ -2,7 +2,7 @@
 
 [![NPM](https://img.shields.io/npm/v/@cerberus/utils.svg)](https://www.npmjs.org/package/@cerberus/utils)
 
-A collection of typescript utils that are intended to be used across trezor-suite monorepo.
+A collection of typescript utils that are intended to be used across cerberus-suite monorepo.
 
 ## Publishing
 

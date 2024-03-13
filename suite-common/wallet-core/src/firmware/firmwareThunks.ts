@@ -8,7 +8,7 @@ import { Await } from '@cerberus/type-utils';
 import { isDesktop } from '@cerberus/env-utils';
 import { resolveStaticPath } from '@suite-common/suite-utils';
 import { analytics, EventType } from '@cerberus/suite-analytics';
-import TrezorConnect, {
+import CerberusConnect, {
     Device,
     DeviceModelInternal,
     FirmwareType,
@@ -96,7 +96,7 @@ const firmwareInstallThunk = createThunk(
                 : 'none';
         const fromBlVersion = getBootloaderVersion(device);
 
-        let updateResponse: Await<ReturnType<typeof TrezorConnect.firmwareUpdate>>;
+        let updateResponse: Await<ReturnType<typeof CerberusConnect.firmwareUpdate>>;
         let analyticsPayload;
 
         if (fwBinary) {
@@ -104,7 +104,7 @@ const firmwareInstallThunk = createThunk(
 
             // todo: what about firmware hash ?
             analyticsPayload = {};
-            updateResponse = await TrezorConnect.firmwareUpdate({
+            updateResponse = await CerberusConnect.firmwareUpdate({
                 keepSession: false,
                 skipFinalReload: true,
                 device: {
@@ -156,7 +156,7 @@ const firmwareInstallThunk = createThunk(
 
             const baseUrl = await dispatch(resolveFileBaseUrl()).unwrap();
 
-            updateResponse = await TrezorConnect.firmwareUpdate({
+            updateResponse = await CerberusConnect.firmwareUpdate({
                 keepSession: false,
                 skipFinalReload: true,
                 device: {
@@ -235,7 +235,7 @@ const handleFwHashError = createThunk(
 const handleFwHashMismatch = createThunk(
     `${firmwareActionsPrefix}/handleFwHashMismatch`,
     (device: Device, { dispatch }) => {
-        // device.id should always be present here (device is initialized and in normal mode) during successful TrezorConnect.getFirmwareHash call
+        // device.id should always be present here (device is initialized and in normal mode) during successful CerberusConnect.getFirmwareHash call
         dispatch(firmwareActions.setHashInvalid(device.id!));
         dispatch(firmwareActions.setError('Invalid hash'));
         analytics.report({
@@ -246,7 +246,7 @@ const handleFwHashMismatch = createThunk(
 
 /**
  * After installing a new firmware validate its hash (already saved into application state) with the result of
- * TrezorConnect.getFirmwareHash call
+ * CerberusConnect.getFirmwareHash call
  */
 export const validateFirmwareHash = createThunk(
     `${firmwareActionsPrefix}/validateFirmwareHash`,
@@ -268,19 +268,19 @@ export const validateFirmwareHash = createThunk(
 
         if (!isCustom) {
             dispatch(firmwareActions.setStatus('validation'));
-            const fwHash = await TrezorConnect.getFirmwareHash({
+            const fwHash = await CerberusConnect.getFirmwareHash({
                 device: {
                     path: device.path,
                 },
                 challenge: firmwareChallenge,
             });
 
-            // TODO: move this logic partially into TrezorConnect as described here:
+            // TODO: move this logic partially into CerberusConnect as described here:
             // https://github.com/Cerberus-Wallet/cerberus-suite/issues/5896
             // we don't want to have false negatives but more importantly false positives.
             // Cases that should not lead to the big red error:
             // - device disconnected, broken cable
-            // - errors from TrezorConnect in general
+            // - errors from CerberusConnect in general
             // Cases that should lead to the big red error:
             // - device was unable to process 'GetFirmwareHash' message ('Unknown message')
             // - errors from device in general
@@ -295,7 +295,7 @@ export const validateFirmwareHash = createThunk(
                 ) {
                     handleFwHashMismatch(device);
                 } else {
-                    // TrezorConnect error. Only 'softly' inform user that we were not able to
+                    // CerberusConnect error. Only 'softly' inform user that we were not able to
                     // validate firmware hash
                     handleFwHashError(fwHash);
                 }
@@ -316,7 +316,7 @@ export const validateFirmwareHash = createThunk(
             (device.firmware === 'outdated' && prevApp === 'firmware-custom')
         ) {
             dispatch(firmwareActions.setStatus('done'));
-            // at the moment, this should never happen. after firmware hash is validated using TrezorConnect.getFirmwareHash we know
+            // at the moment, this should never happen. after firmware hash is validated using CerberusConnect.getFirmwareHash we know
             // that device has either firmware 1.11.1 or higher or 2.5.1 or higher as this method is not available before that.
             // and we also know that firmware update to the latest version (after 1.11.1 and 2.5.1) is straightforward without any need
             // to update incrementally or using intermediary firmware.
@@ -336,7 +336,7 @@ export const checkFirmwareAuthenticity = createThunk(
         if (!device) {
             throw new Error('device is not connected');
         }
-        const result = await TrezorConnect.checkFirmwareAuthenticity({
+        const result = await CerberusConnect.checkFirmwareAuthenticity({
             device: {
                 path: device.path,
             },
@@ -375,7 +375,7 @@ export const rebootToBootloader = createThunk(
 
         if (!device) return;
 
-        const response = await TrezorConnect.rebootToBootloader({
+        const response = await CerberusConnect.rebootToBootloader({
             device: {
                 path: device.path,
             },

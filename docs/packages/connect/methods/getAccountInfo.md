@@ -3,7 +3,7 @@
 Gets an info of specified account.
 
 ```javascript
-const result = await TrezorConnect.getAccountInfo(params);
+const result = await CerberusConnect.getAccountInfo(params);
 ```
 
 ### Params
@@ -58,7 +58,7 @@ params are forwarded to [BlockBook backend](https://github.com/Cerberus-Wallet/b
 Get info about first bitcoin account
 
 ```javascript
-TrezorConnect.getAccountInfo({
+CerberusConnect.getAccountInfo({
     path: "m/49'/0'/0'",
     coin: 'btc',
 });
@@ -67,7 +67,7 @@ TrezorConnect.getAccountInfo({
 Get info about account using public key (device is not used)
 
 ```javascript
-TrezorConnect.getAccountInfo({
+CerberusConnect.getAccountInfo({
     descriptor:
         'xpub6CVKsQYXc9awxgV1tWbG4foDvdcnieK2JkbpPEBKB5WwAPKBZ1mstLbKVB4ov7QzxzjaxNK6EfmNY5Jsk2cG26EVcEkycGW4tchT2dyUhrx',
     coin: 'btc',
@@ -77,7 +77,7 @@ TrezorConnect.getAccountInfo({
 Get info about account using BIP-0044 account discovery
 
 ```javascript
-TrezorConnect.getAccountInfo({
+CerberusConnect.getAccountInfo({
     coin: 'btc',
 });
 ```

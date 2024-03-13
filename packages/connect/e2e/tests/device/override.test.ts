@@ -1,30 +1,30 @@
-import TrezorConnect from '../../../src';
+import CerberusConnect from '../../../src';
 
-const { getController, setup, initTrezorConnect } = global.Cerberus;
+const { getController, setup, initCerberusConnect } = global.Cerberus;
 
 const controller = getController('setBusy');
 
-describe('TrezorConnect override param', () => {
+describe('CerberusConnect override param', () => {
     beforeEach(async () => {
-        await TrezorConnect.dispose();
+        await CerberusConnect.dispose();
         await setup(controller, {
             mnemonic: 'mnemonic_all',
         });
-        await initTrezorConnect(controller);
+        await initCerberusConnect(controller);
     });
 
     afterAll(async () => {
         controller.dispose();
-        await TrezorConnect.dispose();
+        await CerberusConnect.dispose();
     });
 
     for (const delay of [1, 10, 100, 300, 500, 1000, 1500]) {
         it(`override previous call after ${delay}ms`, async () => {
-            TrezorConnect.removeAllListeners();
+            CerberusConnect.removeAllListeners();
 
-            TrezorConnect.getAddress({
+            CerberusConnect.getAddress({
                 path: "m/44'/1'/0'/0/0",
-                showOnTrezor: true,
+                showOnCerberus: true,
             }).then(response => {
                 expect(response.success).toBe(false);
                 expect(response.payload).toMatchObject({ code: 'Method_Override' });
@@ -32,10 +32,10 @@ describe('TrezorConnect override param', () => {
 
             await new Promise(resolve => setTimeout(resolve, delay));
 
-            const address = await TrezorConnect.getAddress({
+            const address = await CerberusConnect.getAddress({
                 path: "m/44'/1'/0'/0/0",
                 override: true,
-                showOnTrezor: false,
+                showOnCerberus: false,
             });
             expect(address.success).toBe(true);
             await new Promise(resolve => setTimeout(resolve, 1000));

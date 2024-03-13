@@ -1,5 +1,5 @@
 import { test, Page, BrowserContext, expect } from '@playwright/test';
-import { TrezorUserEnvLink } from '@cerberus/trezor-user-env-link';
+import { CerberusUserEnvLink } from '@cerberus/cerberus-user-env-link';
 import { getContexts, openPopup, log, setConnectSettings } from '../support/helpers';
 
 import fs from 'fs';
@@ -15,7 +15,7 @@ const isWebExtension = process.env.IS_WEBEXTENSION === 'true';
 const connectSrc = process.env.CERBERUS_CONNECT_SRC;
 
 test.beforeAll(async () => {
-    await TrezorUserEnvLink.connect();
+    await CerberusUserEnvLink.connect();
     log(`isWebExtension: ${isWebExtension}`);
     log(`connectSrc: ${connectSrc}`);
     log(`url: ${url}`);
@@ -34,19 +34,19 @@ test.afterEach(async () => {
 test('popup should display error page when device disconnected and debug mode', async ({
     page,
 }) => {
-    await TrezorUserEnvLink.api.stopBridge();
-    await TrezorUserEnvLink.api.stopEmu();
-    await TrezorUserEnvLink.api.startEmu({
+    await CerberusUserEnvLink.api.stopBridge();
+    await CerberusUserEnvLink.api.stopEmu();
+    await CerberusUserEnvLink.api.startEmu({
         wipe: true,
     });
-    await TrezorUserEnvLink.api.setupEmu({
+    await CerberusUserEnvLink.api.setupEmu({
         mnemonic: 'alcohol woman abuse must during monitor noble actual mixed trade anger aisle',
         pin: '',
         passphrase_protection: false,
         label: 'My Trevor',
         needs_backup: false,
     });
-    await TrezorUserEnvLink.api.startBridge(bridgeVersion);
+    await CerberusUserEnvLink.api.startBridge(bridgeVersion);
 
     log('generating contexts');
     const { explorerPage, explorerUrl, browserContext } = await getContexts(
@@ -83,7 +83,7 @@ test('popup should display error page when device disconnected and debug mode', 
     await popup.waitForSelector("div[data-test='@permissions']");
 
     log('stopEmu');
-    await TrezorUserEnvLink.api.stopEmu();
+    await CerberusUserEnvLink.api.stopEmu();
     log('waiting for popup error page');
     await popup.waitForSelector("div[data-test='@connect-ui/error']");
 });
@@ -95,19 +95,19 @@ test('log page should contain logs from shared worker', async ({ page, context }
             errorLogs.push(message.text());
         }
     });
-    await TrezorUserEnvLink.api.stopBridge();
-    await TrezorUserEnvLink.api.stopEmu();
-    await TrezorUserEnvLink.api.startEmu({
+    await CerberusUserEnvLink.api.stopBridge();
+    await CerberusUserEnvLink.api.stopEmu();
+    await CerberusUserEnvLink.api.startEmu({
         wipe: true,
     });
-    await TrezorUserEnvLink.api.setupEmu({
+    await CerberusUserEnvLink.api.setupEmu({
         mnemonic: 'alcohol woman abuse must during monitor noble actual mixed trade anger aisle',
         pin: '',
         passphrase_protection: false,
         label: 'My Trevor',
         needs_backup: false,
     });
-    await TrezorUserEnvLink.api.startBridge(bridgeVersion);
+    await CerberusUserEnvLink.api.startBridge(bridgeVersion);
 
     log('generating contexts');
     const { explorerPage, explorerUrl, browserContext } = await getContexts(
@@ -153,7 +153,7 @@ test('log page should contain logs from shared worker', async ({ page, context }
 
     log('download started');
 
-    const downloadPath = '/tmp/trezor-connect-test-log.txt';
+    const downloadPath = '/tmp/cerberus-connect-test-log.txt';
     log(`saving to: ${downloadPath}`);
     await download.saveAs(downloadPath);
 

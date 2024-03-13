@@ -24,7 +24,7 @@ export enum OnboardingStackRoutes {
     TrackBalances = 'TrackBalances',
     AboutReceiveCoinsFeature = 'AboutReceiveCoinsFeature',
     AnalyticsConsent = 'AnalyticsConsent',
-    ConnectTrezor = 'ConnectTrezor',
+    ConnectCerberus = 'ConnectCerberus',
 }
 
 export enum AccountsImportStackRoutes {

@@ -3,7 +3,7 @@
 Suite uses [react-intl](https://github.com/formatjs/formatjs) package for all in-app localization needs.
 Definitions of all messages are stored in [messages.ts](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/suite/src/support/messages.ts).
 
-To allow non-developers to edit these messages through user-friendly interface, we upload them to [Crowdin](https://crowdin.com/project/trezor-suite) via their [CLI](https://github.com/crowdin/crowdin-cli).
+To allow non-developers to edit these messages through user-friendly interface, we upload them to [Crowdin](https://crowdin.com/project/cerberus-suite) via their [CLI](https://github.com/crowdin/crowdin-cli).
 
 After strings have been translated we use Crowdin CLI again to download the translated json files to [suite-data package](https://github.com/Cerberus-Wallet/cerberus-suite/tree/develop/packages/suite-data/files/translations).
 To finish the process these files need to be committed to the repository.

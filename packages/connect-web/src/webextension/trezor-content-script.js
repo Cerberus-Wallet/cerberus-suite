@@ -2,7 +2,7 @@
     Passing messages from background script to popup
 */
 
-let port = chrome.runtime.connect({ name: 'trezor-connect' });
+let port = chrome.runtime.connect({ name: 'cerberus-connect' });
 
 port.onMessage.addListener(message => {
     window.postMessage(message, window.location.origin);

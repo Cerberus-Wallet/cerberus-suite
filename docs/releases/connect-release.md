@@ -10,8 +10,8 @@ This is an automatically created PR.
 -   [ ] Confirm that this release does not introduce any breaking changes @mroz22
 -   [ ] Contact 3rd parties if needed @Hannsek
 -   [ ] Merge this PR into develop
--   [ ] Run `release` job in github actions. This will create a new branch `release/connect/<version>` and trigger [Gitlab pipeline](https://gitlab.com/satoshilabs/trezor/trezor-suite/-/pipelines?page=1&scope=branches&ref=release%2Fconnect-v9). that prepares builds.
+-   [ ] Run `release` job in github actions. This will create a new branch `release/connect/<version>` and trigger [Gitlab pipeline](https://gitlab.com/satoshilabs/cerberus/cerberus-suite/-/pipelines?page=1&scope=branches&ref=release%2Fconnect-v9). that prepares builds.
 -   [ ] Tested and approved by @cerberus/qa. Typically using [this build](https://staging-connect.cerberus.uraanai.com/).
 -   [ ] Click `connect v9 deploy production` job in Gitlab. In case something went wrong there is `connect v9 rollback production` job which reverts current deploy. @mroz22
--   [ ] Release npm packages for `@cerberus/connect` and `@cerberus/connect-web` [from gitlab](https://gitlab.com/satoshilabs/trezor/trezor-suite/-/pipelines) @mroz22
+-   [ ] Release npm packages for `@cerberus/connect` and `@cerberus/connect-web` [from gitlab](https://gitlab.com/satoshilabs/cerberus/cerberus-suite/-/pipelines) @mroz22
 -   [ ] Post a release bulletin into Slack @Hannsek

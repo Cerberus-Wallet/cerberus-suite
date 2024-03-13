@@ -7,7 +7,7 @@ import { openNode, setView } from 'src/actions/suite/guideActions';
 import { variables } from '@cerberus/components';
 import { Translation } from 'src/components/suite';
 // importing directly, otherwise unit tests fail, seems to be a styled-components issue
-import { TrezorLink } from 'src/components/suite/TrezorLink';
+import { CerberusLink } from 'src/components/suite/CerberusLink';
 import { findAncestorNodes, getNodeTitle } from 'src/utils/suite/guide';
 
 import type { GuideCategory } from '@suite-common/suite-types';
@@ -19,7 +19,7 @@ const BreadcrumbWrapper = styled.span`
     white-space: normal;
 `;
 
-const PreviousCategoryLink = styled(TrezorLink)`
+const PreviousCategoryLink = styled(CerberusLink)`
     color: ${({ theme }) => theme.TYPE_LIGHT_GREY};
     transition: ${({ theme }) =>
         `background ${theme.HOVER_TRANSITION_TIME} ${theme.HOVER_TRANSITION_EFFECT}`};
@@ -34,7 +34,7 @@ const BreadcrumbDelimiter = styled.span`
     margin: 0 5px;
 `;
 
-const CategoryLink = styled(TrezorLink)`
+const CategoryLink = styled(CerberusLink)`
     color: ${({ theme }) => theme.TYPE_GREEN};
     transition: ${({ theme }) =>
         `background ${theme.HOVER_TRANSITION_TIME} ${theme.HOVER_TRANSITION_EFFECT}`};

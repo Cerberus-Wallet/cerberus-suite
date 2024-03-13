@@ -1,7 +1,7 @@
 import { createAction } from '@reduxjs/toolkit';
 
 import { Device, DEVICE } from '@cerberus/connect';
-import { ButtonRequest, TrezorDevice } from '@suite-common/suite-types';
+import { ButtonRequest, CerberusDevice } from '@suite-common/suite-types';
 
 export const MODULE_PREFIX = '@suite/device';
 
@@ -11,7 +11,7 @@ const connectUnacquiredDevice = createAction(DEVICE.CONNECT_UNACQUIRED, (payload
     payload,
 }));
 
-const deviceChanged = createAction(DEVICE.CHANGED, (payload: Device | TrezorDevice) => ({
+const deviceChanged = createAction(DEVICE.CHANGED, (payload: Device | CerberusDevice) => ({
     payload,
 }));
 
@@ -19,58 +19,58 @@ const deviceDisconnect = createAction(DEVICE.DISCONNECT, (payload: Device) => ({
 
 const updatePassphraseMode = createAction(
     `${MODULE_PREFIX}/updatePassphraseMode`,
-    (payload: { device: TrezorDevice; hidden: boolean; alwaysOnDevice?: boolean }) => ({ payload }),
+    (payload: { device: CerberusDevice; hidden: boolean; alwaysOnDevice?: boolean }) => ({ payload }),
 );
 
-const authFailed = createAction(`${MODULE_PREFIX}/authFailed`, (payload: TrezorDevice) => ({
+const authFailed = createAction(`${MODULE_PREFIX}/authFailed`, (payload: CerberusDevice) => ({
     payload,
 }));
 
 const receiveAuthConfirm = createAction(
     `${MODULE_PREFIX}/receiveAuthConfirm`,
-    (payload: { device: TrezorDevice; success: boolean }) => ({ payload }),
+    (payload: { device: CerberusDevice; success: boolean }) => ({ payload }),
 );
 
 const createDeviceInstance = createAction(
     `${MODULE_PREFIX}/createDeviceInstance`,
-    (payload: TrezorDevice) => ({ payload }),
+    (payload: CerberusDevice) => ({ payload }),
 );
 
 const rememberDevice = createAction(
     `${MODULE_PREFIX}/rememberDevice`,
-    (payload: { device: TrezorDevice; remember: boolean; forceRemember: undefined | true }) => ({
+    (payload: { device: CerberusDevice; remember: boolean; forceRemember: undefined | true }) => ({
         payload,
     }),
 );
 
-const forgetDevice = createAction(`${MODULE_PREFIX}/forgetDevice`, (payload: TrezorDevice) => ({
+const forgetDevice = createAction(`${MODULE_PREFIX}/forgetDevice`, (payload: CerberusDevice) => ({
     payload,
 }));
 
 const authDevice = createAction(
     `${MODULE_PREFIX}/authDevice`,
-    (payload: { device: TrezorDevice; state: string }) => ({ payload }),
+    (payload: { device: CerberusDevice; state: string }) => ({ payload }),
 );
 
 const addButtonRequest = createAction(
     `${MODULE_PREFIX}/addButtonRequest`,
-    (payload: { device?: TrezorDevice; buttonRequest?: ButtonRequest }) => ({ payload }),
+    (payload: { device?: CerberusDevice; buttonRequest?: ButtonRequest }) => ({ payload }),
 );
 
 const requestDeviceReconnect = createAction(`${MODULE_PREFIX}/requestDeviceReconnect`);
 
-const selectDevice = createAction(`${MODULE_PREFIX}/selectDevice`, (payload?: TrezorDevice) => ({
+const selectDevice = createAction(`${MODULE_PREFIX}/selectDevice`, (payload?: CerberusDevice) => ({
     payload,
 }));
 
 const updateSelectedDevice = createAction(
     `${MODULE_PREFIX}/updateSelectedDevice`,
-    (payload?: TrezorDevice) => ({ payload }),
+    (payload?: CerberusDevice) => ({ payload }),
 );
 
 export const removeButtonRequests = createAction(
     addButtonRequest.type,
-    ({ device }: { device: TrezorDevice | null }) => ({
+    ({ device }: { device: CerberusDevice | null }) => ({
         payload: {
             device,
         },
@@ -79,7 +79,7 @@ export const removeButtonRequests = createAction(
 
 export const forgetAndDisconnectDevice = createAction(
     `${MODULE_PREFIX}/forgetAndDisconnectDevice`,
-    (payload: TrezorDevice) => ({
+    (payload: CerberusDevice) => ({
         payload,
     }),
 );

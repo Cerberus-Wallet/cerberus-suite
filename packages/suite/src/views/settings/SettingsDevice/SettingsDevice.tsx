@@ -5,7 +5,7 @@ import { isBitcoinOnlyDevice, pickByDeviceModel } from '@cerberus/device-utils';
 import { DeviceBanner, SettingsLayout, SettingsSection } from 'src/components/settings';
 import { Translation } from 'src/components/suite';
 import { useDevice, useSelector } from 'src/hooks/suite';
-import type { TrezorDevice } from 'src/types/suite';
+import type { CerberusDevice } from 'src/types/suite';
 
 import { AuthenticateDevice } from './AuthenticateDevice';
 import { AutoLock } from './AutoLock';
@@ -27,7 +27,7 @@ import { WipeCode } from './WipeCode';
 import { WipeDevice } from './WipeDevice';
 import { ChangeLanguage } from './ChangeLanguage';
 
-const deviceSettingsUnavailable = (device?: TrezorDevice, transport?: Partial<TransportInfo>) => {
+const deviceSettingsUnavailable = (device?: CerberusDevice, transport?: Partial<TransportInfo>) => {
     const noTransportAvailable = transport && !transport.type;
     const wrongDeviceType = device?.type && ['unacquired', 'unreadable'].includes(device.type);
     const wrongDeviceMode =

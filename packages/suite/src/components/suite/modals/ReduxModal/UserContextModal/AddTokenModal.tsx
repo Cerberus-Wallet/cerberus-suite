@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState, ChangeEvent } from 'react';
-import TrezorConnect, { TokenInfo } from '@cerberus/connect';
+import CerberusConnect, { TokenInfo } from '@cerberus/connect';
 import { analytics, EventType } from '@cerberus/suite-analytics';
 
 import { Input, Button, Paragraph } from '@cerberus/components';
@@ -38,7 +38,7 @@ export const AddTokenModal = ({ onCancel }: AddTokenModalProps) => {
         async (acc: Account, contractAddress: string) => {
             if (!acc) return;
             setIsFetching(true);
-            const response = await TrezorConnect.getAccountInfo({
+            const response = await CerberusConnect.getAccountInfo({
                 coin: acc.symbol,
                 descriptor: acc.descriptor,
                 details: 'tokenBalances',

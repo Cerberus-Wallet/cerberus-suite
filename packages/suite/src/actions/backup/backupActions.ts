@@ -1,4 +1,4 @@
-import TrezorConnect, { CommonParams } from '@cerberus/connect';
+import CerberusConnect, { CommonParams } from '@cerberus/connect';
 import { analytics, EventType } from '@cerberus/suite-analytics';
 import { notificationsActions } from '@suite-common/toast-notifications';
 import { selectDevice } from '@suite-common/wallet-core';
@@ -58,7 +58,7 @@ export const backupDevice =
             payload: 'in-progress',
         });
 
-        const result = await TrezorConnect.backupDevice({
+        const result = await CerberusConnect.backupDevice({
             ...params,
             device: {
                 path: device.path,

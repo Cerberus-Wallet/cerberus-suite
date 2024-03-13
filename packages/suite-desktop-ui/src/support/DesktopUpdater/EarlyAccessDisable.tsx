@@ -7,12 +7,12 @@ import { analytics, EventType } from '@cerberus/suite-analytics';
 import { desktopApi } from '@cerberus/suite-desktop-api';
 import { Button, Image } from '@cerberus/components';
 
-import { Translation, Modal, TrezorLink } from 'src/components/suite';
+import { Translation, Modal, CerberusLink } from 'src/components/suite';
 import { DialogModal } from 'src/components/suite/modals/Modal/DialogRenderer';
 
 import { ImageWrapper, Description, Title } from './styles';
 
-export const Link = styled(TrezorLink)`
+export const Link = styled(CerberusLink)`
     width: 100%;
 `;
 

@@ -18,7 +18,7 @@ describe('General settings', () => {
         cy.discoveryShouldFinish();
 
         requests = [];
-        cy.interceptDataTrezorIo(requests);
+        cy.interceptDataCerberusIo(requests);
     });
 
     it('Change settings on "general settings" page', () => {

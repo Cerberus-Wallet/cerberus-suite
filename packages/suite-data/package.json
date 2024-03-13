@@ -5,7 +5,7 @@
     "author": "Cerberus <info@cerberus.uraanai.com>",
     "keywords": [
         "Cerberus",
-        "trezor-data"
+        "cerberus-data"
     ],
     "license": "SEE LICENSE IN LICENSE.md",
     "description": "Cerberus data",

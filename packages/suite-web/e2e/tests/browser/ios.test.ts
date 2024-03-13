@@ -10,7 +10,7 @@ describe('iPhone with chrome browser ', () => {
         cy.resetDb();
     });
 
-    it('There is no way to connect trezor to iPhone at the moment', () => {
+    it('There is no way to connect cerberus to iPhone at the moment', () => {
         cy.prefixedVisit('/');
         cy.getTestElement('@browser-detect')
             .get('h1')

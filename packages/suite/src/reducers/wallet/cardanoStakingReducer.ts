@@ -7,12 +7,12 @@ import BigNumber from 'bignumber.js';
 export interface State {
     pendingTx: PendingStakeTx[];
     mainnet: {
-        trezorPools: PoolsResponse | undefined;
+        cerberusPools: PoolsResponse | undefined;
         isFetchLoading: boolean;
         isFetchError: boolean;
     };
     preview: {
-        trezorPools: PoolsResponse | undefined;
+        cerberusPools: PoolsResponse | undefined;
         isFetchLoading: boolean;
         isFetchError: boolean;
     };
@@ -21,12 +21,12 @@ export interface State {
 export const initialState: State = {
     pendingTx: [],
     mainnet: {
-        trezorPools: undefined,
+        cerberusPools: undefined,
         isFetchLoading: false,
         isFetchError: false,
     },
     preview: {
-        trezorPools: undefined,
+        cerberusPools: undefined,
         isFetchLoading: false,
         isFetchError: false,
     },
@@ -41,10 +41,10 @@ const remove = (state: State, accountKey: string) => {
     state.pendingTx.splice(index, 1);
 };
 
-const setTrezorPools = (state: State, trezorPools: PoolsResponse, network: CardanoNetwork) => {
+const setCerberusPools = (state: State, cerberusPools: PoolsResponse, network: CardanoNetwork) => {
     // sorted from least saturated to most
-    trezorPools.pools.sort((a, b) => new BigNumber(a.live_stake).comparedTo(b.live_stake));
-    state[network].trezorPools = trezorPools;
+    cerberusPools.pools.sort((a, b) => new BigNumber(a.live_stake).comparedTo(b.live_stake));
+    state[network].cerberusPools = cerberusPools;
 };
 
 const setLoading = (state: State, isLoading: boolean, network: CardanoNetwork) => {
@@ -63,7 +63,7 @@ const cardanoStakingReducer = (state: State = initialState, action: WalletAction
             case CARDANO_STAKING.REMOVE_PENDING_STAKE_TX:
                 return remove(draft, action.accountKey);
             case CARDANO_STAKING.SET_CERBERUS_POOLS:
-                return setTrezorPools(draft, action.trezorPools, action.network);
+                return setCerberusPools(draft, action.cerberusPools, action.network);
             case CARDANO_STAKING.SET_FETCH_LOADING:
                 return setLoading(draft, action.loading, action.network);
             case CARDANO_STAKING.SET_FETCH_ERROR:

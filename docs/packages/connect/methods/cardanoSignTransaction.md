@@ -4,7 +4,7 @@ Asks device to sign given transaction. User is asked to confirm all transaction
 details on Cerberus.
 
 ```javascript
-const result = await TrezorConnect.cardanoSignTransaction(params);
+const result = await CerberusConnect.cardanoSignTransaction(params);
 ```
 
 ### Params
@@ -120,7 +120,7 @@ The payment address to receive rewards can be provided either as a `paymentAddre
 #### Ordinary transaction
 
 ```javascript
-TrezorConnect.cardanoSignTransaction({
+CerberusConnect.cardanoSignTransaction({
     signingMode: CardanoTxSigningMode.ORDINARY_TRANSACTION,
     inputs: [
         {
@@ -211,7 +211,7 @@ TrezorConnect.cardanoSignTransaction({
 #### Stake pool registration
 
 ```javascript
-TrezorConnect.cardanoSignTransaction({
+CerberusConnect.cardanoSignTransaction({
     signingMode: CardanoTxSigningMode.POOL_REGISTRATION_AS_OWNER,
     inputs: [
         {
@@ -292,7 +292,7 @@ TrezorConnect.cardanoSignTransaction({
 #### CIP-36 vote key registration
 
 ```javascript
-TrezorConnect.cardanoSignTransaction({
+CerberusConnect.cardanoSignTransaction({
     signingMode: CardanoTxSigningMode.ORDINARY_TRANSACTION,
     inputs: [
         {
@@ -338,7 +338,7 @@ TrezorConnect.cardanoSignTransaction({
 #### Multisig transaction
 
 ```javascript
-TrezorConnect.cardanoSignTransaction({
+CerberusConnect.cardanoSignTransaction({
     signingMode: CardanoTxSigningMode.MULTISIG_TRANSACTION,
     inputs: [
         {
@@ -416,7 +416,7 @@ TrezorConnect.cardanoSignTransaction({
 #### Plutus transaction
 
 ```javascript
-TrezorConnect.cardanoSignTransaction({
+CerberusConnect.cardanoSignTransaction({
     signingMode: CardanoTxSigningMode.PLUTUS_TRANSACTION,
     inputs: [
         {

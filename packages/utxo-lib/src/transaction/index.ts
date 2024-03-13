@@ -1,5 +1,5 @@
 // upstream: https://github.com/bitcoinjs/bitcoinjs-lib/blob/master/ts_src/transaction.ts
-// fork: https://github.com/Cerberus-Wallet/cerberus-utxo-lib/blob/trezor/src/transaction.js
+// fork: https://github.com/Cerberus-Wallet/cerberus-utxo-lib/blob/cerberus/src/transaction.js
 // differences:
 // - `TransactionBase` is an abstract class. Methods like fromBuffer/toBuffer are enhanced by network type implementation.
 // - `tx.outs[x].amount` as string.

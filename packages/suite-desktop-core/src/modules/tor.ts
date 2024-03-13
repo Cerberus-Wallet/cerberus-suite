@@ -7,7 +7,7 @@ import path from 'path';
 
 import { TorStatus, BootstrapTorEvent, HandshakeTorModule } from '@cerberus/suite-desktop-api';
 import { BootstrapEvent } from '@cerberus/request-manager';
-import TrezorConnect from '@cerberus/connect';
+import CerberusConnect from '@cerberus/connect';
 import { getFreePort } from '@cerberus/node-utils';
 
 import { TorProcess, TorProcessStatus } from '../libs/processes/TorProcess';
@@ -128,12 +128,12 @@ const load = async ({ mainWindow, store, mainThreadEmitter }: Dependencies) => {
         try {
             await setupTor(shouldEnableTor);
 
-            // After setupTor we can assume TOR is available so we set the proxy in TrezorConnect
-            // This is only required when 'toggle' because when app starts with TOR enable TrezorConnect is
-            // correctly set in module trezor-connect-ipc.
+            // After setupTor we can assume TOR is available so we set the proxy in CerberusConnect
+            // This is only required when 'toggle' because when app starts with TOR enable CerberusConnect is
+            // correctly set in module cerberus-connect-ipc.
             const proxySettings = getProxySettings(shouldEnableTor);
 
-            await TrezorConnect.setProxy(proxySettings);
+            await CerberusConnect.setProxy(proxySettings);
 
             logger.info(
                 'tor',
@@ -144,7 +144,7 @@ const load = async ({ mainWindow, store, mainThreadEmitter }: Dependencies) => {
 
             const proxySettings = getProxySettings(!shouldEnableTor);
 
-            await TrezorConnect.setProxy(proxySettings);
+            await CerberusConnect.setProxy(proxySettings);
 
             const loggerMessage = shouldEnableTor
                 ? `Failed to start: ${error.message}`

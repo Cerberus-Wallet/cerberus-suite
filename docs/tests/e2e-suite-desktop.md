@@ -14,9 +14,9 @@
 
     _Note: This step needs to be repeated on each change in suite-desktop-core package._
 
-3. `cd path/to/trezor-user-env && ./run.sh`
+3. `cd path/to/cerberus-user-env && ./run.sh`
 
-    To run the `trezor-user-env` that Playwright tests needs.
+    To run the `cerberus-user-env` that Playwright tests needs.
 
 ### Running tests locally
 

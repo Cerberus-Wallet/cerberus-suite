@@ -11,7 +11,7 @@ import {
     formatData,
     getAccountTransactions,
     getExportedFileName,
-    isTrezorConnectBackendType,
+    isCerberusConnectBackendType,
     getPendingAccount,
     findAccountsByAddress,
     enhanceTransaction,
@@ -20,7 +20,7 @@ import {
     advancedSearchTransactions,
 } from '@suite-common/wallet-utils';
 import { AccountLabels } from '@suite-common/metadata-types';
-import TrezorConnect from '@cerberus/connect';
+import CerberusConnect from '@cerberus/connect';
 import { blockbookUtils } from '@cerberus/blockchain-link-utils';
 import { Transaction } from '@cerberus/blockchain-link-types/lib/blockbook';
 import { createThunk } from '@suite-common/redux-utils';
@@ -315,7 +315,7 @@ export const fetchTransactionsThunk = createThunk(
     ) => {
         const account = selectAccountByKey(getState(), accountKey);
         if (!account) return;
-        if (!isTrezorConnectBackendType(account.backendType)) return; // skip unsupported backend type
+        if (!isCerberusConnectBackendType(account.backendType)) return; // skip unsupported backend type
         const transactions = selectTransactions(getState());
         const reducerTxs = getAccountTransactions(account.key, transactions);
 
@@ -352,7 +352,7 @@ export const fetchTransactionsThunk = createThunk(
         }
 
         const { marker } = account;
-        const result = await TrezorConnect.getAccountInfo({
+        const result = await CerberusConnect.getAccountInfo({
             coin: account.symbol,
             descriptor: account.descriptor,
             details: 'txs',

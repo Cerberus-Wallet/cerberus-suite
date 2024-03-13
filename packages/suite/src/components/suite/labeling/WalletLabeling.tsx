@@ -1,4 +1,4 @@
-import { TrezorDevice } from 'src/types/suite';
+import { CerberusDevice } from 'src/types/suite';
 import { useTranslation } from 'src/hooks/suite/useTranslation';
 import { useSelector } from 'src/hooks/suite/useSelector';
 import { selectLabelingDataForWallet } from 'src/reducers/suite/metadataReducer';
@@ -6,7 +6,7 @@ import { useCallback } from 'react';
 import styled from 'styled-components';
 
 interface WalletLabellingProps {
-    device: TrezorDevice;
+    device: CerberusDevice;
     shouldUseDeviceLabel?: boolean;
 }
 
@@ -18,7 +18,7 @@ export const useWalletLabeling = () => {
     const { translationString } = useTranslation();
 
     const defaultAccountLabelString = useCallback(
-        ({ device }: { device: TrezorDevice }) =>
+        ({ device }: { device: CerberusDevice }) =>
             device.useEmptyPassphrase
                 ? translationString('TR_NO_PASSPHRASE_WALLET')
                 : translationString('TR_PASSPHRASE_WALLET', { id: device.walletNumber }),

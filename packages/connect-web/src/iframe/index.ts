@@ -12,7 +12,7 @@ export let instance: HTMLIFrameElement | null;
 export let origin: string;
 export let initPromise = createDeferred();
 export let timeout = 0;
-export let error: ERRORS.TrezorError;
+export let error: ERRORS.CerberusError;
 
 export const dispose = () => {
     if (instance && instance.parentNode) {
@@ -42,7 +42,7 @@ const injectStyleSheet = () => {
     const head = doc.head || doc.getElementsByTagName('head')[0];
     const style = document.createElement('style');
     style.setAttribute('type', 'text/css');
-    style.setAttribute('id', 'TrezorConnectStylesheet');
+    style.setAttribute('id', 'CerberusConnectStylesheet');
 
     // @ts-expect-error
     if (style.styleSheet) {
@@ -57,7 +57,7 @@ const injectStyleSheet = () => {
 
 export const init = async (settings: ConnectSettings) => {
     initPromise = createDeferred();
-    const existedFrame = document.getElementById('trezorconnect') as HTMLIFrameElement;
+    const existedFrame = document.getElementById('cerberusconnect') as HTMLIFrameElement;
     if (existedFrame) {
         instance = existedFrame;
     } else {
@@ -70,7 +70,7 @@ export const init = async (settings: ConnectSettings) => {
         instance.style.border = '0px';
         instance.style.width = '0px';
         instance.style.height = '0px';
-        instance.id = 'trezorconnect';
+        instance.id = 'cerberusconnect';
     }
 
     let src: string;

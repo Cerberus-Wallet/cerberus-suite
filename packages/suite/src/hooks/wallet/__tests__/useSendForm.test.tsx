@@ -46,7 +46,7 @@ interface Args {
     bitcoinAmountUnit?: PROTO.AmountUnit;
 }
 
-const TrezorConnect = testMocks.getTrezorConnectMock();
+const CerberusConnect = testMocks.getCerberusConnectMock();
 
 const initStore = ({ send, fees, selectedAccount, coinjoin, bitcoinAmountUnit }: Args = {}) => {
     const rootReducer = fixtures.getRootReducer(selectedAccount, fees);
@@ -114,22 +114,22 @@ const actionCallback = (
 
     // validate number of calls to '@cerberus/connect'
     if (typeof result.composeTransactionCalls === 'number') {
-        expect(TrezorConnect.composeTransaction).toHaveBeenCalledTimes(
+        expect(CerberusConnect.composeTransaction).toHaveBeenCalledTimes(
             result.composeTransactionCalls,
         );
     }
     if (typeof result.estimateFeeCalls === 'number') {
-        expect(TrezorConnect.blockchainEstimateFee).toHaveBeenCalledTimes(result.estimateFeeCalls);
+        expect(CerberusConnect.blockchainEstimateFee).toHaveBeenCalledTimes(result.estimateFeeCalls);
     }
     if (typeof result.getAccountInfoCalls === 'number') {
-        expect(TrezorConnect.getAccountInfo).toHaveBeenCalledTimes(result.getAccountInfoCalls);
+        expect(CerberusConnect.getAccountInfo).toHaveBeenCalledTimes(result.getAccountInfoCalls);
     }
 
     // validate '@cerberus/connect' params
     if (result.composeTransactionParams) {
-        const composeTransactionCallsLength = TrezorConnect.composeTransaction.mock.calls.length;
+        const composeTransactionCallsLength = CerberusConnect.composeTransaction.mock.calls.length;
         const composeTransactionsParams =
-            TrezorConnect.composeTransaction.mock.calls[composeTransactionCallsLength - 1][0];
+            CerberusConnect.composeTransaction.mock.calls[composeTransactionCallsLength - 1][0];
 
         if (result.composeTransactionParams.account) {
             expect(composeTransactionsParams.account.utxo.length).toEqual(
@@ -143,12 +143,12 @@ const actionCallback = (
         }
     }
     if (result.estimateFeeParams) {
-        expect(TrezorConnect.blockchainEstimateFee).toHaveBeenLastCalledWith(
+        expect(CerberusConnect.blockchainEstimateFee).toHaveBeenLastCalledWith(
             expect.objectContaining(result.estimateFeeParams),
         );
     }
     if (result.getAccountInfoParams) {
-        expect(TrezorConnect.getAccountInfo).toHaveBeenLastCalledWith(
+        expect(CerberusConnect.getAccountInfo).toHaveBeenLastCalledWith(
             expect.objectContaining(result.getAccountInfoParams),
         );
     }
@@ -239,7 +239,7 @@ describe('useSendForm hook', () => {
         it(
             f.description,
             async () => {
-                testMocks.setTrezorConnectFixtures(f.connect);
+                testMocks.setCerberusConnectFixtures(f.connect);
                 const store = initStore(f.store);
                 const callback: TestCallback = {};
                 const { unmount } = renderWithProviders(
@@ -268,7 +268,7 @@ describe('useSendForm hook', () => {
 
     fixtures.composeDebouncedTransaction.forEach(f => {
         it(f.description, async () => {
-            testMocks.setTrezorConnectFixtures(f.connect);
+            testMocks.setCerberusConnectFixtures(f.connect);
             const store = initStore();
             const callback: TestCallback = {};
             const { unmount } = renderWithProviders(
@@ -292,7 +292,7 @@ describe('useSendForm hook', () => {
 
     fixtures.signAndPush.forEach(f => {
         it(f.description, async () => {
-            testMocks.setTrezorConnectFixtures(f.connect);
+            testMocks.setCerberusConnectFixtures(f.connect);
             const store = initStore(f.store);
             const callback: TestCallback = {};
             const { unmount } = renderWithProviders(
@@ -327,7 +327,7 @@ describe('useSendForm hook', () => {
 
     fixtures.feeChange.forEach(f => {
         it(`changeFee: ${f.description}`, async () => {
-            testMocks.setTrezorConnectFixtures(f.connect);
+            testMocks.setCerberusConnectFixtures(f.connect);
             const store = initStore(f.store);
             const callback: TestCallback = {};
             const { unmount } = renderWithProviders(
@@ -352,7 +352,7 @@ describe('useSendForm hook', () => {
 
     fixtures.amountUnitChange.forEach(f => {
         it(f.description, async () => {
-            testMocks.setTrezorConnectFixtures(f.connect);
+            testMocks.setCerberusConnectFixtures(f.connect);
             const store = initStore(f.store);
             const callback: TestCallback = {};
             const { unmount } = renderWithProviders(

@@ -8,7 +8,7 @@ DIST='./packages/connect-common/files'
 # todo:
 # if [ $# -ge 1 ] && [ "$1" == "local" ]
 #     then
-#         SRC='../trezor-firmware/common/tools'
+#         SRC='../cerberus-firmware/common/tools'
 # fi
 
 # BUID coins.json using tezor-common cointool

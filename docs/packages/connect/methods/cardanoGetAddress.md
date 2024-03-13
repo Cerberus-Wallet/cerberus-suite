@@ -3,7 +3,7 @@
 Display requested address derived by given [BIP32-Ed25519](https://cardanolaunch.com/assets/Ed25519_BIP.pdf) path on device and returns it to caller. User is presented with a description of the requested key and asked to confirm the export on Cerberus.
 
 ```javascript
-const result = await TrezorConnect.cardanoGetAddress(params);
+const result = await CerberusConnect.cardanoGetAddress(params);
 ```
 
 ### Params
@@ -18,7 +18,7 @@ const result = await TrezorConnect.cardanoGetAddress(params);
 -   `address` — _optional_ `string` address for validation (read `Handle button request` section below)
 -   `protocolMagic` - _required_ `Integer` 764824073 for Mainnet, 1 for Preprod Testnet, 2 for Preview Testnet
 -   `networkId` - _required_ `Integer` 1 for Mainnet, 0 for Testnet
--   `showOnTrezor` — _optional_ `boolean` determines if address will be displayed on device. Default is set to `true`
+-   `showOnCerberus` — _optional_ `boolean` determines if address will be displayed on device. Default is set to `true`
 -   `derivationType` — _optional_ `CardanoDerivationType` enum. determines used derivation type. Default is set to ICARUS_CERBERUS=2
 -   `chunkify` — _optional_ `boolean` determines if address will be displayed in chunks of 4 characters. Default is set to `false`
 
@@ -40,16 +40,16 @@ const result = await TrezorConnect.cardanoGetAddress(params);
 
 #### Handle button request
 
-Since trezor-connect@6.0.4 there is a possibility to handle `UI.ADDRESS_VALIDATION` event which will be triggered once the address is displayed on the device.
+Since cerberus-connect@6.0.4 there is a possibility to handle `UI.ADDRESS_VALIDATION` event which will be triggered once the address is displayed on the device.
 You can handle this event and display custom UI inside of your application.
 
 If certain conditions are fulfilled popup will not be used at all:
 
 -   the user gave permissions to communicate with Cerberus
 -   device is authenticated by pin/passphrase
--   application has `TrezorConnect.on(UI.ADDRESS_VALIDATION, () => {});` listener registered
+-   application has `CerberusConnect.on(UI.ADDRESS_VALIDATION, () => {});` listener registered
 -   parameter `address` is set
--   parameter `showOnTrezor` is set to `true` (or not set at all)
+-   parameter `showOnCerberus` is set to `true` (or not set at all)
 -   application is requesting ONLY ONE(!) address
 
 ### Example
@@ -57,7 +57,7 @@ If certain conditions are fulfilled popup will not be used at all:
 Display byron address of first cardano account:
 
 ```javascript
-TrezorConnect.cardanoGetAddress({
+CerberusConnect.cardanoGetAddress({
     addressParameters: {
         addressType: CardanoAddressType.BYRON,
         path: "m/44'/1815'/0'/0/0",
@@ -70,7 +70,7 @@ TrezorConnect.cardanoGetAddress({
 Display base address of first cardano account:
 
 ```javascript
-TrezorConnect.cardanoGetAddress({
+CerberusConnect.cardanoGetAddress({
     addressParameters: {
         addressType: CardanoAddressType.BASE,
         path: "m/1852'/1815'/0'/0/0",
@@ -84,7 +84,7 @@ TrezorConnect.cardanoGetAddress({
 Display base address with script payment part:
 
 ```javascript
-TrezorConnect.cardanoGetAddress({
+CerberusConnect.cardanoGetAddress({
     addressParameters: {
         addressType: CardanoAddressType.BASE_SCRIPT_KEY,
         paymentScriptHash: '0d5acbf6a1dfb0c8724e60df314987315ccbf78bb6c0f9b6f3d568fe',
@@ -98,7 +98,7 @@ TrezorConnect.cardanoGetAddress({
 Display base address with script staking part:
 
 ```javascript
-TrezorConnect.cardanoGetAddress({
+CerberusConnect.cardanoGetAddress({
     addressParameters: {
         addressType: CardanoAddressType.BASE_KEY_SCRIPT,
         path: "m/1852'/1815'/0'/0/0",
@@ -112,7 +112,7 @@ TrezorConnect.cardanoGetAddress({
 Display base address with both payment and staking part being a script:
 
 ```javascript
-TrezorConnect.cardanoGetAddress({
+CerberusConnect.cardanoGetAddress({
     addressParameters: {
         addressType: CardanoAddressType.BASE_SCRIPT_SCRIPT,
         paymentScriptHash: '0d5acbf6a1dfb0c8724e60df314987315ccbf78bb6c0f9b6f3d568fe',
@@ -126,7 +126,7 @@ TrezorConnect.cardanoGetAddress({
 Display pointer address of first cardano account:
 
 ```javascript
-TrezorConnect.cardanoGetAddress({
+CerberusConnect.cardanoGetAddress({
     addressParameters: {
         addressType: CardanoAddressType.POINTER,
         path: "m/1852'/1815'/0'/0/0",
@@ -144,7 +144,7 @@ TrezorConnect.cardanoGetAddress({
 Display pointer script address:
 
 ```javascript
-TrezorConnect.cardanoGetAddress({
+CerberusConnect.cardanoGetAddress({
     addressParameters: {
         addressType: CardanoAddressType.POINTER_SCRIPT,
         paymentScriptHash: '0d5acbf6a1dfb0c8724e60df314987315ccbf78bb6c0f9b6f3d568fe',
@@ -162,7 +162,7 @@ TrezorConnect.cardanoGetAddress({
 Display enterprise address of first cardano account:
 
 ```javascript
-TrezorConnect.cardanoGetAddress({
+CerberusConnect.cardanoGetAddress({
     addressParameters: {
         addressType: CardanoAddressType.ENTERPRISE,
         path: "m/1852'/1815'/0'/0/0",
@@ -175,7 +175,7 @@ TrezorConnect.cardanoGetAddress({
 Display enterprise script address:
 
 ```javascript
-TrezorConnect.cardanoGetAddress({
+CerberusConnect.cardanoGetAddress({
     addressParameters: {
         addressType: CardanoAddressType.ENTERPRISE_SCRIPT,
         paymentScriptHash: '0d5acbf6a1dfb0c8724e60df314987315ccbf78bb6c0f9b6f3d568fe',
@@ -188,7 +188,7 @@ TrezorConnect.cardanoGetAddress({
 Display reward address of first cardano account:
 
 ```javascript
-TrezorConnect.cardanoGetAddress({
+CerberusConnect.cardanoGetAddress({
     addressParameters: {
         addressType: CardanoAddressType.REWARD,
         stakingPath: "m/1852'/1815'/0'/0/0",
@@ -201,7 +201,7 @@ TrezorConnect.cardanoGetAddress({
 Display reward script address:
 
 ```javascript
-TrezorConnect.cardanoGetAddress({
+CerberusConnect.cardanoGetAddress({
     addressParameters: {
         addressType: CardanoAddressType.REWARD_SCRIPT,
         stakingScriptHash: '8d7bebc7a58f1c7b5fb7c9391071ecd3b51b032695522f8c555343a9',
@@ -214,7 +214,7 @@ TrezorConnect.cardanoGetAddress({
 Return a bundle of cardano addresses without displaying them on device:
 
 ```javascript
-TrezorConnect.cardanoGetAddress({
+CerberusConnect.cardanoGetAddress({
     bundle: [
         // byron address, account 1, address 1
         {
@@ -224,7 +224,7 @@ TrezorConnect.cardanoGetAddress({
             },
             protocolMagic: 764824073,
             networkId: 1,
-            showOnTrezor: false,
+            showOnCerberus: false,
         },
         // base address with staking key hash, account 1, address 1
         {
@@ -235,7 +235,7 @@ TrezorConnect.cardanoGetAddress({
             },
             protocolMagic: 764824073,
             networkId: 1,
-            showOnTrezor: false,
+            showOnCerberus: false,
         },
         // byron address, account 2, address 3, testnet
         {
@@ -245,7 +245,7 @@ TrezorConnect.cardanoGetAddress({
             },
             protocolMagic: 1,
             networkId: 0,
-            showOnTrezor: false,
+            showOnCerberus: false,
         },
     ],
 });
@@ -254,14 +254,14 @@ TrezorConnect.cardanoGetAddress({
 Validate address using custom UI inside of your application:
 
 ```javascript
-import TrezorConnect, { UI } from '@cerberus/connect';
+import CerberusConnect, { UI } from '@cerberus/connect';
 
-TrezorConnect.on(UI.ADDRESS_VALIDATION, data => {
+CerberusConnect.on(UI.ADDRESS_VALIDATION, data => {
     console.log('Handle button request', data.address, data.serializedPath);
     // here you can display custom UI inside of your app
 });
 
-const result = await TrezorConnect.cardanoGetAddress({
+const result = await CerberusConnect.cardanoGetAddress({
     addressParameters: {
         addressType: 8,
         path: "m/44'/1815'/0'/0/0",

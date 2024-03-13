@@ -1,13 +1,13 @@
 /**
-TrezorConnect is loaded in background script but it is triggered from content script.
-- call for TrezorConnect action
+CerberusConnect is loaded in background script but it is triggered from content script.
+- call for CerberusConnect action
 - show a notification with response
 */
 
 const DEFAULT_SRC = 'https://connect.cerberus.uraanai.com/9/';
 
-function loadTrezorConnect() {
-    return TrezorConnect.init({
+function loadCerberusConnect() {
+    return CerberusConnect.init({
         manifest: {
             email: 'email@developer.com',
             appUrl: 'webextension-app-boilerplate',
@@ -17,7 +17,7 @@ function loadTrezorConnect() {
 }
 
 function getAddress() {
-    return TrezorConnect.getAddress({
+    return CerberusConnect.getAddress({
         path: "m/49'/0'/0'/0/0",
     });
 }
@@ -42,7 +42,7 @@ chrome.runtime.onMessage.addListener((message, sender) => {
             sendMessageToContentScript(tab.id, 'getAddress', message);
         });
     } else if (type === 'pageLoaded') {
-        loadTrezorConnect().then(() => {
+        loadCerberusConnect().then(() => {
             sendMessageToContentScript(tab.id, 'connectLoaded');
         });
     }

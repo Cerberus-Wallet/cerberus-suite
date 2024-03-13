@@ -6,7 +6,7 @@ import {
     FormattedCryptoAmount,
     TooltipSymbol,
     Translation,
-    TrezorLink,
+    CerberusLink,
 } from 'src/components/suite';
 import {
     formatAmount,
@@ -60,7 +60,7 @@ const StyledCryptoAmount = styled(FormattedCryptoAmount)<{ isPhishingTransaction
     flex: 0;
 `;
 
-const HelpLink = styled(TrezorLink)`
+const HelpLink = styled(CerberusLink)`
     color: ${({ theme }) => theme.TYPE_ORANGE};
 
     path {

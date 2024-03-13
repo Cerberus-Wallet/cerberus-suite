@@ -23,7 +23,7 @@ const animationStyle = prepareNativeStyle(() => ({
     borderColor: 'transparent',
 }));
 
-export const ConnectTrezorScreen = () => {
+export const ConnectCerberusScreen = () => {
     const { translate } = useTranslate();
     const { applyStyle } = useNativeStyles();
 
@@ -38,8 +38,8 @@ export const ConnectTrezorScreen = () => {
 
     return (
         <OnboardingScreen
-            title={translate('moduleOnboarding.connectTrezorScreen.title')}
-            subtitle={translate('moduleOnboarding.connectTrezorScreen.subtitle')}
+            title={translate('moduleOnboarding.connectCerberusScreen.title')}
+            subtitle={translate('moduleOnboarding.connectCerberusScreen.subtitle')}
             activeStep={1}
             footer={
                 <OnboardingFooter

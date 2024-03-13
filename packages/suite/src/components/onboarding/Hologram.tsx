@@ -5,7 +5,7 @@ import { getPackagingUrl } from '@suite-common/suite-utils';
 import { DeviceAnimation, Warning, variables } from '@cerberus/components';
 import { CERBERUS_RESELLERS_URL, CERBERUS_SUPPORT_URL } from '@cerberus/urls';
 
-import { Translation, TrezorLink } from 'src/components/suite';
+import { Translation, CerberusLink } from 'src/components/suite';
 import { useRef } from 'react';
 import { useSelector } from 'src/hooks/suite';
 import { typography } from '@cerberus/theme';
@@ -63,19 +63,19 @@ export const Hologram = () => {
                     id="TR_DID_YOU_PURCHASE"
                     values={{
                         TR_PACKAGING_LINK: (
-                            <TrezorLink href={packagingUrl} variant="underline">
+                            <CerberusLink href={packagingUrl} variant="underline">
                                 <Translation id="TR_PACKAGING_LINK" />
-                            </TrezorLink>
+                            </CerberusLink>
                         ),
                         TR_RESELLERS_LINK: (
-                            <TrezorLink href={CERBERUS_RESELLERS_URL} variant="underline">
+                            <CerberusLink href={CERBERUS_RESELLERS_URL} variant="underline">
                                 <Translation id="TR_RESELLERS_LINK" />
-                            </TrezorLink>
+                            </CerberusLink>
                         ),
                         TR_CONTACT_OUR_SUPPORT_LINK: (
-                            <TrezorLink href={CERBERUS_SUPPORT_URL} variant="underline">
+                            <CerberusLink href={CERBERUS_SUPPORT_URL} variant="underline">
                                 <Translation id="TR_CONTACT_OUR_SUPPORT_LINK" />
-                            </TrezorLink>
+                            </CerberusLink>
                         ),
                     }}
                 />

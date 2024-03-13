@@ -4,7 +4,7 @@ Asks device to
 verify a message using the signer address and signature.
 
 ```javascript
-const result = await TrezorConnect.verifyMessage(params);
+const result = await CerberusConnect.verifyMessage(params);
 ```
 
 ### Params
@@ -22,7 +22,7 @@ const result = await TrezorConnect.verifyMessage(params);
 ### Example
 
 ```javascript
-TrezorConnect.verifyMessage({
+CerberusConnect.verifyMessage({
     address: '3BD8TL6iShVzizQzvo789SuynEKGpLTms9',
     message: 'example message',
     signature:

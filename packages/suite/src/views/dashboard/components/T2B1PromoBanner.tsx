@@ -16,7 +16,7 @@ import {
     variables,
 } from '@cerberus/components';
 import { setFlag } from 'src/actions/suite/suiteActions';
-import { Translation, TrezorLink } from 'src/components/suite';
+import { Translation, CerberusLink } from 'src/components/suite';
 import { AnimatePresence, motion } from 'framer-motion';
 import { resolveStaticPath } from '@suite-common/suite-utils';
 import { colorVariants } from '@cerberus/theme';
@@ -48,7 +48,7 @@ const BannerWrapper = styled(motion.div)`
     }
 `;
 
-const TrezorSafe3Logo = styled(Image)`
+const CerberusSafe3Logo = styled(Image)`
     grid-column: 1;
     grid-row: 1;
     height: fit-content;
@@ -138,7 +138,7 @@ const ProductsImage = styled(Image)`
     }
 `;
 
-const LinkButtonShopNow = styled(TrezorLink)`
+const LinkButtonShopNow = styled(CerberusLink)`
     grid-column: 3;
     grid-row: 2;
     height: 42px;
@@ -269,7 +269,7 @@ export const T2B1PromoBanner = () => {
                         dispatch(setFlag('showDashboardT2B1PromoBanner', false))
                     }
                 >
-                    <TrezorSafe3Logo image="CERBERUS_SAFE_PROMO_LOGO" />
+                    <CerberusSafe3Logo image="CERBERUS_SAFE_PROMO_LOGO" />
                     <NextGenerationText>
                         <NextGenerationTextBlock>Get the </NextGenerationTextBlock>
                         <NextGenerationTextBlockHighlight>

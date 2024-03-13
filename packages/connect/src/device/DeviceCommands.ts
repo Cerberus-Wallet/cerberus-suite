@@ -478,7 +478,7 @@ export class DeviceCommands {
 
             // pass code and message from firmware error
             return Promise.reject(
-                new ERRORS.TrezorError(
+                new ERRORS.CerberusError(
                     (code as any) || 'Failure_UnknownCode',
                     message || 'Failure_UnknownMessage',
                 ),
@@ -602,7 +602,7 @@ export class DeviceCommands {
                     network_id: 0,
                     // derivation type doesn't really matter as it is not recognized by older firmwares.
                     // but it is a required field within protobuf definitions so we must provide something here
-                    derivation_type: 2, // icarus_trezor
+                    derivation_type: 2, // icarus_cerberus
                 });
 
                 return message.address;

@@ -1,14 +1,14 @@
 import { test, expect, firefox, chromium, Page } from '@playwright/test';
-import { TrezorUserEnvLink } from '@cerberus/trezor-user-env-link';
+import { CerberusUserEnvLink } from '@cerberus/cerberus-user-env-link';
 
 const url = process.env.URL || 'http://localhost:8088/';
 
 let popup: Page;
 
 test.beforeAll(async () => {
-    await TrezorUserEnvLink.connect();
-    await TrezorUserEnvLink.api.stopBridge();
-    await TrezorUserEnvLink.api.stopEmu();
+    await CerberusUserEnvLink.connect();
+    await CerberusUserEnvLink.api.stopBridge();
+    await CerberusUserEnvLink.api.stopEmu();
 });
 
 const fixtures = [
@@ -21,7 +21,7 @@ const fixtures = [
     {
         browser: chromium,
         description: `iframe and host different origins: false -> bridge`,
-        queryString: '?trezor-connect-src=https://connect.cerberus.uraanai.com/9/',
+        queryString: '?cerberus-connect-src=https://connect.cerberus.uraanai.com/9/',
         expect: () => expect(popup.getByRole('heading', { name: 'Install Bridge' })).toBeVisible(),
     },
     {

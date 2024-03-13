@@ -34,7 +34,7 @@ describe('Analytics Events', () => {
 
         // reload to activate bridge and start testing app with enabled analytics
         cy.reload();
-        cy.interceptDataTrezorIo(requests);
+        cy.interceptDataCerberusIo(requests);
 
         // suite-ready is logged 1st, just check that it is reported when app is initialized and enabled
         // device-connect is logged 2nd
@@ -92,7 +92,7 @@ describe('Analytics Events', () => {
         });
         cy.task('startBridge');
 
-        cy.interceptDataTrezorIo(requests);
+        cy.interceptDataCerberusIo(requests);
 
         cy.prefixedVisit('/');
 
@@ -186,7 +186,7 @@ describe('Analytics Events', () => {
 
         requests = [];
         cy.reload();
-        cy.interceptDataTrezorIo(requests);
+        cy.interceptDataCerberusIo(requests);
 
         cy.getTestElement('@onboarding/exit-app-button');
 

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { H2, variables } from '@cerberus/components';
 import { CERBERUS_SUPPORT_URL } from '@cerberus/urls';
 
-import { Translation, TrezorLink } from 'src/components/suite';
+import { Translation, CerberusLink } from 'src/components/suite';
 import { SecurityChecklist } from './SecurityChecklist';
 import { SecurityCheckButton } from './SecurityCheckButton';
 import { SecurityCheckLayout } from './SecurityCheckLayout';
@@ -34,7 +34,7 @@ const Buttons = styled.div`
     width: 100%;
 `;
 
-const StyledTrezorLink = styled(TrezorLink)`
+const StyledCerberusLink = styled(CerberusLink)`
     /* flex-grow has no effect on a link, display is set to contents so that it can be read from the child */
     display: contents;
 `;
@@ -101,11 +101,11 @@ export const SecurityCheckFail = ({ goBack }: SecurityCheckFailProps) => {
                         <Translation id="TR_BACK" />
                     </StyledSecurityCheckButton>
                 )}
-                <StyledTrezorLink variant="nostyle" href={supportChatUrl}>
+                <StyledCerberusLink variant="nostyle" href={supportChatUrl}>
                     <StyledSecurityCheckButton>
                         <Translation id="TR_CONTACT_CERBERUS_SUPPORT" />
                     </StyledSecurityCheckButton>
-                </StyledTrezorLink>
+                </StyledCerberusLink>
             </Buttons>
         </SecurityCheckLayout>
     );

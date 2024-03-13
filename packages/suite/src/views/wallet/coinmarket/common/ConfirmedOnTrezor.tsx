@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { TrezorDevice } from '@suite-common/suite-types';
+import { CerberusDevice } from '@suite-common/suite-types';
 import { variables, DeviceAnimation, Image } from '@cerberus/components';
 import { DeviceModelInternal } from '@cerberus/connect';
 import { Translation } from 'src/components/suite';
@@ -22,11 +22,11 @@ const StyledImage = styled(Image)`
     height: 34px;
 `;
 
-interface ConfirmedOnTrezorProps {
-    device?: TrezorDevice;
+interface ConfirmedOnCerberusProps {
+    device?: CerberusDevice;
 }
 
-export const ConfirmedOnTrezor = ({ device }: ConfirmedOnTrezorProps) => {
+export const ConfirmedOnCerberus = ({ device }: ConfirmedOnCerberusProps) => {
     const deviceModelInternal = device?.features?.internal_model;
 
     return (

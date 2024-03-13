@@ -38,7 +38,7 @@ Any of the following values:
 | colors         | boolean | `true`                                           | Console output has colors          |
 | writeToConsole | boolean | `true`                                           | Output is displayed in the console |
 | writeToDisk    | boolean | `false`                                          | Output is written to a file        |
-| outputFile     | string  | `'trezor-suite-log-%tt.txt'`                     | file name for the output           |
+| outputFile     | string  | `'cerberus-suite-log-%tt.txt'`                     | file name for the output           |
 | outputPath     | string  | `/logs` subfolder in Suite data directory or CWD | path for the output                |
 | logFormat      | string  | `'%dt - %lvl(%top): %msg'`                       | Output format of the log           |
 

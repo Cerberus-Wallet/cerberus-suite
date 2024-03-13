@@ -1,6 +1,6 @@
-import { TrezorConnect } from '../../..';
+import { CerberusConnect } from '../../..';
 
-export const rippleGetAddress = async (api: TrezorConnect) => {
+export const rippleGetAddress = async (api: CerberusConnect) => {
     // regular
     const singleAddress = await api.rippleGetAddress({ path: 'm/44' });
 
@@ -41,7 +41,7 @@ export const rippleGetAddress = async (api: TrezorConnect) => {
         skipFinalReload: false,
         path: 'm/44',
         address: 'a',
-        showOnTrezor: true,
+        showOnCerberus: true,
     });
 
     // with invalid params
@@ -55,7 +55,7 @@ export const rippleGetAddress = async (api: TrezorConnect) => {
     api.rippleGetAddress({ bundle: 1 });
 };
 
-export const rippleSignTransaction = async (api: TrezorConnect) => {
+export const rippleSignTransaction = async (api: CerberusConnect) => {
     const sign = await api.rippleSignTransaction({
         path: 'm/44',
         transaction: {

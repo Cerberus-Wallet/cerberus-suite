@@ -1,16 +1,16 @@
 import { networks } from '@cerberus/utxo-lib';
-import { validateTrezorInputs } from '../inputs';
+import { validateCerberusInputs } from '../inputs';
 import * as fixtures from '../__fixtures__/inputs';
 
 describe('core/methods/tx/inputs', () => {
-    describe('validateTrezorInputs', () => {
+    describe('validateCerberusInputs', () => {
         const coinInfo: any = { network: networks.bitcoin };
-        fixtures.validateTrezorInputs.forEach(f => {
+        fixtures.validateCerberusInputs.forEach(f => {
             it(f.description, () => {
                 if (f.result) {
-                    expect(validateTrezorInputs(f.params as any, coinInfo)).toMatchObject(f.result);
+                    expect(validateCerberusInputs(f.params as any, coinInfo)).toMatchObject(f.result);
                 } else {
-                    expect(() => validateTrezorInputs(f.params as any, coinInfo)).toThrow();
+                    expect(() => validateCerberusInputs(f.params as any, coinInfo)).toThrow();
                 }
             });
         });

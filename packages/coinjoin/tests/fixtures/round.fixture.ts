@@ -91,7 +91,7 @@ export const DEFAULT_ROUND = {
 } as Round;
 
 export const AFFILIATE_INFO = {
-    RunningAffiliateServers: ['trezor' as const],
+    RunningAffiliateServers: ['cerberus' as const],
     AffiliateData: {},
 };
 

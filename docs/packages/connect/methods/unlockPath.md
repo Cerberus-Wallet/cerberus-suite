@@ -5,7 +5,7 @@ Ask device to unlock a subtree of the keychain.
 Result is used in `getPublicKey`, `getAddress` and `signTransaction` methods to access requested keychain which is not available by default.
 
 ```javascript
-const result = await TrezorConnect.unlockPath(params);
+const result = await CerberusConnect.unlockPath(params);
 ```
 
 > :warning: **This feature is experimental! Do not use it in production!**

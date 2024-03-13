@@ -6,9 +6,9 @@ import { State as DeviceState } from '@suite-common/wallet-core';
 
 import fixtures from '../__fixtures__/publicKeyActions';
 
-const TrezorConnect = testMocks.getTrezorConnectMock();
+const CerberusConnect = testMocks.getCerberusConnectMock();
 
-const setTrezorConnectFixtures = (fixture: any) => {
+const setCerberusConnectFixtures = (fixture: any) => {
     let buttonRequest: ((e?: any) => any) | undefined;
 
     const getPublicKey = (_params: any) => {
@@ -31,14 +31,14 @@ const setTrezorConnectFixtures = (fixture: any) => {
         };
     };
 
-    jest.spyOn(TrezorConnect, 'on').mockImplementation((event: string, cb) => {
+    jest.spyOn(CerberusConnect, 'on').mockImplementation((event: string, cb) => {
         if (event === 'ui-button') buttonRequest = cb;
     });
-    jest.spyOn(TrezorConnect, 'off').mockImplementation(() => {
+    jest.spyOn(CerberusConnect, 'off').mockImplementation(() => {
         buttonRequest = undefined;
     });
-    jest.spyOn(TrezorConnect, 'getPublicKey').mockImplementation(getPublicKey);
-    jest.spyOn(TrezorConnect, 'cardanoGetPublicKey').mockImplementation(getPublicKey);
+    jest.spyOn(CerberusConnect, 'getPublicKey').mockImplementation(getPublicKey);
+    jest.spyOn(CerberusConnect, 'cardanoGetPublicKey').mockImplementation(getPublicKey);
 };
 
 const device = testMocks.getSuiteDevice({
@@ -92,7 +92,7 @@ const initStore = (stateOverrides?: StateOverrides) => {
 describe('PublicKeyActions', () => {
     fixtures.forEach(f => {
         it(f.description, async () => {
-            setTrezorConnectFixtures(f.mocks);
+            setCerberusConnectFixtures(f.mocks);
             const store = initStore(f.initialState);
             await store.dispatch(connectInitThunk());
             await store.dispatch(f.action());

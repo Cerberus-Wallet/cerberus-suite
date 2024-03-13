@@ -4,7 +4,7 @@ import { WindowServiceWorkerChannel } from '@cerberus/connect-web/lib/channels/w
  * communication between service worker and both webextension and popup manager
  */
 const channel = new WindowServiceWorkerChannel({
-    name: 'trezor-connect',
+    name: 'cerberus-connect',
     channel: {
         here: '@cerberus/connect-content-script',
         peer: '@cerberus/connect-webextension',

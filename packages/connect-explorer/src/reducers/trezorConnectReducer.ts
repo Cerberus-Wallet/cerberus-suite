@@ -1,11 +1,11 @@
-import TrezorConnect, { DEVICE } from '@cerberus/connect-web';
+import CerberusConnect, { DEVICE } from '@cerberus/connect-web';
 import * as ACTIONS from '../actions/index';
-import { TrezorConnectDevice, Action, Field } from '../types';
+import { CerberusConnectDevice, Action, Field } from '../types';
 
 type ConnectState = {
-    devices: TrezorConnectDevice[];
+    devices: CerberusConnectDevice[];
     selectedDevice?: string;
-    options?: Parameters<(typeof TrezorConnect)['init']>[0];
+    options?: Parameters<(typeof CerberusConnect)['init']>[0];
     isHandshakeConfirmed: boolean;
 };
 
@@ -16,10 +16,10 @@ const initialState: ConnectState = {
     isHandshakeConfirmed: false,
 };
 
-const findDeviceIndexByPath = (devices: TrezorConnectDevice[], path: string): number =>
+const findDeviceIndexByPath = (devices: CerberusConnectDevice[], path: string): number =>
     devices.findIndex(d => d.path === path);
 
-const addDevice = (state: ConnectState, device: TrezorConnectDevice): ConnectState => {
+const addDevice = (state: ConnectState, device: CerberusConnectDevice): ConnectState => {
     const index: number = findDeviceIndexByPath(state.devices, device.path);
     if (index > -1) {
         state.devices[index] = device;
@@ -34,7 +34,7 @@ const addDevice = (state: ConnectState, device: TrezorConnectDevice): ConnectSta
     return state;
 };
 
-const removeDevice = (state: ConnectState, device: TrezorConnectDevice): ConnectState => {
+const removeDevice = (state: ConnectState, device: CerberusConnectDevice): ConnectState => {
     if (state.selectedDevice === device.path) {
         state.selectedDevice = undefined;
     }

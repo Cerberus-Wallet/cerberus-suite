@@ -28,7 +28,7 @@ const batch = [
         value: 764824073,
     },
     {
-        name: 'showOnTrezor',
+        name: 'showOnCerberus',
         label: 'Show on Cerberus',
         type: 'checkbox',
         value: true,

@@ -1,5 +1,5 @@
 import { ScanAccountProgress, BroadcastedTransactionDetails } from '@cerberus/coinjoin';
-import TrezorConnect from '@cerberus/connect';
+import CerberusConnect from '@cerberus/connect';
 import { promiseAllSequence } from '@cerberus/utils';
 import { notificationsActions } from '@suite-common/toast-notifications';
 import { isDevEnv } from '@suite-common/suite-utils';
@@ -564,7 +564,7 @@ export const createCoinjoinAccount =
         dispatch(coinjoinAccountPreloading(true));
 
         const device = selectDevice(getState());
-        const unlockPath = await TrezorConnect.unlockPath({
+        const unlockPath = await CerberusConnect.unlockPath({
             path: "m/10025'",
             device,
             useEmptyPassphrase: device?.useEmptyPassphrase,
@@ -580,7 +580,7 @@ export const createCoinjoinAccount =
         const path = network.bip43Path.replace('i', '0');
 
         // get coinjoin account xpub
-        const publicKey = await TrezorConnect.getPublicKey({
+        const publicKey = await CerberusConnect.getPublicKey({
             path,
             unlockPath: unlockPath.payload,
             device,
@@ -684,7 +684,7 @@ const authorizeCoinjoin =
         // authorize coinjoin session on Cerberus
         dispatch(coinjoinAccountAuthorize(account.key));
 
-        const auth = await TrezorConnect.authorizeCoinjoin({
+        const auth = await CerberusConnect.authorizeCoinjoin({
             device,
             useEmptyPassphrase: device?.useEmptyPassphrase,
             path: account.path,
@@ -796,7 +796,7 @@ export const restoreCoinjoinSession =
 
         dispatch(coinjoinSessionStarting(accountKey, true));
 
-        const auth = await TrezorConnect.authorizeCoinjoin({
+        const auth = await CerberusConnect.authorizeCoinjoin({
             device,
             useEmptyPassphrase: device?.useEmptyPassphrase,
             path: account.path,

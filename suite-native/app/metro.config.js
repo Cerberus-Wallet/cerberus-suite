@@ -22,7 +22,7 @@ const config = {
     resolver: {
         blockList: [/libDev/],
         extraNodeModules: {
-            // modules needed for trezor-connect
+            // modules needed for cerberus-connect
             crypto: nodejs.crypto,
             stream: nodejs.stream,
             https: nodejs.https,

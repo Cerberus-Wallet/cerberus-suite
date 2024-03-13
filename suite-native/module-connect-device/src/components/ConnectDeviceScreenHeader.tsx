@@ -11,7 +11,7 @@ import {
 } from '@suite-native/navigation';
 import { Box, IconButton, ScreenHeaderWrapper } from '@suite-native/atoms';
 
-import { ConnectingTrezorHelp } from './ConnectingTrezorHelp';
+import { ConnectingCerberusHelp } from './ConnectingCerberusHelp';
 
 type ConnectDeviceScreenHeaderProps = {
     shouldDisplayCancelButton?: boolean;
@@ -51,7 +51,7 @@ export const ConnectDeviceScreenHeader = ({
                     />
                 )}
             </Box>
-            <ConnectingTrezorHelp />
+            <ConnectingCerberusHelp />
         </ScreenHeaderWrapper>
     );
 };

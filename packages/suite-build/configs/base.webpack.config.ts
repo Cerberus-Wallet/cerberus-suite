@@ -168,7 +168,7 @@ const config: webpack.Configuration = {
             'process.env.IS_CODESIGN_BUILD': `"${isCodesignBuild}"`, // to keep it as string "true"/"false" and not boolean
             'process.env.SENTRY_RELEASE': JSON.stringify(sentryRelease),
             __SENTRY_DEBUG__: isDev,
-            __SENTRY_TRACING__: false, // needs to be removed when we introduce performance monitoring in trezor-suite
+            __SENTRY_TRACING__: false, // needs to be removed when we introduce performance monitoring in cerberus-suite
         }),
         new webpack.ProvidePlugin({
             Buffer: ['buffer', 'Buffer'],
@@ -186,7 +186,7 @@ const config: webpack.Configuration = {
             ? [
                   sentryWebpackPlugin({
                       org: 'satoshilabs',
-                      project: 'trezor-suite',
+                      project: 'cerberus-suite',
                       authToken: sentryAuthToken,
                       release: { name: sentryRelease, cleanArtifacts: true },
                       sourcemaps: {

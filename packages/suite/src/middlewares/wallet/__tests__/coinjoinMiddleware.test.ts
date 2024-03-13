@@ -88,7 +88,7 @@ describe('coinjoinMiddleware', () => {
             const store = initStore(f.state);
 
             if (f.connect) {
-                testMocks.setTrezorConnectFixtures(f.connect);
+                testMocks.setCerberusConnectFixtures(f.connect);
             }
 
             if (f.client) {

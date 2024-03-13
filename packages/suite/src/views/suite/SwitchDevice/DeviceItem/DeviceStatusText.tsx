@@ -1,5 +1,5 @@
 import styled, { css, useTheme } from 'styled-components';
-import { TrezorDevice } from '@suite-common/suite-types';
+import { CerberusDevice } from '@suite-common/suite-types';
 import * as deviceUtils from '@suite-common/suite-utils';
 import { Icon, TOOLTIP_DELAY_LONG, TruncateWithTooltip } from '@cerberus/components';
 import { spacingsPx, typography } from '@cerberus/theme';
@@ -25,7 +25,7 @@ const TextRow = styled.div`
 `;
 
 type DeviceStatusTextProps = {
-    device: TrezorDevice;
+    device: CerberusDevice;
     onRefreshClick?: MouseEventHandler;
     walletLabel?: string;
 };

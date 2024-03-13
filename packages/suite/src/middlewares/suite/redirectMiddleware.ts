@@ -4,9 +4,9 @@ import { selectDevice, selectDevices, deviceActions } from '@suite-common/wallet
 
 import { SUITE } from 'src/actions/suite/constants';
 import * as routerActions from 'src/actions/suite/routerActions';
-import { AppState, Action, Dispatch, TrezorDevice } from 'src/types/suite';
+import { AppState, Action, Dispatch, CerberusDevice } from 'src/types/suite';
 
-const handleDeviceRedirect = (dispatch: Dispatch, state: AppState, device?: TrezorDevice) => {
+const handleDeviceRedirect = (dispatch: Dispatch, state: AppState, device?: CerberusDevice) => {
     // no device, no redirect
     if (!device || !device.features) {
         return;

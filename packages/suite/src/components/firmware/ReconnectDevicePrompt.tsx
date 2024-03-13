@@ -21,7 +21,7 @@ import {
     RebootPhase,
     RebootMethod,
 } from 'src/hooks/firmware/useRebootRequest';
-import type { TrezorDevice } from 'src/types/suite';
+import type { CerberusDevice } from 'src/types/suite';
 import { AbortButton } from 'src/components/suite/modals/AbortButton';
 
 const StyledModal = styled(Modal)`
@@ -156,7 +156,7 @@ const ReconnectLabel = ({
     device,
 }: {
     requestedMode: RebootRequestedMode;
-    device?: TrezorDevice;
+    device?: CerberusDevice;
 }) => {
     const deviceFwVersion = getFirmwareVersion(device);
     const deviceModelInternal = device?.features?.internal_model;
@@ -204,7 +204,7 @@ const RebootDeviceGraphics = ({
     method,
     requestedMode,
 }: {
-    device?: TrezorDevice;
+    device?: CerberusDevice;
     method: RebootMethod;
     requestedMode: RebootRequestedMode;
 }) => {
@@ -239,7 +239,7 @@ const RebootDeviceGraphics = ({
 };
 
 interface ReconnectDevicePromptProps {
-    expectedDevice?: TrezorDevice;
+    expectedDevice?: CerberusDevice;
     requestedMode: RebootRequestedMode;
     onSuccess?: () => void;
     onClose?: () => void;

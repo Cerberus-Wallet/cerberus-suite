@@ -32,7 +32,7 @@ const GRADIENT_HEIGHT = 48;
 // for extra space on the bottom due to android showing odd SafeAreaInsets.bottom
 const EXTRA_BOTTOM_PADDING = 48;
 
-const ACCOUNT_TYPES_URL = 'https://cerberus.uraanai.com/learn/a/multiple-accounts-in-trezor-suite';
+const ACCOUNT_TYPES_URL = 'https://cerberus.uraanai.com/learn/a/multiple-accounts-in-cerberus-suite';
 
 const bulletsForKeyPath = (keyPath: TxKeyPath) => (
     <Box paddingLeft="small">

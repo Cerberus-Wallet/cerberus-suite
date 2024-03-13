@@ -6,7 +6,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 import { FeatureFlag, useFeatureFlag } from '@suite-native/feature-flags';
 import { Link } from '@suite-native/link';
-import { Box, Text, TrezorSuiteLiteHeader } from '@suite-native/atoms';
+import { Box, Text, CerberusSuiteLiteHeader } from '@suite-native/atoms';
 import {
     OnboardingStackParamList,
     OnboardingStackRoutes,
@@ -70,7 +70,7 @@ export const WelcomeScreen = () => {
     const handleRedirect = () => {
         navigation.navigate(
             isUsbDeviceConnectFeatureEnabled
-                ? OnboardingStackRoutes.ConnectTrezor
+                ? OnboardingStackRoutes.ConnectCerberus
                 : OnboardingStackRoutes.TrackBalances,
         );
     };
@@ -104,13 +104,13 @@ export const WelcomeScreen = () => {
                     <Box alignItems="center" justifyContent="center">
                         <Box alignItems="center">
                             <Box marginBottom="large">
-                                <Icon size="extraLarge" name="trezor" color="iconDefault" />
+                                <Icon size="extraLarge" name="cerberus" color="iconDefault" />
                             </Box>
                             <Box style={applyStyle(titleStyle)}>
                                 <Text variant="titleMedium" textAlign="center">
                                     <Translation id="moduleOnboarding.welcomeScreen.welcome" />
                                 </Text>
-                                <TrezorSuiteLiteHeader textVariant="titleMedium" />
+                                <CerberusSuiteLiteHeader textVariant="titleMedium" />
                             </Box>
                         </Box>
                         <Text color="textSubdued" textAlign="center">
@@ -120,9 +120,9 @@ export const WelcomeScreen = () => {
                     <Box flex={1} justifyContent="flex-end">
                         <Text variant="hint" textAlign="center">
                             <Translation
-                                id="moduleOnboarding.welcomeScreen.trezorLink"
+                                id="moduleOnboarding.welcomeScreen.cerberusLink"
                                 values={{
-                                    trezorLink: chunks => (
+                                    cerberusLink: chunks => (
                                         <Link href="https://cerberus.uraanai.com" label={chunks} />
                                     ),
                                 }}

@@ -1,5 +1,5 @@
 import { test, Page, BrowserContext } from '@playwright/test';
-import { TrezorUserEnvLink } from '@cerberus/trezor-user-env-link';
+import { CerberusUserEnvLink } from '@cerberus/cerberus-user-env-link';
 import {
     findElementByDataTest,
     getContexts,
@@ -21,7 +21,7 @@ let explorerPage: Page;
 let explorerUrl: string;
 
 test.beforeAll(async () => {
-    await TrezorUserEnvLink.connect();
+    await CerberusUserEnvLink.connect();
     log(`isWebExtension: ${isWebExtension}`);
     log(`connectSrc: ${connectSrc}`);
     log(`url: ${url}`);
@@ -29,15 +29,15 @@ test.beforeAll(async () => {
 
 test.beforeEach(async ({ page }) => {
     log('beforeEach', 'stopBridge');
-    await TrezorUserEnvLink.api.stopBridge();
+    await CerberusUserEnvLink.api.stopBridge();
     log('beforeEach', 'stopEmu');
-    await TrezorUserEnvLink.api.stopEmu();
+    await CerberusUserEnvLink.api.stopEmu();
     log('beforeEach', 'startEmu');
-    await TrezorUserEnvLink.api.startEmu({
+    await CerberusUserEnvLink.api.startEmu({
         wipe: true,
     });
     log('beforeEach', 'setupEmu');
-    await TrezorUserEnvLink.api.setupEmu({
+    await CerberusUserEnvLink.api.setupEmu({
         mnemonic: 'alcohol woman abuse must during monitor noble actual mixed trade anger aisle',
         pin: '',
         passphrase_protection: true,
@@ -45,7 +45,7 @@ test.beforeEach(async ({ page }) => {
         needs_backup: false,
     });
     log('beforeEach', 'startBridge');
-    await TrezorUserEnvLink.api.startBridge(bridgeVersion);
+    await CerberusUserEnvLink.api.startBridge(bridgeVersion);
 
     log('beforeEach', 'getting contexts');
     const contexts = await getContexts(page, url, isWebExtension);
@@ -109,15 +109,15 @@ test('input passphrase in popup and device accepts it', async () => {
 
     log('accepting to see passphrase');
     // Accept to see Passphrase.
-    await TrezorUserEnvLink.api.pressYes();
+    await CerberusUserEnvLink.api.pressYes();
 
     log('confirming passphrase is correct');
     // Confirm Passphrase is correct.
-    await TrezorUserEnvLink.api.pressYes();
+    await CerberusUserEnvLink.api.pressYes();
 
     log('confirming right address is displayed');
     // Confirm right address is displayed.
-    await TrezorUserEnvLink.api.pressYes();
+    await CerberusUserEnvLink.api.pressYes();
 });
 
 test('introduce passphrase in popup and device rejects it', async () => {
@@ -140,10 +140,10 @@ test('introduce passphrase in popup and device rejects it', async () => {
     await waitAndClick(popup, ['@passphrase/hidden/submit-button']);
 
     // Accept to see Passphrase.
-    await TrezorUserEnvLink.api.pressYes();
+    await CerberusUserEnvLink.api.pressYes();
 
     // Cancel Passphrase is incorrect.
-    await TrezorUserEnvLink.api.pressNo();
+    await CerberusUserEnvLink.api.pressNo();
 
     await waitAndClick(popup, ['@connect-ui/error-close-button']);
 
@@ -172,13 +172,13 @@ test('introduce passphrase successfully next time should not ask for it', async 
     await waitAndClick(popup, ['@passphrase/hidden/submit-button']);
 
     // Accept to see Passphrase.
-    await TrezorUserEnvLink.api.pressYes();
+    await CerberusUserEnvLink.api.pressYes();
 
     // Confirm Passphrase is correct.
-    await TrezorUserEnvLink.api.pressYes();
+    await CerberusUserEnvLink.api.pressYes();
 
     // Confirm right address is displayed.
-    await TrezorUserEnvLink.api.pressYes();
+    await CerberusUserEnvLink.api.pressYes();
 
     // Wait for submit button
     await findElementByDataTest(explorerPage, '@submit-button');
@@ -218,13 +218,13 @@ test('introduce passphrase successfully reload 3rd party it should ask again for
     await waitAndClick(popup, ['@passphrase/hidden/submit-button']);
 
     // Accept to see Passphrase.
-    await TrezorUserEnvLink.api.pressYes();
+    await CerberusUserEnvLink.api.pressYes();
 
     // Confirm Passphrase is correct.
-    await TrezorUserEnvLink.api.pressYes();
+    await CerberusUserEnvLink.api.pressYes();
 
     // Confirm right address is displayed.
-    await TrezorUserEnvLink.api.pressYes();
+    await CerberusUserEnvLink.api.pressYes();
 
     // Wait for success message before reloading page.
     await explorerPage.waitForSelector('text=success: true');
@@ -260,7 +260,7 @@ test('passphrase mismatch', async ({ page }) => {
     // send device.state for passphrase 'abc'
     await page.addScriptTag({
         content: `
-          window.TrezorConnect.getAddress({
+          window.CerberusConnect.getAddress({
                 path: "m/49'/0'/0'/0/0",
                 device: {
                     instance: 1,
@@ -285,9 +285,9 @@ test('passphrase mismatch', async ({ page }) => {
     log('submitting passphrase');
     await waitAndClick(popup, ['@passphrase/hidden/submit-button']);
     // Accept to see Passphrase.
-    await TrezorUserEnvLink.api.pressYes();
+    await CerberusUserEnvLink.api.pressYes();
     // Confirm Passphrase is correct.
-    await TrezorUserEnvLink.api.pressYes();
+    await CerberusUserEnvLink.api.pressYes();
 
     log('waiting and click for invalid passphrase try again button');
     await waitAndClick(popup, ['@invalid-passphrase/try-again']);
@@ -303,13 +303,13 @@ test('passphrase mismatch', async ({ page }) => {
     await waitAndClick(popup, ['@passphrase/hidden/submit-button']);
 
     // Accept to see Passphrase.
-    await TrezorUserEnvLink.api.pressYes();
+    await CerberusUserEnvLink.api.pressYes();
 
     // Confirm Passphrase is correct.
-    await TrezorUserEnvLink.api.pressYes();
+    await CerberusUserEnvLink.api.pressYes();
 
     // Confirm right address is displayed.
-    await TrezorUserEnvLink.api.pressYes();
+    await CerberusUserEnvLink.api.pressYes();
 
     // Wait for element in connect-explorer before reloading it.
     await findElementByDataTest(page, '@submit-button');
@@ -324,7 +324,7 @@ test('passphrase mismatch', async ({ page }) => {
     // send device.state for passphrase 'abc'
     await page.addScriptTag({
         content: `
-          window.TrezorConnect.getAddress({
+          window.CerberusConnect.getAddress({
                 path: "m/49'/0'/0'/0/0",
                 device: {
                     instance: 1,
@@ -345,13 +345,13 @@ test('passphrase mismatch', async ({ page }) => {
     await waitAndClick(popup, ['@passphrase/hidden/submit-button']);
 
     // Accept to see Passphrase.
-    await TrezorUserEnvLink.api.pressYes();
+    await CerberusUserEnvLink.api.pressYes();
     // Confirm Passphrase is correct.
-    await TrezorUserEnvLink.api.pressYes();
+    await CerberusUserEnvLink.api.pressYes();
 
     // It display mismatch error, and we accept to use this passphrase.
     await waitAndClick(popup, ['@invalid-passphrase/use-this-passphrase']);
 
     // Confirm right address is displayed.
-    await TrezorUserEnvLink.api.pressYes();
+    await CerberusUserEnvLink.api.pressYes();
 });

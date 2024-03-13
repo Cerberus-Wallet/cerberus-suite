@@ -10,7 +10,7 @@ export const cardanoDerivationType = {
     data: [
         { value: 0, label: 'Ledger' },
         { value: 1, label: 'Icarus' },
-        { value: 2, label: 'Icarus_Trezor' },
+        { value: 2, label: 'Icarus_Cerberus' },
     ],
 };
 

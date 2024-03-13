@@ -17,7 +17,7 @@
     },
     "build": {
         "appId": "${name}",
-        "productName": "TrezorConnectExample",
+        "productName": "CerberusConnectExample",
         "copyright": "Copyright © year ${author}",
         "asar": false,
         "directories": {
@@ -47,8 +47,8 @@
             "target": "zip"
         },
         "linux": {
-            "executableName": "TrezorConnectExample",
-            "artifactName": "TrezorConnectExample.${ext}",
+            "executableName": "CerberusConnectExample",
+            "artifactName": "CerberusConnectExample.${ext}",
             "target": "AppImage"
         },
         "win": {

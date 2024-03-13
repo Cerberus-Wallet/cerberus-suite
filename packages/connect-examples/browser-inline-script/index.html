@@ -4,9 +4,9 @@
         <title>@cerberus/connect example</title>
     </head>
     <body>
-        <script type="text/javascript" src="https://connect.cerberus.uraanai.com/9/trezor-connect.js"></script>
+        <script type="text/javascript" src="https://connect.cerberus.uraanai.com/9/cerberus-connect.js"></script>
         <script type="text/javascript">
-            window.TrezorConnect.init({
+            window.CerberusConnect.init({
                 lazyLoad: true,
                 manifest: {
                     email: 'developer@xyz.com',
@@ -14,9 +14,9 @@
                 },
             });
 
-            trezorGetAddress = function () {
-                window.TrezorConnect.getAddress({
-                    showOnTrezor: true,
+            cerberusGetAddress = function () {
+                window.CerberusConnect.getAddress({
+                    showOnCerberus: true,
                     path: "m/49'/0'/0'/0/0",
                     coin: 'btc',
                 }).then(res => {
@@ -24,7 +24,7 @@
                 });
             };
 
-            window.TrezorConnect.on('DEVICE_EVENT', function (event) {
+            window.CerberusConnect.on('DEVICE_EVENT', function (event) {
                 console.log('event', event);
                 appendLog(
                     'events',
@@ -47,7 +47,7 @@
             };
         </script>
 
-        <button onclick="trezorGetAddress()">Get address</button>
+        <button onclick="cerberusGetAddress()">Get address</button>
 
         <div style="display: flex; flex-direction: row; overflow-wrap: anywhere">
             <div style="flex: 1; margin: 10px">

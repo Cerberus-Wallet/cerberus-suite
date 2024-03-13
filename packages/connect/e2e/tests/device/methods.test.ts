@@ -1,11 +1,11 @@
-import TrezorConnect from '../../../src';
+import CerberusConnect from '../../../src';
 import fixtures from '../../__fixtures__';
 
-const { getController, setup, skipTest, conditionalTest, initTrezorConnect } = global.Cerberus;
+const { getController, setup, skipTest, conditionalTest, initCerberusConnect } = global.Cerberus;
 
 let controller: ReturnType<typeof getController> | undefined;
 
-describe(`TrezorConnect methods`, () => {
+describe(`CerberusConnect methods`, () => {
     afterAll(() => {
         // reset controller at the end
         if (controller) {
@@ -15,9 +15,9 @@ describe(`TrezorConnect methods`, () => {
     });
 
     fixtures.forEach((testCase: TestCase) => {
-        describe(`TrezorConnect.${testCase.method}`, () => {
+        describe(`CerberusConnect.${testCase.method}`, () => {
             beforeAll(async () => {
-                await TrezorConnect.dispose();
+                await CerberusConnect.dispose();
 
                 try {
                     if (!controller) {
@@ -29,7 +29,7 @@ describe(`TrezorConnect methods`, () => {
 
                     await setup(controller, testCase.setup);
 
-                    await initTrezorConnect(controller);
+                    await initCerberusConnect(controller);
                 } catch (error) {
                     // eslint-disable-next-line no-console
                     console.log('Controller WS init error', error);
@@ -56,7 +56,7 @@ describe(`TrezorConnect methods`, () => {
 
                         controller.options.name = t.description;
                         // @ts-expect-error, string + params union
-                        const result = await TrezorConnect[testCase.method](t.params);
+                        const result = await CerberusConnect[testCase.method](t.params);
                         let expected = t.result
                             ? { success: true, payload: t.result }
                             : { success: false };

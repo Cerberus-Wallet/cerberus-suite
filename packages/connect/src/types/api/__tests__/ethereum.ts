@@ -1,6 +1,6 @@
-import { TrezorConnect } from '../../..';
+import { CerberusConnect } from '../../..';
 
-export const ethereumGetAddress = async (api: TrezorConnect) => {
+export const ethereumGetAddress = async (api: CerberusConnect) => {
     // regular
     const singleAddress = await api.ethereumGetAddress({ path: 'm/44' });
 
@@ -40,7 +40,7 @@ export const ethereumGetAddress = async (api: TrezorConnect) => {
         skipFinalReload: false,
         path: 'm/44',
         address: '0x',
-        showOnTrezor: true,
+        showOnCerberus: true,
     });
 
     // with invalid params
@@ -54,7 +54,7 @@ export const ethereumGetAddress = async (api: TrezorConnect) => {
     api.ethereumGetAddress({ bundle: 1 });
 };
 
-export const ethereumGetPublicKey = async (api: TrezorConnect) => {
+export const ethereumGetPublicKey = async (api: CerberusConnect) => {
     // regular
     const singlePK = await api.ethereumGetPublicKey({ path: 'm/44' });
 
@@ -92,7 +92,7 @@ export const ethereumGetPublicKey = async (api: TrezorConnect) => {
     }
 };
 
-export const ethereumSignTransaction = async (api: TrezorConnect) => {
+export const ethereumSignTransaction = async (api: CerberusConnect) => {
     const sign = await api.ethereumSignTransaction({
         path: 'm/44',
         transaction: {
@@ -147,7 +147,7 @@ export const ethereumSignTransaction = async (api: TrezorConnect) => {
     });
 };
 
-export const signVerifyMessage = async (api: TrezorConnect) => {
+export const signVerifyMessage = async (api: CerberusConnect) => {
     const sign = await api.ethereumSignMessage({
         path: 'm/44',
         message: 'foo',
@@ -170,7 +170,7 @@ export const signVerifyMessage = async (api: TrezorConnect) => {
     }
 };
 
-export const signTypedData = async (api: TrezorConnect) => {
+export const signTypedData = async (api: CerberusConnect) => {
     const sign = await api.ethereumSignTypedData({
         path: 'm/44',
         data: {

@@ -3,7 +3,7 @@
 Export SLIP-0019 ownership proof. [Read more](https://github.com/satoshilabs/slips/blob/master/slip-0019.md#proof-usage)
 
 ```javascript
-const result = await TrezorConnect.getOwnershipProof(params);
+const result = await CerberusConnect.getOwnershipProof(params);
 ```
 
 > :note: **Supported only by T2T1 with Firmware 2.4.4 or higher!**
@@ -34,7 +34,7 @@ const result = await TrezorConnect.getOwnershipProof(params);
 Display ownership proof of the first bitcoin address:
 
 ```javascript
-TrezorConnect.getOwnershipProof({
+CerberusConnect.getOwnershipProof({
     path: "m/86'/0'/0'/0/0",
 });
 ```
@@ -42,7 +42,7 @@ TrezorConnect.getOwnershipProof({
 Return a bundle of ownership proofs:
 
 ```javascript
-TrezorConnect.getOwnershipProof({
+CerberusConnect.getOwnershipProof({
     bundle: [
         { path: "m/86'/0'/0'/0/0" }, // taproot
         { path: "m/84'/0'/0'/0/0" }, // bech32

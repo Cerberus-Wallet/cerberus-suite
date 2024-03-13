@@ -74,7 +74,7 @@
 # 0.0.17
 
 -   chore: forgotten renaming to T1/TT (5decd0839)
--   chore: unify trezor names in docs/comments (74290aab3)
+-   chore: unify cerberus names in docs/comments (74290aab3)
 
 # 0.0.15
 

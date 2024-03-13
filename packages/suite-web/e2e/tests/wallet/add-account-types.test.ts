@@ -47,7 +47,7 @@ describe('Account types suite', () => {
         cy.discoveryShouldFinish();
 
         requests = [];
-        cy.interceptDataTrezorIo(requests);
+        cy.interceptDataCerberusIo(requests);
     });
 
     afterEach(() => {

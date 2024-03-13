@@ -10,7 +10,7 @@ import { spacingsPx } from '@cerberus/theme';
 import { Translation, Modal, CoinList } from 'src/components/suite';
 import { NETWORKS } from 'src/config/wallet';
 import { Account, Network } from 'src/types/wallet';
-import { TrezorDevice } from 'src/types/suite';
+import { CerberusDevice } from 'src/types/suite';
 import { useSelector, useDispatch } from 'src/hooks/suite';
 import { changeCoinVisibility } from 'src/actions/settings/walletSettingsActions';
 import { goto } from 'src/actions/suite/routerActions';
@@ -42,7 +42,7 @@ const StyledCollapsibleBox = styled(CollapsibleBox)`
 `;
 
 interface AddAccountProps {
-    device: TrezorDevice;
+    device: CerberusDevice;
     onCancel: () => void;
     symbol?: NetworkSymbol;
     noRedirect?: boolean;

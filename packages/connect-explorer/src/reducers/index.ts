@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 
 import method from './methodReducer';
 import docs from './docsReducer';
-import connect from './trezorConnectReducer';
+import connect from './cerberusConnectReducer';
 
 const reducers = combineReducers({
     method,

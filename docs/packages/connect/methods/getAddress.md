@@ -3,7 +3,7 @@
 Display requested address derived by given BIP32 path on device and returns it to caller. User is asked to confirm the export on Cerberus.
 
 ```javascript
-const result = await TrezorConnect.getAddress(params);
+const result = await CerberusConnect.getAddress(params);
 ```
 
 ### Params
@@ -14,30 +14,30 @@ const result = await TrezorConnect.getAddress(params);
 
 -   `path` — _required_ `string | Array<number>` minimum length is `5`. [read more](../path.md)
 -   `address` — _optional_ `string` address for validation (read `Handle button request` section below)
--   `showOnTrezor` — _optional_ `boolean` determines if address will be displayed on device. Default is set to `true`
+-   `showOnCerberus` — _optional_ `boolean` determines if address will be displayed on device. Default is set to `true`
 -   `coin` - _optional_ `string` determines network definition specified in [coins.json](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect-common/files/coins.json) file. Coin `shortcut`, `name` or `label` can be used. If `coin` is not set API will try to get network definition from `path`.
 -   `crossChain` — _optional_ `boolean` Advanced feature. Use it only if you are know what you are doing. Allows to generate address between chains. For example Bitcoin path on Litecoin network will display cross chain address in Litecoin format.
 -   `multisig` - _optional_ [MultisigRedeemScriptType](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/protobuf/src/messages.ts), redeem script information (multisig addresses only)
 -   `scriptType` - _optional_ [InputScriptType](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/protobuf/src/messages.ts), address script type
--   `unlockPath` - _optional_ [PROTO.UnlockPath](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/protobuf/src/messages.ts), the result of [TrezorConnect.unlockPath](./unlockPath.md) method.
+-   `unlockPath` - _optional_ [PROTO.UnlockPath](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/protobuf/src/messages.ts), the result of [CerberusConnect.unlockPath](./unlockPath.md) method.
 -   `chunkify` — _optional_ `boolean` determines if address will be displayed in chunks of 4 characters. Default is set to `false`
 
 #### Exporting bundle of addresses
 
--   `bundle` - `Array` of Objects with `path`, `showOnTrezor`, `coin` and `crossChain` fields
+-   `bundle` - `Array` of Objects with `path`, `showOnCerberus`, `coin` and `crossChain` fields
 
 #### Handle button request
 
-Since trezor-connect@6.0.4 there is a possibility to handle `UI.ADDRESS_VALIDATION` event which will be triggered once the address is displayed on the device.
+Since cerberus-connect@6.0.4 there is a possibility to handle `UI.ADDRESS_VALIDATION` event which will be triggered once the address is displayed on the device.
 You can handle this event and display custom UI inside of your application.
 
 If certain conditions are fulfilled popup will not be used at all:
 
 -   the user gave permissions to communicate with Cerberus
 -   device is authenticated by pin/passphrase
--   application has `TrezorConnect.on(UI.ADDRESS_VALIDATION, () => {});` listener registered
+-   application has `CerberusConnect.on(UI.ADDRESS_VALIDATION, () => {});` listener registered
 -   parameter `address` is set
--   parameter `showOnTrezor` is set to `true` (or not set at all)
+-   parameter `showOnCerberus` is set to `true` (or not set at all)
 -   application is requesting ONLY ONE(!) address
 
 ### Example
@@ -45,7 +45,7 @@ If certain conditions are fulfilled popup will not be used at all:
 Display third address of first bitcoin account:
 
 ```javascript
-TrezorConnect.getAddress({
+CerberusConnect.getAddress({
     path: "m/49'/0'/0'/0/2",
     coin: 'btc',
 });
@@ -54,11 +54,11 @@ TrezorConnect.getAddress({
 Return a bundle of addresses from first bitcoin account without displaying them on device:
 
 ```javascript
-TrezorConnect.getAddress({
+CerberusConnect.getAddress({
     bundle: [
-        { path: "m/49'/0'/0'/0/0", showOnTrezor: false }, // address 1
-        { path: "m/49'/0'/0'/0/1", showOnTrezor: false }, // address 2
-        { path: "m/49'/0'/0'/0/2", showOnTrezor: false }, // address 3
+        { path: "m/49'/0'/0'/0/0", showOnCerberus: false }, // address 1
+        { path: "m/49'/0'/0'/0/1", showOnCerberus: false }, // address 2
+        { path: "m/49'/0'/0'/0/2", showOnCerberus: false }, // address 3
     ],
 });
 ```
@@ -66,14 +66,14 @@ TrezorConnect.getAddress({
 Validate address using custom UI inside of your application:
 
 ```javascript
-import TrezorConnect, { UI } from '@cerberus/connect';
+import CerberusConnect, { UI } from '@cerberus/connect';
 
-TrezorConnect.on(UI.ADDRESS_VALIDATION, data => {
+CerberusConnect.on(UI.ADDRESS_VALIDATION, data => {
     console.log('Handle button request', data.address, data.serializedPath);
     // here you can display custom UI inside of your app
 });
 
-const result = await TrezorConnect.getAddress({
+const result = await CerberusConnect.getAddress({
     path: "m/49'/0'/0'/0/0",
     address: '3L6TyTisPBmrDAj6RoKmDzNnj4eQi54gD2',
 });

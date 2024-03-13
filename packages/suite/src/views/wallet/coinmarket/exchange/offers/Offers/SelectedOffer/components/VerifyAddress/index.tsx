@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import { useForm } from 'react-hook-form';
-import addressValidator from 'trezor-address-validator';
+import addressValidator from 'cerberus-address-validator';
 
 import { QuestionTooltip, Translation } from 'src/components/suite';
 import { Input, variables, Button } from '@cerberus/components';
@@ -11,7 +11,7 @@ import { AddressOptions } from 'src/views/wallet/coinmarket/common';
 import { useAccountAddressDictionary } from 'src/hooks/wallet/useAccounts';
 import { ReceiveOptions, AccountSelectOption } from './ReceiveOptions';
 import { useTranslation } from 'src/hooks/suite/useTranslation';
-import { ConfirmedOnTrezor } from 'src/views/wallet/coinmarket/common/ConfirmedOnTrezor';
+import { ConfirmedOnCerberus } from 'src/views/wallet/coinmarket/common/ConfirmedOnCerberus';
 import { cryptoToCoinSymbol } from 'src/utils/wallet/coinmarket/cryptoSymbolUtils';
 
 const Wrapper = styled.div`
@@ -211,7 +211,7 @@ const VerifyAddressComponent = () => {
                     )}
 
                     {addressVerified && addressVerified === address && (
-                        <ConfirmedOnTrezor device={device} />
+                        <ConfirmedOnCerberus device={device} />
                     )}
                 </Row>
                 {selectedQuote?.extraFieldDescription && (
@@ -247,7 +247,7 @@ const VerifyAddressComponent = () => {
                     {(!addressVerified || addressVerified !== address) &&
                         selectedAccountOption.account && (
                             <Button
-                                data-test="@coinmarket/exchange/offers/confirm-on-trezor-button"
+                                data-test="@coinmarket/exchange/offers/confirm-on-cerberus-button"
                                 isLoading={callInProgress}
                                 isDisabled={callInProgress}
                                 onClick={() => {

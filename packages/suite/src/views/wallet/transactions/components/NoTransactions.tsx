@@ -1,6 +1,6 @@
 import { Button } from '@cerberus/components';
 import { AccountExceptionLayout } from 'src/components/wallet';
-import { Translation, TrezorLink } from 'src/components/suite';
+import { Translation, CerberusLink } from 'src/components/suite';
 import { Account } from 'src/types/wallet';
 import { getNetwork } from '@suite-common/wallet-utils';
 
@@ -18,9 +18,9 @@ export const NoTransactions = ({ account }: NoTransactionsProps) => {
             image="CLOUDY"
             actionComponent={
                 <Button variant="primary" icon="EXTERNAL_LINK" iconAlignment="right">
-                    <TrezorLink variant="nostyle" href={explorerUrl}>
+                    <CerberusLink variant="nostyle" href={explorerUrl}>
                         <Translation id="TR_SHOW_DETAILS_IN_BLOCK_EXPLORER" />
-                    </TrezorLink>
+                    </CerberusLink>
                 </Button>
             }
         />

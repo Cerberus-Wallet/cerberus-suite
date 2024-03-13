@@ -1,6 +1,6 @@
 import { TranslationKey } from '@suite-common/intl-types';
 import { DesktopAppUpdateState, PROTOCOL_SCHEME } from '@suite-common/suite-constants';
-import { TrezorDevice } from '@suite-common/suite-types';
+import { CerberusDevice } from '@suite-common/suite-types';
 import { NetworkSymbol } from '@suite-common/wallet-config';
 import { DEVICE } from '@cerberus/connect';
 
@@ -14,7 +14,7 @@ export interface NotificationOptions {
 
 type TransactionNotificationPayload = {
     formattedAmount: string;
-    device?: TrezorDevice;
+    device?: CerberusDevice;
     descriptor: string;
     symbol: NetworkSymbol;
     txid: string;
@@ -43,7 +43,7 @@ export type ToastPayload = (
     | {
           type: 'acquire-error';
           error: string;
-          device?: TrezorDevice;
+          device?: CerberusDevice;
       }
     | {
           type: 'auth-confirm-error';
@@ -175,7 +175,7 @@ export type NotificationEventPayload = (
     | ReceivedTransactionNotification
     | {
           type: typeof DEVICE.CONNECT | typeof DEVICE.CONNECT_UNACQUIRED;
-          device: TrezorDevice;
+          device: CerberusDevice;
           needAttention?: boolean;
       }
 ) &
@@ -183,7 +183,7 @@ export type NotificationEventPayload = (
 
 export interface CommonNotificationPayload {
     id: NotificationId; // programmer provided, might be used to find and close notification programmatically
-    device?: TrezorDevice; // used to close notifications for device
+    device?: CerberusDevice; // used to close notifications for device
     closed?: boolean;
     error?: string;
 }

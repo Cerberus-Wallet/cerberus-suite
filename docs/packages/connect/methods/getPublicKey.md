@@ -4,7 +4,7 @@ Retrieves BIP32 extended public derived by given BIP32 path.
 User is presented with a description of the requested key and asked to confirm the export.
 
 ```javascript
-const result = await TrezorConnect.getPublicKey(params);
+const result = await CerberusConnect.getPublicKey(params);
 ```
 
 ### Params
@@ -19,7 +19,7 @@ const result = await TrezorConnect.getPublicKey(params);
 -   `ignoreXpubMagic` — _optional_ `boolean` ignore SLIP-0132 XPUB magic, use xpub/tpub prefix for all account types.
 -   `ecdsaCurveName` — _optional_ `string` ECDSA curve name to use
 -   `crossChain` — _optional_ `boolean` Advanced feature. Use it only if you are know what you are doing. Allows to generate address between chains. For example Bitcoin path on Litecoin network will display cross chain address in Litecoin format.
--   `unlockPath` - _optional_ [PROTO.UnlockPath](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/protobuf/src/messages.ts), the result of [TrezorConnect.unlockPath](./unlockPath.md) method.
+-   `unlockPath` - _optional_ [PROTO.UnlockPath](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/protobuf/src/messages.ts), the result of [CerberusConnect.unlockPath](./unlockPath.md) method.
 -   `suppressBackupWarning` - _optional_ `boolean` By default, this method will emit an event to show a warning if the wallet does not have a backup. This option suppresses the message.
 
 #### Exporting bundle of public keys
@@ -31,7 +31,7 @@ const result = await TrezorConnect.getPublicKey(params);
 Return public key of fifth bitcoin account:
 
 ```javascript
-TrezorConnect.getPublicKey({
+CerberusConnect.getPublicKey({
     path: "m/49'/0'/4'",
     coin: 'btc',
 });
@@ -40,7 +40,7 @@ TrezorConnect.getPublicKey({
 Return a bundle of public keys for multiple bitcoin accounts:
 
 ```javascript
-TrezorConnect.getPublicKey({
+CerberusConnect.getPublicKey({
     bundle: [
         { path: "m/49'/0'/0'" }, // account 1
         { path: "m/49'/0'/1'" }, // account 2

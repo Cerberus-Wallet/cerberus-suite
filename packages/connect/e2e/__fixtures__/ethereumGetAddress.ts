@@ -32,11 +32,11 @@ export default {
                 bundle: [
                     {
                         path: "m/44'/6060'/0'/0/0",
-                        showOnTrezor: true,
+                        showOnCerberus: true,
                     },
                     {
                         path: "m/44'/5718350'/0'/0/0",
-                        showOnTrezor: true,
+                        showOnCerberus: true,
                     },
                 ],
             },

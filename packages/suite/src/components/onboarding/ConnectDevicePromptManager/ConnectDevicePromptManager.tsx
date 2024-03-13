@@ -12,7 +12,7 @@ import { motionEasing } from '@cerberus/components';
 import { useSelector } from 'src/hooks/suite';
 import { ConnectDevicePrompt } from 'src/components/suite';
 import { isWebUsb } from 'src/utils/suite/transport';
-import type { TrezorDevice } from 'src/types/suite';
+import type { CerberusDevice } from 'src/types/suite';
 
 // todo: these should be replaced
 import { NoTransport } from './components/NoTransport';
@@ -30,7 +30,7 @@ const ContentWrapper = styled(motion.div)`
 `;
 
 interface ConnectDevicePromptManagerProps {
-    device: TrezorDevice | undefined;
+    device: CerberusDevice | undefined;
     className?: string;
     children?: ReactNode;
 }

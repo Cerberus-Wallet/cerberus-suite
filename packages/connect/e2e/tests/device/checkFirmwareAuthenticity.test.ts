@@ -1,24 +1,24 @@
-import TrezorConnect from '../../../src';
+import CerberusConnect from '../../../src';
 
-const { getController, setup, initTrezorConnect } = global.Cerberus;
+const { getController, setup, initCerberusConnect } = global.Cerberus;
 
 const controller = getController();
 
-describe('TrezorConnect.checkFirmwareAuthenticity', () => {
+describe('CerberusConnect.checkFirmwareAuthenticity', () => {
     beforeAll(async () => {
         await setup(controller, {
             mnemonic: 'mnemonic_all',
         });
-        await initTrezorConnect(controller);
+        await initCerberusConnect(controller);
     });
 
     afterAll(async () => {
         controller.dispose();
-        await TrezorConnect.dispose();
+        await CerberusConnect.dispose();
     });
 
     it('sometimes valid sometimes not, depends on circumstances', async () => {
-        const result = await TrezorConnect.checkFirmwareAuthenticity({});
+        const result = await CerberusConnect.checkFirmwareAuthenticity({});
 
         if (result.success) {
             // when running with emulator, hashes will never match.

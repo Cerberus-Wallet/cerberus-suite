@@ -2,7 +2,7 @@ import { UI, DEVICE, Device, UiRequestButtonData } from '@cerberus/connect';
 import { UserContextPayload } from '@suite-common/suite-types';
 
 import { MODAL } from 'src/actions/suite/constants';
-import type { Action, TrezorDevice } from 'src/types/suite';
+import type { Action, CerberusDevice } from 'src/types/suite';
 
 export type State = ModalState & { preserve?: boolean };
 
@@ -10,7 +10,7 @@ type ModalState =
     | { context: typeof MODAL.CONTEXT_NONE }
     | {
           context: typeof MODAL.CONTEXT_DEVICE;
-          device: TrezorDevice | Device;
+          device: CerberusDevice | Device;
           windowType?: string;
           data?: UiRequestButtonData;
       }

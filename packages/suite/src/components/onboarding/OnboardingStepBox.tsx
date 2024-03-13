@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
-import TrezorConnect from '@cerberus/connect';
+import CerberusConnect from '@cerberus/connect';
 import { ConfirmOnDevice, Backdrop } from '@cerberus/components';
 import { Translation } from 'src/components/suite';
 import { useIntl } from 'react-intl';
@@ -9,7 +9,7 @@ import {
     CollapsibleOnboardingCard,
     CollapsibleOnboardingCardProps,
 } from './CollapsibleOnboardingCard';
-import { TrezorDevice } from '@suite-common/suite-types';
+import { CerberusDevice } from '@suite-common/suite-types';
 import { spacingsPx, zIndices } from '@cerberus/theme';
 
 const ConfirmWrapper = styled.div`
@@ -48,7 +48,7 @@ const StyledCollapsibleCard = styled(CollapsibleOnboardingCard)<{ $isBackDropVis
 export interface OnboardingStepBoxProps extends CollapsibleOnboardingCardProps {
     innerActions?: ReactNode;
     outerActions?: ReactNode;
-    device?: TrezorDevice;
+    device?: CerberusDevice;
     disableConfirmWrapper?: boolean;
     nested?: boolean;
     devicePromptTitle?: ReactNode;
@@ -89,7 +89,7 @@ export const OnboardingStepBox = ({
                             onCancel={
                                 isActionAbortable
                                     ? () =>
-                                          TrezorConnect.cancel(
+                                          CerberusConnect.cancel(
                                               intl.formatMessage(messages.TR_CANCELLED),
                                           )
                                     : undefined

@@ -86,7 +86,7 @@ import { checkFirmwareAuthenticity } from './checkFirmwareAuthenticity';
 import { cancelCoinjoinAuthorization } from './cancelCoinjoinAuthorization';
 import { showDeviceTutorial } from './showDeviceTutorial';
 
-export interface TrezorConnect {
+export interface CerberusConnect {
     // https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/docs/packages/connect/methods/applyFlags.md
     applyFlags: typeof applyFlags;
 

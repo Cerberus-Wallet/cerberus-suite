@@ -2,9 +2,9 @@ import { isWithinInterval, fromUnixTime } from 'date-fns';
 import { Dispatch, GetState } from 'src/types/suite';
 import { Account } from 'src/types/wallet';
 
-import { isTrezorConnectBackendType } from '@suite-common/wallet-utils';
+import { isCerberusConnectBackendType } from '@suite-common/wallet-utils';
 
-import TrezorConnect from '@cerberus/connect';
+import CerberusConnect from '@cerberus/connect';
 
 import {
     ACCOUNT_GRAPH_SUCCESS,
@@ -87,7 +87,7 @@ export const fetchAccountGraphData =
         });
 
         const localCurrency = selectLocalCurrency(getState());
-        const response = await TrezorConnect.blockchainGetAccountBalanceHistory({
+        const response = await CerberusConnect.blockchainGetAccountBalanceHistory({
             coin: account.symbol,
             descriptor: account.descriptor,
             groupBy: 3600 * 24, // day
@@ -147,7 +147,7 @@ export const updateGraphData =
 
         // TODO: default behaviour should be fetch only new data (since last timestamp)
         // exclude accounts with unsupported backend type
-        let filteredAccounts = accounts.filter(a => isTrezorConnectBackendType(a.backendType));
+        let filteredAccounts = accounts.filter(a => isCerberusConnectBackendType(a.backendType));
         if (options?.newAccountsOnly) {
             // add only accounts for which we don't have any data for given interval
             filteredAccounts = filteredAccounts.filter(

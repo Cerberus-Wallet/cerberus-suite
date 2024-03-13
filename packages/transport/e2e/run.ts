@@ -1,12 +1,12 @@
 import { runCLI } from 'jest';
 
-import { TrezorUserEnvLink } from '@cerberus/trezor-user-env-link';
+import { CerberusUserEnvLink } from '@cerberus/cerberus-user-env-link';
 
 import argv from './jest.config';
 
 (async () => {
-    // Before actual tests start, establish connection with trezor-user-env
-    await TrezorUserEnvLink.connect();
+    // Before actual tests start, establish connection with cerberus-user-env
+    await CerberusUserEnvLink.connect();
 
     // @ts-expect-error
     argv.runInBand = true;

@@ -3,7 +3,7 @@
 Start the on device tutorial.
 
 ```javascript
-const result = await TrezorConnect.showDeviceTutorial(params);
+const result = await CerberusConnect.showDeviceTutorial(params);
 ```
 
 > :note: **Supported only by T2B1 with Firmware 2.6.1 or higher!**
@@ -15,7 +15,7 @@ const result = await TrezorConnect.showDeviceTutorial(params);
 ### Example:
 
 ```javascript
-TrezorConnect.showDeviceTutorial({
+CerberusConnect.showDeviceTutorial({
     device,
 });
 ```

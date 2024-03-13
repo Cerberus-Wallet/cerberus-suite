@@ -209,7 +209,7 @@ const initDevice = async (method: AbstractMethod<any>) => {
 
     // see initTransport.
     // if transportReconnect: true, initTransport does not wait to be finished. if there are multiple requested transports
-    // in TrezorConnect.init, this method may emit UI.SELECT_DEVICE with wrong parameters (for example it thinks that it does not use weubsb although it should)
+    // in CerberusConnect.init, this method may emit UI.SELECT_DEVICE with wrong parameters (for example it thinks that it does not use weubsb although it should)
     await _deviceList.transportFirstEventPromise;
 
     const isWebUsb = _deviceList.transportType() === 'WebUsbTransport';
@@ -668,7 +668,7 @@ const onCall = async (message: IFrameCallMessage) => {
     } catch (error) {
         // corner case: Device was disconnected during authorization
         // this device_id needs to be stored and penalized with delay on future connection
-        // this solves issue with U2F login (leaves space for requests from services which aren't using trezord)
+        // this solves issue with U2F login (leaves space for requests from services which aren't using cerberusd)
         if (_deviceList && error.code === 'Device_Disconnected') {
             _deviceList.addAuthPenalty(device);
         }

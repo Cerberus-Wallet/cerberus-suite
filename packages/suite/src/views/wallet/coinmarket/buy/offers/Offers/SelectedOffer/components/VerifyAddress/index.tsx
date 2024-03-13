@@ -19,7 +19,7 @@ import {
 import { useCoinmarketBuyOffersContext } from 'src/hooks/wallet/useCoinmarketBuyOffers';
 import { AddressOptions } from 'src/views/wallet/coinmarket/common';
 import { useAccountAddressDictionary } from 'src/hooks/wallet/useAccounts';
-import { ConfirmedOnTrezor } from 'src/views/wallet/coinmarket/common/ConfirmedOnTrezor';
+import { ConfirmedOnCerberus } from 'src/views/wallet/coinmarket/common/ConfirmedOnCerberus';
 import { AddressOptionsFormState } from 'src/types/wallet/coinmarketBuyOffers';
 import { Elevation } from '@cerberus/theme';
 import { HTMLAttributes } from 'react';
@@ -189,7 +189,7 @@ const VerifyAddressComponent = () => {
                     />
                 )}
                 {addressVerified && addressVerified === address && (
-                    <ConfirmedOnTrezor device={device} />
+                    <ConfirmedOnCerberus device={device} />
                 )}
             </CardContent>
             <ButtonWrapper>
@@ -197,7 +197,7 @@ const VerifyAddressComponent = () => {
                     <Button
                         isLoading={callInProgress}
                         isDisabled={callInProgress}
-                        data-test="@coinmarket/buy/offers/confirm-on-trezor-button"
+                        data-test="@coinmarket/buy/offers/confirm-on-cerberus-button"
                         onClick={() => {
                             if (accountAddress && address) {
                                 verifyAddress(account, address, accountAddress.path);

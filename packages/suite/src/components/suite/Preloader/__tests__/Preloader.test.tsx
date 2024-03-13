@@ -28,12 +28,12 @@ jest.mock('cross-fetch', () => ({
 // }));
 // do not render animations
 // jest.mock('lottie-react', () => ({
-//     // Lottie: ({ trezorVersion }: any) => <div>{trezorVersion}</div>,
+//     // Lottie: ({ cerberusVersion }: any) => <div>{cerberusVersion}</div>,
 //     __esModule: true, // export as module
-//     default: ({ trezorVersion }: any) => <div data-test="lottie-image">{trezorVersion}</div>,
+//     default: ({ cerberusVersion }: any) => <div data-test="lottie-image">{cerberusVersion}</div>,
 // }));
 // jest.mock('react-use/lib/useMeasure', () => ({
-//     // Lottie: ({ trezorVersion }: any) => <div>{trezorVersion}</div>,
+//     // Lottie: ({ cerberusVersion }: any) => <div>{cerberusVersion}</div>,
 //     __esModule: true, // export as module
 //     default: () => ['ref', { height: 0 }],
 // }));

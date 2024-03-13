@@ -2,7 +2,7 @@ import { useState } from 'react';
 import styled, { useTheme } from 'styled-components';
 import { Button, Checkbox, H2, Icon, Divider } from '@cerberus/components';
 import { spacingsPx } from '@cerberus/theme';
-import { Modal, Translation, TrezorLink } from 'src/components/suite';
+import { Modal, Translation, CerberusLink } from 'src/components/suite';
 import { useDispatch } from 'src/hooks/suite';
 import { openModal } from 'src/actions/suite/modalActions';
 
@@ -90,9 +90,9 @@ export const ConfirmStakeEthModal = ({ onConfirm, onCancel }: ConfirmStakeEthMod
                         values={{
                             a: chunks => (
                                 // TODO: Add the right href
-                                <TrezorLink target="_blank" variant="underline" href="#">
+                                <CerberusLink target="_blank" variant="underline" href="#">
                                     {chunks}
-                                </TrezorLink>
+                                </CerberusLink>
                             ),
                         }}
                     />

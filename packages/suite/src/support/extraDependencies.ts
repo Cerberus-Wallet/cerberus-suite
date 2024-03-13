@@ -24,7 +24,7 @@ import { fixLoadedCoinjoinAccount } from 'src/utils/wallet/coinjoinUtils';
 import * as modalActions from 'src/actions/suite/modalActions';
 
 import * as suiteActions from '../actions/suite/suiteActions';
-import { AppState, ButtonRequest, TrezorDevice } from '../types/suite';
+import { AppState, ButtonRequest, CerberusDevice } from '../types/suite';
 import { METADATA, STORAGE } from '../actions/suite/constants';
 
 const connectSrc = resolveStaticPath('connect/');
@@ -46,7 +46,7 @@ const connectInitSettings = {
 export const extraDependencies: ExtraDependencies = {
     thunks: {
         cardanoValidatePendingTxOnBlock: cardanoStakingActions.validatePendingTxOnBlock,
-        cardanoFetchTrezorPools: cardanoStakingActions.fetchTrezorPools,
+        cardanoFetchCerberusPools: cardanoStakingActions.fetchCerberusPools,
         initMetadata: metadataLabelingActions.init,
         fetchAndSaveMetadata: metadataLabelingActions.fetchAndSaveMetadata,
     },
@@ -118,7 +118,7 @@ export const extraDependencies: ExtraDependencies = {
             {
                 payload,
             }: PayloadAction<{
-                device?: TrezorDevice;
+                device?: CerberusDevice;
                 buttonRequest: ButtonRequest;
             }>,
         ) => {
@@ -128,10 +128,10 @@ export const extraDependencies: ExtraDependencies = {
         },
         setDeviceMetadataReducer: (
             state,
-            { payload }: PayloadAction<{ deviceState: string; metadata: TrezorDevice['metadata'] }>,
+            { payload }: PayloadAction<{ deviceState: string; metadata: CerberusDevice['metadata'] }>,
         ) => {
             const { deviceState, metadata } = payload;
-            const index = state.devices.findIndex((d: TrezorDevice) => d.state === deviceState);
+            const index = state.devices.findIndex((d: CerberusDevice) => d.state === deviceState);
             const device = state.devices[index];
             if (!device) return;
             device.metadata = metadata;

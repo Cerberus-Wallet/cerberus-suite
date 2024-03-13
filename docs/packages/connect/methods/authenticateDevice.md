@@ -14,7 +14,7 @@ Returns [DeviceAuthenticityResult type](https://github.com/Cerberus-Wallet/cerbe
 ### Example
 
 ```javascript
-TrezorConnect.authenticateDevice({ config });
+CerberusConnect.authenticateDevice({ config });
 ```
 
 ### Result

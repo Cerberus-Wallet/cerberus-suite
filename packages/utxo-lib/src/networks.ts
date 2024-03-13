@@ -1,5 +1,5 @@
 // upstream: https://github.com/bitcoinjs/bitcoinjs-lib/blob/master/ts_src/networks.ts
-// fork: https://github.com/Cerberus-Wallet/cerberus-utxo-lib/blob/trezor/src/networks.js
+// fork: https://github.com/Cerberus-Wallet/cerberus-utxo-lib/blob/cerberus/src/networks.js
 // differences:
 // - more specific networks (zcash/komodo, dash, peercoin, decred)
 // - network type validation function.

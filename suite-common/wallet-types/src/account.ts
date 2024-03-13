@@ -53,7 +53,7 @@ type AccountNetworkSpecific =
           page: AccountInfo['page'];
       };
 
-// decides if account is using TrezorConnect/blockchain-link or other non-standard api
+// decides if account is using CerberusConnect/blockchain-link or other non-standard api
 export type AccountBackendSpecific =
     | {
           backendType?: Exclude<BackendType, 'coinjoin'>;

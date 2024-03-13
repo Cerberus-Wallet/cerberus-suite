@@ -1,4 +1,4 @@
-// This class is a 1:1 copy of trezor-firmware tx weight calculation.
+// This class is a 1:1 copy of cerberus-firmware tx weight calculation.
 // It is used to verify that compose process returns correct values in estimated tx virtual bytes.
 // multisig and external is not used for now in therefore its not 100% done.
 // https://github.com/Cerberus-Wallet/cerberus-firmware/blob/1fceca73da523c5bf2bb0f398c91e00c728bdbe0/core/src/apps/bitcoin/sign_tx/tx_weight.py

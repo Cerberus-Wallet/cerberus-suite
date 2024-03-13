@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { ConfirmOnDevice } from '@cerberus/components';
 import { Translation, Modal, ModalProps } from 'src/components/suite';
-import { TrezorDevice } from 'src/types/suite';
+import { CerberusDevice } from 'src/types/suite';
 import { Fingerprint } from 'src/components/firmware';
 
 const StyledModal = styled(Modal)`
@@ -9,7 +9,7 @@ const StyledModal = styled(Modal)`
 `;
 
 interface ConfirmFingerprintProps extends ModalProps {
-    device: TrezorDevice;
+    device: CerberusDevice;
 }
 
 export const ConfirmFingerprintModal = ({ device, ...rest }: ConfirmFingerprintProps) => (

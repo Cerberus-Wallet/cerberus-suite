@@ -1725,7 +1725,7 @@
   "TR_TAPROOT_BANNER_POINT_1": "Только строчные буквы: меньше вероятность ошибок при проверке",
   "TR_TAPROOT_BANNER_POINT_2": "Улучшенная конфиденциальность всех транзакций с биткоинами",
   "TR_TAPROOT_BANNER_TITLE": "Учетные записи Taproot",
-  "TR_TERMS_AND_PRIVACY_CONFIRMATION": "Я согласен с условиями <trezor>Условиями</trezor> и <coordinator>условиями координатора zkSNACKs</coordinator>",
+  "TR_TERMS_AND_PRIVACY_CONFIRMATION": "Я согласен с условиями <cerberus>Условиями</cerberus> и <coordinator>условиями координатора zkSNACKs</coordinator>",
   "TR_TERMS_OF_USE_INVITY": "Условия использования ",
   "TR_TESTNET_COINS": "Testnet криптовалюты",
   "TR_TESTNET_COINS_DESCRIPTION": "Эти криптовалюты используются только для тестирования и не имеют никакой ценности.",

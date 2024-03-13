@@ -18,8 +18,8 @@
                 "iDeal",
                 "sofort"
             ],
-            "statusUrl": "https://my-sandbox.btcdirect.eu/en-gb/user/transactions?client=trezor",
-            "supportUrl": "https://support.btcdirect.eu/hc/en-gb?client=trezor"
+            "statusUrl": "https://my-sandbox.btcdirect.eu/en-gb/user/transactions?client=cerberus",
+            "supportUrl": "https://support.btcdirect.eu/hc/en-gb?client=cerberus"
         },
         {
             "name": "banxa-sandbox",

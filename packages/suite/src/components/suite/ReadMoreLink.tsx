@@ -1,5 +1,5 @@
 import * as URLS from '@cerberus/urls';
-import { Translation, TrezorLink } from 'src/components/suite';
+import { Translation, CerberusLink } from 'src/components/suite';
 import { ExtendedMessageDescriptor } from 'src/types/suite';
 
 interface ReadMoreLinkProps {
@@ -16,14 +16,14 @@ export const ReadMoreLink = ({ url, message, linkLabel }: ReadMoreLinkProps) =>
             id={message}
             values={{
                 TR_LEARN_MORE: (
-                    <TrezorLink variant="nostyle" href={URLS[url]}>
+                    <CerberusLink variant="nostyle" href={URLS[url]}>
                         <Translation id={linkLabel || 'TR_LEARN_MORE'} />
-                    </TrezorLink>
+                    </CerberusLink>
                 ),
             }}
         />
     ) : (
-        <TrezorLink href={URLS[url]}>
+        <CerberusLink href={URLS[url]}>
             <Translation id={linkLabel || 'TR_LEARN_MORE'} />
-        </TrezorLink>
+        </CerberusLink>
     );

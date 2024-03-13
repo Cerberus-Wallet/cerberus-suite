@@ -3,7 +3,7 @@
 Change device settings
 
 ```javascript
-const result = await TrezorConnect.applySettings(params);
+const result = await CerberusConnect.applySettings(params);
 ```
 
 ### Params

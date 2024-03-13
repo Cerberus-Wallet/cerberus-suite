@@ -1,4 +1,4 @@
-import { Box, Text, Pictogram, TrezorSuiteLiteHeader } from '@suite-native/atoms';
+import { Box, Text, Pictogram, CerberusSuiteLiteHeader } from '@suite-native/atoms';
 import { useTranslate, Translation } from '@suite-native/intl';
 
 export const UnverifiedAddressWarning = () => {
@@ -11,7 +11,7 @@ export const UnverifiedAddressWarning = () => {
                 icon="warningTriangleLight"
                 title={
                     <Text>
-                        <TrezorSuiteLiteHeader />
+                        <CerberusSuiteLiteHeader />
                         {'\n'}
                         <Text variant="titleSmall">
                             <Translation id="moduleReceive.receiveAddressCard.unverifiedWarning.title" />

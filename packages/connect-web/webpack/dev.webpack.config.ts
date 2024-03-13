@@ -14,19 +14,19 @@ const dev = {
     watch: true,
     devtool: 'eval-source-map',
     entry: {
-        'trezor-connect': path.resolve(__dirname, '../src/index.ts'),
+        'cerberus-connect': path.resolve(__dirname, '../src/index.ts'),
     },
     output: {
         filename: '[name].js',
         path: path.resolve(__dirname, '../build'),
         publicPath: './',
-        library: 'TrezorConnect',
+        library: 'CerberusConnect',
         libraryTarget: 'umd',
         libraryExport: 'default',
     },
     plugins: [
         // connect-web dev needs to be served from https
-        // to allow injection in 3rd party builds using trezor-connect-src param
+        // to allow injection in 3rd party builds using cerberus-connect-src param
         new WebpackPluginServe({
             port: 8088,
             hmr: true,

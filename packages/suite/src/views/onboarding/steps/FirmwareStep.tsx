@@ -13,7 +13,7 @@ import {
     Fingerprint,
 } from 'src/components/firmware';
 import { useSelector, useFirmware, useOnboarding } from 'src/hooks/suite';
-import { TrezorDevice } from 'src/types/suite';
+import { CerberusDevice } from 'src/types/suite';
 import { getSuiteFirmwareTypeString } from 'src/utils/firmware';
 
 export const FirmwareStep = () => {
@@ -28,7 +28,7 @@ export const FirmwareStep = () => {
         firmwareHashInvalid,
         targetType,
     } = useFirmware();
-    const [cachedDevice, setCachedDevice] = useState<TrezorDevice | undefined>(device);
+    const [cachedDevice, setCachedDevice] = useState<CerberusDevice | undefined>(device);
 
     // special and hopefully very rare case. this appears when somebody tried to fool user into using a hacked firmware
     if (device?.id && firmwareHashInvalid.includes(device.id)) {

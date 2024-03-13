@@ -1,4 +1,4 @@
-// Logic of sending data to trezor
+// Logic of sending data to cerberus
 //
 // Logic of "call" is broken to two parts - sending and receiving
 import { Root } from 'protobufjs/light';

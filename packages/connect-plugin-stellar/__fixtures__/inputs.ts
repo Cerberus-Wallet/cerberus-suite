@@ -28,7 +28,7 @@ const DEFAULT_TIMEBOUNDS = {
     minTime: 1600000000,
     maxTime: 1700000000,
 };
-const DEFAULT_MEMO = Memo.text('trezor stellar');
+const DEFAULT_MEMO = Memo.text('cerberus stellar');
 
 function build_tx(
     source: any,
@@ -78,7 +78,7 @@ export const transformTransactionInputs = [
             path: "m/44'/148'/0'",
             transaction: {
                 fee: 100,
-                memo: { text: 'trezor stellar', type: 1 },
+                memo: { text: 'cerberus stellar', type: 1 },
                 operations: [
                     {
                         destination: 'GC2GT6BHYJUKD7SVAKXVLBYBCELCHY577CAXJM5QNVLERDGFF37LR35K',
@@ -117,7 +117,7 @@ export const transformTransactionInputs = [
             path: "m/44'/148'/0'",
             transaction: {
                 fee: 100,
-                memo: { text: 'trezor stellar', type: 1 },
+                memo: { text: 'cerberus stellar', type: 1 },
                 operations: [
                     {
                         amount: '100000000000',
@@ -164,7 +164,7 @@ export const transformTransactionInputs = [
             path: "m/44'/148'/0'",
             transaction: {
                 fee: 100,
-                memo: { text: 'trezor stellar', type: 1 },
+                memo: { text: 'cerberus stellar', type: 1 },
                 operations: [
                     {
                         destAmount: '2000000000',
@@ -225,7 +225,7 @@ export const transformTransactionInputs = [
             path: "m/44'/148'/0'",
             transaction: {
                 fee: 100,
-                memo: { text: 'trezor stellar', type: 1 },
+                memo: { text: 'cerberus stellar', type: 1 },
                 operations: [
                     {
                         destAmount: '2000000000',
@@ -275,7 +275,7 @@ export const transformTransactionInputs = [
             path: "m/44'/148'/0'",
             transaction: {
                 fee: 100,
-                memo: { text: 'trezor stellar', type: 1 },
+                memo: { text: 'cerberus stellar', type: 1 },
                 operations: [
                     {
                         destAsset: {
@@ -336,7 +336,7 @@ export const transformTransactionInputs = [
             path: "m/44'/148'/0'",
             transaction: {
                 fee: 100,
-                memo: { text: 'trezor stellar', type: 1 },
+                memo: { text: 'cerberus stellar', type: 1 },
                 operations: [
                     {
                         destAsset: {
@@ -384,7 +384,7 @@ export const transformTransactionInputs = [
             path: "m/44'/148'/0'",
             transaction: {
                 fee: 100,
-                memo: { text: 'trezor stellar', type: 1 },
+                memo: { text: 'cerberus stellar', type: 1 },
                 operations: [
                     {
                         amount: '100000000',
@@ -431,7 +431,7 @@ export const transformTransactionInputs = [
             path: "m/44'/148'/0'",
             transaction: {
                 fee: 100,
-                memo: { text: 'trezor stellar', type: 1 },
+                memo: { text: 'cerberus stellar', type: 1 },
                 operations: [
                     {
                         amount: '100000000',
@@ -479,7 +479,7 @@ export const transformTransactionInputs = [
             path: "m/44'/148'/0'",
             transaction: {
                 fee: 100,
-                memo: { text: 'trezor stellar', type: 1 },
+                memo: { text: 'cerberus stellar', type: 1 },
                 operations: [
                     {
                         amount: '100000000',
@@ -534,7 +534,7 @@ export const transformTransactionInputs = [
             path: "m/44'/148'/0'",
             transaction: {
                 fee: 100,
-                memo: { text: 'trezor stellar', type: 1 },
+                memo: { text: 'cerberus stellar', type: 1 },
                 operations: [
                     {
                         clearFlags: 8,
@@ -580,7 +580,7 @@ export const transformTransactionInputs = [
             path: "m/44'/148'/0'",
             transaction: {
                 fee: 100,
-                memo: { text: 'trezor stellar', type: 1 },
+                memo: { text: 'cerberus stellar', type: 1 },
                 operations: [
                     {
                         clearFlags: undefined,
@@ -627,7 +627,7 @@ export const transformTransactionInputs = [
             path: "m/44'/148'/0'",
             transaction: {
                 fee: 100,
-                memo: { text: 'trezor stellar', type: 1 },
+                memo: { text: 'cerberus stellar', type: 1 },
                 operations: [
                     {
                         clearFlags: undefined,
@@ -680,7 +680,7 @@ export const transformTransactionInputs = [
             path: "m/44'/148'/0'",
             transaction: {
                 fee: 100,
-                memo: { text: 'trezor stellar', type: 1 },
+                memo: { text: 'cerberus stellar', type: 1 },
                 operations: [
                     {
                         clearFlags: undefined,
@@ -733,7 +733,7 @@ export const transformTransactionInputs = [
             path: "m/44'/148'/0'",
             transaction: {
                 fee: 100,
-                memo: { text: 'trezor stellar', type: 1 },
+                memo: { text: 'cerberus stellar', type: 1 },
                 operations: [
                     {
                         clearFlags: undefined,
@@ -781,7 +781,7 @@ export const transformTransactionInputs = [
             path: "m/44'/148'/0'",
             transaction: {
                 fee: 100,
-                memo: { text: 'trezor stellar', type: 1 },
+                memo: { text: 'cerberus stellar', type: 1 },
                 operations: [
                     {
                         limit: '9223372036854775807',
@@ -824,7 +824,7 @@ export const transformTransactionInputs = [
             path: "m/44'/148'/0'",
             transaction: {
                 fee: 100,
-                memo: { text: 'trezor stellar', type: 1 },
+                memo: { text: 'cerberus stellar', type: 1 },
                 operations: [
                     {
                         assetCode: 'USDC',
@@ -865,7 +865,7 @@ export const transformTransactionInputs = [
             path: "m/44'/148'/0'",
             transaction: {
                 fee: 100,
-                memo: { text: 'trezor stellar', type: 1 },
+                memo: { text: 'cerberus stellar', type: 1 },
                 operations: [
                     {
                         assetCode: 'USDC',
@@ -904,7 +904,7 @@ export const transformTransactionInputs = [
             path: "m/44'/148'/0'",
             transaction: {
                 fee: 100,
-                memo: { text: 'trezor stellar', type: 1 },
+                memo: { text: 'cerberus stellar', type: 1 },
                 operations: [
                     {
                         destination: 'GC2GT6BHYJUKD7SVAKXVLBYBCELCHY577CAXJM5QNVLERDGFF37LR35K',
@@ -941,7 +941,7 @@ export const transformTransactionInputs = [
             path: "m/44'/148'/0'",
             transaction: {
                 fee: 100,
-                memo: { text: 'trezor stellar', type: 1 },
+                memo: { text: 'cerberus stellar', type: 1 },
                 operations: [{ name: 'hello', type: 'manageData', value: '776f726c64' }],
                 sequence: '103420918407103889',
                 source: 'GBRF6PKZYP4J4WI2A3NF4CGF23SL34GRKA5LTQZCQFEUT2YJDZO2COXH',
@@ -973,7 +973,7 @@ export const transformTransactionInputs = [
             path: "m/44'/148'/0'",
             transaction: {
                 fee: 100,
-                memo: { text: 'trezor stellar', type: 1 },
+                memo: { text: 'cerberus stellar', type: 1 },
                 operations: [{ name: 'hello', type: 'manageData', value: null }],
                 sequence: '103420918407103889',
                 source: 'GBRF6PKZYP4J4WI2A3NF4CGF23SL34GRKA5LTQZCQFEUT2YJDZO2COXH',
@@ -1004,7 +1004,7 @@ export const transformTransactionInputs = [
             path: "m/44'/148'/0'",
             transaction: {
                 fee: 100,
-                memo: { text: 'trezor stellar', type: 1 },
+                memo: { text: 'cerberus stellar', type: 1 },
                 operations: [{ bumpTo: '200000000000000000', type: 'bumpSequence' }],
                 sequence: '103420918407103889',
                 source: 'GBRF6PKZYP4J4WI2A3NF4CGF23SL34GRKA5LTQZCQFEUT2YJDZO2COXH',
@@ -1036,7 +1036,7 @@ export const transformTransactionInputs = [
             path: "m/44'/148'/0'",
             transaction: {
                 fee: 100,
-                memo: { text: 'trezor stellar', type: 1 },
+                memo: { text: 'cerberus stellar', type: 1 },
                 operations: [
                     {
                         type: 'claimClaimableBalance',
@@ -1243,7 +1243,7 @@ export const transformTransactionInputs = [
             path: "m/44'/148'/0'",
             transaction: {
                 fee: 500,
-                memo: { text: 'trezor stellar', type: 1 },
+                memo: { text: 'cerberus stellar', type: 1 },
                 operations: [{ bumpTo: '200000000000000000', type: 'bumpSequence' }],
                 sequence: '103420918407103889',
                 source: 'GBRF6PKZYP4J4WI2A3NF4CGF23SL34GRKA5LTQZCQFEUT2YJDZO2COXH',
@@ -1274,7 +1274,7 @@ export const transformTransactionInputs = [
             path: "m/44'/148'/0'",
             transaction: {
                 fee: 100,
-                memo: { text: 'trezor stellar', type: 1 },
+                memo: { text: 'cerberus stellar', type: 1 },
                 operations: [{ bumpTo: '200000000000000000', type: 'bumpSequence' }],
                 sequence: '103420918407103889',
                 source: 'GBRF6PKZYP4J4WI2A3NF4CGF23SL34GRKA5LTQZCQFEUT2YJDZO2COXH',
@@ -1305,7 +1305,7 @@ export const transformTransactionInputs = [
             path: "m/44'/148'/1'",
             transaction: {
                 fee: 100,
-                memo: { text: 'trezor stellar', type: 1 },
+                memo: { text: 'cerberus stellar', type: 1 },
                 operations: [{ bumpTo: '200000000000000000', type: 'bumpSequence' }],
                 sequence: '103420918407103889',
                 source: 'GBRF6PKZYP4J4WI2A3NF4CGF23SL34GRKA5LTQZCQFEUT2YJDZO2COXH',
@@ -1349,7 +1349,7 @@ export const transformTransactionInputs = [
             path: "m/44'/148'/0'",
             transaction: {
                 fee: 300,
-                memo: { text: 'trezor stellar', type: 1 },
+                memo: { text: 'cerberus stellar', type: 1 },
                 operations: [
                     {
                         destination: 'GC2GT6BHYJUKD7SVAKXVLBYBCELCHY577CAXJM5QNVLERDGFF37LR35K',
@@ -1407,7 +1407,7 @@ export const transformTransactionInputs = [
             path: "m/44'/148'/0'",
             transaction: {
                 fee: 100,
-                memo: { text: 'trezor stellar', type: 1 },
+                memo: { text: 'cerberus stellar', type: 1 },
                 operations: [
                     {
                         bumpTo: '200000000000000000',

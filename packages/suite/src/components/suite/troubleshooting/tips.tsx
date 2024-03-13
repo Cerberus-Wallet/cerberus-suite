@@ -1,6 +1,6 @@
 import { isWeb, isLinux, isAndroid } from '@cerberus/env-utils';
 
-import { TrezorLink } from 'src/components/suite';
+import { CerberusLink } from 'src/components/suite';
 import { Translation } from 'src/components/suite/Translation';
 import { useDispatch } from 'src/hooks/suite';
 import { goto } from 'src/actions/suite/routerActions';
@@ -26,13 +26,13 @@ const UdevDescription = () => {
                 id="TR_TROUBLESHOOTING_TIP_UDEV_INSTALL_DESCRIPTION"
                 values={{
                     a: chunks => (
-                        <TrezorLink
+                        <CerberusLink
                             variant="underline"
                             onClick={handleClick}
                             data-test="@goto/udev"
                         >
                             {chunks}
-                        </TrezorLink>
+                        </CerberusLink>
                     ),
                 }}
             />
@@ -46,9 +46,9 @@ const BridgeStatus = () => (
             id="TR_TROUBLESHOOTING_TIP_BRIDGE_STATUS_DESCRIPTION"
             values={{
                 a: chunks => (
-                    <TrezorLink variant="underline" href="http://127.0.0.1:21325/status/">
+                    <CerberusLink variant="underline" href="http://127.0.0.1:21325/status/">
                         {chunks}
-                    </TrezorLink>
+                    </CerberusLink>
                 ),
             }}
         />
@@ -66,9 +66,9 @@ const BridgeInstall = () => {
                 id="TR_TROUBLESHOOTING_TIP_BRIDGE_INSTALL_DESCRIPTION"
                 values={{
                     a: chunks => (
-                        <TrezorLink variant="underline" onClick={handleClick}>
+                        <CerberusLink variant="underline" onClick={handleClick}>
                             {chunks}
-                        </TrezorLink>
+                        </CerberusLink>
                     ),
                 }}
             />
@@ -87,9 +87,9 @@ const BridgeUse = () => {
                 id="TR_TROUBLESHOOTING_TIP_BRIDGE_USE_DESCRIPTION"
                 values={{
                     a: chunks => (
-                        <TrezorLink variant="underline" onClick={handleClick}>
+                        <CerberusLink variant="underline" onClick={handleClick}>
                             {chunks}
-                        </TrezorLink>
+                        </CerberusLink>
                     ),
                 }}
             />

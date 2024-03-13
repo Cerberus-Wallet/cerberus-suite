@@ -1,6 +1,6 @@
-import { TrezorConnect } from '../../..';
+import { CerberusConnect } from '../../..';
 
-export const getAddress = async (api: TrezorConnect) => {
+export const getAddress = async (api: CerberusConnect) => {
     // regular
     const singleAddress = await api.getAddress({ path: 'm/44' });
     if (singleAddress.success) {
@@ -39,7 +39,7 @@ export const getAddress = async (api: TrezorConnect) => {
         skipFinalReload: false,
         path: 'm/44',
         address: 'a',
-        showOnTrezor: true,
+        showOnCerberus: true,
         coin: 'btc',
         crossChain: true,
     });
@@ -55,7 +55,7 @@ export const getAddress = async (api: TrezorConnect) => {
     api.getAddress({ bundle: 1 });
 };
 
-export const getPublicKey = async (api: TrezorConnect) => {
+export const getPublicKey = async (api: CerberusConnect) => {
     // regular
     const singlePK = await api.getPublicKey({ path: 'm/44' });
     if (singlePK.success) {
@@ -94,7 +94,7 @@ export const getPublicKey = async (api: TrezorConnect) => {
     }
 };
 
-export const signTransaction = async (api: TrezorConnect) => {
+export const signTransaction = async (api: CerberusConnect) => {
     // minimum required params
     api.signTransaction({
         inputs: [],
@@ -463,7 +463,7 @@ export const signTransaction = async (api: TrezorConnect) => {
     });
 };
 
-export const pushTransaction = async (api: TrezorConnect) => {
+export const pushTransaction = async (api: CerberusConnect) => {
     const push = await api.pushTransaction({ tx: 'serializedTX', coin: 'btc' });
     if (push.success) {
         push.payload.txid.toLowerCase();
@@ -476,7 +476,7 @@ export const pushTransaction = async (api: TrezorConnect) => {
     api.pushTransaction({ coin: 'btc' });
 };
 
-export const composeTransaction = async (api: TrezorConnect) => {
+export const composeTransaction = async (api: CerberusConnect) => {
     // Method with mixed params and mixed responses
 
     const compose = await api.composeTransaction({
@@ -523,7 +523,7 @@ export const composeTransaction = async (api: TrezorConnect) => {
     }
 };
 
-export const getAccountInfo = async (api: TrezorConnect) => {
+export const getAccountInfo = async (api: CerberusConnect) => {
     // minimum required params
     api.getAccountInfo({ coin: 'btc' });
 
@@ -610,7 +610,7 @@ export const getAccountInfo = async (api: TrezorConnect) => {
     }
 };
 
-export const getAccountDescriptor = async (api: TrezorConnect) => {
+export const getAccountDescriptor = async (api: CerberusConnect) => {
     const account = await api.getAccountDescriptor({
         coin: 'btc',
         path: 'm/44',
@@ -648,7 +648,7 @@ export const getAccountDescriptor = async (api: TrezorConnect) => {
     api.getAccountDescriptor({ coin: 'btc' });
 };
 
-export const signMessage = async (api: TrezorConnect) => {
+export const signMessage = async (api: CerberusConnect) => {
     const sign = await api.signMessage({ path: 'm/44', coin: 'btc', message: 'foo' });
     if (sign.success) {
         const { payload } = sign;
@@ -667,7 +667,7 @@ export const signMessage = async (api: TrezorConnect) => {
     }
 };
 
-export const getOwnershipId = async (api: TrezorConnect) => {
+export const getOwnershipId = async (api: CerberusConnect) => {
     const result = await api.getOwnershipId({ path: 'm/44' });
     if (result.success) {
         const { payload } = result;
@@ -701,7 +701,7 @@ export const getOwnershipId = async (api: TrezorConnect) => {
     api.getOwnershipId({ coin: 'btc' });
 };
 
-export const getOwnershipProof = async (api: TrezorConnect) => {
+export const getOwnershipProof = async (api: CerberusConnect) => {
     const result = await api.getOwnershipProof({ path: 'm/44' });
     if (result.success) {
         const { payload } = result;
@@ -739,10 +739,10 @@ export const getOwnershipProof = async (api: TrezorConnect) => {
     api.getOwnershipProof({ coin_name: 'btc' });
 };
 
-export const authorizeCoinjoin = async (api: TrezorConnect) => {
+export const authorizeCoinjoin = async (api: CerberusConnect) => {
     const result = await api.authorizeCoinjoin({
         path: 'm/44',
-        coordinator: 'TrezorCoinjoinCoordinator',
+        coordinator: 'CerberusCoinjoinCoordinator',
         maxRounds: 1,
         maxCoordinatorFeeRate: 100,
         maxFeePerKvbyte: 100,
@@ -754,7 +754,7 @@ export const authorizeCoinjoin = async (api: TrezorConnect) => {
 
     api.authorizeCoinjoin({
         path: 'm/44',
-        coordinator: 'TrezorCoinjoinCoordinator',
+        coordinator: 'CerberusCoinjoinCoordinator',
         maxRounds: 1,
         maxCoordinatorFeeRate: 100,
         maxFeePerKvbyte: 100,

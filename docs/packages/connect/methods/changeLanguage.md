@@ -3,7 +3,7 @@
 This method initiates language change.
 
 ```javascript
-const result = await TrezorConnect.changeLanguage(params);
+const result = await CerberusConnect.changeLanguage(params);
 ```
 
 ### Params
@@ -11,7 +11,7 @@ const result = await TrezorConnect.changeLanguage(params);
 [Optional common params](commonParams.md)
 
 -   `language` — _required_ `string`. (cs-CZ, de-DE) whatever language variant is available for given model and firmware version
--   `baseUrl` - _optional_ `string`. where language blob should be downloaded from. Default value is https://data.trezorcheck.io
+-   `baseUrl` - _optional_ `string`. where language blob should be downloaded from. Default value is https://data.trezer.io
 
 or
 

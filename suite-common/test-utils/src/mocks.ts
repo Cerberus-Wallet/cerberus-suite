@@ -1,7 +1,7 @@
 /* WARNING! This file should be imported ONLY in tests! */
 
 import {
-    TrezorConnect,
+    CerberusConnect,
     AccountUtxo,
     Device,
     Features,
@@ -9,7 +9,7 @@ import {
     FirmwareType,
 } from '@cerberus/connect';
 import {
-    TrezorDevice,
+    CerberusDevice,
     GuideNode,
     GuideArticle,
     GuideCategory,
@@ -75,7 +75,7 @@ const getFirmwareRelease = (): NonNullable<Device['firmwareRelease']> => ({
             min_bridge_version: [2, 0, 25],
             min_firmware_version: [2, 0, 0],
             min_bootloader_version: [2, 0, 0],
-            url: 'data/firmware/t1b1/trezor-t1b1-1.8.1.bin',
+            url: 'data/firmware/t1b1/cerberus-t1b1-1.8.1.bin',
             fingerprint: '019e849c1eb285a03a92bbad6d18a328af3b4dc6999722ebb47677b403a4cd16',
             changelog:
                 '* Fix fault when using the device with no PIN* Fix OMNI transactions parsing',
@@ -87,7 +87,7 @@ const getFirmwareRelease = (): NonNullable<Device['firmwareRelease']> => ({
         min_bridge_version: [2, 0, 25],
         min_firmware_version: [2, 0, 0],
         min_bootloader_version: [2, 0, 0],
-        url: 'data/firmware/t1b1/trezor-t1b1-1.8.1.bin',
+        url: 'data/firmware/t1b1/cerberus-t1b1-1.8.1.bin',
         fingerprint: '019e849c1eb285a03a92bbad6d18a328af3b4dc6999722ebb47677b403a4cd16',
         changelog: '* Fix fault when using the device with no PIN* Fix OMNI transactions parsing',
     },
@@ -180,11 +180,11 @@ const getConnectDevice = (dev?: Partial<Device>, feat?: Partial<Features>): Devi
 
 /**
  * Extended device from suite reducer
- * @param {Partial<TrezorDevice>} [dev]
+ * @param {Partial<CerberusDevice>} [dev]
  * @param {Partial<Features>} [feat]
- * @returns {TrezorDevice}
+ * @returns {CerberusDevice}
  */
-const getSuiteDevice = (dev?: Partial<TrezorDevice>, feat?: Partial<Features>): TrezorDevice => {
+const getSuiteDevice = (dev?: Partial<CerberusDevice>, feat?: Partial<Features>): CerberusDevice => {
     const device = getConnectDevice(dev, feat);
     if (device.type === 'acquired') {
         return {
@@ -199,10 +199,10 @@ const getSuiteDevice = (dev?: Partial<TrezorDevice>, feat?: Partial<Features>): 
             metadata: {},
             ...dev,
             ...device,
-        } as TrezorDevice;
+        } as CerberusDevice;
     }
 
-    return device as TrezorDevice;
+    return device as CerberusDevice;
 };
 
 const getWalletTransaction = (t?: Partial<WalletAccountTransaction>): WalletAccountTransaction => ({
@@ -347,7 +347,7 @@ const getMessageSystemConfig = (
                     es: 'El nuevo firmware de Cerberus está disponible!',
                     cs: 'Nová verze Cerberus firmware je k dispozici',
                     ru: 'Доступна новая прошивка Cerberus!',
-                    ja: '新しいTrezorファームウェアが利用可能です！',
+                    ja: '新しいCerberusファームウェアが利用可能です！',
                 },
                 cta: {
                     action: 'internal-link',
@@ -379,7 +379,7 @@ const getMessageSystemConfig = (
                     es: 'La nueva aplicación Cerberus está disponible!',
                     cs: 'Nová Cerberus aplikace je k dispozici!',
                     ru: 'Доступно новое приложение Cerberus!',
-                    ja: '新しいTrezorアプリが利用可能になりました！',
+                    ja: '新しいCerberusアプリが利用可能になりました！',
                 },
                 cta: {
                     action: 'external-link',
@@ -534,12 +534,12 @@ const mockedBlockchainNetworks = networksCompatibility.reduce((result, network) 
 }, {} as BlockchainNetworks);
 
 // use mock from @suite-common/test-utils/__mocks__
-type MockTrezorConnect = jest.Mocked<TrezorConnect> & {
+type MockCerberusConnect = jest.Mocked<CerberusConnect> & {
     setTestFixtures: (...args: any[]) => void;
     emitTestEvent: (event: string, data: any) => void;
 };
 
-const getTrezorConnectMock = () => {
+const getCerberusConnectMock = () => {
     // eslint-disable-next-line @typescript-eslint/no-var-requires
     const pkg = require('@cerberus/connect');
 
@@ -547,11 +547,11 @@ const getTrezorConnectMock = () => {
         ...pkg.default,
         setTestFixtures: pkg.setTestFixtures,
         emitTestEvent: pkg.emitTestEvent,
-    } as MockTrezorConnect;
+    } as MockCerberusConnect;
 };
 
-const setTrezorConnectFixtures = (f?: any) => {
-    getTrezorConnectMock().setTestFixtures(f);
+const setCerberusConnectFixtures = (f?: any) => {
+    getCerberusConnectMock().setTestFixtures(f);
 };
 
 export const testMocks = {
@@ -568,6 +568,6 @@ export const testMocks = {
     fee,
     intlMock,
     mockedBlockchainNetworks,
-    getTrezorConnectMock,
-    setTrezorConnectFixtures,
+    getCerberusConnectMock,
+    setCerberusConnectFixtures,
 };

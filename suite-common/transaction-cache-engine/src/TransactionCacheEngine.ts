@@ -1,7 +1,7 @@
 /* eslint-disable require-await */
 import { A, D, pipe } from '@mobily/ts-belt';
 
-import TrezorConnect, { AccountInfo, AccountTransaction } from '@cerberus/connect';
+import CerberusConnect, { AccountInfo, AccountTransaction } from '@cerberus/connect';
 import { getNetworkType } from '@suite-common/wallet-config';
 
 import {
@@ -116,7 +116,7 @@ export class TransactionCacheEngine {
         while (true) {
             page += 1;
 
-            const result = await TrezorConnect.getAccountInfo({
+            const result = await CerberusConnect.getAccountInfo({
                 coin,
                 descriptor,
                 details: 'txs',
@@ -273,7 +273,7 @@ export class TransactionCacheEngine {
                     descriptor,
                 }));
 
-                TrezorConnect.blockchainSubscribe({
+                CerberusConnect.blockchainSubscribe({
                     accounts: accountDescriptors,
                     coin,
                 });
@@ -284,7 +284,7 @@ export class TransactionCacheEngine {
     private async unsubscribeFromNewTransactions({ coin, descriptor }: AccountUniqueParams) {
         await this.initPromise;
 
-        TrezorConnect.blockchainUnsubscribe({
+        CerberusConnect.blockchainUnsubscribe({
             accounts: [{ descriptor }],
             coin,
         });

@@ -3,7 +3,7 @@ import BigNumber from 'bignumber.js';
 
 import { formatAmount, formatNetworkAmount, isTestnet } from '@suite-common/wallet-utils';
 import { selectDevice } from '@suite-common/wallet-core';
-import { TrezorDevice } from 'src/types/suite';
+import { CerberusDevice } from 'src/types/suite';
 import { Translation } from 'src/components/suite/Translation';
 import { useSelector } from 'src/hooks/suite/useSelector';
 import {
@@ -35,7 +35,7 @@ type TransactionReviewTotalOutputProps = Omit<
 >;
 
 const getLines = (
-    device: TrezorDevice,
+    device: CerberusDevice,
     networkType: TransactionReviewOutputListProps['account']['networkType'],
     symbol: TransactionReviewOutputListProps['account']['symbol'],
     precomposedTx: TransactionReviewOutputListProps['precomposedTx'],

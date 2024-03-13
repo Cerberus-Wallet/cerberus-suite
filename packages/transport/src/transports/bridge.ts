@@ -56,11 +56,11 @@ type BridgeConstructorParameters = AbstractTransportParams & {
 
 export class BridgeTransport extends AbstractTransport {
     /**
-     * information about  the latest version of trezord.
+     * information about  the latest version of cerberusd.
      */
     private latestVersion?: string;
     /**
-     * url of trezord server.
+     * url of cerberusd server.
      */
     private url: string;
 
@@ -99,7 +99,7 @@ export class BridgeTransport extends AbstractTransport {
         });
     }
 
-    // https://github.dev/trezor/trezord-go/blob/f559ee5079679aeb5f897c65318d3310f78223ca/core/core.go#L373
+    // https://github.dev/cerberus/cerberusd-go/blob/f559ee5079679aeb5f897c65318d3310f78223ca/core/core.go#L373
     public listen() {
         if (this.listening) {
             return this.error({ error: ERRORS.ALREADY_LISTENING });
@@ -143,12 +143,12 @@ export class BridgeTransport extends AbstractTransport {
         return this.listen2();
     }
 
-    // https://github.dev/trezor/trezord-go/blob/f559ee5079679aeb5f897c65318d3310f78223ca/core/core.go#L235
+    // https://github.dev/cerberus/cerberusd-go/blob/f559ee5079679aeb5f897c65318d3310f78223ca/core/core.go#L235
     public enumerate() {
         return this.scheduleAction(signal => this.post('/enumerate', { signal }));
     }
 
-    // https://github.dev/trezor/trezord-go/blob/f559ee5079679aeb5f897c65318d3310f78223ca/core/core.go#L420
+    // https://github.dev/cerberus/cerberusd-go/blob/f559ee5079679aeb5f897c65318d3310f78223ca/core/core.go#L420
     public acquire({ input }: AbstractTransportMethodParams<'acquire'>) {
         return this.scheduleAction(
             async signal => {
@@ -191,7 +191,7 @@ export class BridgeTransport extends AbstractTransport {
         );
     }
 
-    // https://github.dev/trezor/trezord-go/blob/f559ee5079679aeb5f897c65318d3310f78223ca/core/core.go#L354
+    // https://github.dev/cerberus/cerberusd-go/blob/f559ee5079679aeb5f897c65318d3310f78223ca/core/core.go#L354
     public release({ path, session, onClose }: AbstractTransportMethodParams<'release'>) {
         return this.scheduleAction(signal => {
             if (this.listening && !onClose) {
@@ -224,7 +224,7 @@ export class BridgeTransport extends AbstractTransport {
         return Promise.resolve(this.success(undefined));
     }
 
-    // https://github.dev/trezor/trezord-go/blob/f559ee5079679aeb5f897c65318d3310f78223ca/core/core.go#L534
+    // https://github.dev/cerberus/cerberusd-go/blob/f559ee5079679aeb5f897c65318d3310f78223ca/core/core.go#L534
     public call({ session, name, data, protocol }: AbstractTransportMethodParams<'call'>) {
         return this.scheduleAction(
             async signal => {

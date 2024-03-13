@@ -3,7 +3,7 @@
 Clear device's authorization for coinjoin-related operations.
 
 ```javascript
-const result = await TrezorConnect.cancelCoinjoinAuthorization(params);
+const result = await CerberusConnect.cancelCoinjoinAuthorization(params);
 ```
 
 > :warning: **This feature is experimental! Do not use it in production!**
@@ -17,7 +17,7 @@ const result = await TrezorConnect.cancelCoinjoinAuthorization(params);
 ### Example:
 
 ```javascript
-TrezorConnect.cancelCoinjoinAuthorization({
+CerberusConnect.cancelCoinjoinAuthorization({
     device,
     useEmptyPassphrase: device?.useEmptyPassphrase,
 });

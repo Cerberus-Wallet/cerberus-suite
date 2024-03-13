@@ -3,7 +3,7 @@ import { useIntl } from 'react-intl';
 import styled from 'styled-components';
 
 import { selectDevice } from '@suite-common/wallet-core';
-import TrezorConnect from '@cerberus/connect';
+import CerberusConnect from '@cerberus/connect';
 import { Button } from '@cerberus/components';
 import {
     beginOnboardingTutorial,
@@ -65,7 +65,7 @@ export const DeviceTutorial = () => {
     };
     const getDescription = () => {
         const handleSkipClick = () =>
-            TrezorConnect.cancel(intl.formatMessage(messages.TR_CANCELLED));
+            CerberusConnect.cancel(intl.formatMessage(messages.TR_CANCELLED));
 
         switch (status) {
             case 'active':

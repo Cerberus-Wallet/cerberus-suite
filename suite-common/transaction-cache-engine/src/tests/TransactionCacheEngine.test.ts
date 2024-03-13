@@ -1,4 +1,4 @@
-import TrezorConnect from '@cerberus/connect';
+import CerberusConnect from '@cerberus/connect';
 
 import { TransactionCacheEngine } from '../TransactionCacheEngine';
 import { MemoryStorage } from '../MemoryStorage';
@@ -43,8 +43,8 @@ describe('TransactionCacheEngine', () => {
         await engine.addAccount(account);
         expect(await engine.accountExists(account)).toBe(true);
         // should call getAccountInfo and blockchainSubscribe
-        expect(TrezorConnect.getAccountInfo).toHaveBeenCalled();
-        expect(TrezorConnect.blockchainSubscribe).toHaveBeenCalled();
+        expect(CerberusConnect.getAccountInfo).toHaveBeenCalled();
+        expect(CerberusConnect.blockchainSubscribe).toHaveBeenCalled();
     });
 
     it('should remove an account', async () => {
@@ -60,7 +60,7 @@ describe('TransactionCacheEngine', () => {
         await engine.removeAccount(account);
         expect(await engine.accountExists(account)).toBe(false);
         // should call blockchainUnsubscribe
-        expect(TrezorConnect.blockchainUnsubscribe).toHaveBeenCalled();
+        expect(CerberusConnect.blockchainUnsubscribe).toHaveBeenCalled();
     });
 
     it('should get transactions', async () => {
@@ -73,7 +73,7 @@ describe('TransactionCacheEngine', () => {
         };
         await engine.addAccount(account);
         const transactions = await engine.getTransactions(account);
-        const expectedTransactions = await TrezorConnect.getAccountInfo({
+        const expectedTransactions = await CerberusConnect.getAccountInfo({
             ...account,
             page: 1,
             pageSize: 99999999,
@@ -94,7 +94,7 @@ describe('TransactionCacheEngine', () => {
         engine.addAccount(account);
         // get transaction should wait for addAccount even without await
         const transactions = await engine.getTransactions(account);
-        const expectedTransactions = await TrezorConnect.getAccountInfo({
+        const expectedTransactions = await CerberusConnect.getAccountInfo({
             ...account,
             page: 1,
             pageSize: 99999999,

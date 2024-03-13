@@ -56,12 +56,12 @@ export const parseConnectSettings = (input: Partial<ConnectSettings> = {}): Conn
     }
 
     if (typeof window !== 'undefined' && typeof window.location?.search === 'string') {
-        const query = processQueryString(window.location.search, ['trezor-connect-src']);
+        const query = processQueryString(window.location.search, ['cerberus-connect-src']);
         // For debugging purposes `connectSrc` could be defined in url query of hosting page. Usage:
-        // https://3rdparty-page.com/?trezor-connect-src=https://localhost:8088/
-        if (query['trezor-connect-src']) {
+        // https://3rdparty-page.com/?cerberus-connect-src=https://localhost:8088/
+        if (query['cerberus-connect-src']) {
             settings.debug = true;
-            settings.connectSrc = query['trezor-connect-src'];
+            settings.connectSrc = query['cerberus-connect-src'];
         }
     }
 

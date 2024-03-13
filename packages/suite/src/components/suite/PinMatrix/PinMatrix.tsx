@@ -3,8 +3,8 @@ import styled, { useTheme } from 'styled-components';
 import { DeviceModelInternal } from '@cerberus/connect';
 import { HELP_CENTER_PIN_URL } from '@cerberus/urls';
 import { variables } from '@cerberus/components';
-import { DeviceMatrixExplanation, Translation, TrezorLink } from 'src/components/suite';
-import { TrezorDevice } from 'src/types/suite';
+import { DeviceMatrixExplanation, Translation, CerberusLink } from 'src/components/suite';
+import { CerberusDevice } from 'src/types/suite';
 import { onPinSubmit } from 'src/actions/suite/modalActions';
 import { useDispatch } from 'src/hooks/suite';
 import { PinInput } from './PinInput/PinInput';
@@ -34,7 +34,7 @@ const Col = styled.div`
     max-width: ${PIN_MATRIX_MAX_WIDTH};
 `;
 interface PinMatrixProps {
-    device: TrezorDevice;
+    device: CerberusDevice;
     hideExplanation?: boolean;
     invalid?: boolean;
 }
@@ -95,9 +95,9 @@ export const PinMatrix = ({ device, hideExplanation, invalid }: PinMatrixProps) 
                         {
                             key: 'pin',
                             title: (
-                                <TrezorLink variant="underline" href={HELP_CENTER_PIN_URL}>
+                                <CerberusLink variant="underline" href={HELP_CENTER_PIN_URL}>
                                     <Translation id="TR_HOW_PIN_WORKS" />
-                                </TrezorLink>
+                                </CerberusLink>
                             ),
                             icon: 'PIN',
                         },

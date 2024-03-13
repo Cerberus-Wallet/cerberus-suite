@@ -1,15 +1,15 @@
 import { test as testPlaywright, expect as expectPlaywright } from '@playwright/test';
 
-import { TrezorUserEnvLink } from '@cerberus/trezor-user-env-link';
+import { CerberusUserEnvLink } from '@cerberus/cerberus-user-env-link';
 
 import { launchSuite, waitForDataTestSelector } from '../support/common';
 
 testPlaywright.describe.serial('Bridge', () => {
     testPlaywright.beforeAll(async () => {
-        // We make sure that bridge from trezor-user-env is stopped.
+        // We make sure that bridge from cerberus-user-env is stopped.
         // So we properly test the electron app starting node-bridge module.
-        await TrezorUserEnvLink.api.trezorUserEnvConnect();
-        await TrezorUserEnvLink.api.stopBridge();
+        await CerberusUserEnvLink.api.cerberusUserEnvConnect();
+        await CerberusUserEnvLink.api.stopBridge();
     });
 
     testPlaywright('App spawns bundled bridge and stops it after app quit', async ({ request }) => {

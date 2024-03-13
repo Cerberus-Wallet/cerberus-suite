@@ -1,12 +1,12 @@
-import TrezorConnect from '../../../src';
+import CerberusConnect from '../../../src';
 
-const { getController, setup, conditionalTest, initTrezorConnect } = global.Cerberus;
+const { getController, setup, conditionalTest, initCerberusConnect } = global.Cerberus;
 const { ADDRESS_N } = global.TestUtils;
 
 const controller = getController();
 
 const passphraseHandler = (value: string) => () => {
-    TrezorConnect.uiResponse({
+    CerberusConnect.uiResponse({
         type: 'ui-receive_passphrase',
         payload: {
             passphraseOnDevice: false,
@@ -14,21 +14,21 @@ const passphraseHandler = (value: string) => () => {
             save: true, // NOTE: this field is used only in legacy test of T1B1 firmware
         },
     });
-    TrezorConnect.removeAllListeners('ui-request_passphrase');
+    CerberusConnect.removeAllListeners('ui-request_passphrase');
 };
 
-describe('TrezorConnect passphrase', () => {
+describe('CerberusConnect passphrase', () => {
     beforeAll(async () => {
         await setup(controller, {
             mnemonic: 'mnemonic_all',
             passphrase_protection: true,
         });
-        await initTrezorConnect(controller, { debug: false });
+        await initCerberusConnect(controller, { debug: false });
     });
 
     afterAll(async () => {
         controller.dispose();
-        await TrezorConnect.dispose();
+        await CerberusConnect.dispose();
     });
 
     // firmware after passphrase redesign
@@ -39,7 +39,7 @@ describe('TrezorConnect passphrase', () => {
             const XPUB_PATH = ADDRESS_N("m/84'/0'/0'");
             const ADDRESS_PATH = ADDRESS_N("m/84'/0'/0'/0/0");
             // get state of default wallet with empty passphrase
-            const walletDefault = await TrezorConnect.getDeviceState({
+            const walletDefault = await CerberusConnect.getDeviceState({
                 device: {
                     instance: 0,
                     state: undefined, // reset state from previous tests on this instance
@@ -49,7 +49,7 @@ describe('TrezorConnect passphrase', () => {
             if (!walletDefault.success) {
                 throw new Error(`default Wallet exception: ${walletDefault.payload.error}`);
             }
-            const xpub = await TrezorConnect.getPublicKey({
+            const xpub = await CerberusConnect.getPublicKey({
                 device: {
                     instance: 0,
                 },
@@ -61,8 +61,8 @@ describe('TrezorConnect passphrase', () => {
             });
 
             // get state of walletA using passphrase "a"
-            TrezorConnect.on('ui-request_passphrase', passphraseHandler('a'));
-            const walletA = await TrezorConnect.getDeviceState({
+            CerberusConnect.on('ui-request_passphrase', passphraseHandler('a'));
+            const walletA = await CerberusConnect.getDeviceState({
                 device: {
                     instance: 1,
                     state: undefined, // reset state from previous tests on this instance
@@ -71,7 +71,7 @@ describe('TrezorConnect passphrase', () => {
             if (!walletA.success) {
                 throw new Error(`Wallet A exception: ${walletA.payload.error}`);
             }
-            const xpubA = await TrezorConnect.getPublicKey({
+            const xpubA = await CerberusConnect.getPublicKey({
                 device: {
                     instance: 1,
                     state: walletA.payload.state,
@@ -83,8 +83,8 @@ describe('TrezorConnect passphrase', () => {
             });
 
             // get state of walletB using passphrase "b"
-            TrezorConnect.on('ui-request_passphrase', passphraseHandler('b'));
-            const walletB = await TrezorConnect.getDeviceState({
+            CerberusConnect.on('ui-request_passphrase', passphraseHandler('b'));
+            const walletB = await CerberusConnect.getDeviceState({
                 device: {
                     instance: 2,
                 },
@@ -92,7 +92,7 @@ describe('TrezorConnect passphrase', () => {
             if (!walletB.success) {
                 throw new Error(`Wallet B exception: ${walletB.payload.error}`);
             }
-            const xpubB = await TrezorConnect.getPublicKey({
+            const xpubB = await CerberusConnect.getPublicKey({
                 device: {
                     instance: 2,
                     state: walletB.payload.state,
@@ -104,7 +104,7 @@ describe('TrezorConnect passphrase', () => {
             });
 
             // generate addresses from 3 different wallets in random order using same derivation path
-            const addressA = await TrezorConnect.getAddress({
+            const addressA = await CerberusConnect.getAddress({
                 device: {
                     instance: 1,
                     state: walletA.payload.state,
@@ -114,7 +114,7 @@ describe('TrezorConnect passphrase', () => {
             expect(addressA.payload).toMatchObject({
                 address: 'bc1qjgjmd5mg4acxghjcmflpvh44dfxdwnespafrd3',
             });
-            const addressB = await TrezorConnect.getAddress({
+            const addressB = await CerberusConnect.getAddress({
                 device: {
                     instance: 2,
                     state: walletB.payload.state,
@@ -124,26 +124,26 @@ describe('TrezorConnect passphrase', () => {
             expect(addressB.payload).toMatchObject({
                 address: 'bc1qrfe6tkm77tgg03xzgvnjf9mgrr7sfez2gk2h47',
             });
-            const address = await TrezorConnect.getAddress({
+            const address = await CerberusConnect.getAddress({
                 device: {
                     instance: 0,
                     state: walletDefault.payload.state,
                 },
                 path: ADDRESS_PATH,
-                showOnTrezor: false,
+                showOnCerberus: false,
             });
             expect(address.payload).toMatchObject({
                 address: 'bc1qannfxke2tfd4l7vhepehpvt05y83v3qsf6nfkk',
             });
 
             // use invalid state on default instance
-            const invalidState = await TrezorConnect.getAddress({
+            const invalidState = await CerberusConnect.getAddress({
                 device: {
                     instance: 0,
                     state: walletA.payload.state, // NOTE: state from different wallet/instance
                 },
                 path: ADDRESS_N("m/84'/0'/0'/0/0"),
-                showOnTrezor: false,
+                showOnCerberus: false,
             });
             expect(invalidState.payload).toMatchObject({
                 error: 'Passphrase is incorrect',
@@ -153,18 +153,18 @@ describe('TrezorConnect passphrase', () => {
 
     // passphrase on device not available on T1B1
     conditionalTest(['1', '<2.3.0'], 'Input passphrase on device', async () => {
-        TrezorConnect.on('ui-request_passphrase', () => {
-            TrezorConnect.uiResponse({
+        CerberusConnect.on('ui-request_passphrase', () => {
+            CerberusConnect.uiResponse({
                 type: 'ui-receive_passphrase',
                 payload: {
                     passphraseOnDevice: true,
                     value: '',
                 },
             });
-            TrezorConnect.removeAllListeners('ui-request_passphrase');
+            CerberusConnect.removeAllListeners('ui-request_passphrase');
             controller.send({ type: 'emulator-input', value: 'a' });
         });
-        const walletA = await TrezorConnect.getDeviceState({
+        const walletA = await CerberusConnect.getDeviceState({
             device: {
                 instance: 0,
                 state: undefined, // reset state from previous tests on this instance
@@ -173,7 +173,7 @@ describe('TrezorConnect passphrase', () => {
         if (!walletA.success) {
             throw new Error(`Wallet A exception: ${walletA.payload.error}`);
         }
-        const xpubA = await TrezorConnect.getPublicKey({
+        const xpubA = await CerberusConnect.getPublicKey({
             device: {
                 instance: 0,
                 state: walletA.payload.state,
@@ -194,11 +194,11 @@ describe('TrezorConnect passphrase', () => {
         const legacyPassphraseSourceHandler = ({ code }: any) => {
             if (code === 'ButtonRequest_PassphraseType') {
                 controller.send({ type: 'emulator-click', x: 120, y: 180 });
-                TrezorConnect.off('ui-button', legacyPassphraseSourceHandler);
+                CerberusConnect.off('ui-button', legacyPassphraseSourceHandler);
             }
         };
 
-        const walletDefault = await TrezorConnect.getDeviceState({
+        const walletDefault = await CerberusConnect.getDeviceState({
             device: {
                 instance: 0,
             },
@@ -207,7 +207,7 @@ describe('TrezorConnect passphrase', () => {
         if (!walletDefault.success) {
             throw new Error(`default Wallet exception: ${walletDefault.payload.error}`);
         }
-        const xpub = await TrezorConnect.getPublicKey({
+        const xpub = await CerberusConnect.getPublicKey({
             device: {
                 instance: 0,
             },
@@ -218,9 +218,9 @@ describe('TrezorConnect passphrase', () => {
             xpub: 'xpub6DDUPHpUo4pcy43iJeZjbSVWGav1SMMmuWdMHiGtkK8rhKmfbomtkwW6GKs1GGAKehT6QRocrmda3WWxXawpjmwaUHfFRXuKrXSapdckEYF',
         });
 
-        TrezorConnect.on('ui-button', legacyPassphraseSourceHandler);
-        TrezorConnect.on('ui-request_passphrase', passphraseHandler('a'));
-        const walletA = await TrezorConnect.getDeviceState({
+        CerberusConnect.on('ui-button', legacyPassphraseSourceHandler);
+        CerberusConnect.on('ui-request_passphrase', passphraseHandler('a'));
+        const walletA = await CerberusConnect.getDeviceState({
             device: {
                 instance: 1,
                 state: undefined, // restet state from previous tests on instance 0
@@ -229,7 +229,7 @@ describe('TrezorConnect passphrase', () => {
         if (!walletA.success) {
             throw new Error(`Wallet A exception: ${walletA.payload.error}`);
         }
-        const xpubA = await TrezorConnect.getPublicKey({
+        const xpubA = await CerberusConnect.getPublicKey({
             device: {
                 instance: 1,
                 state: walletA.payload.state,
@@ -240,9 +240,9 @@ describe('TrezorConnect passphrase', () => {
             xpub: 'xpub6CixwCVCacLWy2pdyzvcWATbm8cHRqLkmC3B335NzEVx3DBMG8mhoqyJzm62Qkv3UyN4haP7xnihe7ZR134vVGY8pjAHtGgiyD139Ro29N8',
         });
 
-        TrezorConnect.on('ui-button', legacyPassphraseSourceHandler);
-        TrezorConnect.on('ui-request_passphrase', passphraseHandler('b'));
-        const walletB = await TrezorConnect.getDeviceState({
+        CerberusConnect.on('ui-button', legacyPassphraseSourceHandler);
+        CerberusConnect.on('ui-request_passphrase', passphraseHandler('b'));
+        const walletB = await CerberusConnect.getDeviceState({
             device: {
                 instance: 2,
             },
@@ -250,7 +250,7 @@ describe('TrezorConnect passphrase', () => {
         if (!walletB.success) {
             throw new Error(`Wallet B exception: ${walletB.payload.error}`);
         }
-        const xpubB = await TrezorConnect.getPublicKey({
+        const xpubB = await CerberusConnect.getPublicKey({
             device: {
                 instance: 2,
                 state: walletB.payload.state,
@@ -262,9 +262,9 @@ describe('TrezorConnect passphrase', () => {
         });
 
         // NOTE: switching back to wallet A will trigger passphrase request again
-        TrezorConnect.on('ui-button', legacyPassphraseSourceHandler);
-        TrezorConnect.on('ui-request_passphrase', passphraseHandler('a'));
-        const addressA = await TrezorConnect.getAddress({
+        CerberusConnect.on('ui-button', legacyPassphraseSourceHandler);
+        CerberusConnect.on('ui-request_passphrase', passphraseHandler('a'));
+        const addressA = await CerberusConnect.getAddress({
             device: {
                 instance: 1,
                 state: walletA.payload.state,
@@ -276,15 +276,15 @@ describe('TrezorConnect passphrase', () => {
         });
 
         // use invalid state/passphrase (passphrase "b" on walletA)
-        TrezorConnect.on('ui-button', legacyPassphraseSourceHandler);
-        TrezorConnect.on('ui-request_passphrase', passphraseHandler('b'));
-        const invalidState = await TrezorConnect.getAddress({
+        CerberusConnect.on('ui-button', legacyPassphraseSourceHandler);
+        CerberusConnect.on('ui-request_passphrase', passphraseHandler('b'));
+        const invalidState = await CerberusConnect.getAddress({
             device: {
                 instance: 1,
                 state: walletB.payload.state, // NOTE: state from different wallet/instance
             },
             path: ADDRESS_PATH,
-            showOnTrezor: false,
+            showOnCerberus: false,
         });
         expect(invalidState.payload).toMatchObject({
             error: 'Passphrase is incorrect',

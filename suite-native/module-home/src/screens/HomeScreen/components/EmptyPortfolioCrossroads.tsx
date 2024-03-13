@@ -15,8 +15,8 @@ import { Translation, useTranslate } from '@suite-native/intl';
 import { analytics, EventType } from '@suite-native/analytics';
 import { useActiveColorScheme } from '@suite-native/theme';
 
-import { ConnectTrezorSvg } from '../../../assets/ConnectTrezorSvg';
-import { DarkConnectedTrezorSvg } from '../../../assets/DarkConnectedTrezorSvg';
+import { ConnectCerberusSvg } from '../../../assets/ConnectCerberusSvg';
+import { DarkConnectedCerberusSvg } from '../../../assets/DarkConnectedCerberusSvg';
 
 const cardStyle = prepareNativeStyle<{ flex: 1 | 2 }>((utils, { flex }) => ({
     flex,
@@ -61,21 +61,21 @@ export const EmptyPortfolioCrossroads = () => {
             <Card style={applyStyle(cardStyle, { flex: 2 })}>
                 <VStack spacing="large" justifyContent="center" alignItems="center">
                     <VStack alignItems="center" spacing="large">
-                        {colorScheme === 'dark' ? <DarkConnectedTrezorSvg /> : <ConnectTrezorSvg />}
+                        {colorScheme === 'dark' ? <DarkConnectedCerberusSvg /> : <ConnectCerberusSvg />}
                         <VStack alignItems="center">
                             <Box>
                                 <Text variant="titleSmall" textAlign="center">
-                                    <Translation id="moduleHome.emptyState.connectOrImportCrossroads.gotMyTrezor.title" />
+                                    <Translation id="moduleHome.emptyState.connectOrImportCrossroads.gotMyCerberus.title" />
                                 </Text>
                             </Box>
                             <Text color="textSubdued" textAlign="center">
-                                <Translation id="moduleHome.emptyState.connectOrImportCrossroads.gotMyTrezor.description" />
+                                <Translation id="moduleHome.emptyState.connectOrImportCrossroads.gotMyCerberus.description" />
                             </Text>
                         </VStack>
                     </VStack>
                     <Button onPress={handleConnectDevice} size="large">
                         {translate(
-                            'moduleHome.emptyState.connectOrImportCrossroads.gotMyTrezor.connectButton',
+                            'moduleHome.emptyState.connectOrImportCrossroads.gotMyCerberus.connectButton',
                         )}
                     </Button>
                 </VStack>

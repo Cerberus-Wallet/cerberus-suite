@@ -31,11 +31,11 @@ export const onCoinjoinRoundChanged = [
         },
         result: {
             actions: [],
-            trezorConnectCalledTimes: 0,
+            cerberusConnectCalledTimes: 0,
         },
     },
     {
-        description: 'Phase 1. (critical) TrezorConnect.setBusy not called. Device not found',
+        description: 'Phase 1. (critical) CerberusConnect.setBusy not called. Device not found',
         connect: undefined,
         state: {
             accounts: [{ key: 'a', deviceState: 'device-state-2' }],
@@ -51,12 +51,12 @@ export const onCoinjoinRoundChanged = [
         },
         result: {
             actions: [COINJOIN.SESSION_ROUND_CHANGED, MODAL.OPEN_USER_CONTEXT],
-            trezorConnectCalledTimes: 0,
+            cerberusConnectCalledTimes: 0,
         },
     },
     {
         description:
-            'Phase 1. (critical) TrezorConnect.setBusy called once (2 passphrases on 1 device)',
+            'Phase 1. (critical) CerberusConnect.setBusy called once (2 passphrases on 1 device)',
         connect: undefined,
         state: {
             accounts: [
@@ -79,7 +79,7 @@ export const onCoinjoinRoundChanged = [
                 roundDeadline: Date.now() + 1000,
             },
             {
-                phase: 1, // TrezorConnect called only once because second event has same phase
+                phase: 1, // CerberusConnect called only once because second event has same phase
                 inputs: [{ accountKey: 'a' }],
                 failed: [],
                 roundDeadline: Date.now() + 1000,
@@ -91,12 +91,12 @@ export const onCoinjoinRoundChanged = [
                 MODAL.OPEN_USER_CONTEXT,
                 COINJOIN.SESSION_ROUND_CHANGED,
             ],
-            trezorConnectCalledTimes: 1,
-            trezorConnectCallsWith: { expiry_ms: expect.any(Number) }, // ~1000
+            cerberusConnectCalledTimes: 1,
+            cerberusConnectCallsWith: { expiry_ms: expect.any(Number) }, // ~1000
         },
     },
     {
-        description: 'Phase 1. (critical) TrezorConnect.setBusy called on two physical devices',
+        description: 'Phase 1. (critical) CerberusConnect.setBusy called on two physical devices',
         connect: undefined,
         state: {
             device: {
@@ -128,12 +128,12 @@ export const onCoinjoinRoundChanged = [
                 COINJOIN.SESSION_ROUND_CHANGED,
                 MODAL.OPEN_USER_CONTEXT,
             ],
-            trezorConnectCalledTimes: 2,
-            trezorConnectCallsWith: { expiry_ms: expect.any(Number) }, // ~1000
+            cerberusConnectCalledTimes: 2,
+            cerberusConnectCallsWith: { expiry_ms: expect.any(Number) }, // ~1000
         },
     },
     {
-        description: 'Phase 4. (end) TrezorConnect.setBusy called',
+        description: 'Phase 4. (end) CerberusConnect.setBusy called',
         connect: undefined,
         state: {
             device: {
@@ -165,12 +165,12 @@ export const onCoinjoinRoundChanged = [
                 MODAL.OPEN_USER_CONTEXT,
                 COINJOIN.SESSION_COMPLETED,
             ],
-            trezorConnectCalledTimes: 1,
-            trezorConnectCallsWith: { expiry_ms: undefined },
+            cerberusConnectCalledTimes: 1,
+            cerberusConnectCallsWith: { expiry_ms: undefined },
         },
     },
     {
-        description: 'Phase 4. (end) TrezorConnect.setBusy not called (device is not busy)',
+        description: 'Phase 4. (end) CerberusConnect.setBusy not called (device is not busy)',
         connect: undefined,
         state: {
             device: {
@@ -201,7 +201,7 @@ export const onCoinjoinRoundChanged = [
                 MODAL.OPEN_USER_CONTEXT,
                 COINJOIN.SESSION_COMPLETED,
             ],
-            trezorConnectCalledTimes: 0,
+            cerberusConnectCalledTimes: 0,
         },
     },
     {
@@ -237,7 +237,7 @@ export const onCoinjoinRoundChanged = [
                 COINJOIN.SESSION_TX_BROADCASTED,
                 COINJOIN.ACCOUNT_UNREGISTER,
             ],
-            trezorConnectCalledTimes: 0,
+            cerberusConnectCalledTimes: 0,
         },
     },
     {
@@ -312,8 +312,8 @@ export const onCoinjoinRoundChanged = [
                 MODAL.OPEN_USER_CONTEXT,
                 COINJOIN.SESSION_COMPLETED,
             ],
-            trezorConnectCalledTimes: 2,
-            trezorConnectCallsWith: { expiry_ms: undefined },
+            cerberusConnectCalledTimes: 2,
+            cerberusConnectCallsWith: { expiry_ms: undefined },
         },
     },
 ];
@@ -377,7 +377,7 @@ export const getOwnershipProof = [
             },
         ],
         result: {
-            trezorConnectCalledTimes: 3,
+            cerberusConnectCalledTimes: 3,
             response: [
                 {
                     type: 'ownership',
@@ -436,7 +436,7 @@ export const getOwnershipProof = [
             },
         ],
         result: {
-            trezorConnectCalledTimes: 2,
+            cerberusConnectCalledTimes: 2,
             response: [
                 {
                     type: 'ownership',
@@ -489,7 +489,7 @@ export const getOwnershipProof = [
             },
         ],
         result: {
-            trezorConnectCalledTimes: 0,
+            cerberusConnectCalledTimes: 0,
             response: [
                 {
                     type: 'ownership',
@@ -657,8 +657,8 @@ export const signCoinjoinTx = [
         },
         result: {
             actions: [],
-            trezorConnectCalledTimes: 3,
-            trezorConnectCalledWith: [
+            cerberusConnectCalledTimes: 3,
+            cerberusConnectCalledWith: [
                 {
                     inputs: [
                         { script_type: 'EXTERNAL' },
@@ -802,8 +802,8 @@ export const signCoinjoinTx = [
         },
         result: {
             actions: [],
-            trezorConnectCalledTimes: 1,
-            trezorConnectCalledWith: [
+            cerberusConnectCalledTimes: 1,
+            cerberusConnectCalledWith: [
                 {
                     inputs: [
                         { script_type: 'SPENDTAPROOT' }, // account-A
@@ -948,8 +948,8 @@ export const signCoinjoinTx = [
         },
         result: {
             actions: [],
-            trezorConnectCalledTimes: 1,
-            trezorConnectCalledWith: [
+            cerberusConnectCalledTimes: 1,
+            cerberusConnectCalledWith: [
                 {
                     device: {
                         state: 'device-state-2',

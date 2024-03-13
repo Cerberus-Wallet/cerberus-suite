@@ -5,7 +5,7 @@ import { NetworkSymbol } from '@suite-common/wallet-config';
 import { Ethereum } from '@everstake/wallet-sdk';
 import { fromWei, toHex, toWei } from 'web3-utils';
 import { getEthereumEstimateFeeParams, sanitizeHex } from '@suite-common/wallet-utils';
-import TrezorConnect, { EthereumTransaction } from '@cerberus/connect';
+import CerberusConnect, { EthereumTransaction } from '@cerberus/connect';
 import BigNumber from 'bignumber.js';
 
 // Gas reserve ensuring txs are processed
@@ -53,7 +53,7 @@ const stake = async ({
 
         // gasLimit calculation based on address, amount and data size
         // amount is essential for a proper calculation of gasLimit (via blockbook/geth)
-        const estimatedFee = await TrezorConnect.blockchainEstimateFee({
+        const estimatedFee = await CerberusConnect.blockchainEstimateFee({
             coin: symbol,
             request: {
                 blocks: [2],
@@ -120,7 +120,7 @@ const unstake = async ({
 
         // gasLimit calculation based on address, amount and data size
         // amount is essential for a proper calculation of gasLimit (via blockbook/geth)
-        const estimatedFee = await TrezorConnect.blockchainEstimateFee({
+        const estimatedFee = await CerberusConnect.blockchainEstimateFee({
             coin: symbol,
             request: {
                 blocks: [2],
@@ -170,7 +170,7 @@ const claimWithdrawRequest = async ({ from, symbol }: StakeTxBaseArgs) => {
 
         // gasLimit calculation based on address, amount and data size
         // amount is essential for a proper calculation of gasLimit (via blockbook/geth)
-        const estimatedFee = await TrezorConnect.blockchainEstimateFee({
+        const estimatedFee = await CerberusConnect.blockchainEstimateFee({
             coin: symbol,
             request: {
                 blocks: [2],

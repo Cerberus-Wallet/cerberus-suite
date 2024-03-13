@@ -15,7 +15,7 @@ export const getInitialState = (override: any) => {
             locks: [3],
             settings: { debug: {} },
         },
-        // doesnt affect anything, just needed for TrezorConnect.init action
+        // doesnt affect anything, just needed for CerberusConnect.init action
         device: {
             selectedDevice: {
                 connected: true,
@@ -51,7 +51,7 @@ describe('Backup Actions', () => {
     });
 
     it('backup success', async () => {
-        testMocks.setTrezorConnectFixtures({ success: true });
+        testMocks.setCerberusConnectFixtures({ success: true });
 
         const state = getInitialState({});
         const store = mockStore(state);
@@ -84,7 +84,7 @@ describe('Backup Actions', () => {
     });
 
     it('backup error', async () => {
-        testMocks.setTrezorConnectFixtures({
+        testMocks.setCerberusConnectFixtures({
             success: false,
             payload: { error: 'avadakedavra' },
         });

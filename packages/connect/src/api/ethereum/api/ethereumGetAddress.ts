@@ -48,7 +48,7 @@ export default class EthereumGetAddress extends AbstractMethod<'ethereumGetAddre
 
             return {
                 address_n: path,
-                show_display: typeof batch.showOnTrezor === 'boolean' ? batch.showOnTrezor : true,
+                show_display: typeof batch.showOnCerberus === 'boolean' ? batch.showOnCerberus : true,
                 address: batch.address,
                 network,
                 chunkify: typeof batch.chunkify === 'boolean' ? batch.chunkify : false,

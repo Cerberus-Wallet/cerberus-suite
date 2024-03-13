@@ -5,7 +5,7 @@ inputs and outputs of pre-composed transaction. User is asked to confirm all tra
 details on Cerberus.
 
 ```javascript
-const result = await TrezorConnect.signTransaction(params);
+const result = await CerberusConnect.signTransaction(params);
 ```
 
 ### Params
@@ -35,7 +35,7 @@ const result = await TrezorConnect.signTransaction(params);
 -   `push` - _optional_ `boolean` Broadcast signed transaction to blockchain. Default is set to false
 -   `amountUnit` — _optional_ `PROTO.AmountUnit`
     > show amounts in BTC, mBTC, uBTC, sat
--   `unlockPath` - _optional_ [PROTO.UnlockPath](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/protobuf/src/messages.ts), the result of [TrezorConnect.unlockPath](./unlockPath.md) method.
+-   `unlockPath` - _optional_ [PROTO.UnlockPath](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/protobuf/src/messages.ts), the result of [CerberusConnect.unlockPath](./unlockPath.md) method.
 -   `serialize` - _optional_ `boolean`, default `true` serialize the full transaction, as opposed to only outputting the signatures
 -   `chunkify` — _optional_ `boolean` determines if recipient address will be displayed in chunks of 4 characters. Default is set to `false`
 
@@ -44,7 +44,7 @@ const result = await TrezorConnect.signTransaction(params);
 ###### PAYTOADDRESS
 
 ```javascript
-TrezorConnect.signTransaction({
+CerberusConnect.signTransaction({
     inputs: [
         {
             address_n: [
@@ -84,7 +84,7 @@ TrezorConnect.signTransaction({
 ###### SPENDP2SHWITNESS
 
 ```javascript
-TrezorConnect.signTransaction({
+CerberusConnect.signTransaction({
     inputs: [
         {
             address_n: [
@@ -125,7 +125,7 @@ TrezorConnect.signTransaction({
 ###### PAYTOADDRESS with refTxs (transaction data provided from custom backend)
 
 ```javascript
-TrezorConnect.signTransaction({
+CerberusConnect.signTransaction({
     inputs: [
         {
             address_n: [

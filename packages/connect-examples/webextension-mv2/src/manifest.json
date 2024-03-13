@@ -15,12 +15,12 @@
         "*://suite.corp.sldev.cz/*"
     ],
     "background": {
-        "scripts": ["./vendor/trezor-connect.js", "background.js"]
+        "scripts": ["./vendor/cerberus-connect.js", "background.js"]
     },
     "content_scripts": [
         {
             "matches": ["*://connect.cerberus.uraanai.com/9/popup.html", "*://suite.corp.sldev.cz/*"],
-            "js": ["./vendor/trezor-content-script.js"]
+            "js": ["./vendor/cerberus-content-script.js"]
         }
     ],
     "web_accessible_resources": ["icon48.png"]

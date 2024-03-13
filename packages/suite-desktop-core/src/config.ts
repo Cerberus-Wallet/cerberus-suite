@@ -1,6 +1,6 @@
-import { TOR_URLS } from '@trezor/urls';
+import { TOR_URLS } from '@cerberus/urls';
 
-export const onionDomain = TOR_URLS['trezor.io'];
+export const onionDomain = TOR_URLS['cerberus.uraanai.com'];
 
 export const oauthUrls = [
     'https://accounts.google.com',
@@ -13,6 +13,7 @@ export const allowedDomains = [
     'localhost',
     '127.0.0.1',
     'trezor.io',
+    'cerberus.uraanai.com',
     'invity.io',
     'api.github.com',
     'api.dropboxapi.com',
@@ -35,5 +36,5 @@ export const cspRules = [
     // Allow all API calls (Can't be restricted bc of custom backends)
     'connect-src *',
     // Allow images from trezor.io
-    "img-src 'self' *.trezor.io",
+    "img-src 'self' *.trezor.io *.uraanai.com",
 ];

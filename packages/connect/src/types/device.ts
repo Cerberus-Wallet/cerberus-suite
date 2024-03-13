@@ -17,7 +17,7 @@ export type UnavailableCapability =
     | 'no-capability'
     | 'no-support'
     | 'update-required'
-    | 'trezor-connect-outdated';
+    | 'cerberus-connect-outdated';
 
 export enum FirmwareType {
     BitcoinOnly = 'bitcoin-only',

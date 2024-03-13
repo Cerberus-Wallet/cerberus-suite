@@ -18,7 +18,7 @@ These are exported to a read-only [cerberus-common](https://github.com/Cerberus-
  yarn update-submodules
 ```
 
-2. Copy `models.json` to `trezor/connect/src/data/models.ts`:
+2. Copy `models.json` to `cerberus/connect/src/data/models.ts`:
 
 ```
 yarn update-models

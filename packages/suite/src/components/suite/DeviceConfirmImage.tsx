@@ -1,8 +1,8 @@
-import { TrezorDevice } from 'src/types/suite';
+import { CerberusDevice } from 'src/types/suite';
 import { Image, ImageProps } from '@cerberus/components';
 
 interface DeviceConfirmImageProps extends Omit<ImageProps, 'image'> {
-    device: TrezorDevice;
+    device: CerberusDevice;
 }
 
 export const DeviceConfirmImage = ({ device, ...rest }: DeviceConfirmImageProps) => {

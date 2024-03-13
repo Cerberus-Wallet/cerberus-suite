@@ -1,5 +1,5 @@
 import { test, chromium, Page } from '@playwright/test';
-import { TrezorUserEnvLink } from '@cerberus/trezor-user-env-link';
+import { CerberusUserEnvLink } from '@cerberus/cerberus-user-env-link';
 import { setConnectSettings } from '../support/helpers';
 
 const url = process.env.URL || 'http://localhost:8088/';
@@ -7,12 +7,12 @@ const url = process.env.URL || 'http://localhost:8088/';
 let popup: Page;
 
 test.beforeAll(async () => {
-    await TrezorUserEnvLink.connect();
-    await TrezorUserEnvLink.api.stopEmu();
-    await TrezorUserEnvLink.api.stopBridge();
-    await TrezorUserEnvLink.api.startEmu({ wipe: true });
-    await TrezorUserEnvLink.api.setupEmu({ passphrase_protection: false });
-    await TrezorUserEnvLink.api.startBridge();
+    await CerberusUserEnvLink.connect();
+    await CerberusUserEnvLink.api.stopEmu();
+    await CerberusUserEnvLink.api.stopBridge();
+    await CerberusUserEnvLink.api.startEmu({ wipe: true });
+    await CerberusUserEnvLink.api.setupEmu({ passphrase_protection: false });
+    await CerberusUserEnvLink.api.startBridge();
 });
 
 const fixtures = [

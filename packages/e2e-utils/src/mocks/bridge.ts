@@ -14,7 +14,7 @@ const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
  * Why?
  * - there is no emulator for bootloader
  */
-export class TrezorBridgeMock extends EventEmitter {
+export class CerberusBridgeMock extends EventEmitter {
     constructor(recordedBridgeCommunication?: any) {
         super();
         const app = express();

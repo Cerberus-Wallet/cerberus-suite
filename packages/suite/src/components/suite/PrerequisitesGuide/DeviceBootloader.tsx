@@ -3,7 +3,7 @@ import { Translation, TroubleshootingTips } from 'src/components/suite';
 import { IconButton } from '@cerberus/components';
 import { useDispatch } from 'src/hooks/suite';
 import { goto } from 'src/actions/suite/routerActions';
-import { TrezorDevice } from 'src/types/suite';
+import { CerberusDevice } from 'src/types/suite';
 import { pickByDeviceModel } from '@cerberus/device-utils';
 import { DeviceModelInternal } from '@cerberus/connect';
 
@@ -12,7 +12,7 @@ const WhiteSpace = styled.div`
 `;
 
 interface DeviceBootloaderProps {
-    device?: TrezorDevice;
+    device?: CerberusDevice;
 }
 
 /* User connected the device in bootloader mode, but in order to continue it needs to be in normal mode */

@@ -3,7 +3,7 @@
 Display requested address derived by given BIP32 path on device and returns it to caller. User is presented with a description of the requested key and asked to confirm the export on Cerberus.
 
 ```javascript
-const result = await TrezorConnect.ethereumGetAddress(params);
+const result = await CerberusConnect.ethereumGetAddress(params);
 ```
 
 ### Params
@@ -14,25 +14,25 @@ const result = await TrezorConnect.ethereumGetAddress(params);
 
 -   `path` — _required_ `string | Array<number>` minimum length is `5`. [read more](../path.md)
 -   `address` — _required_ `string` address for validation (read `Handle button request` section below)
--   `showOnTrezor` — _optional_ `boolean` determines if address will be displayed on device. Default is set to `true`
+-   `showOnCerberus` — _optional_ `boolean` determines if address will be displayed on device. Default is set to `true`
 -   `chunkify` — _optional_ `boolean` determines if address will be displayed in chunks of 4 characters. Default is set to `false`
 
 #### Exporting bundle of addresses
 
--   `bundle` - `Array` of Objects with `path` and `showOnTrezor` fields
+-   `bundle` - `Array` of Objects with `path` and `showOnCerberus` fields
 
 #### Handle button request
 
-Since trezor-connect@6.0.4 there is a possibility to handle `UI.ADDRESS_VALIDATION` event which will be triggered once the address is displayed on the device.
+Since cerberus-connect@6.0.4 there is a possibility to handle `UI.ADDRESS_VALIDATION` event which will be triggered once the address is displayed on the device.
 You can handle this event and display custom UI inside of your application.
 
 If certain conditions are fulfilled popup will not be used at all:
 
 -   the user gave permissions to communicate with Cerberus
 -   device is authenticated by pin/passphrase
--   application has `TrezorConnect.on(UI.ADDRESS_VALIDATION, () => {});` listener registered
+-   application has `CerberusConnect.on(UI.ADDRESS_VALIDATION, () => {});` listener registered
 -   parameter `address` is set
--   parameter `showOnTrezor` is set to `true` (or not set at all)
+-   parameter `showOnCerberus` is set to `true` (or not set at all)
 -   application is requesting ONLY ONE(!) address
 
 ### Example
@@ -40,7 +40,7 @@ If certain conditions are fulfilled popup will not be used at all:
 Display address of first ethereum account:
 
 ```javascript
-TrezorConnect.ethereumGetAddress({
+CerberusConnect.ethereumGetAddress({
     path: "m/44'/60'/0'/0/0",
 });
 ```
@@ -48,11 +48,11 @@ TrezorConnect.ethereumGetAddress({
 Return a bundle of ethereum addresses without displaying them on device:
 
 ```javascript
-TrezorConnect.ethereumGetAddress({
+CerberusConnect.ethereumGetAddress({
     bundle: [
-        { path: "m/44'/60'/0'/0/0", showOnTrezor: false }, // account 1
-        { path: "m/44'/60'/1'/0/0", showOnTrezor: false }, // account 2
-        { path: "m/44'/60'/2'/0/0", showOnTrezor: false }, // account 3
+        { path: "m/44'/60'/0'/0/0", showOnCerberus: false }, // account 1
+        { path: "m/44'/60'/1'/0/0", showOnCerberus: false }, // account 2
+        { path: "m/44'/60'/2'/0/0", showOnCerberus: false }, // account 3
     ],
 });
 ```
@@ -60,14 +60,14 @@ TrezorConnect.ethereumGetAddress({
 Validate address using custom UI inside of your application:
 
 ```javascript
-import TrezorConnect, { UI } from '@cerberus/connect';
+import CerberusConnect, { UI } from '@cerberus/connect';
 
-TrezorConnect.on(UI.ADDRESS_VALIDATION, data => {
+CerberusConnect.on(UI.ADDRESS_VALIDATION, data => {
     console.log('Handle button request', data.address, data.serializedPath);
     // here you can display custom UI inside of your app
 });
 
-const result = await TrezorConnect.ethereumGetAddress({
+const result = await CerberusConnect.ethereumGetAddress({
     path: "m/44'/60'/0'/0/0",
     address: '0x73d0385F4d8E00C5e6504C6030F47BF6212736A8',
 });

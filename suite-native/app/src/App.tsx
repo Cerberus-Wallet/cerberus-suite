@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import * as SplashScreen from 'expo-splash-screen';
 import * as Sentry from '@sentry/react-native';
 
-import TrezorConnect from '@cerberus/connect';
+import CerberusConnect from '@cerberus/connect';
 import { selectIsAppReady, selectIsConnectInitialized, StoreProvider } from '@suite-native/state';
 import { FormatterProvider } from '@suite-common/formatters';
 import { NavigationContainerWithAnalytics } from '@suite-native/navigation';
@@ -36,7 +36,7 @@ const APP_STARTED_TIMESTAMP = Date.now();
 SplashScreen.preventAutoHideAsync();
 
 // NOTE: This is a workaround wrapper for connect methods to prevent sending useEmptyPassphrase as undefined until we will implement passphrase behavior in mobile.
-type ConnectKey = keyof typeof TrezorConnect;
+type ConnectKey = keyof typeof CerberusConnect;
 const wrappedMethods = [
     'getAccountInfo',
     'blockchainEstimateFee',
@@ -59,9 +59,9 @@ const wrappedMethods = [
 ];
 
 wrappedMethods.forEach(key => {
-    const original: any = TrezorConnect[key as ConnectKey];
+    const original: any = CerberusConnect[key as ConnectKey];
     if (!original) return;
-    (TrezorConnect[key as ConnectKey] as any) = async (params: any) => {
+    (CerberusConnect[key as ConnectKey] as any) = async (params: any) => {
         const result = await original({
             ...params,
             useEmptyPassphrase: true,

@@ -140,10 +140,10 @@ export const isPoolOverSaturated = (pool: StakePool, additionalStake?: string) =
         .div(pool.saturation)
         .toNumber() > 0.8;
 
-export const getStakePoolForDelegation = (trezorPools: PoolsResponse, accountBalance: string) => {
-    let pool = trezorPools.next;
+export const getStakePoolForDelegation = (cerberusPools: PoolsResponse, accountBalance: string) => {
+    let pool = cerberusPools.next;
     if (isPoolOverSaturated(pool, accountBalance)) {
-        pool = trezorPools.pools[0];
+        pool = cerberusPools.pools[0];
     }
 
     return pool;

@@ -16,7 +16,7 @@ const stackStyle = prepareNativeStyle(_ => ({
     width: '100%',
 }));
 
-const trezorDescriptionTextStyle = prepareNativeStyle(_ => ({
+const cerberusDescriptionTextStyle = prepareNativeStyle(_ => ({
     lineHeight: 32,
 }));
 
@@ -28,12 +28,12 @@ export const AboutUsBanners = () => {
         <VStack>
             <Card style={applyStyle(cardStyle, { backgroundColor: 'backgroundNeutralBold' })}>
                 <VStack spacing="large" style={applyStyle(stackStyle)}>
-                    <Icon color="iconOnPrimary" name="trezor" />
+                    <Icon color="iconOnPrimary" name="cerberus" />
                     <Text
                         textAlign="center"
                         color="textOnPrimary"
                         variant="titleSmall"
-                        style={applyStyle(trezorDescriptionTextStyle)}
+                        style={applyStyle(cerberusDescriptionTextStyle)}
                     >
                         Cerberus Suite Lite is a safe and secure way to stay connected to the crypto
                         on your hardware wallet. Track coin balances on the go without exposing your

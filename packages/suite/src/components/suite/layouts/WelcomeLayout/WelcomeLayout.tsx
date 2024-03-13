@@ -2,11 +2,11 @@ import { ReactNode } from 'react';
 import styled from 'styled-components';
 import { AnimatePresence, motion } from 'framer-motion';
 
-import { H2, TrezorLogo, Button, variables, SVG_IMAGES } from '@cerberus/components';
+import { H2, CerberusLogo, Button, variables, SVG_IMAGES } from '@cerberus/components';
 import { useOnce } from '@cerberus/react-utils';
 import { Translation } from 'src/components/suite';
 // importing directly, otherwise unit tests fail, seems to be a styled-components issue
-import { TrezorLink } from 'src/components/suite/TrezorLink';
+import { CerberusLink } from 'src/components/suite/CerberusLink';
 import { useSelector } from 'src/hooks/suite';
 import { selectBannerMessage } from '@suite-common/message-system';
 import { MessageSystemBanner } from 'src/components/suite/banners';
@@ -92,7 +92,7 @@ const Content = styled.div`
     }
 `;
 
-const StyledTrezorLink = styled(TrezorLink)`
+const StyledCerberusLink = styled(CerberusLink)`
     margin-right: 14px;
 `;
 
@@ -149,7 +149,7 @@ export const WelcomeLayout = ({ children }: WelcomeLayoutProps) => {
                                 }}
                             >
                                 <Expander>
-                                    <TrezorLogo type="suite" width="128px" />
+                                    <CerberusLogo type="suite" width="128px" />
 
                                     <WelcomeTitle data-test="@welcome/title">
                                         <Translation id="TR_ONBOARDING_WELCOME_HEADING" />
@@ -158,7 +158,7 @@ export const WelcomeLayout = ({ children }: WelcomeLayoutProps) => {
 
                                 <LinksContainer>
                                     {isWeb() && (
-                                        <StyledTrezorLink
+                                        <StyledCerberusLink
                                             type="hint"
                                             variant="nostyle"
                                             href={SUITE_URL}
@@ -170,9 +170,9 @@ export const WelcomeLayout = ({ children }: WelcomeLayoutProps) => {
                                             >
                                                 <Translation id="TR_ONBOARDING_DOWNLOAD_DESKTOP_APP" />
                                             </Button>
-                                        </StyledTrezorLink>
+                                        </StyledCerberusLink>
                                     )}
-                                    <TrezorLink type="hint" variant="nostyle" href={CERBERUS_URL}>
+                                    <CerberusLink type="hint" variant="nostyle" href={CERBERUS_URL}>
                                         <Button
                                             variant="tertiary"
                                             icon="EXTERNAL_LINK"
@@ -180,7 +180,7 @@ export const WelcomeLayout = ({ children }: WelcomeLayoutProps) => {
                                         >
                                             cerberus.uraanai.com
                                         </Button>
-                                    </TrezorLink>
+                                    </CerberusLink>
                                 </LinksContainer>
                             </MotionWelcome>
                         )}

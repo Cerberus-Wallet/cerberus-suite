@@ -14,11 +14,11 @@ export const SettingsAboutUsScreen = () => {
     const { translate } = useTranslate();
 
     const handleOpenTermsAndConditions = () => {
-        openLink('https://data.trezorcheck.io/legal/mobile-wallet-terms.pdf');
+        openLink('https://data.trezer.io/legal/mobile-wallet-terms.pdf');
     };
 
     const handleOpenPrivacyPolicy = () => {
-        openLink('https://data.trezorcheck.io/legal/privacy-policy.html');
+        openLink('https://data.trezer.io/legal/privacy-policy.html');
     };
 
     return (

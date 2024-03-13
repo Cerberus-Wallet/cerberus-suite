@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import TrezorConnect, { BlockchainLink } from '@cerberus/connect';
+import CerberusConnect, { BlockchainLink } from '@cerberus/connect';
 import type { Network } from 'src/types/wallet';
 
 export const useDefaultUrls = (
@@ -9,7 +9,7 @@ export const useDefaultUrls = (
     const [isLoading, setIsLoading] = useState(false);
     useEffect(() => {
         setIsLoading(true);
-        TrezorConnect.getCoinInfo({ coin }).then(result => {
+        CerberusConnect.getCoinInfo({ coin }).then(result => {
             if (result.success) {
                 setLink(result.payload.blockchainLink);
             }

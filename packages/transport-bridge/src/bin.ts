@@ -1,5 +1,5 @@
-import { TrezordNode } from './http';
+import { CerberusdNode } from './http';
 
-const trezordNode = new TrezordNode({ port: 21325, api: 'usb' });
+const cerberusdNode = new CerberusdNode({ port: 21325, api: 'usb' });
 
-trezordNode.start();
+cerberusdNode.start();

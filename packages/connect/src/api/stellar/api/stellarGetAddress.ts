@@ -42,7 +42,7 @@ export default class StellarGetAddress extends AbstractMethod<'stellarGetAddress
             return {
                 address_n: path,
                 address: batch.address,
-                show_display: typeof batch.showOnTrezor === 'boolean' ? batch.showOnTrezor : true,
+                show_display: typeof batch.showOnCerberus === 'boolean' ? batch.showOnCerberus : true,
                 chunkify: typeof batch.chunkify === 'boolean' ? batch.chunkify : false,
             };
         });

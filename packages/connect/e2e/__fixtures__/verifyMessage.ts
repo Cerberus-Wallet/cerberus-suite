@@ -64,7 +64,7 @@ export default {
             },
         },
         {
-            description: 'trezor pubkey - wrong sig',
+            description: 'cerberus pubkey - wrong sig',
             params: {
                 coin: 'Bitcoin',
                 address: '1C7zdTfnkzmr13HfA2vNm5SJYRK6nEKyq8',
@@ -77,7 +77,7 @@ export default {
             result: false,
         },
         {
-            description: 'trezor pubkey - ok',
+            description: 'cerberus pubkey - ok',
             params: {
                 coin: 'Bitcoin',
                 address: '14LmW5k4ssUrtbAB4255zdqv3b4w1TuX9e',
@@ -95,7 +95,7 @@ export default {
             },
         },
         {
-            description: 'trezor pubkey - wrong msg',
+            description: 'cerberus pubkey - wrong msg',
             params: {
                 coin: 'Bitcoin',
                 address: '14LmW5k4ssUrtbAB4255zdqv3b4w1TuX9e',

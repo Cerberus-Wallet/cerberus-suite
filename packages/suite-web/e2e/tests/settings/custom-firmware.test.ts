@@ -20,7 +20,7 @@ describe('Install custom firmware', () => {
         //
         // Test preparation
         //
-        const testBinFile = 'trezor-2.5.1.bin';
+        const testBinFile = 'cerberus-2.5.1.bin';
         cy.getTestElement('@settings/device/custom-firmware-modal-button').click({
             force: true,
         });

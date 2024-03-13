@@ -3,10 +3,10 @@ import styled from 'styled-components';
 
 import { Button, ButtonProps } from '@cerberus/components';
 
-import { Translation, TrezorLink } from 'src/components/suite';
+import { Translation, CerberusLink } from 'src/components/suite';
 import { Url } from '@cerberus/urls';
 
-const StyledTrezorLink = styled(TrezorLink)`
+const StyledCerberusLink = styled(CerberusLink)`
     /* Prevents the link from overflowing the button in a flex container so that it cannot be open by clicking next to it */
     width: fit-content;
 `;
@@ -22,7 +22,7 @@ export const LearnMoreButton = ({
     className,
     ...buttonProps
 }: LearnMoreButtonProps) => (
-    <StyledTrezorLink variant="nostyle" href={url} className={className}>
+    <StyledCerberusLink variant="nostyle" href={url} className={className}>
         <Button
             variant="tertiary"
             size="tiny"
@@ -32,5 +32,5 @@ export const LearnMoreButton = ({
         >
             {children || <Translation id="TR_LEARN_MORE" />}
         </Button>
-    </StyledTrezorLink>
+    </StyledCerberusLink>
 );

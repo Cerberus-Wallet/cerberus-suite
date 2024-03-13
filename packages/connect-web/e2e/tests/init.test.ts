@@ -4,9 +4,9 @@ test.beforeAll(async () => {});
 
 const inlineScriptUrl = process.env.URL
     ? // url of build from CI
-      `${process.env.URL}/trezor-connect.js`
+      `${process.env.URL}/cerberus-connect.js`
     : // for testing out on localhost
-      'https://connect.cerberus.uraanai.com/9/trezor-connect.js';
+      'https://connect.cerberus.uraanai.com/9/cerberus-connect.js';
 
 const fixtures = [
     {
@@ -31,11 +31,11 @@ const fixtures = [
 ];
 
 fixtures.forEach(f => {
-    test(`TrezorConnect.init ${JSON.stringify(f.params)} => ${f.result}`, async ({ page }) => {
+    test(`CerberusConnect.init ${JSON.stringify(f.params)} => ${f.result}`, async ({ page }) => {
         await page.addScriptTag({ url: inlineScriptUrl });
         await page.addScriptTag({
             content: `
-                window.TrezorConnect.init({
+                window.CerberusConnect.init({
                     lazyLoad: false,
                     manifest: {
                         email: 'developer@xyz.com',

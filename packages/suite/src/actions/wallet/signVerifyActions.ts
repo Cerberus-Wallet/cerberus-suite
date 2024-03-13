@@ -1,8 +1,8 @@
-import TrezorConnect, { Unsuccessful, Success } from '@cerberus/connect';
+import CerberusConnect, { Unsuccessful, Success } from '@cerberus/connect';
 import { notificationsActions } from '@suite-common/toast-notifications';
 import { selectDevice } from '@suite-common/wallet-core';
 
-import type { Dispatch, GetState, TrezorDevice } from 'src/types/suite';
+import type { Dispatch, GetState, CerberusDevice } from 'src/types/suite';
 import type { Account } from 'src/types/wallet';
 
 import { SIGN_VERIFY } from './constants';
@@ -13,7 +13,7 @@ export type SignVerifyAction =
     | { type: typeof SIGN_VERIFY.VERIFY_SUCCESS };
 
 type StateParams = {
-    device: TrezorDevice;
+    device: CerberusDevice;
     account: Account;
     coin: Account['symbol'];
     useEmptyPassphrase: boolean;
@@ -53,9 +53,9 @@ const showAddressByNetwork =
         };
         switch (account.networkType) {
             case 'bitcoin':
-                return TrezorConnect.getAddress(params);
+                return CerberusConnect.getAddress(params);
             case 'ethereum':
-                return TrezorConnect.ethereumGetAddress(params);
+                return CerberusConnect.ethereumGetAddress(params);
             default:
                 return Promise.reject(new Error('ShowAddress not supported'));
         }
@@ -76,9 +76,9 @@ const signByNetwork =
 
         switch (account.networkType) {
             case 'bitcoin':
-                return TrezorConnect.signMessage(params);
+                return CerberusConnect.signMessage(params);
             case 'ethereum':
-                return TrezorConnect.ethereumSignMessage(params);
+                return CerberusConnect.ethereumSignMessage(params);
             default:
                 return Promise.reject(new Error('Signing not supported'));
         }
@@ -98,9 +98,9 @@ const verifyByNetwork =
         };
         switch (account.networkType) {
             case 'bitcoin':
-                return TrezorConnect.verifyMessage(params);
+                return CerberusConnect.verifyMessage(params);
             case 'ethereum':
-                return TrezorConnect.ethereumVerifyMessage(params);
+                return CerberusConnect.ethereumVerifyMessage(params);
             default:
                 return Promise.reject(new Error('Verifying not supported'));
         }

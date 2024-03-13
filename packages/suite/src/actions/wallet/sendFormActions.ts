@@ -1,6 +1,6 @@
 import BigNumber from 'bignumber.js';
 
-import TrezorConnect, { PROTO, SignedTransaction } from '@cerberus/connect';
+import CerberusConnect, { PROTO, SignedTransaction } from '@cerberus/connect';
 import {
     accountsActions,
     addFakePendingCardanoTxThunk,
@@ -197,9 +197,9 @@ export const cancelSignTx = () => (dispatch: Dispatch, getState: GetState) => {
     const { signedTx } = getState().wallet.send;
     dispatch({ type: SEND.REQUEST_SIGN_TRANSACTION });
     dispatch({ type: SEND.REQUEST_PUSH_TRANSACTION });
-    // if transaction is not signed yet interrupt signing in TrezorConnect
+    // if transaction is not signed yet interrupt signing in CerberusConnect
     if (!signedTx) {
-        TrezorConnect.cancel('tx-cancelled');
+        CerberusConnect.cancel('tx-cancelled');
 
         return;
     }
@@ -222,7 +222,7 @@ const pushTransaction =
             ? dispatch(findLabelsToBeMovedOrDeleted({ prevTxid: precomposedTx.prevTxid }))
             : undefined;
 
-        const sentTx = await TrezorConnect.pushTransaction(signedTx);
+        const sentTx = await CerberusConnect.pushTransaction(signedTx);
         // const sentTx = { success: true, payload: { txid: 'ABC ' } };
 
         // close modal regardless result
@@ -433,7 +433,7 @@ export const signTransaction =
             network?.chainId
         ) {
             const isTokenKnown = await fetch(
-                `https://data.trezorcheck.io/firmware/eth-definitions/chain-id/${
+                `https://data.trezer.io/firmware/eth-definitions/chain-id/${
                     network.chainId
                 }/token-${enhancedTxInfo.token.contract.substring(2).toLowerCase()}.dat`,
                 { method: 'HEAD' },
@@ -454,7 +454,7 @@ export const signTransaction =
         });
 
         // TransactionReviewModal has 2 steps: signing and pushing
-        // TrezorConnect emits UI.CLOSE_UI.WINDOW after the signing process
+        // CerberusConnect emits UI.CLOSE_UI.WINDOW after the signing process
         // this action is blocked by modalActions.preserve()
         dispatch(modalActions.preserve());
 
@@ -498,7 +498,7 @@ export const signTransaction =
             return;
         }
 
-        // store serializedTx in reducer (TrezorConnect.pushTransaction params) to be used in TransactionReviewModal and pushTransaction method
+        // store serializedTx in reducer (CerberusConnect.pushTransaction params) to be used in TransactionReviewModal and pushTransaction method
         dispatch({
             type: SEND.REQUEST_PUSH_TRANSACTION,
             payload: {
@@ -524,7 +524,7 @@ export const sendRaw = (payload?: boolean): SendFormAction => ({
 
 export const pushRawTransaction =
     (tx: string, coin: Account['symbol']) => async (dispatch: Dispatch) => {
-        const sentTx = await TrezorConnect.pushTransaction({
+        const sentTx = await CerberusConnect.pushTransaction({
             tx,
             coin,
         });

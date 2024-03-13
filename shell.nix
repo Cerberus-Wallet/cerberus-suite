@@ -18,7 +18,7 @@ let
   }) {};
 in
   stdenvNoCC.mkDerivation {
-    name = "trezor-suite-dev";
+    name = "cerberus-suite-dev";
     buildInputs = [
       bash
       git-lfs

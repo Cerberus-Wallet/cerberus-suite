@@ -1,6 +1,6 @@
-import { TrezorConnect } from '../../..';
+import { CerberusConnect } from '../../..';
 
-export const cipherKeyValue = async (api: TrezorConnect) => {
+export const cipherKeyValue = async (api: CerberusConnect) => {
     const kv = await api.cipherKeyValue({
         path: 'm/44',
         key: 'key',
@@ -30,7 +30,7 @@ export const cipherKeyValue = async (api: TrezorConnect) => {
 };
 
 // Method with mixed params
-export const requestLogin = async (api: TrezorConnect) => {
+export const requestLogin = async (api: CerberusConnect) => {
     // async call
     const a = await api.requestLogin({
         callback: () => ({
@@ -66,7 +66,7 @@ export const requestLogin = async (api: TrezorConnect) => {
     api.requestLogin({ challengeVisual: 1 });
 };
 
-export const setProxy = async (api: TrezorConnect) => {
+export const setProxy = async (api: CerberusConnect) => {
     const proxy = await api.setProxy({ proxy: 'socks://localhost:9050' });
     if (proxy.success) {
         proxy.payload.message.toLowerCase();

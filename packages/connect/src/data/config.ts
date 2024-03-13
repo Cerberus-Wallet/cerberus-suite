@@ -1,6 +1,6 @@
 // origin: https://github.com/trezor/connect/blob/develop/src/data/config.json
 
-import { CERBERUS_USB_DESCRIPTORS } from '@trezor/transport/lib/constants';
+import { CERBERUS_USB_DESCRIPTORS } from '@cerberus/transport/lib/constants';
 
 export const config = {
     webusb: CERBERUS_USB_DESCRIPTORS,
@@ -9,11 +9,12 @@ export const config = {
         { origin: 'chrome-extension://niebkpllfhmpfbffbfifagfgoamhpflf', priority: 1 },
         { origin: 'file://', priority: 2 },
         { origin: 'trezor.io', priority: 0 },
+        { origin: 'cerberus.uraanai.com', priority: 0 },
         { origin: 'sldev.cz', priority: 0 },
         { origin: 'localhost', priority: 0 },
-        { origin: 'trezoriovpjcahpzkrewelclulmszwbqpzmzgub37gbcjlvluxtruqad.onion', priority: 0 },
+        { origin: 'cerberusiovpjcahpzkrewelclulmszwbqpzmzgub37gbcjlvluxtruqad.onion', priority: 0 },
     ],
-    management: [{ origin: 'trezor.io' }, { origin: 'sldev.cz' }, { origin: 'localhost' }],
+    management: [{ origin: 'trezor.io' }, { origin: 'sldev.cz' }, { origin: 'localhost' }, { origin: 'cerberus.uraanai.com' }, ],
     knownHosts: [
         {
             origin: 'imloifkgjagghnncjkhggdhalmcnfklk',
@@ -39,7 +40,7 @@ export const config = {
         { origin: 'file://', label: ' ', icon: '' },
     ],
     onionDomains: {
-        'trezor.io': 'trezoriovpjcahpzkrewelclulmszwbqpzmzgub37gbcjlvluxtruqad.onion',
+        'cerberus.uraanai.com': 'cerberusiovpjcahpzkrewelclulmszwbqpzmzgub37gbcjlvluxtruqad.onion',
     },
     assets: [
         {

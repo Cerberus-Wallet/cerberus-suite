@@ -2,7 +2,7 @@
 
 [![Build Status](https://github.com/Cerberus-Wallet/cerberus-suite/actions/workflows/connect-test.yml/badge.svg)](https://github.com/Cerberus-Wallet/cerberus-suite/actions/workflows/connect-test.yml)
 [![NPM](https://img.shields.io/npm/v/@cerberus/connect-plugin-ethereum.svg)](https://www.npmjs.org/package/@cerberus/connect-plugin-ethereum)
-[![Known Vulnerabilities](https://snyk.io/test/github/trezor/connect-plugin-ethereum/badge.svg?targetFile=package.json)](https://snyk.io/test/github/trezor/trezor-suite?targetFile=packages/connect-plugin-ethereum/package.json)
+[![Known Vulnerabilities](https://snyk.io/test/github/cerberus/connect-plugin-ethereum/badge.svg?targetFile=package.json)](https://snyk.io/test/github/cerberus/cerberus-suite?targetFile=packages/connect-plugin-ethereum/package.json)
 
 T1B1 firmware currently does not support constructing [EIP-712](https://eips.ethereum.org/EIPS/eip-712)
 hashes. However, it supports signing pre-constructed hashes.

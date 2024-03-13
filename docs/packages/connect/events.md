@@ -2,7 +2,7 @@
 
 ## Handling events
 
-Once user grants permission for hosting page to communicate with API TrezorConnect will emits events
+Once user grants permission for hosting page to communicate with API CerberusConnect will emits events
 about device state.
 Events can be distinguished by "type" field of event object (TODO structure)
 Constants of all types can be imported from package
@@ -10,9 +10,9 @@ Constants of all types can be imported from package
 ES6
 
 ```javascript
-import TrezorConnect, { DEVICE_EVENT, DEVICE } from '@cerberus/connect';
+import CerberusConnect, { DEVICE_EVENT, DEVICE } from '@cerberus/connect';
 
-TrezorConnect.on(DEVICE_EVENT, event => {
+CerberusConnect.on(DEVICE_EVENT, event => {
     if (event.type === DEVICE.CONNECT) {
     } else if (event.type === DEVICE.DISCONNECT) {
     }

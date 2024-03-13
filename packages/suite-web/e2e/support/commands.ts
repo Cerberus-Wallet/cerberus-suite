@@ -20,7 +20,7 @@ import {
     passThroughSetPin,
     enableRegtestAndGetCoins,
     createAccountFromMyAccounts,
-    interceptDataTrezorIo,
+    interceptDataCerberusIo,
     findAnalyticsEventByType,
     enterPinOnBlindMatrix,
 } from './utils/shortcuts';
@@ -53,7 +53,7 @@ beforeEach(() => {
     const suiteName = (Cypress as any).mocha.getRunner().suite.ctx.currentTest.parent.title;
     const testName = (Cypress as any).mocha.getRunner().suite.ctx.currentTest.title;
 
-    cy.task('trezorUserEnvConnect');
+    cy.task('cerberusUserEnvConnect');
     cy.task('logTestDetails', `New test case: ${suiteName} - ${testName}`);
     cy.log('stop bridge before every test to make sure that there is no pending session');
     cy.task('stopBridge');
@@ -69,7 +69,7 @@ beforeEach(() => {
     cy.task('resetCRI');
 
     // disable messaging system on develop
-    cy.intercept('https://data.trezorcheck.io/config/develop/config.v1.jws', req => {
+    cy.intercept('https://data.trezer.io/config/develop/config.v1.jws', req => {
         const mock =
             'eyJhbGciOiJFUzI1NiJ9.ewogICAgInZlcnNpb24iOiAxLAogICAgInRpbWVzdGFtcCI6ICIyMDIyLTA0LTA0VDAwOjAwOjAwKzAwOjAwIiwKICAgICJzZXF1ZW5jZSI6IDEwMCwKICAgICJhY3Rpb25zIjogW10KfQo.6LBUsZIxdDGLxVuHQNvFmphVdRwxMpmEHhRC-vU4horpzWwIlvex8R7w48YInk231OxxovrHX8pVvCDWPaoWRA';
         req.continue(res => {
@@ -77,7 +77,7 @@ beforeEach(() => {
         });
     });
     // disable messaging system in codesign build
-    cy.intercept('https://data.trezorcheck.io/config/stable/config.v1.jws', req => {
+    cy.intercept('https://data.trezer.io/config/stable/config.v1.jws', req => {
         const mock =
             'eyJhbGciOiJFUzI1NiJ9.ewogICAgInZlcnNpb24iOiAxLAogICAgInRpbWVzdGFtcCI6ICIyMDIyLTA0LTA0VDAwOjAwOjAwKzAwOjAwIiwKICAgICJzZXF1ZW5jZSI6IDEwMCwKICAgICJhY3Rpb25zIjogW10KfQo.rM_IWzbu3iRelYC9fB7YA3sHtCWXTJAKTgxJ5WszUj__BTEIvBbd5iBFSaDoNrY4CZejxNCbnzMTLnb5x6ZN2A';
         req.continue(res => {
@@ -89,7 +89,7 @@ beforeEach(() => {
 });
 
 afterEach(() => {
-    cy.task('trezorUserEnvDisconnect');
+    cy.task('cerberusUserEnvDisconnect');
     cy.task('stopMockedBridge');
 });
 
@@ -124,7 +124,7 @@ declare global {
             onlyOn: (nameOrFlag: string | boolean, cb?: () => void) => Cypress.Chainable<any>;
             createAccountFromMyAccounts: (coin: string, label: string) => Chainable<Subject>;
             interceptInvityApi: () => void;
-            interceptDataTrezorIo: (requests: Requests) => Cypress.Chainable<null>;
+            interceptDataCerberusIo: (requests: Requests) => Cypress.Chainable<null>;
             findAnalyticsEventByType: <T extends SuiteAnalyticsEvent>(
                 requests: Requests,
                 eventType: T['type'],
@@ -174,7 +174,7 @@ Cypress.Commands.add('enableRegtestAndGetCoins', enableRegtestAndGetCoins);
 Cypress.Commands.add('text', { prevSubject: true }, subject => subject.text());
 Cypress.Commands.add('createAccountFromMyAccounts', createAccountFromMyAccounts);
 Cypress.Commands.add('interceptInvityApi', interceptInvityApi);
-Cypress.Commands.add('interceptDataTrezorIo', interceptDataTrezorIo);
+Cypress.Commands.add('interceptDataCerberusIo', interceptDataCerberusIo);
 
 Cypress.Commands.add('findAnalyticsEventByType', findAnalyticsEventByType);
 Cypress.Commands.add('enterPinOnBlindMatrix', enterPinOnBlindMatrix);

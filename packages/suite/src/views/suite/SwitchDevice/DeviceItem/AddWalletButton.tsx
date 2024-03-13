@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Button, Tooltip } from '@cerberus/components';
 
 import { Translation } from 'src/components/suite';
-import { TrezorDevice, AcquiredDevice } from 'src/types/suite';
+import { CerberusDevice, AcquiredDevice } from 'src/types/suite';
 import { useSelector } from 'src/hooks/suite';
 import { SUITE } from 'src/actions/suite/constants';
 import { borders } from '@cerberus/theme';
@@ -33,10 +33,10 @@ const StyledTooltip = styled(Tooltip)`
 `;
 
 interface AddWalletButtonProps {
-    device: TrezorDevice;
+    device: CerberusDevice;
     instances: AcquiredDevice[];
-    addDeviceInstance: (instance: TrezorDevice) => Promise<void>;
-    selectDeviceInstance: (instance: TrezorDevice) => void;
+    addDeviceInstance: (instance: CerberusDevice) => Promise<void>;
+    selectDeviceInstance: (instance: CerberusDevice) => void;
 }
 
 export const AddWalletButton = ({

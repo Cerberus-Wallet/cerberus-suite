@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 
-// TODO: future coinjoin-backend-link package? similar to trezor-user-env-link
+// TODO: future coinjoin-backend-link package? similar to cerberus-user-env-link
 
 export const sendToAddress = ({ address, amount }: { address: string; amount: string }) =>
     fetch('http://localhost:8081/send_to_address', {

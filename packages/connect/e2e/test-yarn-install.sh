@@ -18,7 +18,7 @@ touch yarn.lock
 # install connect package
 yarn add @cerberus/connect
 # prepare minimal typescript implementation
-echo import TrezorConnect from \"@cerberus/connect\" > index.ts
+echo import CerberusConnect from \"@cerberus/connect\" > index.ts
 
 # compile with typescript
 yarn add typescript@5.3.2

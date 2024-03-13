@@ -25,4 +25,4 @@ const onUpgrade: OnUpgradeFunc<SuiteDBSchema> = async (db, oldVersion, newVersio
     await migrate(db, oldVersion, newVersion, transaction);
 };
 
-export const db = new SuiteDB<SuiteDBSchema>('trezor-suite', VERSION, onUpgrade, reloadApp);
+export const db = new SuiteDB<SuiteDBSchema>('cerberus-suite', VERSION, onUpgrade, reloadApp);

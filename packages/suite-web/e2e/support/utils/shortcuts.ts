@@ -121,8 +121,8 @@ export const createAccountFromMyAccounts = (coin: string, label: string) => {
     cy.getTestElement('@add-account').click();
 };
 
-export const interceptDataTrezorIo = (requests: Requests) =>
-    cy.intercept({ hostname: 'data.trezorcheck.io', url: '/suite/log/**' }, req => {
+export const interceptDataCerberusIo = (requests: Requests) =>
+    cy.intercept({ hostname: 'data.trezer.io', url: '/suite/log/**' }, req => {
         const params = urlSearchParams(req.url);
         requests.push(params);
     });

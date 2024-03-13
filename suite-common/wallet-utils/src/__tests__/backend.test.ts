@@ -1,4 +1,4 @@
-import { getDefaultBackendType, isTrezorConnectBackendType } from '../backendUtils';
+import { getDefaultBackendType, isCerberusConnectBackendType } from '../backendUtils';
 
 describe('backend utils', () => {
     test('getDefaultBackendType', () => {
@@ -8,13 +8,13 @@ describe('backend utils', () => {
         expect(getDefaultBackendType('tada')).toBe('blockfrost');
     });
 
-    test('isTrezorConnectBackendType', () => {
-        expect(isTrezorConnectBackendType()).toBe(true);
-        expect(isTrezorConnectBackendType('blockbook')).toBe(true);
-        expect(isTrezorConnectBackendType('coinjoin')).toBe(false);
+    test('isCerberusConnectBackendType', () => {
+        expect(isCerberusConnectBackendType()).toBe(true);
+        expect(isCerberusConnectBackendType('blockbook')).toBe(true);
+        expect(isCerberusConnectBackendType('coinjoin')).toBe(false);
         // @ts-expect-error
-        expect(isTrezorConnectBackendType('gibberish')).toBe(false);
+        expect(isCerberusConnectBackendType('gibberish')).toBe(false);
         // @ts-expect-error
-        expect(isTrezorConnectBackendType({})).toBe(false);
+        expect(isCerberusConnectBackendType({})).toBe(false);
     });
 });

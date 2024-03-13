@@ -1,5 +1,5 @@
 // unit test for suite actions
-// data provided by TrezorConnect are mocked
+// data provided by CerberusConnect are mocked
 import { testMocks } from '@suite-common/test-utils';
 import {
     prepareDeviceReducer,
@@ -38,16 +38,16 @@ const { getSuiteDevice } = testMocks;
 const firmwareReducer = prepareFirmwareReducer(extraDependencies);
 const deviceReducer = prepareDeviceReducer(extraDependencies);
 
-const TrezorConnect = testMocks.getTrezorConnectMock();
+const CerberusConnect = testMocks.getCerberusConnectMock();
 
-const setTrezorConnectFixtures = (fixture: any) => {
-    jest.spyOn(TrezorConnect, 'getFeatures').mockImplementation(
+const setCerberusConnectFixtures = (fixture: any) => {
+    jest.spyOn(CerberusConnect, 'getFeatures').mockImplementation(
         () =>
             fixture || {
                 success: true,
             },
     );
-    jest.spyOn(TrezorConnect, 'getDeviceState').mockImplementation(
+    jest.spyOn(CerberusConnect, 'getDeviceState').mockImplementation(
         ({ device }: any) =>
             fixture || {
                 success: true,
@@ -56,7 +56,7 @@ const setTrezorConnectFixtures = (fixture: any) => {
                 },
             },
     );
-    jest.spyOn(TrezorConnect, 'applySettings').mockImplementation(
+    jest.spyOn(CerberusConnect, 'applySettings').mockImplementation(
         () =>
             fixture || {
                 success: true,
@@ -176,7 +176,7 @@ describe('Suite Actions', () => {
             const state = getInitialState(f.state.suite, f.state.device);
             const store = initStore(state);
             store.dispatch({
-                type: DEVICE.DISCONNECT, // TrezorConnect event to affect "deviceReducer"
+                type: DEVICE.DISCONNECT, // CerberusConnect event to affect "deviceReducer"
                 payload: f.device,
             });
             store.dispatch(handleDeviceDisconnect(f.device));
@@ -224,10 +224,10 @@ describe('Suite Actions', () => {
 
     fixtures.acquireDevice.forEach(f => {
         it(`acquireDevice: ${f.description}`, async () => {
-            setTrezorConnectFixtures(f.getFeatures);
+            setCerberusConnectFixtures(f.getFeatures);
             const state = getInitialState(undefined, f.state.device);
             const store = initStore(state);
-            store.dispatch(connectInitThunk()); // trezorConnectActions.connectInitThunk needs to be called in order to wrap "getFeatures" with lockUi action
+            store.dispatch(connectInitThunk()); // cerberusConnectActions.connectInitThunk needs to be called in order to wrap "getFeatures" with lockUi action
             await store.dispatch(acquireDevice(f.requestedDevice));
             // we are not interested in thunk state here
             const expectedActions = filterThunkActionTypes(
@@ -244,7 +244,7 @@ describe('Suite Actions', () => {
 
     fixtures.authorizeDevice.forEach(f => {
         it(`authorizeDevice: ${f.description}`, async () => {
-            setTrezorConnectFixtures(f.getDeviceState);
+            setCerberusConnectFixtures(f.getDeviceState);
             const state = getInitialState(undefined, {
                 selectedDevice: f.suiteState?.selectedDevice,
                 devices: f.devicesState ?? [],
@@ -271,7 +271,7 @@ describe('Suite Actions', () => {
 
     fixtures.authConfirm.forEach(f => {
         it(`authConfirm: ${f.description}`, async () => {
-            setTrezorConnectFixtures(f.getDeviceState);
+            setCerberusConnectFixtures(f.getDeviceState);
             const state = getInitialState(undefined, f.state);
             const store = initStore(state);
             await store.dispatch(authConfirm());
@@ -286,7 +286,7 @@ describe('Suite Actions', () => {
 
     fixtures.createDeviceInstance.forEach(f => {
         it(`createDeviceInstance: ${f.description}`, async () => {
-            setTrezorConnectFixtures(f.applySettings);
+            setCerberusConnectFixtures(f.applySettings);
             const state = getInitialState(undefined, f.state.device);
             const store = initStore(state);
             await store.dispatch(createDeviceInstance({ device: f.state.device.selectedDevice }));

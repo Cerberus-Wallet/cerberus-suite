@@ -12,7 +12,7 @@ import {
 } from '@suite-common/wallet-core';
 
 import { STORAGE, METADATA, METADATA_LABELING } from 'src/actions/suite/constants';
-import { Action, TrezorDevice } from 'src/types/suite';
+import { Action, CerberusDevice } from 'src/types/suite';
 import {
     MetadataState,
     WalletLabels,
@@ -226,8 +226,8 @@ export const selectLabelableEntities = (state: MetadataRootState, deviceState: s
                 type: 'account' as const,
             })),
         ...devices
-            .filter((device: TrezorDevice) => device.state === deviceState)
-            .map((device: TrezorDevice) => ({
+            .filter((device: CerberusDevice) => device.state === deviceState)
+            .map((device: CerberusDevice) => ({
                 ...device.metadata,
                 state: device.state,
                 type: 'device' as const,

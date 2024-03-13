@@ -1,4 +1,4 @@
-import { TrezorDevice } from 'src/types/suite/index';
+import { CerberusDevice } from 'src/types/suite/index';
 import { DeviceModelInternal } from '@cerberus/connect';
 import { deflateRaw } from 'pako';
 
@@ -325,7 +325,7 @@ export const imagePathToHex = async (
     return bitmap(imageData, deviceModelInternal);
 };
 
-export const isHomescreenSupportedOnDevice = (device: TrezorDevice) => {
+export const isHomescreenSupportedOnDevice = (device: CerberusDevice) => {
     const deviceModelInternal = device.features?.internal_model;
 
     return (

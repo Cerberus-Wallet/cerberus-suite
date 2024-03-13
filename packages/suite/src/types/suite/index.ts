@@ -44,10 +44,10 @@ export type {
     AcquiredDevice,
     UnknownDevice,
     UnreadableDevice,
-    TrezorDevice,
+    CerberusDevice,
 } from '@suite-common/suite-types';
 
-type TrezorConnectEvents = TransportEvent | UiEvent | DeviceEvent | BlockchainEvent;
+type CerberusConnectEvents = TransportEvent | UiEvent | DeviceEvent | BlockchainEvent;
 
 export type TransactionAction = ReturnType<
     (typeof transactionsActions)[keyof typeof transactionsActions]
@@ -68,7 +68,7 @@ type DeviceAuthenticityAction = ReturnType<
 
 // all actions from all apps used to properly type Dispatch.
 export type Action =
-    | TrezorConnectEvents
+    | CerberusConnectEvents
     | RouterAction
     | ResizeAction
     | StorageAction

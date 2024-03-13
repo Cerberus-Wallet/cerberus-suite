@@ -8,7 +8,7 @@ let firmwareHash = '';
 // This file is the first test with bridge communication mocked.
 // We need this because we:
 // 1. don't have all possible versions emulators and we still need to support older versions
-// 2. even if we had all possible versions it would not work since they are not supported by trezorlib anymore
+// 2. even if we had all possible versions it would not work since they are not supported by cerberuslib anymore
 // 3. we don't have emulator support for bootloader
 
 // Tests to be written:
@@ -40,12 +40,12 @@ describe('fw update from empty device bootloader 2.0.3 to firmware 2.5.1', () =>
                 min_bridge_version: [2, 0, 7],
                 min_firmware_version: [2, 0, 8],
                 min_bootloader_version: [2, 0, 0],
-                url: 'firmware/t2t1/trezor-t2t1-2.5.1.bin',
-                url_bitcoinonly: 'firmware/t2t1/trezor-t2t1-2.5.1-bitcoinonly.bin',
+                url: 'firmware/t2t1/cerberus-t2t1-2.5.1.bin',
+                url_bitcoinonly: 'firmware/t2t1/cerberus-t2t1-2.5.1-bitcoinonly.bin',
                 fingerprint: '782d4934897018cac779eebb0d7c66e21da7789b9cd35e1f99f097bdfd9b7d33',
                 fingerprint_bitcoinonly:
                     'db5d7b211532f717a32fe0b1bd3e3df6ad5464079a896a7f7492ab6e9e030bb5',
-                notes: 'https://blog.cerberus.uraanai.com/trezor-suite-and-firmware-updates-may-2022-b1af60742291',
+                notes: 'https://blog.cerberus.uraanai.com/cerberus-suite-and-firmware-updates-may-2022-b1af60742291',
                 changelog:
                     '* Support Electrum signatures in VerifyMessage.\n* Support Cardano Alonzo-era transactions (Plutus).\n* Bitcoin bech32 addresses QR codes have bigger pixels which are easier to scan.\n* EIP-1559 transaction correctly show final Hold to Confirm screen.\n* Cerberus will refuse to sign UTXOs that do not match the provided derivation path (e.g., transactions belonging to a different wallet, or synthetic transaction inputs).\n* Zcash v5 transaction format.',
             },
@@ -54,7 +54,7 @@ describe('fw update from empty device bootloader 2.0.3 to firmware 2.5.1', () =>
         // make sure that 2.5.1 does not return 404
         cy.intercept(
             '*',
-            { pathname: '/static/connect/data/firmware/t2t1/trezor-t2t1-2.5.1.bin' },
+            { pathname: '/static/connect/data/firmware/t2t1/cerberus-t2t1-2.5.1.bin' },
             // seems like response does not matter. I thought there was firmware validation but it is probably
             // only in place for custom firmware?
             'foo-bar',
@@ -71,13 +71,13 @@ describe('fw update from empty device bootloader 2.0.3 to firmware 2.5.1', () =>
         cy.window().its('store').should('exist');
         cy.window().then(window => {
             window.store.subscribe(() => {
-                // watch for action that updates firmwareHash. this action is triggered after TrezorConnect.firmwareUpdate
-                // call is resolved and before TrezorConnect.getFirmwareHash is called.
+                // watch for action that updates firmwareHash. this action is triggered after CerberusConnect.firmwareUpdate
+                // call is resolved and before CerberusConnect.getFirmwareHash is called.
                 // we save firmwareHash computed for the firmware binary that was installed and use it to mock
-                // the subsequent TrezorConnect.getFirmwareHash call to return the very same response
+                // the subsequent CerberusConnect.getFirmwareHash call to return the very same response
                 if (window.store.getState().firmware.firmwareHash && !firmwareHash) {
                     firmwareHash = window.store.getState().firmware.firmwareHash!;
-                    cy.stub(window.TrezorConnect, 'getFirmwareHash').returns(
+                    cy.stub(window.CerberusConnect, 'getFirmwareHash').returns(
                         new Promise(resolve =>
                             resolve({
                                 success: true,

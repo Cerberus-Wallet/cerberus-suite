@@ -24,7 +24,7 @@ export default class ChangeLanguage extends AbstractMethod<'changeLanguage', Cha
         } else {
             this.params = {
                 language: payload.language,
-                baseUrl: payload.baseUrl || 'https://data.trezorcheck.io',
+                baseUrl: payload.baseUrl || 'https://data.trezer.io',
             };
         }
     }

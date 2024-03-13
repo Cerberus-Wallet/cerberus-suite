@@ -42,7 +42,7 @@ export default class NEMGetAddress extends AbstractMethod<'nemGetAddress', Param
             return {
                 address_n: path,
                 network: batch.network || MAINNET,
-                show_display: typeof batch.showOnTrezor === 'boolean' ? batch.showOnTrezor : true,
+                show_display: typeof batch.showOnCerberus === 'boolean' ? batch.showOnCerberus : true,
                 address: batch.address,
                 chunkify: typeof batch.chunkify === 'boolean' ? batch.chunkify : false,
             };
