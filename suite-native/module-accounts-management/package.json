@@ -10,6 +10,8 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
+        "@cerberus/styles": "workspace:*",
+        "@cerberus/theme": "workspace:*",
         "@mobily/ts-belt": "^3.13.1",
         "@react-navigation/native": "6.1.10",
         "@react-navigation/native-stack": "6.9.18",
@@ -38,8 +40,6 @@
         "@suite-native/qr-code": "workspace:*",
         "@suite-native/receive": "workspace:*",
         "@suite-native/transactions": "workspace:*",
-        "@cerberus/styles": "workspace:*",
-        "@cerberus/theme": "workspace:*",
         "date-fns": "^2.30.0",
         "jotai": "1.9.1",
         "react": "18.2.0",

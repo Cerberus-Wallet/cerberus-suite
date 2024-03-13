@@ -10,9 +10,9 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
-        "@suite-native/toasts": "workspace:*",
         "@cerberus/styles": "workspace:*",
         "@cerberus/theme": "workspace:*",
+        "@suite-native/toasts": "workspace:*",
         "react": "18.2.0"
     },
     "peerDependencies": {

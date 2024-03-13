@@ -340,7 +340,7 @@
   "TR_BIP_SIG_FORMAT": "Cerberus",
   "TR_BITCOIN_ONLY_UNAVAILABLE": "Než budete moci nainstalovat firmware pouze pro Bitcoin, musíme firmware aktualizovat na novější verzi.",
   "TR_BREAKING_ANONYMITY_CHECKBOX": "Chápu, že porušuji svou anonymitu",
-  "TR_BRIDGE_DEV_MODE_START": "Spuštění Cerberus Bridge na portu 21324\n",
+  "TR_BRIDGE_DEV_MODE_START": "Spuštění Cerberus Bridge na portu 21424\n",
   "TR_BRIDGE_DEV_MODE_STOP": "Spouštění Cerberusu Bridge na výchozím portu",
   "TR_BTC_UNITS": "Bitcoinové jednotky",
   "TR_BUG": "Něco nefunguje?",

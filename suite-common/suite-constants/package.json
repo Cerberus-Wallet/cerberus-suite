@@ -10,7 +10,7 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
-        "@suite-common/wallet-config": "workspace:*",
-        "@cerberus/connect": "workspace:*"
+        "@cerberus/connect": "workspace:*",
+        "@suite-common/wallet-config": "workspace:*"
     }
 }

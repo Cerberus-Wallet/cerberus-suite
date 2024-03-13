@@ -10,6 +10,9 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
+        "@cerberus/env-utils": "workspace:*",
+        "@cerberus/styles": "workspace:*",
+        "@cerberus/theme": "workspace:*",
         "@react-navigation/core": "^6.4.10",
         "@react-navigation/native-stack": "6.9.18",
         "@sentry/react-native": "5.19.1",
@@ -29,9 +32,6 @@
         "@suite-native/module-settings": "workspace:*",
         "@suite-native/navigation": "workspace:*",
         "@suite-native/storage": "workspace:*",
-        "@cerberus/env-utils": "workspace:*",
-        "@cerberus/styles": "workspace:*",
-        "@cerberus/theme": "workspace:*",
         "react": "18.2.0",
         "react-native": "0.73.2",
         "react-redux": "8.0.7"

@@ -10,12 +10,12 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
+        "@cerberus/styles": "workspace:*",
         "@suite-common/validators": "workspace:*",
         "@suite-common/wallet-constants": "workspace:*",
         "@suite-native/atoms": "workspace:*",
         "@suite-native/forms": "workspace:*",
         "@suite-native/intl": "workspace:*",
-        "@cerberus/styles": "workspace:*",
         "jotai": "1.9.1",
         "react": "18.2.0",
         "react-native": "0.73.2"

@@ -10,6 +10,8 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
+        "@cerberus/styles": "workspace:*",
+        "@cerberus/theme": "workspace:*",
         "@react-navigation/native": "6.1.10",
         "@suite-common/icons": "workspace:*",
         "@suite-common/toast-notifications": "workspace:*",
@@ -21,8 +23,6 @@
         "@suite-native/navigation": "workspace:*",
         "@suite-native/theme": "workspace:*",
         "@suite-native/transactions": "workspace:*",
-        "@cerberus/styles": "workspace:*",
-        "@cerberus/theme": "workspace:*",
         "react": "18.2.0",
         "react-native": "0.73.2",
         "react-native-gesture-handler": "2.15.0",

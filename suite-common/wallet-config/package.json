@@ -10,8 +10,8 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
-        "@suite-common/intl-types": "workspace:*",
         "@cerberus/connect": "workspace:*",
-        "@cerberus/type-utils": "workspace:*"
+        "@cerberus/type-utils": "workspace:*",
+        "@suite-common/intl-types": "workspace:*"
     }
 }

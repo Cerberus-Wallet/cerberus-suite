@@ -12,8 +12,8 @@
         "generate-videos": "yarn g:tsx ./scripts/generateVideos.ts"
     },
     "dependencies": {
-        "@suite-native/atoms": "workspace:*",
         "@cerberus/styles": "workspace:*",
+        "@suite-native/atoms": "workspace:*",
         "expo-av": "13.10.5",
         "prettier": "3.2.5",
         "react": "18.2.0",

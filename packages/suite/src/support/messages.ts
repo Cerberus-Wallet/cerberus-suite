@@ -5470,7 +5470,7 @@ export default defineMessages({
     },
     TR_BRIDGE_DEV_MODE_START: {
         id: 'TR_BRIDGE_DEV_MODE_START',
-        defaultMessage: 'Starting Cerberus Bridge on port 21324',
+        defaultMessage: 'Starting Cerberus Bridge on port 21424',
     },
     TR_BRIDGE_DEV_MODE_STOP: {
         id: 'TR_BRIDGE_DEV_MODE_STOP',

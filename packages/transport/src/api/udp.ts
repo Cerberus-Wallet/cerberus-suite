@@ -115,7 +115,7 @@ export class UdpApi extends AbstractApi {
 
     public async enumerate() {
         // in theory we could support multiple devices, but we don't yet
-        const paths = ['127.0.0.1:21324'];
+        const paths = ['127.0.0.1:21424'];
 
         const enumerateResult = await Promise.all(
             paths.map(path => this.ping(path).then(pinged => (pinged ? path : undefined))),

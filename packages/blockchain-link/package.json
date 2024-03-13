@@ -64,12 +64,12 @@
         "worker-loader": "^3.0.8"
     },
     "dependencies": {
-        "@solana/buffer-layout": "^4.0.1",
-        "@solana/web3.js": "^1.90.0",
         "@cerberus/blockchain-link-types": "workspace:*",
         "@cerberus/blockchain-link-utils": "workspace:*",
         "@cerberus/utils": "workspace:*",
         "@cerberus/utxo-lib": "workspace:*",
+        "@solana/buffer-layout": "^4.0.1",
+        "@solana/web3.js": "^1.90.0",
         "@types/web": "^0.0.138",
         "bignumber.js": "^9.1.2",
         "events": "^3.3.0",

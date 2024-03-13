@@ -11,6 +11,8 @@
         "type-check": "tsc --build"
     },
     "dependencies": {
+        "@cerberus/styles": "workspace:*",
+        "@cerberus/theme": "workspace:*",
         "@mobily/ts-belt": "^3.13.1",
         "@react-navigation/native": "6.1.10",
         "@react-navigation/native-stack": "6.9.18",
@@ -26,8 +28,6 @@
         "@suite-native/intl": "workspace:*",
         "@suite-native/link": "workspace:*",
         "@suite-native/navigation": "workspace:*",
-        "@cerberus/styles": "workspace:*",
-        "@cerberus/theme": "workspace:*",
         "expo-linear-gradient": "12.7.1",
         "react": "18.2.0",
         "react-native": "0.73.2",

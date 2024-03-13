@@ -10,12 +10,12 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
+        "@cerberus/styles": "workspace:*",
+        "@cerberus/theme": "workspace:*",
         "@mobily/ts-belt": "^3.13.1",
         "@reduxjs/toolkit": "1.9.5",
         "@suite-common/icons": "workspace:*",
         "@suite-native/atoms": "workspace:*",
-        "@cerberus/styles": "workspace:*",
-        "@cerberus/theme": "workspace:*",
         "jotai": "1.9.1",
         "react": "18.2.0",
         "react-native-gesture-handler": "2.15.0",

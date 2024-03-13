@@ -319,7 +319,7 @@
   "TR_BEFORE_ANY_FURTHER_ACTIONS": "Controleer voordat u verdere acties uitvoert, of u uw herstelreeks heeft. Ofwel veilig opgeslagen of zelfs met u vanaf nu. In elk geval van onwaarschijnlijke noodsituaties.",
   "TR_BIP_SIG_FORMAT": "Cerberus",
   "TR_BREAKING_ANONYMITY_CHECKBOX": "Ik begrijp dat ik mijn anonimiteit schaad",
-  "TR_BRIDGE_DEV_MODE_START": "Start Cerberus Bridge op poort 21324",
+  "TR_BRIDGE_DEV_MODE_START": "Start Cerberus Bridge op poort 21424",
   "TR_BRIDGE_DEV_MODE_STOP": "Starten van Cerberus Bridge op standaard poort",
   "TR_BTC_UNITS": "Bitcoin-eenheden",
   "TR_BUG": "Fout",

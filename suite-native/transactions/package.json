@@ -11,6 +11,9 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
+        "@cerberus/blockchain-link-types": "workspace:*",
+        "@cerberus/styles": "workspace:*",
+        "@cerberus/theme": "workspace:*",
         "@mobily/ts-belt": "^3.13.1",
         "@react-navigation/native": "6.1.10",
         "@reduxjs/toolkit": "1.9.5",
@@ -36,9 +39,6 @@
         "@suite-native/link": "workspace:*",
         "@suite-native/module-settings": "workspace:*",
         "@suite-native/navigation": "workspace:*",
-        "@cerberus/blockchain-link-types": "workspace:*",
-        "@cerberus/styles": "workspace:*",
-        "@cerberus/theme": "workspace:*",
         "jotai": "1.9.1",
         "proxy-memoize": "2.0.2",
         "react": "18.2.0",

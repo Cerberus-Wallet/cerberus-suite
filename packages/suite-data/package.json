@@ -18,12 +18,12 @@
         "type-check": "yarn g:tsc --build tsconfig.json"
     },
     "dependencies": {
-        "@suite-common/suite-types": "workspace:*",
-        "@suite-common/suite-utils": "workspace:*",
         "@cerberus/connect": "workspace:*",
         "@cerberus/env-utils": "workspace:*",
         "@cerberus/urls": "workspace:*",
-        "@cerberus/utils": "workspace:*"
+        "@cerberus/utils": "workspace:*",
+        "@suite-common/suite-types": "workspace:*",
+        "@suite-common/suite-utils": "workspace:*"
     },
     "devDependencies": {
         "@mobily/ts-belt": "^3.13.1",

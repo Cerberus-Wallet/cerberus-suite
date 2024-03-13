@@ -11,6 +11,10 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
+        "@cerberus/connect": "workspace:*",
+        "@cerberus/env-utils": "workspace:*",
+        "@cerberus/styles": "workspace:*",
+        "@cerberus/theme": "workspace:*",
         "@mobily/ts-belt": "^3.13.1",
         "@react-navigation/core": "^6.4.10",
         "@react-navigation/native": "6.1.10",
@@ -32,10 +36,6 @@
         "@suite-native/storage": "workspace:*",
         "@suite-native/theme": "workspace:*",
         "@suite-native/toasts": "workspace:*",
-        "@cerberus/connect": "workspace:*",
-        "@cerberus/env-utils": "workspace:*",
-        "@cerberus/styles": "workspace:*",
-        "@cerberus/theme": "workspace:*",
         "jotai": "1.9.1",
         "react": "18.2.0",
         "react-native": "0.73.2",

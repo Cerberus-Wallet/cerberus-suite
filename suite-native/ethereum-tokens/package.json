@@ -10,6 +10,7 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
+        "@cerberus/blockchain-link": "workspace:*",
         "@mobily/ts-belt": "^3.13.1",
         "@suite-common/icons": "workspace:*",
         "@suite-common/wallet-config": "workspace:*",
@@ -18,7 +19,6 @@
         "@suite-common/wallet-utils": "workspace:*",
         "@suite-native/fiat-rates": "workspace:*",
         "@suite-native/module-settings": "workspace:*",
-        "@cerberus/blockchain-link": "workspace:*",
         "proxy-memoize": "2.0.2",
         "react": "18.2.0"
     }

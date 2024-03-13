@@ -12,10 +12,6 @@
         "lint:styles": "npx stylelint './src/**/*{.ts,.tsx}' --cache --config ../../.stylelintrc"
     },
     "dependencies": {
-        "@sentry/electron": "^4.17.0",
-        "@suite-common/formatters": "workspace:*",
-        "@suite-common/sentry": "workspace:*",
-        "@suite-common/suite-types": "workspace:*",
         "@cerberus/components": "workspace:*",
         "@cerberus/connect": "workspace:*",
         "@cerberus/ipc-proxy": "workspace:*",
@@ -25,6 +21,10 @@
         "@cerberus/theme": "workspace:*",
         "@cerberus/urls": "workspace:*",
         "@cerberus/utils": "workspace:*",
+        "@sentry/electron": "^4.17.0",
+        "@suite-common/formatters": "workspace:*",
+        "@suite-common/sentry": "workspace:*",
+        "@suite-common/suite-types": "workspace:*",
         "react": "18.2.0",
         "react-dom": "18.2.0",
         "react-markdown": "^9.0.1",

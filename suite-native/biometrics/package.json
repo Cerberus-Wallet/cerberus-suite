@@ -11,6 +11,7 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
+        "@cerberus/styles": "workspace:*",
         "@mobily/ts-belt": "^3.13.1",
         "@suite-common/icons": "workspace:*",
         "@suite-native/alerts": "workspace:*",
@@ -18,7 +19,6 @@
         "@suite-native/atoms": "workspace:*",
         "@suite-native/intl": "workspace:*",
         "@suite-native/storage": "workspace:*",
-        "@cerberus/styles": "workspace:*",
         "expo-local-authentication": "13.8.0",
         "jotai": "1.9.1",
         "react": "18.2.0",

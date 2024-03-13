@@ -11,6 +11,9 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
+        "@cerberus/connect": "workspace:*",
+        "@cerberus/styles": "workspace:*",
+        "@cerberus/theme": "workspace:*",
         "@react-navigation/bottom-tabs": "6.5.12",
         "@react-navigation/native": "6.1.10",
         "@react-navigation/native-stack": "6.9.18",
@@ -23,9 +26,6 @@
         "@suite-native/analytics": "workspace:*",
         "@suite-native/atoms": "workspace:*",
         "@suite-native/feature-flags": "workspace:*",
-        "@cerberus/connect": "workspace:*",
-        "@cerberus/styles": "workspace:*",
-        "@cerberus/theme": "workspace:*",
         "expo-navigation-bar": "2.8.1",
         "expo-system-ui": "2.9.3",
         "react": "18.2.0",

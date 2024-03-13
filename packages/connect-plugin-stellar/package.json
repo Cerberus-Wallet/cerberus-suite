@@ -26,8 +26,8 @@
         "lib/"
     ],
     "peerDependencies": {
-        "@stellar/stellar-sdk": "^11.2.2",
         "@cerberus/connect": "9.x.x",
+        "@stellar/stellar-sdk": "^11.2.2",
         "tslib": "^2.6.2"
     },
     "devDependencies": {

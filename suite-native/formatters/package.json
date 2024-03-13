@@ -11,6 +11,8 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
+        "@cerberus/blockchain-link": "workspace:*",
+        "@cerberus/styles": "workspace:*",
         "@mobily/ts-belt": "^3.13.1",
         "@suite-common/formatters": "workspace:*",
         "@suite-common/suite-types": "workspace:*",
@@ -22,8 +24,6 @@
         "@suite-native/ethereum-tokens": "workspace:*",
         "@suite-native/fiat-rates": "workspace:*",
         "@suite-native/module-settings": "workspace:*",
-        "@cerberus/blockchain-link": "workspace:*",
-        "@cerberus/styles": "workspace:*",
         "bignumber.js": "^9.1.2",
         "react": "18.2.0",
         "react-native": "0.73.2",

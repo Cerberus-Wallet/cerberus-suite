@@ -346,7 +346,7 @@
   "TR_BIP_SIG_FORMAT": "Cerberus",
   "TR_BITCOIN_ONLY_UNAVAILABLE": "A {bitcoinOnly}-ra váltás előtt frissíteni kell a firmware-t egy újabb verzióra.",
   "TR_BREAKING_ANONYMITY_CHECKBOX": "Megértem, hogy megtöröm a névtelenségemet",
-  "TR_BRIDGE_DEV_MODE_START": "Cerberus Bridge indítása a 21324-es porton",
+  "TR_BRIDGE_DEV_MODE_START": "Cerberus Bridge indítása a 21424-es porton",
   "TR_BRIDGE_DEV_MODE_STOP": "Cerberus Bridge indítása az alapértelmezett porton",
   "TR_BTC_UNITS": "Bitcoin egységek",
   "TR_BUG": "Hiba",

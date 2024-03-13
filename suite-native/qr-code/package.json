@@ -10,6 +10,8 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
+        "@cerberus/styles": "workspace:*",
+        "@cerberus/theme": "workspace:*",
         "@mobily/ts-belt": "^3.13.1",
         "@react-navigation/core": "^6.4.10",
         "@suite-common/icons": "workspace:*",
@@ -18,8 +20,6 @@
         "@suite-native/atoms": "workspace:*",
         "@suite-native/helpers": "workspace:*",
         "@suite-native/intl": "workspace:*",
-        "@cerberus/styles": "workspace:*",
-        "@cerberus/theme": "workspace:*",
         "expo-barcode-scanner": "^12.3.1",
         "react": "18.2.0",
         "react-native": "0.73.2",

@@ -1,4 +1,4 @@
-import type { types, cerberusUtils } from '@fivebinaries/coin-selection';
+import type { types, trezorUtils } from '@fivebinaries/coin-selection';
 import type { AccountAddresses, AccountUtxo } from '../../exports';
 import type { Params, Response } from '../params';
 import type { CardanoCertificate, CardanoInput, CardanoOutput } from './cardano';
@@ -49,7 +49,7 @@ export type CardanoComposeTransactionParams = {
     certificates?: CardanoCertificate[];
     withdrawals?: types.Withdrawal[];
     changeAddress: { address: string; path: string };
-    addressParameters: Parameters<(typeof cerberusUtils)['transformToCerberusOutputs']>[1];
+    addressParameters: Parameters<(typeof trezorUtils)['transformToTrezorOutputs']>[1];
     testnet?: boolean;
 };
 

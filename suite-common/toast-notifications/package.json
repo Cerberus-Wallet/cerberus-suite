@@ -11,6 +11,7 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
+        "@cerberus/connect": "workspace:*",
         "@reduxjs/toolkit": "1.9.5",
         "@suite-common/intl-types": "workspace:*",
         "@suite-common/redux-utils": "workspace:*",
@@ -18,7 +19,6 @@
         "@suite-common/suite-types": "workspace:*",
         "@suite-common/test-utils": "workspace:*",
         "@suite-common/wallet-config": "workspace:*",
-        "@cerberus/connect": "workspace:*",
         "proxy-memoize": "2.0.2"
     }
 }

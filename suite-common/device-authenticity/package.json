@@ -11,11 +11,11 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
+        "@cerberus/connect": "workspace:*",
         "@reduxjs/toolkit": "1.9.5",
         "@suite-common/redux-utils": "workspace:*",
         "@suite-common/suite-types": "workspace:*",
         "@suite-common/test-utils": "workspace:*",
-        "@suite-common/toast-notifications": "workspace:*",
-        "@cerberus/connect": "workspace:*"
+        "@suite-common/toast-notifications": "workspace:*"
     }
 }

@@ -10,11 +10,11 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
+        "@cerberus/connect": "workspace:*",
         "@suite-common/redux-utils": "workspace:*",
         "@suite-common/wallet-config": "workspace:*",
         "@suite-common/wallet-core": "workspace:*",
         "@suite-common/wallet-types": "workspace:*",
-        "@suite-common/wallet-utils": "workspace:*",
-        "@cerberus/connect": "workspace:*"
+        "@suite-common/wallet-utils": "workspace:*"
     }
 }

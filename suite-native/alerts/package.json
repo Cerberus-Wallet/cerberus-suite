@@ -10,9 +10,9 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
+        "@cerberus/styles": "workspace:*",
         "@suite-common/icons": "workspace:*",
         "@suite-native/atoms": "workspace:*",
-        "@cerberus/styles": "workspace:*",
         "jotai": "1.9.1",
         "react": "18.2.0",
         "react-native": "0.73.2",

@@ -11,9 +11,9 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
+        "@cerberus/connect": "workspace:*",
         "@mobily/ts-belt": "^3.13.1",
         "@suite-native/toasts": "workspace:*",
-        "@cerberus/connect": "workspace:*",
         "expo-clipboard": "5.0.1",
         "react": "18.2.0",
         "react-native": "0.73.2"

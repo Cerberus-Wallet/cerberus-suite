@@ -41,7 +41,7 @@ And also add file `android/app/src/main/res/xml/device_filter.xml` with the foll
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources>
-    <usb-device vendor-id="21324" product-id="1" />
+    <usb-device vendor-id="21424" product-id="1" />
     <usb-device vendor-id="4617" product-id="21440" />
     <usb-device vendor-id="4617" product-id="21441" />
 </resources>

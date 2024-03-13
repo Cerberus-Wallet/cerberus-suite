@@ -345,7 +345,7 @@
   "TR_BIP_SIG_FORMAT": "Cerberus",
   "TR_BITCOIN_ONLY_UNAVAILABLE": "Avant de passer à {bitcoinOnly}, vous devez installer la dernière version du micrologiciel.",
   "TR_BREAKING_ANONYMITY_CHECKBOX": "Je comprends que je porte atteinte à mon anonymat",
-  "TR_BRIDGE_DEV_MODE_START": "Démarrage de Cerberus Bridge sur le port 21324",
+  "TR_BRIDGE_DEV_MODE_START": "Démarrage de Cerberus Bridge sur le port 21424",
   "TR_BRIDGE_DEV_MODE_STOP": "Démarrage de Cerberus Bridge sur le port par défaut",
   "TR_BTC_UNITS": "Unités Bitcoin",
   "TR_BUG": "Bug",

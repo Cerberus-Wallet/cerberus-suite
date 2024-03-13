@@ -10,9 +10,9 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
+        "@cerberus/utils": "workspace:*",
         "@sentry/integrations": "^7.100.1",
         "@sentry/types": "^7.100.1",
-        "@suite-common/suite-utils": "workspace:*",
-        "@cerberus/utils": "workspace:*"
+        "@suite-common/suite-utils": "workspace:*"
     }
 }

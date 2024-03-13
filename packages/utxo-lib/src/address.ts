@@ -143,7 +143,7 @@ function decodeAddress(address: string, network: Network) {
     return { success: false, error: 'unknown-format' } as const;
 }
 
-// Returned address types are compatible with cerberus-address-validator types
+// Returned address types are compatible with trezor-address-validator types
 function identifyAddressType(
     format: 'base58' | 'bech32',
     version: number,

@@ -345,7 +345,7 @@
   "TR_BIP_SIG_FORMAT": "Cerberus",
   "TR_BITCOIN_ONLY_UNAVAILABLE": "Прежде чем Вы сможете перейти на прошивку только для Bitcoin, нам необходимо обновить Вашу прошивку до более новой версии.",
   "TR_BREAKING_ANONYMITY_CHECKBOX": "Я понимаю, что нарушаю свою анонимность",
-  "TR_BRIDGE_DEV_MODE_START": "Запуск Cerberus Bridge на порту 21324",
+  "TR_BRIDGE_DEV_MODE_START": "Запуск Cerberus Bridge на порту 21424",
   "TR_BRIDGE_DEV_MODE_STOP": "Запуск Cerberus Bridge на порту по умолчанию",
   "TR_BTC_UNITS": "Единицы Bitcoin",
   "TR_BUG": "Что-то не работает?",

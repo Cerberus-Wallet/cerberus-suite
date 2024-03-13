@@ -10,6 +10,8 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
+        "@cerberus/connect": "workspace:*",
+        "@cerberus/device-utils": "workspace:*",
         "@mobily/ts-belt": "^3.13.1",
         "@reduxjs/toolkit": "1.9.5",
         "@suite-common/redux-utils": "workspace:*",
@@ -24,8 +26,6 @@
         "@suite-native/config": "workspace:*",
         "@suite-native/device": "workspace:*",
         "@suite-native/device-mutex": "workspace:*",
-        "@cerberus/connect": "workspace:*",
-        "@cerberus/device-utils": "workspace:*",
         "proxy-memoize": "2.0.2",
         "react": "18.2.0",
         "react-redux": "8.0.7"

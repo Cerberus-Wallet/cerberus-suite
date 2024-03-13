@@ -291,7 +291,7 @@
   "TR_BEFORE_ANY_FURTHER_ACTIONS": "Înainte de orice altă acțiune, asigurați-vă că aveți seed-ul de rezervă. Fie că este depozitat în siguranță, fie că se află la dumneavoastră încă de pe acum. În orice caz de urgență improbabilă.",
   "TR_BIP_SIG_FORMAT": "Cerberus",
   "TR_BREAKING_ANONYMITY_CHECKBOX": "Înțeleg că renunț la anonimitate.",
-  "TR_BRIDGE_DEV_MODE_START": "Se pornește Cerberus Bridge pe portul 21324",
+  "TR_BRIDGE_DEV_MODE_START": "Se pornește Cerberus Bridge pe portul 21424",
   "TR_BRIDGE_DEV_MODE_STOP": "Se pornește Cerberus Bridge pe portul implicit",
   "TR_BTC_UNITS": "Unități Bitcoin",
   "TR_BUG": "Bug",

@@ -10,6 +10,9 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
+        "@cerberus/connect": "workspace:*",
+        "@cerberus/transport-native": "workspace:*",
+        "@cerberus/utils": "workspace:*",
         "@reduxjs/toolkit": "1.9.5",
         "@suite-common/analytics": "workspace:*",
         "@suite-common/logger": "workspace:*",
@@ -30,9 +33,6 @@
         "@suite-native/module-settings": "workspace:*",
         "@suite-native/storage": "workspace:*",
         "@suite-native/toasts": "workspace:*",
-        "@cerberus/connect": "workspace:*",
-        "@cerberus/transport-native": "workspace:*",
-        "@cerberus/utils": "workspace:*",
         "expo-device": "5.9.3",
         "react": "18.2.0",
         "react-native": "0.73.2",

@@ -10,15 +10,15 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
+        "@cerberus/connect": "workspace:*",
+        "@cerberus/device-utils": "workspace:*",
+        "@cerberus/utils": "workspace:*",
         "@mobily/ts-belt": "^3.13.1",
         "@reduxjs/toolkit": "1.9.5",
         "@suite-common/redux-utils": "workspace:*",
         "@suite-common/suite-types": "workspace:*",
         "@suite-common/wallet-config": "workspace:*",
         "@suite-common/wallet-types": "workspace:*",
-        "@cerberus/connect": "workspace:*",
-        "@cerberus/device-utils": "workspace:*",
-        "@cerberus/utils": "workspace:*",
         "dropbox": "^10.34.0",
         "fake-indexeddb": "^4.0.2",
         "redux": "^4.2.1",

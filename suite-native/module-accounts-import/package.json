@@ -11,6 +11,11 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
+        "@cerberus/blockchain-link": "workspace:*",
+        "@cerberus/blockchain-link-types": "workspace:*",
+        "@cerberus/connect": "workspace:*",
+        "@cerberus/styles": "workspace:*",
+        "@cerberus/utxo-lib": "workspace:*",
         "@mobily/ts-belt": "^3.13.1",
         "@react-navigation/core": "^6.4.10",
         "@react-navigation/native": "6.1.10",
@@ -40,11 +45,6 @@
         "@suite-native/navigation": "workspace:*",
         "@suite-native/qr-code": "workspace:*",
         "@suite-native/video-assets": "workspace:*",
-        "@cerberus/blockchain-link": "workspace:*",
-        "@cerberus/blockchain-link-types": "workspace:*",
-        "@cerberus/connect": "workspace:*",
-        "@cerberus/styles": "workspace:*",
-        "@cerberus/utxo-lib": "workspace:*",
         "lottie-react-native": "6.6.0",
         "react": "18.2.0",
         "react-native": "0.73.2",

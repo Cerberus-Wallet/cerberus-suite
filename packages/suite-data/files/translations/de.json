@@ -345,7 +345,7 @@
   "TR_BIP_SIG_FORMAT": "Cerberus",
   "TR_BITCOIN_ONLY_UNAVAILABLE": "Bevor du zu {bitcoinOnly} wechseln kannst, musst du deine Firmware auf die neueste Version aktualisieren.",
   "TR_BREAKING_ANONYMITY_CHECKBOX": "Ich weiß, dass ich meiner Anonymität schade",
-  "TR_BRIDGE_DEV_MODE_START": "Starte Cerberus Bridge auf Port 21324",
+  "TR_BRIDGE_DEV_MODE_START": "Starte Cerberus Bridge auf Port 21424",
   "TR_BRIDGE_DEV_MODE_STOP": "Starte Cerberus Bridge auf dem Standardport",
   "TR_BTC_UNITS": "Bitcoin-Einheiten",
   "TR_BUG": "Fehler",

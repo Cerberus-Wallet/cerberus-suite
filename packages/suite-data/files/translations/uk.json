@@ -143,7 +143,7 @@
   "TR_BCH_ADDRESS_INFO": "Bitcoin Cash змінив формат адрес на cashaddr. Дізнайтеся більше про те, як конвертувати вашу адресу в нашому блозі. {TR_LEARN_MORE}",
   "TR_BEFORE_ANY_FURTHER_ACTIONS": "Перед оновленням, будь ласка, переконайтеся, що у вас є seed-фраза.",
   "TR_BIP_SIG_FORMAT": "Cerberus",
-  "TR_BRIDGE_DEV_MODE_START": "Запуск Cerberus Bridge на порту 21324",
+  "TR_BRIDGE_DEV_MODE_START": "Запуск Cerberus Bridge на порту 21424",
   "TR_BRIDGE_DEV_MODE_STOP": "Запуск Cerberus Bridge на стандартному порту",
   "TR_BUG": "Баг",
   "TR_BUMP_FEE": "Змінити комісію",

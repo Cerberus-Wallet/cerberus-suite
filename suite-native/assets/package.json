@@ -10,6 +10,7 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
+        "@cerberus/styles": "workspace:*",
         "@mobily/ts-belt": "^3.13.1",
         "@react-navigation/native": "6.1.10",
         "@suite-common/assets": "workspace:*",
@@ -27,7 +28,6 @@
         "@suite-native/intl": "workspace:*",
         "@suite-native/module-settings": "workspace:*",
         "@suite-native/navigation": "workspace:*",
-        "@cerberus/styles": "workspace:*",
         "bignumber.js": "^9.1.2",
         "jotai": "1.9.1",
         "proxy-memoize": "2.0.2",

@@ -11,6 +11,8 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
+        "@cerberus/blockchain-link": "workspace:*",
+        "@cerberus/connect": "workspace:*",
         "@mobily/ts-belt": "^3.13.1",
         "@suite-common/fiat-services": "workspace:*",
         "@suite-common/suite-config": "workspace:*",
@@ -21,8 +23,6 @@
         "@suite-common/wallet-core": "workspace:*",
         "@suite-common/wallet-types": "workspace:*",
         "@suite-common/wallet-utils": "workspace:*",
-        "@cerberus/blockchain-link": "workspace:*",
-        "@cerberus/connect": "workspace:*",
         "bignumber.js": "^9.1.2",
         "date-fns": "^2.30.0",
         "react": "18.2.0",

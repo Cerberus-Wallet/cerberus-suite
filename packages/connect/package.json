@@ -49,9 +49,6 @@
         "prepublish": "yarn tsx ../../scripts/prepublish.js"
     },
     "dependencies": {
-        "@ethereumjs/common": "^4.2.0",
-        "@ethereumjs/tx": "^5.2.1",
-        "@fivebinaries/coin-selection": "2.2.1",
         "@cerberus/blockchain-link": "workspace:*",
         "@cerberus/blockchain-link-types": "workspace:*",
         "@cerberus/connect-analytics": "workspace:*",
@@ -62,6 +59,9 @@
         "@cerberus/transport": "workspace:*",
         "@cerberus/utils": "workspace:*",
         "@cerberus/utxo-lib": "workspace:*",
+        "@ethereumjs/common": "^4.2.0",
+        "@ethereumjs/tx": "^5.2.1",
+        "@fivebinaries/coin-selection": "2.2.1",
         "bignumber.js": "^9.1.2",
         "blakejs": "^1.2.1",
         "bs58": "^5.0.0",

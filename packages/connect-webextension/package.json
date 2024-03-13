@@ -45,12 +45,12 @@
         "events": "^3.3.0"
     },
     "devDependencies": {
+        "@cerberus/cerberus-user-env-link": "workspace:*",
+        "@cerberus/node-utils": "workspace:*",
         "@playwright/browser-chromium": "^1.41.2",
         "@playwright/browser-firefox": "^1.41.2",
         "@playwright/browser-webkit": "^1.41.2",
         "@playwright/test": "^1.41.2",
-        "@cerberus/node-utils": "workspace:*",
-        "@cerberus/cerberus-user-env-link": "workspace:*",
         "@types/chrome": "^0.0.260",
         "copy-webpack-plugin": "^12.0.2",
         "terser-webpack-plugin": "^5.3.9",

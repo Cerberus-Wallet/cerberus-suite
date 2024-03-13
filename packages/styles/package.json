@@ -11,8 +11,8 @@
         "test:unit": "yarn g:jest -c ../../jest.config.base.js"
     },
     "dependencies": {
-        "@mobily/ts-belt": "^3.13.1",
         "@cerberus/theme": "workspace:*",
+        "@mobily/ts-belt": "^3.13.1",
         "css-in-js-utils": "^3.1.0",
         "csstype": "^3.1.2",
         "fela": "^12.2.1",
