@@ -63,24 +63,24 @@ export const init =
 
         const { host } = window.location;
 
-        if (process?.env?.__TREZOR_CONNECT_SRC && host !== 'connect.trezor.io') {
-            window.__TREZOR_CONNECT_SRC = process?.env?.__TREZOR_CONNECT_SRC;
+        if (process?.env?.__CERBERUS_CONNECT_SRC && host !== 'connect.trezor.io') {
+            window.__CERBERUS_CONNECT_SRC = process?.env?.__CERBERUS_CONNECT_SRC;
         }
         // yarn workspace @trezor/connect-explorer dev starts @trezor/connect-web on localhost port
         // so we may use it
-        if (!window.__TREZOR_CONNECT_SRC && host.startsWith('localhost')) {
+        if (!window.__CERBERUS_CONNECT_SRC && host.startsWith('localhost')) {
             // use local connect for local development
-            window.__TREZOR_CONNECT_SRC = `${window.location.origin}/`;
+            window.__CERBERUS_CONNECT_SRC = `${window.location.origin}/`;
         }
 
         if (options.connectSrc) {
-            window.__TREZOR_CONNECT_SRC = options.connectSrc;
+            window.__CERBERUS_CONNECT_SRC = options.connectSrc;
         }
 
-        if (!window.__TREZOR_CONNECT_SRC) {
+        if (!window.__CERBERUS_CONNECT_SRC) {
             console.log('using production @trezor/connect');
         } else {
-            console.log('using @trezor/connect hosted on: ', window.__TREZOR_CONNECT_SRC);
+            console.log('using @trezor/connect hosted on: ', window.__CERBERUS_CONNECT_SRC);
         }
 
         const connectOptions = {

@@ -257,7 +257,7 @@ export default class GetAccountInfo extends AbstractMethod<'getAccountInfo', Req
                             address_n,
                             typeof request.derivationType !== 'undefined'
                                 ? request.derivationType
-                                : PROTO.CardanoDerivationType.ICARUS_TREZOR,
+                                : PROTO.CardanoDerivationType.ICARUS_CERBERUS,
                         );
                     if (accountDescriptor) {
                         descriptor = accountDescriptor.descriptor;
@@ -354,7 +354,7 @@ export default class GetAccountInfo extends AbstractMethod<'getAccountInfo', Req
             derivationType:
                 typeof request.derivationType !== 'undefined'
                     ? request.derivationType
-                    : PROTO.CardanoDerivationType.ICARUS_TREZOR,
+                    : PROTO.CardanoDerivationType.ICARUS_CERBERUS,
         });
         discovery.on('progress', accounts => {
             this.postMessage(

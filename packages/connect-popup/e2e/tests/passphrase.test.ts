@@ -13,7 +13,7 @@ const url = process.env.URL || 'http://localhost:8088/';
 const bridgeVersion = '2.0.31';
 
 const isWebExtension = process.env.IS_WEBEXTENSION === 'true';
-const connectSrc = process.env.TREZOR_CONNECT_SRC;
+const connectSrc = process.env.CERBERUS_CONNECT_SRC;
 
 let context: any = null;
 let browserContext: BrowserContext | undefined;

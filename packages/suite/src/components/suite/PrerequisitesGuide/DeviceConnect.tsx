@@ -30,7 +30,7 @@ export const DeviceConnect = ({ isWebUsbTransport }: DeviceConnectProps) => {
 
     return (
         <TroubleshootingTips
-            label={<Translation id="TR_STILL_DONT_SEE_YOUR_TREZOR" />}
+            label={<Translation id="TR_STILL_DONT_SEE_YOUR_CERBERUS" />}
             items={items}
             offerWebUsb={isWebUsbTransport}
             cta={isWebUsbTransport ? <WebUsbButton data-test="@webusb-button" /> : undefined}

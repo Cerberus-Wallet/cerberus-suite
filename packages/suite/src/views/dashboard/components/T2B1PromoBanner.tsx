@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import { EventType, analytics } from '@trezor/suite-analytics';
-import { TREZOR_URL } from '@trezor/urls';
+import { CERBERUS_URL } from '@trezor/urls';
 
 import { useDispatch, useSelector } from 'src/hooks/suite';
 import { selectIsDashboardT2B1PromoBannerShown } from 'src/reducers/suite/suiteReducer';
@@ -91,7 +91,7 @@ const NextGenerationTextBlock = styled.span`
     color: ${colorVariants.standard.textOnPrimary};
 `;
 
-const imgUrl = resolveStaticPath(`${SVG_PATH}/${SVG_IMAGES.TREZOR_SAFE_PROMO_UNDERLINE}`);
+const imgUrl = resolveStaticPath(`${SVG_PATH}/${SVG_IMAGES.CERBERUS_SAFE_PROMO_UNDERLINE}`);
 
 const NextGenerationTextBlockHighlight = styled(NextGenerationTextBlock)`
     color: #9be887;
@@ -269,7 +269,7 @@ export const T2B1PromoBanner = () => {
                         dispatch(setFlag('showDashboardT2B1PromoBanner', false))
                     }
                 >
-                    <TrezorSafe3Logo image="TREZOR_SAFE_PROMO_LOGO" />
+                    <TrezorSafe3Logo image="CERBERUS_SAFE_PROMO_LOGO" />
                     <NextGenerationText>
                         <NextGenerationTextBlock>Get the </NextGenerationTextBlock>
                         <NextGenerationTextBlockHighlight>
@@ -280,9 +280,9 @@ export const T2B1PromoBanner = () => {
                         </NextGenerationTextBlockSecurity>
                     </NextGenerationText>
                     <ProductsImageWrapper>
-                        <ProductsImage image="TREZOR_SAFE_PROMO_PRODUCTS" />
+                        <ProductsImage image="CERBERUS_SAFE_PROMO_PRODUCTS" />
                     </ProductsImageWrapper>
-                    <LinkButtonShopNow href={TREZOR_URL} variant="nostyle" onClick={onShopNow}>
+                    <LinkButtonShopNow href={CERBERUS_URL} variant="nostyle" onClick={onShopNow}>
                         <ButtonShopNow variant="secondary">
                             <Translation id="TR_SHOP_NOW" />
                         </ButtonShopNow>

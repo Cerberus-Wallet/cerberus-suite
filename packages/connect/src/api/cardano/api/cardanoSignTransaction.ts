@@ -231,7 +231,7 @@ export default class CardanoSignTransaction extends AbstractMethod<
             derivationType:
                 typeof payload.derivationType !== 'undefined'
                     ? payload.derivationType
-                    : PROTO.CardanoDerivationType.ICARUS_TREZOR,
+                    : PROTO.CardanoDerivationType.ICARUS_CERBERUS,
             includeNetworkId: payload.includeNetworkId,
             unsignedTx: 'unsignedTx' in payload ? payload.unsignedTx : undefined,
             testnet: 'testnet' in payload ? payload.testnet : undefined,

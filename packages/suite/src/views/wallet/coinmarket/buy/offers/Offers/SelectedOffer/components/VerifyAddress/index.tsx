@@ -204,7 +204,7 @@ const VerifyAddressComponent = () => {
                             }
                         }}
                     >
-                        <Translation id="TR_BUY_CONFIRM_ON_TREZOR" />
+                        <Translation id="TR_BUY_CONFIRM_ON_CERBERUS" />
                     </Button>
                 )}
                 {addressVerified && addressVerified === address && (

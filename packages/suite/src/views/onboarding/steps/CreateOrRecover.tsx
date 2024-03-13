@@ -14,7 +14,7 @@ const CreateOrRecoverStep = () => {
     return (
         <OnboardingStepBox
             image="WALLET"
-            heading={<Translation id="TR_WELCOME_TO_TREZOR_TEXT_WALLET_CREATION" />}
+            heading={<Translation id="TR_WELCOME_TO_CERBERUS_TEXT_WALLET_CREATION" />}
         >
             <OptionsWrapper>
                 <OnboardingOption

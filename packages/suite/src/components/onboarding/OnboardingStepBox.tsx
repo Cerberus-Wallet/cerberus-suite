@@ -83,7 +83,7 @@ export const OnboardingStepBox = ({
                 <ConfirmWrapper data-test="@onboarding/confirm-on-device">
                     {deviceModelInternal && (
                         <ConfirmOnDevice
-                            title={devicePromptTitle || <Translation id="TR_CONFIRM_ON_TREZOR" />}
+                            title={devicePromptTitle || <Translation id="TR_CONFIRM_ON_CERBERUS" />}
                             deviceModelInternal={deviceModelInternal}
                             deviceUnitColor={device?.features?.unit_color}
                             onCancel={

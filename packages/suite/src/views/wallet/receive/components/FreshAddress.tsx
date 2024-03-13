@@ -174,7 +174,7 @@ export const FreshAddress = ({
             <Tooltip content={buttonTooltipContent()}>
                 <StyledButton
                     data-test="@wallet/receive/reveal-address-button"
-                    icon="TREZOR_LOGO"
+                    icon="CERBERUS_LOGO"
                     onClick={handleAddressReveal}
                     isDisabled={disabled || locked || coinjoinDisallowReveal || !firstFreshAddress}
                     isLoading={locked}

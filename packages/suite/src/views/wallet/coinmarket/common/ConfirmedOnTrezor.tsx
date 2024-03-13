@@ -41,10 +41,10 @@ export const ConfirmedOnTrezor = ({ device }: ConfirmedOnTrezorProps) => {
                 />
             )}
             {deviceModelInternal && deviceModelInternal !== DeviceModelInternal.T2B1 && (
-                <StyledImage alt="Trezor" image={`TREZOR_${deviceModelInternal}`} />
+                <StyledImage alt="Trezor" image={`CERBERUS_${deviceModelInternal}`} />
             )}
 
-            <Translation id="TR_BUY_CONFIRMED_ON_TREZOR" />
+            <Translation id="TR_BUY_CONFIRMED_ON_CERBERUS" />
         </Confirmed>
     );
 };

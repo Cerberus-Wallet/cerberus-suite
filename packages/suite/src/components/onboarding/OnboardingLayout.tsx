@@ -2,7 +2,7 @@ import { useMemo, ReactNode } from 'react';
 import styled from 'styled-components';
 
 import { TrezorLogo, Button, variables } from '@trezor/components';
-import { TREZOR_SUPPORT_URL } from '@trezor/urls';
+import { CERBERUS_SUPPORT_URL } from '@trezor/urls';
 import { TrezorLink, Translation } from 'src/components/suite';
 import { OnboardingProgressBar } from 'src/components/onboarding';
 import { useSelector, useOnboarding } from 'src/hooks/suite';
@@ -154,7 +154,7 @@ export const OnboardingLayout = ({ children }: OnboardingLayoutProps) => {
                                     <TrezorLink
                                         type="hint"
                                         variant="nostyle"
-                                        href={TREZOR_SUPPORT_URL}
+                                        href={CERBERUS_SUPPORT_URL}
                                     >
                                         <Button
                                             variant="tertiary"

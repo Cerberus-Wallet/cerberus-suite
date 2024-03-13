@@ -184,10 +184,10 @@ describe('cardanoStakingReducer reducer', () => {
         });
     });
 
-    it('CARDANO_STAKING.SET_TREZOR_POOLS mainnet', () => {
+    it('CARDANO_STAKING.SET_CERBERUS_POOLS mainnet', () => {
         expect(
             reducer(undefined, {
-                type: CARDANO_STAKING.SET_TREZOR_POOLS,
+                type: CARDANO_STAKING.SET_CERBERUS_POOLS,
                 network: 'mainnet',
                 trezorPools: {
                     next: {
@@ -248,10 +248,10 @@ describe('cardanoStakingReducer reducer', () => {
         });
     });
 
-    it('CARDANO_STAKING.SET_TREZOR_POOLS preview', () => {
+    it('CARDANO_STAKING.SET_CERBERUS_POOLS preview', () => {
         expect(
             reducer(undefined, {
-                type: CARDANO_STAKING.SET_TREZOR_POOLS,
+                type: CARDANO_STAKING.SET_CERBERUS_POOLS,
                 network: 'preview',
                 trezorPools: {
                     next: {

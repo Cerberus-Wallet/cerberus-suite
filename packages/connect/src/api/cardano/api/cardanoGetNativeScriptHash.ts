@@ -35,7 +35,7 @@ export default class CardanoGetNativeScriptHash extends AbstractMethod<
             derivation_type:
                 typeof payload.derivationType !== 'undefined'
                     ? payload.derivationType
-                    : PROTO.CardanoDerivationType.ICARUS_TREZOR,
+                    : PROTO.CardanoDerivationType.ICARUS_CERBERUS,
         };
     }
 

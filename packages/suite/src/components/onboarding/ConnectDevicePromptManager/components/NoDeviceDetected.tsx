@@ -15,7 +15,7 @@ interface NoDeviceDetectedProps {
 
 export const NoDeviceDetected = ({ offerWebUsb }: NoDeviceDetectedProps) => (
     <TroubleshootingTips
-        label={<Translation id="TR_STILL_DONT_SEE_YOUR_TREZOR" />}
+        label={<Translation id="TR_STILL_DONT_SEE_YOUR_CERBERUS" />}
         items={[
             TROUBLESHOOTING_TIP_BRIDGE_STATUS,
             TROUBLESHOOTING_TIP_BRIDGE_INSTALL,

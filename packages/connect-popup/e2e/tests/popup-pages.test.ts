@@ -12,7 +12,7 @@ let popup: Page;
 let persistentContext: BrowserContext | undefined;
 
 const isWebExtension = process.env.IS_WEBEXTENSION === 'true';
-const connectSrc = process.env.TREZOR_CONNECT_SRC;
+const connectSrc = process.env.CERBERUS_CONNECT_SRC;
 
 test.beforeAll(async () => {
     await TrezorUserEnvLink.connect();

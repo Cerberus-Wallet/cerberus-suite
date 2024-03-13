@@ -15,7 +15,7 @@ export const UpdateFirmware = () => {
     return (
         <Banner
             variant="info"
-            body={<Translation id="TR_NEW_TREZOR_FIRMWARE_IS_AVAILABLE_DOT" />}
+            body={<Translation id="TR_NEW_CERBERUS_FIRMWARE_IS_AVAILABLE_DOT" />}
             action={action}
         />
     );

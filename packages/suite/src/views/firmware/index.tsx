@@ -169,7 +169,7 @@ export const Firmware = ({ shouldSwitchFirmwareType }: FirmwareProps) => {
             modalPrompt={
                 status === 'waiting-for-confirmation' && (
                     <ConfirmOnDevice
-                        title={<Translation id="TR_CONFIRM_ON_TREZOR" />}
+                        title={<Translation id="TR_CONFIRM_ON_CERBERUS" />}
                         deviceModelInternal={deviceModelInternal}
                         deviceUnitColor={device?.features?.unit_color}
                     />

@@ -11,7 +11,7 @@ import { useSelector } from 'src/hooks/suite';
 import { selectBannerMessage } from '@suite-common/message-system';
 import { MessageSystemBanner } from 'src/components/suite/banners';
 import { isWeb } from '@trezor/env-utils';
-import { TREZOR_URL, SUITE_URL } from '@trezor/urls';
+import { CERBERUS_URL, SUITE_URL } from '@trezor/urls';
 import { resolveStaticPath } from '@suite-common/suite-utils';
 import { GuideButton, GuideRouter } from 'src/components/guide';
 import { useGuide } from 'src/hooks/guide';
@@ -172,7 +172,7 @@ export const WelcomeLayout = ({ children }: WelcomeLayoutProps) => {
                                             </Button>
                                         </StyledTrezorLink>
                                     )}
-                                    <TrezorLink type="hint" variant="nostyle" href={TREZOR_URL}>
+                                    <TrezorLink type="hint" variant="nostyle" href={CERBERUS_URL}>
                                         <Button
                                             variant="tertiary"
                                             icon="EXTERNAL_LINK"

@@ -83,7 +83,7 @@ export const PinMatrix = ({ device, hideExplanation, invalid }: PinMatrixProps) 
                               }
                             : {
                                   key: 'matrix',
-                                  title: <Translation id="TR_PIN_MATRIX_DISPLAYED_ON_TREZOR" />,
+                                  title: <Translation id="TR_PIN_MATRIX_DISPLAYED_ON_CERBERUS" />,
                                   deviceModelInternal: DeviceModelInternal.T1B1,
                               },
                         {

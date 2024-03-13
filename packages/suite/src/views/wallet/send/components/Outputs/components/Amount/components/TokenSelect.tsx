@@ -77,9 +77,9 @@ export const buildTokenOptions = (
             result.push({
                 label: (
                     <UnrecognizedTokensHeading>
-                        <Translation id="TR_TOKEN_UNRECOGNIZED_BY_TREZOR" />
+                        <Translation id="TR_TOKEN_UNRECOGNIZED_BY_CERBERUS" />
                         <TooltipSymbol
-                            content={<Translation id="TR_TOKEN_UNRECOGNIZED_BY_TREZOR_TOOLTIP" />}
+                            content={<Translation id="TR_TOKEN_UNRECOGNIZED_BY_CERBERUS_TOOLTIP" />}
                         />
                     </UnrecognizedTokensHeading>
                 ),

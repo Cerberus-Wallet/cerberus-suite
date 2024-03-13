@@ -553,7 +553,7 @@ export const networks = {
     },
 } as const;
 
-export const TREZOR_CONNECT_BACKENDS = [
+export const CERBERUS_CONNECT_BACKENDS = [
     'blockbook',
     'electrum',
     'ripple',
@@ -563,7 +563,7 @@ export const TREZOR_CONNECT_BACKENDS = [
 export const NON_STANDARD_BACKENDS = ['coinjoin'] as const;
 
 export type BackendType =
-    | (typeof TREZOR_CONNECT_BACKENDS)[number]
+    | (typeof CERBERUS_CONNECT_BACKENDS)[number]
     | (typeof NON_STANDARD_BACKENDS)[number];
 
 type Networks = typeof networks;

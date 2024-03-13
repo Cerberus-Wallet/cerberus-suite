@@ -4,7 +4,7 @@ import type {
     BlockchainNetworks,
     BackendSettings,
 } from '@suite-common/wallet-types';
-import { TREZOR_CONNECT_BACKENDS, BackendType, NetworkSymbol } from '@suite-common/wallet-config';
+import { CERBERUS_CONNECT_BACKENDS, BackendType, NetworkSymbol } from '@suite-common/wallet-config';
 
 export const getDefaultBackendType = (coin: NetworkSymbol) => {
     if (coin === 'ada' || coin === 'tada') {
@@ -45,10 +45,10 @@ export const getCustomBackends = (blockchains: BlockchainNetworks): CustomBacken
 
 export const isElectrumUrl = (value: string) => !!parseElectrumUrl(value);
 
-// check if account.backendType or NETWORK.accountType.backendType is supported by TrezorConnect api (defined in TREZOR_CONNECT_BACKENDS)
+// check if account.backendType or NETWORK.accountType.backendType is supported by TrezorConnect api (defined in CERBERUS_CONNECT_BACKENDS)
 // if it's not then different (non-standard) api should be used for fetching data
 export const isTrezorConnectBackendType = (type?: BackendType) => {
     if (!type) return true; // use TrezorConnect by default if not defined
 
-    return !!TREZOR_CONNECT_BACKENDS.find(b => b === type);
+    return !!CERBERUS_CONNECT_BACKENDS.find(b => b === type);
 };

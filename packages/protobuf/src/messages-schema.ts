@@ -641,7 +641,7 @@ export const ProdTestT1 = Type.Object({
 export enum CardanoDerivationType {
     LEDGER = 0,
     ICARUS = 1,
-    ICARUS_TREZOR = 2,
+    ICARUS_CERBERUS = 2,
 }
 
 export type EnumCardanoDerivationType = Static<typeof EnumCardanoDerivationType>;

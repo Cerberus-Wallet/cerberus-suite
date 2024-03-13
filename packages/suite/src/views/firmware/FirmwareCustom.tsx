@@ -171,7 +171,7 @@ export const FirmwareCustom = () => {
             modalPrompt={
                 status === 'waiting-for-confirmation' && (
                     <ConfirmOnDevice
-                        title={<Translation id="TR_CONFIRM_ON_TREZOR" />}
+                        title={<Translation id="TR_CONFIRM_ON_CERBERUS" />}
                         deviceModelInternal={liveDeviceModelInternal}
                         deviceUnitColor={liveDevice?.features?.unit_color}
                     />

@@ -121,7 +121,7 @@ export const CoinmarketTermsModal = ({
             }
         >
             <Flex>
-                <SecurityStyledIcon size={24} icon={`TREZOR_${DeviceModelInternal.T2T1}`} />
+                <SecurityStyledIcon size={24} icon={`CERBERUS_${DeviceModelInternal.T2T1}`} />
 
                 <ContentWrapper>
                     <TermsHeader>

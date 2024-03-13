@@ -10,8 +10,8 @@ import {
     TRANSPORT,
     WEBEXTENSION,
 } from '@trezor/connect';
-import { TREZOR_USB_DESCRIPTORS } from '@trezor/transport/lib/constants';
-import { SUITE_BRIDGE_URL, SUITE_UDEV_URL, TREZOR_SUPPORT_URL } from '@trezor/urls';
+import { CERBERUS_USB_DESCRIPTORS } from '@trezor/transport/lib/constants';
+import { SUITE_BRIDGE_URL, SUITE_UDEV_URL, CERBERUS_SUPPORT_URL } from '@trezor/urls';
 import { container, getState, showView, postMessage } from './common';
 import { reactEventBus } from '@trezor/connect-ui/src/utils/eventBus';
 
@@ -54,7 +54,7 @@ const initWebUsbButton = (showLoader: boolean) => {
                 return;
             }
             await window.navigator.usb.requestDevice({
-                filters: TREZOR_USB_DESCRIPTORS,
+                filters: CERBERUS_USB_DESCRIPTORS,
             });
 
             const { iframe, core } = getState();
@@ -177,7 +177,7 @@ export const selectDevice = (payload: UiRequestSelectDevice['payload']) => {
                 const { systemInfo } = getState();
                 // default explanation: contact support
 
-                let explanationContent = `Please <a href="${TREZOR_SUPPORT_URL}" target="_blank" rel="noreferrer noopener" onclick="window.closeWindow();">contact support.</a>`;
+                let explanationContent = `Please <a href="${CERBERUS_SUPPORT_URL}" target="_blank" rel="noreferrer noopener" onclick="window.closeWindow();">contact support.</a>`;
                 // linux + LIBUSB_ERROR handling
                 if (
                     systemInfo?.os.family === 'Linux' &&

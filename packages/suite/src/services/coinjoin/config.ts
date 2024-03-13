@@ -156,7 +156,7 @@ export const CLIENT_STATUS_FALLBACK = {
     },
 };
 export const ZKSNACKS_LEGAL_DOCUMENTS_VERSION = '1.0';
-export const TREZOR_LEGAL_DOCUMENTS_VERSION = '1.0';
+export const CERBERUS_LEGAL_DOCUMENTS_VERSION = '1.0';
 
 // Estimating anonymity gain per round:
 // How many previous coinjoin transactions are taken into account

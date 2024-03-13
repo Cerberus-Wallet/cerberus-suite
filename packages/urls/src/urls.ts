@@ -1,8 +1,8 @@
-export const TREZOR_URL = 'https://trezor.io';
-export const TREZOR_FORUM_URL = 'https://forum.trezor.io/';
-export const TREZOR_START_URL = 'https://trezor.io/start';
-export const TREZOR_SUPPORT_URL = 'https://trezor.io/support';
-export const TREZOR_RESELLERS_URL = 'https://trezor.io/resellers/';
+export const CERBERUS_URL = 'https://trezor.io';
+export const CERBERUS_FORUM_URL = 'https://forum.trezor.io/';
+export const CERBERUS_START_URL = 'https://trezor.io/start';
+export const CERBERUS_SUPPORT_URL = 'https://trezor.io/support';
+export const CERBERUS_RESELLERS_URL = 'https://trezor.io/resellers/';
 
 export const DATA_URL = 'https://data.trezor.io/';
 export const DATA_TOS_URL = 'https://data.trezor.io/legal/wallet-terms.pdf';

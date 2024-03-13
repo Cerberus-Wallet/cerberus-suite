@@ -264,7 +264,7 @@ export const ReconnectDevicePrompt = ({
             modalPrompt={
                 isRebootAutomatic && (
                     <ConfirmOnDevice
-                        title={<Translation id="TR_CONFIRM_ON_TREZOR" />}
+                        title={<Translation id="TR_CONFIRM_ON_CERBERUS" />}
                         deviceModelInternal={deviceModelInternal}
                         deviceUnitColor={device?.features?.unit_color}
                         isConfirmed={rebootPhase !== 'wait-for-confirm'}

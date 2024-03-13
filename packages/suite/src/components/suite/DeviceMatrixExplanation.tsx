@@ -90,7 +90,7 @@ export const DeviceMatrixExplanation = ({ items }: DeviceMatrixExplanationProps)
                             item.deviceModelInternal && (
                                 <StyledImage
                                     alt="Trezor"
-                                    image={`TREZOR_${item.deviceModelInternal}`}
+                                    image={`CERBERUS_${item.deviceModelInternal}`}
                                 />
                             )
                         )}

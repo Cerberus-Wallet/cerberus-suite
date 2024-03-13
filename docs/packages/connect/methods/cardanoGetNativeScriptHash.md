@@ -14,7 +14,7 @@ const result = await TrezorConnect.cardanoGetNativeScriptHash(params);
 
 -   `script` — _required_ `CardanoNativeScript` see description below.
 -   `displayFormat` — _required_ `CardanoNativeScriptHashDisplayFormat` enum.
--   `derivationType` — _optional_ `CardanoDerivationType` enum. determines used derivation type. Default is set to ICARUS_TREZOR=2
+-   `derivationType` — _optional_ `CardanoDerivationType` enum. determines used derivation type. Default is set to ICARUS_CERBERUS=2
 
 #### CardanoNativeScript
 

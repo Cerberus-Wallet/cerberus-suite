@@ -665,9 +665,9 @@ export default defineMessages({
         defaultMessage: 'Slippage must be in the range 0.01% - 50%',
         id: 'TR_EXCHANGE_SWAP_SLIPPAGE_NOT_IN_RANGE',
     },
-    TR_EXCHANGE_CONFIRM_ON_TREZOR_SEND: {
+    TR_EXCHANGE_CONFIRM_ON_CERBERUS_SEND: {
         defaultMessage: 'Confirm on Trezor & send',
-        id: 'TR_EXCHANGE_CONFIRM_ON_TREZOR_SEND',
+        id: 'TR_EXCHANGE_CONFIRM_ON_CERBERUS_SEND',
     },
     TR_EXCHANGE_RECEIVE_ACCOUNT_QUESTION_TOOLTIP: {
         id: 'TR_EXCHANGE_RECEIVE_ACCOUNT_QUESTION_TOOLTIP',
@@ -731,9 +731,9 @@ export default defineMessages({
         defaultMessage: "Use an account ({symbol}) that isn't in Suite",
         id: 'TR_EXCHANGE_USE_NON_SUITE_ACCOUNT',
     },
-    TR_EXCHANGE_CONFIRM_ON_TREZOR: {
+    TR_EXCHANGE_CONFIRM_ON_CERBERUS: {
         defaultMessage: 'Confirm on Trezor',
-        id: 'TR_EXCHANGE_CONFIRM_ON_TREZOR',
+        id: 'TR_EXCHANGE_CONFIRM_ON_CERBERUS',
     },
     TR_EXCHANGE_GO_TO_PAYMENT: {
         defaultMessage: 'Continue transaction',
@@ -924,9 +924,9 @@ export default defineMessages({
         defaultMessage: 'Send to {providerName}’s address',
         id: 'TR_SELL_SEND_TO',
     },
-    TR_SELL_CONFIRM_ON_TREZOR_SEND: {
+    TR_SELL_CONFIRM_ON_CERBERUS_SEND: {
         defaultMessage: 'Confirm on Trezor & Send',
-        id: 'TR_SELL_CONFIRM_ON_TREZOR_SEND',
+        id: 'TR_SELL_CONFIRM_ON_CERBERUS_SEND',
     },
     TR_SELL_BANK_ACCOUNT: {
         defaultMessage: 'Your bank accounts',
@@ -1811,9 +1811,9 @@ export default defineMessages({
         defaultMessage: 'Receive address',
         id: 'TR_BUY_RECEIVING_ADDRESS',
     },
-    TR_BUY_CONFIRMED_ON_TREZOR: {
+    TR_BUY_CONFIRMED_ON_CERBERUS: {
         defaultMessage: 'Confirmed on Trezor',
-        id: 'TR_BUY_CONFIRMED_ON_TREZOR',
+        id: 'TR_BUY_CONFIRMED_ON_CERBERUS',
     },
     TR_BUY_OFFERS_FOR: {
         defaultMessage: 'Offers for',
@@ -1827,9 +1827,9 @@ export default defineMessages({
         defaultMessage: 'Compare offers',
         id: 'TR_BUY_SHOW_OFFERS',
     },
-    TR_BUY_CONFIRM_ON_TREZOR: {
+    TR_BUY_CONFIRM_ON_CERBERUS: {
         defaultMessage: 'Confirm on Trezor',
-        id: 'TR_BUY_CONFIRM_ON_TREZOR',
+        id: 'TR_BUY_CONFIRM_ON_CERBERUS',
     },
     TR_BUY_GO_TO_PAYMENT: {
         defaultMessage: 'Finish transaction',
@@ -2235,13 +2235,13 @@ export default defineMessages({
         defaultMessage: 'Yes, continue',
         id: 'TR_YES_CONTINUE',
     },
-    TR_SETUP_MY_TREZOR: {
+    TR_SETUP_MY_CERBERUS: {
         defaultMessage: 'Set up my Trezor',
-        id: 'TR_SETUP_MY_TREZOR',
+        id: 'TR_SETUP_MY_CERBERUS',
     },
-    TR_YES_SETUP_MY_TREZOR: {
+    TR_YES_SETUP_MY_CERBERUS: {
         defaultMessage: 'Yes, set up my Trezor',
-        id: 'TR_YES_SETUP_MY_TREZOR',
+        id: 'TR_YES_SETUP_MY_CERBERUS',
     },
     TR_COPY_TO_CLIPBOARD: {
         defaultMessage: 'Copy',
@@ -2809,13 +2809,13 @@ export default defineMessages({
         defaultMessage: 'Community',
         id: 'TR_COMMUNITY_LANGUAGES',
     },
-    TR_TOKEN_UNRECOGNIZED_BY_TREZOR: {
+    TR_TOKEN_UNRECOGNIZED_BY_CERBERUS: {
         defaultMessage: 'Unrecognized tokens',
-        id: 'TR_TOKEN_UNRECOGNIZED_BY_TREZOR',
+        id: 'TR_TOKEN_UNRECOGNIZED_BY_CERBERUS',
     },
-    TR_TOKEN_UNRECOGNIZED_BY_TREZOR_TOOLTIP: {
+    TR_TOKEN_UNRECOGNIZED_BY_CERBERUS_TOOLTIP: {
         defaultMessage: 'Unrecognized tokens pose potential risks. Use caution.',
-        id: 'TR_TOKEN_UNRECOGNIZED_BY_TREZOR_TOOLTIP',
+        id: 'TR_TOKEN_UNRECOGNIZED_BY_CERBERUS_TOOLTIP',
     },
     TR_LEARN: {
         defaultMessage: 'Learn',
@@ -3055,13 +3055,13 @@ export default defineMessages({
             'New communication tool to facilitate the connection between your Trezor and your internet browser.',
         id: 'TR_NEW_COMMUNICATION_TOOL',
     },
-    TR_NEW_TREZOR_BRIDGE_IS_AVAILABLE: {
+    TR_NEW_CERBERUS_BRIDGE_IS_AVAILABLE: {
         defaultMessage: 'New Trezor Bridge is available.',
-        id: 'TR_NEW_TREZOR_BRIDGE_IS_AVAILABLE',
+        id: 'TR_NEW_CERBERUS_BRIDGE_IS_AVAILABLE',
     },
-    TR_NEW_TREZOR_FIRMWARE_IS_AVAILABLE_DOT: {
+    TR_NEW_CERBERUS_FIRMWARE_IS_AVAILABLE_DOT: {
         defaultMessage: 'New Trezor firmware is available! Please update your device.',
-        id: 'TR_NEW_TREZOR_FIRMWARE_IS_AVAILABLE_DOT',
+        id: 'TR_NEW_CERBERUS_FIRMWARE_IS_AVAILABLE_DOT',
     },
     TR_NO_PASSPHRASE_WALLET: {
         defaultMessage: 'Standard wallet',
@@ -3527,10 +3527,10 @@ export default defineMessages({
         defaultMessage: 'Details',
         id: 'TR_TRANSACTION_DETAILS',
     },
-    TR_TREZOR_BRIDGE_IS_NOT_RUNNING: {
+    TR_CERBERUS_BRIDGE_IS_NOT_RUNNING: {
         defaultMessage: 'Trezor Bridge is not running',
         description: '',
-        id: 'TR_TREZOR_BRIDGE_IS_NOT_RUNNING',
+        id: 'TR_CERBERUS_BRIDGE_IS_NOT_RUNNING',
     },
     TR_TRY_AGAIN: {
         defaultMessage: 'Try again',
@@ -3643,10 +3643,10 @@ export default defineMessages({
         defaultMessage: 'Passphrase duplicated',
         id: 'TR_WALLET_DUPLICATE_TITLE',
     },
-    TR_WELCOME_TO_TREZOR_TEXT_WALLET_CREATION: {
+    TR_WELCOME_TO_CERBERUS_TEXT_WALLET_CREATION: {
         defaultMessage:
             'Create a new wallet or recover one from a backup using your recovery seed.',
-        id: 'TR_WELCOME_TO_TREZOR_TEXT_WALLET_CREATION',
+        id: 'TR_WELCOME_TO_CERBERUS_TEXT_WALLET_CREATION',
     },
     TR_WEST: {
         defaultMessage: 'West',
@@ -3716,9 +3716,9 @@ export default defineMessages({
         defaultMessage: 'Version {version} has been downloaded and is ready for installation.',
         id: 'TR_YOUR_NEW_VERSION_IS_READY',
     },
-    TR_YOUR_TREZOR_IS_NOT_BACKED_UP: {
+    TR_YOUR_CERBERUS_IS_NOT_BACKED_UP: {
         defaultMessage: 'Your Trezor wallet is not backed up.',
-        id: 'TR_YOUR_TREZOR_IS_NOT_BACKED_UP',
+        id: 'TR_YOUR_CERBERUS_IS_NOT_BACKED_UP',
     },
     TR_YOUR_WALLET_IS_READY_WHAT: {
         defaultMessage: 'Your wallet is ready to use!',
@@ -4192,12 +4192,12 @@ export default defineMessages({
         id: 'TR_N_TRANSACTIONS',
         defaultMessage: '{value} {value, plural, one {transaction} other {transactions}}',
     },
-    TR_TREZOR_BRIDGE_DOWNLOAD: {
-        id: 'TR_TREZOR_BRIDGE_DOWNLOAD',
+    TR_CERBERUS_BRIDGE_DOWNLOAD: {
+        id: 'TR_CERBERUS_BRIDGE_DOWNLOAD',
         defaultMessage: 'Trezor Bridge Download',
     },
-    TR_CURRENTLY_INSTALLED_TREZOR: {
-        id: 'TR_CURRENTLY_INSTALLED_TREZOR',
+    TR_CURRENTLY_INSTALLED_CERBERUS: {
+        id: 'TR_CURRENTLY_INSTALLED_CERBERUS',
         defaultMessage: 'Currently installed: Trezor Bridge {version}',
     },
     TR_OUTDATED_BRIDGE_DESKTOP: {
@@ -5334,8 +5334,8 @@ export default defineMessages({
         defaultMessage:
             'Invalid image color. It must contain only black and white (not grayscale).',
     },
-    TR_CONFIRM_ON_TREZOR: {
-        id: 'TR_CONFIRM_ON_TREZOR',
+    TR_CONFIRM_ON_CERBERUS: {
+        id: 'TR_CONFIRM_ON_CERBERUS',
         defaultMessage: 'Confirm on Trezor',
     },
     TR_CONFIRM_BEFORE_COPY: {
@@ -6841,12 +6841,12 @@ export default defineMessages({
         id: 'TR_ONBOARDING_NEW_VERSION',
         defaultMessage: 'Latest version',
     },
-    TR_RECOVERY_MATRIX_DISPLAYED_ON_TREZOR: {
-        id: 'TR_RECOVERY_MATRIX_DISPLAYED_ON_TREZOR',
+    TR_RECOVERY_MATRIX_DISPLAYED_ON_CERBERUS: {
+        id: 'TR_RECOVERY_MATRIX_DISPLAYED_ON_CERBERUS',
         defaultMessage: 'The letters are displayed on your Trezor',
     },
-    TR_PIN_MATRIX_DISPLAYED_ON_TREZOR: {
-        id: 'TR_PIN_MATRIX_DISPLAYED_ON_TREZOR',
+    TR_PIN_MATRIX_DISPLAYED_ON_CERBERUS: {
+        id: 'TR_PIN_MATRIX_DISPLAYED_ON_CERBERUS',
         defaultMessage: 'The numbers are displayed on your Trezor',
     },
     TR_DEVICE_CONNECTED: {
@@ -6895,8 +6895,8 @@ export default defineMessages({
         description:
             'Heading for an onboarding step where we ask the user to verify authenticity of his device',
     },
-    TR_USED_TREZOR_BEFORE: {
-        id: 'TR_USED_TREZOR_BEFORE',
+    TR_USED_CERBERUS_BEFORE: {
+        id: 'TR_USED_CERBERUS_BEFORE',
         defaultMessage: 'Have you used this Trezor before?',
     },
     TR_ONBOARDING_DEVICE_CHECK_1: {
@@ -6967,8 +6967,8 @@ export default defineMessages({
         id: 'TR_USE_CHAT_SOFT',
         defaultMessage: 'Click below and use the <b>Chat</b> option on the next screen.',
     },
-    TR_CONTACT_TREZOR_SUPPORT: {
-        id: 'TR_CONTACT_TREZOR_SUPPORT',
+    TR_CONTACT_CERBERUS_SUPPORT: {
+        id: 'TR_CONTACT_CERBERUS_SUPPORT',
         defaultMessage: 'Contact Trezor Support',
     },
     TR_LETS_CHECK_YOUR_DEVICE: {
@@ -7100,8 +7100,8 @@ export default defineMessages({
         decription:
             "If troubleshooting steps for connecting a device in Onboarding didn't do the trick there is at the end link to contact a support",
     },
-    TR_STILL_DONT_SEE_YOUR_TREZOR: {
-        id: 'TR_STILL_DONT_SEE_YOUR_TREZOR',
+    TR_STILL_DONT_SEE_YOUR_CERBERUS: {
+        id: 'TR_STILL_DONT_SEE_YOUR_CERBERUS',
         defaultMessage: 'Still don’t see your Trezor?',
     },
     TR_ONBOARDING_ADVANCED: {
@@ -7364,8 +7364,8 @@ export default defineMessages({
         id: 'TR_STAKING_NOT_ENOUGH_FUNDS',
         defaultMessage: "You don't have enough funds on your account.",
     },
-    TR_STAKING_TREZOR_POOL_FAIL: {
-        id: 'TR_STAKING_TREZOR_POOL_FAIL',
+    TR_STAKING_CERBERUS_POOL_FAIL: {
+        id: 'TR_STAKING_CERBERUS_POOL_FAIL',
         defaultMessage: 'Cannot reach Trezor stake pool to delegate on.',
     },
     TR_STAKING_TX_PENDING: {
@@ -7454,8 +7454,8 @@ export default defineMessages({
         defaultMessage:
             'Shelley era addresses have introduced a new type of wallet that can support stake delegation and earning rewards.',
     },
-    TR_CARDANO_TREZOR_AMOUNT_HEADLINE: {
-        id: 'TR_CARDANO_TREZOR_AMOUNT_HEADLINE',
+    TR_CARDANO_CERBERUS_AMOUNT_HEADLINE: {
+        id: 'TR_CARDANO_CERBERUS_AMOUNT_HEADLINE',
         defaultMessage: 'Trezor amount',
     },
     TR_CARDANO_FINGERPRINT_HEADLINE: {
@@ -8367,28 +8367,28 @@ export default defineMessages({
         id: 'TR_DISABLE_AUTOSTOP_COINJOIN',
         defaultMessage: "Don't stop",
     },
-    TR_TREZOR_DEVICE_TUTORIAL_HEADING: {
-        id: 'TR_TREZOR_DEVICE_TUTORIAL_HEADING',
+    TR_CERBERUS_DEVICE_TUTORIAL_HEADING: {
+        id: 'TR_CERBERUS_DEVICE_TUTORIAL_HEADING',
         defaultMessage: 'Know your Trezor',
     },
-    TR_TREZOR_DEVICE_TUTORIAL_DESCRIPTION: {
-        id: 'TR_TREZOR_DEVICE_TUTORIAL_DESCRIPTION',
+    TR_CERBERUS_DEVICE_TUTORIAL_DESCRIPTION: {
+        id: 'TR_CERBERUS_DEVICE_TUTORIAL_DESCRIPTION',
         defaultMessage: 'Learn how to use your device with the help of a short tutorial',
     },
-    TR_CONTINUE_ON_TREZOR: {
-        id: 'TR_CONTINUE_ON_TREZOR',
+    TR_CONTINUE_ON_CERBERUS: {
+        id: 'TR_CONTINUE_ON_CERBERUS',
         defaultMessage: 'Continue on Trezor',
     },
-    TR_TREZOR_DEVICE_TUTORIAL_COMPLETED_HEADING: {
-        id: 'TR_TREZOR_DEVICE_TUTORIAL_COMPLETED_HEADING',
+    TR_CERBERUS_DEVICE_TUTORIAL_COMPLETED_HEADING: {
+        id: 'TR_CERBERUS_DEVICE_TUTORIAL_COMPLETED_HEADING',
         defaultMessage: 'Tutorial completed',
     },
-    TR_TREZOR_DEVICE_TUTORIAL_CANCELED_HEADING: {
-        id: 'TR_TREZOR_DEVICE_TUTORIAL_CANCELED_HEADING',
+    TR_CERBERUS_DEVICE_TUTORIAL_CANCELED_HEADING: {
+        id: 'TR_CERBERUS_DEVICE_TUTORIAL_CANCELED_HEADING',
         defaultMessage: 'Tutorial canceled',
     },
-    TR_RESTART_TREZOR_DEVICE_TUTORIAL: {
-        id: 'TR_RESTART_TREZOR_DEVICE_TUTORIAL',
+    TR_RESTART_CERBERUS_DEVICE_TUTORIAL: {
+        id: 'TR_RESTART_CERBERUS_DEVICE_TUTORIAL',
         defaultMessage: 'Restart tutorial',
     },
     TR_HIDE_BALANCES: {

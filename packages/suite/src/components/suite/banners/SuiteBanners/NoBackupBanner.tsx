@@ -14,7 +14,7 @@ export const NoBackup = () => {
     };
 
     const translation = `${translationString(
-        'TR_YOUR_TREZOR_IS_NOT_BACKED_UP',
+        'TR_YOUR_CERBERUS_IS_NOT_BACKED_UP',
     )} ${translationString('TR_IF_YOUR_DEVICE_IS_EVER_LOST')}`;
 
     return <Banner variant="destructive" body={translation} action={action} />;

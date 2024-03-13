@@ -13,7 +13,7 @@ export type CardanoStakingAction =
     | { type: typeof CARDANO_STAKING.ADD_PENDING_STAKE_TX; pendingStakeTx: PendingStakeTx }
     | { type: typeof CARDANO_STAKING.REMOVE_PENDING_STAKE_TX; accountKey: string }
     | {
-          type: typeof CARDANO_STAKING.SET_TREZOR_POOLS;
+          type: typeof CARDANO_STAKING.SET_CERBERUS_POOLS;
           trezorPools: PoolsResponse;
           network: CardanoNetwork;
       }
@@ -125,7 +125,7 @@ export const fetchTrezorPools = (network: 'ADA' | 'tADA') => async (dispatch: Di
         }
 
         dispatch({
-            type: CARDANO_STAKING.SET_TREZOR_POOLS,
+            type: CARDANO_STAKING.SET_CERBERUS_POOLS,
             trezorPools: responseJson as PoolsResponse,
             network: cardanoNetwork,
         });

@@ -117,7 +117,7 @@ const initTrezorConnect = async (TrezorUserEnvLink, options) => {
         debug: false,
         popup: false,
         pendingTransportEvent: true,
-        connectSrc: process.env.TREZOR_CONNECT_SRC, // custom source for karma tests
+        connectSrc: process.env.CERBERUS_CONNECT_SRC, // custom source for karma tests
         ...options,
     });
 };

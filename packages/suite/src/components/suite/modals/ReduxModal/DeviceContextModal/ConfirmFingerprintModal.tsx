@@ -16,7 +16,7 @@ export const ConfirmFingerprintModal = ({ device, ...rest }: ConfirmFingerprintP
     <StyledModal
         modalPrompt={
             <ConfirmOnDevice
-                title={<Translation id="TR_CONFIRM_ON_TREZOR" />}
+                title={<Translation id="TR_CONFIRM_ON_CERBERUS" />}
                 deviceModelInternal={device.features?.internal_model}
                 deviceUnitColor={device?.features?.unit_color}
             />

@@ -193,7 +193,7 @@ export default class GetAccountDescriptor extends AbstractMethod<
                         request.address_n,
                         typeof request.derivationType !== 'undefined'
                             ? request.derivationType
-                            : PROTO.CardanoDerivationType.ICARUS_TREZOR,
+                            : PROTO.CardanoDerivationType.ICARUS_CERBERUS,
                     );
                 const response = {
                     descriptor,

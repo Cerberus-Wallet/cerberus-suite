@@ -11,7 +11,7 @@ describe('TrezorConnect.init', () => {
     beforeAll(() => {
         // use local build, not trezor connect version hosted on trezor.connect.io
         // @ts-expect-error
-        global.__TREZOR_CONNECT_SRC = process.env.TREZOR_CONNECT_SRC;
+        global.__CERBERUS_CONNECT_SRC = process.env.CERBERUS_CONNECT_SRC;
     });
 
     it('calling method before .init() and/or .manifest()', async () => {

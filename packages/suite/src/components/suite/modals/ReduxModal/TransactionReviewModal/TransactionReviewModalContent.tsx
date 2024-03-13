@@ -122,7 +122,7 @@ export const TransactionReviewModalContent = ({
         <StyledModal
             modalPrompt={
                 <ConfirmOnDevice
-                    title={<Translation id="TR_CONFIRM_ON_TREZOR" />}
+                    title={<Translation id="TR_CONFIRM_ON_CERBERUS" />}
                     steps={outputs.length + 1}
                     activeStep={signedTx ? outputs.length + 2 : buttonRequestsCount}
                     deviceModelInternal={deviceModelInternal}

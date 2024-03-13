@@ -148,8 +148,8 @@ export const TokenList = ({
                     <Fragment key={groupIndex === 0 ? 'knownTokens' : 'unknownTokens'}>
                         {groupIndex === 1 && (
                             <StyledQuestionTooltip
-                                label="TR_TOKEN_UNRECOGNIZED_BY_TREZOR"
-                                tooltip="TR_TOKEN_UNRECOGNIZED_BY_TREZOR_TOOLTIP"
+                                label="TR_TOKEN_UNRECOGNIZED_BY_CERBERUS"
+                                tooltip="TR_TOKEN_UNRECOGNIZED_BY_CERBERUS_TOOLTIP"
                                 addMarginTop={!!knownTokens.length}
                             />
                         )}

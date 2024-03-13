@@ -1,7 +1,7 @@
 import { getUnixTime } from 'date-fns';
 
 import { createMiddlewareWithExtraDeps } from '@suite-common/redux-utils';
-import { BLOCKCHAIN as TREZOR_CONNECT_BLOCKCHAIN_ACTIONS, BlockchainEvent } from '@trezor/connect';
+import { BLOCKCHAIN as CERBERUS_CONNECT_BLOCKCHAIN_ACTIONS, BlockchainEvent } from '@trezor/connect';
 
 import {
     onBlockchainConnectThunk,
@@ -19,7 +19,7 @@ export const prepareBlockchainMiddleware = createMiddlewareWithExtraDeps(
         const { cardanoValidatePendingTxOnBlock, cardanoFetchTrezorPools } = extra.thunks;
 
         switch (action.type) {
-            case TREZOR_CONNECT_BLOCKCHAIN_ACTIONS.CONNECT:
+            case CERBERUS_CONNECT_BLOCKCHAIN_ACTIONS.CONNECT:
                 dispatch(onBlockchainConnectThunk(action.payload.coin.shortcut));
 
                 // once suite connects to blockchain, fetch additional data required
@@ -30,7 +30,7 @@ export const prepareBlockchainMiddleware = createMiddlewareWithExtraDeps(
                     );
                 }
                 break;
-            case TREZOR_CONNECT_BLOCKCHAIN_ACTIONS.BLOCK:
+            case CERBERUS_CONNECT_BLOCKCHAIN_ACTIONS.BLOCK:
                 dispatch(updateFeeInfoThunk(action.payload.coin.shortcut));
                 dispatch(onBlockMinedThunk(action.payload));
                 // cardano stuff
@@ -41,10 +41,10 @@ export const prepareBlockchainMiddleware = createMiddlewareWithExtraDeps(
                     }),
                 );
                 break;
-            case TREZOR_CONNECT_BLOCKCHAIN_ACTIONS.NOTIFICATION:
+            case CERBERUS_CONNECT_BLOCKCHAIN_ACTIONS.NOTIFICATION:
                 dispatch(onBlockchainNotificationThunk(action.payload));
                 break;
-            case TREZOR_CONNECT_BLOCKCHAIN_ACTIONS.ERROR:
+            case CERBERUS_CONNECT_BLOCKCHAIN_ACTIONS.ERROR:
                 dispatch(onBlockchainDisconnectThunk(action.payload));
                 break;
             default:

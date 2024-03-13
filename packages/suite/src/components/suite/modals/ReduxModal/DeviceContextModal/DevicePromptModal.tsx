@@ -71,7 +71,7 @@ const DevicePromptModalRenderer = ({
                 modalPrompt={
                     isPillShown && (
                         <ConfirmOnDevice
-                            title={pillTitle || <Translation id="TR_CONFIRM_ON_TREZOR" />}
+                            title={pillTitle || <Translation id="TR_CONFIRM_ON_CERBERUS" />}
                             deviceModelInternal={deviceModelInternal}
                             deviceUnitColor={device?.features?.unit_color}
                             isConfirmed={isConfirmed}

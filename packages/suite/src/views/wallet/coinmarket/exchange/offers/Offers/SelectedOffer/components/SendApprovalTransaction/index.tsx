@@ -331,7 +331,7 @@ const SendApprovalTransactionComponent = () => {
                         isDisabled={callInProgress}
                         onClick={sendTransaction}
                     >
-                        <Translation id="TR_EXCHANGE_CONFIRM_ON_TREZOR_SEND" />
+                        <Translation id="TR_EXCHANGE_CONFIRM_ON_CERBERUS_SEND" />
                     </Button>
                 </ButtonWrapper>
             )}

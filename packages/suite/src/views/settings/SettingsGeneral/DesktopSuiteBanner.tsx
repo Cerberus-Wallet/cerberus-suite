@@ -138,7 +138,7 @@ export const DesktopSuiteBanner = () => {
                         data-test="@banner/install-desktop-suite/close-button"
                     />
 
-                    <StyledImage image="TREZOR_PATTERN" width={140} />
+                    <StyledImage image="CERBERUS_PATTERN" width={140} />
 
                     <Content>
                         <TextContainer>

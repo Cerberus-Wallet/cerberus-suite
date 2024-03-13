@@ -88,10 +88,10 @@
             "@group:other",
           ]
         CONTAINERS: "trezor-user-env-unix"
-        CYPRESS_USE_TREZOR_USER_ENV_BRIDGE: 1
+        CYPRESS_USE_CERBERUS_USER_ENV_BRIDGE: 1
       - TEST_GROUP: "@group:wallet"
         CONTAINERS: "trezor-user-env-unix bitcoin-regtest"
-        CYPRESS_USE_TREZOR_USER_ENV_BRIDGE: 1
+        CYPRESS_USE_CERBERUS_USER_ENV_BRIDGE: 1
       - TEST_GROUP: "@group:firmware-update"
         CONTAINERS: "trezor-user-env-unix" # todo: this group should not need trezor-user-env
 
@@ -101,7 +101,7 @@ suite web migrations:
   variables:
     # Each test file will be run for all urls in TEST_URLS array. Useful for migration tests
     CYPRESS_TEST_URLS: release/22.5 ${CI_COMMIT_REF_NAME}
-    CYPRESS_USE_TREZOR_USER_ENV_BRIDGE: 1
+    CYPRESS_USE_CERBERUS_USER_ENV_BRIDGE: 1
   parallel:
     matrix:
       - TEST_GROUP: "@group:migrations"
@@ -315,7 +315,7 @@ connect-popup legacy npm package:
   variables:
     COMPOSE_PROJECT_NAME: $CI_JOB_ID
     COMPOSE_FILE: ./docker/docker-compose.connect-popup-ci.yml
-    TREZOR_CONNECT_SRC: ${DEV_SERVER_URL}/connect/${CI_COMMIT_REF_NAME}/
+    CERBERUS_CONNECT_SRC: ${DEV_SERVER_URL}/connect/${CI_COMMIT_REF_NAME}/
     URL: ${DEV_SERVER_URL}/connect/${CI_COMMIT_REF_NAME}/
     IS_WEBEXTENSION: "true"
   script:

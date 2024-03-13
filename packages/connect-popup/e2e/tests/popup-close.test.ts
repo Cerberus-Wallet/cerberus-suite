@@ -15,7 +15,7 @@ import {
 
 const url = process.env.URL || 'http://localhost:8088/';
 const isWebExtension = process.env.IS_WEBEXTENSION === 'true';
-const connectSrc = process.env.TREZOR_CONNECT_SRC;
+const connectSrc = process.env.CERBERUS_CONNECT_SRC;
 
 const WAIT_AFTER_TEST = 3000; // how long test should wait for more potential trezord requests
 

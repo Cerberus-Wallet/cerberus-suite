@@ -164,10 +164,10 @@ export const SecurityCheck = () => {
     const isFirmwareInstalled = device?.firmware !== 'none';
     const secondaryButtonText = isFirmwareInstalled ? 'TR_I_HAVE_NOT_USED_IT' : 'TR_I_HAVE_DOUBTS';
     const primaryButtonTopText = isFirmwareInstalled
-        ? 'TR_YES_SETUP_MY_TREZOR'
-        : 'TR_SETUP_MY_TREZOR';
+        ? 'TR_YES_SETUP_MY_CERBERUS'
+        : 'TR_SETUP_MY_CERBERUS';
     const headingText = isFirmwareInstalled
-        ? 'TR_USED_TREZOR_BEFORE'
+        ? 'TR_USED_CERBERUS_BEFORE'
         : 'TR_ONBOARDING_DEVICE_CHECK';
     const checklistItems = isFirmwareInstalled ? firmwareInstalledChecklist : noFirmwareChecklist;
 

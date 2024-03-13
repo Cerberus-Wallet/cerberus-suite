@@ -43,20 +43,20 @@ describe('connect-web parseConnectSettings', () => {
     });
 
     it('parseConnectSettings: connect src in window/global scope', () => {
-        window.__TREZOR_CONNECT_SRC = 'https://connect.trezor.io/beta.4/';
+        window.__CERBERUS_CONNECT_SRC = 'https://connect.trezor.io/beta.4/';
         expect(parseConnectSettings({}).connectSrc).toEqual('https://connect.trezor.io/beta.4/');
 
-        window.__TREZOR_CONNECT_SRC = 'https://connect-beta.trezor.oi/beta.4/'; // invalid domain
+        window.__CERBERUS_CONNECT_SRC = 'https://connect-beta.trezor.oi/beta.4/'; // invalid domain
         expect(parseConnectSettings({}).connectSrc).toEqual(undefined);
 
-        delete window.__TREZOR_CONNECT_SRC; // restore
+        delete window.__CERBERUS_CONNECT_SRC; // restore
 
         // @ts-expect-error
         global.window = undefined;
         // @ts-expect-error
-        global.__TREZOR_CONNECT_SRC = 'https://connect.trezor.io/beta.5/';
+        global.__CERBERUS_CONNECT_SRC = 'https://connect.trezor.io/beta.5/';
         expect(parseConnectSettings({}).connectSrc).toEqual('https://connect.trezor.io/beta.5/');
         // @ts-expect-error
-        delete global.__TREZOR_CONNECT_SRC; // restore
+        delete global.__CERBERUS_CONNECT_SRC; // restore
     });
 });

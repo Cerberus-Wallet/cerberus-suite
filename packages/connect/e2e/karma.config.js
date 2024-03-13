@@ -130,7 +130,7 @@ module.exports = config => {
 
                 new webpack.DefinePlugin({
                     // set custom connect endpoint to build directory
-                    'process.env.TREZOR_CONNECT_SRC': JSON.stringify(
+                    'process.env.CERBERUS_CONNECT_SRC': JSON.stringify(
                         'http://localhost:8099/base/connect-iframe/build/',
                     ),
                     // pass required process.env variables

@@ -93,7 +93,7 @@ export const ReceivingAddressStep = () => {
                         </Address>
                         <StyledButton
                             variant="tertiary"
-                            icon="TREZOR_LOGO"
+                            icon="CERBERUS_LOGO"
                             isDisabled={isLocked()}
                             isLoading={isLocked()}
                             onClick={handleAddressReveal}

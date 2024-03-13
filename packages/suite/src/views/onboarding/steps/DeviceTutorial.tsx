@@ -38,7 +38,7 @@ export const DeviceTutorial = () => {
     const deviceModelInternal = device?.features?.internal_model;
     const isContinueButtonVisible = status && ['cancelled', 'completed'].includes(status);
     const imgName =
-        deviceModelInternal && (`DEVICE_CONFIRM_TREZOR_${deviceModelInternal}` as const);
+        deviceModelInternal && (`DEVICE_CONFIRM_CERBERUS_${deviceModelInternal}` as const);
     const showDevicePrompt = status === 'active';
 
     const handleContinue = () => {
@@ -55,11 +55,11 @@ export const DeviceTutorial = () => {
     const getHeading = () => {
         switch (status) {
             case 'active':
-                return <Translation id="TR_TREZOR_DEVICE_TUTORIAL_HEADING" />;
+                return <Translation id="TR_CERBERUS_DEVICE_TUTORIAL_HEADING" />;
             case 'completed':
-                return <Translation id="TR_TREZOR_DEVICE_TUTORIAL_COMPLETED_HEADING" />;
+                return <Translation id="TR_CERBERUS_DEVICE_TUTORIAL_COMPLETED_HEADING" />;
             case 'cancelled':
-                return <Translation id="TR_TREZOR_DEVICE_TUTORIAL_CANCELED_HEADING" />;
+                return <Translation id="TR_CERBERUS_DEVICE_TUTORIAL_CANCELED_HEADING" />;
             // no default
         }
     };
@@ -71,7 +71,7 @@ export const DeviceTutorial = () => {
             case 'active':
                 return (
                     <>
-                        <Translation id="TR_TREZOR_DEVICE_TUTORIAL_DESCRIPTION" />
+                        <Translation id="TR_CERBERUS_DEVICE_TUTORIAL_DESCRIPTION" />
                         <ButtonContainer>
                             {isActionAbortable && (
                                 <Button variant="tertiary" size="tiny" onClick={handleSkipClick}>
@@ -90,7 +90,7 @@ export const DeviceTutorial = () => {
                             size="tiny"
                             onClick={() => dispatch(beginOnboardingTutorial())}
                         >
-                            <Translation id="TR_RESTART_TREZOR_DEVICE_TUTORIAL" />
+                            <Translation id="TR_RESTART_CERBERUS_DEVICE_TUTORIAL" />
                         </Button>
                     </ButtonContainer>
                 );
@@ -105,7 +105,7 @@ export const DeviceTutorial = () => {
             description={getDescription()}
             device={device}
             disableConfirmWrapper={!showDevicePrompt}
-            devicePromptTitle={<Translation id="TR_CONTINUE_ON_TREZOR" />}
+            devicePromptTitle={<Translation id="TR_CONTINUE_ON_CERBERUS" />}
             outerActions={
                 isContinueButtonVisible && (
                     <Button variant="primary" onClick={handleContinue}>

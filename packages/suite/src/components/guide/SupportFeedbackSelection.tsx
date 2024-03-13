@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { TREZOR_FORUM_URL, TREZOR_SUPPORT_URL } from '@trezor/urls';
+import { CERBERUS_FORUM_URL, CERBERUS_SUPPORT_URL } from '@trezor/urls';
 import { analytics, EventType } from '@trezor/suite-analytics';
 import { resolveStaticPath, isDevEnv } from '@suite-common/suite-utils';
 import { Icon, Link, variables } from '@trezor/components';
@@ -191,7 +191,7 @@ export const SupportFeedbackSelection = () => {
                         <Translation id="TR_GUIDE_VIEW_HEADLINE_NEED_HELP" />
                     </SectionHeader>
 
-                    <StyledLink href={TREZOR_FORUM_URL} variant="nostyle">
+                    <StyledLink href={CERBERUS_FORUM_URL} variant="nostyle">
                         <SectionButton data-test="@guide/forum">
                             <Label>
                                 <LabelHeadline>
@@ -205,7 +205,7 @@ export const SupportFeedbackSelection = () => {
                         </SectionButton>
                     </StyledLink>
 
-                    <StyledLink href={TREZOR_SUPPORT_URL} variant="nostyle">
+                    <StyledLink href={CERBERUS_SUPPORT_URL} variant="nostyle">
                         <SectionButton data-test="@guide/support">
                             <Label>
                                 <LabelHeadline>

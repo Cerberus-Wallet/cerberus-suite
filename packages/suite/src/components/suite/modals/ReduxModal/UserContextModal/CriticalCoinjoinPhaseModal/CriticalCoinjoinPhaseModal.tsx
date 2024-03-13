@@ -70,7 +70,7 @@ export const CriticalCoinjoinPhaseModal = ({
         <StyledModal>
             <Content>
                 {deviceModelInternal && (
-                    <Image image={`DONT_DISCONNECT_TREZOR_${deviceModelInternal}`} />
+                    <Image image={`DONT_DISCONNECT_CERBERUS_${deviceModelInternal}`} />
                 )}
 
                 <TextContainer>

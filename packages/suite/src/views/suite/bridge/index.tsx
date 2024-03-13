@@ -135,7 +135,7 @@ export const InstallBridge = () => {
 
     return (
         <Modal
-            heading={<Translation id="TR_TREZOR_BRIDGE_DOWNLOAD" />}
+            heading={<Translation id="TR_CERBERUS_BRIDGE_DOWNLOAD" />}
             description={<Translation id="TR_NEW_COMMUNICATION_TOOL" />}
             data-test="@modal/bridge"
         >
@@ -143,7 +143,7 @@ export const InstallBridge = () => {
             <Content>
                 <Version show={!!data.currentVersion}>
                     <Translation
-                        id="TR_CURRENTLY_INSTALLED_TREZOR"
+                        id="TR_CURRENTLY_INSTALLED_CERBERUS"
                         values={{ version: data.currentVersion }}
                     />
                     {isDesktop() && (
@@ -152,7 +152,7 @@ export const InstallBridge = () => {
                         </BridgeDesktopNote>
                     )}
                 </Version>
-                <StyledImage image={`BRIDGE_CHECK_TREZOR_${DeviceModelInternal.T2T1}`} />
+                <StyledImage image={`BRIDGE_CHECK_CERBERUS_${DeviceModelInternal.T2T1}`} />
                 {isLoading ? (
                     <LoaderWrapper data-test="@bridge/loading">
                         <CenteredLoader size={50} />

@@ -212,7 +212,7 @@ export const DeviceItem = ({ device, instances, onCancel, backgroundRoute }: Dev
                                 />
                             )}
                             {deviceModelInternal !== DeviceModelInternal.T2B1 && (
-                                <StyledImage alt="Trezor" image={`TREZOR_${deviceModelInternal}`} />
+                                <StyledImage alt="Trezor" image={`CERBERUS_${deviceModelInternal}`} />
                             )}
                         </DeviceImageWrapper>
                     )}

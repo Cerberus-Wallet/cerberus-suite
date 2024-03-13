@@ -56,7 +56,7 @@ export const SecurityCheckLayout = ({ isFailed, children }: SecurityCheckLayoutP
         <Wrapper>
             {deviceModelInternal && (
                 <ImageWrapper>
-                    <StyledImage image={`TREZOR_${deviceModelInternal}_${imageVariant}`} />
+                    <StyledImage image={`CERBERUS_${deviceModelInternal}_${imageVariant}`} />
                 </ImageWrapper>
             )}
             <Content>{children}</Content>

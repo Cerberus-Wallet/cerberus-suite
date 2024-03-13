@@ -62,7 +62,7 @@ const cardanoStakingReducer = (state: State = initialState, action: WalletAction
                 return add(draft, action.pendingStakeTx);
             case CARDANO_STAKING.REMOVE_PENDING_STAKE_TX:
                 return remove(draft, action.accountKey);
-            case CARDANO_STAKING.SET_TREZOR_POOLS:
+            case CARDANO_STAKING.SET_CERBERUS_POOLS:
                 return setTrezorPools(draft, action.trezorPools, action.network);
             case CARDANO_STAKING.SET_FETCH_LOADING:
                 return setLoading(draft, action.loading, action.network);

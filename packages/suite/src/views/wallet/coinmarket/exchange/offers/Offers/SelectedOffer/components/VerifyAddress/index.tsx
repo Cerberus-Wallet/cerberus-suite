@@ -260,7 +260,7 @@ const VerifyAddressComponent = () => {
                                     }
                                 }}
                             >
-                                <Translation id="TR_EXCHANGE_CONFIRM_ON_TREZOR" />
+                                <Translation id="TR_EXCHANGE_CONFIRM_ON_CERBERUS" />
                             </Button>
                         )}
                     {((addressVerified && addressVerified === address) ||

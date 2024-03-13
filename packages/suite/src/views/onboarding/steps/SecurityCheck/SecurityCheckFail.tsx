@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { H2, variables } from '@trezor/components';
-import { TREZOR_SUPPORT_URL } from '@trezor/urls';
+import { CERBERUS_SUPPORT_URL } from '@trezor/urls';
 
 import { Translation, TrezorLink } from 'src/components/suite';
 import { SecurityChecklist } from './SecurityChecklist';
@@ -73,7 +73,7 @@ const softChecklistItems = [
     },
 ] as const;
 
-const supportChatUrl = `${TREZOR_SUPPORT_URL}#open-chat`;
+const supportChatUrl = `${CERBERUS_SUPPORT_URL}#open-chat`;
 
 interface SecurityCheckFailProps {
     goBack?: () => void;
@@ -103,7 +103,7 @@ export const SecurityCheckFail = ({ goBack }: SecurityCheckFailProps) => {
                 )}
                 <StyledTrezorLink variant="nostyle" href={supportChatUrl}>
                     <StyledSecurityCheckButton>
-                        <Translation id="TR_CONTACT_TREZOR_SUPPORT" />
+                        <Translation id="TR_CONTACT_CERBERUS_SUPPORT" />
                     </StyledSecurityCheckButton>
                 </StyledTrezorLink>
             </Buttons>

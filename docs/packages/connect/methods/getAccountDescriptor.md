@@ -12,7 +12,7 @@ const result = await TrezorConnect.getAccountDescriptor(params);
 
 -   `path` — _required_ `string | Array<number>` minimum length is `3`. [read more](../path.md)
 -   `coin` — _required_ `string` determines network definition specified in [coins.json](https://github.com/trezor/trezor-suite/blob/develop/packages/connect-common/files/coins.json) file. Coin `shortcut`, `name` or `label` can be used.
--   `derivationType` — _optional_ `CardanoDerivationType` enum. determines used derivation type. Default is set to ICARUS_TREZOR=2
+-   `derivationType` — _optional_ `CardanoDerivationType` enum. determines used derivation type. Default is set to ICARUS_CERBERUS=2
 -   `suppressBackupWarning` - `boolean` By default, this method will emit an event to show a warning if the wallet does not have a backup. This option suppresses the message.
 
 ### Example

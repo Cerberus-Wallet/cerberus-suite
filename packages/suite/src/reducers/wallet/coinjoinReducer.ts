@@ -55,7 +55,7 @@ import {
     FEE_RATE_MEDIAN_FALLBACK,
     MAX_MINING_FEE_MODIFIER,
     ZKSNACKS_LEGAL_DOCUMENTS_VERSION,
-    TREZOR_LEGAL_DOCUMENTS_VERSION,
+    CERBERUS_LEGAL_DOCUMENTS_VERSION,
 } from 'src/services/coinjoin';
 import { SelectedAccountRootState, selectSelectedAccount } from './selectedAccountReducer';
 
@@ -86,7 +86,7 @@ export const initialState: CoinjoinState = {
         roundsDurationInHours: ESTIMATED_HOURS_PER_ROUND,
         maxMiningFeeModifier: MAX_MINING_FEE_MODIFIER,
         maxFeePerVbyte: undefined,
-        legalDocumentsVersion: TREZOR_LEGAL_DOCUMENTS_VERSION,
+        legalDocumentsVersion: CERBERUS_LEGAL_DOCUMENTS_VERSION,
     },
 };
 

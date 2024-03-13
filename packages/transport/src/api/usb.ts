@@ -5,7 +5,7 @@ import {
     ENDPOINT_ID,
     INTERFACE_ID,
     T1_HID_VENDOR,
-    TREZOR_USB_DESCRIPTORS,
+    CERBERUS_USB_DESCRIPTORS,
 } from '../constants';
 import { createTimeoutPromise } from '@trezor/utils';
 
@@ -51,7 +51,7 @@ export class UsbApi extends AbstractApi {
             const { device } = event;
             if (!device.serialNumber) {
                 // this should never happen, if it does, it means, that there is something that passes
-                // filters (TREZOR_USB_DESCRIPTORS) but does not have serial number. this could indicate error in fw
+                // filters (CERBERUS_USB_DESCRIPTORS) but does not have serial number. this could indicate error in fw
                 this.emit('transport-interface-error', ERRORS.DEVICE_UNREADABLE);
                 this.logger.error('device does not have serial number');
 
@@ -274,7 +274,7 @@ export class UsbApi extends AbstractApi {
 
     private filterDevices(devices: USBDevice[]) {
         const trezorDevices = devices.filter(dev => {
-            const isTrezor = TREZOR_USB_DESCRIPTORS.some(
+            const isTrezor = CERBERUS_USB_DESCRIPTORS.some(
                 desc => dev.vendorId === desc.vendorId && dev.productId === desc.productId,
             );
 

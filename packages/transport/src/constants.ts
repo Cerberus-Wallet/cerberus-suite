@@ -3,13 +3,13 @@ export const CONFIGURATION_ID = 1;
 export const INTERFACE_ID = 0;
 export const ENDPOINT_ID = 1;
 export const T1_HID_VENDOR = 0x534c;
-export const TREZOR_USB_DESCRIPTORS = [
-    // TREZOR v1
+export const CERBERUS_USB_DESCRIPTORS = [
+    // CERBERUS v1
     // won't get opened, but we can show error at least
     { vendorId: 0x534c, productId: 0x0001 },
-    // TREZOR webusb Bootloader
+    // CERBERUS webusb Bootloader
     { vendorId: 0x1209, productId: 0x53c0 },
-    // TREZOR webusb Firmware
+    // CERBERUS webusb Firmware
     { vendorId: 0x1209, productId: 0x53c1 },
 ];
 

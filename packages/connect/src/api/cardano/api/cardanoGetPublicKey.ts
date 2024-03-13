@@ -43,7 +43,7 @@ export default class CardanoGetPublicKey extends AbstractMethod<'cardanoGetPubli
                 derivation_type:
                     typeof batch.derivationType !== 'undefined'
                         ? batch.derivationType
-                        : PROTO.CardanoDerivationType.ICARUS_TREZOR,
+                        : PROTO.CardanoDerivationType.ICARUS_CERBERUS,
                 show_display: typeof batch.showOnTrezor === 'boolean' ? batch.showOnTrezor : false,
                 suppress_backup_warning: batch.suppressBackupWarning,
             };

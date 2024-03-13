@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { selectDevice } from '@suite-common/wallet-core';
 import { getPackagingUrl } from '@suite-common/suite-utils';
 import { DeviceAnimation, Warning, variables } from '@trezor/components';
-import { TREZOR_RESELLERS_URL, TREZOR_SUPPORT_URL } from '@trezor/urls';
+import { CERBERUS_RESELLERS_URL, CERBERUS_SUPPORT_URL } from '@trezor/urls';
 
 import { Translation, TrezorLink } from 'src/components/suite';
 import { useRef } from 'react';
@@ -68,12 +68,12 @@ export const Hologram = () => {
                             </TrezorLink>
                         ),
                         TR_RESELLERS_LINK: (
-                            <TrezorLink href={TREZOR_RESELLERS_URL} variant="underline">
+                            <TrezorLink href={CERBERUS_RESELLERS_URL} variant="underline">
                                 <Translation id="TR_RESELLERS_LINK" />
                             </TrezorLink>
                         ),
                         TR_CONTACT_OUR_SUPPORT_LINK: (
-                            <TrezorLink href={TREZOR_SUPPORT_URL} variant="underline">
+                            <TrezorLink href={CERBERUS_SUPPORT_URL} variant="underline">
                                 <Translation id="TR_CONTACT_OUR_SUPPORT_LINK" />
                             </TrezorLink>
                         ),

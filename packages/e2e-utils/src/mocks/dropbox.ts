@@ -120,7 +120,7 @@ export class DropboxMock {
                                         '.tag': 'file',
                                         name: query,
                                         path_lower: `/apps/trezor/${query}`,
-                                        path_display: `/Apps/TREZOR/${query}`,
+                                        path_display: `/Apps/CERBERUS/${query}`,
                                         id: 'id:foo-id',
                                         client_modified: '2020-10-07T09:52:45Z',
                                         server_modified: '2020-10-07T09:52:45Z',
@@ -154,7 +154,7 @@ export class DropboxMock {
                 // @ts-expect-error
                 res.writeHeader(200, {
                     'Content-Type': 'application/octet-stream',
-                    'Dropbox-Api-Result': `{"name": "${name}", "path_lower": "${path}", "path_display": "/Apps/TREZOR/${name}", "id": "id:foo-bar", "client_modified": "2020-10-07T09:52:45Z", "server_modified": "2020-10-07T09:52:45Z", "rev": "foo-bar", "size": 666, "is_downloadable": true, "content_hash": "foo-bar"}`,
+                    'Dropbox-Api-Result': `{"name": "${name}", "path_lower": "${path}", "path_display": "/Apps/CERBERUS/${name}", "id": "id:foo-bar", "client_modified": "2020-10-07T09:52:45Z", "server_modified": "2020-10-07T09:52:45Z", "rev": "foo-bar", "size": 666, "is_downloadable": true, "content_hash": "foo-bar"}`,
                 });
 
                 res.write(file, 'binary');

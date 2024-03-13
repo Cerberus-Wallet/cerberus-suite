@@ -148,7 +148,7 @@ describe('Preloader component', () => {
         const store = initStore(getInitialState());
         const { unmount } = renderWithProviders(store, <Index app={store.getState().router.app} />);
         expect(findByTestId('@connect-device-prompt')).not.toBeNull();
-        expect(findByTestId('TR_TREZOR_BRIDGE_IS_NOT_RUNNING')).not.toBeNull();
+        expect(findByTestId('TR_CERBERUS_BRIDGE_IS_NOT_RUNNING')).not.toBeNull();
 
         unmount();
     });
@@ -164,7 +164,7 @@ describe('Preloader component', () => {
         const { unmount } = renderWithProviders(store, <Index app={store.getState().router.app} />);
 
         expect(findByTestId('@connect-device-prompt')).not.toBeNull();
-        expect(findByTestId(/TR_STILL_DONT_SEE_YOUR_TREZOR/)).not.toBeNull();
+        expect(findByTestId(/TR_STILL_DONT_SEE_YOUR_CERBERUS/)).not.toBeNull();
 
         unmount();
     });

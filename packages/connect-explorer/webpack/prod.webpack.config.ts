@@ -80,7 +80,7 @@ const config: webpack.Configuration = {
             minify: false,
         }),
         new webpack.DefinePlugin({
-            'process.env.__TREZOR_CONNECT_SRC': JSON.stringify(process.env.__TREZOR_CONNECT_SRC),
+            'process.env.__CERBERUS_CONNECT_SRC': JSON.stringify(process.env.__CERBERUS_CONNECT_SRC),
             'process.env.COMMIT_HASH': JSON.stringify(commitHash),
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
         }),

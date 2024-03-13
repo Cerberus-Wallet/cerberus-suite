@@ -7,7 +7,7 @@ import { ensureDirectoryExists } from '@trezor/node-utils';
 import { getContexts, log, openPopup, setConnectSettings } from '../support/helpers';
 
 const url = process.env.URL || 'http://localhost:8088/';
-const connectSrc = process.env.TREZOR_CONNECT_SRC;
+const connectSrc = process.env.CERBERUS_CONNECT_SRC;
 
 const emuScreenshots: Record<string, string> = {};
 

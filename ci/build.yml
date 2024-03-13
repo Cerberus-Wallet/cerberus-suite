@@ -227,7 +227,7 @@ suite-desktop build windows codesign:
   interruptible: true
   script:
     - yarn install --immutable
-    - __TREZOR_CONNECT_SRC=https://suite.corp.sldev.cz/connect/${CI_COMMIT_REF_NAME}/ yarn workspace @trezor/connect-explorer build
+    - __CERBERUS_CONNECT_SRC=https://suite.corp.sldev.cz/connect/${CI_COMMIT_REF_NAME}/ yarn workspace @trezor/connect-explorer build
   artifacts:
     expire_in: 7 days
     paths:

@@ -33,7 +33,7 @@ const result = await TrezorConnect.cardanoSignTransaction(params);
 -   `referenceInputs` - _optional_ `Array` of [CardanoReferenceInput](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)
 -   `additionalWitnessRequests` - _optional_ `Array` of `string | Array<number>` (paths). Used for multi-sig and token minting witness requests as those can not be determined from the transaction parameters.
 -   `metadata` - _removed_ - use `auxiliaryData` instead
--   `derivationType` — _optional_ `CardanoDerivationType` enum. Determines used derivation type. Default is set to ICARUS_TREZOR=2.
+-   `derivationType` — _optional_ `CardanoDerivationType` enum. Determines used derivation type. Default is set to ICARUS_CERBERUS=2.
 -   `includeNetworkId` — _optional_ `Boolean`. Determines whether `networkId` should be explicitly serialized into the transaction body. Default is `false`.
 -   `chunkify` — _optional_ `boolean` determines if recipient address will be displayed in chunks of 4 characters. Default is set to `false`
 

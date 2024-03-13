@@ -186,7 +186,7 @@ export const DeviceSelector = () => {
                         {selectedDeviceModelInternal !== DeviceModelInternal.T2B1 && (
                             <StyledImage
                                 alt="Trezor"
-                                image={`TREZOR_${selectedDeviceModelInternal}`}
+                                image={`CERBERUS_${selectedDeviceModelInternal}`}
                             />
                         )}
                     </DeviceWrapper>

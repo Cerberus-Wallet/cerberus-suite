@@ -6,7 +6,7 @@ import { networksCompatibility, NetworkSymbol } from '@suite-common/wallet-confi
 import { BackendType, BlockchainNetworks } from '@suite-common/wallet-types';
 import { getNetwork } from '@suite-common/wallet-utils';
 import {
-    BLOCKCHAIN as TREZOR_CONNECT_BLOCKCHAIN_ACTIONS,
+    BLOCKCHAIN as CERBERUS_CONNECT_BLOCKCHAIN_ACTIONS,
     BlockchainBlock,
     BlockchainError,
     BlockchainReconnecting,
@@ -153,25 +153,25 @@ export const prepareBlockchainReducer = createReducerWithExtraDeps(
             })
             .addCase(extra.actionTypes.storageLoad, extra.reducers.storageLoadBlockchain)
             .addMatcher(
-                action => action.type === TREZOR_CONNECT_BLOCKCHAIN_ACTIONS.CONNECT,
+                action => action.type === CERBERUS_CONNECT_BLOCKCHAIN_ACTIONS.CONNECT,
                 (state, { payload }: PayloadAction<BlockchainInfo>) => {
                     connect(state, payload);
                 },
             )
             .addMatcher(
-                action => action.type === TREZOR_CONNECT_BLOCKCHAIN_ACTIONS.ERROR,
+                action => action.type === CERBERUS_CONNECT_BLOCKCHAIN_ACTIONS.ERROR,
                 (state, { payload }: PayloadAction<BlockchainError>) => {
                     error(state, payload.coin.shortcut, payload.error);
                 },
             )
             .addMatcher(
-                action => action.type === TREZOR_CONNECT_BLOCKCHAIN_ACTIONS.RECONNECTING,
+                action => action.type === CERBERUS_CONNECT_BLOCKCHAIN_ACTIONS.RECONNECTING,
                 (state, { payload }: PayloadAction<BlockchainReconnecting>) => {
                     reconnecting(state, payload);
                 },
             )
             .addMatcher(
-                action => action.type === TREZOR_CONNECT_BLOCKCHAIN_ACTIONS.BLOCK,
+                action => action.type === CERBERUS_CONNECT_BLOCKCHAIN_ACTIONS.BLOCK,
                 (state, { payload }: PayloadAction<BlockchainBlock>) => {
                     update(state, payload);
                 },

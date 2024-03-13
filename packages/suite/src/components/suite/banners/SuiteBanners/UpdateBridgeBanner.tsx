@@ -15,7 +15,7 @@ export const UpdateBridge = () => {
     return (
         <Banner
             variant="info"
-            body={<Translation id="TR_NEW_TREZOR_BRIDGE_IS_AVAILABLE" />}
+            body={<Translation id="TR_NEW_CERBERUS_BRIDGE_IS_AVAILABLE" />}
             action={action}
         />
     );

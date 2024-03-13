@@ -107,7 +107,7 @@ export const WordInputAdvanced = ({ count }: WordInputAdvancedProps) => {
                 items={[
                     {
                         key: '1',
-                        title: <Translation id="TR_RECOVERY_MATRIX_DISPLAYED_ON_TREZOR" />,
+                        title: <Translation id="TR_RECOVERY_MATRIX_DISPLAYED_ON_CERBERUS" />,
                         deviceModelInternal: DeviceModelInternal.T1B1,
                     },
                     {

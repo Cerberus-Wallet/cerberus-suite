@@ -251,7 +251,7 @@ export const TransactionReviewOutputElement = forwardRef<
                             {network === 'cardano' && token && token.decimals !== 0 && (
                                 <CardanoTrezorAmountWrapper>
                                     <OutputHeadline>
-                                        <Translation id="TR_CARDANO_TREZOR_AMOUNT_HEADLINE" />
+                                        <Translation id="TR_CARDANO_CERBERUS_AMOUNT_HEADLINE" />
                                     </OutputHeadline>
                                     <OutputValue>
                                         {amountToSatoshi(line.value, token.decimals)}
