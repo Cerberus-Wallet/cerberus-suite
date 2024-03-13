@@ -34,7 +34,7 @@ export default {
             params: {},
             result: {
                 device_id: expect.any(String),
-                vendor: 'trezor.io',
+                vendor: 'cerberus.uraanai.com',
                 major_version: expect.any(Number),
                 minor_version: expect.any(Number),
                 patch_version: expect.any(Number),
@@ -194,7 +194,7 @@ export default {
             params: {},
             result: {
                 device_id: expect.any(String),
-                vendor: 'trezor.io',
+                vendor: 'cerberus.uraanai.com',
                 major_version: customFirmwareBuild ? expect.any(Number) : Number(major),
                 minor_version: customFirmwareBuild ? expect.any(Number) : Number(minor),
                 patch_version: customFirmwareBuild ? expect.any(Number) : Number(patch),

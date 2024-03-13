@@ -15,8 +15,8 @@ import Animated, {
 
 import { D } from '@mobily/ts-belt';
 
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
-import { nativeSpacings } from '@trezor/theme';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
+import { nativeSpacings } from '@cerberus/theme';
 
 import { Box } from '../Box';
 import { ACCESSIBILITY_FONTSIZE_MULTIPLIER } from '../Text';

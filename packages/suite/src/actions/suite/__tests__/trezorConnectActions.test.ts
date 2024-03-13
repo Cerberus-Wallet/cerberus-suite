@@ -1,4 +1,4 @@
-import { DEVICE_EVENT, UI_EVENT, TRANSPORT_EVENT, BLOCKCHAIN_EVENT } from '@trezor/connect';
+import { DEVICE_EVENT, UI_EVENT, TRANSPORT_EVENT, BLOCKCHAIN_EVENT } from '@cerberus/connect';
 import { connectInitThunk } from '@suite-common/connect-init';
 import { testMocks } from '@suite-common/test-utils';
 import { prepareDeviceReducer } from '@suite-common/wallet-core';

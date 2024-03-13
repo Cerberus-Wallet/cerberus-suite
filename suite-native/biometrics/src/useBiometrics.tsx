@@ -57,7 +57,7 @@ export const useBiometrics = () => {
 
                 // If verification fails or the user cancels the authentication by button, we need to ask him again later.
                 // Otherwise a lot of tries would render this feauture unusable blocking user from the app.
-                // see https://github.com/trezor/trezor-suite/issues/10647
+                // see https://github.com/Cerberus-Wallet/cerberus-suite/issues/10647
             } else {
                 setIsBiometricsAuthenticationCanceled(true);
             }

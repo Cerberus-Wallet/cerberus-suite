@@ -2,7 +2,7 @@ import path from 'path';
 import { app, BrowserWindow } from 'electron';
 
 import { isDevEnv } from '@suite-common/suite-utils';
-import type { HandshakeClient } from '@trezor/suite-desktop-api';
+import type { HandshakeClient } from '@cerberus/suite-desktop-api';
 
 import { ipcMain } from './typed-electron';
 import { APP_NAME } from './libs/constants';
@@ -90,7 +90,7 @@ const init = async () => {
         mainThreadEmitter,
     });
 
-    app.name = APP_NAME; // overrides @trezor/suite-desktop app name in menu
+    app.name = APP_NAME; // overrides @cerberus/suite-desktop app name in menu
 
     // App is launched via custom protocol (macOS)
     // It is called always when custom protocol is invoked but it only works when app is launching

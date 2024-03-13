@@ -1,4 +1,4 @@
-import { intermediaryTheme } from '@trezor/components';
+import { intermediaryTheme } from '@cerberus/components';
 import { getThemeColors } from '../theme';
 
 describe('theme', () => {

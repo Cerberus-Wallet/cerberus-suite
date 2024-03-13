@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/FirmwareUpdate.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/FirmwareUpdate.js
 
 import { randomBytes } from 'crypto';
 import { AbstractMethod } from '../core/AbstractMethod';
@@ -13,7 +13,7 @@ import {
 } from './firmware';
 import { getReleases } from '../data/firmwareInfo';
 import { IntermediaryVersion } from '../types';
-import { Assert } from '@trezor/schema-utils';
+import { Assert } from '@cerberus/schema-utils';
 import { FirmwareUpdate as FirmwareUpdateSchema } from '../types/api/firmwareUpdate';
 
 type Params = {
@@ -47,7 +47,7 @@ export default class FirmwareUpdate extends AbstractMethod<'firmwareUpdate', Par
                 // either receive version and btcOnly
                 version: payload.version,
                 btcOnly: payload.btcOnly,
-                baseUrl: payload.baseUrl || 'https://data.trezor.io',
+                baseUrl: payload.baseUrl || 'https://data.trezorcheck.io',
                 intermediaryVersion: payload.intermediaryVersion,
             };
         }

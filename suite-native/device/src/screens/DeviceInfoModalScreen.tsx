@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { G } from '@mobily/ts-belt';
 import { useNavigation } from '@react-navigation/native';
 
-import { DeviceModelInternal } from '@trezor/connect';
+import { DeviceModelInternal } from '@cerberus/connect';
 import {
     Image,
     Box,
@@ -31,9 +31,9 @@ import {
     selectIsPortfolioTrackerDevice,
     selectDeviceLabel,
 } from '@suite-common/wallet-core';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import { useTranslate } from '@suite-native/intl';
-import { getFirmwareVersion } from '@trezor/device-utils';
+import { getFirmwareVersion } from '@cerberus/device-utils';
 import { useOpenLink } from '@suite-native/link';
 
 import { HowToUpdateBottomSheet } from '../components/HowToUpdateBottomSheet';
@@ -45,9 +45,9 @@ const deviceImageMap = {
 } as const satisfies Record<DeviceModelInternal, string>;
 
 const deviceModelNameMap = {
-    [DeviceModelInternal.T1B1]: 'Trezor Model One',
-    [DeviceModelInternal.T2T1]: 'Trezor Model T',
-    [DeviceModelInternal.T2B1]: 'Trezor Safe 3',
+    [DeviceModelInternal.T1B1]: 'Cerberus Model One',
+    [DeviceModelInternal.T2T1]: 'Cerberus Model T',
+    [DeviceModelInternal.T2B1]: 'Cerberus Safe 3',
 } as const satisfies Record<DeviceModelInternal, string>;
 
 const emptyBoxStyle = prepareNativeStyle(() => ({
@@ -115,7 +115,7 @@ export const DeviceInfoModalScreen = () => {
     };
 
     const handleAccessoriesClick = () => {
-        openLink('https://trezor.io/accessories');
+        openLink('https://cerberus.uraanai.com/accessories');
     };
 
     const handleUpdateClick = () => setIsUpdateSheetOpen(true);
@@ -123,7 +123,7 @@ export const DeviceInfoModalScreen = () => {
     return (
         <Screen
             screenHeader={
-                // TODO once https://github.com/trezor/trezor-suite/issues/9856 is done, this should be removed
+                // TODO once https://github.com/Cerberus-Wallet/cerberus-suite/issues/9856 is done, this should be removed
                 <ScreenHeaderWrapper>
                     <IconButton
                         iconName="close"

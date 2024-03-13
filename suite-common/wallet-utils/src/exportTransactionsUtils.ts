@@ -4,7 +4,7 @@ import { format } from 'date-fns';
 import BigNumber from 'bignumber.js';
 
 import { trezorLogo } from '@suite-common/suite-constants';
-import { TransactionTarget } from '@trezor/connect';
+import { TransactionTarget } from '@cerberus/connect';
 import { Network } from '@suite-common/wallet-config';
 import {
     ExportFileType,

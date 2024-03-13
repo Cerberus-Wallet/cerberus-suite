@@ -7,7 +7,7 @@ export const urlToOnion = (url: string, onionDomains: { [domain: string]: string
         url.match(/^(http|ws)s?:\/\/([^:/]+\.)?([^/.]+\.[^/.]+)(\/.*)?$/i) ?? [];
     // ^(http|ws)s?:\/\/ - required http(s)/ws(s) protocol
     // ([^:/]+\.)? - optional subdomains, e.g. 'blog.'
-    // ([^/.]+\.[^/.]+) - required two-part domain name, e.g. 'trezor.io'
+    // ([^/.]+\.[^/.]+) - required two-part domain name, e.g. 'cerberus.uraanai.com'
     // (\/.*)?$ - optional path and/or query, e.g. '/api/data?id=1234'
 
     if (!domain || !onionDomains[domain]) return;

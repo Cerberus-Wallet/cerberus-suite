@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigation } from '@react-navigation/native';
 
 import { useAlert } from '@suite-native/alerts';
-import TrezorConnect from '@trezor/connect';
+import TrezorConnect from '@cerberus/connect';
 import {
     AccountsRootState,
     selectAccountByKey,

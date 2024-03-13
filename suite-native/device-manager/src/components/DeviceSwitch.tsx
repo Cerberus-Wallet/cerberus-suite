@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 
 import { Box, HStack } from '@suite-native/atoms';
 import { Icon } from '@suite-common/icons';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import {
     selectDeviceId,
     selectAreAllDevicesDisconnectedOrAccountless,

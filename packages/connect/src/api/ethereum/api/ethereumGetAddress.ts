@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/EthereumGetAddress.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/EthereumGetAddress.js
 
 import { AbstractMethod, MethodReturnType } from '../../../core/AbstractMethod';
 import { getFirmwareRange } from '../../common/paramsValidator';
@@ -14,7 +14,7 @@ import {
     decodeEthereumDefinition,
     ethereumNetworkInfoFromDefinition,
 } from '../ethereumDefinitions';
-import { Assert } from '@trezor/schema-utils';
+import { Assert } from '@cerberus/schema-utils';
 import { Bundle } from '../../../types';
 import { GetAddress as GetAddressSchema } from '../../../types/api/getAddress';
 

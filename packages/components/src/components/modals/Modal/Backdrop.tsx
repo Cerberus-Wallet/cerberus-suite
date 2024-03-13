@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
-import { zIndices } from '@trezor/theme';
+import { zIndices } from '@cerberus/theme';
 
 const Wrapper = styled.div`
     position: absolute;

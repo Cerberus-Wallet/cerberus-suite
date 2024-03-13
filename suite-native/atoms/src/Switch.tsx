@@ -8,7 +8,7 @@ import Animated, {
     withTiming,
 } from 'react-native-reanimated';
 
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 
 import { ACCESSIBILITY_FONTSIZE_MULTIPLIER } from './Text';
 

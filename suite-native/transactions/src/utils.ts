@@ -1,6 +1,6 @@
 import { A, F, G, pipe } from '@mobily/ts-belt';
 
-import { EnhancedVinVout, Target } from '@trezor/blockchain-link-types';
+import { EnhancedVinVout, Target } from '@cerberus/blockchain-link-types';
 
 import { VinVoutAddress, AddressesType } from './types';
 

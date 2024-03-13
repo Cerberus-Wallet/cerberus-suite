@@ -17,7 +17,7 @@ import {
     selectDeviceAccountsForNetworkSymbolAndAccountType,
 } from '@suite-common/wallet-core';
 import { selectIsAccountAlreadyDiscovered } from '@suite-native/accounts';
-import TrezorConnect from '@trezor/connect';
+import TrezorConnect from '@cerberus/connect';
 import { Account, DiscoveryItem } from '@suite-common/wallet-types';
 import { getDerivationType } from '@suite-common/wallet-utils';
 import { AccountType, Network, NetworkSymbol, getNetworkType } from '@suite-common/wallet-config';

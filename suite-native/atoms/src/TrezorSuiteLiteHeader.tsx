@@ -1,4 +1,4 @@
-import { TypographyStyle } from '@trezor/theme';
+import { TypographyStyle } from '@cerberus/theme';
 import { Translation } from '@suite-native/intl';
 
 import { Text } from './Text';

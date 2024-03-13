@@ -1,12 +1,12 @@
 import * as BufferLayout from '@solana/buffer-layout';
-import type { TokenAccount } from '@trezor/blockchain-link-types';
+import type { TokenAccount } from '@cerberus/blockchain-link-types';
 import { A, F, pipe } from '@mobily/ts-belt';
 import { getLamportsFromSol } from '@suite-common/wallet-utils';
 import {
     TOKEN_PROGRAM_PUBLIC_KEY,
     ASSOCIATED_TOKEN_PROGRAM_PUBLIC_KEY,
     SYSTEM_PROGRAM_PUBLIC_KEY,
-} from '@trezor/blockchain-link-utils/lib/solana';
+} from '@cerberus/blockchain-link-utils/lib/solana';
 import BigNumber from 'bignumber.js';
 import type { Transaction } from '@solana/web3.js';
 

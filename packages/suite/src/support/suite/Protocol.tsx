@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { desktopApi } from '@trezor/suite-desktop-api';
+import { desktopApi } from '@cerberus/suite-desktop-api';
 
-import { isWeb, isDesktop } from '@trezor/env-utils';
+import { isWeb, isDesktop } from '@cerberus/env-utils';
 import { useActions } from 'src/hooks/suite';
 import * as protocolActions from 'src/actions/suite/protocolActions';
 
@@ -29,7 +29,7 @@ const Protocol = () => {
                 'bitcoin',
                 `${window.location.origin}${process.env.ASSET_PREFIX ?? ''}/?uri=%s`,
                 // @ts-expect-error deprecated but required for Firefox <= 78, Chrome <= 87
-                'Trezor Suite - Bitcoin',
+                'Cerberus Suite - Bitcoin',
             );
         }
 

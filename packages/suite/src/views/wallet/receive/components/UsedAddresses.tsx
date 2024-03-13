@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 
-import { AccountAddress } from '@trezor/connect';
-import { Card, Button, GradientOverlay } from '@trezor/components';
+import { AccountAddress } from '@cerberus/connect';
+import { Card, Button, GradientOverlay } from '@cerberus/components';
 import { Translation, MetadataLabeling, FormattedCryptoAmount } from 'src/components/suite';
 import { formatNetworkAmount } from '@suite-common/wallet-utils';
 import { Network } from 'src/types/wallet';
@@ -12,7 +12,7 @@ import { showAddress } from 'src/actions/wallet/receiveActions';
 import { useDispatch } from 'src/hooks/suite/';
 import { useSelector } from 'src/hooks/suite/useSelector';
 import { selectLabelingDataForSelectedAccount } from 'src/reducers/suite/metadataReducer';
-import { spacingsPx, typography } from '@trezor/theme';
+import { spacingsPx, typography } from '@cerberus/theme';
 
 const StyledCard = styled(Card)`
     flex-direction: column;

@@ -8,7 +8,7 @@ import { differenceInMonths } from 'date-fns';
 
 import { CommonAggregatedHistory, GraphData, GraphRange, GraphScale } from 'src/types/wallet/graph';
 
-import type { BlockchainAccountBalanceHistory } from '@trezor/connect';
+import type { BlockchainAccountBalanceHistory } from '@cerberus/connect';
 import { FiatCurrencyCode } from '@suite-common/suite-config';
 import { ObjectType, TypeName, sumFiatValueMapInPlace } from './utilsShared';
 

@@ -6,7 +6,7 @@ import {
     getOauthReceiverUrl,
 } from 'src/utils/suite/oauth';
 
-import { getWeakRandomId } from '@trezor/utils';
+import { getWeakRandomId } from '@cerberus/utils';
 
 // Dropbox messed up types, that's why @ts-expect-error occurs in this file
 
@@ -116,7 +116,7 @@ class DropboxProvider extends AbstractMetadataProvider {
 
             // this is basically impossible to happen (maybe QA team might get there) after few years of testing
             if (result.has_more) {
-                console.error('Dropbox account that has more then 10000 files in Trezor folder');
+                console.error('Dropbox account that has more then 10000 files in Cerberus folder');
             }
             if (result?.matches?.length > 0) {
                 // check whether the file is in the regular folder ...
@@ -126,7 +126,7 @@ class DropboxProvider extends AbstractMetadataProvider {
 
                 // ... or in the legacy folder
                 // tldr: in the initial releases, files were saved into wrong location
-                // see more here: https://github.com/trezor/trezor-suite/pull/2642
+                // see more here: https://github.com/Cerberus-Wallet/cerberus-suite/pull/2642
                 const matchLegacy = result.matches.find(
                     m =>
                         'metadata' in m.metadata &&

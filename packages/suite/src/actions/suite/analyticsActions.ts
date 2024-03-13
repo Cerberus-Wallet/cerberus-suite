@@ -4,7 +4,7 @@
  */
 
 import { allowSentryReport, setSentryUser } from 'src/utils/suite/sentry';
-import { getEnvironment, getCommitHash, isCodesignBuild } from '@trezor/env-utils';
+import { getEnvironment, getCommitHash, isCodesignBuild } from '@cerberus/env-utils';
 import type { Dispatch, GetState } from 'src/types/suite';
 
 import {
@@ -14,8 +14,8 @@ import {
     selectIsAnalyticsEnabled,
     selectIsAnalyticsConfirmed,
 } from '@suite-common/analytics';
-import { getTrackingRandomId } from '@trezor/analytics';
-import { analytics, EventType } from '@trezor/suite-analytics';
+import { getTrackingRandomId } from '@cerberus/analytics';
+import { analytics, EventType } from '@cerberus/suite-analytics';
 
 export const enableAnalyticsThunk = () => (dispatch: Dispatch) => {
     analytics.report({ type: EventType.SettingsAnalytics, payload: { value: true } });

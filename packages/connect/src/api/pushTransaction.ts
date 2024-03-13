@@ -1,11 +1,11 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/PushTransaction.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/PushTransaction.js
 
 import { AbstractMethod } from '../core/AbstractMethod';
 import { getCoinInfo } from '../data/coinInfo';
 import { ERRORS } from '../constants';
 import { isBackendSupported, initBlockchain } from '../backend/BlockchainLink';
 import type { CoinInfo } from '../types';
-import { Assert } from '@trezor/schema-utils';
+import { Assert } from '@cerberus/schema-utils';
 import { PushTransaction as PushTransactionSchema } from '../types/api/pushTransaction';
 
 type Params = {

@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/data/TransportInfo.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/data/TransportInfo.js
 
 import type { BridgeInfo } from '../events/transport';
 

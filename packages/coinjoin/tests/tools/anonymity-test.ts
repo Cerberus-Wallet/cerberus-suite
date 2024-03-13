@@ -20,7 +20,7 @@ const CACHE_PARAMS = `${CACHE_DIR}/anonymityScoreParams.json`;
  * see `middlewareUrl` below
  *
  * Usage:
- * `yarn workspace @trezor/coinjoin test:anonymity [COIN] [XPUB]`
+ * `yarn workspace @cerberus/coinjoin test:anonymity [COIN] [XPUB]`
  *
  * Result:
  * 1. Reads accountInfo using CoinjoinBackend

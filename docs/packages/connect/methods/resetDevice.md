@@ -22,7 +22,7 @@ const result = await TrezorConnect.resetDevice(params);
 
 ```javascript
 TrezorConnect.resetDevice({
-    label: 'My fancy Trezor',
+    label: 'My fancy Cerberus',
 });
 ```
 

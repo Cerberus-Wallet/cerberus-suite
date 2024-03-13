@@ -1,5 +1,5 @@
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
-import { CSSColor } from '@trezor/theme';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
+import { CSSColor } from '@cerberus/theme';
 
 import { Box } from './Box';
 

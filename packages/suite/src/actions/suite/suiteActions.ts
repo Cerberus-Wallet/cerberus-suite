@@ -2,8 +2,8 @@ import { createAction } from '@reduxjs/toolkit';
 
 import { notificationsActions } from '@suite-common/toast-notifications';
 import { getCustomBackends } from '@suite-common/wallet-utils';
-import { desktopApi, HandshakeElectron } from '@trezor/suite-desktop-api';
-import { analytics, EventType } from '@trezor/suite-analytics';
+import { desktopApi, HandshakeElectron } from '@cerberus/suite-desktop-api';
+import { analytics, EventType } from '@cerberus/suite-analytics';
 import { deviceActions } from '@suite-common/wallet-core';
 
 import { TorStatus } from 'src/types/suite';

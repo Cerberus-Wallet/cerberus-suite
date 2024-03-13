@@ -1,7 +1,7 @@
 {
     "name": "connect-example-electron-renderer-with-assets",
     "version": "1.0.0",
-    "description": "Example of electron app with @trezor/connect",
+    "description": "Example of electron app with @cerberus/connect",
     "main": "src/electron.js",
     "author": "Satoshilabs s.r.o <info@satoshilabs.com>",
     "license": "MIT",
@@ -56,7 +56,7 @@
         }
     },
     "devDependencies": {
-        "@trezor/connect": "workspace:*",
+        "@cerberus/connect": "workspace:*",
         "babel-loader": "^9.1.3",
         "concurrently": "^8.2.2",
         "copy-webpack-plugin": "^12.0.2",

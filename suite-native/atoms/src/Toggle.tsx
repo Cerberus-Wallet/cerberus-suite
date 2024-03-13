@@ -8,7 +8,7 @@ import Animated, {
 } from 'react-native-reanimated';
 import { LayoutChangeEvent, Pressable } from 'react-native';
 
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 
 import { Box } from './Box';
 import { TITLE_MAX_FONT_MULTIPLIER } from './Text';

@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/StellarSignTransaction.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/StellarSignTransaction.js
 
 import { AbstractMethod } from '../../../core/AbstractMethod';
 import { getFirmwareRange } from '../../common/paramsValidator';
@@ -10,7 +10,7 @@ import {
     StellarTransaction,
     StellarSignTransaction as StellarSignTransactionSchema,
 } from '../../../types/api/stellar';
-import { AssertWeak } from '@trezor/schema-utils';
+import { AssertWeak } from '@cerberus/schema-utils';
 
 type Params = {
     path: number[];

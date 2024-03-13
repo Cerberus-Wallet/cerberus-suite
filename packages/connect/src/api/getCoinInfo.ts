@@ -1,10 +1,10 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/GetCoinInfo.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/GetCoinInfo.js
 
 import { AbstractMethod } from '../core/AbstractMethod';
 import { ERRORS } from '../constants';
 import { getCoinInfo } from '../data/coinInfo';
 import { CoinObj, CoinInfo } from '../types';
-import { Assert } from '@trezor/schema-utils';
+import { Assert } from '@cerberus/schema-utils';
 
 type Params = {
     coinInfo: CoinInfo;

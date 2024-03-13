@@ -1,5 +1,5 @@
 import styled, { keyframes, useTheme } from 'styled-components';
-import { CSSColor, Color, spacingsPx, typography } from '@trezor/theme';
+import { CSSColor, Color, spacingsPx, typography } from '@cerberus/theme';
 import { Icon } from '@suite-common/icons/src/webComponents';
 import { IconName } from '@suite-common/icons';
 

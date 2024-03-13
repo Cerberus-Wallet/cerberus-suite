@@ -1,6 +1,6 @@
 import { Ref, forwardRef, ReactElement, HTMLAttributes } from 'react';
 import styled from 'styled-components';
-import { H3 } from '@trezor/components';
+import { H3 } from '@cerberus/components';
 
 const Wrapper = styled.div`
     display: flex;

@@ -1,5 +1,5 @@
 import { TrezorDevice } from '@suite-common/suite-types';
-import { DeviceModelInternal } from '@trezor/connect';
+import { DeviceModelInternal } from '@cerberus/connect';
 
 // These hidden device constants are used in mobile app to hold all imported accounts.
 
@@ -19,7 +19,7 @@ export const portfolioTrackerDevice: TrezorDevice = {
     firmware: 'valid',
     name: 'Portfolio Tracker',
     features: {
-        vendor: 'trezor.io',
+        vendor: 'cerberus.uraanai.com',
         major_version: 2,
         minor_version: 1,
         patch_version: 1,
@@ -28,7 +28,7 @@ export const portfolioTrackerDevice: TrezorDevice = {
         pin_protection: false,
         passphrase_protection: false,
         language: 'en-US',
-        label: 'My Trezor',
+        label: 'My Cerberus',
         initialized: true,
         revision: 'df0963ec',
         bootloader_hash: '7447a41717022e3eb32011b00b2a68ebb9c7f603cdc730e7307850a3f4d62a5c',

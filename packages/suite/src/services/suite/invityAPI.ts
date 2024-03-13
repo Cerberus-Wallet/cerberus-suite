@@ -41,7 +41,7 @@ import {
     FormResponse,
     CryptoSymbolsResponse,
 } from 'invity-api';
-import { isDesktop } from '@trezor/env-utils';
+import { isDesktop } from '@cerberus/env-utils';
 import type { InvityServerEnvironment, InvityServers } from '@suite-common/invity';
 
 export const SavingsTradeKYCFinalStatuses: SavingsKYCStatus[] = ['Failed', 'Verified'];
@@ -63,7 +63,7 @@ class InvityAPI {
     unknownCountry = 'unknown';
 
     servers = {
-        production: 'https://exchange.trezor.io',
+        production: 'https://exchange.trezorcheck.io',
         staging: 'https://staging-exchange.invity.io',
         dev: 'https://dev-exchange.invity.io',
         localhost: 'http://localhost:3330',

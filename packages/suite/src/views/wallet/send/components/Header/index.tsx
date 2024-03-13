@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import { Button, Dropdown, DropdownMenuItemProps } from '@trezor/components';
+import { Button, Dropdown, DropdownMenuItemProps } from '@cerberus/components';
 import { Translation } from 'src/components/suite';
 import { useDispatch } from 'src/hooks/suite';
 import { useSendFormContext } from 'src/hooks/wallet';
 import { sendRaw } from 'src/actions/wallet/sendFormActions';
 import { WalletSubpageHeading } from 'src/components/wallet';
-import { FADE_IN } from '@trezor/components/src/config/animations';
+import { FADE_IN } from '@cerberus/components/src/config/animations';
 
 const ClearButton = styled(Button)`
     animation: ${FADE_IN} 0.16s;

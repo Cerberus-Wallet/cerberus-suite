@@ -3,7 +3,7 @@ import path from 'path';
 import TerserPlugin from 'terser-webpack-plugin';
 import prod from './prod.webpack.config';
 
-// Generate inline script hosted on https://connect.trezor.io/X/trezor-connect.js
+// Generate inline script hosted on https://connect.cerberus.uraanai.com/X/trezor-connect.js
 // This is compiled and polyfilled npm package without Core logic
 
 const config: webpack.Configuration = {

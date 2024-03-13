@@ -1,6 +1,6 @@
 // @group:suite
 // @retry=2
-import { getSuiteVersion } from '@trezor/env-utils';
+import { getSuiteVersion } from '@cerberus/env-utils';
 
 describe('There is a hidden route (not accessible in UI)', () => {
     beforeEach(() => {

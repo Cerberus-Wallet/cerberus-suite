@@ -11,13 +11,13 @@ import {
     updateNetworkSettingsThunk,
     selectIsDiscoveryAuthConfirmationRequired,
 } from '@suite-common/wallet-core';
-import { ArrayElement } from '@trezor/type-utils';
+import { ArrayElement } from '@cerberus/type-utils';
 import { NetworkSymbol } from '@suite-common/wallet-config';
 import { testMocks } from '@suite-common/test-utils';
 import { notificationsActions } from '@suite-common/toast-notifications';
 import { DiscoveryStatus } from '@suite-common/wallet-constants';
 import * as discoveryActions from '@suite-common/wallet-core';
-import TrezorConnect from '@trezor/connect';
+import TrezorConnect from '@cerberus/connect';
 
 import { configureStore, filterThunkActionTypes } from 'src/support/tests/configureStore';
 import walletSettingsReducer from 'src/reducers/wallet/settingsReducer';
@@ -215,7 +215,7 @@ describe('Discovery Actions', () => {
 
     fixtures.forEach(f => {
         it(f.description, async () => {
-            // set fixtures in @trezor/connect
+            // set fixtures in @cerberus/connect
             setTrezorConnectFixtures(f);
             const store = initStore(getInitialState(f.device));
             if (f.enabledNetworks) {
@@ -435,7 +435,7 @@ describe('Discovery Actions', () => {
         const f = new Promise<any>(resolve => {
             setTimeout(() => resolve(paramsError('discovery_interrupted')), 100);
         });
-        // set fixtures in @trezor/connect
+        // set fixtures in @cerberus/connect
         setTrezorConnectFixtures(f);
         const store = initStore();
         store.dispatch(
@@ -507,7 +507,7 @@ describe('Discovery Actions', () => {
         const f = new Promise<any>(resolve => {
             setTimeout(() => resolve({ success: true }), 100);
         });
-        // set fixtures in @trezor/connect
+        // set fixtures in @cerberus/connect
         setTrezorConnectFixtures(f);
 
         const store = initStore();
@@ -534,7 +534,7 @@ describe('Discovery Actions', () => {
         const f = new Promise<any>(resolve => {
             setTimeout(() => resolve({ success: true }), 100);
         });
-        // set fixtures in @trezor/connect
+        // set fixtures in @cerberus/connect
         setTrezorConnectFixtures(f);
 
         const store = initStore();
@@ -590,7 +590,7 @@ describe('Discovery Actions', () => {
                 100,
             );
         });
-        // set fixtures in @trezor/connect
+        // set fixtures in @cerberus/connect
         setTrezorConnectFixtures(f);
 
         const store = initStore();
@@ -609,7 +609,7 @@ describe('Discovery Actions', () => {
         const f = new Promise<any>(resolve => {
             setTimeout(() => resolve(paramsError('{}', 'Method_Discovery_BundleException')), 100);
         });
-        // set fixtures in @trezor/connect
+        // set fixtures in @cerberus/connect
         setTrezorConnectFixtures(f);
 
         const store = initStore();
@@ -646,7 +646,7 @@ describe('Discovery Actions', () => {
     });
 
     it('All accounts failed in runtime', async () => {
-        // set empty fixtures in @trezor/connect, update them in custom mock below
+        // set empty fixtures in @cerberus/connect, update them in custom mock below
         const { mockedGetAccountInfo, updateTrezorConnectFixtures } = setTrezorConnectFixtures();
         jest.spyOn(TrezorConnect, 'getAccountInfo').mockImplementation(params => {
             // prepare response (all failed)

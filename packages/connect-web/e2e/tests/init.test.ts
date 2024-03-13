@@ -6,27 +6,27 @@ const inlineScriptUrl = process.env.URL
     ? // url of build from CI
       `${process.env.URL}/trezor-connect.js`
     : // for testing out on localhost
-      'https://connect.trezor.io/9/trezor-connect.js';
+      'https://connect.cerberus.uraanai.com/9/trezor-connect.js';
 
 const fixtures = [
     {
         params: {
             connectSrc: '',
         },
-        result: 'https://connect.trezor.io/9/iframe.html',
+        result: 'https://connect.cerberus.uraanai.com/9/iframe.html',
     },
     {
         params: {
-            connectSrc: 'https://connect.trezor.io/9.0.1/',
+            connectSrc: 'https://connect.cerberus.uraanai.com/9.0.1/',
         },
-        result: 'https://connect.trezor.io/9.0.1/iframe.html',
+        result: 'https://connect.cerberus.uraanai.com/9.0.1/iframe.html',
     },
     {
         // it is even possible to load old connect version 8
         params: {
-            connectSrc: 'https://connect.trezor.io/8/',
+            connectSrc: 'https://connect.cerberus.uraanai.com/8/',
         },
-        result: 'https://connect.trezor.io/8/iframe.html',
+        result: 'https://connect.cerberus.uraanai.com/8/iframe.html',
     },
 ];
 

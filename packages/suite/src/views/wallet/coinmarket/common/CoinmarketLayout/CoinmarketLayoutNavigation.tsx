@@ -3,13 +3,13 @@ import { useDevice, useSelector } from 'src/hooks/suite';
 import { getTitleForNetwork } from '@suite-common/wallet-utils';
 import { Translation } from 'src/components/suite';
 import { selectSelectedAccount } from 'src/reducers/wallet/selectedAccountReducer';
-import { FirmwareType } from '@trezor/connect';
+import { FirmwareType } from '@cerberus/connect';
 import { TranslationKey } from '@suite-common/intl-types';
 import { Route } from '@suite-common/suite-types';
-import { Elevation, borders, spacingsPx, mapElevationToBorder, typography } from '@trezor/theme';
+import { Elevation, borders, spacingsPx, mapElevationToBorder, typography } from '@cerberus/theme';
 import { NavigationItem } from '../../../../../components/suite/layouts/SuiteLayout/Sidebar/NavigationItem';
 import { IconName } from '@suite-common/icons';
-import { useElevation, variables } from '@trezor/components';
+import { useElevation, variables } from '@cerberus/components';
 
 const List = styled.div`
     display: flex;

@@ -6,7 +6,7 @@ import { Translation, Modal } from 'src/components/suite';
 import { TranslationKey } from 'src/components/suite/Translation';
 import { useDevice, useDispatch } from 'src/hooks/suite';
 import { ThunkAction } from 'src/types/suite';
-import { Button, Image } from '@trezor/components';
+import { Button, Image } from '@cerberus/components';
 import { onCancel } from 'src/actions/suite/modalActions';
 
 const StyledImage = styled(Image)`

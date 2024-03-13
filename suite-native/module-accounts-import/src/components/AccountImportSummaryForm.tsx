@@ -20,8 +20,8 @@ import {
     RootStackRoutes,
     StackToStackCompositeNavigationProps,
 } from '@suite-native/navigation';
-import { AccountInfo } from '@trezor/connect';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { AccountInfo } from '@cerberus/connect';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import { analytics, EventType } from '@suite-native/analytics';
 import { TokenAddress, TokenInfoBranded, TokenSymbol } from '@suite-common/wallet-types';
 import { selectAnyOfTokensHasFiatRates } from '@suite-native/ethereum-tokens';

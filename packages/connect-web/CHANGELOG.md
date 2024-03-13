@@ -1,1 +1,1 @@
-See https://github.com/trezor/trezor-suite/blob/develop/packages/connect/CHANGELOG.md
+See https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/CHANGELOG.md

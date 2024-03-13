@@ -2,18 +2,18 @@ import type {
     AccountAddresses,
     Utxo as AccountUtxo,
     Address as AccountAddress,
-} from '@trezor/blockchain-link';
+} from '@cerberus/blockchain-link';
 import type {
     ComposeInput as ComposeInputBase,
     ComposeOutput as ComposeOutputBase,
     ComposeResultError as ComposeResultErrorBase,
     ComposeResultFinal as ComposeResultFinalBase,
     ComposeResultNonFinal as ComposeResultNonFinalBase,
-} from '@trezor/utxo-lib';
+} from '@cerberus/utxo-lib';
 import type { PROTO } from '../../constants';
 import type { Params, Response } from '../params';
 
-// for convenience ComposeOutput `type: "payment"` field is not required by @trezor/connect api
+// for convenience ComposeOutput `type: "payment"` field is not required by @cerberus/connect api
 export type ComposeOutputPayment = Omit<Extract<ComposeOutputBase, { type: 'payment' }>, 'type'> & {
     type?: 'payment';
 };
@@ -38,7 +38,7 @@ export type SignedTransaction = {
     txid?: string;
 };
 
-// @trezor/utxo-lib `composeTx` ComposeInput required fields intersects AccountUtxo
+// @cerberus/utxo-lib `composeTx` ComposeInput required fields intersects AccountUtxo
 export type ComposeUtxo = AccountUtxo & Partial<ComposeInputBase>;
 
 export interface PrecomposeParams {
@@ -57,10 +57,10 @@ export interface PrecomposeParams {
     skipPermutation?: boolean;
 }
 
-// @trezor/utxo-lib `composeTx` transaction.input (ComposeInput) response intersects AccountUtxo
+// @cerberus/utxo-lib `composeTx` transaction.input (ComposeInput) response intersects AccountUtxo
 export type ComposedInputs = AccountUtxo & ComposeInputBase;
 
-// @trezor/connect api returns additional errors
+// @cerberus/connect api returns additional errors
 export type ComposeResultError =
     | ComposeResultErrorBase
     | {

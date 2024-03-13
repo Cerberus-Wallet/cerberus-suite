@@ -1,4 +1,4 @@
-import { desktopApi } from '@trezor/suite-desktop-api';
+import { desktopApi } from '@cerberus/suite-desktop-api';
 import { AbstractMetadataProvider } from 'src/types/suite/metadata';
 
 class FileSystemProvider extends AbstractMetadataProvider {

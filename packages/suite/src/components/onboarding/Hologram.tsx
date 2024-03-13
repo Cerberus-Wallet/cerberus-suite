@@ -2,13 +2,13 @@ import styled from 'styled-components';
 
 import { selectDevice } from '@suite-common/wallet-core';
 import { getPackagingUrl } from '@suite-common/suite-utils';
-import { DeviceAnimation, Warning, variables } from '@trezor/components';
-import { CERBERUS_RESELLERS_URL, CERBERUS_SUPPORT_URL } from '@trezor/urls';
+import { DeviceAnimation, Warning, variables } from '@cerberus/components';
+import { CERBERUS_RESELLERS_URL, CERBERUS_SUPPORT_URL } from '@cerberus/urls';
 
 import { Translation, TrezorLink } from 'src/components/suite';
 import { useRef } from 'react';
 import { useSelector } from 'src/hooks/suite';
-import { typography } from '@trezor/theme';
+import { typography } from '@cerberus/theme';
 
 const HologramSubHeading = styled.span`
     font-size: ${variables.FONT_SIZE.SMALL};

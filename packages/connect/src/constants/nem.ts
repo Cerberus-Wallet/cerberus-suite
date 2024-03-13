@@ -1,4 +1,4 @@
-import { Type, Static } from '@trezor/schema-utils';
+import { Type, Static } from '@cerberus/schema-utils';
 // constants from https://nemproject.github.io/
 
 export enum Networks {

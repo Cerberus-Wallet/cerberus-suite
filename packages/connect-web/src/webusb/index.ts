@@ -1,6 +1,6 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/webusb/index.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/webusb/index.js
 
-import { config } from '@trezor/connect/lib/data/config';
+import { config } from '@cerberus/connect/lib/data/config';
 
 // handle message received from connect.js
 const onload = () => {

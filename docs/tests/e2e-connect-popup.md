@@ -1,6 +1,6 @@
-# @trezor/connect-popup
+# @cerberus/connect-popup
 
-@trezor/connect-popup is end-to-end tested together with @trezor/connect-explorer using [playwright test runner](https://playwright.dev/).
+@cerberus/connect-popup is end-to-end tested together with @cerberus/connect-explorer using [playwright test runner](https://playwright.dev/).
 
 #### Playwright + NixOS
 
@@ -25,7 +25,7 @@ FILE=path-from-the-error && mkdir -p "${FILE%/*}" && touch "$FILE" && ./nixos-fi
 
 ## Fixtures
 
-Fixtures are located in [packages/connect-popup](https://github.com/trezor/trezor-suite/tree/develop/packages/connect-popup/e2e/tests)
+Fixtures are located in [packages/connect-popup](https://github.com/Cerberus-Wallet/cerberus-suite/tree/develop/packages/connect-popup/e2e/tests)
 
 ## Test results
 

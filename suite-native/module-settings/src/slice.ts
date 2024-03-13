@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import { PROTO } from '@trezor/connect';
+import { PROTO } from '@cerberus/connect';
 import { fiatCurrencies, FiatCurrency, FiatCurrencyCode } from '@suite-common/suite-config';
 
 export interface AppSettingsState {

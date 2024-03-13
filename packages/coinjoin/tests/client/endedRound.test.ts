@@ -1,4 +1,4 @@
-import { networks } from '@trezor/utxo-lib';
+import { networks } from '@cerberus/utxo-lib';
 
 import { RoundPhase, EndRoundState, WabiSabiProtocolErrorCode } from '../../src/enums';
 import { ended } from '../../src/client/round/endedRound';

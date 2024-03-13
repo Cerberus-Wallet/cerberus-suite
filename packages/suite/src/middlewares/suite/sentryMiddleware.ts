@@ -11,8 +11,8 @@ import {
     getBootloaderVersion,
     getFirmwareVersion,
     hasBitcoinOnlyFirmware,
-} from '@trezor/device-utils';
-import { DEVICE, TRANSPORT } from '@trezor/connect';
+} from '@cerberus/device-utils';
+import { DEVICE, TRANSPORT } from '@cerberus/connect';
 import { analyticsActions } from '@suite-common/analytics';
 import { deviceAuthenticityActions } from '@suite-common/device-authenticity';
 

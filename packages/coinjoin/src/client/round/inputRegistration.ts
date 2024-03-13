@@ -1,4 +1,4 @@
-import { getRandomNumberInRange } from '@trezor/utils';
+import { getRandomNumberInRange } from '@cerberus/utils';
 
 import * as coordinator from '../coordinator';
 import * as middleware from '../middleware';

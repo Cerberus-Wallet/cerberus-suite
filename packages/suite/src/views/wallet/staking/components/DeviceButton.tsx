@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
-import { Button, Tooltip } from '@trezor/components';
-import { DeviceModelInternal } from '@trezor/connect';
+import { Button, Tooltip } from '@cerberus/components';
+import { DeviceModelInternal } from '@cerberus/connect';
 
 interface DeviceButtonProps {
     isDisabled?: boolean;

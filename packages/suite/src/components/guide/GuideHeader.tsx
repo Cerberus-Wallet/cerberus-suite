@@ -1,13 +1,13 @@
 import { useContext } from 'react';
 import styled, { css } from 'styled-components';
 import { transparentize } from 'polished';
-import { analytics, EventType } from '@trezor/suite-analytics';
+import { analytics, EventType } from '@cerberus/suite-analytics';
 
 import { close } from 'src/actions/suite/guideActions';
 import { useDispatch } from 'src/hooks/suite';
-import { IconButton, variables } from '@trezor/components';
+import { IconButton, variables } from '@cerberus/components';
 import { HeaderBreadcrumb, ContentScrolledContext } from 'src/components/guide';
-import { typography, zIndices } from '@trezor/theme';
+import { typography, zIndices } from '@cerberus/theme';
 
 const HeaderWrapper = styled.div<{ noLabel?: boolean; isScrolled: boolean }>`
     display: flex;

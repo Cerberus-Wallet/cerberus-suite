@@ -11,16 +11,16 @@ import {
     PrecomposedTransactionErrorCardano,
     PrecomposedTransactionNonFinalCardano,
     PrecomposedTransactionFinalCardano,
-} from '@trezor/connect';
+} from '@cerberus/connect';
 import { Network, NetworkSymbol } from '@suite-common/wallet-config';
 import { TranslationKey } from '@suite-common/intl-types';
 
 import { TimestampedRates } from './fiatRates';
 import { Account } from './account';
 
-export type { PrecomposedTransactionFinalCardano } from '@trezor/connect';
+export type { PrecomposedTransactionFinalCardano } from '@cerberus/connect';
 
-// extend errors from @trezor/connect + @trezor/utxo-lib with errors from sendForm actions
+// extend errors from @cerberus/connect + @cerberus/utxo-lib with errors from sendForm actions
 type PrecomposedTransactionErrorExtended =
     | PrecomposeResultError
     | {
@@ -61,7 +61,7 @@ export interface FeeInfo {
     maxFee: number;
     dustLimit?: number; // coin dust limit
     feeLimit?: number; // eth gas limit
-    levels: FeeLevel[]; // fee levels are predefined in @trezor/connect > trezor-firmware/common
+    levels: FeeLevel[]; // fee levels are predefined in @cerberus/connect > trezor-firmware/common
 }
 
 export type NetworksFees = Record<NetworkSymbol, FeeInfo>;

@@ -4,7 +4,7 @@ import CopyPlugin from 'copy-webpack-plugin';
 
 import prod from './prod.webpack.config';
 
-// Generate inline script hosted on https://connect.trezor.io/X/trezor-connect-webextension.js
+// Generate inline script hosted on https://connect.cerberus.uraanai.com/X/trezor-connect-webextension.js
 // This is compiled and polyfilled npm package without Core logic
 
 const config: webpack.Configuration = {

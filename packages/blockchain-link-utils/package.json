@@ -1,5 +1,5 @@
 {
-    "name": "@trezor/blockchain-link-utils",
+    "name": "@cerberus/blockchain-link-utils",
     "version": "1.0.15",
     "license": "See LICENSE.md in repo root",
     "sideEffects": false,
@@ -19,12 +19,12 @@
     "dependencies": {
         "@mobily/ts-belt": "^3.13.1",
         "@solana/web3.js": "^1.90.0",
-        "@trezor/utils": "workspace:*",
+        "@cerberus/utils": "workspace:*",
         "bignumber.js": "^9.1.2"
     },
     "devDependencies": {
-        "@trezor/blockchain-link-types": "workspace:*",
-        "@trezor/type-utils": "workspace:*",
+        "@cerberus/blockchain-link-types": "workspace:*",
+        "@cerberus/type-utils": "workspace:*",
         "tsx": "^4.7.0"
     },
     "peerDependencies": {

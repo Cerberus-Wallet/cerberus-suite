@@ -5,8 +5,8 @@ import type {
     BlockfrostTransaction,
     BlockfrostAccountInfo,
     ParseAssetResult,
-} from '@trezor/blockchain-link-types/lib/blockfrost';
-import type { VinVout } from '@trezor/blockchain-link-types/lib/blockbook';
+} from '@cerberus/blockchain-link-types/lib/blockfrost';
+import type { VinVout } from '@cerberus/blockchain-link-types/lib/blockbook';
 import type {
     Utxo,
     Transaction,
@@ -15,7 +15,7 @@ import type {
     TokenInfo,
     TokenTransfer,
     TransferType,
-} from '@trezor/blockchain-link-types/lib/common';
+} from '@cerberus/blockchain-link-types/lib/common';
 
 import { enhanceVinVout, filterTargets, sumVinVout, transformTarget } from './utils';
 

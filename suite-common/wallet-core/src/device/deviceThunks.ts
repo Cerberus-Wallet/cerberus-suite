@@ -5,9 +5,9 @@ import TrezorConnect, {
     Address,
     Response as ConnectResponse,
     UI,
-} from '@trezor/connect';
+} from '@cerberus/connect';
 import { TrezorDevice } from '@suite-common/suite-types';
-import { analytics, EventType } from '@trezor/suite-analytics';
+import { analytics, EventType } from '@cerberus/suite-analytics';
 import { notificationsActions } from '@suite-common/toast-notifications';
 import {
     sortByTimestamp,
@@ -25,7 +25,7 @@ import {
     getProtocolMagic,
     getStakingPath,
 } from '@suite-common/wallet-utils';
-import { getEnvironment } from '@trezor/env-utils';
+import { getEnvironment } from '@cerberus/env-utils';
 
 import {
     selectDevice,
@@ -41,7 +41,7 @@ import { selectAccountByKey } from '../accounts/accountsReducer';
 
 /**
  * Called from:
- * - `@trezor/connect` events handler `handleDeviceConnect`, `handleDeviceDisconnect`
+ * - `@cerberus/connect` events handler `handleDeviceConnect`, `handleDeviceDisconnect`
  * - from user action in `@suite-components/DeviceMenu`
  * @param {(Device | TrezorDevice | undefined)} device
  */
@@ -58,7 +58,7 @@ export const selectDeviceThunk = createThunk(
                 // requested device is a @suite TrezorDevice type. get exact instance from reducer
                 payload = getSelectedDevice(device, devices);
             } else {
-                // requested device is a @trezor/connect Device type
+                // requested device is a @cerberus/connect Device type
                 // find all instances and select recently used
                 const instances = devices.filter(d => d.path === device.path);
 
@@ -97,7 +97,7 @@ export const toggleRememberDevice = createThunk(
 );
 
 /**
- * Triggered by `@trezor/connect DEVICE_EVENT`
+ * Triggered by `@cerberus/connect DEVICE_EVENT`
  * @param {Device} device
  * @param {boolean} [useEmptyPassphrase=false]
  */
@@ -140,7 +140,7 @@ export const createDeviceInstance = createThunk(
 );
 
 /**
- * Triggered by `@trezor/connect DEVICE_EVENT`
+ * Triggered by `@cerberus/connect DEVICE_EVENT`
  * @param {Device} device
  */
 export const handleDeviceConnect = createThunk(
@@ -166,7 +166,7 @@ export const handleDeviceConnect = createThunk(
 );
 
 /**
- * Triggered by `@trezor/connect DEVICE_EVENT`
+ * Triggered by `@cerberus/connect DEVICE_EVENT`
  * @param {Device} device
  */
 export const handleDeviceDisconnect = createThunk(
@@ -211,7 +211,7 @@ export const handleDeviceDisconnect = createThunk(
 );
 
 /**
- * Triggered by `@trezor/connect DEVICE_EVENT` via suiteMiddleware
+ * Triggered by `@cerberus/connect DEVICE_EVENT` via suiteMiddleware
  * Remove all data related to all instances of disconnected device if they are not remembered
  * @param {Device} device
  */

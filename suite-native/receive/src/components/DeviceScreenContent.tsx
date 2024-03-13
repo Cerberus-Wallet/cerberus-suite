@@ -9,8 +9,8 @@ import {
     vec,
 } from '@shopify/react-native-skia';
 
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
-import { DeviceModelInternal } from '@trezor/connect';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
+import { DeviceModelInternal } from '@cerberus/connect';
 import { selectDeviceModel } from '@suite-common/wallet-core';
 
 import { DeviceScreenPagination } from './DeviceScreenPagination';

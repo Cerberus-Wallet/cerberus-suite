@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { useLoadingSkeleton } from 'src/hooks/suite';
 import { Left, Right } from './AccountItem';
 import { NavigationItemBase } from 'src/components/suite/layouts/SuiteLayout/Sidebar/NavigationItem';
-import { SkeletonCircle, SkeletonStack, SkeletonRectangle } from '@trezor/components';
+import { SkeletonCircle, SkeletonStack, SkeletonRectangle } from '@cerberus/components';
 
 const StyledSkeletonStack = styled(SkeletonStack)`
     > :last-child {

@@ -2,7 +2,7 @@ import { ActivityIndicator } from 'react-native';
 
 import { Text, VStack, Box } from '@suite-native/atoms';
 import { Icon } from '@suite-common/icons';
-import { useNativeStyles, prepareNativeStyle } from '@trezor/styles';
+import { useNativeStyles, prepareNativeStyle } from '@cerberus/styles';
 import {
     useAuthorizeDevice,
     useDetectDeviceError,

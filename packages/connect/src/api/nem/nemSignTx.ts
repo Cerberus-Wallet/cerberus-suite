@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/helpers/nemSignTx.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/helpers/nemSignTx.js
 
 import { PROTO, ERRORS, NEM } from '../../constants';
 import * as $T from '../../types/api/nem';

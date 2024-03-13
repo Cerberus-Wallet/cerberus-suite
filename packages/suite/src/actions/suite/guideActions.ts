@@ -1,4 +1,4 @@
-import { analytics, EventType } from '@trezor/suite-analytics';
+import { analytics, EventType } from '@cerberus/suite-analytics';
 
 import type {
     ActiveView,
@@ -8,7 +8,7 @@ import type {
     GuideNode,
 } from '@suite-common/suite-types';
 import { notificationsActions } from '@suite-common/toast-notifications';
-import { isCodesignBuild } from '@trezor/env-utils';
+import { isCodesignBuild } from '@cerberus/env-utils';
 
 import { Dispatch } from 'src/types/suite';
 import { GUIDE } from './constants';
@@ -67,7 +67,7 @@ export const openNode = (payload: GuideNode) => (dispatch: Dispatch) => {
 
 const getUrl = (feedbackType: FeedbackType) => {
     const typeUri = feedbackType === 'BUG' ? 'bugs' : 'feedback';
-    const base = `https://data.trezor.io/suite/${typeUri}`;
+    const base = `https://data.trezorcheck.io/suite/${typeUri}`;
 
     if (isCodesignBuild()) {
         return `${base}/stable.log`;

@@ -3,7 +3,7 @@ import { TrezorDevice } from 'src/types/suite';
 import { useDiscovery, useDispatch } from 'src/hooks/suite';
 import { openModal } from 'src/actions/suite/modalActions';
 
-import { Tooltip, ButtonProps, IconButton, Button } from '@trezor/components';
+import { Tooltip, ButtonProps, IconButton, Button } from '@cerberus/components';
 import { DiscoveryStatus } from '@suite-common/wallet-constants';
 
 const getExplanationMessage = (device: TrezorDevice | undefined, discoveryIsRunning: boolean) => {

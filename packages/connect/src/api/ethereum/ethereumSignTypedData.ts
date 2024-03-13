@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/helpers/ethereumSignTypedData.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/helpers/ethereumSignTypedData.js
 
 import BigNumber from 'bignumber.js';
 import { PROTO, ERRORS } from '../../constants';

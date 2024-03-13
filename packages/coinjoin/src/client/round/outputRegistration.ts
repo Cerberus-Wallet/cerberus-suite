@@ -1,4 +1,4 @@
-import { getWeakRandomId, arrayShuffle } from '@trezor/utils';
+import { getWeakRandomId, arrayShuffle } from '@cerberus/utils';
 
 import * as coordinator from '../coordinator';
 import * as middleware from '../middleware';

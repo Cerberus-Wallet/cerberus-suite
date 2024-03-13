@@ -1,4 +1,4 @@
-import { ArrayElement, ConstWithOptionalFields } from '@trezor/type-utils';
+import { ArrayElement, ConstWithOptionalFields } from '@cerberus/type-utils';
 import { routes } from '@suite-common/suite-config';
 
 type RouteKeys =

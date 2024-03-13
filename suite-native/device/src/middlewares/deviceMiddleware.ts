@@ -1,7 +1,7 @@
 import { AnyAction, isAnyOf } from '@reduxjs/toolkit';
 
 import { createMiddlewareWithExtraDeps } from '@suite-common/redux-utils';
-import { DEVICE } from '@trezor/connect';
+import { DEVICE } from '@cerberus/connect';
 import {
     authorizeDevice,
     deviceActions,

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { Button, Divider, Paragraph, Warning } from '@trezor/components';
-import { spacingsPx } from '@trezor/theme';
+import { Button, Divider, Paragraph, Warning } from '@cerberus/components';
+import { spacingsPx } from '@cerberus/theme';
 import { Translation } from 'src/components/suite';
 import { FeesInfo } from 'src/components/wallet/FeesInfo';
 import { useSelector, useValidatorsQueue } from 'src/hooks/suite';

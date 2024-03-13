@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import * as SplashScreen from 'expo-splash-screen';
 import * as Sentry from '@sentry/react-native';
 
-import TrezorConnect from '@trezor/connect';
+import TrezorConnect from '@cerberus/connect';
 import { selectIsAppReady, selectIsConnectInitialized, StoreProvider } from '@suite-native/state';
 import { FormatterProvider } from '@suite-common/formatters';
 import { NavigationContainerWithAnalytics } from '@suite-native/navigation';

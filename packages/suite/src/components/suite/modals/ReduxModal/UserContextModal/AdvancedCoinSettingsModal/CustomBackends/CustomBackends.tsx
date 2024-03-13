@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 
-import { Input, Button, H3, CollapsibleBox } from '@trezor/components';
+import { Input, Button, H3, CollapsibleBox } from '@cerberus/components';
 import { Translation, TooltipSymbol } from 'src/components/suite';
 import { useDispatch, useSelector } from 'src/hooks/suite';
 import { toggleTor } from 'src/actions/suite/suiteActions';
@@ -12,7 +12,7 @@ import { BackendTypeSelect } from './BackendTypeSelect';
 import { TorModal, TorResult } from './TorModal';
 import type { Network } from 'src/types/wallet';
 import { selectTorState } from 'src/reducers/suite/suiteReducer';
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 
 const Wrapper = styled.div`
     display: flex;

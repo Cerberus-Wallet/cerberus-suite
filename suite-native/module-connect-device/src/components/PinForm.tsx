@@ -1,6 +1,6 @@
 import { Form, useForm } from '@suite-native/forms';
 import { Card, HStack, VStack, Box, Text, Loader } from '@suite-native/atoms';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import { Translation } from '@suite-native/intl';
 import { PinFormValues, pinFormSchema } from '@suite-common/validators';
 

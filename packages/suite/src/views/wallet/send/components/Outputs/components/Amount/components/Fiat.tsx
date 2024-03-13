@@ -4,7 +4,7 @@ import BigNumber from 'bignumber.js';
 import styled from 'styled-components';
 import { Controller } from 'react-hook-form';
 
-import { Select } from '@trezor/components';
+import { Select } from '@cerberus/components';
 import { useSendFormContext } from 'src/hooks/wallet';
 import {
     fromFiatCurrency,

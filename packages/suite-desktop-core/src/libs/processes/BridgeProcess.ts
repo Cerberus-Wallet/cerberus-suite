@@ -13,7 +13,7 @@ export class BridgeProcess extends BaseProcess {
             const resp = await fetch(`http://127.0.0.1:21325/`, {
                 method: 'POST',
                 headers: {
-                    Origin: 'https://electron.trezor.io',
+                    Origin: 'https://electron.cerberus.uraanai.com',
                 },
             });
             this.logger.debug(this.logTopic, `Checking status (${resp.status})`);

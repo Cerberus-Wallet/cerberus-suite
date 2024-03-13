@@ -1,6 +1,6 @@
-import coinsJSON from '@trezor/connect-common/files/coins.json';
-import ethereumCoinsJSON from '@trezor/connect-common/files/coins-eth.json';
-import BlockchainLink from '@trezor/blockchain-link';
+import coinsJSON from '@cerberus/connect-common/files/coins.json';
+import ethereumCoinsJSON from '@cerberus/connect-common/files/coins-eth.json';
+import BlockchainLink from '@cerberus/blockchain-link';
 import { parseCoinsJson, getBitcoinNetwork, getEthereumNetwork } from '../../data/coinInfo';
 import { initBlockchain } from '../BlockchainLink';
 

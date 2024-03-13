@@ -1,7 +1,7 @@
 import React from 'react';
-import { H3, Spinner, motionEasing } from '@trezor/components';
+import { H3, Spinner, motionEasing } from '@cerberus/components';
 import styled from 'styled-components';
-import { spacings, spacingsPx } from '@trezor/theme';
+import { spacings, spacingsPx } from '@cerberus/theme';
 import { Translation } from 'src/components/suite';
 import { motion, AnimatePresence } from 'framer-motion';
 

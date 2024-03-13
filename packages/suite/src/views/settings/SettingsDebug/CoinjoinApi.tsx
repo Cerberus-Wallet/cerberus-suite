@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { NetworkSymbol, networks } from '@suite-common/wallet-config';
-import { Switch, Button, Link } from '@trezor/components';
+import { Switch, Button, Link } from '@cerberus/components';
 
 import { ActionColumn, ActionSelect, SectionItem, TextColumn } from 'src/components/suite';
 import { COINJOIN_NETWORKS } from 'src/services/coinjoin';

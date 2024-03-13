@@ -1,4 +1,4 @@
-import { Button } from '@trezor/components';
+import { Button } from '@cerberus/components';
 
 import { Row } from './Row';
 import type { Field } from '../../types';

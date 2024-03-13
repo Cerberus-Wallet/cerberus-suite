@@ -1,14 +1,14 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import { AnimatePresence, HTMLMotionProps, motion } from 'framer-motion';
-import { Button, H2, Icon, Image, Paragraph, motionEasing } from '@trezor/components';
-import { analytics, EventType } from '@trezor/suite-analytics';
-import { SUITE_URL } from '@trezor/urls';
+import { Button, H2, Icon, Image, Paragraph, motionEasing } from '@cerberus/components';
+import { analytics, EventType } from '@cerberus/suite-analytics';
+import { SUITE_URL } from '@cerberus/urls';
 
 import { useDispatch } from 'src/hooks/suite/useDispatch';
 import { setFlag } from 'src/actions/suite/suiteActions';
 import { Translation, TrezorLink } from 'src/components/suite';
-import { SCREEN_QUERY } from '@trezor/components/src/config/variables';
+import { SCREEN_QUERY } from '@cerberus/components/src/config/variables';
 
 const Container = styled(motion.div)`
     position: relative;

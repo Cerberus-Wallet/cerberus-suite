@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { getValue, shimmerEffect } from './utils';
 import { SkeletonBaseProps } from './types';
-import { Elevation, mapElevationToBackground } from '@trezor/theme';
+import { Elevation, mapElevationToBackground } from '@cerberus/theme';
 import { useElevation } from '../ElevationContext/ElevationContext';
 
 export type SkeletonCircleProps = SkeletonBaseProps & {

@@ -2,7 +2,7 @@ import { Dispatch, SetStateAction } from 'react';
 import { FieldPath, UseFormReturn } from 'react-hook-form';
 
 import { Network } from '@suite-common/wallet-config';
-import { AccountUtxo, FeeLevel, PROTO } from '@trezor/connect';
+import { AccountUtxo, FeeLevel, PROTO } from '@cerberus/connect';
 
 import { Account } from './account';
 import {

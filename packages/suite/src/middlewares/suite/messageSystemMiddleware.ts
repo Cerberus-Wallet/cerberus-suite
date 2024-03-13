@@ -1,7 +1,7 @@
 import { MiddlewareAPI } from 'redux';
 
 import { deviceActions, selectDevice } from '@suite-common/wallet-core';
-import { TRANSPORT, DEVICE } from '@trezor/connect';
+import { TRANSPORT, DEVICE } from '@cerberus/connect';
 import {
     messageSystemActions,
     categorizeMessages,

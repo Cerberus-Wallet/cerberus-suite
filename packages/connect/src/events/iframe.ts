@@ -37,7 +37,7 @@ export interface IFrameLoaded {
 export interface IFrameInit {
     type: typeof IFRAME.INIT;
     payload: {
-        settings: ConnectSettings; // settings from window.parent (sent by @trezor/connect-web)
+        settings: ConnectSettings; // settings from window.parent (sent by @cerberus/connect-web)
         extension?: string;
     };
 }

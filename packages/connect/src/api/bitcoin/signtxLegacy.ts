@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/helpers/signtx-legacy.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/helpers/signtx-legacy.js
 
 import { PROTO, ERRORS } from '../../constants';
 import type { SignedTransaction } from '../../types/api/bitcoin';

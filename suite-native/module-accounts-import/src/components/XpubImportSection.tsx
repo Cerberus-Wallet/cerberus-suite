@@ -1,4 +1,4 @@
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import { Box, Button } from '@suite-native/atoms';
 import { networks, NetworkSymbol } from '@suite-common/wallet-config';
 

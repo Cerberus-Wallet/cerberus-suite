@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Icon, colors, animations } from '@trezor/components';
+import { Icon, colors, animations } from '@cerberus/components';
 
 const IconWrapper = styled.div`
     width: 40px;

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 import { getStatus, deviceNeedsAttention } from '@suite-common/suite-utils';
-import { motionEasing } from '@trezor/components';
+import { motionEasing } from '@cerberus/components';
 import { selectDevicesCount, selectDevice } from '@suite-common/wallet-core';
 
 import { ConnectDevicePrompt } from 'src/components/suite';

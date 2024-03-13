@@ -3,12 +3,12 @@
  * this file is bundled into content script so be careful what you are importing not to bloat the bundle
  */
 
-import { Deferred, createDeferred } from '@trezor/utils';
-import { TypedEmitter } from '@trezor/utils';
-import { scheduleAction } from '@trezor/utils';
+import { Deferred, createDeferred } from '@cerberus/utils';
+import { TypedEmitter } from '@cerberus/utils';
+import { scheduleAction } from '@cerberus/utils';
 
 // TODO: so logger should be probably moved to connect common, or this file should be moved to connect
-// import type { Log } from '@trezor/connect/lib/utils/debug';
+// import type { Log } from '@cerberus/connect/lib/utils/debug';
 type Log = {
     log: (...args: any[]) => void;
     error: (...args: any[]) => void;

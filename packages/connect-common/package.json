@@ -1,18 +1,18 @@
 {
-    "name": "@trezor/connect-common",
+    "name": "@cerberus/connect-common",
     "version": "0.0.29",
-    "author": "Trezor <info@trezor.io>",
-    "homepage": "https://github.com/trezor/trezor-suite/tree/develop/packages/connect-common",
+    "author": "Cerberus <info@cerberus.uraanai.com>",
+    "homepage": "https://github.com/Cerberus-Wallet/cerberus-suite/tree/develop/packages/connect-common",
     "keywords": [
-        "Trezor",
+        "Cerberus",
         "trezor-connect"
     ],
     "repository": {
         "type": "git",
-        "url": "git://github.com/trezor/trezor-suite.git"
+        "url": "git://github.com/Cerberus-Wallet/cerberus-suite.git"
     },
     "bugs": {
-        "url": "https://github.com/trezor/trezor-suite/issues"
+        "url": "https://github.com/Cerberus-Wallet/cerberus-suite/issues"
     },
     "npmPublishAccess": "public",
     "license": "SEE LICENSE IN LICENSE.md",
@@ -39,8 +39,8 @@
         "prepublish": "yarn tsx ../../scripts/prepublish.js"
     },
     "dependencies": {
-        "@trezor/env-utils": "workspace:*",
-        "@trezor/utils": "workspace:*"
+        "@cerberus/env-utils": "workspace:*",
+        "@cerberus/utils": "workspace:*"
     },
     "peerDependencies": {
         "tslib": "^2.6.2"

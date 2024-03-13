@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/data/DataManager.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/data/DataManager.js
 
 import { httpRequest } from '../utils/assets';
 import { parseCoinsJson } from './coinInfo';

@@ -1,4 +1,4 @@
-import { HELP_CENTER_DEVICE_AUTHENTICATION } from '@trezor/urls';
+import { HELP_CENTER_DEVICE_AUTHENTICATION } from '@cerberus/urls';
 
 import { openModal } from 'src/actions/suite/modalActions';
 import {

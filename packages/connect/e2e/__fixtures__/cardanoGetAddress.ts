@@ -1,5 +1,5 @@
 import { NETWORK_IDS, PROTOCOL_MAGICS } from '../../src/constants/cardano';
-import { MessagesSchema } from '@trezor/protobuf';
+import { MessagesSchema } from '@cerberus/protobuf';
 
 const { CardanoAddressType } = MessagesSchema;
 

@@ -1,5 +1,5 @@
 import type { GithubReleaseInfo } from '@suite-common/suite-types';
-import { GITHUB_REPO_URL, GITHUB_API_REPO_URL } from '@trezor/urls';
+import { GITHUB_REPO_URL, GITHUB_API_REPO_URL } from '@cerberus/urls';
 
 export const getReleaseNotes = async (version?: string) => {
     if (!version) {

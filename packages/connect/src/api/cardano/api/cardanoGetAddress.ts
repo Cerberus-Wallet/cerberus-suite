@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/CardanoGetAddress.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/CardanoGetAddress.js
 
 import { AbstractMethod, MethodReturnType } from '../../../core/AbstractMethod';
 import { getFirmwareRange } from '../../common/paramsValidator';
@@ -12,7 +12,7 @@ import {
 } from '../cardanoAddressParameters';
 import { PROTO, ERRORS } from '../../../constants';
 import { UI, createUiMessage } from '../../../events';
-import { Assert } from '@trezor/schema-utils';
+import { Assert } from '@cerberus/schema-utils';
 import { Bundle } from '../../../types';
 import { CardanoGetAddress as CardanoGetAddressSchema } from '../../../types/api/cardano';
 

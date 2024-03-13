@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components';
-import { borders, mapElevationToBackground } from '@trezor/theme';
+import { borders, mapElevationToBackground } from '@cerberus/theme';
 import { styledHoverOnParentOfArrowIcon } from './ArrowIcon';
-import { Elevation, nextElevation } from '@trezor/theme/src/elevation';
-import { useElevation } from '@trezor/components';
+import { Elevation, nextElevation } from '@cerberus/theme/src/elevation';
+import { useElevation } from '@cerberus/components';
 import { HTMLAttributes } from 'react';
 
 const StyledAssetTableRowGrid = styled.div<{ elevation: Elevation }>`

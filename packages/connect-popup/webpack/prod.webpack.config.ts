@@ -3,7 +3,7 @@ import webpack, { DefinePlugin } from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import TerserPlugin from 'terser-webpack-plugin';
 import CopyPlugin from 'copy-webpack-plugin';
-import * as URLS from '@trezor/urls';
+import * as URLS from '@cerberus/urls';
 import { version } from '../package.json';
 import { execSync } from 'child_process';
 

@@ -1,4 +1,4 @@
-import { Deferred } from '@trezor/utils';
+import { Deferred } from '@cerberus/utils';
 import { Account, WalletAccountTransaction } from '@suite-common/wallet-types';
 import { RequestEnableTorResponse } from '@suite-common/suite-config';
 

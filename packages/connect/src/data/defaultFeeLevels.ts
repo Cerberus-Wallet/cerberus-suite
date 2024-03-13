@@ -1,8 +1,8 @@
 import { FeeLevel, FeeInfo } from '../types';
 
-// this is workaround for the lack of information from 'trezor-common'
+// this is workaround for the lack of information from 'cerberus-common'
 // we need to declare what does "high/normal/low" mean in block time (eg: normal BTC = 6 blocks = ~1 hour)
-// coins other than BTC usually got 2 levels maximum (high/low) and we should consider to remove other levels from 'trezor-common'
+// coins other than BTC usually got 2 levels maximum (high/low) and we should consider to remove other levels from 'cerberus-common'
 const BLOCKS_FOR_FEE_LEVEL: Record<string, Record<string, number>> = {
     btc: {
         // blocktime ~ 600sec.

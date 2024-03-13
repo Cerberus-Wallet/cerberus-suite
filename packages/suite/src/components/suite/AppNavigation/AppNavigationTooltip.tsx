@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 
 import { Translation } from 'src/components/suite';
 import { useSelector } from 'src/hooks/suite';
-import { Tooltip } from '@trezor/components';
+import { Tooltip } from '@cerberus/components';
 
 interface AppNavigationTooltipProps {
     children: ReactNode;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { getTitleForNetwork, getTitleForCoinjoinAccount } from '@suite-common/wallet-utils';
 import { Account } from 'src/types/wallet';
-import { TOOLTIP_DELAY_LONG, TruncateWithTooltip } from '@trezor/components';
+import { TOOLTIP_DELAY_LONG, TruncateWithTooltip } from '@cerberus/components';
 import { useCallback } from 'react';
 import { useTranslation } from '../../hooks/suite';
 

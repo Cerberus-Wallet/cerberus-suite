@@ -9,7 +9,7 @@ import { AccountGroup } from './AccountGroup';
 import { AccountItem } from './AccountItem';
 import { AccountsMenuNotice } from './AccountsMenuNotice';
 import styled from 'styled-components';
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 
 const SkeletonContainer = styled.div`
     margin: ${spacingsPx.xs};

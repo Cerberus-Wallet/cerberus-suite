@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/SignMessage.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/SignMessage.js
 
 import { AbstractMethod } from '../core/AbstractMethod';
 import { validateCoinPath, getFirmwareRange } from './common/paramsValidator';
@@ -8,7 +8,7 @@ import { messageToHex } from '../utils/formatUtils';
 import type { BitcoinNetworkInfo } from '../types';
 import type { PROTO } from '../constants';
 import { SignMessage as SignMessageSchema } from '../types';
-import { Assert } from '@trezor/schema-utils';
+import { Assert } from '@cerberus/schema-utils';
 
 export default class SignMessage extends AbstractMethod<'signMessage', PROTO.SignMessage> {
     init() {

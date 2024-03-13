@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { variables } from '@trezor/components';
-import { spacingsPx, typography } from '@trezor/theme';
+import { variables } from '@cerberus/components';
+import { spacingsPx, typography } from '@cerberus/theme';
 import { PropsWithChildren, ReactNode } from 'react';
 import { FiatValue, Translation, TrendTicker } from 'src/components/suite';
 import { Account } from 'src/types/wallet';

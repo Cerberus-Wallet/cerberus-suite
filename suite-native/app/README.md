@@ -1,6 +1,6 @@
 # @suite-native/app
 
-Trezor Suite native application.
+Cerberus Suite native application.
 
 ## Prerequisites
 
@@ -13,13 +13,13 @@ It's good to have some tools installed before you begin:
 
 ## Running app on Android
 
-1. Connect device or run emulator. For a physical device, it's recommended to use [adb over wifi](https://developer.android.com/studio/command-line/adb#connect-to-a-device-over-wi-fi-android-11+) because you will have free up a USB port to connect Trezor device.
+1. Connect device or run emulator. For a physical device, it's recommended to use [adb over wifi](https://developer.android.com/studio/command-line/adb#connect-to-a-device-over-wi-fi-android-11+) because you will have free up a USB port to connect Cerberus device.
 1. Run native build - `yarn android`
 1. Run packager - `yarn start`
 
 ### Optional:
 
-If you're using [Trezor User Env](https://github.com/trezor/trezor-user-env) while running the app, you might need to map the ports for data transport between Trezor emulator and Android device emulator by running `adb reverse tcp:21325 tcp:21325`. If you're running the app from device over Wi-Fi, you will instead need to call `adb reverse tcp:8081 tcp:8081`.
+If you're using [Cerberus User Env](https://github.com/Cerberus-Wallet/cerberus-user-env) while running the app, you might need to map the ports for data transport between Cerberus emulator and Android device emulator by running `adb reverse tcp:21325 tcp:21325`. If you're running the app from device over Wi-Fi, you will instead need to call `adb reverse tcp:8081 tcp:8081`.
 
 ## Running app on iOS
 

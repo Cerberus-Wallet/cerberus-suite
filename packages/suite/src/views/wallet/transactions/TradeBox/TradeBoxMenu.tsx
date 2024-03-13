@@ -1,9 +1,9 @@
 import { Route } from '@suite-common/suite-types';
 import { Account } from '@suite-common/wallet-types';
-import { Button, variables } from '@trezor/components';
-import { FirmwareType } from '@trezor/connect';
-import { EventType, analytics } from '@trezor/suite-analytics';
-import { spacingsPx } from '@trezor/theme';
+import { Button, variables } from '@cerberus/components';
+import { FirmwareType } from '@cerberus/connect';
+import { EventType, analytics } from '@cerberus/suite-analytics';
+import { spacingsPx } from '@cerberus/theme';
 import { ReactNode } from 'react';
 import { goto } from 'src/actions/suite/routerActions';
 import { Translation } from 'src/components/suite';

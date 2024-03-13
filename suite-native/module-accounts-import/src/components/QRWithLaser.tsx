@@ -24,7 +24,7 @@ import {
 } from '@shopify/react-native-skia';
 
 import { icons } from '@suite-common/icons';
-import { useNativeStyles } from '@trezor/styles';
+import { useNativeStyles } from '@cerberus/styles';
 
 const ROUNDED_CORNER_SIZE = 15;
 

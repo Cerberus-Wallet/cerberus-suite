@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Button, variables, Link, Image } from '@trezor/components';
+import { Button, variables, Link, Image } from '@cerberus/components';
 import { CoinmarketTransactionId } from 'src/views/wallet/coinmarket/common';
 import { useDispatch } from 'src/hooks/suite';
 import { Account } from 'src/types/wallet';

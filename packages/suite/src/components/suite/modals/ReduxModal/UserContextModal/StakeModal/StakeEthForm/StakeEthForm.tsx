@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Button } from '@trezor/components';
+import { Button } from '@cerberus/components';
 import { Translation } from 'src/components/suite';
 import { useStakeEthFormContext } from 'src/hooks/wallet/useStakeEthForm';
 import { AvailableBalance } from '../AvailableBalance';
@@ -8,7 +8,7 @@ import { Inputs } from './Inputs';
 import { FeesInfo } from 'src/components/wallet/FeesInfo';
 import { ConfirmStakeEthModal } from './ConfirmStakeEthModal';
 import { CRYPTO_INPUT, FIAT_INPUT } from 'src/types/wallet/stakeForms';
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 
 const Body = styled.div`
     margin-bottom: ${spacingsPx.xl};

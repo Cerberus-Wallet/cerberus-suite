@@ -9,7 +9,7 @@ import { createThunk } from '@suite-common/redux-utils';
 import { FiatCurrencyCode } from '@suite-common/suite-config';
 import { Account } from '@suite-common/wallet-types';
 import { isTestnet } from '@suite-common/wallet-utils';
-import TrezorConnect, { AccountTransaction } from '@trezor/connect';
+import TrezorConnect, { AccountTransaction } from '@cerberus/connect';
 import { selectCoinDefinition, transactionsActions } from '@suite-common/wallet-core';
 import { networks } from '@suite-common/wallet-config';
 

@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/blockchain/BlockchainEstimateFee.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/blockchain/BlockchainEstimateFee.js
 
 import { Payload, MethodReturnType, AbstractMethod } from '../core/AbstractMethod';
 import { validateParams } from './common/paramsValidator';
@@ -69,8 +69,8 @@ export default class BlockchainEstimateFee extends AbstractMethod<'blockchainEst
         };
         if (request && request.feeLevels) {
             const fees = new FeeLevels(coinInfo);
-            // TODO: https://github.com/trezor/trezor-suite/issues/5340
-            // smart fees for DOGE are not relevant since their fee policy changed, see @trezor/utxo-lib/compose: baseFee
+            // TODO: https://github.com/Cerberus-Wallet/cerberus-suite/issues/5340
+            // smart fees for DOGE are not relevant since their fee policy changed, see @cerberus/utxo-lib/compose: baseFee
             if (request.feeLevels === 'smart' && coinInfo.shortcut !== 'DOGE') {
                 const backend = await initBlockchain(coinInfo, this.postMessage);
                 await fees.load(backend);

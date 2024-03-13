@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Translation } from 'src/components/suite';
-import { Note, Tooltip, variables } from '@trezor/components';
+import { Note, Tooltip, variables } from '@cerberus/components';
 
 const Wrapper = styled.div`
     display: flex;

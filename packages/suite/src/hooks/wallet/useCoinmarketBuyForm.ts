@@ -6,7 +6,7 @@ import type { BuyTradeQuoteRequest } from 'invity-api';
 
 import { isChanged } from '@suite-common/suite-utils';
 import { amountToSatoshi, formatAmount } from '@suite-common/wallet-utils';
-import { useDidUpdate } from '@trezor/react-utils';
+import { useDidUpdate } from '@cerberus/react-utils';
 
 import {
     clearQuotes,

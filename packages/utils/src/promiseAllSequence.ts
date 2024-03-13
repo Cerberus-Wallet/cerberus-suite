@@ -13,7 +13,7 @@ export const promiseAllSequence = async <
 ) => {
     const results: R[] = [];
     // For some reason, the previous implementation with promise chaining
-    // (https://github.com/trezor/trezor-suite/blob/100015c45451ed50e2b0906d78de73c0fd2883d1/packages/utils/src/promiseAllSequence.ts)
+    // (https://github.com/Cerberus-Wallet/cerberus-suite/blob/100015c45451ed50e2b0906d78de73c0fd2883d1/packages/utils/src/promiseAllSequence.ts)
     // was significantly slower in some cases, therefore simple for cycle is used instead
     for (let i = 0; i < actions.length; ++i) {
         const result = await actions[i]();

@@ -1,5 +1,5 @@
 {
-    "name": "@trezor/trezor-user-env-link",
+    "name": "@cerberus/trezor-user-env-link",
     "version": "1.0.2",
     "license": "See LICENSE.md in repo root",
     "sideEffects": false,
@@ -9,7 +9,7 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
-        "@trezor/utils": "workspace:*",
+        "@cerberus/utils": "workspace:*",
         "ws": "^8.16.0"
     }
 }

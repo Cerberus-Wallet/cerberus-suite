@@ -1,7 +1,7 @@
 import { A } from '@mobily/ts-belt';
 
 import { Box, VStack, Text } from '@suite-native/atoms';
-import { TokenInfo } from '@trezor/blockchain-link-types';
+import { TokenInfo } from '@cerberus/blockchain-link-types';
 import { TokenAddress, TokenSymbol } from '@suite-common/wallet-types';
 
 import { EthereumTokenInfo } from './EthereumTokenInfo';

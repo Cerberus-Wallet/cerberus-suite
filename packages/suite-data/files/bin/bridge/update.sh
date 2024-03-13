@@ -2,7 +2,7 @@
 set -e
 
 # Fill in your path here:
-BRIDGE_DIR="/Users/XXX/go/src/github.com/trezor/trezord-go"
+BRIDGE_DIR="/Users/XXX/go/src/github.com/Cerberus-Wallet/cerberusd-go"
 BASE_DIR=$(dirname "$0")
 
 make -C "${BRIDGE_DIR}" build-release

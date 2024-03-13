@@ -45,7 +45,7 @@ TrezorConnect.tezosGetPublicKey({
 
 ### Result
 
-[PublicKey type](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/params.ts)
+[PublicKey type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/params.ts)
 
 Result with only one public key
 

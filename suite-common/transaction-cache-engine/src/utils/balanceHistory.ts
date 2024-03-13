@@ -1,6 +1,6 @@
 import BigNumber from 'bignumber.js';
 
-import { AccountTransaction } from '@trezor/connect';
+import { AccountTransaction } from '@cerberus/connect';
 import { NetworkSymbol, getNetworkType } from '@suite-common/wallet-config';
 
 import { AccountBalanceHistory } from '../types';

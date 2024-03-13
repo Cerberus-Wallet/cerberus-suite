@@ -2,8 +2,8 @@ import { useWatch } from 'react-hook-form';
 import styled from 'styled-components';
 
 import { isFeatureFlagEnabled } from '@suite-common/suite-utils';
-import { Button, Tooltip, variables } from '@trezor/components';
-import { spacingsPx } from '@trezor/theme';
+import { Button, Tooltip, variables } from '@cerberus/components';
+import { spacingsPx } from '@cerberus/theme';
 import { Translation } from 'src/components/suite';
 import { useSendFormContext } from 'src/hooks/wallet';
 import { OpenGuideFromTooltip } from 'src/components/guide';

@@ -1,11 +1,11 @@
-import { analytics, AppUpdateEventStatus, EventType } from '@trezor/suite-analytics';
+import { analytics, AppUpdateEventStatus, EventType } from '@cerberus/suite-analytics';
 
 import { DESKTOP_UPDATE } from 'src/actions/suite/constants';
 import { Dispatch, GetState } from 'src/types/suite';
 import { UpdateState, UpdateWindow } from 'src/reducers/suite/desktopUpdateReducer';
 import { getAppUpdatePayload } from 'src/utils/suite/analytics';
 
-import { desktopApi, UpdateInfo, UpdateProgress } from '@trezor/suite-desktop-api';
+import { desktopApi, UpdateInfo, UpdateProgress } from '@cerberus/suite-desktop-api';
 import { notificationsActions } from '@suite-common/toast-notifications';
 
 export type DesktopUpdateAction =

@@ -1,8 +1,8 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
 
-import { variables } from '@trezor/components';
-import { Url } from '@trezor/urls';
+import { variables } from '@cerberus/components';
+import { Url } from '@cerberus/urls';
 
 import { LearnMoreButton } from '../LearnMoreButton';
 

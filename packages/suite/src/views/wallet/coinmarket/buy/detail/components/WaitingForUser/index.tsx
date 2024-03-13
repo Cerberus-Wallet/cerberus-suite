@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import { Button, variables, Image } from '@trezor/components';
+import { Button, variables, Image } from '@cerberus/components';
 import { Translation } from 'src/components/suite/Translation';
 import { BuyTrade, BuyTradeStatus } from 'invity-api';
 import { Account } from 'src/types/wallet';

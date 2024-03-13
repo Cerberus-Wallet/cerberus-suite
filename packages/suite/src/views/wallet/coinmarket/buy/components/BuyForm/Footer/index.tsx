@@ -1,6 +1,6 @@
 import { Controller } from 'react-hook-form';
 import styled from 'styled-components';
-import { Button, Select, variables, Flag } from '@trezor/components';
+import { Button, Select, variables, Flag } from '@cerberus/components';
 import regional from 'src/constants/wallet/coinmarket/regional';
 import { useCoinmarketBuyFormContext } from 'src/hooks/wallet/useCoinmarketBuyForm';
 import { getCountryLabelParts } from 'src/utils/wallet/coinmarket/coinmarketUtils';

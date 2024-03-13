@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Card, Button } from '@trezor/components';
+import { Card, Button } from '@cerberus/components';
 import { CoinjoinProgressWheel } from './CoinjoinProgressWheel';
 import { CoinjoinStatusMessage } from './CoinjoinStatusMessage';
 import { useSelector } from 'src/hooks/suite/useSelector';
@@ -7,7 +7,7 @@ import { selectCurrentCoinjoinWheelStates } from 'src/reducers/wallet/coinjoinRe
 import { Translation } from 'src/components/suite';
 import { useDispatch } from 'src/hooks/suite';
 import { stopCoinjoinSession } from 'src/actions/wallet/coinjoinClientActions';
-import { typography } from '@trezor/theme';
+import { typography } from '@cerberus/theme';
 
 const Container = styled(Card)<{ isWide?: boolean }>`
     position: relative;

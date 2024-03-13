@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import styled from 'styled-components';
 
-import { Dropdown } from '@trezor/components';
+import { Dropdown } from '@cerberus/components';
 import { ExtendedProps } from './definitions';
-import { RequiredKey } from '@trezor/type-utils';
+import { RequiredKey } from '@cerberus/type-utils';
 
 const StyledDropdown = styled(Dropdown)`
     display: flex;

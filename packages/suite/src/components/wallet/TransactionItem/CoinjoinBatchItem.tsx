@@ -8,7 +8,7 @@ import {
     sumTransactionsFiat,
 } from '@suite-common/wallet-utils';
 import { useFormatters } from '@suite-common/formatters';
-import { variables, CollapsibleBox } from '@trezor/components';
+import { variables, CollapsibleBox } from '@cerberus/components';
 
 import { useDispatch } from 'src/hooks/suite';
 import { openModal } from 'src/actions/suite/modalActions';
@@ -27,7 +27,7 @@ import {
     TimestampWrapper,
     TxTypeIconWrapper,
 } from './CommonComponents';
-import { borders } from '@trezor/theme';
+import { borders } from '@cerberus/theme';
 
 const CryptoAmount = styled(StyledFormattedCryptoAmount)`
     width: unset;

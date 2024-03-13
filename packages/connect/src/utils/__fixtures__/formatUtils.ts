@@ -1,4 +1,4 @@
-import coinsJSON from '@trezor/connect-common/files/coins.json';
+import coinsJSON from '@cerberus/connect-common/files/coins.json';
 
 import { formatAmount } from '../formatUtils';
 

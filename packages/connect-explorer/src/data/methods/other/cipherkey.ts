@@ -18,7 +18,7 @@ export default [
                 name: 'key',
                 type: 'input-long',
                 optional: true,
-                value: 'This text is displayed on Trezor during encrypt',
+                value: 'This text is displayed on Cerberus during encrypt',
             },
             {
                 name: 'value',

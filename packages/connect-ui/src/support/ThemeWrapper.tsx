@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 
 import { ThemeProvider } from 'styled-components';
 
-import { intermediaryTheme } from '@trezor/components';
+import { intermediaryTheme } from '@cerberus/components';
 
 interface ReactWrapperProps {
     children: ReactNode;

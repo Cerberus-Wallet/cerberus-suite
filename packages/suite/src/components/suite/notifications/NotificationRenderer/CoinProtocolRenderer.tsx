@@ -1,8 +1,8 @@
 import { useRouteMatch } from 'react-router-dom';
 import styled from 'styled-components';
 
-import { CoinLogo } from '@trezor/components';
-import { capitalizeFirstLetter } from '@trezor/utils';
+import { CoinLogo } from '@cerberus/components';
+import { capitalizeFirstLetter } from '@cerberus/utils';
 
 import { fillSendForm, resetProtocol } from 'src/actions/suite/protocolActions';
 import { Translation } from 'src/components/suite';

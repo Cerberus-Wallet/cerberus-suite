@@ -1,7 +1,7 @@
 import { ReactNode, MouseEvent } from 'react';
 import styled, { css, useTheme } from 'styled-components';
 import { Icon, IconProps } from '../../assets/Icon/Icon';
-import { TypographyStyle, spacings, typography, typographyStylesBase } from '@trezor/theme';
+import { TypographyStyle, spacings, typography, typographyStylesBase } from '@cerberus/theme';
 
 const A = styled.a<LinkProps>`
     ${({ type }) => (type ? typography[type] : typography.body)}

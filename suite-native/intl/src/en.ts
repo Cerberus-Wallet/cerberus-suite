@@ -5,7 +5,7 @@
 
 export const en = {
     generic: {
-        header: '<green>Trezor Suite</green> <grey>Lite</grey>',
+        header: '<green>Cerberus Suite</green> <grey>Lite</grey>',
         buttons: {
             back: 'Back',
             close: 'Close',
@@ -22,7 +22,7 @@ export const en = {
         killswitch: {
             title: 'Update required',
             content:
-                'Update to continue using Trezor Suite Lite. Don’t worry, your funds are secure.',
+                'Update to continue using Cerberus Suite Lite. Don’t worry, your funds are secure.',
             cta: 'Download latest version',
         },
     },
@@ -34,20 +34,20 @@ export const en = {
             device: {
                 title: 'Your wallet is empty',
                 subtitle:
-                    'You need to get some coins first in Trezor Suite Desktop or Web version.',
+                    'You need to get some coins first in Cerberus Suite Desktop or Web version.',
             },
             portfolioTracker: {
                 title: 'Get started',
                 subtitle: 'Sync your coin addresses and view your portfolio balance.',
                 primaryButton: 'Sync & Track',
                 secondaryButton: 'Settings',
-                alert: 'This requires access to Trezor Suite coin addresses.',
+                alert: 'This requires access to Cerberus Suite coin addresses.',
             },
             connectOrImportCrossroads: {
                 gotMyTrezor: {
-                    title: 'Connect my Trezor',
-                    description: 'Manage your coins with your Trezor connected.',
-                    connectButton: 'Connect Trezor',
+                    title: 'Connect my Cerberus',
+                    description: 'Manage your coins with your Cerberus connected.',
+                    connectButton: 'Connect Cerberus',
                 },
                 syncCoins: {
                     title: 'Track my coins',
@@ -150,9 +150,9 @@ export const en = {
                     address: 'Where is my receive address?',
                 },
                 text: {
-                    xpub: ' To view the public key (XPUB) of your account, open the Trezor Suite app, plug in your Trezor device, then select <emphasized>Details</emphasized>, then choose <emphasized>Show public key</emphasized>.',
+                    xpub: ' To view the public key (XPUB) of your account, open the Cerberus Suite app, plug in your Cerberus device, then select <emphasized>Details</emphasized>, then choose <emphasized>Show public key</emphasized>.',
                     address:
-                        'To view the receive address of your account, open the Trezor Suite desktop app, plugin your Trezor device, select <emphasized>Accounts</emphasized>, choose <emphasized>Receive</emphasized>, and click on <emphasized>Show full address</emphasized>.',
+                        'To view the receive address of your account, open the Cerberus Suite desktop app, plugin your Cerberus device, select <emphasized>Accounts</emphasized>, choose <emphasized>Receive</emphasized>, and click on <emphasized>Show full address</emphasized>.',
                 },
             },
             confirmButton: 'Got it',
@@ -173,7 +173,7 @@ export const en = {
                 description: 'The last account you created for this coin has no transactions yet.',
                 actionPrimary: 'Close',
                 actionSecondary: 'Learn more',
-                actionSecondaryUrl: 'https://trezor.io/learn/a/multiple-accounts-in-trezor-suite',
+                actionSecondaryUrl: 'https://cerberus.uraanai.com/learn/a/multiple-accounts-in-trezor-suite',
             },
             generalError: {
                 title: 'We couldn’t add your account.',
@@ -223,14 +223,14 @@ export const en = {
     },
     moduleConnectDevice: {
         connectAndUnlockScreen: {
-            title: 'Connect & unlock\nyour Trezor',
+            title: 'Connect & unlock\nyour Cerberus',
         },
         pinScreen: {
             form: {
                 title: 'Enter PIN',
                 entered: 'Entered',
                 digits: 'digits',
-                keypadInfo: 'Follow the keypad layout on your Trezor',
+                keypadInfo: 'Follow the keypad layout on your Cerberus',
                 enterPin: 'Enter pin',
                 submitting: 'Verifying your PIN',
             },
@@ -246,19 +246,19 @@ export const en = {
         },
         helpModal: {
             connect: {
-                title: 'Connect my Trezor',
-                subtitle: "Don't see your Trezor?",
+                title: 'Connect my Cerberus',
+                subtitle: "Don't see your Cerberus?",
                 stepsTitle: 'Try these steps',
-                step1: '1. Reconnect your Trezor',
+                step1: '1. Reconnect your Cerberus',
                 step2: '2. Use a different USB data cable',
                 step3: '3. Use a different mobile device',
-                step4: '4. Enable connection for Trezor Suite Lite via phone system message',
+                step4: '4. Enable connection for Cerberus Suite Lite via phone system message',
             },
             pinMatrix: {
                 title: 'Enter PIN',
                 subtitle: 'on your mobile display',
                 content:
-                    'Follow the keypad layout on your Trezor device to enter your PIN on your mobile display. Your PIN will be hidden on your mobile display for your security. <link>Learn more here</link>.',
+                    'Follow the keypad layout on your Cerberus device to enter your PIN on your mobile display. Your PIN will be hidden on your mobile display for your security. <link>Learn more here</link>.',
             },
         },
     },
@@ -266,46 +266,46 @@ export const en = {
         IncompatibleDeviceModalAppendix: {
             title: 'Follow these steps',
             lines: {
-                1: '1. Connect Trezor to Desktop Suite',
+                1: '1. Connect Cerberus to Desktop Suite',
                 2: '2. Navigate to Settings menu',
-                3: { update: '3. Install update', setUp: '3. Set up your Trezor' },
+                3: { update: '3. Install update', setUp: '3. Set up your Cerberus' },
             },
         },
         noSeedModal: {
-            title: 'The connected Trezor device needs to be set up',
+            title: 'The connected Cerberus device needs to be set up',
             description:
-                'To continue using your Trezor with this app, set it up with Trezor Suite for desktop or web.',
+                'To continue using your Cerberus with this app, set it up with Cerberus Suite for desktop or web.',
         },
         unacquiredDeviceModal: {
-            title: 'Connected Trezor is used by another application.',
-            description: "Trezor can't be used by multiple applications.",
-            button: 'Use Trezor here',
+            title: 'Connected Cerberus is used by another application.',
+            description: "Cerberus can't be used by multiple applications.",
+            button: 'Use Cerberus here',
             appendix: {
-                bullet1: `Close the other running applications that might be using your Trezor.`,
-                bullet2: `Reconnect your Trezor`,
+                bullet1: `Close the other running applications that might be using your Cerberus.`,
+                bullet2: `Reconnect your Cerberus`,
             },
         },
         unsupportedFirmwareModal: {
-            title: 'The connected Trezor device needs an update',
+            title: 'The connected Cerberus device needs an update',
             description:
-                'To continue using your Trezor with this app, update it with Trezor Suite for desktop or web.',
+                'To continue using your Cerberus with this app, update it with Cerberus Suite for desktop or web.',
         },
         bootloaderModal: {
-            title: 'The connected Trezor device is in bootloader mode',
-            description: 'To continue using your Trezor with this app, exit bootloader mode.',
+            title: 'The connected Cerberus device is in bootloader mode',
+            description: 'To continue using your Cerberus with this app, exit bootloader mode.',
             appendix: {
                 exit: {
                     title: 'Exit bootloader mode',
                     lines: {
-                        1: '1. Disconnect your Trezor',
-                        2: '2. Reconnect your Trezor to your mobile device',
+                        1: '1. Disconnect your Cerberus',
+                        2: '2. Reconnect your Cerberus to your mobile device',
                     },
                 },
                 continue: {
                     title: 'Continue in bootloader mode',
                     lines: {
-                        1: '1. Disconnect your Trezor',
-                        2: '2. Connect your Trezor to Trezor Suite for desktop or web',
+                        1: '1. Disconnect your Cerberus',
+                        2: '2. Connect your Cerberus to Cerberus Suite for desktop or web',
                         3: '3. Enter bootloader mode',
                     },
                 },
@@ -317,18 +317,18 @@ export const en = {
         accountNotFound: 'Account {accountKey} not found.',
         receiveAddressCard: {
             alert: {
-                success: 'Receive address has been confirmed on your Trezor.',
+                success: 'Receive address has been confirmed on your Cerberus.',
                 longCardanoAddress:
-                    'Cardano (ADA) address exceeds Trezor device’s screen. Scroll here and on the device to view it and confirm.',
+                    'Cardano (ADA) address exceeds Cerberus device’s screen. Scroll here and on the device to view it and confirm.',
                 ethereumToken: 'Your receive address is your Ethereum address',
             },
             unverifiedWarning: {
                 title: 'receive address',
                 content:
-                    'For an extra layer of security, use Trezor Suite with your Trezor hardware wallet to verify the receive address',
+                    'For an extra layer of security, use Cerberus Suite with your Cerberus hardware wallet to verify the receive address',
             },
             deviceHint: {
-                description: 'This receive address should match the one\non your Trezor device.',
+                description: 'This receive address should match the one\non your Cerberus device.',
             },
             showAddress: {
                 button: 'Show full address',
@@ -338,19 +338,19 @@ export const en = {
         },
         bottomSheets: {
             confirmOnTrezor: {
-                title: 'Confirm on Trezor',
+                title: 'Confirm on Cerberus',
                 description:
-                    'Go to your device and verify that the receive address on your Trezor matches the one displayed here.',
+                    'Go to your device and verify that the receive address on your Cerberus matches the one displayed here.',
             },
             addressMismatch: {
                 title: "Address doesn't match?",
                 description:
-                    'The receive address shown on the app should match the one on your Trezor device.',
+                    'The receive address shown on the app should match the one on your Cerberus device.',
                 remember: 'Keep in mind:',
                 trustDevice:
-                    "Always trust your Trezor's screen, it never lies. Your mobile may be vulnerable to hacks and security breaches.",
+                    "Always trust your Cerberus's screen, it never lies. Your mobile may be vulnerable to hacks and security breaches.",
                 contactSupport:
-                    'For any security concerns about your app or device, contact Trezor Support.',
+                    'For any security concerns about your app or device, contact Cerberus Support.',
                 reportIssueButton: 'Report security issue',
             },
         },
@@ -364,42 +364,42 @@ export const en = {
             },
             usbEnabled: {
                 0: {
-                    question: 'Can I connect my Trezor to Trezor Suite Lite?',
-                    answer: 'Yes, you can connect your Trezor Hardware Wallet and use limited functionality. It is designed to work as a companion to the desktop/web version of Trezor Suite, but we will gradually add more features to make it a standalone application to manage your crypto funds with Trezor Hardware Wallet.',
+                    question: 'Can I connect my Cerberus to Cerberus Suite Lite?',
+                    answer: 'Yes, you can connect your Cerberus Hardware Wallet and use limited functionality. It is designed to work as a companion to the desktop/web version of Cerberus Suite, but we will gradually add more features to make it a standalone application to manage your crypto funds with Cerberus Hardware Wallet.',
                 },
                 1: {
                     question:
-                        'What is the difference between Portfolio Tracker and Connected Trezor functionality?',
-                    answer: 'Portfolio Tracker helps you stay in touch with your portfolio balances without having to connect your Trezor device. Simply sync your coin addresses and you can keep track of your balances on the go. You can also combine coin addresses from multiple wallets or Trezor devices to track your whole portfolio in one place. Connected Trezor allows you to manage your funds associated with your Trezor device. You can verify receive addresses and check your balances and transactions. However, if you disconnect the Trezor, you will no longer see the data from the Trezor device.',
+                        'What is the difference between Portfolio Tracker and Connected Cerberus functionality?',
+                    answer: 'Portfolio Tracker helps you stay in touch with your portfolio balances without having to connect your Cerberus device. Simply sync your coin addresses and you can keep track of your balances on the go. You can also combine coin addresses from multiple wallets or Cerberus devices to track your whole portfolio in one place. Connected Cerberus allows you to manage your funds associated with your Cerberus device. You can verify receive addresses and check your balances and transactions. However, if you disconnect the Cerberus, you will no longer see the data from the Cerberus device.',
                 },
                 2: {
                     question: 'What is public key? (XPUB) or a receive address?',
                     answer: 'An XPUB is a master public key for hierarchical deterministic wallets like bitcoin, generating multiple child keys and receive addresses for improved privacy. Ethereum uses a single, unchanging address for all transactions. For Ethereum, share only your address, while keeping your private key secure.',
                 },
                 3: {
-                    question: 'My Trezor device can’t connect',
+                    question: 'My Cerberus device can’t connect',
                     answer: {
-                        0: 'Reconnect your Trezor',
+                        0: 'Reconnect your Cerberus',
                         1: 'Use a different USB data cable',
                         2: 'Use a different mobile device',
                         3: 'Confirm connection via mobile device system message',
                     },
                 },
                 4: {
-                    question: 'What version of Trezor device Firmware Trezor Suite Lite supports?',
+                    question: 'What version of Cerberus device Firmware Cerberus Suite Lite supports?',
                     answer: {
-                        0: 'Trezor One: from version 1.12.1',
-                        1: 'Trezor T: from version 2.6.3',
-                        2: 'Trezor Safe 3: from version 2.6.3',
+                        0: 'Cerberus One: from version 1.12.1',
+                        1: 'Cerberus T: from version 2.6.3',
+                        2: 'Cerberus Safe 3: from version 2.6.3',
                     },
                 },
                 5: {
                     question: 'Why don’t I see my coin listed?',
-                    answer: 'Trezor Suite Lite currently supports a limited number of cryptocurrencies. If your coin is not listed, it may not be compatible with the app. However, Trezor regularly adds support for new coins, so check back periodically to see which coins have been added.',
+                    answer: 'Cerberus Suite Lite currently supports a limited number of cryptocurrencies. If your coin is not listed, it may not be compatible with the app. However, Cerberus regularly adds support for new coins, so check back periodically to see which coins have been added.',
                 },
                 6: {
                     question: 'What does the graph display?',
-                    answer: 'The graph in Trezor Suite Lite displays the price history of your portfolio’s synced assets over specified time period. You can adjust the time period by selecting a different range on the bottom of the graph.',
+                    answer: 'The graph in Cerberus Suite Lite displays the price history of your portfolio’s synced assets over specified time period. You can adjust the time period by selecting a different range on the bottom of the graph.',
                 },
                 7: {
                     question: 'Are my data safe?',
@@ -412,24 +412,24 @@ export const en = {
                     answer: 'An XPUB is a master public key for hierarchical deterministic wallets like bitcoin, generating multiple child keys and receive addresses for improved privacy. Ethereum uses a single, unchanging address for all transactions. For Ethereum, share only your address, while keeping your private key secure.',
                 },
                 1: {
-                    question: 'Can I connect my Trezor to Trezor Suite Lite?',
-                    answer: 'No, it is not possible. It is designed to work as a companion to the desktop/web version of Trezor Suite as a way to keep up with your Trezor portfolio on the go.',
+                    question: 'Can I connect my Cerberus to Cerberus Suite Lite?',
+                    answer: 'No, it is not possible. It is designed to work as a companion to the desktop/web version of Cerberus Suite as a way to keep up with your Cerberus portfolio on the go.',
                 },
                 2: {
-                    question: 'How do I send crypto in Trezor Suite Lite?',
-                    answer: 'Trezor Suite Lite is a watch-only portfolio tracker, which means it is designed to help you monitor your cryptocurrency holdings and transactions. Unfortunately, it is not currently possible to send crypto using Trezor Suite Lite. To send crypto, use the full version of Trezor Suite with your Trezor hardware wallet. This will provide you with the necessary security and functionality to manage and perform transactions with your cryptocurrencies.',
+                    question: 'How do I send crypto in Cerberus Suite Lite?',
+                    answer: 'Cerberus Suite Lite is a watch-only portfolio tracker, which means it is designed to help you monitor your cryptocurrency holdings and transactions. Unfortunately, it is not currently possible to send crypto using Cerberus Suite Lite. To send crypto, use the full version of Cerberus Suite with your Cerberus hardware wallet. This will provide you with the necessary security and functionality to manage and perform transactions with your cryptocurrencies.',
                 },
                 3: {
                     question: 'Why don’t I see my coin listed?',
-                    answer: 'Trezor Suite Lite currently supports a limited number of cryptocurrencies. If your coin is not listed, it may not be compatible with the app. However, Trezor regularly adds support for new coins, so check back periodically to see which coins have been added.',
+                    answer: 'Cerberus Suite Lite currently supports a limited number of cryptocurrencies. If your coin is not listed, it may not be compatible with the app. However, Cerberus regularly adds support for new coins, so check back periodically to see which coins have been added.',
                 },
                 4: {
                     question: 'What does the graph display?',
-                    answer: 'The graph in Trezor Suite Lite displays the price history of your portfolio’s synced assets over specified time period. You can adjust the time period by selecting a different range on the bottom of the graph.',
+                    answer: 'The graph in Cerberus Suite Lite displays the price history of your portfolio’s synced assets over specified time period. You can adjust the time period by selecting a different range on the bottom of the graph.',
                 },
                 5: {
                     question:
-                        'Why is the balance displayed in Trezor Suite different from the balance displayed in Trezor Suite Lite?',
+                        'Why is the balance displayed in Cerberus Suite different from the balance displayed in Cerberus Suite Lite?',
                     answer: 'Balances may mismatch due to improper syncing of all assets and account types, or pending transactions. Ensure you have synced all your assets correctly and check for any pending transactions to resolve the discrepancy.',
                 },
                 6: {
@@ -445,7 +445,7 @@ export const en = {
             title: 'Customization',
         },
         aboutUs: {
-            title: 'About Trezor Suite Lite',
+            title: 'About Cerberus Suite Lite',
         },
         privacyAndSecurity: {
             title: 'Privacy & Security',
@@ -455,14 +455,14 @@ export const en = {
         welcomeScreen: {
             welcome: 'Welcome to ',
             subtitle: 'Securely track, manage & receive crypto on the go ',
-            trezorLink: 'Don’t have a Trezor? <trezorLink>Get one here.</trezorLink>',
+            trezorLink: 'Don’t have a Cerberus? <trezorLink>Get one here.</trezorLink>',
 
             nextButton: 'Get started',
         },
         connectTrezorScreen: {
             title: 'Connect',
             subtitle:
-                'Manage your portfolio with your Trezor hardware wallet connected directly to your mobile device.',
+                'Manage your portfolio with your Cerberus hardware wallet connected directly to your mobile device.',
         },
         featureReceiveScreen: {
             portfolioTracker: {
@@ -472,7 +472,7 @@ export const en = {
             device: {
                 title: 'Receive',
                 subtitle:
-                    'Generate and verify addresses directly on your Trezor to get paid and receive crypto on the go.',
+                    'Generate and verify addresses directly on your Cerberus to get paid and receive crypto on the go.',
             },
         },
         trackBalancesScreen: {
@@ -484,12 +484,12 @@ export const en = {
             device: {
                 title: 'Track balances',
                 subtitle:
-                    'Keep up with your favorite coins even without your Trezor connected. Simply sync and track your crypto from anywhere.',
+                    'Keep up with your favorite coins even without your Cerberus connected. Simply sync and track your crypto from anywhere.',
             },
         },
         analyticsConsentScreen: {
             title: 'Better with you',
-            subtitle: 'Improve Trezor Suite Lite with your anonymous data.',
+            subtitle: 'Improve Cerberus Suite Lite with your anonymous data.',
             bulletPoints: {
                 privacy: {
                     title: 'Your data is private',
@@ -529,8 +529,8 @@ export const en = {
         },
         emptyState: {
             title: 'No assets',
-            subtitle: 'Connect your Trezor or sync coins to view and track assets.',
-            receiveSubtitle: 'Connect your Trezor or sync coins to view and receive assets.',
+            subtitle: 'Connect your Cerberus or sync coins to view and track assets.',
+            receiveSubtitle: 'Connect your Cerberus or sync coins to view and receive assets.',
             searchAgain: 'Search again',
         },
     },
@@ -558,13 +558,13 @@ export const en = {
             sectionTitle: 'Open',
         },
         connectDevice: {
-            sectionTitle: 'Connect Trezor device',
+            sectionTitle: 'Connect Cerberus device',
             connectButton: 'Connect',
         },
         portfolioTracker: {
-            explore: 'Explore Trezor',
+            explore: 'Explore Cerberus',
             learnBasics: 'Learn the basics',
-            exploreShop: 'Explore Trezor Shop',
+            exploreShop: 'Explore Cerberus Shop',
         },
         status: {
             portfolioTracker: 'Sync & track coins',
@@ -580,16 +580,16 @@ export const en = {
         installedFw: 'Installed firmware: {version}',
         upToDateFw: 'The firmware is up to date.',
         outdatedFw: 'The firmware is outdated.',
-        goToAccessories: 'Get swag for your device @ Trezor Shop',
+        goToAccessories: 'Get swag for your device @ Cerberus Shop',
         updateHowTo: {
             title: 'How to update firmware',
             subtitle: 'Follow these steps:',
             lines: {
-                1: '1. Connect Trezor to Desktop Suite',
+                1: '1. Connect Cerberus to Desktop Suite',
                 2: '2. Navigate to Settings menu',
                 3: '3. Install new firmware',
             },
-            button: 'Learn more @ Trezor.io',
+            button: 'Learn more @ Cerberus.io',
         },
     },
     qrCode: {

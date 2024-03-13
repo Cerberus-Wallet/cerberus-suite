@@ -1,9 +1,9 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/ApplySettings.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/ApplySettings.js
 
 import { AbstractMethod } from '../core/AbstractMethod';
 import { UI, createUiMessage } from '../events';
 import { PROTO } from '../constants';
-import { Assert } from '@trezor/schema-utils';
+import { Assert } from '@cerberus/schema-utils';
 import { ApplySettings as ApplySettingsSchema } from '../types/api/applySettings';
 
 export default class ApplySettings extends AbstractMethod<'applySettings', PROTO.ApplySettings> {

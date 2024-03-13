@@ -26,7 +26,7 @@ import {
     createReturnLink,
     getPaymentFrequencyOptions,
 } from 'src/utils/wallet/coinmarket/savingsUtils';
-import { isDesktop } from '@trezor/env-utils';
+import { isDesktop } from '@cerberus/env-utils';
 import { useFormDraft } from 'src/hooks/wallet/useFormDraft';
 import { selectFiatRatesByFiatRateKey } from '@suite-common/wallet-core';
 import { getFiatRateKey } from '@suite-common/wallet-utils';

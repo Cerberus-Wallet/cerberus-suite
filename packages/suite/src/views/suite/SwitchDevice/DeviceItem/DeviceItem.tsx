@@ -2,8 +2,8 @@ import { useState } from 'react';
 
 import { AnimatePresence, motion } from 'framer-motion';
 import styled, { useTheme } from 'styled-components';
-import { variables, Icon, Image, motionAnimation, DeviceAnimation } from '@trezor/components';
-import { DeviceModelInternal } from '@trezor/connect';
+import { variables, Icon, Image, motionAnimation, DeviceAnimation } from '@cerberus/components';
+import { DeviceModelInternal } from '@cerberus/connect';
 import * as deviceUtils from '@suite-common/suite-utils';
 
 import {
@@ -24,7 +24,7 @@ import { DeviceHeaderButton } from './DeviceHeaderButton';
 
 import type { TrezorDevice, AcquiredDevice, ForegroundAppProps } from 'src/types/suite';
 import type { getBackgroundRoute } from 'src/utils/suite/router';
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 import { DeviceStatusText } from './DeviceStatusText';
 
 const DeviceWrapper = styled.div`
@@ -212,7 +212,7 @@ export const DeviceItem = ({ device, instances, onCancel, backgroundRoute }: Dev
                                 />
                             )}
                             {deviceModelInternal !== DeviceModelInternal.T2B1 && (
-                                <StyledImage alt="Trezor" image={`CERBERUS_${deviceModelInternal}`} />
+                                <StyledImage alt="Cerberus" image={`CERBERUS_${deviceModelInternal}`} />
                             )}
                         </DeviceImageWrapper>
                     )}

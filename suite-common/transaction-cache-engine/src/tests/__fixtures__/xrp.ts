@@ -1,6 +1,6 @@
 import BigNumber from 'bignumber.js';
 
-import { AccountInfo, Response as ConnectResponse } from '@trezor/connect';
+import { AccountInfo, Response as ConnectResponse } from '@cerberus/connect';
 
 import { AccountBalanceHistory } from '../../types';
 

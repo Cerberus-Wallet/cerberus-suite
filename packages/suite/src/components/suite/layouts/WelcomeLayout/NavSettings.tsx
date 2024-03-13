@@ -1,4 +1,4 @@
-import { IconButton } from '@trezor/components';
+import { IconButton } from '@cerberus/components';
 import { Translation } from 'src/components/suite';
 import { useDispatch } from 'src/hooks/suite';
 import { goto } from 'src/actions/suite/routerActions';

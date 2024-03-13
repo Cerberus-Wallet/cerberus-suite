@@ -1,5 +1,5 @@
-import { createDeferred, Deferred } from '@trezor/utils';
-import { v1 as v1Protocol } from '@trezor/protocol';
+import { createDeferred, Deferred } from '@cerberus/utils';
+import { v1 as v1Protocol } from '@cerberus/protocol';
 
 import {
     AbstractTransport,

@@ -1,7 +1,7 @@
 import { MouseEvent } from 'react';
 import styled, { useTheme } from 'styled-components';
-import { variables, Icon, Input } from '@trezor/components';
-import { spacingsPx } from '@trezor/theme';
+import { variables, Icon, Input } from '@cerberus/components';
+import { spacingsPx } from '@cerberus/theme';
 
 const StyledInput = styled(Input)`
     input {

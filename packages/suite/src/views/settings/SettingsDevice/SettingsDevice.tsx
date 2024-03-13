@@ -1,6 +1,6 @@
 import { isDeviceRemembered } from '@suite-common/suite-utils';
-import { DeviceModelInternal, type TransportInfo } from '@trezor/connect';
-import { isBitcoinOnlyDevice, pickByDeviceModel } from '@trezor/device-utils';
+import { DeviceModelInternal, type TransportInfo } from '@cerberus/connect';
+import { isBitcoinOnlyDevice, pickByDeviceModel } from '@cerberus/device-utils';
 
 import { DeviceBanner, SettingsLayout, SettingsSection } from 'src/components/settings';
 import { Translation } from 'src/components/suite';

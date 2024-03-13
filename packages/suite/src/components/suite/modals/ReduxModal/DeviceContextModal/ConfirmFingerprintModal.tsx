@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ConfirmOnDevice } from '@trezor/components';
+import { ConfirmOnDevice } from '@cerberus/components';
 import { Translation, Modal, ModalProps } from 'src/components/suite';
 import { TrezorDevice } from 'src/types/suite';
 import { Fingerprint } from 'src/components/firmware';

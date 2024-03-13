@@ -9,8 +9,8 @@ import {
 // @ts-expect-error This is not public RN API but I will make Text noticeable faster https://twitter.com/FernandoTheRojo/status/1707769877493121420
 import { NativeText } from 'react-native/Libraries/Text/TextNativeComponent';
 
-import { useNativeStyles, prepareNativeStyle, NativeStyleObject } from '@trezor/styles';
-import { Color, TypographyStyle } from '@trezor/theme';
+import { useNativeStyles, prepareNativeStyle, NativeStyleObject } from '@cerberus/styles';
+import { Color, TypographyStyle } from '@cerberus/theme';
 
 import { TestProps } from './types';
 

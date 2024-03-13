@@ -3,9 +3,9 @@ import {
     UnavailableCapability,
     FirmwareRelease,
     DeviceModelInternal,
-} from '@trezor/connect';
+} from '@cerberus/connect';
 import { TrezorDevice, AcquiredDevice } from '@suite-common/suite-types';
-import * as URLS from '@trezor/urls';
+import * as URLS from '@cerberus/urls';
 
 /**
  * Used in Welcome step in Onboarding
@@ -244,7 +244,7 @@ export const getChangelogUrl = (device: TrezorDevice, revision?: string | null) 
         ? 'CHANGELOG.md'
         : `CHANGELOG.${deviceModelInternal}.md`;
 
-    return `https://github.com/trezor/trezor-firmware/blob/${commit}/${folder}/${changelogFile}`;
+    return `https://github.com/Cerberus-Wallet/cerberus-firmware/blob/${commit}/${folder}/${changelogFile}`;
 };
 
 export const getCheckBackupUrl = (device?: TrezorDevice) => {

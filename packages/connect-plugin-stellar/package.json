@@ -1,19 +1,19 @@
 {
-    "name": "@trezor/connect-plugin-stellar",
+    "name": "@cerberus/connect-plugin-stellar",
     "version": "9.0.2",
-    "author": "Trezor <info@trezor.io>",
-    "homepage": "https://github.com/trezor/trezor-suite/tree/develop/packages/connect-plugin-stellar",
-    "description": "@trezor/connect plugin for Stellar",
+    "author": "Cerberus <info@cerberus.uraanai.com>",
+    "homepage": "https://github.com/Cerberus-Wallet/cerberus-suite/tree/develop/packages/connect-plugin-stellar",
+    "description": "@cerberus/connect plugin for Stellar",
     "license": "SEE LICENSE IN LICENSE.md",
     "repository": {
         "type": "git",
-        "url": "git://github.com/trezor/trezor-suite.git"
+        "url": "git://github.com/Cerberus-Wallet/cerberus-suite.git"
     },
     "bugs": {
-        "url": "https://github.com/trezor/trezor-suite/issues"
+        "url": "https://github.com/Cerberus-Wallet/cerberus-suite/issues"
     },
     "keywords": [
-        "Trezor",
+        "Cerberus",
         "trezor-connect",
         "stellar"
     ],
@@ -27,7 +27,7 @@
     ],
     "peerDependencies": {
         "@stellar/stellar-sdk": "^11.2.2",
-        "@trezor/connect": "9.x.x",
+        "@cerberus/connect": "9.x.x",
         "tslib": "^2.6.2"
     },
     "devDependencies": {

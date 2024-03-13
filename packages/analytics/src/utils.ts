@@ -1,6 +1,6 @@
-import type { Environment } from '@trezor/env-utils';
+import type { Environment } from '@cerberus/env-utils';
 import type { App, Event as AnalyticsEvent } from './types';
-import { getWeakRandomId } from '@trezor/utils';
+import { getWeakRandomId } from '@cerberus/utils';
 
 export const getTrackingRandomId = () => getWeakRandomId(10);
 
@@ -35,7 +35,7 @@ export const encodeDataToQueryString = <T extends AnalyticsEvent>(
 };
 
 export const getUrl = (app: App, isDev: boolean, environment?: Environment) => {
-    let base = `https://data.trezor.io/${app}/log`;
+    let base = `https://data.trezorcheck.io/${app}/log`;
 
     if (environment) {
         base = `${base}/${environment}`;

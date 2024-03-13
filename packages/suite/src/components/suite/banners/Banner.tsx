@@ -1,8 +1,8 @@
 import { ReactNode } from 'react';
 import styled, { DefaultTheme, useTheme } from 'styled-components';
-import { Button, Icon, variables } from '@trezor/components';
-import { borders, spacingsPx, typography } from '@trezor/theme';
-import { UIVariant } from '@trezor/components/src/config/types';
+import { Button, Icon, variables } from '@cerberus/components';
+import { borders, spacingsPx, typography } from '@cerberus/theme';
+import { UIVariant } from '@cerberus/components/src/config/types';
 
 export type BannerVariant = Extract<UIVariant, 'info' | 'warning' | 'destructive'>;
 

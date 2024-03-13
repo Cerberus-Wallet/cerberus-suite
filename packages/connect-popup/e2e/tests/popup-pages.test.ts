@@ -1,5 +1,5 @@
 import { test, Page, BrowserContext, expect } from '@playwright/test';
-import { TrezorUserEnvLink } from '@trezor/trezor-user-env-link';
+import { TrezorUserEnvLink } from '@cerberus/trezor-user-env-link';
 import { getContexts, openPopup, log, setConnectSettings } from '../support/helpers';
 
 import fs from 'fs';

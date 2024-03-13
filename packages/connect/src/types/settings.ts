@@ -1,7 +1,7 @@
-import type { BlockchainSettings } from '@trezor/blockchain-link';
-import type { Transport } from '@trezor/transport';
+import type { BlockchainSettings } from '@cerberus/blockchain-link';
+import type { Transport } from '@cerberus/transport';
 
-export type { SystemInfo } from '@trezor/connect-common';
+export type { SystemInfo } from '@cerberus/connect-common';
 export interface Manifest {
     appUrl: string;
     email: string;

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { CoinLogo, variables } from '@trezor/components';
+import { CoinLogo, variables } from '@cerberus/components';
 import { Modal, Translation } from 'src/components/suite';
 import { NETWORKS } from 'src/config/wallet';
 import { NetworkSymbol } from 'src/types/wallet';

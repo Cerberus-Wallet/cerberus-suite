@@ -1,6 +1,6 @@
 import { FieldValues } from 'react-hook-form';
 
-import { cloneObject } from '@trezor/utils';
+import { cloneObject } from '@cerberus/utils';
 
 import { Discovery, FormDraftKeyPrefix } from '@suite-common/wallet-types';
 import { notificationsActions } from '@suite-common/toast-notifications';

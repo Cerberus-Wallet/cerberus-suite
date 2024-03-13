@@ -12,7 +12,7 @@ import type { Account, Discovery, Network, WalletAccountTransaction } from 'src/
 import type { CoinjoinAccount, CoinjoinDebugSettings } from 'src/types/wallet/coinjoin';
 
 import type { BackendSettings, WalletSettings } from '@suite-common/wallet-types';
-import type { StorageUpdateMessage } from '@trezor/suite-storage';
+import type { StorageUpdateMessage } from '@cerberus/suite-storage';
 import { AnalyticsState } from '@suite-common/analytics';
 import { GraphData } from '../types/wallet/graph';
 

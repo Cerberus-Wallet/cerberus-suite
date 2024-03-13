@@ -1,4 +1,4 @@
-import { TorController, TOR_CONTROLLER_STATUS } from '@trezor/request-manager';
+import { TorController, TOR_CONTROLLER_STATUS } from '@cerberus/request-manager';
 
 import { BaseProcess, Status } from './BaseProcess';
 

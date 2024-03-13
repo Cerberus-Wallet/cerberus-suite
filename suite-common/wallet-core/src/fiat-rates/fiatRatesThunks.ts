@@ -7,7 +7,7 @@ import { createThunk } from '@suite-common/redux-utils';
 import { FiatCurrencyCode } from '@suite-common/suite-config';
 import { Account, TickerId, RateType, Timestamp } from '@suite-common/wallet-types';
 import { isTestnet } from '@suite-common/wallet-utils';
-import { AccountTransaction } from '@trezor/connect';
+import { AccountTransaction } from '@cerberus/connect';
 import { getNetworkFeatures, networks } from '@suite-common/wallet-config';
 
 import { fiatRatesActionsPrefix, REFETCH_INTERVAL } from './fiatRatesConstants';

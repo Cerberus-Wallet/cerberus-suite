@@ -1,7 +1,7 @@
 import { ComponentProps } from 'react';
 import styled from 'styled-components';
 
-import { SkeletonRectangle, SkeletonSpread, SkeletonStack, variables } from '@trezor/components';
+import { SkeletonRectangle, SkeletonSpread, SkeletonStack, variables } from '@cerberus/components';
 
 import { useLoadingSkeleton } from 'src/hooks/suite';
 

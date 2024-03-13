@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import Tippy, { TippyProps } from '@tippyjs/react/headless';
 import { Instance } from 'tippy.js';
 import { transparentize } from 'polished';
-import { borders, palette, spacings, spacingsPx, typography, zIndices } from '@trezor/theme';
+import { borders, palette, spacings, spacingsPx, typography, zIndices } from '@cerberus/theme';
 
 import { Icon, IconType } from '../assets/Icon/Icon';
 

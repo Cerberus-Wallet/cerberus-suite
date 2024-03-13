@@ -1,6 +1,6 @@
 import styled, { useTheme } from 'styled-components';
-import { Icon, Tooltip } from '@trezor/components';
-import { borders, spacingsPx } from '@trezor/theme';
+import { Icon, Tooltip } from '@cerberus/components';
+import { borders, spacingsPx } from '@cerberus/theme';
 import { useDispatch, useSelector, useTranslation } from 'src/hooks/suite';
 import { goto } from 'src/actions/suite/routerActions';
 import { SettingsAnchor } from 'src/constants/suite/anchors';

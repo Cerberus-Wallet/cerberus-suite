@@ -1,6 +1,6 @@
 ## Electron main process
 
-`@trezor/connect` running inside electron main process and communicating with renderer process through `ipcRenderer`
+`@cerberus/connect` running inside electron main process and communicating with renderer process through `ipcRenderer`
 
 ### Install
 

@@ -1,5 +1,5 @@
 import { Box, Button, Text } from '@suite-native/atoms';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 
 type CameraPermissionErrorProps = {
     onPermissionRequest: () => void;

@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from 'src/hooks/suite';
 import { selectTorState } from 'src/reducers/suite/suiteReducer';
 import { toggleTor, updateTorStatus } from 'src/actions/suite/suiteActions';
 
-import { Button, ModalProps } from '@trezor/components';
+import { Button, ModalProps } from '@cerberus/components';
 import { TorProgressBar } from './TorProgressBar';
 
 const StyledButton = styled(Button)`

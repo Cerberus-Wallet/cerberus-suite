@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-import { EventType, analytics } from '@trezor/suite-analytics';
-import { CERBERUS_URL } from '@trezor/urls';
+import { EventType, analytics } from '@cerberus/suite-analytics';
+import { CERBERUS_URL } from '@cerberus/urls';
 
 import { useDispatch, useSelector } from 'src/hooks/suite';
 import { selectIsDashboardT2B1PromoBannerShown } from 'src/reducers/suite/suiteReducer';
@@ -14,12 +14,12 @@ import {
     SVG_PATH,
     motionEasing,
     variables,
-} from '@trezor/components';
+} from '@cerberus/components';
 import { setFlag } from 'src/actions/suite/suiteActions';
 import { Translation, TrezorLink } from 'src/components/suite';
 import { AnimatePresence, motion } from 'framer-motion';
 import { resolveStaticPath } from '@suite-common/suite-utils';
-import { colorVariants } from '@trezor/theme';
+import { colorVariants } from '@cerberus/theme';
 import { rgba } from 'polished';
 
 const BannerWrapper = styled(motion.div)`

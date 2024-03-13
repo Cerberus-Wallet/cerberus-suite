@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { Translation } from 'src/components/suite';
-import { Button, Image } from '@trezor/components';
+import { Button, Image } from '@cerberus/components';
 import { InvityAPIReloadQuotesAfterSeconds } from 'src/constants/wallet/coinmarket/metadata';
 import { CoinmarketRefreshTime } from './CoinmarketRefreshTime';
 

@@ -1,4 +1,4 @@
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 
 /** @deprecated */
 export const MAX_ONBOARDING_WIDTH = 1020; // old max width, kept for consistency@deprecated

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Button } from '@trezor/components';
+import { Button } from '@cerberus/components';
 import { selectDevice } from '@suite-common/wallet-core';
 
 import { SectionItem, TextColumn, ActionColumn } from 'src/components/suite';
@@ -56,8 +56,8 @@ export const PasswordManager = () => {
         return (
             <SectionItem>
                 <TextColumn
-                    title="Trezor password manager"
-                    description="Read only implementation of former Trezor Password Manager"
+                    title="Cerberus password manager"
+                    description="Read only implementation of former Cerberus Password Manager"
                 />
                 <ActionColumn>
                     <Button onClick={connect}>Connect to dropbox</Button>

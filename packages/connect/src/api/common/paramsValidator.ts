@@ -1,5 +1,5 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/helpers/paramsValidator.js
-import { versionUtils } from '@trezor/utils';
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/helpers/paramsValidator.js
+import { versionUtils } from '@cerberus/utils';
 
 import { ERRORS } from '../../constants';
 import { fromHardened } from '../../utils/pathUtils';

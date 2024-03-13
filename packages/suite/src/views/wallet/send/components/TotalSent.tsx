@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import { Card, variables } from '@trezor/components';
+import { Card, variables } from '@cerberus/components';
 import { useSendFormContext } from 'src/hooks/wallet';
 import { formatNetworkAmount, formatAmount } from '@suite-common/wallet-utils';
 import { Translation, FiatValue, FormattedCryptoAmount } from 'src/components/suite';
 import { ReviewButton } from './ReviewButton';
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 
 const StyledCard = styled(Card)`
     position: sticky;

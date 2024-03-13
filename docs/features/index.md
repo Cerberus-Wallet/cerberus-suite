@@ -1,6 +1,6 @@
 # Features
 
-This directory contains description of various Trezor Suite features.
+This directory contains description of various Cerberus Suite features.
 
 -   [coin-handler](./protocols/coin-handler.md)
 -   [transactions export](./transactions/export.md)

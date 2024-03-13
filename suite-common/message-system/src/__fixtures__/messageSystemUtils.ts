@@ -1,4 +1,4 @@
-import { DeviceModelInternal, FirmwareType } from '@trezor/connect';
+import { DeviceModelInternal, FirmwareType } from '@cerberus/connect';
 import { testMocks } from '@suite-common/test-utils';
 
 const { getDeviceFeatures, getConnectDevice, getMessageSystemConfig } = testMocks;
@@ -581,13 +581,13 @@ export const validateDeviceCompatibility = [
                 bootloader: '*',
                 firmwareRevision: '*',
                 variant: '*',
-                vendor: 'trezor.io',
+                vendor: 'cerberus.uraanai.com',
             },
         ],
         device: {
             features: {
                 ...getDeviceFeatures({
-                    vendor: 'trezor.io',
+                    vendor: 'cerberus.uraanai.com',
                     internal_model: DeviceModelInternal.T2T1,
                     major_version: 2,
                     minor_version: 1,
@@ -608,7 +608,7 @@ export const validateDeviceCompatibility = [
                 bootloader: '*',
                 firmwareRevision: '*',
                 variant: FirmwareType.BitcoinOnly,
-                vendor: 'trezor.io',
+                vendor: 'cerberus.uraanai.com',
             },
             {
                 model: DeviceModelInternal.T2T1,
@@ -616,13 +616,13 @@ export const validateDeviceCompatibility = [
                 bootloader: '*',
                 firmwareRevision: '*',
                 variant: FirmwareType.Regular,
-                vendor: 'trezor.io',
+                vendor: 'cerberus.uraanai.com',
             },
         ],
         device: {
             features: {
                 ...getDeviceFeatures({
-                    vendor: 'trezor.io',
+                    vendor: 'cerberus.uraanai.com',
                     internal_model: DeviceModelInternal.T1B1,
                     major_version: 1,
                     minor_version: 2,
@@ -643,7 +643,7 @@ export const validateDeviceCompatibility = [
                 bootloader: '*',
                 firmwareRevision: '*',
                 variant: '*',
-                vendor: 'trezor.io',
+                vendor: 'cerberus.uraanai.com',
             },
         ],
         device: {
@@ -670,13 +670,13 @@ export const validateDeviceCompatibility = [
                 bootloader: '*',
                 firmwareRevision: '*',
                 variant: FirmwareType.Regular,
-                vendor: 'trezor.io',
+                vendor: 'cerberus.uraanai.com',
             },
         ],
         device: {
             features: {
                 ...getDeviceFeatures({
-                    vendor: 'trezor.io',
+                    vendor: 'cerberus.uraanai.com',
                     internal_model: DeviceModelInternal.T1B1,
                     major_version: 1,
                     minor_version: 0,
@@ -697,13 +697,13 @@ export const validateDeviceCompatibility = [
                 bootloader: '*',
                 firmwareRevision: '*',
                 variant: FirmwareType.Regular,
-                vendor: 'trezor.io',
+                vendor: 'cerberus.uraanai.com',
             },
         ],
         device: {
             features: {
                 ...getDeviceFeatures({
-                    vendor: 'trezor.io',
+                    vendor: 'cerberus.uraanai.com',
                     internal_model: DeviceModelInternal.T1B1,
                     major_version: 1,
                     minor_version: 0,
@@ -721,7 +721,7 @@ export const validateDeviceCompatibility = [
         device: {
             features: {
                 ...getDeviceFeatures({
-                    vendor: 'trezor.io',
+                    vendor: 'cerberus.uraanai.com',
                     internal_model: DeviceModelInternal.T1B1,
                     major_version: 1,
                     minor_version: 0,
@@ -741,7 +741,7 @@ export const validateDeviceCompatibility = [
                 bootloader: '*',
                 firmwareRevision: '*',
                 variant: FirmwareType.Regular,
-                vendor: 'trezor.io',
+                vendor: 'cerberus.uraanai.com',
             },
         ],
         device: {},
@@ -762,13 +762,13 @@ export const validateDeviceCompatibility = [
                 bootloader: '*',
                 firmwareRevision: '*',
                 variant: '*',
-                vendor: 'trezor.io',
+                vendor: 'cerberus.uraanai.com',
             },
         ],
         device: {
             features: {
                 ...getDeviceFeatures({
-                    vendor: 'trezor.io',
+                    vendor: 'cerberus.uraanai.com',
                     internal_model: DeviceModelInternal.T1B1,
                     major_version: 1,
                     minor_version: 0,
@@ -789,13 +789,13 @@ export const validateDeviceCompatibility = [
                 bootloader: '*',
                 firmwareRevision: '*',
                 variant: FirmwareType.Regular,
-                vendor: 'trezor.io',
+                vendor: 'cerberus.uraanai.com',
             },
         ],
         device: {
             features: {
                 ...getDeviceFeatures({
-                    vendor: 'trezor.io',
+                    vendor: 'cerberus.uraanai.com',
                     internal_model: DeviceModelInternal.T1B1,
                     major_version: 1,
                     minor_version: 0,
@@ -816,13 +816,13 @@ export const validateDeviceCompatibility = [
                 bootloader: '*',
                 firmwareRevision: '*',
                 variant: FirmwareType.BitcoinOnly,
-                vendor: 'trezor.io',
+                vendor: 'cerberus.uraanai.com',
             },
         ],
         device: {
             features: {
                 ...getDeviceFeatures({
-                    vendor: 'trezor.io',
+                    vendor: 'cerberus.uraanai.com',
                     internal_model: DeviceModelInternal.T1B1,
                     major_version: 1,
                     minor_version: 0,
@@ -870,7 +870,7 @@ export const validateDeviceCompatibility = [
                 bootloader: '*',
                 firmwareRevision: '*',
                 variant: '*',
-                vendor: 'trezor.io',
+                vendor: 'cerberus.uraanai.com',
             },
         ],
         device: {
@@ -978,13 +978,13 @@ export const validateDeviceCompatibility = [
                 bootloader: '2.0.4',
                 firmwareRevision: '*',
                 variant: '*',
-                vendor: 'trezor.io',
+                vendor: 'cerberus.uraanai.com',
             },
         ],
         device: {
             features: {
                 ...getDeviceFeatures({
-                    vendor: 'trezor.io',
+                    vendor: 'cerberus.uraanai.com',
                     internal_model: DeviceModelInternal.T2T1,
                     major_version: 2,
                     minor_version: 0,
@@ -1177,13 +1177,13 @@ export const validateDeviceCompatibility = [
                 bootloader: '2.1.5',
                 firmwareRevision: '*',
                 variant: '*',
-                vendor: 'trezor.io',
+                vendor: 'cerberus.uraanai.com',
             },
         ],
         device: {
             features: {
                 ...getDeviceFeatures({
-                    vendor: 'trezor.io',
+                    vendor: 'cerberus.uraanai.com',
                     internal_model: DeviceModelInternal.T2B1,
                     major_version: 2,
                     minor_version: 1,
@@ -1207,13 +1207,13 @@ export const validateDeviceCompatibility = [
                 bootloader: '*',
                 firmwareRevision: '123456',
                 variant: '*',
-                vendor: 'trezor.io',
+                vendor: 'cerberus.uraanai.com',
             },
         ],
         device: {
             features: {
                 ...getDeviceFeatures({
-                    vendor: 'trezor.io',
+                    vendor: 'cerberus.uraanai.com',
                     internal_model: DeviceModelInternal.T2B1,
                     major_version: 2,
                     minor_version: 6,
@@ -1234,7 +1234,7 @@ export const validateDeviceCompatibility = [
                 bootloader: '*',
                 firmwareRevision: '123456',
                 variant: '*',
-                vendor: 'trezor.io',
+                vendor: 'cerberus.uraanai.com',
             },
             {
                 model: DeviceModelInternal.T2T1,
@@ -1242,13 +1242,13 @@ export const validateDeviceCompatibility = [
                 bootloader: '*',
                 firmwareRevision: '123456',
                 variant: '*',
-                vendor: 'trezor.io',
+                vendor: 'cerberus.uraanai.com',
             },
         ],
         device: {
             features: {
                 ...getDeviceFeatures({
-                    vendor: 'trezor.io',
+                    vendor: 'cerberus.uraanai.com',
                     internal_model: DeviceModelInternal.T2T1,
                     major_version: 2,
                     minor_version: 6,
@@ -1269,13 +1269,13 @@ export const validateDeviceCompatibility = [
                 bootloader: '*',
                 firmwareRevision: '123456',
                 variant: '*',
-                vendor: 'trezor.io',
+                vendor: 'cerberus.uraanai.com',
             },
         ],
         device: {
             features: {
                 ...getDeviceFeatures({
-                    vendor: 'trezor.io',
+                    vendor: 'cerberus.uraanai.com',
                     internal_model: DeviceModelInternal.T1B1,
                     major_version: 1,
                     minor_version: 10,
@@ -1296,13 +1296,13 @@ export const validateDeviceCompatibility = [
                 bootloader: '*',
                 firmwareRevision: '123456',
                 variant: '*',
-                vendor: 'trezor.io',
+                vendor: 'cerberus.uraanai.com',
             },
         ],
         device: {
             features: {
                 ...getDeviceFeatures({
-                    vendor: 'trezor.io',
+                    vendor: 'cerberus.uraanai.com',
                     model: '1',
                     major_version: 1,
                     minor_version: 10,
@@ -1652,7 +1652,7 @@ export const getValidMessages = [
                             firmwareRevision: '*',
                             bootloader: '*',
                             variant: '*',
-                            vendor: 'trezor.io',
+                            vendor: 'cerberus.uraanai.com',
                         },
                         {
                             model: DeviceModelInternal.T2T1,
@@ -1660,7 +1660,7 @@ export const getValidMessages = [
                             firmwareRevision: '*',
                             bootloader: '*',
                             variant: '*',
-                            vendor: 'trezor.io',
+                            vendor: 'cerberus.uraanai.com',
                         },
                     ],
                 },
@@ -1690,7 +1690,7 @@ export const getValidMessages = [
                             firmwareRevision: '*',
                             bootloader: '*',
                             variant: '*',
-                            vendor: 'trezor.io',
+                            vendor: 'cerberus.uraanai.com',
                         },
                     ],
                 },
@@ -1720,7 +1720,7 @@ export const getValidMessages = [
                             firmwareRevision: '*',
                             bootloader: '*',
                             variant: FirmwareType.BitcoinOnly,
-                            vendor: 'trezor.io',
+                            vendor: 'cerberus.uraanai.com',
                         },
                     ],
                 },
@@ -1754,7 +1754,7 @@ export const getValidMessages = [
                             firmwareRevision: '*',
                             bootloader: '*',
                             variant: FirmwareType.Regular,
-                            vendor: 'trezor.io',
+                            vendor: 'cerberus.uraanai.com',
                         },
                     ],
                 },
@@ -1804,7 +1804,7 @@ export const getValidMessages = [
                             firmwareRevision: 'fae8ac',
                             bootloader: '2.0.4',
                             variant: FirmwareType.BitcoinOnly,
-                            vendor: 'trezor.io',
+                            vendor: 'cerberus.uraanai.com',
                         },
                     ],
                 },

@@ -1,5 +1,5 @@
 {
-    "name": "@trezor/e2e-utils",
+    "name": "@cerberus/e2e-utils",
     "version": "1.0.0",
     "private": true,
     "license": "See LICENSE.md in repo root",

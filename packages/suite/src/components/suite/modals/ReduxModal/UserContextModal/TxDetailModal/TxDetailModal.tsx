@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react';
 import styled from 'styled-components';
-import { Button } from '@trezor/components';
-import { HELP_CENTER_ZERO_VALUE_ATTACKS } from '@trezor/urls';
+import { Button } from '@cerberus/components';
+import { HELP_CENTER_ZERO_VALUE_ATTACKS } from '@cerberus/urls';
 import {
     isPending,
     findChainedTransactions,
@@ -20,7 +20,7 @@ import { WalletAccountTransaction } from 'src/types/wallet';
 import { BasicTxDetails } from './BasicTxDetails';
 import { AdvancedTxDetails, TabID } from './AdvancedTxDetails/AdvancedTxDetails';
 import { ChangeFee } from './ChangeFee/ChangeFee';
-import { borders, spacingsPx, typography } from '@trezor/theme';
+import { borders, spacingsPx, typography } from '@cerberus/theme';
 
 const StyledModal = styled(Modal)`
     width: 755px;
@@ -91,7 +91,7 @@ export const TxDetailModal = ({ tx, rbfForm, onCancel }: TxDetailModalProps) => 
 
     // const confirmations = getConfirmations(tx, blockchain.blockHeight);
     // TODO: replace this part will be refactored after blockbook implementation:
-    // https://github.com/trezor/blockbook/issues/555
+    // https://github.com/Cerberus-Wallet/blockbook/issues/555
     const chainedTxs = useMemo(() => {
         if (!isPending(tx)) return;
 

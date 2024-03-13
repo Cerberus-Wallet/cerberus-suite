@@ -1,6 +1,6 @@
 import React from 'react';
-import { IconButton, IconButtonProps, Tooltip } from '@trezor/components';
-import { borders } from '@trezor/theme';
+import { IconButton, IconButtonProps, Tooltip } from '@cerberus/components';
+import { borders } from '@cerberus/theme';
 import styled from 'styled-components';
 
 interface ActionButtonProps extends IconButtonProps {

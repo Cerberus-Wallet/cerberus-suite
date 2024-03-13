@@ -2,11 +2,11 @@ import { useState } from 'react';
 import styled from 'styled-components';
 
 import { accountsActions, selectDeviceSupportedNetworks } from '@suite-common/wallet-core';
-import { arrayPartition } from '@trezor/utils';
+import { arrayPartition } from '@cerberus/utils';
 import { NetworkSymbol } from '@suite-common/wallet-config';
-import { Button, CoinLogo, CollapsibleBox } from '@trezor/components';
-import { FirmwareType } from '@trezor/connect';
-import { spacingsPx } from '@trezor/theme';
+import { Button, CoinLogo, CollapsibleBox } from '@cerberus/components';
+import { FirmwareType } from '@cerberus/connect';
+import { spacingsPx } from '@cerberus/theme';
 import { Translation, Modal, CoinList } from 'src/components/suite';
 import { NETWORKS } from 'src/config/wallet';
 import { Account, Network } from 'src/types/wallet';

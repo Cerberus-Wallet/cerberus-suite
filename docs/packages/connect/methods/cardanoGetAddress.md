@@ -1,6 +1,6 @@
 ## Cardano: get address
 
-Display requested address derived by given [BIP32-Ed25519](https://cardanolaunch.com/assets/Ed25519_BIP.pdf) path on device and returns it to caller. User is presented with a description of the requested key and asked to confirm the export on Trezor.
+Display requested address derived by given [BIP32-Ed25519](https://cardanolaunch.com/assets/Ed25519_BIP.pdf) path on device and returns it to caller. User is presented with a description of the requested key and asked to confirm the export on Cerberus.
 
 ```javascript
 const result = await TrezorConnect.cardanoGetAddress(params);
@@ -10,7 +10,7 @@ const result = await TrezorConnect.cardanoGetAddress(params);
 
 [Optional common params](commonParams.md)
 
-[CardanoGetAddress type](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)
+[CardanoGetAddress type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)
 
 #### Exporting single address
 
@@ -28,13 +28,13 @@ const result = await TrezorConnect.cardanoGetAddress(params);
 
 #### Address Parameters
 
-##### [CardanoAddressParameters type](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)
+##### [CardanoAddressParameters type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)
 
 -   `addressType` - _required_ `CardanoAddressType`/`number` - you can use the flow `CARDANO.ADDRESS_TYPE` object or typescript `CardanoAddressType` enum. Supports all address types.
 -   `path` — _required_ `string | Array<number>` minimum length is `5`. [read more](../path.md)
 -   `stakingPath` — _optional_ `string | Array<number>` minimum length is `5`. [read more](../path.md) Used for base and reward address derivation
 -   `stakingKeyHash` - _optional_ `string` hex string of staking key hash. Used for base address derivation (as an alternative to `stakingPath`)
--   `certificatePointer` - _optional_ [CardanoCertificatePointer](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts) object. Must contain `number`s `blockIndex`, `txIndex` and `certificateIndex`. Used for pointer address derivation. [read more about pointer address](https://hydra.iohk.io/build/2006688/download/1/delegation_design_spec.pdf#subsubsection.3.2.2)
+-   `certificatePointer` - _optional_ [CardanoCertificatePointer](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts) object. Must contain `number`s `blockIndex`, `txIndex` and `certificateIndex`. Used for pointer address derivation. [read more about pointer address](https://hydra.iohk.io/build/2006688/download/1/delegation_design_spec.pdf#subsubsection.3.2.2)
 -   `paymentScriptHash` - _optional_ `string` hex string of payment script hash.
 -   `stakingScriptHash` - _optional_ `string` hex string of staking script hash.
 
@@ -45,7 +45,7 @@ You can handle this event and display custom UI inside of your application.
 
 If certain conditions are fulfilled popup will not be used at all:
 
--   the user gave permissions to communicate with Trezor
+-   the user gave permissions to communicate with Cerberus
 -   device is authenticated by pin/passphrase
 -   application has `TrezorConnect.on(UI.ADDRESS_VALIDATION, () => {});` listener registered
 -   parameter `address` is set
@@ -254,7 +254,7 @@ TrezorConnect.cardanoGetAddress({
 Validate address using custom UI inside of your application:
 
 ```javascript
-import TrezorConnect, { UI } from '@trezor/connect';
+import TrezorConnect, { UI } from '@cerberus/connect';
 
 TrezorConnect.on(UI.ADDRESS_VALIDATION, data => {
     console.log('Handle button request', data.address, data.serializedPath);
@@ -275,7 +275,7 @@ const result = await TrezorConnect.cardanoGetAddress({
 
 ### Result
 
-[CardanoAddress type](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)
+[CardanoAddress type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)
 
 Result with only one address
 

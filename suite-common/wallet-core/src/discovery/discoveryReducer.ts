@@ -1,6 +1,6 @@
 import { A, pipe } from '@mobily/ts-belt';
 
-import { createDeferred } from '@trezor/utils';
+import { createDeferred } from '@cerberus/utils';
 import { Discovery, PartialDiscovery } from '@suite-common/wallet-types';
 import { createReducerWithExtraDeps } from '@suite-common/redux-utils';
 import { DiscoveryStatus } from '@suite-common/wallet-constants';

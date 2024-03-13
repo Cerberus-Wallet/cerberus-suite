@@ -1,15 +1,15 @@
 import { DataManager } from '../DataManager';
 
 const settings = {
-    connectSrc: 'https://connect.trezor.io/9/',
+    connectSrc: 'https://connect.cerberus.uraanai.com/9/',
     transportReconnect: true,
     debug: false,
     popup: false,
     webusb: true,
     pendingTransportEvent: false,
     manifest: {
-        email: 'info@trezor.io',
-        appUrl: 'https://connect.trezor.io/9/',
+        email: 'info@cerberus.uraanai.com',
+        appUrl: 'https://connect.cerberus.uraanai.com/9/',
     },
     // internal part, not to be accepted from .init()
     origin: '',

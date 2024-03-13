@@ -4,7 +4,7 @@ export const ERROR_CODES = {
     Init_IframeBlocked: 'Iframe blocked', // iframe injection blocked (ad-blocker)
     Init_IframeTimeout: 'Iframe timeout', // iframe didn't load in specified time
     Init_ManifestMissing:
-        'Manifest not set. Read more at https://github.com/trezor/trezor-suite/blob/develop/docs/packages/connect/index.md', // manifest is not set
+        'Manifest not set. Read more at https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/docs/packages/connect/index.md', // manifest is not set
 
     Popup_ConnectionMissing: 'Unable to establish connection with iframe', // thrown by popup
 
@@ -12,7 +12,7 @@ export const ERROR_CODES = {
     Transport_InvalidProtobuf: '', // generic error from transport layer (trezor-link)
 
     Method_InvalidPackage:
-        'This package is not suitable to work with browser. Use @trezor/connect-web package instead', // thrown by node and react-native env while using regular 'web' package
+        'This package is not suitable to work with browser. Use @cerberus/connect-web package instead', // thrown by node and react-native env while using regular 'web' package
     Method_InvalidParameter: '', // replaced by generic text
     Method_NotAllowed: 'Method not allowed for this configuration', // example: device management in popup mode
     Method_PermissionsNotGranted: 'Permissions not granted', // permission/confirmation not granted in popup

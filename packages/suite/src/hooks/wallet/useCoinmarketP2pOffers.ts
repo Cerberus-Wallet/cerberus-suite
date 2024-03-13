@@ -2,7 +2,7 @@ import { createContext, useCallback, useContext, useEffect, useState } from 'rea
 
 import { P2pQuote } from 'invity-api';
 
-import { useTimer } from '@trezor/react-utils';
+import { useTimer } from '@cerberus/react-utils';
 import { selectDevice } from '@suite-common/wallet-core';
 
 import { ContextValues, P2pStep, UseOffersProps } from 'src/types/wallet/coinmarketP2pOffers';

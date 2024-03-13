@@ -1,6 +1,6 @@
 import { View } from 'react-native';
 
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 
 import { Text } from '../Text';
 import { IconButton } from '../Button/IconButton';

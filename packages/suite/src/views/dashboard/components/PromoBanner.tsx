@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import styled, { css } from 'styled-components';
-import { SUITE_MOBILE_APP_STORE, SUITE_MOBILE_PLAY_STORE, SUITE_URL } from '@trezor/urls';
-import { EventType, analytics } from '@trezor/suite-analytics';
-import { Button, Icon, Image, Tooltip, variables } from '@trezor/components';
+import { SUITE_MOBILE_APP_STORE, SUITE_MOBILE_PLAY_STORE, SUITE_URL } from '@cerberus/urls';
+import { EventType, analytics } from '@cerberus/suite-analytics';
+import { Button, Icon, Image, Tooltip, variables } from '@cerberus/components';
 import { Translation, QrCode, TrezorLink } from 'src/components/suite';
-import { isWeb } from '@trezor/env-utils';
+import { isWeb } from '@cerberus/env-utils';
 import { useLayoutSize } from 'src/hooks/suite/useLayoutSize';
 import { HORIZONTAL_LAYOUT_PADDINGS } from 'src/constants/suite/layout';
 import { useSelector } from 'src/hooks/suite';

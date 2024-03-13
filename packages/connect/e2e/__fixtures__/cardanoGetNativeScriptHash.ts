@@ -1,4 +1,4 @@
-import { MessagesSchema } from '@trezor/protobuf';
+import { MessagesSchema } from '@cerberus/protobuf';
 
 const { CardanoNativeScriptHashDisplayFormat, CardanoNativeScriptType } = MessagesSchema;
 

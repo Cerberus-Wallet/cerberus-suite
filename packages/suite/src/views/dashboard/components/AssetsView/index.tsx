@@ -1,7 +1,7 @@
 import styled, { useTheme } from 'styled-components';
 import BigNumber from 'bignumber.js';
 
-import { Icon, Button, LoadingContent, Card } from '@trezor/components';
+import { Icon, Button, LoadingContent, Card } from '@cerberus/components';
 import { selectDeviceSupportedNetworks, selectFiatRates } from '@suite-common/wallet-core';
 
 import { NETWORKS } from 'src/config/wallet';
@@ -15,7 +15,7 @@ import { goto } from 'src/actions/suite/routerActions';
 import { useEnabledNetworks } from 'src/hooks/settings/useEnabledNetworks';
 
 import { AssetCard, AssetCardSkeleton } from './components/AssetCard';
-import { spacingsPx, typography } from '@trezor/theme';
+import { spacingsPx, typography } from '@cerberus/theme';
 import { AssetFiatBalance } from '@suite-common/assets';
 import { getFiatRateKey, toFiatCurrency } from '@suite-common/wallet-utils';
 import { selectLocalCurrency } from 'src/reducers/wallet/settingsReducer';

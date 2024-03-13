@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from 'react';
-import { desktopApi } from '@trezor/suite-desktop-api';
+import { desktopApi } from '@cerberus/suite-desktop-api';
 import { UseCoinmarketSpendProps, SpendContextValues } from 'src/types/wallet/coinmarketSpend';
 import invityAPI from 'src/services/suite/invityAPI';
 import { SellVoucherTrade } from 'invity-api';
@@ -12,7 +12,7 @@ import * as coinmarketCommonActions from 'src/actions/wallet/coinmarket/coinmark
 import { notificationsActions } from '@suite-common/toast-notifications';
 import type { FormState } from 'src/types/wallet/sendForm';
 import { amountToSatoshi, getFeeLevels } from '@suite-common/wallet-utils';
-import { isDesktop } from '@trezor/env-utils';
+import { isDesktop } from '@cerberus/env-utils';
 import { useCompose } from './form/useCompose';
 import { useForm } from 'react-hook-form';
 import { DEFAULT_PAYMENT, DEFAULT_VALUES } from '@suite-common/wallet-constants';

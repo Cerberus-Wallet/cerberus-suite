@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/GetAddress.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/GetAddress.js
 
 import { AbstractMethod, MethodReturnType } from '../core/AbstractMethod';
 import { validateCoinPath, getFirmwareRange } from './common/paramsValidator';
@@ -7,7 +7,7 @@ import { getBitcoinNetwork, fixCoinInfoNetwork, getUniqueNetworks } from '../dat
 import { PROTO, ERRORS } from '../constants';
 import { UI, createUiMessage } from '../events';
 import { Bundle, type BitcoinNetworkInfo } from '../types';
-import { Assert } from '@trezor/schema-utils';
+import { Assert } from '@cerberus/schema-utils';
 import { GetAddress as GetAddressSchema } from '../types/api/getAddress';
 
 type Params = PROTO.GetAddress & {

@@ -1,6 +1,6 @@
 ## Ethereum: get address
 
-Display requested address derived by given BIP32 path on device and returns it to caller. User is presented with a description of the requested key and asked to confirm the export on Trezor.
+Display requested address derived by given BIP32 path on device and returns it to caller. User is presented with a description of the requested key and asked to confirm the export on Cerberus.
 
 ```javascript
 const result = await TrezorConnect.ethereumGetAddress(params);
@@ -28,7 +28,7 @@ You can handle this event and display custom UI inside of your application.
 
 If certain conditions are fulfilled popup will not be used at all:
 
--   the user gave permissions to communicate with Trezor
+-   the user gave permissions to communicate with Cerberus
 -   device is authenticated by pin/passphrase
 -   application has `TrezorConnect.on(UI.ADDRESS_VALIDATION, () => {});` listener registered
 -   parameter `address` is set
@@ -60,7 +60,7 @@ TrezorConnect.ethereumGetAddress({
 Validate address using custom UI inside of your application:
 
 ```javascript
-import TrezorConnect, { UI } from '@trezor/connect';
+import TrezorConnect, { UI } from '@cerberus/connect';
 
 TrezorConnect.on(UI.ADDRESS_VALIDATION, data => {
     console.log('Handle button request', data.address, data.serializedPath);
@@ -76,7 +76,7 @@ const result = await TrezorConnect.ethereumGetAddress({
 
 ### Result
 
-[Address type](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/params.ts)
+[Address type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/params.ts)
 
 Result with only one address
 

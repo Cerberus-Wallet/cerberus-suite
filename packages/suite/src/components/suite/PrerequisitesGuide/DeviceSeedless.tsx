@@ -1,6 +1,6 @@
 import { Translation, TroubleshootingTips } from 'src/components/suite';
 
-// Seedless devices are not supported by Trezor Suite
+// Seedless devices are not supported by Cerberus Suite
 export const DeviceSeedless = () => (
     <TroubleshootingTips
         label={<Translation id="TR_YOUR_DEVICE_IS_SEEDLESS" />}

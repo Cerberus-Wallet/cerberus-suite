@@ -1,6 +1,6 @@
 import { deviceActions } from '@suite-common/wallet-core';
 import { connectInitThunk } from '@suite-common/connect-init';
-import { UI_EVENT, UI } from '@trezor/connect';
+import { UI_EVENT, UI } from '@cerberus/connect';
 import { testMocks } from '@suite-common/test-utils';
 
 import { configureStore } from 'src/support/tests/configureStore';

@@ -1,4 +1,4 @@
-import { analytics, EventType } from '@trezor/suite-analytics';
+import { analytics, EventType } from '@cerberus/suite-analytics';
 
 import {
     ActionButton,

@@ -8,7 +8,7 @@ import {
 } from 'react';
 import styled, { css, CSSObject } from 'styled-components';
 
-import { borders, spacingsPx, typography } from '@trezor/theme';
+import { borders, spacingsPx, typography } from '@cerberus/theme';
 
 const track = css<Pick<RangeProps, 'trackStyle' | 'disabled'>>`
     height: ${spacingsPx.xxs};

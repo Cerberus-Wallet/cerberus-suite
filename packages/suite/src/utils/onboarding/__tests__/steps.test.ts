@@ -1,4 +1,4 @@
-import { DeviceModelInternal } from '@trezor/connect';
+import { DeviceModelInternal } from '@cerberus/connect';
 
 import * as STEP from 'src/constants/onboarding/steps';
 import { Step } from 'src/types/onboarding';

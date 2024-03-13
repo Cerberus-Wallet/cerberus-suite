@@ -1,6 +1,6 @@
 import { Translation } from 'src/components/suite/Translation';
 import { useCardanoStaking } from 'src/hooks/wallet/useCardanoStaking';
-import { Warning } from '@trezor/components';
+import { Warning } from '@cerberus/components';
 
 export const CardanoActionPending = () => {
     const { pendingStakeTx } = useCardanoStaking();

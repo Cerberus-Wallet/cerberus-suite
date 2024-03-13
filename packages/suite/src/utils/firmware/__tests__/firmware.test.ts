@@ -1,6 +1,6 @@
 import { TrezorDevice } from 'src/types/suite';
 import { getFormattedFingerprint, validateFirmware } from '..';
-import { DeviceModelInternal } from '@trezor/connect';
+import { DeviceModelInternal } from '@cerberus/connect';
 
 describe('getFormattedFingerprint', () => {
     it('should return a formatted fingerprint', () => {

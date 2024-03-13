@@ -17,8 +17,8 @@
         "@suite-common/wallet-config": "workspace:*",
         "@suite-common/wallet-types": "workspace:*",
         "@suite-native/config": "workspace:*",
-        "@trezor/analytics": "workspace:*",
-        "@trezor/connect": "workspace:*",
-        "@trezor/env-utils": "workspace:*"
+        "@cerberus/analytics": "workspace:*",
+        "@cerberus/connect": "workspace:*",
+        "@cerberus/env-utils": "workspace:*"
     }
 }

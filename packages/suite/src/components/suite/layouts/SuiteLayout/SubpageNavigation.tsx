@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { LayoutGroup, motion } from 'framer-motion';
-import { spacingsPx, zIndices } from '@trezor/theme';
-import { motionEasing, variables } from '@trezor/components';
+import { spacingsPx, zIndices } from '@cerberus/theme';
+import { motionEasing, variables } from '@cerberus/components';
 import { useSelector } from 'src/hooks/suite';
 import { selectRouteName } from 'src/reducers/suite/routerReducer';
 import { SUBPAGE_NAV_HEIGHT } from 'src/constants/suite/layout';

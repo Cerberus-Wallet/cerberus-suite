@@ -1,7 +1,7 @@
 /**
  * Module used by `authenticateDevice` method.
  *
- * Parse x509 certificate returned from Trezor (PROTO.AuthenticityProof) from DER format.
+ * Parse x509 certificate returned from Cerberus (PROTO.AuthenticityProof) from DER format.
  * inspired by https://blog.engelke.com/2014/10/21/web-crypto-and-x-509-certificates/
  */
 
@@ -102,7 +102,7 @@ const derBitStringValue = (byteArray: Uint8Array) => ({
 });
 
 // Optiga may produce a malformed signature with probability 1 in 256.
-// https://github.com/trezor/trezor-firmware/issues/3411
+// https://github.com/Cerberus-Wallet/cerberus-firmware/issues/3411
 export const fixSignature = (byteArray: Uint8Array) => {
     const asn1 = derToAsn1(byteArray);
 

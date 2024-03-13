@@ -1,5 +1,5 @@
 import { HStack, Text, VStack } from '@suite-native/atoms';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 
 import { ColorSchemePickerItem } from './ColorSchemePickerItem';
 

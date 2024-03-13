@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { EventType, analytics } from '@trezor/suite-analytics';
+import { EventType, analytics } from '@cerberus/suite-analytics';
 import {
     Button,
     ButtonGroup,
@@ -7,8 +7,8 @@ import {
     DropdownMenuItemProps,
     IconButton,
     IconProps,
-} from '@trezor/components';
-import { spacingsPx } from '@trezor/theme';
+} from '@cerberus/components';
+import { spacingsPx } from '@cerberus/theme';
 import { getNetwork, hasNetworkFeatures } from '@suite-common/wallet-utils';
 import { WalletParams } from 'src/types/wallet';
 import { Translation } from 'src/components/suite/Translation';

@@ -3,7 +3,7 @@ import { RendererContext, ThemeContext } from 'react-fela';
 
 import { darken, lighten, transparentize } from 'polished';
 
-import { Theme, NativeTheme } from '@trezor/theme';
+import { Theme, NativeTheme } from '@cerberus/theme';
 
 import { breakpointMediaQueries } from './breakpoints';
 import {

@@ -1,6 +1,6 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/tx/inputs.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/tx/inputs.js
 
-import { Transaction as BitcoinJsTransaction } from '@trezor/utxo-lib';
+import { Transaction as BitcoinJsTransaction } from '@cerberus/utxo-lib';
 import {
     validatePath,
     isSegwitPath,
@@ -72,7 +72,7 @@ export const enhanceTrezorInputs = (
 };
 
 /** *****
- * Transform from @trezor/utxo-lib/compose format to Trezor
+ * Transform from @cerberus/utxo-lib/compose format to Cerberus
  ****** */
 export const inputToTrezor = (input: ComposeUtxo, sequence = 0xffffffff): PROTO.TxInputType => {
     const address_n = getHDPath(input.path);

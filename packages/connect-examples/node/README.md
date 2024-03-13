@@ -1,10 +1,10 @@
 # Node
 
-`@trezor/connect` works in node.js environment.
+`@cerberus/connect` works in node.js environment.
 
 Please note, that this example needs:
 
--   Trezor bridge running
+-   Cerberus bridge running
 -   Device connected via USB
 
 ## Install

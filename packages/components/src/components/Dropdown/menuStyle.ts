@@ -6,7 +6,7 @@ import {
     zIndices,
     Elevation,
     mapElevationToBackground,
-} from '@trezor/theme';
+} from '@cerberus/theme';
 
 export const DROPDOWN_MENU = keyframes`
     0% {

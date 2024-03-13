@@ -2,20 +2,20 @@ import { useState, useEffect, useRef, MouseEventHandler } from 'react';
 
 import styled, { css } from 'styled-components';
 
-import { Image, Icon, DeviceAnimation } from '@trezor/components';
+import { Image, Icon, DeviceAnimation } from '@cerberus/components';
 import { selectDevicesCount, selectDevice, acquireDevice } from '@suite-common/wallet-core';
 import * as deviceUtils from '@suite-common/suite-utils';
-import type { Timeout } from '@trezor/type-utils';
+import type { Timeout } from '@cerberus/type-utils';
 import { SHAKE } from 'src/support/suite/styles/animations';
 import { TrezorDevice } from 'src/types/suite';
 import { goto } from 'src/actions/suite/routerActions';
 import { useDispatch, useSelector } from 'src/hooks/suite';
 
-import { DeviceModelInternal } from '@trezor/connect';
+import { DeviceModelInternal } from '@cerberus/connect';
 import { DeviceStatusText } from 'src/views/suite/SwitchDevice/DeviceItem/DeviceStatusText';
-import { borders, spacingsPx, typography } from '@trezor/theme';
+import { borders, spacingsPx, typography } from '@cerberus/theme';
 import { selectLabelingDataForWallet } from 'src/reducers/suite/metadataReducer';
-import { focusStyleTransition, getFocusShadowStyle } from '@trezor/components/src/utils/utils';
+import { focusStyleTransition, getFocusShadowStyle } from '@cerberus/components/src/utils/utils';
 import { useWalletLabeling } from '../../../labeling/WalletLabeling';
 
 const CaretContainer = styled.div`
@@ -185,7 +185,7 @@ export const DeviceSelector = () => {
 
                         {selectedDeviceModelInternal !== DeviceModelInternal.T2B1 && (
                             <StyledImage
-                                alt="Trezor"
+                                alt="Cerberus"
                                 image={`CERBERUS_${selectedDeviceModelInternal}`}
                             />
                         )}

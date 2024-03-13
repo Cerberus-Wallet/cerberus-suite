@@ -1,6 +1,6 @@
 import { testMocks } from '@suite-common/test-utils';
 import { deviceActions } from '@suite-common/wallet-core';
-import { DEVICE } from '@trezor/connect';
+import { DEVICE } from '@cerberus/connect';
 
 const { getConnectDevice, getSuiteDevice } = testMocks;
 

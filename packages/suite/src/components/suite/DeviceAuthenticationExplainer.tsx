@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import { Icon, variables } from '@trezor/components';
+import { Icon, variables } from '@cerberus/components';
 
 import { Translation } from 'src/components/suite';
 

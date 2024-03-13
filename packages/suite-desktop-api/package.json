@@ -1,15 +1,15 @@
 {
-    "name": "@trezor/suite-desktop-api",
+    "name": "@cerberus/suite-desktop-api",
     "version": "1.0.0",
     "private": true,
-    "author": "Trezor <info@trezor.io>",
+    "author": "Cerberus <info@cerberus.uraanai.com>",
     "description": "Strongly typed DesktopApi",
     "repository": {
         "type": "git",
-        "url": "git://github.com/trezor/trezor-suite.git"
+        "url": "git://github.com/Cerberus-Wallet/cerberus-suite.git"
     },
     "bugs": {
-        "url": "https://github.com/trezor/trezor-suite/issues"
+        "url": "https://github.com/Cerberus-Wallet/cerberus-suite/issues"
     },
     "main": "./src/main.ts",
     "browser": "./src/renderer.ts",

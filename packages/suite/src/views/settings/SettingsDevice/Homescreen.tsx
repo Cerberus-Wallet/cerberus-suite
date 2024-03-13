@@ -1,8 +1,8 @@
 import { useRef, useState } from 'react';
 import styled from 'styled-components';
 
-import { DeviceModelInternal } from '@trezor/connect';
-import { HOMESCREEN_EDITOR_URL } from '@trezor/urls';
+import { DeviceModelInternal } from '@cerberus/connect';
+import { HOMESCREEN_EDITOR_URL } from '@cerberus/urls';
 
 import {
     ActionButton,
@@ -11,7 +11,7 @@ import {
     TextColumn,
     Translation,
 } from 'src/components/suite';
-import { Button, ButtonGroup, Tooltip, variables } from '@trezor/components';
+import { Button, ButtonGroup, Tooltip, variables } from '@cerberus/components';
 import { useDevice, useDispatch } from 'src/hooks/suite';
 import { openModal } from 'src/actions/suite/modalActions';
 import { applySettings } from 'src/actions/settings/deviceSettingsActions';

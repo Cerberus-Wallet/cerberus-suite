@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { variables, Paragraph } from '@trezor/components';
+import { variables, Paragraph } from '@cerberus/components';
 import { AppState } from 'src/types/suite';
 import { Translation } from 'src/components/suite';
 import { getSeenAndUnseenNotifications } from 'src/utils/suite/notification';

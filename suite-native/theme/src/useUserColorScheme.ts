@@ -1,6 +1,6 @@
 import { useAtom } from 'jotai';
 
-import { ThemeColorVariant } from '@trezor/theme';
+import { ThemeColorVariant } from '@cerberus/theme';
 import { atomWithUnecryptedStorage } from '@suite-native/storage';
 import { analytics, EventType } from '@suite-native/analytics';
 

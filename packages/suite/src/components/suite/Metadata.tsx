@@ -1,4 +1,4 @@
-import { SUITE_URL } from '@trezor/urls';
+import { SUITE_URL } from '@cerberus/urls';
 import Helmet from 'react-helmet';
 import { useIntl } from 'react-intl';
 import messages from 'src/support/messages';
@@ -10,7 +10,7 @@ type MetadataProps = {
 };
 
 export const Metadata = ({
-    title = 'Trezor Suite',
+    title = 'Cerberus Suite',
     description,
     url = SUITE_URL,
 }: MetadataProps) => {

@@ -1,11 +1,11 @@
-import { variables, Icon, Button, Link, Image } from '@trezor/components';
+import { variables, Icon, Button, Link, Image } from '@cerberus/components';
 import { useState, useRef } from 'react';
 import styled, { css } from 'styled-components';
-import { useOnClickOutside } from '@trezor/react-utils';
-import { DATA_TOS_INVITY_URL, INVITY_URL } from '@trezor/urls';
+import { useOnClickOutside } from '@cerberus/react-utils';
+import { DATA_TOS_INVITY_URL, INVITY_URL } from '@cerberus/urls';
 import { CoinmarketProvidedByInvity } from './CoinmarketProvidedByInvity';
 import { Translation } from 'src/components/suite';
-import { borders, zIndices } from '@trezor/theme';
+import { borders, zIndices } from '@cerberus/theme';
 
 const Wrapper = styled.div`
     display: flex;

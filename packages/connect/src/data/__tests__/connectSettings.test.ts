@@ -2,15 +2,15 @@ import { corsValidator } from '../connectSettings';
 
 describe('data/connectSettings', () => {
     it('corsValidator', () => {
-        expect(corsValidator('https://connect.trezor.io/9-beta/')).toBeDefined();
-        expect(corsValidator('https://az-AZ_123.trezor.io/')).toBeDefined();
-        expect(corsValidator('https://multiple.sub.domain.trezor.io/')).toBeDefined();
+        expect(corsValidator('https://connect.cerberus.uraanai.com/9-beta/')).toBeDefined();
+        expect(corsValidator('https://az-AZ_123.cerberus.uraanai.com/')).toBeDefined();
+        expect(corsValidator('https://multiple.sub.domain.cerberus.uraanai.com/')).toBeDefined();
         expect(corsValidator('https://trezor.sldev.io/')).not.toBeDefined();
-        expect(corsValidator('https://testxtrezor.io/')).not.toBeDefined();
+        expect(corsValidator('https://testxcerberus.uraanai.com/')).not.toBeDefined();
         expect(corsValidator('https://testxtrezorxio/')).not.toBeDefined();
-        expect(corsValidator('https://non!alpha*numeric?.trezor.io/')).not.toBeDefined();
-        expect(corsValidator('https://connect.trezor.io')).not.toBeDefined(); // missing slash at the end
-        expect(corsValidator('http://connect.trezor.io/')).not.toBeDefined(); // missing https
+        expect(corsValidator('https://non!alpha*numeric?.cerberus.uraanai.com/')).not.toBeDefined();
+        expect(corsValidator('https://connect.cerberus.uraanai.com')).not.toBeDefined(); // missing slash at the end
+        expect(corsValidator('http://connect.cerberus.uraanai.com/')).not.toBeDefined(); // missing https
         expect(corsValidator('https://localhost:8088/')).toBeDefined();
         expect(corsValidator('https://localhost:5088/')).toBeDefined();
         expect(corsValidator('https://localhost:8088/subdir/')).toBeDefined();
@@ -31,6 +31,6 @@ describe('data/connectSettings', () => {
         expect(corsValidator({})).not.toBeDefined();
         // @ts-expect-error
         expect(corsValidator(1)).not.toBeDefined();
-        expect(corsValidator('https://other-domain.com/connect.trezor.io/9/')).not.toBeDefined();
+        expect(corsValidator('https://other-domain.com/connect.cerberus.uraanai.com/9/')).not.toBeDefined();
     });
 });

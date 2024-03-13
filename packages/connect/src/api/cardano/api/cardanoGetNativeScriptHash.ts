@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/CardanoGetNativeScriptHash.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/CardanoGetNativeScriptHash.js
 
 import { PROTO } from '../../../constants';
 import { AbstractMethod } from '../../../core/AbstractMethod';
@@ -9,7 +9,7 @@ import {
     CardanoGetNativeScriptHash as CardanoGetNativeScriptHashSchema,
     CardanoNativeScript,
 } from '../../../types/api/cardano';
-import { Assert } from '@trezor/schema-utils';
+import { Assert } from '@cerberus/schema-utils';
 
 export default class CardanoGetNativeScriptHash extends AbstractMethod<
     'cardanoGetNativeScriptHash',

@@ -13,22 +13,22 @@ const result = await TrezorConnect.getAccountInfo(params);
 #### Using path
 
 -   `path` — _required_ `string | Array<number>` minimum length is `3`. [read more](../path.md)
--   `coin` — _required_ `string` determines network definition specified in [coins.json](https://github.com/trezor/trezor-suite/blob/develop/packages/connect-common/files/coins.json) file. Coin `shortcut`, `name` or `label` can be used.
+-   `coin` — _required_ `string` determines network definition specified in [coins.json](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect-common/files/coins.json) file. Coin `shortcut`, `name` or `label` can be used.
 
 #### Using public key
 
 -   `descriptor` — _required_ `string` public key of account
--   `coin` — _required_ `string` determines network definition specified in [coins.json](https://github.com/trezor/trezor-suite/blob/develop/packages/connect-common/files/coins.json) file. Coin `shortcut`, `name` or `label` can be used.
+-   `coin` — _required_ `string` determines network definition specified in [coins.json](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect-common/files/coins.json) file. Coin `shortcut`, `name` or `label` can be used.
 
 #### Using discovery
 
 BIP-0044 account discovery is performed and user is presented with a list of accounts. Result is returned after account selection.
 
--   `coin` — _required_ `string` determines network definition specified in [coins.json](https://github.com/trezor/trezor-suite/blob/develop/packages/connect-common/files/coins.json) file. Coin `shortcut`, `name` or `label` can be used.
+-   `coin` — _required_ `string` determines network definition specified in [coins.json](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect-common/files/coins.json) file. Coin `shortcut`, `name` or `label` can be used.
 
 ### Other optional params
 
-params are forwarded to [BlockBook backend](https://github.com/trezor/blockbook/blob/master/docs/api.md#api-v2) using `@trezor/blockchain-link` package
+params are forwarded to [BlockBook backend](https://github.com/Cerberus-Wallet/blockbook/blob/master/docs/api.md#api-v2) using `@cerberus/blockchain-link` package
 
 -   `details` — specifies level of details returned by request
 
@@ -84,7 +84,7 @@ TrezorConnect.getAccountInfo({
 
 ### Result
 
-[AccountInfo type](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/account.ts)
+[AccountInfo type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/account.ts)
 
 ```javascript
 {

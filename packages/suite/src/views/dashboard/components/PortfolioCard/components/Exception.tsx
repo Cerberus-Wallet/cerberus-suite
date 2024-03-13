@@ -8,7 +8,7 @@ import {
     restartDiscoveryThunk as restartDiscovery,
 } from '@suite-common/wallet-core';
 import * as accountUtils from '@suite-common/wallet-utils';
-import { variables, Button, IconProps, H3, Image } from '@trezor/components';
+import { variables, Button, IconProps, H3, Image } from '@cerberus/components';
 import { Discovery } from '@suite-common/wallet-types';
 
 import { Translation } from 'src/components/suite';

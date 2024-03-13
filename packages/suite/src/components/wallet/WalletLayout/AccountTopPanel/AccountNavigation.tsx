@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'src/hooks/suite';
 import { getNetwork, hasNetworkFeatures } from '@suite-common/wallet-utils';
 import { goto } from 'src/actions/suite/routerActions';
 import { selectSelectedAccount } from 'src/reducers/wallet/selectedAccountReducer';
-import { EventType, analytics } from '@trezor/suite-analytics';
+import { EventType, analytics } from '@cerberus/suite-analytics';
 import { SubpageNavigation } from 'src/components/suite/layouts/SuiteLayout';
 import { Route } from '@suite-common/suite-types';
 import { selectIsDebugModeActive } from 'src/reducers/suite/suiteReducer';

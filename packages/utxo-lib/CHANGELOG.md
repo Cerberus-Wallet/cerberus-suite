@@ -76,7 +76,7 @@ renamed `composeTx` request parameters and response.
 -   refactor(utxo-lib): reworked getFee params (65cb7f6ce)
 -   chore: replace deprecated String.subst with Sting.substing (57f45d4cd)
 -   chore: replace deprecated Buffer.slice with Buffer.subarray (814caeaa9)
--   chore: use `getChunkSize` from @trezor/utils package (a6fb8ea98)
+-   chore: use `getChunkSize` from @cerberus/utils package (a6fb8ea98)
 
 # 1.0.10
 

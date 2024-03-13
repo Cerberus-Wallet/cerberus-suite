@@ -1,4 +1,4 @@
-import { DeviceModelInternal } from '@trezor/connect';
+import { DeviceModelInternal } from '@cerberus/connect';
 import {
     ParseTextToLinesParams,
     ParseTextToLinesResult,
@@ -11,10 +11,10 @@ describe(parseTextToPagesAndLines.name, () => {
         input: ParseTextToLinesParams;
         expected: ParseTextToLinesResult;
     }[] = [
-        // --------------- Trezor One ---------------
+        // --------------- Cerberus One ---------------
 
         {
-            it: 'Trezor One: Address',
+            it: 'Cerberus One: Address',
             input: {
                 deviceModel: DeviceModelInternal.T1B1,
                 text: 'bc1qsexljl54vsc9hlwldrsd455kl7q29wvq9rnmua',
@@ -28,11 +28,11 @@ describe(parseTextToPagesAndLines.name, () => {
                         ],
                     },
                 ],
-                hasNextIcon: false, // Trezor One has "..." as next-page indicator and no prev-page indicator
+                hasNextIcon: false, // Cerberus One has "..." as next-page indicator and no prev-page indicator
             },
         },
         {
-            it: 'Trezor One: XPUB',
+            it: 'Cerberus One: XPUB',
             input: {
                 deviceModel: DeviceModelInternal.T1B1,
                 text: 'zpub6qWFmC4WMAU5pDeAmqhWRCu2yoPYs7ZeeFkjPmpPh9R8XRkUcNoYGBFNTS8Ru64UT9BZqCEtbxkYvF69K6bsPAqUiLtTfcy8mnpLwDM1vsz',
@@ -55,15 +55,15 @@ describe(parseTextToPagesAndLines.name, () => {
                         ],
                     },
                 ],
-                hasNextIcon: false, // Trezor One has "..." as next-page indicator and no prev-page indicator
+                hasNextIcon: false, // Cerberus One has "..." as next-page indicator and no prev-page indicator
             },
         },
 
-        // --------------- Trezor T ---------------
+        // --------------- Cerberus T ---------------
 
-        // No case for 'Trezor T: Address', it is handled by different logic, as chunks are used
+        // No case for 'Cerberus T: Address', it is handled by different logic, as chunks are used
         {
-            it: 'Trezor T: XPUB',
+            it: 'Cerberus T: XPUB',
             input: {
                 deviceModel: DeviceModelInternal.T2T1,
                 text: 'zpub6rszzdAK6RuafeRwyN8z1cgWcXCuKbLmjjfnrW4fWKtcoXQ8787214pNJjnBG5UATyghuNzjn6Lfp5k5xymrLFJnCy46bMYJPyZsbpFGagT',
@@ -91,11 +91,11 @@ describe(parseTextToPagesAndLines.name, () => {
             },
         },
 
-        // --------------- Trezor Safe3 ---------------
+        // --------------- Cerberus Safe3 ---------------
 
-        // No case for 'Trezor Safe 3: Address', it is handled by different logic, as chunks are used
+        // No case for 'Cerberus Safe 3: Address', it is handled by different logic, as chunks are used
         {
-            it: 'Trezor Safe 3 XPUB',
+            it: 'Cerberus Safe 3 XPUB',
             input: {
                 deviceModel: DeviceModelInternal.T2B1,
                 text: 'zpub6rCCBgYm34WmcmW49pUvY5NmtG2oMwfCaDteT8xh8pEkKugU61KNjoYCAauoUgsDpufKTtnc8qYQaTbcawyBtbTvtFZEKjT5w12GNJr3xrB',
@@ -122,11 +122,11 @@ describe(parseTextToPagesAndLines.name, () => {
             },
         },
 
-        // --------------- Trezor Safe3 ---------------
+        // --------------- Cerberus Safe3 ---------------
 
-        // No case for 'Trezor Safe 3: Address', it is handled by different logic, as chunks are used
+        // No case for 'Cerberus Safe 3: Address', it is handled by different logic, as chunks are used
         {
-            it: 'Trezor Safe 3 XPUB Taproot',
+            it: 'Cerberus Safe 3 XPUB Taproot',
             input: {
                 deviceModel: DeviceModelInternal.T2B1,
                 text: "tr([592078a3/86'/0'/0']xpub6CRY1LAXPqbPAjnDxpX5n5P2MDAkzx67rNywJTNRqpLP28R9vpBEURzQCuymMcWstdDJvb7ajK1Cz4Pz4qyWtfgRZWw547a3NSRGnPxu6zU/<0;1>/*)",

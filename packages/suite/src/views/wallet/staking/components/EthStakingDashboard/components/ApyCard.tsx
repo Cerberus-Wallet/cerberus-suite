@@ -1,5 +1,5 @@
 import { useTheme } from 'styled-components';
-import { Icon } from '@trezor/components';
+import { Icon } from '@cerberus/components';
 import { Translation } from 'src/components/suite';
 import { AccentP, CardBottomContent, GreyP, StyledCard } from './styled';
 

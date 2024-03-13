@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/helpers/cardanoWitnesses.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/helpers/cardanoWitnesses.js
 
 import type { CertificateWithPoolOwnersAndRelays } from './cardanoCertificate';
 import type { CollateralInputWithPath, InputWithPath, Path } from './cardanoInputs';

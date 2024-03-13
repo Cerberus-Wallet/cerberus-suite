@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import { Paragraph } from '@trezor/components';
+import { Paragraph } from '@cerberus/components';
 import { Network } from 'src/types/wallet';
 import { Translation } from 'src/components/suite';
 import { getAccountTypeDesc, getAccountTypeUrl } from '@suite-common/wallet-utils';
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 import { LearnMoreButton } from 'src/components/suite/LearnMoreButton';
 
 const Info = styled(Paragraph)`

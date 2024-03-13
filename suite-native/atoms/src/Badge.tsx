@@ -1,6 +1,6 @@
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import { Icon, IconSize, IconName, CryptoIconName, icons, CryptoIcon } from '@suite-common/icons';
-import { Color } from '@trezor/theme';
+import { Color } from '@cerberus/theme';
 
 import { Text } from './Text';
 import { HStack } from './Stack';

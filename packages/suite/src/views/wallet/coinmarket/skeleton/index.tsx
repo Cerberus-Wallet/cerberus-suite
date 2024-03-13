@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { SkeletonRectangle, SkeletonSpread, variables } from '@trezor/components';
+import { SkeletonRectangle, SkeletonSpread, variables } from '@cerberus/components';
 
 import { useLoadingSkeleton } from 'src/hooks/suite';
 import {

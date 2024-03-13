@@ -1,8 +1,8 @@
 import TrezorConnect from '../src';
-import { versionUtils } from '@trezor/utils';
+import { versionUtils } from '@cerberus/utils';
 import { UI } from '../src/events';
 import { toHardened, getHDPath } from '../src/utils/pathUtils';
-import { TrezorUserEnvLink } from '@trezor/trezor-user-env-link';
+import { TrezorUserEnvLink } from '@cerberus/trezor-user-env-link';
 
 const MNEMONICS = {
     mnemonic_all: 'all all all all all all all all all all all all',
@@ -36,7 +36,7 @@ const setup = async (TrezorUserEnvLink, options) => {
         state.mnemonic === options.mnemonic &&
         state.passphrase_protection === options.passphrase_protection &&
         JSON.stringify(state.settings) === JSON.stringify(options.settings) &&
-        !options.settings?.auto_lock_delay_ms // if device lock itself between test cases test will end timeout. user-env changes required (pin_sequence) https://github.com/trezor/trezor-user-env/pull/205
+        !options.settings?.auto_lock_delay_ms // if device lock itself between test cases test will end timeout. user-env changes required (pin_sequence) https://github.com/Cerberus-Wallet/cerberus-user-env/pull/205
     ) {
         return true;
     }
@@ -110,8 +110,8 @@ const initTrezorConnect = async (TrezorUserEnvLink, options) => {
 
     await TrezorConnect.init({
         manifest: {
-            appUrl: 'tests.connect.trezor.io',
-            email: 'tests@connect.trezor.io',
+            appUrl: 'tests.connect.cerberus.uraanai.com',
+            email: 'tests@connect.cerberus.uraanai.com',
         },
         transports: ['BridgeTransport'],
         debug: false,
@@ -187,7 +187,7 @@ const conditionalTest = (rules, ...args) => {
     return testMethod(...args);
 };
 
-global.Trezor = {
+global.Cerberus = {
     getController,
     setup,
     skipTest,

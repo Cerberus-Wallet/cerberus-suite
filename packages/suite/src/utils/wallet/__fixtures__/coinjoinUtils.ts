@@ -1,4 +1,4 @@
-import { RoundPhase, SessionPhase } from '@trezor/coinjoin';
+import { RoundPhase, SessionPhase } from '@cerberus/coinjoin';
 import { ANONYMITY_GAINS_HINDSIGHT_COUNT } from 'src/services/coinjoin';
 import * as coinjoinUtils from '../coinjoinUtils';
 

@@ -1,4 +1,4 @@
-import { analytics, EventType } from '@trezor/suite-analytics';
+import { analytics, EventType } from '@cerberus/suite-analytics';
 
 import { useDispatch, useSelector } from 'src/hooks/suite';
 import { openNode } from 'src/actions/suite/guideActions';

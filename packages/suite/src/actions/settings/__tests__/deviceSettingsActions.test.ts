@@ -1,6 +1,6 @@
 import { testMocks } from '@suite-common/test-utils';
 import { prepareDeviceReducer, deviceActions } from '@suite-common/wallet-core';
-import TrezorConnect from '@trezor/connect';
+import TrezorConnect from '@cerberus/connect';
 
 import { configureStore } from 'src/support/tests/configureStore';
 import suiteReducer from 'src/reducers/suite/suiteReducer';
@@ -12,7 +12,7 @@ const { getSuiteDevice } = testMocks;
 
 const deviceReducer = prepareDeviceReducer(extraDependencies);
 
-jest.doMock('@trezor/suite-analytics', () => testMocks.getAnalytics());
+jest.doMock('@cerberus/suite-analytics', () => testMocks.getAnalytics());
 
 const DEVICE = getSuiteDevice({ path: '1', connected: true });
 
@@ -53,7 +53,7 @@ describe('DeviceSettings Actions', () => {
     fixtures.forEach(f => {
         it(f.description, async () => {
             const store = initStore(getInitialState(f.initialState));
-            // wipe device tests require "device-change" event from "@trezor/connect"
+            // wipe device tests require "device-change" event from "@cerberus/connect"
             // this action have influence on reducers and forget device process
             const mock = () => {
                 if (f.deviceChange) {

@@ -1,5 +1,5 @@
 {
-    "name": "@trezor/blockchain-link-types",
+    "name": "@cerberus/blockchain-link-types",
     "version": "1.0.14",
     "license": "See LICENSE.md in repo root",
     "sideEffects": false,
@@ -17,8 +17,8 @@
     },
     "dependencies": {
         "@solana/web3.js": "^1.90.0",
-        "@trezor/type-utils": "workspace:*",
-        "@trezor/utxo-lib": "workspace:*",
+        "@cerberus/type-utils": "workspace:*",
+        "@cerberus/utxo-lib": "workspace:*",
         "socks-proxy-agent": "6.1.1"
     },
     "devDependencies": {

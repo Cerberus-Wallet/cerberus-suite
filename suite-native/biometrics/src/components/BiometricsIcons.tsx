@@ -2,7 +2,7 @@ import { Platform } from 'react-native';
 
 import { IconName, Icon } from '@suite-common/icons';
 import { HStack, Box } from '@suite-native/atoms';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 
 import { useBiometricsSettings } from '../useBiometricsSettings';
 

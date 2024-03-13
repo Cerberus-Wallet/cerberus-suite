@@ -1,7 +1,7 @@
 import { PayloadAction } from '@reduxjs/toolkit';
 
 import { AcquiredDevice, FirmwareStatus } from '@suite-common/suite-types';
-import { Device, FirmwareType, UI } from '@trezor/connect';
+import { Device, FirmwareType, UI } from '@cerberus/connect';
 import { createReducerWithExtraDeps } from '@suite-common/redux-utils';
 
 import { firmwareActions } from './firmwareActions';

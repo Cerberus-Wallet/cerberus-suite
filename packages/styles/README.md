@@ -1,4 +1,4 @@
-# @trezor/styles
+# @cerberus/styles
 
 Fully fledged library to provide best DX for writing styles. In core it uses library `fela` which seems like a good choice for quality, simplicity, performance. I strongly recommend reading [Fela docs](https://fela.js.org/docs/latest/intro/getting-started), especially sections [Motivation](https://fela.js.org/docs/latest/intro/motivation) and [Principles](https://fela.js.org/docs/latest/intro/principles). Big thanks to [wafflepie](https://github.com/wafflepie) for birth of this lib and inspiration.
 
@@ -6,7 +6,7 @@ Fully fledged library to provide best DX for writing styles. In core it uses lib
 
 1. Platform and framework agnostic - This lib is platform agnostic and can be used with small effort nearly everywhere and with anything.
 1. Easy setup - There is no additional setup or plugin needed for your editor, compiler, linter...
-1. Strongly typed in TypeScript - Whole library + package `@trezor/theme` is strongly typed, so it will prevent many bugs (forgetting units, invalid property names...). Another benefit of strong types is perfectly working autocomplete and IntelliSense.
+1. Strongly typed in TypeScript - Whole library + package `@cerberus/theme` is strongly typed, so it will prevent many bugs (forgetting units, invalid property names...). Another benefit of strong types is perfectly working autocomplete and IntelliSense.
 1. Natural syntax - Based on standard JS object syntax, very similar to React Native. This allows library to use full potential of CSS-in-JS without compromises (like ugly mixins etc.).
 1. Fast and small - Minimal bundle size and very high performance.
 1. Great developer experience - Created with DX as main focus point. Perfectly working IntelliSense, every util just one param away with minimum need of extra imports, clean declarative syntax for dynamic conditional styles, RTL support, code snippets...
@@ -14,8 +14,8 @@ Fully fledged library to provide best DX for writing styles. In core it uses lib
 ## Installation
 
 ```tsx
-import { createRenderer, StylesProvider } from '@trezor/styles';
-import { defaultTheme } from '@trezor/theme';
+import { createRenderer, StylesProvider } from '@cerberus/styles';
+import { defaultTheme } from '@cerberus/theme';
 import MyApp from './MyApp';
 
 const renderer = createRenderer();

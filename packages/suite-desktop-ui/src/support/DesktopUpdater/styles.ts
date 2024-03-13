@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { H2, Paragraph, variables } from '@trezor/components';
+import { H2, Paragraph, variables } from '@cerberus/components';
 
 export const Row = styled.div`
     display: flex;

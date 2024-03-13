@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import { darken } from 'polished';
-import { analytics, EventType } from '@trezor/suite-analytics';
+import { analytics, EventType } from '@cerberus/suite-analytics';
 
 import { useDispatch, useSelector } from 'src/hooks/suite';
 import { openNode, setView } from 'src/actions/suite/guideActions';
-import { variables } from '@trezor/components';
+import { variables } from '@cerberus/components';
 import { Translation } from 'src/components/suite';
 // importing directly, otherwise unit tests fail, seems to be a styled-components issue
 import { TrezorLink } from 'src/components/suite/TrezorLink';

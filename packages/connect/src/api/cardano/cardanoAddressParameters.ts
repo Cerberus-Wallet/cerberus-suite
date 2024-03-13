@@ -1,10 +1,10 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/helpers/cardanoAddressParameters.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/helpers/cardanoAddressParameters.js
 
 import { validatePath } from '../../utils/pathUtils';
 import { PROTO, ERRORS } from '../../constants';
 import type { Device } from '../../device/Device';
 import { CardanoAddressParameters } from '../../types/api/cardano';
-import { Assert } from '@trezor/schema-utils';
+import { Assert } from '@cerberus/schema-utils';
 
 export const validateAddressParameters = (addressParameters: CardanoAddressParameters) => {
     Assert(CardanoAddressParameters, addressParameters);

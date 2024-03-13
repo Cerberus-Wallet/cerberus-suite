@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { LoadingContent, Switch } from '@trezor/components';
-import { TOR_PROJECT_URL } from '@trezor/urls';
+import { LoadingContent, Switch } from '@cerberus/components';
+import { TOR_PROJECT_URL } from '@cerberus/urls';
 import { useDispatch, useSelector } from 'src/hooks/suite';
 import { toggleTor } from 'src/actions/suite/suiteActions';
 import { ActionColumn, SectionItem, TextColumn, Translation } from 'src/components/suite';

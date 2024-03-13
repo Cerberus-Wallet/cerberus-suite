@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
-import { Card, Icon, variables } from '@trezor/components';
+import { Card, Icon, variables } from '@cerberus/components';
 import { Translation, FiatValue, FormattedCryptoAmount } from 'src/components/suite';
 import { useSelector } from 'src/hooks/suite';
 import { useRbf, RbfContext, UseRbfProps } from 'src/hooks/wallet/useRbfForm';
@@ -10,7 +10,7 @@ import { RbfFees } from './RbfFees';
 import { AffectedTransactions } from './AffectedTransactions';
 import { DecreasedOutputs } from './DecreasedOutputs';
 import { ReplaceTxButton } from './ReplaceTxButton';
-import { borders } from '@trezor/theme';
+import { borders } from '@cerberus/theme';
 
 const Wrapper = styled.div`
     margin: 12px 0;

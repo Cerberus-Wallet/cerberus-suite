@@ -1,11 +1,11 @@
 /**
- * Challenge-response authentication via Trezor.
+ * Challenge-response authentication via Cerberus.
  * To protect against replay attacks you should use a server-side generated
  * and randomized challengeHidden for every attempt. You can also provide a
  * visual challenge that will be shown on the device.
  */
 
-import { Static, Type } from '@trezor/schema-utils';
+import { Static, Type } from '@cerberus/schema-utils';
 import type { Params, Response } from '../params';
 
 export type LoginChallenge = Static<typeof LoginChallenge>;

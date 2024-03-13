@@ -6,12 +6,12 @@ import { AppState } from 'src/types/suite';
 import { showAddress } from 'src/actions/wallet/receiveActions';
 import { useDispatch, useSelector } from 'src/hooks/suite/';
 
-import { Button, Card, variables, H2, Tooltip, GradientOverlay } from '@trezor/components';
+import { Button, Card, variables, H2, Tooltip, GradientOverlay } from '@cerberus/components';
 import { getFirstFreshAddress } from '@suite-common/wallet-utils';
 import { AccountsRootState, selectIsAccountUtxoBased } from '@suite-common/wallet-core';
 import { networks } from '@suite-common/wallet-config';
 import { EvmExplanationBox } from 'src/components/wallet/EvmExplanationBox';
-import { spacingsPx, typography } from '@trezor/theme';
+import { spacingsPx, typography } from '@cerberus/theme';
 
 const StyledCard = styled(Card)`
     width: 100%;

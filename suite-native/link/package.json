@@ -11,8 +11,8 @@
     },
     "dependencies": {
         "@suite-native/toasts": "workspace:*",
-        "@trezor/styles": "workspace:*",
-        "@trezor/theme": "workspace:*",
+        "@cerberus/styles": "workspace:*",
+        "@cerberus/theme": "workspace:*",
         "react": "18.2.0"
     },
     "peerDependencies": {

@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import styled, { css } from 'styled-components';
 import * as semver from 'semver';
 
-import { pickByDeviceModel, getFirmwareVersion } from '@trezor/device-utils';
+import { pickByDeviceModel, getFirmwareVersion } from '@cerberus/device-utils';
 import {
     H2,
     Button,
@@ -10,8 +10,8 @@ import {
     variables,
     DeviceAnimation,
     AnimationDeviceType,
-} from '@trezor/components';
-import { DeviceModelInternal } from '@trezor/connect';
+} from '@cerberus/components';
+import { DeviceModelInternal } from '@cerberus/connect';
 import { Modal, Translation, WebUsbButton } from 'src/components/suite';
 import { DeviceConfirmImage } from 'src/components/suite/DeviceConfirmImage';
 import { useDevice, useFirmware } from 'src/hooks/suite';

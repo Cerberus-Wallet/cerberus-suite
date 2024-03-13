@@ -1,10 +1,10 @@
 import { useMemo, ReactNode } from 'react';
 import styled from 'styled-components';
 import { Translation, TrezorLink } from 'src/components/suite';
-import { variables, Button, CollapsibleBox } from '@trezor/components';
-import { CERBERUS_SUPPORT_URL } from '@trezor/urls';
-import TrezorConnect from '@trezor/connect';
-import { isAndroid } from '@trezor/env-utils';
+import { variables, Button, CollapsibleBox } from '@cerberus/components';
+import { CERBERUS_SUPPORT_URL } from '@cerberus/urls';
+import TrezorConnect from '@cerberus/connect';
+import { isAndroid } from '@cerberus/env-utils';
 
 const WhiteCollapsibleBox = styled(CollapsibleBox)`
     background: ${({ theme }) => theme.BG_WHITE};

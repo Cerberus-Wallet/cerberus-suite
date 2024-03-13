@@ -134,7 +134,7 @@ export const getFieldType = [
         },
     },
     {
-        // Unsupported in Trezor firmware as of v2.4.3
+        // Unsupported in Cerberus firmware as of v2.4.3
         description: 'should parse nested arrays',
         input: {
             typeName: 'int32[5][12]',

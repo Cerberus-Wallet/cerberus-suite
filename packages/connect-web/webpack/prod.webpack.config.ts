@@ -3,7 +3,7 @@ import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import TerserPlugin from 'terser-webpack-plugin';
 
-// Generate additional files hosted on https://connect.trezor.io/X/
+// Generate additional files hosted on https://connect.cerberus.uraanai.com/X/
 
 const DIST = path.resolve(__dirname, '../build');
 

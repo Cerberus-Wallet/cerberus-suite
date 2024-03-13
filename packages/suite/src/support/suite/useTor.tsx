@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-import { desktopApi, BootstrapTorEvent, TorStatusEvent } from '@trezor/suite-desktop-api';
+import { desktopApi, BootstrapTorEvent, TorStatusEvent } from '@cerberus/suite-desktop-api';
 import { TorStatus } from 'src/types/suite';
 import { useDispatch, useSelector } from 'src/hooks/suite';
 import { getIsTorDomain } from 'src/utils/suite/tor';
@@ -9,7 +9,7 @@ import {
     setTorBootstrapSlow,
     updateTorStatus,
 } from 'src/actions/suite/suiteActions';
-import { isWeb, isDesktop, getLocationHostname } from '@trezor/env-utils';
+import { isWeb, isDesktop, getLocationHostname } from '@cerberus/env-utils';
 import { selectTorState } from 'src/reducers/suite/suiteReducer';
 import { notificationsActions } from '@suite-common/toast-notifications';
 

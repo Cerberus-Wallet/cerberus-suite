@@ -1,4 +1,4 @@
-// origin https://github.com/trezor/connect/blob/develop/src/js/env/browser/networkUtils.js
+// origin https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/env/browser/networkUtils.js
 
 import fetch from 'cross-fetch';
 

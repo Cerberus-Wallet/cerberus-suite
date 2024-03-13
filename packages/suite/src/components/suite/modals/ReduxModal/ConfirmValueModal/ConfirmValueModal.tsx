@@ -2,8 +2,8 @@ import { useEffect, ReactNode } from 'react';
 import styled, { useTheme } from 'styled-components';
 
 import { notificationsActions } from '@suite-common/toast-notifications';
-import { Button, ConfirmOnDevice, ModalProps, Tooltip, variables } from '@trezor/components';
-import { copyToClipboard } from '@trezor/dom-utils';
+import { Button, ConfirmOnDevice, ModalProps, Tooltip, variables } from '@cerberus/components';
+import { copyToClipboard } from '@cerberus/dom-utils';
 import { selectDevice } from '@suite-common/wallet-core';
 import { selectIsActionAbortable } from 'src/reducers/suite/suiteReducer';
 import { QrCode } from 'src/components/suite/QrCode';
@@ -15,7 +15,7 @@ import { DeviceDisconnected } from './DeviceDisconnected';
 import { TransactionReviewStepIndicator } from '../TransactionReviewModal/TransactionReviewOutputList/TransactionReviewStepIndicator';
 import { TransactionReviewOutputElement } from '../TransactionReviewModal/TransactionReviewOutputList/TransactionReviewOutputElement';
 import { Account } from '@suite-common/wallet-types';
-import { borders } from '@trezor/theme';
+import { borders } from '@cerberus/theme';
 
 const Wrapper = styled.div`
     display: flex;

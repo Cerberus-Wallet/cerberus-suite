@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import styled, { css, keyframes } from 'styled-components';
-import { DeviceModelInternal } from '@trezor/connect';
-import { borders, spacingsPx } from '@trezor/theme';
+import { DeviceModelInternal } from '@cerberus/connect';
+import { borders, spacingsPx } from '@cerberus/theme';
 
 import { ElevationContext, useElevation } from '../ElevationContext/ElevationContext';
 import { ConfirmOnDeviceContent } from './ConfirmOnDeviceContent';

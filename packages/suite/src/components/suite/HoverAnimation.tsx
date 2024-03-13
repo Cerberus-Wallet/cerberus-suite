@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import styled, { css } from 'styled-components';
-import { borders } from '@trezor/theme';
+import { borders } from '@cerberus/theme';
 
 const Wrapper = styled.div<{ size?: string; isHoverable?: boolean }>`
     position: relative;

@@ -4,7 +4,7 @@ import { validatePath, getScriptType, getSerializedPath } from '../utils/pathUti
 import { getBitcoinNetwork } from '../data/coinInfo';
 import { PROTO } from '../constants';
 import { UI, createUiMessage } from '../events';
-import { Assert } from '@trezor/schema-utils';
+import { Assert } from '@cerberus/schema-utils';
 import { Bundle } from '../exports';
 import { GetOwnershipProof as GetOwnershipProofSchema } from '../types/api/getOwnershipProof';
 

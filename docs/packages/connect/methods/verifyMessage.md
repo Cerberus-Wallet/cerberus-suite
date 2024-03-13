@@ -11,12 +11,12 @@ const result = await TrezorConnect.verifyMessage(params);
 
 [Optional common params](commonParams.md)
 
-[VerifyMessage type](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/bitcoin/index.ts)
+[VerifyMessage type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/bitcoin/index.ts)
 
 -   `address` - _required_ `string` signer address,
 -   `message` - _required_ `string` signed message,
 -   `signature` - _required_ `string` signature in base64 format,
--   `coin` - _required_ `string` Determines network definition specified in [coins.json](https://github.com/trezor/trezor-suite/blob/develop/packages/connect-common/files/coins.json) file. Coin `shortcut`, `name` or `label` can be used.
+-   `coin` - _required_ `string` Determines network definition specified in [coins.json](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect-common/files/coins.json) file. Coin `shortcut`, `name` or `label` can be used.
 -   `hex` - _optional_ `boolean` convert message from hex
 
 ### Example

@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
-import TrezorConnect from '@trezor/connect';
-import { ConfirmOnDevice, Backdrop } from '@trezor/components';
+import TrezorConnect from '@cerberus/connect';
+import { ConfirmOnDevice, Backdrop } from '@cerberus/components';
 import { Translation } from 'src/components/suite';
 import { useIntl } from 'react-intl';
 import messages from 'src/support/messages';
@@ -10,7 +10,7 @@ import {
     CollapsibleOnboardingCardProps,
 } from './CollapsibleOnboardingCard';
 import { TrezorDevice } from '@suite-common/suite-types';
-import { spacingsPx, zIndices } from '@trezor/theme';
+import { spacingsPx, zIndices } from '@cerberus/theme';
 
 const ConfirmWrapper = styled.div`
     margin-bottom: 20px;

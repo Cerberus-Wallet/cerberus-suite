@@ -1,11 +1,11 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/CipherKeyValue.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/CipherKeyValue.js
 
 import { UI, createUiMessage } from '../events';
 import { AbstractMethod } from '../core/AbstractMethod';
 import { getFirmwareRange } from './common/paramsValidator';
 import { validatePath } from '../utils/pathUtils';
 import type { PROTO } from '../constants';
-import { Assert } from '@trezor/schema-utils';
+import { Assert } from '@cerberus/schema-utils';
 import { Bundle } from '../types/params';
 import { CipherKeyValue as CipherKeyValueSchema } from '../types/api/cipherKeyValue';
 

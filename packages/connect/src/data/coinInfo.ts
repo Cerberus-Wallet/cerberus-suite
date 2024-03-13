@@ -1,5 +1,5 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/data/CoinInfo.js
-import { cloneObject } from '@trezor/utils';
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/data/CoinInfo.js
+import { cloneObject } from '@cerberus/utils';
 import { getBitcoinFeeLevels, getEthereumFeeLevels, getMiscFeeLevels } from './defaultFeeLevels';
 import { ERRORS } from '../constants';
 import { toHardened, fromHardened } from '../utils/pathUtils';
@@ -112,7 +112,7 @@ export const fixCoinInfoNetwork = (ci: BitcoinNetworkInfo, path: number[]) => {
     return coinInfo;
 };
 
-// TODO: https://github.com/trezor/trezor-suite/issues/4886
+// TODO: https://github.com/Cerberus-Wallet/cerberus-suite/issues/4886
 const detectBtcVersion = (data: { subversion?: string }) => {
     if (data.subversion == null) {
         return 'btc';
@@ -130,7 +130,7 @@ const detectBtcVersion = (data: { subversion?: string }) => {
     return 'btc';
 };
 
-// TODO: https://github.com/trezor/trezor-suite/issues/4886
+// TODO: https://github.com/Cerberus-Wallet/cerberus-suite/issues/4886
 export const getCoinInfoByHash = (hash: string, networkInfo: any) => {
     const networks = cloneObject(bitcoinNetworks);
     const result = networks.find(

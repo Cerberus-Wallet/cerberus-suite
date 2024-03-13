@@ -10,7 +10,7 @@ import {
     Tooltip,
     Truncate,
     variables,
-} from '@trezor/components';
+} from '@cerberus/components';
 import { useCoinmarketExchangeOffersContext } from 'src/hooks/wallet/useCoinmarketExchangeOffers';
 import useDebounce from 'react-use/lib/useDebounce';
 import BigNumber from 'bignumber.js';

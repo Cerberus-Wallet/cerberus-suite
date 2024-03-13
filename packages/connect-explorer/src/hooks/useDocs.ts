@@ -4,7 +4,7 @@ import MarkdownReplaceLink from 'markdown-it-replace-link';
 import MarkdownReplaceLinkAttrs from 'markdown-it-link-attributes';
 import MarkdownImageSize from 'markdown-it-imsize';
 
-const GITHUB = `https://github.com/trezor/trezor-suite/blob/${process.env.COMMIT_HASH}/docs/packages/connect`;
+const GITHUB = `https://github.com/Cerberus-Wallet/cerberus-suite/blob/${process.env.COMMIT_HASH}/docs/packages/connect`;
 const CDN = `https://raw.githubusercontent.com/trezor/trezor-suite/${process.env.COMMIT_HASH}/docs/packages/connect/`;
 
 export const useDocs = (url: string) => {

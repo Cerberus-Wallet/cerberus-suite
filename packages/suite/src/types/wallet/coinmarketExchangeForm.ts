@@ -1,7 +1,7 @@
 import type { AppState } from 'src/types/suite';
 import type { FormState as ReactHookFormState, UseFormReturn } from 'react-hook-form';
 import type { Account, Network } from 'src/types/wallet';
-import type { FeeLevel } from '@trezor/connect';
+import type { FeeLevel } from '@cerberus/connect';
 import type { ExchangeInfo } from 'src/actions/wallet/coinmarketExchangeActions';
 import type {
     FeeInfo,

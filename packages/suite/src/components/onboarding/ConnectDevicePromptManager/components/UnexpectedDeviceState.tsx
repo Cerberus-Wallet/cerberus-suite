@@ -3,8 +3,8 @@ import {
     TROUBLESHOOTING_TIP_BRIDGE_STATUS,
     TROUBLESHOOTING_TIP_BRIDGE_INSTALL,
 } from 'src/components/suite/troubleshooting/tips';
-import { pickByDeviceModel } from '@trezor/device-utils';
-import { DeviceModelInternal } from '@trezor/connect';
+import { pickByDeviceModel } from '@cerberus/device-utils';
+import { DeviceModelInternal } from '@cerberus/connect';
 
 // todo: remove in favour of suite-components
 interface UnexpectedDeviceStateProps {
@@ -55,7 +55,7 @@ export const UnexpectedDeviceState = ({
         )}
 
         {deviceStatus === 'seedless' && (
-            // Seedless devices are not supported by Trezor Suite
+            // Seedless devices are not supported by Cerberus Suite
             <TroubleshootingTips
                 label={<Translation id="TR_YOUR_DEVICE_IS_SEEDLESS" />}
                 items={[

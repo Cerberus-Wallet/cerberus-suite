@@ -1,7 +1,7 @@
 // @group:suite
 // @retry=2
 
-// TODO: enable this test once https://github.com/trezor/trezor-user-env/issues/54
+// TODO: enable this test once https://github.com/Cerberus-Wallet/cerberus-user-env/issues/54
 // is resolved
 // describe('safety_checks Warning For PromptAlways', () => {
 //     beforeEach(() => {
@@ -34,7 +34,7 @@ describe('safety_checks Warning For PromptTemporarily', () => {
         cy.getTestElement('@settings/menu/device').click();
 
         // Set safety_checks to `PromptTemporarily'.
-        // TODO: do this via the `applySetting` task once https://github.com/trezor/trezor-user-env/issues/54
+        // TODO: do this via the `applySetting` task once https://github.com/Cerberus-Wallet/cerberus-user-env/issues/54
         // is resolved.
         cy.getTestElement('@settings/device/safety-checks-button').click({
             scrollBehavior: 'bottom',

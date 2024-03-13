@@ -2,7 +2,7 @@ import { Image, Pressable } from 'react-native';
 import Animated, { SlideInDown, SlideOutDown } from 'react-native-reanimated';
 import React, { useMemo, useState } from 'react';
 
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 
 import { ConfirmOnTrezorBottomSheet } from './ConfirmOnTrezorBottomSheet';
 

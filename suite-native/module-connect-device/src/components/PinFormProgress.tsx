@@ -1,5 +1,5 @@
 import { Box, HStack, Text } from '@suite-native/atoms';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import { useFormContext } from '@suite-native/forms';
 import { Translation } from '@suite-native/intl';
 

@@ -10,7 +10,7 @@ import {
     RootStackParamList,
     RootStackRoutes,
 } from '@suite-native/navigation';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 
 import { TokenTransferListItemValues } from '../TransactionsList/TokenTransferListItem';
 import { TransactionListItemValues } from '../TransactionsList/TransactionListItem';

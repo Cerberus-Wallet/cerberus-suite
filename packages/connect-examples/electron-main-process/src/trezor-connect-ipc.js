@@ -1,4 +1,4 @@
-const TrezorConnect = require('@trezor/connect').default;
+const TrezorConnect = require('@cerberus/connect').default;
 const {
     TRANSPORT_EVENT,
     UI,
@@ -6,7 +6,7 @@ const {
     DEVICE_EVENT,
     TRANSPORT,
     DEVICE,
-} = require('@trezor/connect');
+} = require('@cerberus/connect');
 
 let inited = false;
 // SETUP trezor-connect
@@ -95,7 +95,7 @@ exports.initTrezorConnect = sender => {
         debug: false, // see what's going on inside connect
         // lazyLoad: true, // set to "false" (default) if you want to start communication with bridge on application start (and detect connected device right away)
         // set it to "true", then trezor-connect will not be initialized until you call some TrezorConnect.method()
-        // this is useful when you don't know if you are dealing with Trezor user
+        // this is useful when you don't know if you are dealing with Cerberus user
         manifest: {
             email: 'email@developer.com',
             appUrl: 'electron-app-boilerplate',

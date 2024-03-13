@@ -3,11 +3,11 @@ import {
     AccountLabels,
     WalletLabels,
 } from '@suite-common/metadata-types';
-import { TrezorConnect } from '@trezor/connect';
+import { TrezorConnect } from '@cerberus/connect';
 
 export const FORMAT_VERSION = '1.0.0';
 
-// @trezor/connect params
+// @cerberus/connect params
 export const ENABLE_LABELING_PATH = "m/10015'/0'";
 export const ENABLE_LABELING_KEY = 'Enable labeling?';
 export const ENABLE_LABELING_VALUE =

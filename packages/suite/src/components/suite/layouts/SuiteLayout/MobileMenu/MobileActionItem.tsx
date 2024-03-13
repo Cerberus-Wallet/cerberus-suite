@@ -1,7 +1,7 @@
 import { useMemo, ReactNode, HTMLAttributes } from 'react';
 import styled, { useTheme } from 'styled-components';
-import { Icon, IconProps, variables } from '@trezor/components';
-import { FADE_IN } from '@trezor/components/src/config/animations';
+import { Icon, IconProps, variables } from '@cerberus/components';
+import { FADE_IN } from '@cerberus/components/src/config/animations';
 
 const MobileWrapper = styled.div`
     display: flex;

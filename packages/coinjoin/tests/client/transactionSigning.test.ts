@@ -1,5 +1,5 @@
-import { networks } from '@trezor/utxo-lib';
-import { getRandomNumberInRange } from '@trezor/utils';
+import { networks } from '@cerberus/utxo-lib';
+import { getRandomNumberInRange } from '@cerberus/utils';
 
 import { transactionSigning } from '../../src/client/round/transactionSigning';
 import { createServer } from '../mocks/server';
@@ -7,8 +7,8 @@ import { createInput } from '../fixtures/input.fixture';
 import { createCoinjoinRound } from '../fixtures/round.fixture';
 
 // mock random delay function
-jest.mock('@trezor/utils', () => {
-    const originalModule = jest.requireActual('@trezor/utils');
+jest.mock('@cerberus/utils', () => {
+    const originalModule = jest.requireActual('@cerberus/utils');
 
     return {
         __esModule: true,

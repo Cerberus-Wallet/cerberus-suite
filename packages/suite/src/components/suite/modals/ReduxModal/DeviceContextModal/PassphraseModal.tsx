@@ -3,8 +3,8 @@ import { useIntl } from 'react-intl';
 
 import styled from 'styled-components';
 
-import { variables, PassphraseTypeCard } from '@trezor/components';
-import TrezorConnect from '@trezor/connect';
+import { variables, PassphraseTypeCard } from '@cerberus/components';
+import TrezorConnect from '@cerberus/connect';
 import * as deviceUtils from '@suite-common/suite-utils';
 import {
     selectIsDiscoveryAuthConfirmationRequired,

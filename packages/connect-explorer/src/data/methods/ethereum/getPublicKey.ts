@@ -9,7 +9,7 @@ const batch = [
     },
     {
         name: 'showOnTrezor',
-        label: 'Show on Trezor',
+        label: 'Show on Cerberus',
         type: 'checkbox',
         value: true,
     },

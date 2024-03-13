@@ -24,7 +24,7 @@ import { findAnchorTransactionPage } from 'src/utils/suite/anchor';
 import { TransactionCandidates } from './TransactionCandidates';
 import { selectLabelingDataForAccount } from 'src/reducers/suite/metadataReducer';
 import { getTxsPerPage } from '@suite-common/suite-utils';
-import { SkeletonStack } from '@trezor/components';
+import { SkeletonStack } from '@cerberus/components';
 import { selectLocalCurrency } from 'src/reducers/wallet/settingsReducer';
 
 const StyledSection = styled(DashboardSection)`

@@ -58,7 +58,7 @@ export default [
         },
     },
     {
-        description: 'Show public key failed, @trezor/connect method not specified',
+        description: 'Show public key failed, @cerberus/connect method not specified',
         initialState: {
             networkType: 'ethereum',
         },
@@ -116,7 +116,7 @@ export default [
         },
     },
     {
-        description: 'Show public key, @trezor/connect error',
+        description: 'Show public key, @cerberus/connect error',
         initialState: undefined,
         mocks: {
             getPublicKey: { success: false, payload: { error: 'Runtime error' } },
@@ -138,7 +138,7 @@ export default [
         },
     },
     {
-        description: 'Show public key, @trezor/connect permissions not granted',
+        description: 'Show public key, @cerberus/connect permissions not granted',
         initialState: undefined,
         mocks: {
             getPublicKey: {

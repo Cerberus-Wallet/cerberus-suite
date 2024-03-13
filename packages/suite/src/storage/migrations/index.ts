@@ -1,12 +1,12 @@
 import BigNumber from 'bignumber.js';
 import { toWei } from 'web3-utils';
-import { isDesktop } from '@trezor/env-utils';
+import { isDesktop } from '@cerberus/env-utils';
 import type { State } from 'src/reducers/wallet/settingsReducer';
 import type { CustomBackend, BlockbookUrl } from 'src/types/wallet/backend';
 import type { Network } from 'src/types/wallet';
 
 import type { BackendSettings } from '@suite-common/wallet-types';
-import type { OnUpgradeFunc } from '@trezor/suite-storage';
+import type { OnUpgradeFunc } from '@cerberus/suite-storage';
 import type { DBWalletAccountTransaction, SuiteDBSchema } from '../definitions';
 import {
     formatNetworkAmount,
@@ -14,7 +14,7 @@ import {
     amountToSatoshi,
 } from '@suite-common/wallet-utils';
 import { updateAll } from './utils';
-import { DeviceModelInternal, FirmwareType } from '@trezor/connect';
+import { DeviceModelInternal, FirmwareType } from '@cerberus/connect';
 
 type WalletWithBackends = {
     backends?: Partial<{

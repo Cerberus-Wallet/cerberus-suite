@@ -1,4 +1,4 @@
-import BlockchainLink from '@trezor/blockchain-link';
+import BlockchainLink from '@cerberus/blockchain-link';
 
 import { CoinInfo } from '../../types';
 import { BackendManager } from '../BackendManager';

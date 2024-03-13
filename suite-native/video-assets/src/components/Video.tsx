@@ -3,7 +3,7 @@ import { View, ActivityIndicator } from 'react-native';
 
 import { Video as ExpoVideo, VideoProps as ExpoVideoProps, ResizeMode } from 'expo-av';
 
-import { useNativeStyles, prepareNativeStyle } from '@trezor/styles';
+import { useNativeStyles, prepareNativeStyle } from '@cerberus/styles';
 
 import { videos, VideoName } from '../videos';
 

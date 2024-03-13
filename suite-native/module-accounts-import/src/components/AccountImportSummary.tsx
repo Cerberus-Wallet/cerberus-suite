@@ -7,7 +7,7 @@ import {
     selectDeviceAccountByDescriptorAndNetworkSymbol,
 } from '@suite-common/wallet-core';
 import { NetworkSymbol } from '@suite-common/wallet-config';
-import { AccountInfo } from '@trezor/connect';
+import { AccountInfo } from '@cerberus/connect';
 import { portfolioTrackerSupportedNetworks } from '@suite-native/config';
 import { useTranslate } from '@suite-native/intl';
 

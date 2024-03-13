@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { AnimatePresence, MotionProps, motion } from 'framer-motion';
 
-import { Button, motionEasing } from '@trezor/components';
-import { spacingsPx, typography } from '@trezor/theme';
+import { Button, motionEasing } from '@cerberus/components';
+import { spacingsPx, typography } from '@cerberus/theme';
 import { startDiscoveryThunk } from '@suite-common/wallet-core';
 
 import { useRediscoveryNeeded, useDispatch } from 'src/hooks/suite';

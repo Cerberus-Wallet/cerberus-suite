@@ -1,6 +1,6 @@
-import { ScanAccountProgress, BroadcastedTransactionDetails } from '@trezor/coinjoin';
-import TrezorConnect from '@trezor/connect';
-import { promiseAllSequence } from '@trezor/utils';
+import { ScanAccountProgress, BroadcastedTransactionDetails } from '@cerberus/coinjoin';
+import TrezorConnect from '@cerberus/connect';
+import { promiseAllSequence } from '@cerberus/utils';
 import { notificationsActions } from '@suite-common/toast-notifications';
 import { isDevEnv } from '@suite-common/suite-utils';
 import { Network, NetworkSymbol } from '@suite-common/wallet-config';
@@ -555,7 +555,7 @@ export const createCoinjoinAccount =
             throw new Error('createCoinjoinAccount: invalid account type');
         }
 
-        // initialize @trezor/coinjoin client
+        // initialize @cerberus/coinjoin client
         const api = await dispatch(coinjoinClientActions.initCoinjoinService(network.symbol));
         if (!api) {
             return;
@@ -681,7 +681,7 @@ const authorizeCoinjoin =
     async (dispatch: Dispatch, getState: GetState) => {
         const device = selectDevice(getState());
 
-        // authorize coinjoin session on Trezor
+        // authorize coinjoin session on Cerberus
         dispatch(coinjoinAccountAuthorize(account.key));
 
         const auth = await TrezorConnect.authorizeCoinjoin({
@@ -719,7 +719,7 @@ export const startCoinjoinSession =
             throw new Error('startCoinjoinSession: invalid account type');
         }
 
-        // initialize @trezor/coinjoin client
+        // initialize @cerberus/coinjoin client
         const api = await dispatch(coinjoinClientActions.initCoinjoinService(account.symbol));
         const coinjoinAccount = selectCoinjoinAccountByKey(getState(), account.key);
 
@@ -729,7 +729,7 @@ export const startCoinjoinSession =
 
         dispatch(coinjoinSessionStarting(account.key, true));
 
-        // authorize CoinjoinSession on Trezor
+        // authorize CoinjoinSession on Cerberus
         const authResult = await dispatch(
             authorizeCoinjoin(account, api.client.settings.coordinatorName, params),
         );
@@ -752,7 +752,7 @@ export const startCoinjoinSession =
 // called from coinjoin account UI
 // try to restore current paused CoinjoinSession
 // use same parameters as in startCoinjoinSession but recalculate maxRounds value
-// if Trezor is already preauthorized it will not ask for confirmation
+// if Cerberus is already preauthorized it will not ask for confirmation
 export const restoreCoinjoinSession =
     (accountKey: string) => async (dispatch: Dispatch, getState: GetState) => {
         // TODO: check if device is connected, passphrase is authorized...
@@ -781,7 +781,7 @@ export const restoreCoinjoinSession =
             return errorToast('Device locked');
         }
 
-        // get @trezor/coinjoin client if available
+        // get @cerberus/coinjoin client if available
         const client = coinjoinClientActions.getCoinjoinClient(account.symbol);
         if (!client) {
             return errorToast('CoinjoinClient is not enabled');

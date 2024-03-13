@@ -2,7 +2,7 @@ import { Atom, useAtom } from 'jotai';
 
 import { HStack, Text } from '@suite-native/atoms';
 import { Icon, IconName } from '@suite-common/icons';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 
 type PriceChangeIndicatorProps = {
     percentageChangeAtom: PercentageChangeAtom;

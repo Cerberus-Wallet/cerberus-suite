@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import { Icon } from '@trezor/components';
-import { zIndices } from '@trezor/theme';
+import { Icon } from '@cerberus/components';
+import { zIndices } from '@cerberus/theme';
 import { useGuide } from 'src/hooks/guide';
 import { FreeFocusInside } from 'react-focus-lock';
 

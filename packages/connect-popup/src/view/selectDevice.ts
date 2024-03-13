@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/popup/view/selectDevice.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/popup/view/selectDevice.js
 
 import {
     UI,
@@ -9,11 +9,11 @@ import {
     UI_EVENT,
     TRANSPORT,
     WEBEXTENSION,
-} from '@trezor/connect';
-import { CERBERUS_USB_DESCRIPTORS } from '@trezor/transport/lib/constants';
-import { SUITE_BRIDGE_URL, SUITE_UDEV_URL, CERBERUS_SUPPORT_URL } from '@trezor/urls';
+} from '@cerberus/connect';
+import { CERBERUS_USB_DESCRIPTORS } from '@cerberus/transport/lib/constants';
+import { SUITE_BRIDGE_URL, SUITE_UDEV_URL, CERBERUS_SUPPORT_URL } from '@cerberus/urls';
 import { container, getState, showView, postMessage } from './common';
-import { reactEventBus } from '@trezor/connect-ui/src/utils/eventBus';
+import { reactEventBus } from '@cerberus/connect-ui/src/utils/eventBus';
 
 const initWebUsbButton = (showLoader: boolean) => {
     const webusbContainer = container.getElementsByClassName('webusb')[0] as HTMLElement;
@@ -36,8 +36,8 @@ const initWebUsbButton = (showLoader: boolean) => {
                     {
                         type: POPUP.EXTENSION_USB_PERMISSIONS,
                         channel: {
-                            here: '@trezor/connect-popup',
-                            peer: '@trezor/connect-web',
+                            here: '@cerberus/connect-popup',
+                            peer: '@cerberus/connect-web',
                         },
                     },
                     window.location.origin,
@@ -183,11 +183,11 @@ export const selectDevice = (payload: UiRequestSelectDevice['payload']) => {
                     systemInfo?.os.family === 'Linux' &&
                     device.error.indexOf(ERRORS.LIBUSB_ERROR_MESSAGE) >= 0
                 ) {
-                    explanationContent = `Please install <a href="${SUITE_UDEV_URL}" target="_blank" rel="noreferrer noopener" onclick="window.closeWindow();">Udev rules</a> to use Trezor device.`;
+                    explanationContent = `Please install <a href="${SUITE_UDEV_URL}" target="_blank" rel="noreferrer noopener" onclick="window.closeWindow();">Udev rules</a> to use Cerberus device.`;
                 }
                 // webusb error handling (top priority)
                 if (payload.webusb) {
-                    explanationContent = `Please install <a href="${SUITE_BRIDGE_URL}" target="_blank" rel="noreferrer noopener" onclick="window.closeWindow();">Bridge</a> to use Trezor device.`;
+                    explanationContent = `Please install <a href="${SUITE_BRIDGE_URL}" target="_blank" rel="noreferrer noopener" onclick="window.closeWindow();">Bridge</a> to use Cerberus device.`;
                 }
                 deviceButton.disabled = true;
                 deviceName.textContent = 'Unrecognized device';

@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 
-import { THEME } from '@trezor/components';
+import { THEME } from '@cerberus/components';
 import { Menu } from './Menu';
 
 const MainComponent = styled.main`

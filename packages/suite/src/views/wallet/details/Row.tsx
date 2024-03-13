@@ -1,4 +1,4 @@
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 import { ReactNode } from 'react';
 import styled from 'styled-components';
 

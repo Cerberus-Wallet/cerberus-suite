@@ -2,7 +2,7 @@ import { AbstractMethod } from '../core/AbstractMethod';
 import { DEVICE, createDeviceMessage } from '../events';
 import { PROTO } from '../constants';
 import { getFirmwareRange } from './common/paramsValidator';
-import { Assert } from '@trezor/schema-utils';
+import { Assert } from '@cerberus/schema-utils';
 
 export default class SetBusy extends AbstractMethod<'setBusy', PROTO.SetBusy> {
     init() {
@@ -26,7 +26,7 @@ export default class SetBusy extends AbstractMethod<'setBusy', PROTO.SetBusy> {
         if (this.keepSession && !!this.params.expiry_ms) {
             // NOTE: DEVICE.CHANGED will not be emitted because session is not released
             // change device features and trigger event manually
-            // followup: https://github.com/trezor/trezor-suite/issues/6446
+            // followup: https://github.com/Cerberus-Wallet/cerberus-suite/issues/6446
             this.device.features.busy = true;
             this.postMessage(createDeviceMessage(DEVICE.CHANGED, this.device.toMessageObject()));
         }

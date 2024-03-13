@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { Translation, AccountLabeling } from 'src/components/suite';
-import { Button, Spinner, Radio, Truncate, variables, Paragraph } from '@trezor/components';
+import { Button, Spinner, Radio, Truncate, variables, Paragraph } from '@cerberus/components';
 import { useCoinmarketExchangeOffersContext } from 'src/hooks/wallet/useCoinmarketExchangeOffers';
 import { useCoinmarketNavigation } from 'src/hooks/wallet/useCoinmarketNavigation';
 import { DexApprovalType, ExchangeTrade } from 'invity-api';

@@ -1,6 +1,6 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/popup/view/confirmation.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/popup/view/confirmation.js
 
-import { UI, createUiResponse, UiRequestConfirmation } from '@trezor/connect';
+import { UI, createUiResponse, UiRequestConfirmation } from '@cerberus/connect';
 import { container, showView, postMessage } from './common';
 
 export const initConfirmationView = (data: UiRequestConfirmation['payload']) => {

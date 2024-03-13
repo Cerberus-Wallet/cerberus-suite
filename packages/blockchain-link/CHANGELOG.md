@@ -3,7 +3,7 @@
 -   fix: from g:tsx to local tsx in prepublish script (d21d698b2)
 -   chore(suite): replace `selectCoinsLegacy` by fiat rates selectors (4e3ce7367)
 -   chore(suite): autofix newlines (c82455e74)
--   chore(utils): remove build step requirement from @trezor/utils (#11176) (6cd3d3c81)
+-   chore(utils): remove build step requirement from @cerberus/utils (#11176) (6cd3d3c81)
 -   chore(blockchain-link): remove unused error event (4c1b8df7d)
 -   refactor(blockchain-link): use `createDeferredManager` (037ecfe68)
 -   Fix: add missing keys that eslint was complaining about (#11167) (824c8b18b)
@@ -56,7 +56,7 @@
 -   chore: update `jest` and related dependency (b8a321c83)
 -   fix(blockchain-link): use timeout field of RippleApi.APIOptions (eafa4f308)
 -   chore(blockchain-link): use default imports from commonjs dependencies (9a81b0459)
--   chore: Throttler throttling instead of debouncing in `@trezor/blockchain-link` (#10288) (f7ff0cf9f)
+-   chore: Throttler throttling instead of debouncing in `@cerberus/blockchain-link` (#10288) (f7ff0cf9f)
 -   fix(blockchain-link): consider only unique solana signatures when paginating (e00cf70ac)
 -   chore(repo): update tsx (53de3e3a8)
 -   feat(suite): add Solana support (f2a89b34f)
@@ -107,7 +107,7 @@
 
 -   5711aa998 feat(blockchain-link): add getMempoolFilters method
 -   819c019d1 chore: use workspace:\* everywhere
--   3e072b11f chore(blockchain-link): use `@trezor/e2e-utils` in tests
+-   3e072b11f chore(blockchain-link): use `@cerberus/e2e-utils` in tests
 
 # 2.1.11
 
@@ -120,7 +120,7 @@
 # 2.1.9
 
 -   feat: add `token` param to to `GetCurrentFiatRates`, `GetFiatRatesForTimestamps` and `GetFiatRatesTickersList` methods
--   chore: parts of this packages split into @trezor/blockchain-link-types and @trezor/blockchain-link-utils
+-   chore: parts of this packages split into @cerberus/blockchain-link-types and @cerberus/blockchain-link-utils
 -   chore: token.address to token.contract, ethereum improvements
 -   feat: add token param to blockbook fiat methods
 
@@ -179,7 +179,7 @@
 
 -   Added `proxy` param allowing workers to initialize SocksProxyAgent and use it for proxying communication
 -   Added support for `Electrum` backend
--   Using common utilities from new `@trezor/utils` package
+-   Using common utilities from new `@cerberus/utils` package
 -   Updated dependencies
 
 # 2.0.0

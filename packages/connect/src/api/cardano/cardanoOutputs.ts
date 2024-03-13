@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/helpers/cardanoOutputs.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/helpers/cardanoOutputs.js
 
 // allow for...of statements
 
@@ -7,7 +7,7 @@ import { tokenBundleToProto, AssetGroupWithTokens } from './cardanoTokenBundle';
 import { PROTO } from '../../constants';
 import { hexStringByteLength, sendChunkedHexString } from './cardanoUtils';
 import { CardanoAssetGroup, CardanoAddressParameters } from '../../types/api/cardano';
-import { Assert, Type } from '@trezor/schema-utils';
+import { Assert, Type } from '@cerberus/schema-utils';
 
 export type OutputWithData = {
     output: PROTO.CardanoTxOutput;

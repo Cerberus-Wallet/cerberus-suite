@@ -1,5 +1,5 @@
 import styled, { useTheme } from 'styled-components';
-import { Icon } from '@trezor/components';
+import { Icon } from '@cerberus/components';
 
 const IndicatorWrapper = styled.div`
     width: 25px;

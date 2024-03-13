@@ -1,5 +1,5 @@
 {
-    "name": "@trezor/crypto-utils",
+    "name": "@cerberus/crypto-utils",
     "version": "1.0.0",
     "private": true,
     "license": "See LICENSE.md in repo root",

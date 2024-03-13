@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { selectDevice, createDeviceInstance } from '@suite-common/wallet-core';
-import { Button, variables } from '@trezor/components';
+import { Button, variables } from '@cerberus/components';
 
 import { Translation } from 'src/components/suite';
 import { DashboardSection } from 'src/components/dashboard';

@@ -1,6 +1,6 @@
 ## Solana: get address
 
-Display requested address derived by given [BIP44 path](../path.md) on device and return it to the caller. User is presented with a description of the requested address and asked to confirm the export on Trezor.
+Display requested address derived by given [BIP44 path](../path.md) on device and return it to the caller. User is presented with a description of the requested address and asked to confirm the export on Cerberus.
 
 ```javascript
 const result = await TrezorConnect.solanaGetAddress(params);
@@ -10,7 +10,7 @@ const result = await TrezorConnect.solanaGetAddress(params);
 
 [Optional common params](commonParams.md)
 
-[GetAddress type](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/params.ts)
+[GetAddress type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/params.ts)
 
 #### Exporting single address
 
@@ -30,7 +30,7 @@ You can handle this event and display custom UI inside of your application.
 
 If certain conditions are fulfilled popup will not be used at all:
 
--   the user gave permissions to communicate with Trezor
+-   the user gave permissions to communicate with Cerberus
 -   device is authenticated by pin/passphrase
 -   application has `TrezorConnect.on(UI.ADDRESS_VALIDATION, () => {});` listener registered
 -   parameter `address` is set
@@ -61,7 +61,7 @@ TrezorConnect.solanaGetAddress({
 
 ### Result
 
-[SolanaGetAddress type](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/solana/index.ts)
+[SolanaGetAddress type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/solana/index.ts)
 
 Result with only one address
 

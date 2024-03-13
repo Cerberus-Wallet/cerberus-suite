@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Paragraph, Icon, motionAnimation } from '@trezor/components';
+import { Paragraph, Icon, motionAnimation } from '@cerberus/components';
 import { Translation } from 'src/components/suite';
 import { useSelector, useTranslation } from 'src/hooks/suite';
 import { selectIsLabelingAvailable } from 'src/reducers/suite/metadataReducer';
-import { borders, spacingsPx, typography } from '@trezor/theme';
+import { borders, spacingsPx, typography } from '@cerberus/theme';
 
 const Wrapper = styled.div`
     display: flex;

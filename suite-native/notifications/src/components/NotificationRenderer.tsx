@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 
 import { Box, VStack } from '@suite-native/atoms';
 import { selectOpenedTransactionNotifications } from '@suite-common/toast-notifications';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 
 import { TransactionNotification } from './TransactionNotification';
 

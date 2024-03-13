@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
 
-import { Checkbox, variables } from '@trezor/components';
+import { Checkbox, variables } from '@cerberus/components';
 
 const { FONT_SIZE } = variables;
 

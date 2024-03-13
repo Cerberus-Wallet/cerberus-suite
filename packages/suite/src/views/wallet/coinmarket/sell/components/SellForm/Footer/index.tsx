@@ -1,6 +1,6 @@
 import { Controller } from 'react-hook-form';
 import styled from 'styled-components';
-import { Button, Select, variables, Flag } from '@trezor/components';
+import { Button, Select, variables, Flag } from '@cerberus/components';
 import regional from 'src/constants/wallet/coinmarket/regional';
 import { useCoinmarketSellFormContext } from 'src/hooks/wallet/useCoinmarketSellForm';
 import {
@@ -11,7 +11,7 @@ import { Translation } from 'src/components/suite';
 
 import { CountryOption } from 'src/types/wallet/coinmarketCommonTypes';
 import { FooterWrapper, Left, Right } from 'src/views/wallet/coinmarket';
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 
 const OptionLabel = styled.div`
     display: flex;

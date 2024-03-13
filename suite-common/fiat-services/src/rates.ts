@@ -2,8 +2,8 @@ import { getUnixTime, subWeeks } from 'date-fns';
 
 import type { TickerId, LastWeekRates } from '@suite-common/wallet-types';
 import { FiatCurrencyCode } from '@suite-common/suite-config';
-import TrezorConnect from '@trezor/connect';
-import { scheduleAction } from '@trezor/utils';
+import TrezorConnect from '@cerberus/connect';
+import { scheduleAction } from '@cerberus/utils';
 
 import * as coingeckoService from './coingecko';
 import * as blockbookService from './blockbook';

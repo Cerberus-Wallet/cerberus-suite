@@ -1,5 +1,5 @@
 import { Meta, StoryFn } from '@storybook/react';
-import { DeviceModelInternal } from '@trezor/connect';
+import { DeviceModelInternal } from '@cerberus/connect';
 import { ConfirmOnDevice as ConfirmOnDeviceComponent } from './ConfirmOnDevice';
 import { StoryColumn } from '../../support/Story';
 

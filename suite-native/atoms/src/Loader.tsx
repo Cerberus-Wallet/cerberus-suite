@@ -1,7 +1,7 @@
 import { ActivityIndicator, ActivityIndicatorProps } from 'react-native';
 
-import { useNativeStyles } from '@trezor/styles';
-import { Color } from '@trezor/theme';
+import { useNativeStyles } from '@cerberus/styles';
+import { Color } from '@cerberus/theme';
 
 import { Box } from './Box';
 import { Text } from './Text';
@@ -13,7 +13,7 @@ type LoaderProps = {
 };
 
 // TODO: modify component to fit Figma design.
-// issue: https://github.com/trezor/trezor-suite/issues/7538
+// issue: https://github.com/Cerberus-Wallet/cerberus-suite/issues/7538
 export const Loader = ({ size, title, color = 'backgroundPrimaryDefault' }: LoaderProps) => {
     const {
         utils: { colors },

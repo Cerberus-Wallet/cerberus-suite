@@ -1,4 +1,4 @@
-import TrezorConnect from '@trezor/connect-web';
+import TrezorConnect from '@cerberus/connect-web';
 
 declare global {
     interface Window {

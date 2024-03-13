@@ -11,7 +11,7 @@ import {
     updateNetworkSettingsThunk,
 } from '@suite-common/wallet-core';
 import * as discoveryActions from '@suite-common/wallet-core';
-import { UI } from '@trezor/connect';
+import { UI } from '@cerberus/connect';
 import { DiscoveryStatus } from '@suite-common/wallet-constants';
 import { createMiddlewareWithExtraDeps } from '@suite-common/redux-utils';
 

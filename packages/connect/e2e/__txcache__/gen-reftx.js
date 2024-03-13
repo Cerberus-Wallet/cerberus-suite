@@ -1,5 +1,5 @@
-const BitcoinJs = require('@trezor/utxo-lib');
-const { bufferUtils } = require('@trezor/utils');
+const BitcoinJs = require('@cerberus/utxo-lib');
+const { bufferUtils } = require('@cerberus/utils');
 
 // Referenced transaction generator script.
 // Transform bitcoin-like transaction data in to format required by tests of signTransaction method.

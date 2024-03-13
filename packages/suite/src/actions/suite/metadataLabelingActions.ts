@@ -1,5 +1,5 @@
-import TrezorConnect from '@trezor/connect';
-import { cloneObject } from '@trezor/utils';
+import TrezorConnect from '@cerberus/connect';
+import { cloneObject } from '@cerberus/utils';
 
 import { selectDevices, selectDevice, selectDeviceByState } from '@suite-common/wallet-core';
 

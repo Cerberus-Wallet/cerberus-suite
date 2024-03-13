@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/NEMGetAddress.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/NEMGetAddress.js
 
 import { AbstractMethod, MethodReturnType } from '../../../core/AbstractMethod';
 import { getFirmwareRange } from '../../common/paramsValidator';
@@ -6,7 +6,7 @@ import { getMiscNetwork } from '../../../data/coinInfo';
 import { validatePath, fromHardened, getSerializedPath } from '../../../utils/pathUtils';
 import { PROTO, ERRORS } from '../../../constants';
 import { UI, createUiMessage } from '../../../events';
-import { Assert } from '@trezor/schema-utils';
+import { Assert } from '@cerberus/schema-utils';
 import { Bundle } from '../../../types';
 import { GetAddress as GetAddressSchema } from '../../../types/api/getAddress';
 

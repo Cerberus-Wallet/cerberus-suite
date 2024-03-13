@@ -1,5 +1,5 @@
 import { Network } from '@suite-common/wallet-config';
-import { FeeLevel, PROTO } from '@trezor/connect';
+import { FeeLevel, PROTO } from '@cerberus/connect';
 import { FiatCurrencyCode } from '@suite-common/suite-config';
 
 export interface WalletSettings {

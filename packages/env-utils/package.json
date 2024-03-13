@@ -1,15 +1,15 @@
 {
-    "name": "@trezor/env-utils",
+    "name": "@cerberus/env-utils",
     "version": "1.0.14",
-    "homepage": "https://github.com/trezor/trezor-suite/tree/develop/packages/env-utils",
+    "homepage": "https://github.com/Cerberus-Wallet/cerberus-suite/tree/develop/packages/env-utils",
     "npmPublishAccess": "public",
     "license": "See LICENSE.md in repo root",
     "repository": {
         "type": "git",
-        "url": "git://github.com/trezor/trezor-suite.git"
+        "url": "git://github.com/Cerberus-Wallet/cerberus-suite.git"
     },
     "bugs": {
-        "url": "https://github.com/trezor/trezor-suite/issues"
+        "url": "https://github.com/Cerberus-Wallet/cerberus-suite/issues"
     },
     "sideEffects": false,
     "main": "src/index.ts",

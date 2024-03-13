@@ -1,6 +1,6 @@
 ## Sessions
 
-Sessions in @trezor/transport package is a mean to coordinate multiple applications accessing one device.
+Sessions in @cerberus/transport package is a mean to coordinate multiple applications accessing one device.
 
 > Question: do we need to support this? 99% of users don't really use multiple tabs/wallets etc with one device.
 

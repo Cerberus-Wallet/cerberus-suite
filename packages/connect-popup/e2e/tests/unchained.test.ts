@@ -1,11 +1,11 @@
 /* eslint no-await-in-loop: 0 */
 
 import { test, expect, Page } from '@playwright/test';
-import { TrezorUserEnvLink } from '@trezor/trezor-user-env-link';
+import { TrezorUserEnvLink } from '@cerberus/trezor-user-env-link';
 
 const connectUrl = process.env.URL
     ? process.env.URL.replace('connect-explorer', 'connect')
-    : 'https://connect.trezor.io/9/';
+    : 'https://connect.cerberus.uraanai.com/9/';
 
 const url = `https://unchained-capital.github.io/caravan?trezor-connect-src=${connectUrl}`;
 
@@ -138,7 +138,7 @@ test.beforeEach(async () => {
 /**
  * Test case:
  * 1. navigate to the unchained test url
- * 2. select Trezor
+ * 2. select Cerberus
  * 3. detect its model version
  * 4. execute all 19 tests
  */
@@ -162,7 +162,7 @@ test('Verify unchained test suite', async ({ browser }) => {
     // start the suite
     await page.locator('button', { hasText: 'Begin Test Suite' }).click();
 
-    // tests without a Trezor interaction
+    // tests without a Cerberus interaction
     for (let i = 0; i < 13; i++) {
         await exportPublicKey(page, i);
     }

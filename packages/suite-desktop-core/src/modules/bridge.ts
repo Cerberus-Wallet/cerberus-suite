@@ -1,7 +1,7 @@
 /**
  * Bridge runner
  */
-import { TrezordNode } from '@trezor/transport-bridge';
+import { TrezordNode } from '@cerberus/transport-bridge';
 
 import { app, ipcMain } from '../typed-electron';
 import { BridgeProcess } from '../libs/processes/BridgeProcess';

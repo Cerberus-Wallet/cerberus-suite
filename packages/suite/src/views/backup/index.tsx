@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import { Paragraph, Button, Image } from '@trezor/components';
-import { HELP_CENTER_FAILED_BACKUP_URL } from '@trezor/urls';
+import { Paragraph, Button, Image } from '@cerberus/components';
+import { HELP_CENTER_FAILED_BACKUP_URL } from '@cerberus/urls';
 import { selectDevice } from '@suite-common/wallet-core';
 
 import { useDispatch, useSelector } from 'src/hooks/suite';

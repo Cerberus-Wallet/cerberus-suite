@@ -382,7 +382,7 @@ export default {
             },
         ],
     },
-    // based on https://github.com/trezor/trezor-address-validator/blob/master/test/wallet_address_validator.js
+    // based on https://github.com/Cerberus-Wallet/cerberus-address-validator/blob/master/test/wallet_address_validator.js
     addressTypes: [
         ['bitcoin', '1NSAR5mUUL3qZP29BfFj5jBPR5yWiiZZWi', 'p2pkh'],
         ['bitcoin', '3CgkdgWwZ1RJGyHfcYnDe2qGTwaAtifeQw', 'p2sh'],

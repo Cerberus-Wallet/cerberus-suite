@@ -19,7 +19,7 @@
 # 1.0.11
 
 -   fix(suite): subscribe to Solana token accounts as well (b2f85ac9e)
--   chore(blokchain-link-types): import type from @trezor/type-utils (a2087ebf7)
+-   chore(blokchain-link-types): import type from @cerberus/type-utils (a2087ebf7)
 
 # 1.0.10
 

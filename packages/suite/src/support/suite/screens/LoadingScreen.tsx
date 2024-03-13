@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Paragraph } from '@trezor/components';
+import { Paragraph } from '@cerberus/components';
 import { Loading } from 'src/components/suite';
 import { ThemeProvider } from '../ThemeProvider';
 

@@ -1,6 +1,6 @@
 import { Dimensions } from 'react-native';
 
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import { Screen, ScreenSubHeader } from '@suite-native/navigation';
 import { BoxSkeleton, Card, VStack } from '@suite-native/atoms';
 

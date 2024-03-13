@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/helpers/binanceSignTx.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/helpers/binanceSignTx.js
 
 import { PROTO, ERRORS } from '../../constants';
 import {
@@ -7,7 +7,7 @@ import {
     BinancePreparedTransaction,
 } from '../../types/api/binance';
 import type { TypedCall } from '../../device/DeviceCommands';
-import { Assert } from '@trezor/schema-utils';
+import { Assert } from '@cerberus/schema-utils';
 
 const processTxRequest = async (
     typedCall: TypedCall,

@@ -9,8 +9,8 @@ Run it for dev:
 ```
 yarn && \
 yarn build:libs && \
-yarn workspace @trezor/connect-webextension build && \
-yarn workspace @trezor/connect-iframe build:core-module && \
-yarn workspace @trezor/connect-explorer build:webextension && \
-yarn workspace @trezor/connect-popup dev
+yarn workspace @cerberus/connect-webextension build && \
+yarn workspace @cerberus/connect-iframe build:core-module && \
+yarn workspace @cerberus/connect-explorer build:webextension && \
+yarn workspace @cerberus/connect-popup dev
 ```

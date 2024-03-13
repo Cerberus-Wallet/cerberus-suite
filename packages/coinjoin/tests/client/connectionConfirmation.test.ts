@@ -8,8 +8,8 @@ import { createCoinjoinRound } from '../fixtures/round.fixture';
 
 let server: Awaited<ReturnType<typeof createServer>>;
 
-jest.mock('@trezor/utils', () => {
-    const originalModule = jest.requireActual('@trezor/utils');
+jest.mock('@cerberus/utils', () => {
+    const originalModule = jest.requireActual('@cerberus/utils');
 
     return {
         __esModule: true,

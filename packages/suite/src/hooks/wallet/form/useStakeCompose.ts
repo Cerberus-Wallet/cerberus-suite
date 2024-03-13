@@ -1,7 +1,7 @@
 import { useEffect, useRef, useCallback, useState } from 'react';
 import { FieldPath, UseFormReturn } from 'react-hook-form';
 
-import { useAsyncDebounce } from '@trezor/react-utils';
+import { useAsyncDebounce } from '@cerberus/react-utils';
 import { useDispatch, useTranslation } from 'src/hooks/suite';
 import { composeTransaction } from 'src/actions/wallet/stakeActions';
 import { findComposeErrors } from '@suite-common/wallet-utils';

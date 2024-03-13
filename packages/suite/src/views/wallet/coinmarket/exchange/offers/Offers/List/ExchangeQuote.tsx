@@ -1,7 +1,7 @@
 import BigNumber from 'bignumber.js';
 import styled, { useTheme } from 'styled-components';
 
-import { Button, variables, Icon, H3, Card } from '@trezor/components';
+import { Button, variables, Icon, H3, Card } from '@cerberus/components';
 import { selectFiatRatesByFiatRateKey } from '@suite-common/wallet-core';
 
 import { FormattedCryptoAmount, QuestionTooltip, Translation } from 'src/components/suite';

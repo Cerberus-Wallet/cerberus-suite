@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-import { Button, Note } from '@trezor/components';
+import { Button, Note } from '@cerberus/components';
 import { Translation } from 'src/components/suite';
-import { isDesktop } from '@trezor/env-utils';
+import { isDesktop } from '@cerberus/env-utils';
 import { useCoinmarketSpendContext } from 'src/hooks/wallet/useCoinmarketSpend';
 import { NoProviders, Wrapper } from 'src/views/wallet/coinmarket';
 import { CoinmarketSkeleton } from 'src/views/wallet/coinmarket/skeleton';

@@ -1,11 +1,11 @@
 import styled, { css, useTheme } from 'styled-components';
 
-import { Icon, variables } from '@trezor/components';
+import { Icon, variables } from '@cerberus/components';
 import { useSelector } from 'src/hooks/suite/useSelector';
 import { selectIsActionAbortable } from 'src/reducers/suite/suiteReducer';
 import { Translation } from '..';
-import { mediaQueries } from '@trezor/styles';
-import { borders, typography } from '@trezor/theme';
+import { mediaQueries } from '@cerberus/styles';
+import { borders, typography } from '@cerberus/theme';
 
 const collapsedStyle = css`
     width: 32px;

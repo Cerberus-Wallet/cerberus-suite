@@ -1,6 +1,6 @@
 import BigNumber from 'bignumber.js';
 
-import TrezorConnect, { SignedTransaction } from '@trezor/connect';
+import TrezorConnect, { SignedTransaction } from '@cerberus/connect';
 import {
     selectDevice,
     replaceTransactionThunk,
@@ -170,7 +170,7 @@ export const signTransaction =
         // this action is blocked by modalActions.preserve()
         dispatch(modalActions.preserve());
 
-        // signTransaction by Trezor
+        // signTransaction by Cerberus
         let serializedTx: string | undefined;
         let signedTransaction: SignedTransaction['signedTransaction'];
         if (account.networkType === 'ethereum') {

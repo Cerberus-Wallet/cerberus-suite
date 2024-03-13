@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/EthereumGetPublicKey.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/EthereumGetPublicKey.js
 
 import { AbstractMethod, MethodReturnType } from '../../../core/AbstractMethod';
 import { getFirmwareRange } from '../../common/paramsValidator';
@@ -8,7 +8,7 @@ import { getEthereumNetwork, getUniqueNetworks } from '../../../data/coinInfo';
 import { UI, createUiMessage } from '../../../events';
 import type { PROTO } from '../../../constants';
 import type { EthereumNetworkInfo } from '../../../types';
-import { Assert } from '@trezor/schema-utils';
+import { Assert } from '@cerberus/schema-utils';
 import { Bundle, GetPublicKey as GetPublicKeySchema } from '../../../types';
 
 type Params = PROTO.EthereumGetPublicKey & {

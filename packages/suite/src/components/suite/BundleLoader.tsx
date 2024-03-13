@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import { Spinner } from '@trezor/components';
-import { FADE_IN } from '@trezor/components/src/config/animations';
+import { Spinner } from '@cerberus/components';
+import { FADE_IN } from '@cerberus/components/src/config/animations';
 
 // displaying of a loader is delayed to avoid displaying to users with fast internet
 const LoaderWrapper = styled.div`

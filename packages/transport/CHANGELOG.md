@@ -2,7 +2,7 @@
 
 -   fix: from g:tsx to local tsx in prepublish script (d21d698b2)
 -   chore(suite): autofix newlines (c82455e74)
--   chore(utils): remove build step requirement from @trezor/utils (#11176) (6cd3d3c81)
+-   chore(utils): remove build step requirement from @cerberus/utils (#11176) (6cd3d3c81)
 -   feat(connect): add support for StellarClaimClaimableBalanceOp. (51a3e294d)
 -   chore(repo): ESLint refactor + speed up 70% (#11143) (44fa12a79)
 -   chore: update various dependencies (no major update) (fecd89f6e)
@@ -109,7 +109,7 @@ chore(transport): update protobufs, update dependencies
 
 # 1.1.7
 
--   Code cleanup, sharing constants with @trezor/connect
+-   Code cleanup, sharing constants with @cerberus/connect
 
 # 1.1.6
 
@@ -123,7 +123,7 @@ chore(transport): update protobufs, update dependencies
 
 # 1.1.4
 
--   Added cardano types related to [babbage feature](https://github.com/trezor/trezor-suite/commit/efe9c78a2f74a1b7653b3fddf6cca35ba38d3ae9#diff-c1b9d6a93a3b65c45c4dcf06aa86d6c7a84bcc2e14fefdc4a9bdc3d3298c9a5a)
+-   Added cardano types related to [babbage feature](https://github.com/Cerberus-Wallet/cerberus-suite/commit/efe9c78a2f74a1b7653b3fddf6cca35ba38d3ae9#diff-c1b9d6a93a3b65c45c4dcf06aa86d6c7a84bcc2e14fefdc4a9bdc3d3298c9a5a)
 
 # 1.1.2
 
@@ -131,12 +131,12 @@ chore(transport): update protobufs, update dependencies
 
 # 1.1.1
 
--   Changed latest bridge url to https://connect.trezor.io/8/data/bridge/latest.txt'
--   Added trezor-common submodule. Protobuf definitions (messages.json) and protobuf related typescript definitions.
+-   Changed latest bridge url to https://connect.cerberus.uraanai.com/8/data/bridge/latest.txt'
+-   Added cerberus-common submodule. Protobuf definitions (messages.json) and protobuf related typescript definitions.
 
 # 1.1.0
 
--   Added @trezor/utils dependency.
+-   Added @cerberus/utils dependency.
 
 # 1.0.1
 

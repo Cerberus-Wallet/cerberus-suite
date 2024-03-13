@@ -1,10 +1,10 @@
 import { useEffect, useCallback } from 'react';
 import styled from 'styled-components';
-import { HELP_CENTER_ADVANCED_RECOVERY_URL } from '@trezor/urls';
-import { Button, PinButton, KEYBOARD_CODE } from '@trezor/components';
+import { HELP_CENTER_ADVANCED_RECOVERY_URL } from '@cerberus/urls';
+import { Button, PinButton, KEYBOARD_CODE } from '@cerberus/components';
 import { Translation, TrezorLink, DeviceMatrixExplanation } from 'src/components/suite';
-import { createTimeoutPromise } from '@trezor/utils';
-import TrezorConnect, { DeviceModelInternal, UI } from '@trezor/connect';
+import { createTimeoutPromise } from '@cerberus/utils';
+import TrezorConnect, { DeviceModelInternal, UI } from '@cerberus/connect';
 
 const Wrapper = styled.div`
     display: flex;

@@ -14,7 +14,7 @@ export const ModalsRenderer = () => (
         <Snow />
         <BiometricsModalRenderer />
         {/* Notifications are disabled until the problem with after-import notifications flooding is solved. */}
-        {/* More here: https://github.com/trezor/trezor-suite/issues/7721  */}
+        {/* More here: https://github.com/Cerberus-Wallet/cerberus-suite/issues/7721  */}
         {/* <NotificationRenderer /> */}
     </>
 );

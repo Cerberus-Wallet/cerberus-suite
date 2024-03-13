@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { DeepPartial } from 'react-hook-form';
 
 import { configureMockStore, initPreloadedState, testMocks } from '@suite-common/test-utils';
-import { PROTO } from '@trezor/connect';
+import { PROTO } from '@cerberus/connect';
 
 import { filterThunkActionTypes } from 'src/support/tests/configureStore';
 import {
@@ -94,11 +94,11 @@ const Component = ({ callback }: { callback: TestCallback }) => {
 
 interface Result {
     composeTransactionCalls?: number;
-    composeTransactionParams?: any; // partial @trezor/connect params
+    composeTransactionParams?: any; // partial @cerberus/connect params
     estimateFeeCalls?: number; // used in ETH
-    estimateFeeParams?: any; // partial @trezor/connect params
+    estimateFeeParams?: any; // partial @cerberus/connect params
     getAccountInfoCalls?: number; // used in XRP
-    getAccountInfoParams?: any; // partial @trezor/connect params
+    getAccountInfoParams?: any; // partial @cerberus/connect params
     composedLevels?: any; // partial PrecomposedLevel
     formValues?: DeepPartial<FormState>;
     errors?: any; // partial SendContextValues['errors']
@@ -112,7 +112,7 @@ const actionCallback = (
 ) => {
     if (!result || !getContextValues) return;
 
-    // validate number of calls to '@trezor/connect'
+    // validate number of calls to '@cerberus/connect'
     if (typeof result.composeTransactionCalls === 'number') {
         expect(TrezorConnect.composeTransaction).toHaveBeenCalledTimes(
             result.composeTransactionCalls,
@@ -125,7 +125,7 @@ const actionCallback = (
         expect(TrezorConnect.getAccountInfo).toHaveBeenCalledTimes(result.getAccountInfoCalls);
     }
 
-    // validate '@trezor/connect' params
+    // validate '@cerberus/connect' params
     if (result.composeTransactionParams) {
         const composeTransactionCallsLength = TrezorConnect.composeTransaction.mock.calls.length;
         const composeTransactionsParams =

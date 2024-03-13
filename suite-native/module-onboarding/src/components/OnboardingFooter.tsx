@@ -2,7 +2,7 @@ import { useRoute } from '@react-navigation/native';
 import { RequireAllOrNone } from 'type-fest';
 
 import { Button, Stack } from '@suite-native/atoms';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import { OnboardingStackRoutes } from '@suite-native/navigation';
 
 const wrapperStyle = prepareNativeStyle(utils => ({

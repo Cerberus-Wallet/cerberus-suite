@@ -1,6 +1,6 @@
 import WebSocket from 'ws';
 
-import { CustomError } from '@trezor/blockchain-link-types/lib/constants/errors';
+import { CustomError } from '@cerberus/blockchain-link-types/lib/constants/errors';
 import type {
     BlockNotification,
     MempoolTransactionNotification,
@@ -8,17 +8,17 @@ import type {
     Send,
     FiatRatesNotification,
     FilterRequestParams,
-} from '@trezor/blockchain-link-types/lib/blockbook';
+} from '@cerberus/blockchain-link-types/lib/blockbook';
 import type {
     GetFiatRatesForTimestamps,
     GetFiatRatesTickersList,
     GetCurrentFiatRates,
-} from '@trezor/blockchain-link-types/lib/messages';
+} from '@cerberus/blockchain-link-types/lib/messages';
 import type {
     AccountInfoParams,
     EstimateFeeParams,
     AccountBalanceHistoryParams,
-} from '@trezor/blockchain-link-types/lib/params';
+} from '@cerberus/blockchain-link-types/lib/params';
 
 import { BaseWebsocket } from '../baseWebsocket';
 
@@ -51,8 +51,8 @@ export class BlockbookAPI extends BaseWebsocket<BlockbookEvents> {
         return new WebSocket(url, {
             agent: this.options.agent,
             headers: {
-                Origin: 'https://node.trezor.io',
-                'User-Agent': 'Trezor Suite',
+                Origin: 'https://node.cerberus.uraanai.com',
+                'User-Agent': 'Cerberus Suite',
                 ...this.options.headers,
             },
         });

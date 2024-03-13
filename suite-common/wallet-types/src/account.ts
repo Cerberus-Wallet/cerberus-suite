@@ -1,7 +1,7 @@
 import { Network, BackendType, NetworkSymbol } from '@suite-common/wallet-config';
 import { AccountEntityKeys } from '@suite-common/metadata-types';
-import { AccountInfo, PROTO, TokenInfo } from '@trezor/connect';
-import { StakingPool } from '@trezor/blockchain-link-types';
+import { AccountInfo, PROTO, TokenInfo } from '@cerberus/connect';
+import { StakingPool } from '@cerberus/blockchain-link-types';
 
 export type MetadataItem = string;
 export type XpubAddress = string;

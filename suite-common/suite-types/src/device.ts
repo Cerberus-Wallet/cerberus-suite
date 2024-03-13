@@ -5,17 +5,17 @@ import {
     PROTO,
     UnknownDevice as UnknownDeviceBase,
     UnreadableDevice as UnreadableDeviceBase,
-} from '@trezor/connect';
+} from '@cerberus/connect';
 import { DeviceMetadata } from '@suite-common/metadata-types';
 
-// Extend original ButtonRequestMessage from @trezor/connect
+// Extend original ButtonRequestMessage from @cerberus/connect
 // suite (deviceReducer) stores them in slightly different shape:
-// - device field from @trezor/connect is excluded
+// - device field from @cerberus/connect is excluded
 // - code field (ButtonRequestType) is extended/combined with PinMatrixRequestType and WordRequestType (from DeviceMessage)
 // - code field also uses two custom ButtonRequests - 'ui-request_pin' and 'ui-invalid_pin' (TODO: it shouldn't)
 
 // TODO: Suite should not define its own type for ButtonRequest. There should be
-// sufficient type exported from @trezor/connect;
+// sufficient type exported from @cerberus/connect;
 
 export type ButtonRequest = Omit<DeviceEvent['payload'], 'device' | 'code'> & {
     code?:

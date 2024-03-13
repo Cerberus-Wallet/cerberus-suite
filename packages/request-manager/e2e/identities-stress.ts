@@ -4,7 +4,7 @@ import { torRunner } from './torRunner';
 
 // The purpose of this script is to allow "manual" testing Tor identities changing some parameters.
 // Run it like:
-// yarn workspace @trezor/request-manager test:stress
+// yarn workspace @cerberus/request-manager test:stress
 // While running this you can run the command below to check that everything is going throw Tor
 // watch -n 1 "lsof -i TCP | grep node"
 

@@ -1,4 +1,4 @@
-import TrezorConnect from '@trezor/connect';
+import TrezorConnect from '@cerberus/connect';
 import { Translation, WordInput, Modal, ModalProps } from 'src/components/suite';
 import styled from 'styled-components';
 import { useIntl } from 'react-intl';

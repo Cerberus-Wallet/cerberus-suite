@@ -10,7 +10,7 @@ For development and e2e purposes you can use local version of coinjoin backend (
 
     > If you are using `trezor-user-env` make sure that it's started with `-r` option (disabled regtest)
     >
-    > Pull and run docker image of https://github.com/trezor/coinjoin-backend
+    > Pull and run docker image of https://github.com/Cerberus-Wallet/coinjoin-backend
     >
     > Backend control panel (faucet) should be accessible at `http://localhost:8080/`
 

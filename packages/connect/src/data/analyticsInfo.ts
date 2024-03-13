@@ -1,4 +1,4 @@
-// import { EventType } from '@trezor/connect-analytics';
+// import { EventType } from '@cerberus/connect-analytics';
 import { CoreEventMessage, UI_REQUEST } from '../events';
 import type { Device } from '../types';
 
@@ -33,7 +33,7 @@ export const enhancePostMessageWithAnalytics = (
                             model: device?.features?.internal_model || '',
                             vendor: device?.features?.vendor || '',
                             // TODO:
-                            // I don't want to release @trezor/device-utils into npm just because of this file.
+                            // I don't want to release @cerberus/device-utils into npm just because of this file.
                             // we can probably assign result of getFirmwareVersion to device object directly and remove this utility everywhere
                             // firmware: getFirmwareVersion(device),
                             firmwareRevision: device?.features?.revision || '',

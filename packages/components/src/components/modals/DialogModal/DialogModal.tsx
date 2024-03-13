@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { borders, spacingsPx, typography } from '@trezor/theme';
+import { borders, spacingsPx, typography } from '@cerberus/theme';
 import { IconName } from '@suite-common/icons';
 import { Icon } from '@suite-common/icons/src/webComponents';
 import { Modal, ModalProps } from '../Modal/Modal';

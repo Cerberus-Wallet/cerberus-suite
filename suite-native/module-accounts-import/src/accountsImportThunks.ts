@@ -4,9 +4,9 @@ import {
     PORTFOLIO_TRACKER_DEVICE_STATE,
     selectAccountsByNetworkAndDeviceState,
 } from '@suite-common/wallet-core';
-import { AccountInfo } from '@trezor/connect';
+import { AccountInfo } from '@cerberus/connect';
 import { networks, NetworkSymbol, AccountType } from '@suite-common/wallet-config';
-import { getXpubOrDescriptorInfo } from '@trezor/utxo-lib';
+import { getXpubOrDescriptorInfo } from '@cerberus/utxo-lib';
 
 import { paymentTypeToAccountType } from './constants';
 

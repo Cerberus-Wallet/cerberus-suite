@@ -1,7 +1,7 @@
 import { QRCodeSVG } from 'qrcode.react';
 import styled from 'styled-components';
 
-import { Icon, Tooltip, colors, variables } from '@trezor/components';
+import { Icon, Tooltip, colors, variables } from '@cerberus/components';
 import { Translation } from './Translation';
 
 export const QRCODE_SIZE = 384;

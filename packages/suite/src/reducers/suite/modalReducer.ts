@@ -1,4 +1,4 @@
-import { UI, DEVICE, Device, UiRequestButtonData } from '@trezor/connect';
+import { UI, DEVICE, Device, UiRequestButtonData } from '@cerberus/connect';
 import { UserContextPayload } from '@suite-common/suite-types';
 
 import { MODAL } from 'src/actions/suite/constants';

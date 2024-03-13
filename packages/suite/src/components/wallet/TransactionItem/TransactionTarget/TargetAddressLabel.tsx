@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { WalletAccountTransaction } from 'src/types/wallet';
-import { ArrayElement } from '@trezor/type-utils';
+import { ArrayElement } from '@cerberus/type-utils';
 import { Translation, AddressLabeling } from 'src/components/suite';
 import { AccountLabels } from 'src/types/suite/metadata';
 import { NetworkSymbol } from '@suite-common/wallet-config';

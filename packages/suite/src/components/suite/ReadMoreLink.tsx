@@ -1,4 +1,4 @@
-import * as URLS from '@trezor/urls';
+import * as URLS from '@cerberus/urls';
 import { Translation, TrezorLink } from 'src/components/suite';
 import { ExtendedMessageDescriptor } from 'src/types/suite';
 

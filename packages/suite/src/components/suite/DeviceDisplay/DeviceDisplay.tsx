@@ -6,7 +6,7 @@ import {
     selectDeviceInternalModel,
     selectDeviceUnavailableCapabilities,
 } from '@suite-common/wallet-core';
-import { DeviceModelInternal } from '@trezor/connect';
+import { DeviceModelInternal } from '@cerberus/connect';
 import { DisplayChunks } from './DisplayChunks';
 import { DisplayPaginatedText } from './DisplayPaginatedText';
 

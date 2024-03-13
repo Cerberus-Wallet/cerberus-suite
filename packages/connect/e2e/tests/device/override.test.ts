@@ -1,6 +1,6 @@
 import TrezorConnect from '../../../src';
 
-const { getController, setup, initTrezorConnect } = global.Trezor;
+const { getController, setup, initTrezorConnect } = global.Cerberus;
 
 const controller = getController('setBusy');
 

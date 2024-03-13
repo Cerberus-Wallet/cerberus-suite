@@ -1,8 +1,8 @@
 import * as protobuf from 'protobufjs/light';
-import { scheduleAction, ScheduleActionParams, ScheduledAction, Deferred } from '@trezor/utils';
-import { TypedEmitter } from '@trezor/utils';
-import { PROTOCOL_MALFORMED, TransportProtocol } from '@trezor/protocol';
-import { MessageFromTrezor } from '@trezor/protobuf';
+import { scheduleAction, ScheduleActionParams, ScheduledAction, Deferred } from '@cerberus/utils';
+import { TypedEmitter } from '@cerberus/utils';
+import { PROTOCOL_MALFORMED, TransportProtocol } from '@cerberus/protocol';
+import { MessageFromTrezor } from '@cerberus/protobuf';
 
 import {
     Session,
@@ -142,7 +142,7 @@ export abstract class AbstractTransport extends TypedEmitter<{
      */
     protected abortController: AbortController;
     /**
-     * and instance of logger from @trezor/connect/src/utils/debug could be passed to activate logs from transport
+     * and instance of logger from @cerberus/connect/src/utils/debug could be passed to activate logs from transport
      */
     protected logger: Logger;
 
@@ -201,7 +201,7 @@ export abstract class AbstractTransport extends TypedEmitter<{
     >;
 
     /**
-     * List Trezor devices
+     * List Cerberus devices
      */
     abstract enumerate(): AbortableCall<
         Descriptor[],

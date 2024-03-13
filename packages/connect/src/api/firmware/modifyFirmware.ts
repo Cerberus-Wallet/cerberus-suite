@@ -1,4 +1,4 @@
-import { versionUtils } from '@trezor/utils';
+import { versionUtils } from '@cerberus/utils';
 
 import type { Features } from '../../types';
 

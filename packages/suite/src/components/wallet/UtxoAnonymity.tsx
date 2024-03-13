@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Icon, variables } from '@trezor/components';
+import { Icon, variables } from '@cerberus/components';
 
 const Wrapper = styled.div`
     align-items: center;

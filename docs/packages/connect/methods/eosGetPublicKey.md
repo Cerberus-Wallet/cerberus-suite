@@ -45,7 +45,7 @@ TrezorConnect.eosGetPublicKey({
 
 ### Result
 
-[EosPublicKey type](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/eos/index.ts)
+[EosPublicKey type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/eos/index.ts)
 
 Result with only one public key
 

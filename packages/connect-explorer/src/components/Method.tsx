@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-use-before-define */
 import styled from 'styled-components';
 
-import { Button } from '@trezor/components';
+import { Button } from '@cerberus/components';
 
 import type { Field, FieldWithBundle } from '../types';
 

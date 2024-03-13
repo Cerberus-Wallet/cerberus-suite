@@ -409,7 +409,7 @@ export const transactions: { [key: string]: WalletAccountTransaction[] } = {
                     {
                         n: 0,
                         addresses: [
-                            'OP_RETURN (Greetings from team Trezor!\nCelebrating the Taproot activation!)',
+                            'OP_RETURN (Greetings from team Cerberus!\nCelebrating the Taproot activation!)',
                         ],
                         isAddress: false,
                         amount: '0',
@@ -445,7 +445,7 @@ export const transactions: { [key: string]: WalletAccountTransaction[] } = {
                             n: 0,
                             hex: '6a3f4772656574696e67732066726f6d207465616d205472657a6f72210a43656c6562726174696e672074686520546170726f6f742061637469766174696f6e21',
                             addresses: [
-                                'OP_RETURN (Greetings from team Trezor!\nCelebrating the Taproot activation!)',
+                                'OP_RETURN (Greetings from team Cerberus!\nCelebrating the Taproot activation!)',
                             ],
                             isAddress: false,
                         },

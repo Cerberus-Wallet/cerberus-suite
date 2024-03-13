@@ -3,7 +3,7 @@ import { P2pProviderInfo, P2pQuote, P2pQuotesRequest } from 'invity-api';
 
 import { useFormatters } from '@suite-common/formatters';
 import { AccountLabeling, Translation } from 'src/components/suite';
-import { CoinLogo, variables } from '@trezor/components';
+import { CoinLogo, variables } from '@cerberus/components';
 import { Account } from 'src/types/wallet';
 import { CoinmarketProviderInfo } from 'src/views/wallet/coinmarket/common';
 import { Avatar } from '../Avatar';

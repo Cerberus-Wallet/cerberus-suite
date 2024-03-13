@@ -5,7 +5,7 @@ import { goto } from 'src/actions/suite/routerActions';
 import * as coinmarketBuyActions from 'src/actions/wallet/coinmarketBuyActions';
 import * as coinmarketSellActions from 'src/actions/wallet/coinmarketSellActions';
 import { saveComposedTransactionInfo } from 'src/actions/wallet/coinmarket/coinmarketCommonActions';
-import { FeeLevel } from '@trezor/connect';
+import { FeeLevel } from '@cerberus/connect';
 
 export interface OfferRedirectParams {
     symbol: Account['symbol'];

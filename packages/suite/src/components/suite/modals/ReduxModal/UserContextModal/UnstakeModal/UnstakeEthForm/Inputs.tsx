@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import { Icon } from '@trezor/components';
+import { Icon } from '@cerberus/components';
 import { NumberInput } from 'src/components/suite';
 import { CRYPTO_INPUT, FIAT_INPUT } from 'src/types/wallet/stakeForms';
 import { formInputsMaxLength } from '@suite-common/validators';
 import { useSelector, useTranslation } from 'src/hooks/suite';
 import { selectSelectedAccount } from 'src/reducers/wallet/selectedAccountReducer';
-import { variables } from '@trezor/components/src/config';
+import { variables } from '@cerberus/components/src/config';
 import {
     validateDecimals,
     validateInteger,

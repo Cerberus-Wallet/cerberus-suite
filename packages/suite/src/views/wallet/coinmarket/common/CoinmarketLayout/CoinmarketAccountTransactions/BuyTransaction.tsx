@@ -11,7 +11,7 @@ import {
     saveQuotes,
     saveTransactionDetailId,
 } from 'src/actions/wallet/coinmarketBuyActions';
-import { variables, Icon, Button } from '@trezor/components';
+import { variables, Icon, Button } from '@cerberus/components';
 import { CoinmarketPaymentType, CoinmarketProviderInfo } from 'src/views/wallet/coinmarket/common';
 import { Account } from 'src/types/wallet';
 import {

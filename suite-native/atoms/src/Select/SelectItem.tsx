@@ -3,7 +3,7 @@ import { TouchableOpacity } from 'react-native';
 
 import { G } from '@mobily/ts-belt';
 
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 
 import { Box } from '../Box';
 import { Radio } from '../Radio';

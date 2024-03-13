@@ -1,11 +1,11 @@
-import { bufferUtils } from '@trezor/utils';
+import { bufferUtils } from '@cerberus/utils';
 import {
     payments,
     address as baddress,
     script as bscript,
     bufferutils as bUtils,
     Network,
-} from '@trezor/utxo-lib';
+} from '@cerberus/utxo-lib';
 
 import {
     AllowedScriptTypes,
@@ -151,10 +151,10 @@ export const sortOutputs = (a: CoinjoinOutput, b: CoinjoinOutput) => {
     return b.Value - a.Value;
 };
 
-// Transform transaction signature to witness, based on @trezor/utxo-lib/Transaction.getWitness
+// Transform transaction signature to witness, based on @cerberus/utxo-lib/Transaction.getWitness
 // bip-0141 format: chunks size + (chunk[i].size + chunk[i]),
 export const getWitnessFromSignature = (signature: string) => {
-    const chunks = [Buffer.from(signature, 'hex')]; // NOTE: Trezor signature = only one chunk
+    const chunks = [Buffer.from(signature, 'hex')]; // NOTE: Cerberus signature = only one chunk
     const prefixedChunks = chunks.reduce(
         (arr, chunk) => arr.concat([bufferUtils.getChunkSize(chunk.length), chunk]),
         [bufferUtils.getChunkSize(chunks.length)],

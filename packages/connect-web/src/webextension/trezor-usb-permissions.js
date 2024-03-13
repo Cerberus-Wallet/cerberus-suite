@@ -2,7 +2,7 @@ const VERSION = '9.2.0';
 const versionN = VERSION.split('.').map(s => parseInt(s, 10));
 // const DIRECTORY = `${ versionN[0] }${ (versionN[1] > 0 ? `.${versionN[1]}` : '') }/`;
 const DIRECTORY = `${versionN[0]}/`;
-const url = `https://connect.trezor.io/${DIRECTORY}`;
+const url = `https://connect.cerberus.uraanai.com/${DIRECTORY}`;
 
 /* Handling messages from usb permissions iframe */
 const switchToPopupTab = event => {

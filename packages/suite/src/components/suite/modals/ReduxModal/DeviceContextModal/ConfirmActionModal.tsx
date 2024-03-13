@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { H2, variables } from '@trezor/components';
+import { H2, variables } from '@cerberus/components';
 import { Translation } from 'src/components/suite/Translation';
 import { DeviceConfirmImage } from 'src/components/suite';
 import { TrezorDevice } from 'src/types/suite';

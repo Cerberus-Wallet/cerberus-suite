@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { authorizeDevice, switchDuplicatedDevice } from '@suite-common/wallet-core';
-import { Button, Image } from '@trezor/components';
+import { Button, Image } from '@cerberus/components';
 
 import { Translation, Modal } from 'src/components/suite';
 import { useDevice, useDispatch } from 'src/hooks/suite';

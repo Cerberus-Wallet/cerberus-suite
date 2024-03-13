@@ -17,10 +17,10 @@ export const config = {
     knownHosts: [
         {
             origin: 'imloifkgjagghnncjkhggdhalmcnfklk',
-            label: 'Trezor Password Manager (Develop)',
+            label: 'Cerberus Password Manager (Develop)',
             icon: '',
         },
-        { origin: 'niebkpllfhmpfbffbfifagfgoamhpflf', label: 'Trezor Password Manager', icon: '' },
+        { origin: 'niebkpllfhmpfbffbfifagfgoamhpflf', label: 'Cerberus Password Manager', icon: '' },
         {
             origin: 'mnpfhpndmjholfdlhpkjfmjkgppmodaf',
             label: 'MetaMask',

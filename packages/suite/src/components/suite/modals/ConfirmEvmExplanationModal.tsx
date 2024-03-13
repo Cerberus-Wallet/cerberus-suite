@@ -2,13 +2,13 @@ import styled, { css } from 'styled-components';
 
 import { Translation, Modal } from 'src/components/suite';
 import { useDispatch, useSelector } from 'src/hooks/suite';
-import { Button, CoinLogo, H3, Image, variables } from '@trezor/components';
+import { Button, CoinLogo, H3, Image, variables } from '@cerberus/components';
 import { onCancel } from 'src/actions/suite/modalActions';
 import { Account } from '@suite-common/wallet-types';
 import { networks } from '@suite-common/wallet-config';
 import { TranslationKey } from 'src/components/suite/Translation';
 import { SUITE } from 'src/actions/suite/constants';
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 
 const StyledImage = styled(Image)`
     width: 100%;

@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import { Button, Image } from '@trezor/components';
+import { Button, Image } from '@cerberus/components';
 import { Translation, CheckItem, Modal } from 'src/components/suite';
 import { wipeDevice } from 'src/actions/settings/deviceSettingsActions';
 import { useDevice, useDispatch } from 'src/hooks/suite';
-import { spacings } from '@trezor/theme';
+import { spacings } from '@cerberus/theme';
 
 const Row = styled.div`
     display: flex;

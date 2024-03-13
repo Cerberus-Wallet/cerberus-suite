@@ -1,4 +1,4 @@
-import { DialogModal as BaseDialogModal, DialogModalProps } from '@trezor/components';
+import { DialogModal as BaseDialogModal, DialogModalProps } from '@cerberus/components';
 import { ReactPortal } from 'react';
 import { createPortal } from 'react-dom';
 import { useModalTarget } from 'src/support/suite/ModalContext';

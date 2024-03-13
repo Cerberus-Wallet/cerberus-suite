@@ -4,7 +4,7 @@ import { getFirmwareRange } from '../../common/paramsValidator';
 import { getMiscNetwork } from '../../../data/coinInfo';
 import { validatePath } from '../../../utils/pathUtils';
 import { transformAdditionalInfo } from '../additionalInfo';
-import { AssertWeak } from '@trezor/schema-utils';
+import { AssertWeak } from '@cerberus/schema-utils';
 import { SolanaSignTransaction as SolanaSignTransactionSchema } from '../../../types/api/solana';
 
 export default class SolanaSignTransaction extends AbstractMethod<

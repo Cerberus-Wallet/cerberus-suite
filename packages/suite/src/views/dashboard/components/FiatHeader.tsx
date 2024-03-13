@@ -1,5 +1,5 @@
 import { useFormatters } from '@suite-common/formatters';
-import { typography } from '@trezor/theme';
+import { typography } from '@cerberus/theme';
 import { HiddenPlaceholder } from 'src/components/suite';
 import { useSelector } from 'src/hooks/suite';
 import { selectLanguage } from 'src/reducers/suite/suiteReducer';

@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/VerifyMessage.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/VerifyMessage.js
 
 import { AbstractMethod } from '../core/AbstractMethod';
 import { getFirmwareRange } from './common/paramsValidator';
@@ -7,7 +7,7 @@ import { getLabel } from '../utils/pathUtils';
 import { messageToHex } from '../utils/formatUtils';
 import { PROTO, ERRORS } from '../constants';
 import { VerifyMessage as VerifyMessageSchema } from '../types';
-import { Assert } from '@trezor/schema-utils';
+import { Assert } from '@cerberus/schema-utils';
 
 export default class VerifyMessage extends AbstractMethod<'verifyMessage', PROTO.VerifyMessage> {
     init() {

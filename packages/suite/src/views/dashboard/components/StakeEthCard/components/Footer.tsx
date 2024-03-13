@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import { Button, Paragraph, variables } from '@trezor/components';
+import { Button, Paragraph, variables } from '@cerberus/components';
 import { Translation } from 'src/components/suite';
 import { NetworkBadge } from './NetworkBadge';
 import { useAccountSearch, useDispatch } from 'src/hooks/suite';
 import { goto } from 'src/actions/suite/routerActions';
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 
 const Wrapper = styled.div`
     padding: ${spacingsPx.lg} ${spacingsPx.lg} ${spacingsPx.lg} ${spacingsPx.xxl};

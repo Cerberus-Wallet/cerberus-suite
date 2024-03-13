@@ -1,6 +1,6 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/utils/urlUtils.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/utils/urlUtils.js
 
-import { urlToOnion } from '@trezor/utils';
+import { urlToOnion } from '@cerberus/utils';
 
 export const getOrigin = (url: unknown) => {
     if (typeof url !== 'string') return 'unknown';

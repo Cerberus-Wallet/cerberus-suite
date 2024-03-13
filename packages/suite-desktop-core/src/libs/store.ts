@@ -1,6 +1,6 @@
 import ElectronStore from 'electron-store';
 
-import { SuiteThemeVariant } from '@trezor/suite-desktop-api';
+import { SuiteThemeVariant } from '@cerberus/suite-desktop-api';
 
 import { getInitialWindowSize } from './screen';
 

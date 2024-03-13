@@ -1,20 +1,20 @@
 {
-    "name": "@trezor/utxo-lib",
+    "name": "@cerberus/utxo-lib",
     "version": "2.0.7",
-    "author": "Trezor <info@trezor.io>",
-    "homepage": "https://github.com/trezor/trezor-suite/tree/develop/packages/utxo-lib",
+    "author": "Cerberus <info@cerberus.uraanai.com>",
+    "homepage": "https://github.com/Cerberus-Wallet/cerberus-suite/tree/develop/packages/utxo-lib",
     "description": "Client-side Bitcoin-like JavaScript library",
     "npmPublishAccess": "public",
     "license": "SEE LICENSE IN LICENSE.md",
     "repository": {
         "type": "git",
-        "url": "git://github.com/trezor/trezor-suite.git"
+        "url": "git://github.com/Cerberus-Wallet/cerberus-suite.git"
     },
     "bugs": {
-        "url": "https://github.com/trezor/trezor-suite/issues"
+        "url": "https://github.com/Cerberus-Wallet/cerberus-suite/issues"
     },
     "keywords": [
-        "Trezor",
+        "Cerberus",
         "bitcoin",
         "altcoins",
         "utxo",
@@ -36,7 +36,7 @@
         "prepublish": "yarn tsx ../../scripts/prepublish.js"
     },
     "dependencies": {
-        "@trezor/utils": "workspace:*",
+        "@cerberus/utils": "workspace:*",
         "bchaddrjs": "^0.5.2",
         "bech32": "^2.0.0",
         "bip66": "^1.1.5",

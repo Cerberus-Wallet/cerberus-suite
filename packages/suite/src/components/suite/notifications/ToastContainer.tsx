@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { ToastContainer as BaseToastContainer, Slide } from 'react-toastify';
 
-import { borders, zIndices } from '@trezor/theme';
+import { borders, zIndices } from '@cerberus/theme';
 
 // A set of required styles copied from 'react-toastify/dist/ReactToastify.css'
 // Note: lib styles are ready only for a current setup, if you want to change e.g. transition, copy additional styles

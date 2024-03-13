@@ -8,7 +8,7 @@ import {
     PoolsResponse,
     StakePool,
 } from '@suite-common/wallet-types';
-import { CARDANO, CardanoCertificate, CardanoOutput, PROTO } from '@trezor/connect';
+import { CARDANO, CardanoCertificate, CardanoOutput, PROTO } from '@cerberus/connect';
 import { Network } from '@suite-common/wallet-config';
 
 import {
@@ -34,7 +34,7 @@ export const getDerivationType = (accountType: Network['accountType']) => {
 export const getStakingPath = (account: Account) => `m/1852'/1815'/${account.index}'/2/0`;
 
 export const getProtocolMagic = (accountSymbol: Account['symbol']) =>
-    // TODO: use testnet magic from connect once this PR is merged https://github.com/trezor/connect/pull/1046
+    // TODO: use testnet magic from connect once this PR is merged https://github.com/Cerberus-Wallet/connect/pull/1046
     accountSymbol === 'ada' ? CARDANO.PROTOCOL_MAGICS.mainnet : 1097911063;
 
 export const getAddressType = () => PROTO.CardanoAddressType.BASE;

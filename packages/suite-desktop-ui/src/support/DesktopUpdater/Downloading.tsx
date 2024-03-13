@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 
 import styled from 'styled-components';
 
-import { UpdateProgress } from '@trezor/suite-desktop-api';
-import { bytesToHumanReadable } from '@trezor/utils';
-import { Button, H2, ProgressBar, variables } from '@trezor/components';
+import { UpdateProgress } from '@cerberus/suite-desktop-api';
+import { bytesToHumanReadable } from '@cerberus/utils';
+import { Button, H2, ProgressBar, variables } from '@cerberus/components';
 
 import { Translation, Modal } from 'src/components/suite';
 

@@ -7,7 +7,7 @@ app.use(express.json());
 
 const corsOptions: CorsOptions = {
     origin: [
-        'https://suite.trezor.io', // production web
+        'https://suite.cerberus.uraanai.com', // production web
         /\.sldev\.cz$/, // staging web
         'http://localhost:8000', // development web
         'http://trezoriovpjcahpzkrewelclulmszwbqpzmzgub37gbcjlvluxtruqad.onion', // onion address for production web (Suite does not work here now)

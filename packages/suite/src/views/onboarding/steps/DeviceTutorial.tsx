@@ -3,8 +3,8 @@ import { useIntl } from 'react-intl';
 import styled from 'styled-components';
 
 import { selectDevice } from '@suite-common/wallet-core';
-import TrezorConnect from '@trezor/connect';
-import { Button } from '@trezor/components';
+import TrezorConnect from '@cerberus/connect';
+import { Button } from '@cerberus/components';
 import {
     beginOnboardingTutorial,
     goToNextStep,
@@ -16,7 +16,7 @@ import { useDispatch, useSelector } from 'src/hooks/suite';
 import { selectIsActionAbortable } from 'src/reducers/suite/suiteReducer';
 import { selectOnboardingTutorialStatus } from 'src/reducers/onboarding/onboardingReducer';
 import messages from 'src/support/messages';
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 
 const StyledOnboardingStepBox = styled(OnboardingStepBox)`
     padding: 40px 20px 0;

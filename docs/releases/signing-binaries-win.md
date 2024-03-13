@@ -1,15 +1,15 @@
 # Signing binaries win
 
-The desktop build of Trezor Suite uses [electron-builder](https://github.com/electron-userland/electron-builder) for signing the package and the binaries inside.
+The desktop build of Cerberus Suite uses [electron-builder](https://github.com/electron-userland/electron-builder) for signing the package and the binaries inside.
 
 In order to be able to sign all the binaries for windows in other operating systems [electron-builder] uses [osslsigncode](https://github.com/mtrojnar/osslsigncode).
 
 ## Check if binaries are signed for windows in Linux
 
-The installer `.exe` can be unpacked with `7za x Trezor-Suite-22.2.1-win-x64.exe` on Linux. The `chktrust` is from mono-develop package (Ubuntu LTS, other distros will have it under similar name).
+The installer `.exe` can be unpacked with `7za x Cerberus-Suite-22.2.1-win-x64.exe` on Linux. The `chktrust` is from mono-develop package (Ubuntu LTS, other distros will have it under similar name).
 
 ```bash
-7za x Trezor-Suite-22.2.1-win-x64.exe
+7za x Cerberus-Suite-22.2.1-win-x64.exe
 ```
 
 After unpacked, test signatures:

@@ -7,7 +7,7 @@ import {
 import { Account, Discovery, FeeInfo } from '@suite-common/wallet-types';
 import { NetworkSymbol } from '@suite-common/wallet-config';
 import { TrezorDevice, UserContextPayload } from '@suite-common/suite-types';
-import { BlockchainBlock, ConnectSettings, Manifest, PROTO } from '@trezor/connect';
+import { BlockchainBlock, ConnectSettings, Manifest, PROTO } from '@cerberus/connect';
 import { FiatCurrencyCode } from '@suite-common/suite-config';
 
 import { ActionType, SuiteCompatibleSelector, SuiteCompatibleThunk } from './types';

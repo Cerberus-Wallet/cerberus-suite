@@ -1,9 +1,9 @@
-// IMPORTANT! This package is just temporary solution until https://github.com/trezor/trezor-suite/pull/5647 will be merged.
+// IMPORTANT! This package is just temporary solution until https://github.com/Cerberus-Wallet/cerberus-suite/pull/5647 will be merged.
 // Then we won't need this package anymore and can be deleted.
 import { ReactElement } from 'react';
 import { MessageDescriptor } from 'react-intl';
 
-import { PrimitiveType } from '@trezor/type-utils';
+import { PrimitiveType } from '@cerberus/type-utils';
 
 // Warning, very hacky import solution, do not use this anywhere else than in this file.
 import type { TranslationKey as SuiteTranslationKey } from '../../../packages/suite/src/components/suite/Translation';

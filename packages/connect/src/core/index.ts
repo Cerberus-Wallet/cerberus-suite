@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-use-before-define */
 import EventEmitter from 'events';
 
-import { TRANSPORT, TRANSPORT_ERROR } from '@trezor/transport';
-import { createDeferred, Deferred } from '@trezor/utils';
-import { getSynchronize } from '@trezor/utils';
-import { storage } from '@trezor/connect-common';
+import { TRANSPORT, TRANSPORT_ERROR } from '@cerberus/transport';
+import { createDeferred, Deferred } from '@cerberus/utils';
+import { getSynchronize } from '@cerberus/utils';
+import { storage } from '@cerberus/connect-common';
 
 import { DataManager } from '../data/DataManager';
 import { DeviceList } from '../device/DeviceList';
@@ -689,14 +689,14 @@ const onCall = async (message: IFrameCallMessage) => {
         }
         // Work done
 
-        // TODO: This requires a massive refactoring https://github.com/trezor/trezor-suite/issues/5323
+        // TODO: This requires a massive refactoring https://github.com/Cerberus-Wallet/cerberus-suite/issues/5323
         // @ts-expect-error TODO: messageResponse should be assigned from the response of "inner" function
         const response = messageResponse;
 
         if (response) {
             if (method.name === 'rebootToBootloader' && response.success) {
                 // Wait for device to switch to bootloader
-                // This delay is crucial see https://github.com/trezor/trezor-firmware/issues/1983
+                // This delay is crucial see https://github.com/Cerberus-Wallet/cerberus-firmware/issues/1983
                 await resolveAfter(1000).promise;
                 // call Device.run with empty function to fetch new Features
                 // (acquire > Initialize > nothing > release)

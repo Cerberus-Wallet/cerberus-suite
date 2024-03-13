@@ -1,4 +1,4 @@
-import { PROTO } from '@trezor/connect';
+import { PROTO } from '@cerberus/connect';
 import { selectDeviceUnavailableCapabilities } from '@suite-common/wallet-core';
 
 import { useSelector } from 'src/hooks/suite/useSelector';

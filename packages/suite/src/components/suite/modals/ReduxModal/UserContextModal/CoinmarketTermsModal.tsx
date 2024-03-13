@@ -1,8 +1,8 @@
-import { Button, Icon } from '@trezor/components';
+import { Button, Icon } from '@cerberus/components';
 import { Modal, Translation } from 'src/components/suite';
 import styled from 'styled-components';
-import type { Deferred } from '@trezor/utils';
-import { DeviceModelInternal } from '@trezor/connect';
+import type { Deferred } from '@cerberus/utils';
+import { DeviceModelInternal } from '@cerberus/connect';
 import { cryptoToCoinSymbol } from 'src/utils/wallet/coinmarket/cryptoSymbolUtils';
 import { CryptoSymbol } from 'invity-api';
 

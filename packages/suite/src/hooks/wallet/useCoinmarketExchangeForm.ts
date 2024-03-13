@@ -12,7 +12,7 @@ import {
     getFeeLevels,
     getFiatRateKey,
 } from '@suite-common/wallet-utils';
-import { useDidUpdate } from '@trezor/react-utils';
+import { useDidUpdate } from '@cerberus/react-utils';
 import { COMPOSE_ERROR_TYPES } from '@suite-common/wallet-constants';
 import { isChanged } from '@suite-common/suite-utils';
 import { selectDevice, selectFiatRatesByFiatRateKey } from '@suite-common/wallet-core';

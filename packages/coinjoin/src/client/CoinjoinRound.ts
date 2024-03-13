@@ -1,6 +1,6 @@
-import { TypedEmitter } from '@trezor/utils';
-import { scheduleAction, arrayDistinct, arrayPartition } from '@trezor/utils';
-import { Network } from '@trezor/utxo-lib';
+import { TypedEmitter } from '@cerberus/utils';
+import { scheduleAction, arrayDistinct, arrayPartition } from '@cerberus/utils';
+import { Network } from '@cerberus/utxo-lib';
 
 import {
     getCommitmentData,

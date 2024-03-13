@@ -1,6 +1,6 @@
 ## Get Coin Info
 
-Returns information about a specified coin from the [coins.json](https://github.com/trezor/trezor-suite/blob/develop/packages/connect-common/files/coins.json) file.
+Returns information about a specified coin from the [coins.json](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect-common/files/coins.json) file.
 
 ```javascript
 const result = await TrezorConnect.getCoinInfo(params);
@@ -28,7 +28,7 @@ TrezorConnect.getCoinInfo({
 
 Result for Bitcoin
 
-[BitcoinNetworkInfo](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/coinInfo.ts)
+[BitcoinNetworkInfo](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/coinInfo.ts)
 
 ```javascript
 {

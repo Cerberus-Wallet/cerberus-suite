@@ -13,7 +13,7 @@ SIZE_S=$(du -s "$parent_path/../build/trezor-connect.js" | cut -f1)
 # if you have considerably more, there is a chance that you accidentally included
 # parts of code that shouldn't be in this build.
 echo "size: $SIZE_S"
-# size grew after https://github.com/trezor/trezor-suite/pull/10280 was merged
+# size grew after https://github.com/Cerberus-Wallet/cerberus-suite/pull/10280 was merged
 # 
 if [[ "$SIZE_S" -gt 240 ]]
 then

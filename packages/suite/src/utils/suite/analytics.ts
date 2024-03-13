@@ -1,4 +1,4 @@
-import { AppUpdateEvent } from '@trezor/suite-analytics';
+import { AppUpdateEvent } from '@cerberus/suite-analytics';
 import {
     getScreenWidth,
     getScreenHeight,
@@ -9,10 +9,10 @@ import {
     getWindowWidth,
     getWindowHeight,
     getPlatformLanguages,
-} from '@trezor/env-utils';
+} from '@cerberus/env-utils';
 import { getCustomBackends } from '@suite-common/wallet-utils';
 import { UNIT_ABBREVIATIONS } from '@suite-common/suite-constants';
-import type { UpdateInfo } from '@trezor/suite-desktop-api';
+import type { UpdateInfo } from '@cerberus/suite-desktop-api';
 import { selectDevices } from '@suite-common/wallet-core';
 
 import { AccountTransactionBaseAnchor } from 'src/constants/suite/anchors';

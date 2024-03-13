@@ -1,4 +1,4 @@
-import { Button } from '@trezor/components';
+import { Button } from '@cerberus/components';
 import { AccountExceptionLayout } from 'src/components/wallet';
 import { Translation } from 'src/components/suite';
 import { openModal } from 'src/actions/suite/modalActions';

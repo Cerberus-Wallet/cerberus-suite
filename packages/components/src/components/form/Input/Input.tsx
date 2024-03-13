@@ -1,7 +1,7 @@
 import { useState, Ref, ReactNode, ReactElement, InputHTMLAttributes } from 'react';
 import styled, { useTheme } from 'styled-components';
 import { useMeasure } from 'react-use';
-import { spacingsPx, spacings, typography } from '@trezor/theme';
+import { spacingsPx, spacings, typography } from '@cerberus/theme';
 
 import { Icon } from '../../assets/Icon/Icon';
 import {

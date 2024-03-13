@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 import { getChangelogUrl, getFwUpdateVersion } from '@suite-common/suite-utils';
-import { getFirmwareVersion } from '@trezor/device-utils';
-import { Button, Tooltip } from '@trezor/components';
+import { getFirmwareVersion } from '@cerberus/device-utils';
+import { Button, Tooltip } from '@cerberus/components';
 
 import {
     ActionButton,

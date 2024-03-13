@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import { DATA_URL, HELP_CENTER_UDEV_URL } from '@trezor/urls';
+import { DATA_URL, HELP_CENTER_UDEV_URL } from '@cerberus/urls';
 import { Translation } from 'src/components/suite';
-import { variables, Button, Select, Link, Spinner } from '@trezor/components';
+import { variables, Button, Select, Link, Spinner } from '@cerberus/components';
 import { useSelector } from 'src/hooks/suite';
 import { LearnMoreButton } from './LearnMoreButton';
 

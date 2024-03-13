@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-import { Button, Tooltip } from '@trezor/components';
+import { Button, Tooltip } from '@cerberus/components';
 
 import { Translation } from 'src/components/suite';
 import { TrezorDevice, AcquiredDevice } from 'src/types/suite';
 import { useSelector } from 'src/hooks/suite';
 import { SUITE } from 'src/actions/suite/constants';
-import { borders } from '@trezor/theme';
+import { borders } from '@cerberus/theme';
 
 const AddWallet = styled.div`
     display: flex;

@@ -1,7 +1,7 @@
 import { Root } from 'protobufjs/light';
 
-import { decode as decodeProtobuf, createMessageFromType } from '@trezor/protobuf';
-import { TransportProtocolDecode } from '@trezor/protocol';
+import { decode as decodeProtobuf, createMessageFromType } from '@cerberus/protobuf';
+import { TransportProtocolDecode } from '@cerberus/protocol';
 
 async function receiveRest(
     result: Buffer,

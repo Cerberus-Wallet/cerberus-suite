@@ -1,4 +1,4 @@
-import { Analytics, getRandomId } from '@trezor/analytics';
+import { Analytics, getRandomId } from '@cerberus/analytics';
 
 import type { SuiteAnalyticsEvent } from './types/events';
 

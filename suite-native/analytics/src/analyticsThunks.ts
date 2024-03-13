@@ -6,9 +6,9 @@ import {
     selectIsAnalyticsConfirmed,
 } from '@suite-common/analytics';
 import { createThunk } from '@suite-common/redux-utils';
-import { getTrackingRandomId } from '@trezor/analytics';
+import { getTrackingRandomId } from '@cerberus/analytics';
 import { isDevelopEnv } from '@suite-native/config';
-import { getCommitHash } from '@trezor/env-utils';
+import { getCommitHash } from '@cerberus/env-utils';
 
 import { analytics } from './analytics';
 import { EventType } from './constants';

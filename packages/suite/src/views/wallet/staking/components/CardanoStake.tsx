@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 
 import { formatNetworkAmount } from '@suite-common/wallet-utils';
-import { Icon, Warning } from '@trezor/components';
-import { DeviceModelInternal } from '@trezor/connect';
+import { Icon, Warning } from '@cerberus/components';
+import { DeviceModelInternal } from '@cerberus/connect';
 
 import { Translation } from 'src/components/suite/Translation';
 import { HiddenPlaceholder } from 'src/components/suite/HiddenPlaceholder';

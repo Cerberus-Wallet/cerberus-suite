@@ -1,7 +1,7 @@
 import { MiddlewareAPI } from 'redux';
 
 import { selectDevice, deviceActions } from '@suite-common/wallet-core';
-import TrezorConnect, { UI } from '@trezor/connect';
+import TrezorConnect, { UI } from '@cerberus/connect';
 
 import { SUITE } from 'src/actions/suite/constants';
 import { AppState, Action, Dispatch } from 'src/types/suite';
@@ -36,7 +36,7 @@ const buttonRequest =
             }
         }
 
-        // firmware bug https://github.com/trezor/trezor-firmware/issues/35
+        // firmware bug https://github.com/Cerberus-Wallet/cerberus-firmware/issues/35
         // ugly hack to make Cardano review modal work
         // root cause of this bug is wrong button request ButtonRequest_Other from CardanoSignTx - should be ButtonRequest_SignTx
         if (action.type === UI.REQUEST_BUTTON && action.payload.code === 'ButtonRequest_Other') {

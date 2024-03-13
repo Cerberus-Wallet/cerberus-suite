@@ -1,4 +1,4 @@
-import { borders } from '@trezor/theme';
+import { borders } from '@cerberus/theme';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`

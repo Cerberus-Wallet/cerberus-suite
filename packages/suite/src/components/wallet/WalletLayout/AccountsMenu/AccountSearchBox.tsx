@@ -1,10 +1,10 @@
 import styled, { useTheme } from 'styled-components';
 
-import { Icon, Input } from '@trezor/components';
+import { Icon, Input } from '@cerberus/components';
 import { selectDevice } from '@suite-common/wallet-core';
 
 import { useSelector, useAccountSearch, useTranslation } from 'src/hooks/suite';
-import { borders } from '@trezor/theme';
+import { borders } from '@cerberus/theme';
 
 const InputWrapper = styled.div<{ showCoinFilter: boolean }>`
     flex: 1;

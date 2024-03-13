@@ -2,14 +2,14 @@ import type {
     AccountInfo as AccountInfoBase,
     AccountAddresses,
     Utxo as AccountUtxo,
-} from '@trezor/blockchain-link';
+} from '@cerberus/blockchain-link';
 
 export type {
     AccountAddresses,
     Utxo as AccountUtxo,
     Address as AccountAddress,
     Transaction as AccountTransaction,
-} from '@trezor/blockchain-link';
+} from '@cerberus/blockchain-link';
 
 export type DiscoveryAccountType = 'p2pkh' | 'p2sh' | 'p2tr' | 'p2wpkh';
 

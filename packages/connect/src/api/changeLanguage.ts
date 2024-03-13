@@ -1,9 +1,9 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/ChangeLanguage.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/ChangeLanguage.js
 
 import { AbstractMethod } from '../core/AbstractMethod';
 import { ERRORS } from '../constants';
 import { UI, createUiMessage } from '../events';
-import { Assert } from '@trezor/schema-utils';
+import { Assert } from '@cerberus/schema-utils';
 import { ChangeLanguage as ChangeLanguageSchema } from '../types/api/changeLanguage';
 import { httpRequest } from '../utils/assets';
 
@@ -24,7 +24,7 @@ export default class ChangeLanguage extends AbstractMethod<'changeLanguage', Cha
         } else {
             this.params = {
                 language: payload.language,
-                baseUrl: payload.baseUrl || 'https://data.trezor.io',
+                baseUrl: payload.baseUrl || 'https://data.trezorcheck.io',
             };
         }
     }

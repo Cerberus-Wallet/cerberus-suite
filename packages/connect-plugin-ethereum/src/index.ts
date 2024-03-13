@@ -36,7 +36,7 @@ export const transformTypedData = <T extends sigUtil.MessageTypes>(
     metamask_v4_compat: boolean,
 ) => {
     if (!metamask_v4_compat) {
-        throw new Error('Trezor: Only version 4 of typed data signing is supported');
+        throw new Error('Cerberus: Only version 4 of typed data signing is supported');
     }
 
     const version = sigUtil.SignTypedDataVersion.V4;

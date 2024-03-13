@@ -1,18 +1,18 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/popup/PopupManager.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/popup/PopupManager.js
 
 import EventEmitter from 'events';
-import { createDeferred, Deferred } from '@trezor/utils';
-import { POPUP, IFRAME, UI, CoreEventMessage, IFrameLoaded } from '@trezor/connect/lib/events';
-import type { ConnectSettings } from '@trezor/connect/lib/types';
-import { getOrigin } from '@trezor/connect/lib/utils/urlUtils';
+import { createDeferred, Deferred } from '@cerberus/utils';
+import { POPUP, IFRAME, UI, CoreEventMessage, IFrameLoaded } from '@cerberus/connect/lib/events';
+import type { ConnectSettings } from '@cerberus/connect/lib/types';
+import { getOrigin } from '@cerberus/connect/lib/utils/urlUtils';
 import { showPopupRequest } from './showPopupRequest';
-import { Log } from '@trezor/connect/lib/utils/debug';
+import { Log } from '@cerberus/connect/lib/utils/debug';
 
 import { ServiceWorkerWindowChannel } from '../channels/serviceworker-window';
 import {
     AbstractMessageChannel,
     Message,
-} from '@trezor/connect-common/src/messageChannel/abstract';
+} from '@cerberus/connect-common/src/messageChannel/abstract';
 import { WindowWindowChannel } from '../channels/window-window';
 
 // Util
@@ -77,8 +77,8 @@ export class PopupManager extends EventEmitter {
             this.channel = new ServiceWorkerWindowChannel<CoreEventMessage>({
                 name: 'trezor-connect',
                 channel: {
-                    here: '@trezor/connect-webextension',
-                    peer: '@trezor/connect-content-script',
+                    here: '@cerberus/connect-webextension',
+                    peer: '@cerberus/connect-content-script',
                 },
                 logger,
                 currentId: () => {
@@ -93,8 +93,8 @@ export class PopupManager extends EventEmitter {
                     if (this.popupWindow?.mode === 'window') return this.popupWindow?.window;
                 },
                 channel: {
-                    here: '@trezor/connect-web',
-                    peer: '@trezor/connect-popup',
+                    here: '@cerberus/connect-web',
+                    peer: '@cerberus/connect-popup',
                 },
                 logger,
                 origin: this.origin,
@@ -108,8 +108,8 @@ export class PopupManager extends EventEmitter {
                 windowHere: window,
                 windowPeer: () => window,
                 channel: {
-                    here: '@trezor/connect-web',
-                    peer: '@trezor/connect-iframe',
+                    here: '@cerberus/connect-web',
+                    peer: '@cerberus/connect-iframe',
                 },
                 logger,
                 origin: this.origin,

@@ -1,6 +1,6 @@
 import { test, expect, Page, devices } from '@playwright/test';
-import { ensureDirectoryExists } from '@trezor/node-utils';
-import { TrezorUserEnvLink } from '@trezor/trezor-user-env-link';
+import { ensureDirectoryExists } from '@cerberus/node-utils';
+import { TrezorUserEnvLink } from '@cerberus/trezor-user-env-link';
 
 const url = process.env.URL || 'http://localhost:8088/';
 

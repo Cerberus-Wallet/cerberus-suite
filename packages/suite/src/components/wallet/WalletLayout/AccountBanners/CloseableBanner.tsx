@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import { Button, H3, Box, Divider, BoxProps } from '@trezor/components';
+import { Button, H3, Box, Divider, BoxProps } from '@cerberus/components';
 import { Translation } from 'src/components/suite';
 import { ReactNode } from 'react';
-import { borders } from '@trezor/theme';
+import { borders } from '@cerberus/theme';
 
 const Heading = styled.div`
     display: flex;

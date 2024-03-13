@@ -4,13 +4,13 @@ import BigNumber from 'bignumber.js';
 
 import { useFormatters } from '@suite-common/formatters';
 import { Translation } from 'src/components/suite';
-import { Button, H3, Icon, Tooltip, variables } from '@trezor/components';
+import { Button, H3, Icon, Tooltip, variables } from '@cerberus/components';
 import regional from 'src/constants/wallet/coinmarket/regional';
 import { useCoinmarketP2pOffersContext } from 'src/hooks/wallet/useCoinmarketP2pOffers';
 import { CoinmarketFiatAmount, CoinmarketProviderInfo } from 'src/views/wallet/coinmarket/common';
 import { P2pQuote, P2pQuotesRequest } from 'invity-api';
 import { Avatar } from '../Avatar';
-import { borders } from '@trezor/theme';
+import { borders } from '@cerberus/theme';
 
 const Wrapper = styled.div`
     display: flex;

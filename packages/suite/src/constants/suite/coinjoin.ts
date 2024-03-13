@@ -1,5 +1,5 @@
 import { TranslationKey } from '@suite-common/intl-types';
-import { RoundPhase, SessionPhase } from '@trezor/coinjoin';
+import { RoundPhase, SessionPhase } from '@cerberus/coinjoin';
 
 export const ROUND_PHASE_MESSAGES: Record<RoundPhase, TranslationKey> = {
     [RoundPhase.InputRegistration]: 'TR_COINJOIN_PHASE_0_MESSAGE',

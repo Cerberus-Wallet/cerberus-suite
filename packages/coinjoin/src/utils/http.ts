@@ -1,6 +1,6 @@
 import fetch from 'cross-fetch';
 
-import { ScheduleActionParams, getWeakRandomId } from '@trezor/utils';
+import { ScheduleActionParams, getWeakRandomId } from '@cerberus/utils';
 
 export interface RequestOptions extends ScheduleActionParams {
     method?: 'POST' | 'GET';
@@ -42,7 +42,7 @@ const createHeaders = (options: RequestOptions) => {
         'Content-Type': 'application/json; charset=utf-8',
         'Accept-Encoding': 'gzip',
     };
-    // add custom headers to requests which are intercepted by @trezor/request-manager package.
+    // add custom headers to requests which are intercepted by @cerberus/request-manager package.
     // - Proxy-Authorization: used to create/use TOR circuit
     // - Allowed-Headers: used to restrict headers sent to wabisabi api
     // custom headers works only in nodejs environment (suite-desktop). browser throws: Refused to set unsafe header "proxy-authorization" error
@@ -51,9 +51,9 @@ const createHeaders = (options: RequestOptions) => {
         headers['Allowed-Headers'] = 'Accept-Encoding;Content-Type;Content-Length;Host';
     }
     // blockbook api requires 'User-Agent' to be set
-    // same as in @trezor/blockchain-link/src/workers/blockbook/websocket
+    // same as in @cerberus/blockchain-link/src/workers/blockbook/websocket
     if (typeof options.userAgent === 'string') {
-        headers['User-Agent'] = options.userAgent || 'Trezor Suite';
+        headers['User-Agent'] = options.userAgent || 'Cerberus Suite';
     }
 
     return headers;

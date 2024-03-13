@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { borders } from '@trezor/theme';
+import { borders } from '@cerberus/theme';
 import { Button, ButtonProps } from '../Button/Button';
 import { ButtonSize, ButtonVariant } from '../buttonStyleUtils';
 import { IconButton, IconButtonProps } from '../IconButton/IconButton';

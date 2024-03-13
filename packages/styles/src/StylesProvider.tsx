@@ -3,7 +3,7 @@ import { RendererProvider, ThemeProvider } from 'react-fela';
 
 import { IRenderer } from 'fela';
 
-import { NativeTheme, Theme } from '@trezor/theme';
+import { NativeTheme, Theme } from '@cerberus/theme';
 
 import { Direction } from './types';
 import { DirectionContext } from './contexts';

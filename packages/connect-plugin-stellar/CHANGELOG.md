@@ -6,9 +6,9 @@
 # 9.0.1
 
 -   updated `stellar-sdk` from `^10.1.0` to `^10.4.0`
--   memoId return type https://github.com/trezor/trezor-suite/pull/7395
+-   memoId return type https://github.com/Cerberus-Wallet/cerberus-suite/pull/7395
 
 # 9.0.0
 
 -   initial release
--   migrated from https://github.com/trezor/connect
+-   migrated from https://github.com/Cerberus-Wallet/connect

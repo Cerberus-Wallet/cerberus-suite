@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import crypto from 'crypto';
 
-import TrezorConnect from '@trezor/connect';
+import TrezorConnect from '@cerberus/connect';
 import { selectDevice } from '@suite-common/wallet-core';
 
 import { useSelector, useDispatch } from 'src/hooks/suite';

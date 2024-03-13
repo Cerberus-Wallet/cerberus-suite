@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { useForm } from 'react-hook-form';
-import { analytics, EventType } from '@trezor/suite-analytics';
-import { Card, Textarea, Button, Tooltip, H3, IconButton } from '@trezor/components';
+import { analytics, EventType } from '@cerberus/suite-analytics';
+import { Card, Textarea, Button, Tooltip, H3, IconButton } from '@cerberus/components';
 
 import { Translation } from 'src/components/suite';
 import { useDispatch, useTranslation } from 'src/hooks/suite';
@@ -9,7 +9,7 @@ import { pushRawTransaction, sendRaw } from 'src/actions/wallet/sendFormActions'
 import { getInputState, isHexValid } from '@suite-common/wallet-utils';
 import { Network } from 'src/types/wallet';
 import { OpenGuideFromTooltip } from 'src/components/guide';
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 
 const StyledCard = styled(Card)`
     position: relative;

@@ -1,11 +1,11 @@
-# @trezor/suite-desktop-api
+# @cerberus/suite-desktop-api
 
-Private package providing strongly typed `DesktopApi` used in `@trezor/suite` and `@trezor/suite-desktop`. `DesktopApi` handles [inter-process comumunication](https://www.electronjs.org/docs/latest/tutorial/ipc) inside [Electron](https://www.electronjs.org/) between the `main` context, i.e. native processes running in NodeJS, and `renderer` context, i.e. browser-like processes running on Chromium.
+Private package providing strongly typed `DesktopApi` used in `@cerberus/suite` and `@cerberus/suite-desktop`. `DesktopApi` handles [inter-process comumunication](https://www.electronjs.org/docs/latest/tutorial/ipc) inside [Electron](https://www.electronjs.org/) between the `main` context, i.e. native processes running in NodeJS, and `renderer` context, i.e. browser-like processes running on Chromium.
 
 Exported modules:
 
--   `main` (default) used in `@trezor/suite-desktop/src` in main (NodeJS) context.
--   `renderer` (browser) used in `@trezor/suite` and `@trezor/suite-desktop-ui` in renderer context.
+-   `main` (default) used in `@cerberus/suite-desktop/src` in main (NodeJS) context.
+-   `renderer` (browser) used in `@cerberus/suite` and `@cerberus/suite-desktop-ui` in renderer context.
 
 ```javascript
 export function getDesktopApi(ipcRenderer?: Electron.IpcRenderer): DesktopApi;
@@ -37,18 +37,18 @@ To invoke a method on the `main` process and return an asynchronous result to th
 
 -   add a channel to `./src/api.ts InvokeChannels`
 -   add a method to `./src/api.ts DesktopApi` as `DesktopApiInvoke<'your-new-channel'>`
--   process incoming request in `@trezor/suite-desktop/src/modules/*` using `ipcMain.handle('your-new-channel', (arg?: string) => { return 1; })`
--   trigger it from `@trezor/suite` using `const r = await desktopApi.yourNewFunction()`
+-   process incoming request in `@cerberus/suite-desktop/src/modules/*` using `ipcMain.handle('your-new-channel', (arg?: string) => { return 1; })`
+-   trigger it from `@cerberus/suite` using `const r = await desktopApi.yourNewFunction()`
 
 To receive an asynchronous event in `renderer` process
 
 -   add a channel to `./src/api.ts RendererChannels`
--   set a listener in `@trezor/suite` using `await desktopApi.on('your-new-channel', (payload) => {})`
--   trigger an event from `@trezor/suite-desktop/src/modules/*` using `mainWindow.webContents.send('your-new-channel', { foo: 'bar' })`
+-   set a listener in `@cerberus/suite` using `await desktopApi.on('your-new-channel', (payload) => {})`
+-   trigger an event from `@cerberus/suite-desktop/src/modules/*` using `mainWindow.webContents.send('your-new-channel', { foo: 'bar' })`
 
 To receive an asynchronous event in `main` process
 
 -   add a channel to `./src/api.ts MainChannels`
 -   add a method to `./src/api.ts DesktopApi` as `DesktopApiSend<'your-new-channel'>`
--   set a listener in `@trezor/suite-desktop/src/modules/*` using `ipcMain.on('your-new-channel', (_, { foo }) => {})`
--   trigger an event from `@trezor/suite` using `desktopApi.yourNewFunction({ foo: 'bar' })`
+-   set a listener in `@cerberus/suite-desktop/src/modules/*` using `ipcMain.on('your-new-channel', (_, { foo }) => {})`
+-   trigger an event from `@cerberus/suite` using `desktopApi.yourNewFunction({ foo: 'bar' })`

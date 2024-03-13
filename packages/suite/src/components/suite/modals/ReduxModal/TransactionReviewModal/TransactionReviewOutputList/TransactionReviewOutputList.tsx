@@ -1,12 +1,12 @@
 import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
-import { analytics, EventType } from '@trezor/suite-analytics';
-import { Button, variables } from '@trezor/components';
+import { analytics, EventType } from '@cerberus/suite-analytics';
+import { Button, variables } from '@cerberus/components';
 import { Translation } from 'src/components/suite';
 import { notificationsActions } from '@suite-common/toast-notifications';
 import { TranslationKey } from '@suite-common/intl-types';
-import { copyToClipboard, download } from '@trezor/dom-utils';
+import { copyToClipboard, download } from '@cerberus/dom-utils';
 import { useDispatch } from 'src/hooks/suite';
 import { TransactionReviewDetails } from './TransactionReviewDetails';
 import { TransactionReviewOutput } from './TransactionReviewOutput';
@@ -19,7 +19,7 @@ import type {
 import { getOutputState } from 'src/utils/wallet/reviewTransactionUtils';
 import { TransactionReviewTotalOutput } from './TransactionReviewTotalOutput';
 import { ReviewOutput } from 'src/types/wallet/transaction';
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 import { StakeFormState } from '@suite-common/wallet-types';
 
 const Content = styled.div`

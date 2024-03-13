@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { variables } from '@trezor/components';
+import { variables } from '@cerberus/components';
 import { Translation } from 'src/components/suite';
 import { ExtendedMessageDescriptor } from 'src/types/suite';
 

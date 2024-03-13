@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { analytics, EventType } from '@trezor/suite-analytics';
+import { analytics, EventType } from '@cerberus/suite-analytics';
 
 import { useDispatch, useSelector, useTranslation } from 'src/hooks/suite';
-import { isUrl } from '@trezor/utils';
+import { isUrl } from '@cerberus/utils';
 import { isOnionUrl } from 'src/utils/suite/tor';
 import { blockchainActions } from '@suite-common/wallet-core';
 import { isElectrumUrl } from '@suite-common/wallet-utils';
@@ -35,7 +35,7 @@ const validateUrl = (type: BackendOption, value: string) => {
 const getUrlPlaceholder = (coin: Network['symbol'], type: BackendOption) => {
     switch (type) {
         case 'blockbook':
-            return `https://${coin}1.trezor.io/`;
+            return `https://${coin}1.trezorcheck.io/`;
         case 'blockfrost':
             return `wss://blockfrost.io`;
         case 'electrum':

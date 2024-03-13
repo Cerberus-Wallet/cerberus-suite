@@ -10,7 +10,7 @@ import {
 } from '@suite-common/wallet-core';
 import { AccountKey } from '@suite-common/wallet-types';
 import { getNetwork } from '@suite-common/wallet-utils';
-import { BlockchainNotification } from '@trezor/connect';
+import { BlockchainNotification } from '@cerberus/connect';
 
 const actionsPrefix = '@native/blockchain';
 

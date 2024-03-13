@@ -2,10 +2,10 @@ import { memoize } from 'proxy-memoize';
 
 import * as deviceUtils from '@suite-common/suite-utils';
 import { getStatus } from '@suite-common/suite-utils';
-import { Device, Features } from '@trezor/connect';
-import { getFirmwareVersion, getFirmwareVersionArray } from '@trezor/device-utils';
+import { Device, Features } from '@cerberus/connect';
+import { getFirmwareVersion, getFirmwareVersionArray } from '@cerberus/device-utils';
 import { Network, networks } from '@suite-common/wallet-config';
-import { versionUtils } from '@trezor/utils';
+import { versionUtils } from '@cerberus/utils';
 import { createReducerWithExtraDeps } from '@suite-common/redux-utils';
 import { TrezorDevice, AcquiredDevice, ButtonRequest } from '@suite-common/suite-types';
 import {

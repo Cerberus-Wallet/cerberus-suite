@@ -1,6 +1,6 @@
-// https://github.com/trezor/connect/blob/develop/src/js/storage/index.js
+// https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/storage/index.js
 
-import { TypedEmitter } from '@trezor/utils';
+import { TypedEmitter } from '@cerberus/utils';
 
 const storageVersion = 2;
 const storageName = `storage_v${storageVersion}`;

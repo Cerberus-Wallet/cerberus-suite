@@ -2,12 +2,12 @@ import { transparentize } from 'polished';
 import styled, { css } from 'styled-components';
 
 import { findRouteByName } from 'src/utils/suite/router';
-import { variables } from '@trezor/components';
+import { variables } from '@cerberus/components';
 import { HoverAnimation, Translation } from 'src/components/suite';
 import { MAIN_MENU_ITEMS } from 'src/constants/suite/menu';
 import { useAccountSearch, useSelector, useDispatch } from 'src/hooks/suite';
 import { goto } from 'src/actions/suite/routerActions';
-import { typography } from '@trezor/theme';
+import { typography } from '@cerberus/theme';
 
 interface ComponentProps {
     isActive: boolean;

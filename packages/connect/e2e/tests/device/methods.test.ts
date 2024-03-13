@@ -1,7 +1,7 @@
 import TrezorConnect from '../../../src';
 import fixtures from '../../__fixtures__';
 
-const { getController, setup, skipTest, conditionalTest, initTrezorConnect } = global.Trezor;
+const { getController, setup, skipTest, conditionalTest, initTrezorConnect } = global.Cerberus;
 
 let controller: ReturnType<typeof getController> | undefined;
 

@@ -1,7 +1,7 @@
 import BigNumber from 'bignumber.js';
 
 import { Account, Rate, TokenAddress } from '@suite-common/wallet-types';
-import { TokenInfo } from '@trezor/connect';
+import { TokenInfo } from '@cerberus/connect';
 import { useSelector } from 'src/hooks/suite';
 import { selectFiatRatesByFiatRateKey } from '@suite-common/wallet-core';
 import { getFiatRateKey } from '@suite-common/wallet-utils';

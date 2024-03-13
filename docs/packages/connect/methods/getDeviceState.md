@@ -20,7 +20,7 @@ Get the state of a device.
 const capturedDevice = await TrezorConnect.getDeviceState({
     device: {
         instance: 0, // identificator for wallet A
-        // `state: undefined` forces the passphrase prompt even if instance 0 is/was already using "some" pasphrase (let say empty). The Trezor forgets the current state, useful when dealing with multiple hidden wallets on one or more devices
+        // `state: undefined` forces the passphrase prompt even if instance 0 is/was already using "some" pasphrase (let say empty). The Cerberus forgets the current state, useful when dealing with multiple hidden wallets on one or more devices
         // `state: "string" verifies state is valid, otherwise "invalid passphrase" error is returned
         state: undefined,
     },
@@ -37,7 +37,7 @@ await TrezorConnect.getPublicKey({
 
 ### Result
 
-[DeviceStateResponse type](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/getDeviceState.ts)
+[DeviceStateResponse type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/getDeviceState.ts)
 
 ```javascript
 {

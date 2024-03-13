@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { variables } from '@trezor/components';
+import { variables } from '@cerberus/components';
 
 export const FormattedCryptoAmountWrapper = styled.div`
     font-size: ${variables.FONT_SIZE.H2};

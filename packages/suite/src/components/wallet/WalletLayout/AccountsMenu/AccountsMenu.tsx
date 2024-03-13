@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { spacingsPx, zIndices } from '@trezor/theme';
+import { spacingsPx, zIndices } from '@cerberus/theme';
 import { selectDevice } from '@suite-common/wallet-core';
 
 import { useDiscovery, useSelector } from 'src/hooks/suite';
@@ -13,7 +13,7 @@ import { Translation } from 'src/components/suite';
 import { AccountsMenuNotice } from './AccountsMenuNotice';
 import { getFailedAccounts, sortByCoin } from '@suite-common/wallet-utils';
 import { RefreshAfterDiscoveryNeeded } from './RefreshAfterDiscoveryNeeded';
-import { useScrollShadow } from '@trezor/components';
+import { useScrollShadow } from '@cerberus/components';
 
 const Wrapper = styled.div`
     display: flex;

@@ -1,6 +1,6 @@
 ## Solana: Sign transaction
 
-Asks device to sign given transaction. User is asked to confirm all transaction details on Trezor.
+Asks device to sign given transaction. User is asked to confirm all transaction details on Cerberus.
 
 ```javascript
 const result = await TrezorConnect.solanaSignTransaction(params);
@@ -10,16 +10,16 @@ const result = await TrezorConnect.solanaSignTransaction(params);
 
 [Optional common params](commonParams.md)
 
-[SolanaSignTransaction type](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/solana/index.ts)
+[SolanaSignTransaction type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/solana/index.ts)
 
 -   `path` — _required_ `string | Array<number>` minimum length is `2`. [read more](../path.md)
 -   `serializedTx` — _required_ `string`
--   `additionalInfo` - _optional_ [SolanaTxAdditionalInfo](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/solana/index.ts#L18)
-    -   `tokenAccountsInfos` - _optional_ `Array` of [SolanaTxTokenAccountInfo](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/solana/index.ts#L11)
+-   `additionalInfo` - _optional_ [SolanaTxAdditionalInfo](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/solana/index.ts#L18)
+    -   `tokenAccountsInfos` - _optional_ `Array` of [SolanaTxTokenAccountInfo](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/solana/index.ts#L11)
 
 ### SolanaTxAdditionalInfo
 
-The parameter is currently used only for sending `tokenAccountsInfos` to Trezor. `tokenAccountsInfos` are used when transferring tokens to associated token accounts. Using `tokenAccountsInfos` you can provide Trezor information about the recipient's base (system) account of the associated token account and Trezor can then safely display the base account address to the user instead of displaying the token account address which most users don't even know about.
+The parameter is currently used only for sending `tokenAccountsInfos` to Cerberus. `tokenAccountsInfos` are used when transferring tokens to associated token accounts. Using `tokenAccountsInfos` you can provide Cerberus information about the recipient's base (system) account of the associated token account and Cerberus can then safely display the base account address to the user instead of displaying the token account address which most users don't even know about.
 
 _Displaying base address only works for transactions which transfer tokens or which create a token account and transfer tokens to that account._
 
@@ -55,7 +55,7 @@ TrezorConnect.solanaSignTransaction({
 
 ### Result
 
-[SolanaSignedTransaction type](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/solana/index.ts)
+[SolanaSignedTransaction type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/solana/index.ts)
 
 ```javascript
 {

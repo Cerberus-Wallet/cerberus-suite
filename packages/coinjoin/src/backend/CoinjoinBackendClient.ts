@@ -1,6 +1,6 @@
-import { scheduleAction, arrayShuffle, urlToOnion } from '@trezor/utils';
-import { TypedEmitter } from '@trezor/utils';
-import type { BlockbookAPI } from '@trezor/blockchain-link/lib/workers/blockbook/websocket';
+import { scheduleAction, arrayShuffle, urlToOnion } from '@cerberus/utils';
+import { TypedEmitter } from '@cerberus/utils';
+import type { BlockbookAPI } from '@cerberus/blockchain-link/lib/workers/blockbook/websocket';
 
 import { RequestOptions, resetIdentityCircuit } from '../utils/http';
 import type {

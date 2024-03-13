@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import styled, { css } from 'styled-components';
 
-import { Card, Image, PngImage, variables } from '@trezor/components';
+import { Card, Image, PngImage, variables } from '@cerberus/components';
 
 const containerGridStyle = css`
     display: grid;

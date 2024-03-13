@@ -13,7 +13,7 @@ import { fromWei, padLeft, toHex, toWei } from 'web3-utils';
 import { fiatCurrencies } from '@suite-common/suite-config';
 import { isFeatureFlagEnabled } from '@suite-common/suite-utils';
 import { Network, NetworkType } from '@suite-common/wallet-config';
-import { EthereumTransaction, TokenInfo, ComposeOutput, PROTO } from '@trezor/connect';
+import { EthereumTransaction, TokenInfo, ComposeOutput, PROTO } from '@cerberus/connect';
 import {
     COMPOSE_ERROR_TYPES,
     DEFAULT_PAYMENT,

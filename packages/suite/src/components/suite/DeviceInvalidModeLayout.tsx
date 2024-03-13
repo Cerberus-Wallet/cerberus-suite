@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 
 import styled, { css } from 'styled-components';
 
-import { Button, Image, ImageType } from '@trezor/components';
+import { Button, Image, ImageType } from '@cerberus/components';
 import { selectDevicesCount } from '@suite-common/wallet-core';
 
 import { Translation } from 'src/components/suite';

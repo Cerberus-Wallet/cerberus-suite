@@ -1,11 +1,11 @@
-import { WebUSB } from '@trezor/react-native-usb';
+import { WebUSB } from '@cerberus/react-native-usb';
 import {
     Transport as AbstractTransport,
     AbstractApiTransport,
     SessionsClient,
     SessionsBackground,
     UsbApi,
-} from '@trezor/transport';
+} from '@cerberus/transport';
 
 export class NativeUsbTransport extends AbstractApiTransport {
     // TODO: Not sure how to solve this type correctly.

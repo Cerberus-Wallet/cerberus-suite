@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/GetAccountInfo.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/GetAccountInfo.js
 
 import { AbstractMethod, MethodReturnType, DEFAULT_FIRMWARE_RANGE } from '../core/AbstractMethod';
 import { Discovery } from './common/Discovery';

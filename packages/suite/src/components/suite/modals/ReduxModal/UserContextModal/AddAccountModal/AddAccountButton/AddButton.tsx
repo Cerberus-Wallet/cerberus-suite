@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { TooltipButton, ButtonProps } from '@trezor/components';
+import { TooltipButton, ButtonProps } from '@cerberus/components';
 import { Translation } from 'src/components/suite';
 import { Network } from '@suite-common/wallet-config';
 

@@ -1,5 +1,5 @@
-import { arrayDistinct } from '@trezor/utils';
-import { networks } from '@trezor/utxo-lib';
+import { arrayDistinct } from '@cerberus/utils';
+import { networks } from '@cerberus/utxo-lib';
 
 import { DISCOVERY_LOOKOUT } from '../../src/constants';
 import { scanAccount } from '../../src/backend/scanAccount';

@@ -1,10 +1,10 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
 
-import { Button, ButtonProps } from '@trezor/components';
+import { Button, ButtonProps } from '@cerberus/components';
 
 import { Translation, TrezorLink } from 'src/components/suite';
-import { Url } from '@trezor/urls';
+import { Url } from '@cerberus/urls';
 
 const StyledTrezorLink = styled(TrezorLink)`
     /* Prevents the link from overflowing the button in a flex container so that it cannot be open by clicking next to it */

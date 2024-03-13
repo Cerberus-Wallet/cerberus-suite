@@ -1,4 +1,4 @@
-// https://github.com/trezor/trezor-firmware/blob/main/tests/device_tests/test_msg_stellar_get_address.py
+// https://github.com/Cerberus-Wallet/cerberus-firmware/blob/main/tests/device_tests/test_msg_stellar_get_address.py
 
 export default {
     method: 'stellarGetAddress',

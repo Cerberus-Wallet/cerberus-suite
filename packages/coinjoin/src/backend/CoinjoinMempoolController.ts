@@ -1,7 +1,7 @@
 /* eslint no-underscore-dangle: ["error", { "allowAfterThis": true }] */
 
-import type { Network } from '@trezor/utxo-lib';
-import { arrayDistinct, createCooldown, promiseAllSequence } from '@trezor/utils';
+import type { Network } from '@cerberus/utxo-lib';
+import { arrayDistinct, createCooldown, promiseAllSequence } from '@cerberus/utils';
 
 import type { Logger } from '../types';
 import type { BlockbookTransaction, MempoolClient, OnProgressInfo } from '../types/backend';

@@ -1,4 +1,4 @@
-import { variables, Select, useElevation } from '@trezor/components';
+import { variables, Select, useElevation } from '@cerberus/components';
 import { ExchangeInfo } from 'src/actions/wallet/coinmarketExchangeActions';
 import { Controller } from 'react-hook-form';
 import styled from 'styled-components';
@@ -7,7 +7,7 @@ import { useCoinmarketExchangeFormContext } from 'src/hooks/wallet/useCoinmarket
 import { Translation } from 'src/components/suite';
 import { Account } from 'src/types/wallet';
 import invityAPI from 'src/services/suite/invityAPI';
-import { Elevation, nextElevation, mapElevationToBackground } from '@trezor/theme';
+import { Elevation, nextElevation, mapElevationToBackground } from '@cerberus/theme';
 import { getInputState } from '@suite-common/wallet-utils';
 import {
     cryptoToCoinSymbol,

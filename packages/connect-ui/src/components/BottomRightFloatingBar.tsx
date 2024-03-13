@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import styled from 'styled-components';
 
-import { storage } from '@trezor/connect-common';
+import { storage } from '@cerberus/connect-common';
 
 import { AnalyticsConsentWrapper } from './AnalyticsConsentWrapper';
 import { FloatingMenu } from './FloatingMenu';

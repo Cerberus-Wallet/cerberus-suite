@@ -1,9 +1,9 @@
 import { expect, test } from '@playwright/test';
 
-import { TrezorUserEnvLink } from '@trezor/trezor-user-env-link';
+import { TrezorUserEnvLink } from '@cerberus/trezor-user-env-link';
 import { fixtures } from './__fixtures__/methods';
 import { buildOverview } from '../support/buildOverview';
-import { ensureDirectoryExists } from '@trezor/node-utils';
+import { ensureDirectoryExists } from '@cerberus/node-utils';
 import { getContexts, log, openPopup, setConnectSettings } from '../support/helpers';
 
 const url = process.env.URL || 'http://localhost:8088/';
@@ -99,7 +99,7 @@ filteredFixtures.forEach(f => {
         await explorerPage.goto(`${explorerUrl}#/method/${f.url}`);
 
         // screenshot request
-        log(f.url, 'screenshot @trezor/connect call params');
+        log(f.url, 'screenshot @cerberus/connect call params');
 
         const code = explorerPage.locator('[data-test="@code"]');
         await code.screenshot({ path: `${screenshotsPath}/1-request.png` });

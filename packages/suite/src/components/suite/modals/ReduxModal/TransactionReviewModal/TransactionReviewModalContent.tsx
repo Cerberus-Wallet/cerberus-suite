@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import { ConfirmOnDevice, variables } from '@trezor/components';
-import { Deferred } from '@trezor/utils';
+import { ConfirmOnDevice, variables } from '@cerberus/components';
+import { Deferred } from '@cerberus/utils';
 import { selectDevice, StakeState } from '@suite-common/wallet-core';
 import { isCardanoTx } from '@suite-common/wallet-utils';
 import { SendState } from 'src/reducers/wallet/sendFormReducer';
@@ -14,7 +14,7 @@ import { Modal, Translation } from 'src/components/suite';
 import { TransactionReviewSummary } from './TransactionReviewSummary';
 import { TransactionReviewOutputList } from './TransactionReviewOutputList/TransactionReviewOutputList';
 import { TransactionReviewEvmExplanation } from './TransactionReviewEvmExplanation';
-import { DeviceModelInternal } from '@trezor/connect';
+import { DeviceModelInternal } from '@cerberus/connect';
 
 const StyledModal = styled(Modal)`
     ${Modal.Body} {

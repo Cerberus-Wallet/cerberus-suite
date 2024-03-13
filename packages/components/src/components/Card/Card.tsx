@@ -1,6 +1,6 @@
 import { forwardRef, ReactNode } from 'react';
 import styled, { css } from 'styled-components';
-import { borders, Elevation, mapElevationToBackground, spacingsPx } from '@trezor/theme';
+import { borders, Elevation, mapElevationToBackground, spacingsPx } from '@cerberus/theme';
 import { ElevationContext, useElevation } from '../ElevationContext/ElevationContext';
 
 type PaddingType = 'small' | 'none' | 'normal';

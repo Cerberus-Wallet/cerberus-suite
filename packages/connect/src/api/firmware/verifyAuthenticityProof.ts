@@ -1,5 +1,5 @@
 import * as crypto from 'crypto';
-import { bufferUtils } from '@trezor/utils';
+import { bufferUtils } from '@cerberus/utils';
 
 import { PROTO } from '../../constants';
 import { DeviceAuthenticityConfig } from '../../data/deviceAuthenticityConfig';
@@ -109,7 +109,7 @@ export const verifyAuthenticityProof = async ({
         };
     }
 
-    // 4. validate DEVICE certificate subject (Trezor features internal_model)
+    // 4. validate DEVICE certificate subject (Cerberus features internal_model)
     const [subject] = deviceCert.tbsCertificate.subject;
     // subject algorithm (OID) https://www.alvestrand.no/objectid/2.5.4.3.html
     if (!subject.parameters || subject.algorithm !== '2.5.4.3') {

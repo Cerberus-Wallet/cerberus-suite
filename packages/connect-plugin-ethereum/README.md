@@ -1,7 +1,7 @@
-# @trezor/connect-plugin-ethereum
+# @cerberus/connect-plugin-ethereum
 
-[![Build Status](https://github.com/trezor/trezor-suite/actions/workflows/connect-test.yml/badge.svg)](https://github.com/trezor/trezor-suite/actions/workflows/connect-test.yml)
-[![NPM](https://img.shields.io/npm/v/@trezor/connect-plugin-ethereum.svg)](https://www.npmjs.org/package/@trezor/connect-plugin-ethereum)
+[![Build Status](https://github.com/Cerberus-Wallet/cerberus-suite/actions/workflows/connect-test.yml/badge.svg)](https://github.com/Cerberus-Wallet/cerberus-suite/actions/workflows/connect-test.yml)
+[![NPM](https://img.shields.io/npm/v/@cerberus/connect-plugin-ethereum.svg)](https://www.npmjs.org/package/@cerberus/connect-plugin-ethereum)
 [![Known Vulnerabilities](https://snyk.io/test/github/trezor/connect-plugin-ethereum/badge.svg?targetFile=package.json)](https://snyk.io/test/github/trezor/trezor-suite?targetFile=packages/connect-plugin-ethereum/package.json)
 
 T1B1 firmware currently does not support constructing [EIP-712](https://eips.ethereum.org/EIPS/eip-712)
@@ -16,4 +16,4 @@ For more information refer to [docs/ethereumSignTypedData](../../docs/packages/c
 
 ## Publishing
 
-[Follow instructions](../../docs/releases/npm-packages.md) how to publish @trezor package to npm registry.
+[Follow instructions](../../docs/releases/npm-packages.md) how to publish @cerberus package to npm registry.

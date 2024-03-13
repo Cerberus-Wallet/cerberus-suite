@@ -3,7 +3,7 @@ import { RefreshControl } from 'react-native';
 import { useDispatch } from 'react-redux';
 
 import { syncAllAccountsWithBlockchainThunk } from '@suite-native/blockchain';
-import { useNativeStyles } from '@trezor/styles';
+import { useNativeStyles } from '@cerberus/styles';
 
 import { PortfolioContentRef } from './components/PortfolioContent';
 

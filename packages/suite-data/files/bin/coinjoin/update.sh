@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-RELEASE_URL="https://github.com/trezor/WalletWasabi/releases/latest/download"
+RELEASE_URL="https://github.com/Cerberus-Wallet/WalletWasabi/releases/latest/download"
 RELEASE_NAME="WabiSabiClientLibrary"
 
 DIST="./files/bin/coinjoin"

@@ -1,4 +1,4 @@
-import { DeviceModelInternal } from '@trezor/connect';
+import { DeviceModelInternal } from '@cerberus/connect';
 
 export const pickByDeviceModel = <Type>(
     deviceModelInternal: DeviceModelInternal | undefined,

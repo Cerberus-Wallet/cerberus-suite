@@ -1,5 +1,5 @@
 {
-    "name": "@trezor/connect-explorer-webextension",
+    "name": "@cerberus/connect-explorer-webextension",
     "version": "1.0.0",
     "private": true,
     "scripts": {
@@ -15,8 +15,8 @@
         "xvfb-maybe": "^0.2.1"
     },
     "dependencies": {
-        "@trezor/connect-explorer": "workspace:^",
-        "@trezor/connect-web": "workspace:^",
+        "@cerberus/connect-explorer": "workspace:^",
+        "@cerberus/connect-web": "workspace:^",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
     }

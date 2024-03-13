@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { Button, variables } from '@trezor/components';
-import { spacingsPx } from '@trezor/theme';
+import { Button, variables } from '@cerberus/components';
+import { spacingsPx } from '@cerberus/theme';
 import { Translation } from 'src/components/suite';
 import { useSendFormContext } from 'src/hooks/wallet';
 

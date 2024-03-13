@@ -1,4 +1,4 @@
-import { deriveAddresses as deriveAddressesOriginal, networks } from '@trezor/utxo-lib';
+import { deriveAddresses as deriveAddressesOriginal, networks } from '@cerberus/utxo-lib';
 
 import { deriveAddresses, isTaprootTx, doesTxContainAddress } from '../../src/backend/backendUtils';
 import { SEGWIT_XPUB, SEGWIT_RECEIVE_ADDRESSES } from '../fixtures/methods.fixture';

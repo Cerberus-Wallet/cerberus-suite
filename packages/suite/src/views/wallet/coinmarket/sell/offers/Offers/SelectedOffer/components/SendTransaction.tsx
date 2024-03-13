@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Translation, AccountLabeling } from 'src/components/suite';
-import { Button, variables, Spinner } from '@trezor/components';
+import { Button, variables, Spinner } from '@cerberus/components';
 import { useCoinmarketSellOffersContext } from 'src/hooks/wallet/useCoinmarketSellOffers';
 import { useWatchSellTrade } from 'src/hooks/wallet/useCoinmarket';
 

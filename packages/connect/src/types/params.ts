@@ -1,6 +1,6 @@
 // API params
 
-import { Type, TSchema, Static } from '@trezor/schema-utils';
+import { Type, TSchema, Static } from '@cerberus/schema-utils';
 
 export interface CommonParams {
     device?: {

@@ -1,7 +1,7 @@
 ## Cardano: get public key
 
 Retrieves [BIP32-Ed25519](https://cardanolaunch.com/assets/Ed25519_BIP.pdf) extended public derived by given [BIP32-Ed25519](https://cardanolaunch.com/assets/Ed25519_BIP.pdf) path.
-User is presented with a description of the requested key and asked to confirm the export on Trezor.
+User is presented with a description of the requested key and asked to confirm the export on Cerberus.
 
 ```javascript
 const result = await TrezorConnect.cardanoGetPublicKey(params);
@@ -11,7 +11,7 @@ const result = await TrezorConnect.cardanoGetPublicKey(params);
 
 [Optional common params](commonParams.md)
 
-[CardanoGetPublicKey type](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)
+[CardanoGetPublicKey type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)
 
 #### Exporting single public key
 
@@ -48,7 +48,7 @@ TrezorConnect.cardanoGetPublicKey({
 
 ### Result
 
-[CardanoPublicKey type](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)
+[CardanoPublicKey type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)
 
 Result with only one public key
 

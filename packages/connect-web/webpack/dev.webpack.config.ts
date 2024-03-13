@@ -3,9 +3,9 @@ import fs from 'fs';
 import { merge } from 'webpack-merge';
 import { WebpackPluginServe } from 'webpack-plugin-serve';
 
-// todo: https://github.com/trezor/trezor-suite/issues/5305
+// todo: https://github.com/Cerberus-Wallet/cerberus-suite/issues/5305
 import popup from '../../connect-popup/webpack/prod.webpack.config';
-// todo: https://github.com/trezor/trezor-suite/issues/5305
+// todo: https://github.com/Cerberus-Wallet/cerberus-suite/issues/5305
 import iframe from '../../connect-iframe/webpack/prod.webpack.config';
 import prod from './prod.webpack.config';
 

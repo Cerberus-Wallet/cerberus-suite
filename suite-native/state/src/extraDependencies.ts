@@ -7,9 +7,9 @@ import { extraDependenciesMock } from '@suite-common/test-utils';
 import { discoverySupportedNetworks } from '@suite-native/config';
 import { selectDevices } from '@suite-common/wallet-core';
 import { selectFiatCurrencyCode, setFiatCurrency } from '@suite-native/module-settings';
-import { PROTO } from '@trezor/connect';
-import { mergeDeepObject } from '@trezor/utils';
-import { NativeUsbTransport } from '@trezor/transport-native';
+import { PROTO } from '@cerberus/connect';
+import { mergeDeepObject } from '@cerberus/utils';
+import { NativeUsbTransport } from '@cerberus/transport-native';
 
 const deviceType = Device.isDevice ? 'device' : 'emulator';
 
@@ -46,8 +46,8 @@ export const extraDependencies: ExtraDependencies = mergeDeepObject(extraDepende
             debug: false,
             popup: false,
             manifest: {
-                email: 'info@trezor.io',
-                appUrl: '@trezor/suite',
+                email: 'info@cerberus.uraanai.com',
+                appUrl: '@cerberus/suite',
             },
         },
     } as Partial<ExtraDependencies['utils']>,

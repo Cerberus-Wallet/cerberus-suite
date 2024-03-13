@@ -1,11 +1,11 @@
-import { createDeferred, createDeferredManager, TypedEmitter } from '@trezor/utils';
-import { CustomError } from '@trezor/blockchain-link-types/lib/constants/errors';
-import { MESSAGES, RESPONSES } from '@trezor/blockchain-link-types/lib/constants';
+import { createDeferred, createDeferredManager, TypedEmitter } from '@cerberus/utils';
+import { CustomError } from '@cerberus/blockchain-link-types/lib/constants/errors';
+import { MESSAGES, RESPONSES } from '@cerberus/blockchain-link-types/lib/constants';
 import { Throttler } from './workers/throttler';
-import type { BlockchainSettings } from '@trezor/blockchain-link-types';
-import type * as ResponseTypes from '@trezor/blockchain-link-types/lib/responses';
-import type * as MessageTypes from '@trezor/blockchain-link-types/lib/messages';
-import type { Events } from '@trezor/blockchain-link-types/lib/events';
+import type { BlockchainSettings } from '@cerberus/blockchain-link-types';
+import type * as ResponseTypes from '@cerberus/blockchain-link-types/lib/responses';
+import type * as MessageTypes from '@cerberus/blockchain-link-types/lib/messages';
+import type { Events } from '@cerberus/blockchain-link-types/lib/events';
 
 const workerWrapper = (factory: BlockchainSettings['worker']): Worker | Promise<Worker> => {
     if (typeof factory === 'function') return factory();
@@ -358,13 +358,13 @@ export type BlockchainLinkResponse<T extends keyof BlockchainLinkInterface> =
         : never;
 
 // reexport types
-export type { Message } from '@trezor/blockchain-link-types/lib/messages';
+export type { Message } from '@cerberus/blockchain-link-types/lib/messages';
 export type {
     Response,
     BlockEvent,
     NotificationEvent,
     FiatRatesEvent,
-} from '@trezor/blockchain-link-types/lib/responses';
+} from '@cerberus/blockchain-link-types/lib/responses';
 export type {
     Address,
     AccountAddresses,
@@ -382,4 +382,4 @@ export type {
     Transaction,
     TransactionDetail,
     Utxo,
-} from '@trezor/blockchain-link-types/lib/common';
+} from '@cerberus/blockchain-link-types/lib/common';

@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import styled from 'styled-components';
 
-import { Image } from '@trezor/components';
+import { Image } from '@cerberus/components';
 import { selectDevice } from '@suite-common/wallet-core';
 
 import {

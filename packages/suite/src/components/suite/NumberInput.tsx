@@ -11,11 +11,11 @@ import {
 import { Control, FieldValues, useController, UseControllerProps } from 'react-hook-form';
 import BigNumber from 'bignumber.js';
 
-import { Input, InputProps } from '@trezor/components';
+import { Input, InputProps } from '@cerberus/components';
 import { localizeNumber } from '@suite-common/wallet-utils';
 import { Locale } from 'src/config/suite/languages';
 import { useSelector } from 'src/hooks/suite';
-import { getLocaleSeparators } from '@trezor/utils';
+import { getLocaleSeparators } from '@cerberus/utils';
 
 const isValidDecimalString = (value: string) => /^([^.]*)\.[^.]+$/.test(value);
 const hasLeadingZeroes = (value: string) => /^0+(\d+\.\d*|\d+)$/.test(value);

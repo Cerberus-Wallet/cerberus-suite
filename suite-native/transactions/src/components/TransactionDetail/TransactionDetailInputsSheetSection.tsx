@@ -11,7 +11,7 @@ import {
     CryptoAmountFormatter,
     EthereumTokenAmountFormatter,
 } from '@suite-native/formatters';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 
 import { TransactionTranfer } from '../../selectors';
 

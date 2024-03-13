@@ -1,4 +1,4 @@
-const DEFAULT_SRC = 'https://connect.trezor.io/9/';
+const DEFAULT_SRC = 'https://connect.cerberus.uraanai.com/9/';
 
 window.TrezorConnect.init({
     lazyLoad: true,

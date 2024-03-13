@@ -9,14 +9,14 @@ import type {
     AccountAddresses,
     AccountInfo,
     InternalTransfer,
-} from '@trezor/blockchain-link-types';
+} from '@cerberus/blockchain-link-types';
 import type {
     ServerInfo,
     AccountInfo as BlockbookAccountInfo,
     AccountUtxo as BlockbookAccountUtxo,
     Transaction as BlockbookTransaction,
     VinVout,
-} from '@trezor/blockchain-link-types/lib/blockbook';
+} from '@cerberus/blockchain-link-types/lib/blockbook';
 
 import { Addresses, filterTargets, enhanceVinVout, sumVinVout, transformTarget } from './utils';
 

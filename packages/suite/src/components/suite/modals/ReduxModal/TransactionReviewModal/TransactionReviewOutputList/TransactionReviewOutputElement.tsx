@@ -1,13 +1,13 @@
 import { forwardRef, ReactNode } from 'react';
 import styled from 'styled-components';
 
-import { Truncate, variables } from '@trezor/components';
+import { Truncate, variables } from '@cerberus/components';
 import { FiatValue, FormattedCryptoAmount, Translation } from 'src/components/suite';
 import { Network, Account, NetworkSymbol } from 'src/types/wallet';
-import { TokenInfo } from '@trezor/connect';
+import { TokenInfo } from '@cerberus/connect';
 import { amountToSatoshi } from '@suite-common/wallet-utils';
 import { TransactionReviewStepIndicatorProps } from './TransactionReviewStepIndicator';
-import { zIndices } from '@trezor/theme';
+import { zIndices } from '@cerberus/theme';
 import { DeviceDisplay } from '../../../../DeviceDisplay/DeviceDisplay';
 
 const OutputWrapper = styled.div`

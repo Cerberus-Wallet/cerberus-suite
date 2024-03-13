@@ -1,8 +1,8 @@
 import EventEmitter from 'events';
 
-// NOTE: @trezor/connect part is intentionally not imported from the index due to NormalReplacementPlugin
+// NOTE: @cerberus/connect part is intentionally not imported from the index due to NormalReplacementPlugin
 // in packages/suite-build/configs/web.webpack.config.ts
-import * as ERRORS from '@trezor/connect/lib/constants/errors';
+import * as ERRORS from '@cerberus/connect/lib/constants/errors';
 import {
     POPUP,
     IFRAME,
@@ -19,12 +19,12 @@ import {
     UiResponseEvent,
     CallMethod,
     CoreEventMessage,
-} from '@trezor/connect/lib/events';
-import type { ConnectSettings, Manifest } from '@trezor/connect/lib/types';
-import { factory } from '@trezor/connect/lib/factory';
-import { initLog } from '@trezor/connect/lib/utils/debug';
-import { config } from '@trezor/connect/lib/data/config';
-import { createDeferredManager } from '@trezor/utils';
+} from '@cerberus/connect/lib/events';
+import type { ConnectSettings, Manifest } from '@cerberus/connect/lib/types';
+import { factory } from '@cerberus/connect/lib/factory';
+import { initLog } from '@cerberus/connect/lib/utils/debug';
+import { config } from '@cerberus/connect/lib/data/config';
+import { createDeferredManager } from '@cerberus/utils';
 
 import * as iframe from './iframe';
 import * as popup from './popup';
@@ -32,7 +32,7 @@ import webUSBButton from './webusb/button';
 import { parseConnectSettings } from './connectSettings';
 
 const eventEmitter = new EventEmitter();
-const _log = initLog('@trezor/connect-web');
+const _log = initLog('@cerberus/connect-web');
 
 let _settings = parseConnectSettings();
 let _popupManager: popup.PopupManager | undefined;
@@ -331,4 +331,4 @@ const TrezorConnect = factory({
 });
 
 export default TrezorConnect;
-export * from '@trezor/connect/lib/exports';
+export * from '@cerberus/connect/lib/exports';

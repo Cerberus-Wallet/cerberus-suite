@@ -3,7 +3,7 @@ import TrezorConnect, {
     DEVICE_EVENT,
     TRANSPORT_EVENT,
     WEBEXTENSION,
-} from '@trezor/connect-web';
+} from '@cerberus/connect-web';
 
 import { TrezorConnectDevice, Dispatch, Field, GetState } from '../types';
 import * as ACTIONS from './index';
@@ -41,8 +41,8 @@ export const init =
     async (dispatch: Dispatch) => {
         window.TrezorConnect = TrezorConnect;
 
-        // The event `WEBEXTENSION.CHANNEL_HANDSHAKE_CONFIRM` is coming from @trezor/connect-webextension/proxy
-        // that is replacing @trezor/connect-web when connect-explorer is run in connect-explorer-webextension
+        // The event `WEBEXTENSION.CHANNEL_HANDSHAKE_CONFIRM` is coming from @cerberus/connect-webextension/proxy
+        // that is replacing @cerberus/connect-web when connect-explorer is run in connect-explorer-webextension
         // so Typescript cannot recognize it.
         (TrezorConnect.on as any)(WEBEXTENSION.CHANNEL_HANDSHAKE_CONFIRM, event => {
             if (event.type === WEBEXTENSION.CHANNEL_HANDSHAKE_CONFIRM) {
@@ -63,10 +63,10 @@ export const init =
 
         const { host } = window.location;
 
-        if (process?.env?.__CERBERUS_CONNECT_SRC && host !== 'connect.trezor.io') {
+        if (process?.env?.__CERBERUS_CONNECT_SRC && host !== 'connect.cerberus.uraanai.com') {
             window.__CERBERUS_CONNECT_SRC = process?.env?.__CERBERUS_CONNECT_SRC;
         }
-        // yarn workspace @trezor/connect-explorer dev starts @trezor/connect-web on localhost port
+        // yarn workspace @cerberus/connect-explorer dev starts @cerberus/connect-web on localhost port
         // so we may use it
         if (!window.__CERBERUS_CONNECT_SRC && host.startsWith('localhost')) {
             // use local connect for local development
@@ -78,9 +78,9 @@ export const init =
         }
 
         if (!window.__CERBERUS_CONNECT_SRC) {
-            console.log('using production @trezor/connect');
+            console.log('using production @cerberus/connect');
         } else {
-            console.log('using @trezor/connect hosted on: ', window.__CERBERUS_CONNECT_SRC);
+            console.log('using @cerberus/connect hosted on: ', window.__CERBERUS_CONNECT_SRC);
         }
 
         const connectOptions = {
@@ -89,8 +89,8 @@ export const init =
             debug: true,
             lazyLoad: true,
             manifest: {
-                email: 'info@trezor.io',
-                appUrl: '@trezor/suite',
+                email: 'info@cerberus.uraanai.com',
+                appUrl: '@cerberus/suite',
             },
             trustedHost: false,
             ...options,

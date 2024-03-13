@@ -1,6 +1,6 @@
 ## Symmetric key-value encryption
 
-Cipher key value provides symmetric encryption in the Trezor device where the user might be forced to confirm the encryption/decryption on the display. The key for the encryption is constructed from the private key on the BIP address, the key displayed on the device, and the two informations about whether to ask for confirmation. It is constructed in such a way, that different path, key or the confirm information will get a different encryption key and IV. So, you cannot "skip" the confirmation by using different input. IV can be either manually set, or it is computed together with the key.The value must be divisible into 16-byte blocks. The application has to pad the blocks itself and ensure safety; for example, by using PKCS7.
+Cipher key value provides symmetric encryption in the Cerberus device where the user might be forced to confirm the encryption/decryption on the display. The key for the encryption is constructed from the private key on the BIP address, the key displayed on the device, and the two informations about whether to ask for confirmation. It is constructed in such a way, that different path, key or the confirm information will get a different encryption key and IV. So, you cannot "skip" the confirmation by using different input. IV can be either manually set, or it is computed together with the key.The value must be divisible into 16-byte blocks. The application has to pad the blocks itself and ensure safety; for example, by using PKCS7.
 
 More information can be found in [SLIP-0011](https://github.com/satoshilabs/slips/blob/master/slip-0011.md).
 
@@ -34,7 +34,7 @@ Return encrypted value:
 ```javascript
 TrezorConnect.cipherKeyValue({
     path: "m/49'/0'/0'",
-    key: 'This text is displayed on Trezor during encrypt',
+    key: 'This text is displayed on Cerberus during encrypt',
     value: '1c0ffeec0ffeec0ffeec0ffeec0ffee1',
     encrypt: true,
     askOnEncrypt: true,
@@ -49,24 +49,24 @@ TrezorConnect.cipherKeyValue({
     bundle: [
         {
             path: "m/49'/0'/0'",
-            key: '1 text on Trezor',
+            key: '1 text on Cerberus',
             value: '1c0ffeec0ffeec0ffeec0ffeec0ffee1',
             encrypt: true,
         },
         {
             path: "m/49'/0'/1'",
-            key: '2 text on Trezor',
+            key: '2 text on Cerberus',
             value: '1c0ffeec0ffeec0ffeec0ffeec0ffee1',
             encrypt: false,
         },
-        { path: "m/49'/0'/2'", key: '3 text on Trezor', value: '1c0ffeec0ffeec0ffeec0ffeec0ffee1' },
+        { path: "m/49'/0'/2'", key: '3 text on Cerberus', value: '1c0ffeec0ffeec0ffeec0ffeec0ffee1' },
     ],
 });
 ```
 
 ### Result
 
-[CipheredValue type](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/cipherKeyValue.ts)
+[CipheredValue type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/cipherKeyValue.ts)
 
 Result with only one value
 

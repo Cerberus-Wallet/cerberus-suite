@@ -1,9 +1,9 @@
 import { BottomSheet, Button, VStack, Text } from '@suite-native/atoms';
 import { useTranslate } from '@suite-native/intl';
 import { Link } from '@suite-native/link';
-import { useNativeStyles, prepareNativeStyle } from '@trezor/styles';
+import { useNativeStyles, prepareNativeStyle } from '@cerberus/styles';
 
-const ACCOUNT_TYPES_URL = 'https://trezor.io/learn/a/multiple-accounts-in-trezor-suite';
+const ACCOUNT_TYPES_URL = 'https://cerberus.uraanai.com/learn/a/multiple-accounts-in-trezor-suite';
 
 const descStyle = prepareNativeStyle(utils => ({
     alignSelf: 'center',

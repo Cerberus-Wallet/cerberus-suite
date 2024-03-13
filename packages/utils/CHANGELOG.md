@@ -3,7 +3,7 @@
 -   fix: from g:tsx to local tsx in prepublish script (d21d698b2)
 -   fix(suite): allow for N screens to be shown on suite (not just hardcoded 2) (a0f1b3c4d)
 -   chore(suite): autofix newlines (c82455e74)
--   chore(utils): remove build step requirement from @trezor/utils (#11176) (6cd3d3c81)
+-   chore(utils): remove build step requirement from @cerberus/utils (#11176) (6cd3d3c81)
 -   chore(repo): ESLint refactor + speed up 70% (#11143) (44fa12a79)
 -   chore: use global tsx (c21d81f66)
 -   chore: update typescript and use global tsc (84bc9b8bd)

@@ -2,8 +2,8 @@ import { Dimensions, View } from 'react-native';
 import ReactQRCode from 'react-qr-code';
 
 import { Box } from '@suite-native/atoms';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
-import { colorVariants } from '@trezor/theme';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
+import { colorVariants } from '@cerberus/theme';
 
 type QRCodeProps = {
     data: string;

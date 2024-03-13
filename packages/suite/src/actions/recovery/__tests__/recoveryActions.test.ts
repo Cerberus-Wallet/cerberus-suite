@@ -1,4 +1,4 @@
-import { DeviceModelInternal } from '@trezor/connect';
+import { DeviceModelInternal } from '@cerberus/connect';
 
 import { configureStore } from 'src/support/tests/configureStore';
 import recoveryReducer from 'src/reducers/recovery/recoveryReducer';

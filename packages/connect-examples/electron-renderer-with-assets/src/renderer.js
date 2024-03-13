@@ -5,7 +5,7 @@ import TrezorConnect, {
     DEVICE_EVENT,
     TRANSPORT,
     DEVICE,
-} from '@trezor/connect-web';
+} from '@cerberus/connect-web';
 
 // print log helper
 const printLog = data => {
@@ -18,7 +18,7 @@ const printLog = data => {
     }
 };
 
-// SETUP @trezor/connect
+// SETUP @cerberus/connect
 
 // Listen to TRANSPORT_EVENT
 TrezorConnect.on(TRANSPORT_EVENT, event => {
@@ -103,8 +103,8 @@ TrezorConnect.init({
     popup: false, // render your own UI
     debug: false, // see what's going on inside connect
     // lazyLoad: true, // set to "false" (default) if you want to start communication with bridge on application start (and detect connected device right away)
-    // set it to "true", then @trezor/connect will not be initialized until you call some TrezorConnect.method()
-    // this is useful when you don't know if you are dealing with Trezor user
+    // set it to "true", then @cerberus/connect will not be initialized until you call some TrezorConnect.method()
+    // this is useful when you don't know if you are dealing with Cerberus user
     manifest: {
         email: 'email@developer.com',
         appUrl: 'electron-app-boilerplate',

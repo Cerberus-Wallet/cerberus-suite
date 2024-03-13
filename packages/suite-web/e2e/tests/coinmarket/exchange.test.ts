@@ -46,7 +46,7 @@ describe.skip('Coinmarket exchange', () => {
      * 5. Pick one offer
      * 6. Verifies the amounts, currencies, addresses and providers are all in accordance with the mock
      * 7. Confirms the transaction and verifies the same information in the modal
-     * 8. Return back to the Exchange tab in Trezor Suite
+     * 8. Return back to the Exchange tab in Cerberus Suite
      */
     it('Should exchange crypto successfully', () => {
         const testData = {

@@ -18,17 +18,17 @@ import {
     getWindowHeight,
     getWindowWidth,
     isCodesignBuild,
-} from '@trezor/env-utils';
+} from '@cerberus/env-utils';
 import { LogEntry } from '@suite-common/logger';
-import { DEVICE } from '@trezor/connect';
+import { DEVICE } from '@cerberus/connect';
 import { getCustomBackends } from '@suite-common/wallet-utils';
 import {
     getBootloaderHash,
     getBootloaderVersion,
     getFirmwareRevision,
     getFirmwareVersion,
-} from '@trezor/device-utils';
-import { DeepPartial } from '@trezor/type-utils';
+} from '@cerberus/device-utils';
+import { DeepPartial } from '@cerberus/type-utils';
 import { Discovery } from '@suite-common/wallet-types';
 import { getPhysicalDeviceUniqueIds } from '@suite-common/suite-utils';
 

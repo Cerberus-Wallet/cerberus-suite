@@ -1,13 +1,13 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/popup/view/browser.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/popup/view/browser.js
 
-import { SystemInfo } from '@trezor/connect';
-import { storage } from '@trezor/connect-common';
+import { SystemInfo } from '@cerberus/connect';
+import { storage } from '@cerberus/connect-common';
 import { container, showView } from './common';
 
 export const initBrowserView = (systemInfo: SystemInfo): Promise<boolean> => {
     if (systemInfo?.os.mobile) {
         // popup is not supported on mobile devices
-        // webusb is now available only on trezor.io domains and bridge can't be installed on mobile
+        // webusb is now available only on cerberus.uraanai.com domains and bridge can't be installed on mobile
         showView('smartphones-not-supported');
 
         return Promise.resolve(false);

@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Modal, Pressable } from 'react-native';
 import Animated from 'react-native-reanimated';
 
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import { Button, Card, VStack, useBottomSheetAnimation, Pictogram } from '@suite-native/atoms';
 
 import { useShakeAnimation } from '../useShakeAnimation';

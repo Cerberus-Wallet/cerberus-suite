@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
-import { variables, Card, SkeletonRectangle } from '@trezor/components';
+import { variables, Card, SkeletonRectangle } from '@cerberus/components';
 import { HiddenPlaceholder, FormattedCryptoAmount, Sign } from 'src/components/suite';
 import { Account } from 'src/types/wallet';
 import BigNumber from 'bignumber.js';

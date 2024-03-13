@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Translation } from 'src/components/suite';
-import { Card, Icon, colors, variables } from '@trezor/components';
+import { Card, Icon, colors, variables } from '@cerberus/components';
 import { useCoinmarketP2pOffersContext } from 'src/hooks/wallet/useCoinmarketP2pOffers';
 import { P2pStep } from 'src/types/wallet/coinmarketP2pOffers';
 import { GetStartedStep } from './GetStartedStep';

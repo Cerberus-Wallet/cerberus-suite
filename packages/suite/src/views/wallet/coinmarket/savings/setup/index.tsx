@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { WithSelectedAccountLoadedProps } from 'src/components/wallet';
-import { Button, variables, Select, Flag } from '@trezor/components';
+import { Button, variables, Select, Flag } from '@cerberus/components';
 import { useSavingsSetup } from 'src/hooks/wallet/useCoinmarketSavingsSetup';
 import { Controller } from 'react-hook-form';
 import { Translation } from 'src/components/suite';

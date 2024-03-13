@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Button, Image } from '@trezor/components';
+import { Button, Image } from '@cerberus/components';
 import { Translation, Modal, ModalProps } from 'src/components/suite';
 import { changePin } from 'src/actions/settings/deviceSettingsActions';
 import { useDispatch } from 'src/hooks/suite';

@@ -1,4 +1,4 @@
-import { enumUtils, getRandomNumberInRange } from '@trezor/utils';
+import { enumUtils, getRandomNumberInRange } from '@cerberus/utils';
 
 import type { CoinjoinRound, CoinjoinRoundOptions } from '../CoinjoinRound';
 import { EndRoundState, WabiSabiProtocolErrorCode } from '../../enums';

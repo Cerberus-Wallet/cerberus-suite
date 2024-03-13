@@ -1,5 +1,5 @@
 {
-    "name": "@trezor/node-utils",
+    "name": "@cerberus/node-utils",
     "version": "1.0.0",
     "private": true,
     "license": "See LICENSE.md in repo root",
@@ -11,7 +11,7 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
-        "@trezor/type-utils": "workspace:*",
-        "@trezor/utils": "workspace:*"
+        "@cerberus/type-utils": "workspace:*",
+        "@cerberus/utils": "workspace:*"
     }
 }

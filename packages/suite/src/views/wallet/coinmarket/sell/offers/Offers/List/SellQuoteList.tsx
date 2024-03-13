@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { SellFiatTrade } from 'invity-api';
 
-import { variables, Icon, H2 } from '@trezor/components';
+import { variables, Icon, H2 } from '@cerberus/components';
 import { useCoinmarketSellOffersContext } from 'src/hooks/wallet/useCoinmarketSellOffers';
 import { Translation } from 'src/components/suite';
 import { CoinmarketRefreshTime } from 'src/views/wallet/coinmarket/common';

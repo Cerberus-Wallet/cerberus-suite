@@ -1,4 +1,4 @@
-import { Device } from '@trezor/connect';
+import { Device } from '@cerberus/connect';
 
 import { isDeviceInBootloaderMode } from './modeUtils';
 

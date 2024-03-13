@@ -2,7 +2,7 @@ import { AbstractMethod } from '../core/AbstractMethod';
 import { PROTO } from '../constants';
 import { UI } from '../events';
 import { getFirmwareRange } from './common/paramsValidator';
-import { Assert } from '@trezor/schema-utils';
+import { Assert } from '@cerberus/schema-utils';
 
 export default class GetFirmwareHash extends AbstractMethod<
     'getFirmwareHash',

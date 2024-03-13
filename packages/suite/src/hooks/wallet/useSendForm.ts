@@ -1,7 +1,7 @@
 import { createContext, useContext, useCallback, useState, useEffect, useRef } from 'react';
 import { useForm, useFieldArray } from 'react-hook-form';
 import { useDispatch, useSelector } from 'src/hooks/suite';
-import { useDidUpdate } from '@trezor/react-utils';
+import { useDidUpdate } from '@cerberus/react-utils';
 import {
     getDraft,
     removeDraft,

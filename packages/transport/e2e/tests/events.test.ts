@@ -1,7 +1,7 @@
-import * as messages from '@trezor/protobuf/messages.json';
-import { TrezorUserEnvLink } from '@trezor/trezor-user-env-link';
+import * as messages from '@cerberus/protobuf/messages.json';
+import { TrezorUserEnvLink } from '@cerberus/trezor-user-env-link';
 
-// testing build. yarn workspace @trezor/transport build:lib is a required step therefore
+// testing build. yarn workspace @cerberus/transport build:lib is a required step therefore
 import { BridgeTransport, Descriptor } from '../../lib';
 
 // todo: introduce global jest config for e2e

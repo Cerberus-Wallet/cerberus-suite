@@ -1,4 +1,4 @@
-import type { TokenTransfer } from '@trezor/blockchain-link';
+import type { TokenTransfer } from '@cerberus/blockchain-link';
 import type { TokenDefinitions, WalletAccountTransaction } from '@suite-common/wallet-types';
 
 export const getIsZeroValuePhishingFixtures = [

@@ -2,7 +2,7 @@ import { memo, useState } from 'react';
 import styled, { css } from 'styled-components';
 import { AnimatePresence } from 'framer-motion';
 import { selectIsPhishingTransaction } from '@suite-common/wallet-core';
-import { variables, Button, Card } from '@trezor/components';
+import { variables, Button, Card } from '@cerberus/components';
 import { Translation } from 'src/components/suite';
 import { useDispatch, useSelector } from 'src/hooks/suite';
 import { openModal } from 'src/actions/suite/modalActions';

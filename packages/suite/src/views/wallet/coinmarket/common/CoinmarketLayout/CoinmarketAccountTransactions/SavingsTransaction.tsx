@@ -1,6 +1,6 @@
 import styled, { useTheme } from 'styled-components';
 
-import { variables, Icon } from '@trezor/components';
+import { variables, Icon } from '@cerberus/components';
 import {
     Translation,
     HiddenPlaceholder,

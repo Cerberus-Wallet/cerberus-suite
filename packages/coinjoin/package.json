@@ -1,16 +1,16 @@
 {
-    "name": "@trezor/coinjoin",
+    "name": "@cerberus/coinjoin",
     "version": "1.0.0",
     "private": true,
-    "author": "Trezor <info@trezor.io>",
-    "homepage": "https://github.com/trezor/trezor-suite/packages/coinjoin",
+    "author": "Cerberus <info@cerberus.uraanai.com>",
+    "homepage": "https://github.com/Cerberus-Wallet/cerberus-suite/packages/coinjoin",
     "description": "Coinjoin client",
     "repository": {
         "type": "git",
-        "url": "git://github.com/trezor/trezor-suite.git"
+        "url": "git://github.com/Cerberus-Wallet/cerberus-suite.git"
     },
     "bugs": {
-        "url": "https://github.com/trezor/trezor-suite/issues"
+        "url": "https://github.com/Cerberus-Wallet/cerberus-suite/issues"
     },
     "license": "See LICENSE.md in repo root",
     "sideEffects": false,
@@ -24,11 +24,11 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
-        "@trezor/blockchain-link": "workspace:*",
-        "@trezor/blockchain-link-types": "workspace:*",
-        "@trezor/blockchain-link-utils": "workspace:*",
-        "@trezor/utils": "workspace:*",
-        "@trezor/utxo-lib": "workspace:*",
+        "@cerberus/blockchain-link": "workspace:*",
+        "@cerberus/blockchain-link-types": "workspace:*",
+        "@cerberus/blockchain-link-utils": "workspace:*",
+        "@cerberus/utils": "workspace:*",
+        "@cerberus/utxo-lib": "workspace:*",
         "bignumber.js": "^9.1.2",
         "cross-fetch": "^4.0.0",
         "events": "^3.3.0",

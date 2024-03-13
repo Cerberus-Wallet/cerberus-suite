@@ -1,5 +1,5 @@
-import { parseHostname, urlToOnion } from '@trezor/utils';
-import { TOR_URLS } from '@trezor/urls';
+import { parseHostname, urlToOnion } from '@cerberus/utils';
+import { TOR_URLS } from '@cerberus/urls';
 import { TorStatus } from 'src/types/suite';
 
 /**

@@ -37,8 +37,8 @@ const connectInitSettings = {
     debug: false,
     popup: false,
     manifest: {
-        email: 'info@trezor.io',
-        appUrl: '@trezor/suite',
+        email: 'info@cerberus.uraanai.com',
+        appUrl: '@cerberus/suite',
     },
     sharedLogger: false,
 };

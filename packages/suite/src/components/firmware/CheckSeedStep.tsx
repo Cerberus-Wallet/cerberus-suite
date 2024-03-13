@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Button, Checkbox, variables } from '@trezor/components';
+import { Button, Checkbox, variables } from '@cerberus/components';
 import { useDevice, useDispatch, useFirmware } from 'src/hooks/suite';
 import { Translation } from 'src/components/suite';
 import { OnboardingStepBox } from 'src/components/onboarding';
@@ -8,7 +8,7 @@ import { FirmwareButtonsRow } from './Buttons/FirmwareButtonsRow';
 import { FirmwareSwitchWarning } from './FirmwareSwitchWarning';
 import { goto } from 'src/actions/suite/routerActions';
 import { SettingsAnchor } from 'src/constants/suite/anchors';
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 
 const StyledCheckbox = styled(Checkbox)`
     margin: 16px 0;

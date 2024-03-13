@@ -1,4 +1,4 @@
-import { versionUtils } from '@trezor/utils';
+import { versionUtils } from '@cerberus/utils';
 import { PROTO } from '../constants';
 import { config } from '../data/config';
 import { Features, CoinInfo, UnavailableCapabilities, DeviceModelInternal } from '../types';

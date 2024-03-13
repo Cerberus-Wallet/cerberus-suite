@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 import styled from 'styled-components';
 
-import { Button, Paragraph } from '@trezor/components';
+import { Button, Paragraph } from '@cerberus/components';
 import { UserContextPayload } from '@suite-common/suite-types';
 import { isDevEnv } from '@suite-common/suite-utils';
 import { RequestEnableTorResponse } from '@suite-common/suite-config';

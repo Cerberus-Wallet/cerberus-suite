@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import React, { useEffect, useState } from 'react';
 import Lottie, { LottieOptions } from 'lottie-react';
 
-import { DeviceModelInternal } from '@trezor/connect';
+import { DeviceModelInternal } from '@cerberus/connect';
 import { AnimationWrapper, Shape } from './AnimationPrimitives';
 import { resolveStaticPath } from '../../utils/resolveStaticPath';
 
@@ -26,7 +26,7 @@ export const LottieAnimation = ({
     type,
     loop = false,
     shape,
-    // if no Trezor available, show flagship model
+    // if no Cerberus available, show flagship model
     deviceModelInternal = DeviceModelInternal.T2T1,
     ...props
 }: LottieAnimationProps) => {

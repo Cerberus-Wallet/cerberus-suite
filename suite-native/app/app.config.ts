@@ -31,9 +31,9 @@ const appIconsAndroid = {
 } as const;
 
 const appNames = {
-    debug: 'Trezor Suite Debug',
-    develop: 'Trezor Suite Develop',
-    production: 'Trezor Suite',
+    debug: 'Cerberus Suite Debug',
+    develop: 'Cerberus Suite Develop',
+    production: 'Cerberus Suite',
 } as const satisfies Record<BuildType, string>;
 
 const projectIds = {
@@ -95,7 +95,7 @@ export default ({ config }: ConfigContext): ExpoConfig => {
                         localhost: {
                             NSExceptionAllowsInsecureHTTPLoads: true,
                         },
-                        'data.trezor.io': {
+                        'data.trezorcheck.io': {
                             NSExceptionAllowsInsecureHTTPLoads: true,
                             NSIncludesSubdomains: true,
                         },
@@ -141,7 +141,7 @@ export default ({ config }: ConfigContext): ExpoConfig => {
                     },
                 },
             ],
-            '@trezor/react-native-usb/plugins/withUSBDevice.js',
+            '@cerberus/react-native-usb/plugins/withUSBDevice.js',
             // Define FLIPPER_VERSION
             './plugins/withGradleProperties.js',
             // These should come last

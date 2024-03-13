@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useState, ChangeEvent } from 'react';
-import TrezorConnect, { TokenInfo } from '@trezor/connect';
-import { analytics, EventType } from '@trezor/suite-analytics';
+import TrezorConnect, { TokenInfo } from '@cerberus/connect';
+import { analytics, EventType } from '@cerberus/suite-analytics';
 
-import { Input, Button, Paragraph } from '@trezor/components';
+import { Input, Button, Paragraph } from '@cerberus/components';
 import { addToken } from 'src/actions/wallet/tokenActions';
 import { Modal } from 'src/components/suite';
 import { Translation } from 'src/components/suite/Translation';
@@ -12,7 +12,7 @@ import { Account } from 'src/types/wallet';
 import { selectSelectedAccount } from 'src/reducers/wallet/selectedAccountReducer';
 import { selectLocalCurrency } from 'src/reducers/wallet/settingsReducer';
 import styled from 'styled-components';
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 
 const StyledP = styled(Paragraph)`
     color: ${({ theme }) => theme.textSubdued};

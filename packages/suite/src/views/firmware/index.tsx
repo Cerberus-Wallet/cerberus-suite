@@ -3,7 +3,7 @@ import { useState } from 'react';
 import styled from 'styled-components';
 
 import { acquireDevice, selectDevice } from '@suite-common/wallet-core';
-import { ConfirmOnDevice, variables } from '@trezor/components';
+import { ConfirmOnDevice, variables } from '@cerberus/components';
 
 import { closeModalApp } from 'src/actions/suite/routerActions';
 import { TrezorDevice } from 'src/types/suite';
@@ -19,7 +19,7 @@ import { DeviceUnreadable } from 'src/views/suite/device-unreadable';
 import { Translation, Modal } from 'src/components/suite';
 import { OnboardingStepBox } from 'src/components/onboarding';
 import { useDispatch, useFirmware, useSelector } from 'src/hooks/suite';
-import { DeviceModelInternal } from '@trezor/connect';
+import { DeviceModelInternal } from '@cerberus/connect';
 
 const Wrapper = styled.div<{ isWithTopPadding: boolean }>`
     display: flex;

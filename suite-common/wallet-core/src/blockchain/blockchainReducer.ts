@@ -11,7 +11,7 @@ import {
     BlockchainError,
     BlockchainReconnecting,
     BlockchainInfo,
-} from '@trezor/connect';
+} from '@cerberus/connect';
 
 import { blockchainActions } from './blockchainActions';
 

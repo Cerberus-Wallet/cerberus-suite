@@ -84,7 +84,7 @@ export class TransactionBase<S = undefined> {
     // Litecoin
     // transaction with hogex input and output
     // for example
-    // see https://ltc2.trezor.io/tx/efe11e0d8d562e73b7795c2a3b7e44c6b6390f2c42c3ae90bb1005009c27a3f3
+    // see https://ltc2.trezorcheck.io/tx/efe11e0d8d562e73b7795c2a3b7e44c6b6390f2c42c3ae90bb1005009c27a3f3
     isMwebPegOutTx(): boolean {
         if (!isNetworkType('litecoin', this.network)) {
             return false;

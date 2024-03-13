@@ -3,7 +3,7 @@ import { Dimensions, ImageBackground } from 'react-native';
 
 import { Screen } from '@suite-native/navigation';
 import { Box } from '@suite-native/atoms';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import { useActiveColorScheme } from '@suite-native/theme';
 
 import { OnboardingScreenHeader } from './OnboardingScreenHeader';

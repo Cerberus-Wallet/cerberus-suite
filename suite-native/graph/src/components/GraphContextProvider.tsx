@@ -2,10 +2,10 @@ import { ReactNode } from 'react';
 import { IntlProvider } from 'react-intl';
 
 // FIXME this is only temporary until Intl refactor will be finished
-import enMessages from '@trezor/suite-data/files/translations/en.json';
+import enMessages from '@cerberus/suite-data/files/translations/en.json';
 import { useActiveColorScheme } from '@suite-native/theme';
-import { createRenderer, StylesProvider } from '@trezor/styles';
-import { prepareNativeTheme } from '@trezor/theme';
+import { createRenderer, StylesProvider } from '@cerberus/styles';
+import { prepareNativeTheme } from '@cerberus/theme';
 
 type ProviderProps = {
     children: ReactNode;

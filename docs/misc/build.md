@@ -10,7 +10,7 @@ The folder structure is as follows:
 
 These Webpack configurations are using TypeScript and use the `tsconfig.json` file at the root of the package. This is specified via the `TS_NODE_PROJECT` environment variable to avoid any issues regardless of the location where the command is run.
 
-The following commands are available in this package (using `yarn run` at the root of the package or `yarn workspace @trezor/suite-build run` at the root of the project):
+The following commands are available in this package (using `yarn run` at the root of the package or `yarn workspace @cerberus/suite-build run` at the root of the project):
 | Command | Description |
 | --- | --- |
 | dev:web | Runs a watch build of `suite-web` with development settings and serves it. |

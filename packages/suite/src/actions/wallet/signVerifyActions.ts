@@ -1,4 +1,4 @@
-import TrezorConnect, { Unsuccessful, Success } from '@trezor/connect';
+import TrezorConnect, { Unsuccessful, Success } from '@cerberus/connect';
 import { notificationsActions } from '@suite-common/toast-notifications';
 import { selectDevice } from '@suite-common/wallet-core';
 

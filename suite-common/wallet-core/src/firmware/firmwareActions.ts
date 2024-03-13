@@ -1,7 +1,7 @@
 import { createAction } from '@reduxjs/toolkit';
 
 import { AcquiredDevice, FirmwareStatus } from '@suite-common/suite-types';
-import { Device, FirmwareType } from '@trezor/connect';
+import { Device, FirmwareType } from '@cerberus/connect';
 
 export const firmwareActionsPrefix = '@common/wallet-core/firmware';
 

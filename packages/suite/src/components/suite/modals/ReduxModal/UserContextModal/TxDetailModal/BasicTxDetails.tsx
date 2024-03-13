@@ -1,5 +1,5 @@
 import styled, { useTheme } from 'styled-components';
-import { Icon, variables, CoinLogo, H3, useElevation } from '@trezor/components';
+import { Icon, variables, CoinLogo, H3, useElevation } from '@cerberus/components';
 import { Translation, FormattedDateWithBullet } from 'src/components/suite';
 import { WalletAccountTransaction, Network } from 'src/types/wallet';
 import {
@@ -19,7 +19,7 @@ import {
     mapElevationToBorder,
     spacingsPx,
     typography,
-} from '@trezor/theme';
+} from '@cerberus/theme';
 
 const Wrapper = styled.div<{ elevation: Elevation }>`
     background: ${mapElevationToBackground};
@@ -278,7 +278,7 @@ export const BasicTxDetails = ({
                         </Title>
 
                         <Value>
-                            {/* tx.feeRate was added in @trezor/blockchain-link 2.1.5 meaning that users
+                            {/* tx.feeRate was added in @cerberus/blockchain-link 2.1.5 meaning that users
                             might have locally saved old transactions without this field. since we
                             cant reliably migrate this data, we are keeping old way of displaying feeRate in place */}
                             {`${tx?.feeRate ? tx.feeRate : getFeeRate(tx)} ${getFeeUnits(

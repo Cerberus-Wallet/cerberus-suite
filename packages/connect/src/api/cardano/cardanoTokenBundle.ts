@@ -1,8 +1,8 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/helpers/cardanoTokenBundle.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/helpers/cardanoTokenBundle.js
 
 import { PROTO } from '../../constants';
 import { CardanoAssetGroup, CardanoToken } from '../../types/api/cardano';
-import { Assert, Type, Static } from '@trezor/schema-utils';
+import { Assert, Type, Static } from '@cerberus/schema-utils';
 
 export type AssetGroupWithTokens = Static<typeof AssetGroupWithTokens>;
 export const AssetGroupWithTokens = Type.Object({

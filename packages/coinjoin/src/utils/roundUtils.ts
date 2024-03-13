@@ -1,5 +1,5 @@
-import { bufferutils, Transaction, Network } from '@trezor/utxo-lib';
-import { getRandomNumberInRange } from '@trezor/utils';
+import { bufferutils, Transaction, Network } from '@cerberus/utxo-lib';
+import { getRandomNumberInRange } from '@cerberus/utils';
 
 import {
     COORDINATOR_FEE_RATE_FALLBACK,

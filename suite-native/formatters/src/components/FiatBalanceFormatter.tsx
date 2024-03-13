@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Box, Text } from '@suite-native/atoms';
 import { useFormatters } from '@suite-common/formatters';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 
 import { FormatterProps } from '../types';
 import { EmptyAmountText } from './EmptyAmountText';

@@ -31,7 +31,7 @@ function init() {
         };
 
         session.defaultSession.webRequest.onBeforeSendHeaders(filter, (details, callback) => {
-            details.requestHeaders.Origin = 'https://electron.trezor.io';
+            details.requestHeaders.Origin = 'https://electron.cerberus.uraanai.com';
             callback({ cancel: false, requestHeaders: details.requestHeaders });
         });
     }

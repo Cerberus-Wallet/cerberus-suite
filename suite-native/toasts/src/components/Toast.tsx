@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 import Animated, { FadeIn, FadeOut } from 'react-native-reanimated';
 
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import { Box, HStack, Text } from '@suite-native/atoms';
 import { Icon } from '@suite-common/icons';
-import { Color } from '@trezor/theme';
+import { Color } from '@cerberus/theme';
 
 import { Toast as ToastInterface, ToastVariant } from '../toastsAtoms';
 import { useToast } from '../useToast';

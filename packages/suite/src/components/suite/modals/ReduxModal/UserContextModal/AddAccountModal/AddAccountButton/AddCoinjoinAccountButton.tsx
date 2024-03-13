@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
-import { createTimeoutPromise } from '@trezor/utils';
-import { UnavailableCapabilities } from '@trezor/connect';
-import { isDesktop } from '@trezor/env-utils';
+import { createTimeoutPromise } from '@cerberus/utils';
+import { UnavailableCapabilities } from '@cerberus/connect';
+import { isDesktop } from '@cerberus/env-utils';
 import { isDevEnv } from '@suite-common/suite-utils';
 import { RequestEnableTorResponse } from '@suite-common/suite-config';
 import { selectDevice } from '@suite-common/wallet-core';
@@ -109,7 +109,7 @@ export const AddCoinjoinAccountButton = ({ network }: AddCoinjoinAccountProps) =
             // When Tor was not loaded it means there was an error or user canceled it, stop the coinjoin account activation.
             if (!isTorLoaded) return;
         }
-        await createTimeoutPromise(1000); // TODO fix properly: https://github.com/trezor/trezor-suite/issues/6902
+        await createTimeoutPromise(1000); // TODO fix properly: https://github.com/Cerberus-Wallet/cerberus-suite/issues/6902
         await createAccount();
     };
 

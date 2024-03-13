@@ -2,7 +2,7 @@ import { useCallback } from 'react';
 import BigNumber from 'bignumber.js';
 import styled, { useTheme } from 'styled-components';
 
-import { Icon, Switch, Warning, variables } from '@trezor/components';
+import { Icon, Switch, Warning, variables } from '@cerberus/components';
 import { FiatValue, Translation, NumberInput, HiddenPlaceholder } from 'src/components/suite';
 import {
     amountToSatoshi,
@@ -26,8 +26,8 @@ import {
     validateMin,
     validateReserveOrBalance,
 } from 'src/utils/suite/validation';
-import { spacingsPx } from '@trezor/theme';
-import { breakpointMediaQueries } from '@trezor/styles';
+import { spacingsPx } from '@cerberus/theme';
+import { breakpointMediaQueries } from '@cerberus/styles';
 import { selectFiatRatesByFiatRateKey } from '@suite-common/wallet-core';
 import { TokenAddress } from '@suite-common/wallet-types';
 import { FiatCurrencyCode } from '@suite-common/suite-config';

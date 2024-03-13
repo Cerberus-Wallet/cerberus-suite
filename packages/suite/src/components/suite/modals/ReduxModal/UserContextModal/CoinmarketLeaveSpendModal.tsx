@@ -1,4 +1,4 @@
-import { Button, H3 } from '@trezor/components';
+import { Button, H3 } from '@cerberus/components';
 import { goto } from 'src/actions/suite/routerActions';
 import { useDispatch } from 'src/hooks/suite';
 import { Translation, Modal } from 'src/components/suite';

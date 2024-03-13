@@ -1,5 +1,5 @@
 import * as protobuf from 'protobufjs/light';
-import { v1 as v1Protocol, bridge as bridgeProtocol } from '@trezor/protocol';
+import { v1 as v1Protocol, bridge as bridgeProtocol } from '@cerberus/protocol';
 import { buildBuffers } from '../src/utils/send';
 import { receiveAndParse } from '../src/utils/receive';
 

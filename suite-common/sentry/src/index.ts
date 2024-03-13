@@ -2,7 +2,7 @@ import { CaptureConsole, Dedupe } from '@sentry/integrations';
 import type { Options, Event as SentryEvent } from '@sentry/types';
 
 import { isDevEnv } from '@suite-common/suite-utils';
-import { redactUserPathFromString } from '@trezor/utils';
+import { redactUserPathFromString } from '@cerberus/utils';
 
 export const allowReportTag = 'allowReport';
 export const coinjoinReportTag = 'coinjoinReport';
@@ -66,7 +66,7 @@ const beforeBreadcrumb: Options['beforeBreadcrumb'] = breadcrumb => {
     // filter out analytics requests and image fetches
     const isAnalytics =
         breadcrumb.category === 'fetch' &&
-        breadcrumb.data?.url?.contains?.('data.trezor.io/suite/log');
+        breadcrumb.data?.url?.contains?.('data.trezorcheck.io/suite/log');
     const isImageFetch =
         breadcrumb.category === 'xhr' && breadcrumb.data?.url?.contains?.('/assets/');
     const isConsole = breadcrumb.category === 'console';

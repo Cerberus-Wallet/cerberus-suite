@@ -1,5 +1,5 @@
 import { createMiddlewareWithExtraDeps } from '@suite-common/redux-utils';
-import { UI } from '@trezor/connect';
+import { UI } from '@cerberus/connect';
 import { deviceActions, selectDevice } from '@suite-common/wallet-core';
 
 export const prepareButtonRequestMiddleware = createMiddlewareWithExtraDeps(

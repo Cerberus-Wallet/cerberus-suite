@@ -9,7 +9,7 @@ import Animated, {
 
 import { AddCoinFlowType, ScreenSubHeader } from '@suite-native/navigation';
 import { Box, IconButton } from '@suite-native/atoms';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 
 import { AccountsSearchForm, SEARCH_INPUT_ANIMATION_DURATION } from './AccountsSearchForm';
 import { AddAccountButton } from './AddAccountsButton';

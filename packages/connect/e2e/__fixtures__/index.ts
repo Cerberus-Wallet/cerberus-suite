@@ -67,7 +67,7 @@ import verifyMessage from './verifyMessage';
 import verifyMessageSegwit from './verifyMessageSegwit';
 import verifyMessageSegwitNative from './verifyMessageSegwitNative';
 
-// TODO: add fixtures for missing dependencies https://github.com/trezor/trezor-suite/issues/5353
+// TODO: add fixtures for missing dependencies https://github.com/Cerberus-Wallet/cerberus-suite/issues/5353
 // backupDevice
 // blockchainDisconnect
 // blockchainEstimateFee

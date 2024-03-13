@@ -1,4 +1,4 @@
-import { Analytics, getRandomId } from '@trezor/analytics';
+import { Analytics, getRandomId } from '@cerberus/analytics';
 
 import type { ConnectAnalyticsEvent } from './types/events';
 

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Button, ButtonProps } from '@trezor/components';
+import { Button, ButtonProps } from '@cerberus/components';
 
 const StyledButton = styled(Button)`
     min-width: 180px;

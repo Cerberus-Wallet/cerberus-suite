@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import styled from 'styled-components';
-import { Textarea, Button } from '@trezor/components';
+import { Textarea, Button } from '@cerberus/components';
 
 import { Translation } from 'src/components/suite';
 

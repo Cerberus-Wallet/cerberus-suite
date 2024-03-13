@@ -4,7 +4,7 @@ TrezorConnect is loaded in background script but it is triggered from content sc
 - show a notification with response
 */
 
-const DEFAULT_SRC = 'https://connect.trezor.io/9/';
+const DEFAULT_SRC = 'https://connect.cerberus.uraanai.com/9/';
 
 function loadTrezorConnect() {
     return TrezorConnect.init({

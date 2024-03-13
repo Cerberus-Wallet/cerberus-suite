@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Icon, Warning } from '@trezor/components';
+import { Icon, Warning } from '@cerberus/components';
 import { getInputState } from '@suite-common/wallet-utils';
 import { useFormatters } from '@suite-common/formatters';
 import { formInputsMaxLength } from '@suite-common/validators';
@@ -15,7 +15,7 @@ import {
 } from 'src/utils/suite/validation';
 import { FIAT_INPUT, CRYPTO_INPUT } from 'src/types/wallet/stakeForms';
 import { MIN_ETH_FOR_WITHDRAWALS } from 'src/constants/suite/ethStaking';
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 
 const VStack = styled.div`
     display: flex;

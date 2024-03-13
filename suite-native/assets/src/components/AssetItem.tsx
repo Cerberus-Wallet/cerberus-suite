@@ -20,7 +20,7 @@ import {
     RootStackRoutes,
     TabToStackCompositeNavigationProp,
 } from '@suite-native/navigation';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 
 type AssetItemProps = {
     cryptoCurrencySymbol: NetworkSymbol;

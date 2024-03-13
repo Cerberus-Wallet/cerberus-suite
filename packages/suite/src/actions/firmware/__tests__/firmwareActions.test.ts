@@ -1,6 +1,6 @@
 import { testMocks } from '@suite-common/test-utils';
 import { prepareFirmwareReducer, State as DeviceState } from '@suite-common/wallet-core';
-import { DeviceModelInternal } from '@trezor/connect';
+import { DeviceModelInternal } from '@cerberus/connect';
 
 import { configureStore, filterThunkActionTypes } from 'src/support/tests/configureStore';
 import suiteReducer from 'src/reducers/suite/suiteReducer';
@@ -18,7 +18,7 @@ interface InitialState {
     device?: Partial<DeviceState>;
 }
 
-jest.doMock('@trezor/suite-analytics', () => testMocks.getAnalytics());
+jest.doMock('@cerberus/suite-analytics', () => testMocks.getAnalytics());
 
 export const getInitialState = (override?: InitialState): any => {
     const suite = override ? override.suite : undefined;

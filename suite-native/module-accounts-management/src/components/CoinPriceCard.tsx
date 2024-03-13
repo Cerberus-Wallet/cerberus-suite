@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 
 import { Box, Text, Card, RoundedIcon, Badge, BoxSkeleton } from '@suite-native/atoms';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import { networks } from '@suite-common/wallet-config';
 import { FiatAmountFormatter } from '@suite-native/formatters';
 import { AccountKey } from '@suite-common/wallet-types';

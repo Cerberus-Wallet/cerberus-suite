@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/utils/debug.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/utils/debug.js
 /* eslint-disable no-console */
 
 const green = '#bada55';
@@ -8,9 +8,9 @@ const yellow = '#fbd948';
 
 const colors: Record<string, string> = {
     // blue, npm package related
-    '@trezor/connect': `color: ${blue}; background: #000;`,
-    '@trezor/connect-web': `color: ${blue}; background: #000;`,
-    '@trezor/connect-webextension': `color: ${blue}; background: #000;`,
+    '@cerberus/connect': `color: ${blue}; background: #000;`,
+    '@cerberus/connect-web': `color: ${blue}; background: #000;`,
+    '@cerberus/connect-webextension': `color: ${blue}; background: #000;`,
     // orange, api related
     IFrame: `color: ${orange}; background: #000;`,
     Core: `color: ${orange}; background: #000;`,
@@ -18,10 +18,10 @@ const colors: Record<string, string> = {
     DeviceList: `color: ${green}; background: #000;`,
     Device: `color: ${green}; background: #000;`,
     DeviceCommands: `color: ${green}; background: #000;`,
-    '@trezor/transport': `color: ${green}; background: #000;`,
+    '@cerberus/transport': `color: ${green}; background: #000;`,
     InteractionTimeout: `color: ${green}; background: #000;`,
     // yellow, ui related
-    '@trezor/connect-popup': `color: ${yellow}; background: #000;`,
+    '@cerberus/connect-popup': `color: ${yellow}; background: #000;`,
 };
 
 export type LogMessage = {

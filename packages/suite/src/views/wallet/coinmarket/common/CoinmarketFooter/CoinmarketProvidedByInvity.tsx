@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Translation } from 'src/components/suite';
-import { INVITY_URL } from '@trezor/urls';
-import { variables, Link, Image } from '@trezor/components';
+import { INVITY_URL } from '@cerberus/urls';
+import { variables, Link, Image } from '@cerberus/components';
 
 const Wrapper = styled.div`
     display: flex;

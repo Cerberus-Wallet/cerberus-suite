@@ -5,7 +5,7 @@ import { homescreens } from 'src/constants/suite/homescreens';
 import { applySettings } from 'src/actions/settings/deviceSettingsActions';
 import { imagePathToHex } from 'src/utils/suite/homescreen';
 import { useDevice, useDispatch } from 'src/hooks/suite';
-import { DeviceModelInternal } from '@trezor/connect';
+import { DeviceModelInternal } from '@cerberus/connect';
 
 type AnyImageName = (typeof homescreens)[keyof typeof homescreens][number];
 

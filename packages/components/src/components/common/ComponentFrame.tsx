@@ -1,5 +1,5 @@
 import React from 'react';
-import { Spacing, Spacings } from '@trezor/theme';
+import { Spacing, Spacings } from '@cerberus/theme';
 import styled from 'styled-components';
 
 type SpacingValues = Spacings[Spacing];

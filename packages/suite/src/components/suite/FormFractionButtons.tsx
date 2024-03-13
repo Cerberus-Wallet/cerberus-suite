@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Translation } from 'src/components/suite';
-import { Button, Tooltip } from '@trezor/components';
+import { Button, Tooltip } from '@cerberus/components';
 import BigNumber from 'bignumber.js';
 import {
     MIN_ETH_AMOUNT_FOR_STAKING,

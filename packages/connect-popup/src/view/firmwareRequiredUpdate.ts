@@ -1,7 +1,7 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/popup/view/firmwareRequiredUpdate.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/popup/view/firmwareRequiredUpdate.js
 
-import { UiRequestUnexpectedDeviceMode } from '@trezor/connect';
-import { SUITE_FIRMWARE_URL } from '@trezor/urls';
+import { UiRequestUnexpectedDeviceMode } from '@cerberus/connect';
+import { SUITE_FIRMWARE_URL } from '@cerberus/urls';
 import { showView } from './common';
 
 export const firmwareRequiredUpdate = (device: UiRequestUnexpectedDeviceMode['payload']) => {

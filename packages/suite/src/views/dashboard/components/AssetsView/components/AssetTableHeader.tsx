@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Translation } from '../../../../../components/suite';
 import { AssetTableRowGrid } from './AssetTableRowGrid';
-import { spacingsPx, typography } from '@trezor/theme';
+import { spacingsPx, typography } from '@cerberus/theme';
 
 const Header = styled.div`
     display: flex;

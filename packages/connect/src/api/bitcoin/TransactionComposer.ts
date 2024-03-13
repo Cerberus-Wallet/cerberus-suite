@@ -1,7 +1,7 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/tx/TransactionComposer.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/tx/TransactionComposer.js
 
 import BigNumber from 'bignumber.js';
-import { composeTx, ComposeOutput } from '@trezor/utxo-lib';
+import { composeTx, ComposeOutput } from '@cerberus/utxo-lib';
 import { FeeLevels } from './Fees';
 import { Blockchain } from '../../backend/BlockchainLink';
 import type { BitcoinNetworkInfo, DiscoveryAccount, SelectFeeLevel } from '../../types';
@@ -48,7 +48,7 @@ export class TransactionComposer {
         this.skipPermutation = options.skipPermutation || false;
         this.feeLevels = new FeeLevels(options.coinInfo);
 
-        // map to @trezor/utxo-lib/compose format
+        // map to @cerberus/utxo-lib/compose format
         const { addresses } = options.account;
         const allAddresses: string[] = !addresses
             ? []

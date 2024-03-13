@@ -1,6 +1,6 @@
 import { WithSelectedAccountLoadedProps } from 'src/components/wallet';
 import { useCoinmarketSavingsSetupWaiting } from 'src/hooks/wallet/useCoinmarketSavingsSetupWaiting';
-import { Button, Spinner } from '@trezor/components';
+import { Button, Spinner } from '@cerberus/components';
 import styled from 'styled-components';
 import { Translation } from 'src/components/suite';
 import { withCoinmarket } from '../../withCoinmarket';

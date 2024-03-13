@@ -1,9 +1,9 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/RebootToBootloader.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/RebootToBootloader.js
 
 import { AbstractMethod } from '../core/AbstractMethod';
 import { getFirmwareRange } from './common/paramsValidator';
 import { UI, createUiMessage } from '../events';
-import { Assert } from '@trezor/schema-utils';
+import { Assert } from '@cerberus/schema-utils';
 import { PROTO } from '../constants';
 
 export default class RebootToBootloader extends AbstractMethod<

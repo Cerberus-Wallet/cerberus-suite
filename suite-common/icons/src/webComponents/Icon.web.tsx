@@ -2,7 +2,7 @@ import { ReactSVG } from 'react-svg';
 
 import styled, { css, useTheme } from 'styled-components';
 
-import { CSSColor, Color, isCSSColor } from '@trezor/theme';
+import { CSSColor, Color, isCSSColor } from '@cerberus/theme';
 
 import { icons } from '../icons';
 import { IconProps, getIconSize } from '../config';

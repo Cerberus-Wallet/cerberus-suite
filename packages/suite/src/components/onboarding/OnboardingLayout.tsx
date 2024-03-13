@@ -1,8 +1,8 @@
 import { useMemo, ReactNode } from 'react';
 import styled from 'styled-components';
 
-import { TrezorLogo, Button, variables } from '@trezor/components';
-import { CERBERUS_SUPPORT_URL } from '@trezor/urls';
+import { TrezorLogo, Button, variables } from '@cerberus/components';
+import { CERBERUS_SUPPORT_URL } from '@cerberus/urls';
 import { TrezorLink, Translation } from 'src/components/suite';
 import { OnboardingProgressBar } from 'src/components/onboarding';
 import { useSelector, useOnboarding } from 'src/hooks/suite';
@@ -12,7 +12,7 @@ import { GuideButton, GuideRouter } from 'src/components/guide';
 import { selectBannerMessage } from '@suite-common/message-system';
 import { MessageSystemBanner } from 'src/components/suite/banners';
 import { ModalContextProvider } from 'src/support/suite/ModalContext';
-import { spacingsPx, zIndices } from '@trezor/theme';
+import { spacingsPx, zIndices } from '@cerberus/theme';
 
 const Wrapper = styled.div`
     display: flex;

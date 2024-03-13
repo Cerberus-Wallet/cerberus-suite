@@ -1,5 +1,5 @@
 // upstream: https://github.com/bitcoinjs/bitcoinjs-lib/blob/master/ts_src/bufferutils.ts
-// fork: https://github.com/trezor/trezor-utxo-lib/blob/trezor/src/bufferutils.js
+// fork: https://github.com/Cerberus-Wallet/cerberus-utxo-lib/blob/trezor/src/bufferutils.js
 // differences:
 // - added `BufferReader` "readInt64", "readUInt16" and "readUInt64String" methods.
 // - added `BufferWritter` "writeInt64", "writeUInt16" methods.
@@ -9,7 +9,7 @@ import BN from 'bn.js';
 import pushdata from 'pushdata-bitcoin';
 import varuint from 'varuint-bitcoin';
 import { Int64LE } from 'int64-buffer';
-import { bufferUtils } from '@trezor/utils';
+import { bufferUtils } from '@cerberus/utils';
 import * as types from './types';
 
 export function verifuint(value: number, max: number) {
@@ -104,7 +104,7 @@ export function cloneBuffer(buffer: Buffer): Buffer {
 }
 
 // These types need to be defined here, otherwise
-// importing @trezor/utxo-lib/lib from blockchain-link fails
+// importing @cerberus/utxo-lib/lib from blockchain-link fails
 // because of missing pushdata-bitcoin types
 type PushDataSize = (len: number) => number;
 type ReadPushDataInt = (

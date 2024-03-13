@@ -7,7 +7,7 @@ import {
     Features,
     DeviceModelInternal,
     FirmwareType,
-} from '@trezor/connect';
+} from '@cerberus/connect';
 import {
     TrezorDevice,
     GuideNode,
@@ -99,7 +99,7 @@ const getFirmwareRelease = (): NonNullable<Device['firmwareRelease']> => ({
  * @returns {Features}
  */
 const getDeviceFeatures = (feat?: Partial<Features>): Features => ({
-    vendor: 'trezor.io',
+    vendor: 'cerberus.uraanai.com',
     major_version: 2,
     minor_version: 1,
     patch_version: 1,
@@ -108,7 +108,7 @@ const getDeviceFeatures = (feat?: Partial<Features>): Features => ({
     pin_protection: false,
     passphrase_protection: false,
     language: 'en-US',
-    label: 'My Trezor',
+    label: 'My Cerberus',
     initialized: true,
     revision: 'df0963ec',
     bootloader_hash: '7447a41717022e3eb32011b00b2a68ebb9c7f603cdc730e7307850a3f4d62a5c',
@@ -141,7 +141,7 @@ const getDeviceFeatures = (feat?: Partial<Features>): Features => ({
 });
 
 /**
- * simplified Device from '@trezor/connect'
+ * simplified Device from '@cerberus/connect'
  * @param {Partial<Device>} [dev]
  * @param {Partial<Features>} [feat]
  * @returns {Device}
@@ -151,7 +151,7 @@ const getConnectDevice = (dev?: Partial<Device>, feat?: Partial<Features>): Devi
         return {
             type: dev.type,
             path: dev && dev.path ? dev.path : '1',
-            label: dev && dev.label ? dev.label : 'My Trezor',
+            label: dev && dev.label ? dev.label : 'My Cerberus',
             features: undefined,
         } as Device;
     }
@@ -161,7 +161,7 @@ const getConnectDevice = (dev?: Partial<Device>, feat?: Partial<Features>): Devi
     return {
         id: features.device_id,
         path: '',
-        label: 'My Trezor',
+        label: 'My Cerberus',
         firmware: 'valid',
         firmwareRelease: getFirmwareRelease(),
         status: 'available',
@@ -262,9 +262,9 @@ const getWalletTransaction = (t?: Partial<WalletAccountTransaction>): WalletAcco
     ...t,
 });
 
-// Mocked @trezor/suite-analytics package used in various tests
+// Mocked @cerberus/suite-analytics package used in various tests
 const getAnalytics = () => {
-    const originalModule = jest.requireActual('@trezor/suite-analytics');
+    const originalModule = jest.requireActual('@cerberus/suite-analytics');
 
     return {
         __esModule: true, // this property makes it work
@@ -330,7 +330,7 @@ const getMessageSystemConfig = (
                             bootloader: '*',
                             firmwareRevision: '*',
                             variant: 'regular',
-                            vendor: 'trezor.io',
+                            vendor: 'cerberus.uraanai.com',
                         },
                     ],
                 },
@@ -342,11 +342,11 @@ const getMessageSystemConfig = (
                 variant: 'warning',
                 category: 'banner',
                 content: {
-                    'en-GB': 'New Trezor firmware is available!',
-                    en: 'New Trezor firmware is available!',
-                    es: 'El nuevo firmware de Trezor está disponible!',
-                    cs: 'Nová verze Trezor firmware je k dispozici',
-                    ru: 'Доступна новая прошивка Trezor!',
+                    'en-GB': 'New Cerberus firmware is available!',
+                    en: 'New Cerberus firmware is available!',
+                    es: 'El nuevo firmware de Cerberus está disponible!',
+                    cs: 'Nová verze Cerberus firmware je k dispozici',
+                    ru: 'Доступна новая прошивка Cerberus!',
                     ja: '新しいTrezorファームウェアが利用可能です！',
                 },
                 cta: {
@@ -374,11 +374,11 @@ const getMessageSystemConfig = (
                 variant: 'info',
                 category: ['banner', 'context', 'modal'],
                 content: {
-                    'en-GB': 'New Trezor app is available!',
-                    en: 'New Trezor app is available!',
-                    es: 'La nueva aplicación Trezor está disponible!',
-                    cs: 'Nová Trezor aplikace je k dispozici!',
-                    ru: 'Доступно новое приложение Trezor!',
+                    'en-GB': 'New Cerberus app is available!',
+                    en: 'New Cerberus app is available!',
+                    es: 'La nueva aplicación Cerberus está disponible!',
+                    cs: 'Nová Cerberus aplikace je k dispozici!',
+                    ru: 'Доступно новое приложение Cerberus!',
                     ja: '新しいTrezorアプリが利用可能になりました！',
                 },
                 cta: {
@@ -541,7 +541,7 @@ type MockTrezorConnect = jest.Mocked<TrezorConnect> & {
 
 const getTrezorConnectMock = () => {
     // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const pkg = require('@trezor/connect');
+    const pkg = require('@cerberus/connect');
 
     return {
         ...pkg.default,

@@ -1,5 +1,5 @@
 import styled, { css, useTheme } from 'styled-components';
-import { Spinner, Icon, Tooltip } from '@trezor/components';
+import { Spinner, Icon, Tooltip } from '@cerberus/components';
 import { Translation } from 'src/components/suite/Translation';
 import { CountdownTimer } from 'src/components/suite/CountdownTimer';
 import { useSelector } from 'src/hooks/suite/useSelector';
@@ -10,7 +10,7 @@ import {
 } from 'src/reducers/wallet/coinjoinReducer';
 import { useCoinjoinSessionBlockers } from 'src/hooks/coinjoin/useCoinjoinSessionBlockers';
 import { FormattedNumber } from 'react-intl';
-import { spacingsPx, typography } from '@trezor/theme';
+import { spacingsPx, typography } from '@cerberus/theme';
 
 export const Container = styled.div<{ isWide: boolean }>`
     width: ${({ isWide }) => `calc(100% - ${isWide ? 12 : 8}px)`};

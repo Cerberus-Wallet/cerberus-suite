@@ -1,6 +1,6 @@
 import { useIntl } from 'react-intl';
 
-import TrezorConnect, { UI } from '@trezor/connect';
+import TrezorConnect, { UI } from '@cerberus/connect';
 import { selectDevice } from '@suite-common/wallet-core';
 import messages from 'src/support/messages';
 import { MODAL } from 'src/actions/suite/constants';

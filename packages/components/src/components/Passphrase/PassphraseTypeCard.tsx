@@ -3,13 +3,13 @@ import { FormattedMessage, useIntl } from 'react-intl';
 
 import { AnimatePresence, motion } from 'framer-motion';
 
-import { useKeyPress } from '@trezor/react-utils';
-import { setCaretPosition } from '@trezor/dom-utils';
+import { useKeyPress } from '@cerberus/react-utils';
+import { setCaretPosition } from '@cerberus/dom-utils';
 import styled, { css, useTheme } from 'styled-components';
 
-import { borders, spacingsPx, typography } from '@trezor/theme';
-import { countBytesInString } from '@trezor/utils';
-import { isAndroid } from '@trezor/env-utils';
+import { borders, spacingsPx, typography } from '@cerberus/theme';
+import { countBytesInString } from '@cerberus/utils';
+import { isAndroid } from '@cerberus/env-utils';
 import { formInputsMaxLength } from '@suite-common/validators';
 
 import { PasswordStrengthIndicator } from './PasswordStrengthIndicator';
@@ -339,7 +339,7 @@ export const PassphraseTypeCard = (props: PassphraseTypeCardProps) => {
                                 innerRef={ref}
                                 bottomText={
                                     isTooLong ? (
-                                        // todo: resolve messages sharing https://github.com/trezor/trezor-suite/issues/5325
+                                        // todo: resolve messages sharing https://github.com/Cerberus-Wallet/cerberus-suite/issues/5325
                                         <FormattedMessage
                                             id="TR_PASSPHRASE_TOO_LONG"
                                             defaultMessage="Passphrase length has exceed the allowed limit."
@@ -414,7 +414,7 @@ export const PassphraseTypeCard = (props: PassphraseTypeCardProps) => {
                             >
                                 <FormattedMessage
                                     id="TR_ENTER_PASSPHRASE_ON_DEVICE"
-                                    defaultMessage="Enter passphrase on Trezor"
+                                    defaultMessage="Enter passphrase on Cerberus"
                                 />
                             </OnDeviceActionButton>
                         )}

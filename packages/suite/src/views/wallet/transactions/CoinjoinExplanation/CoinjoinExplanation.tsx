@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 import { darken } from 'polished';
 
-import { Card, Icon, variables } from '@trezor/components';
-import { HELP_CENTER_COINJOIN_URL } from '@trezor/urls';
-import { mediaQueries } from '@trezor/styles';
+import { Card, Icon, variables } from '@cerberus/components';
+import { HELP_CENTER_COINJOIN_URL } from '@cerberus/urls';
+import { mediaQueries } from '@cerberus/styles';
 
 import { Translation } from 'src/components/suite';
 import { CoinjoinProcessStep, CoinjoinProcessStepProps } from './CoinjoinProcessStep';
-import { spacingsPx, typography } from '@trezor/theme';
+import { spacingsPx, typography } from '@cerberus/theme';
 import { LearnMoreButton } from 'src/components/suite/LearnMoreButton';
 
 const Container = styled(Card)`

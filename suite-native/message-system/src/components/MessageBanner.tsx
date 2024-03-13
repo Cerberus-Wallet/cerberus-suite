@@ -4,8 +4,8 @@ import Animated, { FadeIn, FadeOut } from 'react-native-reanimated';
 
 import { Message, Variant, CTA } from '@suite-common/suite-types';
 import { messageSystemActions } from '@suite-common/message-system';
-import { Color } from '@trezor/theme';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { Color } from '@cerberus/theme';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import { HStack, Box, Text, RoundedIcon, VStack } from '@suite-native/atoms';
 import { IconName, Icon } from '@suite-common/icons';
 import { Link } from '@suite-native/link';

@@ -1,4 +1,4 @@
-import { TokenInfo } from '@trezor/connect';
+import { TokenInfo } from '@cerberus/connect';
 
 export type ReviewOutput =
     | {

@@ -1,7 +1,7 @@
 import { ReactNode, HTMLAttributes } from 'react';
 import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
-import { Elevation, borders, mapElevationToBackground, zIndices } from '@trezor/theme';
+import { Elevation, borders, mapElevationToBackground, zIndices } from '@cerberus/theme';
 import {
     ElevationContext,
     H2,
@@ -11,7 +11,7 @@ import {
     motionEasing,
     useElevation,
     variables,
-} from '@trezor/components';
+} from '@cerberus/components';
 
 const headerVariants = {
     closed: {

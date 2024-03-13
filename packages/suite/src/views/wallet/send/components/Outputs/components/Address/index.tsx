@@ -1,8 +1,8 @@
 import { useCallback, useState } from 'react';
 import { checkAddressChecksum, toChecksumAddress } from 'web3-utils';
 import styled from 'styled-components';
-import { capitalizeFirstLetter } from '@trezor/utils';
-import { Input, Button, IconButton } from '@trezor/components';
+import { capitalizeFirstLetter } from '@cerberus/utils';
+import { Input, Button, IconButton } from '@cerberus/components';
 import { AddressLabeling, Translation, MetadataLabeling } from 'src/components/suite';
 import { scanQrRequest } from 'src/actions/wallet/sendFormActions';
 import { useDevice, useDispatch, useTranslation } from 'src/hooks/suite';
@@ -195,13 +195,13 @@ export const Address = ({ output, outputId, outputsCount }: AddressProps) => {
                     return translationString('RECIPIENT_REQUIRES_UPDATE');
                 }
             },
-            // bech32 addresses are valid as uppercase but are not accepted by Trezor
+            // bech32 addresses are valid as uppercase but are not accepted by Cerberus
             uppercase: (value: string) => {
                 if (networkType === 'bitcoin' && isBech32AddressUppercase(value)) {
                     return translationString('RECIPIENT_IS_NOT_VALID');
                 }
             },
-            // eth addresses are valid without checksum but Trezor displays them as checksummed
+            // eth addresses are valid without checksum but Cerberus displays them as checksummed
             checksum: (value: string) => {
                 if (networkType === 'ethereum' && !checkAddressChecksum(value)) {
                     return translationString('RECIPIENT_IS_NOT_VALID');

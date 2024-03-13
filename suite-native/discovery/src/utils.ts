@@ -1,7 +1,7 @@
 import { A, G, pipe } from '@mobily/ts-belt';
 
 import { DiscoveryItem } from '@suite-common/wallet-types';
-import TrezorConnect from '@trezor/connect';
+import TrezorConnect from '@cerberus/connect';
 
 import { DiscoveryDescriptorItem } from './types';
 

@@ -11,7 +11,7 @@ import {
     Elevation,
     mapElevationToBackground,
     nextElevation,
-} from '@trezor/theme';
+} from '@cerberus/theme';
 
 import { INPUT_HEIGHTS, LABEL_TRANSFORM, Label, baseInputStyle } from '../InputStyles';
 import { BOTTOM_TEXT_MIN_HEIGHT, BottomText } from '../BottomText';

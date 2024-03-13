@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Translation } from 'src/components/suite';
 import { SavingsKYCCard } from 'src/views/wallet/coinmarket';
-import { Image } from '@trezor/components';
+import { Image } from '@cerberus/components';
 
 const StyledCard = styled(SavingsKYCCard)`
     background: rgb(239 201 65 / 10%);

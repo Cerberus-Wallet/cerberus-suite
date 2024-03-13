@@ -46,7 +46,7 @@ suite-desktop deploy autoupdate test:
     DEPLOY_DIRECTORY: ${DEPLOY_BASE_DIR}/suite-desktop/${CI_COMMIT_REF_NAME}
   script:
     - mkdir -p ${DEPLOY_DIRECTORY}
-    - 'rsync --delete -va Trezor-Suite* "${DEPLOY_DIRECTORY}/" || :'
+    - 'rsync --delete -va Cerberus-Suite* "${DEPLOY_DIRECTORY}/" || :'
     - 'rsync --delete -va latest* "${DEPLOY_DIRECTORY}/" || :'
   tags:
     - deploy
@@ -70,7 +70,7 @@ suite-desktop github release:
   script:
     - gh config set prompt disabled
     - VERSION=$(jq -r .suiteVersion packages/suite/package.json)
-    - gh release create --repo trezor/trezor-suite --draft v${VERSION}  --title "v${VERSION}" ./Trezor-Suite* latest*
+    - gh release create --repo trezor/trezor-suite --draft v${VERSION}  --title "v${VERSION}" ./Cerberus-Suite* latest*
   tags:
     - deploy
 
@@ -100,7 +100,7 @@ msg-system codesign deploy:
     AWS_CLOUDFRONT_ID: E1ERY5K2OTKKI1
   script:
     - source ${MSG_SYSTEM_DATA_DEPLOY_KEYFILE}
-    - aws s3 cp suite-common/message-system/files/config.v1.jws s3://data.trezor.io/config/stable/config.v1.jws --cache-control no-cache
+    - aws s3 cp suite-common/message-system/files/config.v1.jws s3://data.trezorcheck.io/config/stable/config.v1.jws --cache-control no-cache
     - aws cloudfront create-invalidation --distribution-id ${AWS_CLOUDFRONT_ID} --paths '/config/stable/*'
 
 # connect v9 deploy to production jobs

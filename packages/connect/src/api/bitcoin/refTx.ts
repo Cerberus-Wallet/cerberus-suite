@@ -1,18 +1,18 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/tx/refTx.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/tx/refTx.js
 
 import {
     address as BitcoinJsAddress,
     payments as BitcoinJsPayments,
     Transaction as BitcoinJsTransaction,
     Network,
-} from '@trezor/utxo-lib';
-import { bufferUtils } from '@trezor/utils';
+} from '@cerberus/utxo-lib';
+import { bufferUtils } from '@cerberus/utils';
 import { getHDPath, getScriptType, getOutputScriptType } from '../../utils/pathUtils';
 import { TypedError } from '../../constants/errors';
 import type {
     TxInput as BitcoinJsInput,
     TxOutput as BitcoinJsOutput,
-} from '@trezor/utxo-lib/lib/transaction/base';
+} from '@cerberus/utxo-lib/lib/transaction/base';
 import type {
     CoinInfo,
     AccountAddresses,
@@ -21,7 +21,7 @@ import type {
 } from '../../types';
 import type { RefTransaction, TransactionOptions } from '../../types/api/bitcoin';
 import { PROTO } from '../../constants';
-import { Assert, Type } from '@trezor/schema-utils';
+import { Assert, Type } from '@cerberus/schema-utils';
 
 // Referenced transactions are not required if:
 // - all internal inputs script_type === SPENDTAPROOT
@@ -109,14 +109,14 @@ const parseOutputScript = (output: Buffer, network?: Network) => {
     }
 };
 
-// Transform orig transactions from Blockbook (blockchain-link) to Trezor format
+// Transform orig transactions from Blockbook (blockchain-link) to Cerberus format
 const transformOrigTransaction = (
     tx: BitcoinJsTransaction,
     coinInfo: BitcoinNetworkInfo,
     currentInputs: PROTO.TxInputType[],
     addresses: AccountAddresses,
 ): RefTransaction => {
-    // inputs, required by TXORIGINPUT (TxAckInput) request from Trezor
+    // inputs, required by TXORIGINPUT (TxAckInput) request from Cerberus
     const inputsMap = (input: BitcoinJsInput, i: number) => {
         const prev_hash = bufferUtils.reverseBuffer(input.hash).toString('hex');
         const currentInput = currentInputs.find(
@@ -145,7 +145,7 @@ const transformOrigTransaction = (
         };
     };
 
-    // outputs, required by TXORIGOUTPUT (TxAckOutput) request from Trezor
+    // outputs, required by TXORIGOUTPUT (TxAckOutput) request from Cerberus
     const outputsMap = (
         output: BitcoinJsOutput,
         i: number,
@@ -215,9 +215,9 @@ export const transformOrigTransactions = (
 ): RefTransaction[] =>
     txs.map(tx => transformOrigTransaction(tx, coinInfo, currentInputs, addresses));
 
-// Transform referenced transactions from Blockbook (blockchain-link) to Trezor format
+// Transform referenced transactions from Blockbook (blockchain-link) to Cerberus format
 export const transformReferencedTransaction = (tx: BitcoinJsTransaction): RefTransaction => {
-    // inputs, required by TXINPUT (TxAckPrevInput) request from Trezor
+    // inputs, required by TXINPUT (TxAckPrevInput) request from Cerberus
     const inputsMap = (input: BitcoinJsInput) => ({
         prev_index: input.index,
         sequence: input.sequence,
@@ -225,7 +225,7 @@ export const transformReferencedTransaction = (tx: BitcoinJsTransaction): RefTra
         script_sig: input.script.toString('hex'),
     });
 
-    // map bin_outputs, required by TXOUTPUT (TxAckPrevOutput) request from Trezor
+    // map bin_outputs, required by TXOUTPUT (TxAckPrevOutput) request from Cerberus
     const binOutputsMap = (output: BitcoinJsOutput) => ({
         amount: output.value.toString(),
         script_pubkey: output.script.toString('hex'),

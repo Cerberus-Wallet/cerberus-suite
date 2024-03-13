@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Card, variables } from '@trezor/components';
+import { Card, variables } from '@cerberus/components';
 import { useCoinmarketExchangeDetailContext } from 'src/hooks/wallet/useCoinmarketExchangeDetail';
 import { ExchangeTradeFinalStatuses } from 'src/hooks/wallet/useCoinmarket';
 import { goto } from 'src/actions/suite/routerActions';
@@ -28,7 +28,7 @@ const StyledCard = styled(Card)`
 `;
 
 const CoinmarketDetail = () => {
-    useLayout('Trezor Suite | Trade', () => <PageHeader backRoute="wallet-coinmarket-exchange" />);
+    useLayout('Cerberus Suite | Trade', () => <PageHeader backRoute="wallet-coinmarket-exchange" />);
 
     const { account, trade, exchangeInfo } = useCoinmarketExchangeDetailContext();
     const dispatch = useDispatch();

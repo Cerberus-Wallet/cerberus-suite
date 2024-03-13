@@ -20,7 +20,7 @@ import {
     handleDeviceDisconnect,
 } from '@suite-common/wallet-core';
 import { connectInitThunk } from '@suite-common/connect-init';
-import { DEVICE } from '@trezor/connect';
+import { DEVICE } from '@cerberus/connect';
 
 import { configureStore, filterThunkActionTypes } from 'src/support/tests/configureStore';
 import suiteReducer from 'src/reducers/suite/suiteReducer';

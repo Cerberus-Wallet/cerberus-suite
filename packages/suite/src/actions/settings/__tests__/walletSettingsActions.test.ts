@@ -30,7 +30,7 @@ const initStore = (state: State) => {
     return store;
 };
 
-jest.doMock('@trezor/suite-analytics', () => testMocks.getAnalytics());
+jest.doMock('@cerberus/suite-analytics', () => testMocks.getAnalytics());
 
 describe('walletSettings Actions', () => {
     fixtures.forEach(f => {

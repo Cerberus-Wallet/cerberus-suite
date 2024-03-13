@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-import { variables } from '@trezor/components';
+import { variables } from '@cerberus/components';
 import { NotificationCard, Translation } from 'src/components/suite';
 import { useSelector } from 'src/hooks/suite';
-import { typography } from '@trezor/theme';
+import { typography } from '@cerberus/theme';
 
 const TextWrapper = styled.div`
     display: flex;

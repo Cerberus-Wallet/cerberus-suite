@@ -3,9 +3,9 @@ import { useIntl } from 'react-intl';
 import styled from 'styled-components';
 
 import { getCheckBackupUrl } from '@suite-common/suite-utils';
-import { Button, H2, Paragraph, Image } from '@trezor/components';
-import { pickByDeviceModel } from '@trezor/device-utils';
-import TrezorConnect, { DeviceModelInternal } from '@trezor/connect';
+import { Button, H2, Paragraph, Image } from '@cerberus/components';
+import { pickByDeviceModel } from '@cerberus/device-utils';
+import TrezorConnect, { DeviceModelInternal } from '@cerberus/connect';
 
 import { SelectWordCount, SelectRecoveryType } from 'src/components/recovery';
 import { Loading, Translation, CheckItem, Modal } from 'src/components/suite';

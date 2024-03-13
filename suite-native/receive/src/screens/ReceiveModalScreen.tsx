@@ -4,7 +4,7 @@ import { Dimensions } from 'react-native';
 
 import { CommonActions, RouteProp, useNavigation, useRoute } from '@react-navigation/native';
 
-import TrezorConnect from '@trezor/connect';
+import TrezorConnect from '@cerberus/connect';
 import { BoxSkeleton, Card, HStack, Text, VStack } from '@suite-native/atoms';
 import {
     RootStackParamList,
@@ -25,7 +25,7 @@ import {
 } from '@suite-common/wallet-core';
 import { selectEthereumAccountTokenSymbol } from '@suite-native/ethereum-tokens';
 import { CryptoIcon } from '@suite-common/icons';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 
 import { ReceiveAccount } from '../components/ReceiveAccount';
 

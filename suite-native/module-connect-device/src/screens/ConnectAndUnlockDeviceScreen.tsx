@@ -3,7 +3,7 @@ import { Dimensions } from 'react-native';
 import { Text, VStack } from '@suite-native/atoms';
 import { useTranslate } from '@suite-native/intl';
 import { ConnectDeviceAnimation } from '@suite-native/device';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import { Screen } from '@suite-native/navigation';
 
 import { ConnectDeviceScreenHeader } from '../components/ConnectDeviceScreenHeader';

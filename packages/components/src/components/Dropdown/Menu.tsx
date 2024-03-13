@@ -8,7 +8,7 @@ import {
     Elevation,
     mapElevationToBackground,
     nextElevation,
-} from '@trezor/theme';
+} from '@cerberus/theme';
 import { Icon, IconProps } from '../assets/Icon/Icon';
 import type { Coords } from './getAdjustedCoords';
 import { menuStyle } from './menuStyle';

@@ -1,7 +1,7 @@
-import { arrayPartition } from '@trezor/utils';
+import { arrayPartition } from '@cerberus/utils';
 /* eslint-disable @typescript-eslint/prefer-ts-expect-error */
 // @ts-ignore
-import commonFixtures from '../../../../submodules/trezor-common/tests/fixtures/ethereum/signmessage.json';
+import commonFixtures from '../../../../submodules/cerberus-common/tests/fixtures/ethereum/signmessage.json';
 
 const [standardPathFixtures, nonstandardPathFixtures] = arrayPartition(
     commonFixtures.tests,

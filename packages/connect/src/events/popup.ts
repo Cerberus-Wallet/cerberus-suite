@@ -40,7 +40,7 @@ export const POPUP = {
 export interface PopupInit {
     type: typeof POPUP.INIT;
     payload: {
-        settings: ConnectSettings; // settings from window.opener (sent by @trezor/connect-web)
+        settings: ConnectSettings; // settings from window.opener (sent by @cerberus/connect-web)
         useBroadcastChannel: boolean;
         systemInfo: SystemInfo;
         useCore?: boolean;

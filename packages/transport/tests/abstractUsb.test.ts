@@ -1,10 +1,10 @@
-import { v1 as v1Protocol } from '@trezor/protocol';
+import { v1 as v1Protocol } from '@cerberus/protocol';
 import { AbstractTransport } from '../src/transports/abstract';
 import { AbstractApiTransport } from '../src/transports/abstractApi';
 import { UsbApi } from '../src/api/usb';
 import { SessionsClient } from '../src/sessions/client';
 import { SessionsBackground } from '../src/sessions/background';
-import * as messages from '@trezor/protobuf/messages.json';
+import * as messages from '@cerberus/protobuf/messages.json';
 
 // we cant directly use abstract class (UsbTransport)
 

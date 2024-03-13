@@ -1,8 +1,8 @@
 import { A, D, F, pipe } from '@mobily/ts-belt';
 import BigNumber from 'bignumber.js';
 
-import { Target, TokenTransfer, Transaction } from '@trezor/blockchain-link-types/lib';
-import { arrayPartition } from '@trezor/utils';
+import { Target, TokenTransfer, Transaction } from '@cerberus/blockchain-link-types/lib';
+import { arrayPartition } from '@cerberus/utils';
 import type {
     AccountInfo,
     ParsedAccountData,
@@ -13,8 +13,8 @@ import type {
     PartiallyDecodedInstruction,
     TokenDetailByMint,
     PublicKey,
-} from '@trezor/blockchain-link-types/lib/solana';
-import type { TokenInfo } from '@trezor/blockchain-link-types/lib';
+} from '@cerberus/blockchain-link-types/lib/solana';
+import type { TokenInfo } from '@cerberus/blockchain-link-types/lib';
 
 export type ApiTokenAccount = { account: AccountInfo<ParsedAccountData>; pubkey: PublicKey };
 

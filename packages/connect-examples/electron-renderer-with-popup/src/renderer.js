@@ -14,7 +14,7 @@ const printLog = data => {
     }
 };
 
-// SETUP @trezor/connect
+// SETUP @cerberus/connect
 
 // Listen to DEVICE_EVENT
 // this event will be emitted only after user grants permission to communicate with this app
@@ -26,8 +26,8 @@ TrezorConnect.on('DEVICE_EVENT', event => {
 TrezorConnect.init({
     debug: false, // see whats going on inside iframe
     lazyLoad: true, // set to "false" (default) if you want to start communication with bridge on application start (and detect connected device right away)
-    // set it to "true", then @trezor/connect will not be initialized until you call some TrezorConnect.method()
-    // this is useful when you don't know if you are dealing with Trezor user
+    // set it to "true", then @cerberus/connect will not be initialized until you call some TrezorConnect.method()
+    // this is useful when you don't know if you are dealing with Cerberus user
     manifest: {
         email: 'email@developer.com',
         appUrl: 'electron-app-boilerplate',

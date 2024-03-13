@@ -147,12 +147,12 @@ local.properties
 !.yarn/sdks
 !.yarn/versions
 
-# @trezor/suite-data
+# @cerberus/suite-data
 packages/suite-data/files/browser-detection
 packages/suite-data/files/guide
 packages/suite-data/files/translations/master.json
 
-# @trezor/connect-explorer
+# @cerberus/connect-explorer
 packages/connect-explorer/build-webextension
 
 # cypress download folder

@@ -1,4 +1,4 @@
-import TrezorConnect, { PROTO } from '@trezor/connect';
+import TrezorConnect, { PROTO } from '@cerberus/connect';
 import {
     isTestnet,
     getDerivationType,

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import TrezorConnect from '@trezor/connect';
-import { Paragraph } from '@trezor/components';
-import { HELP_CENTER_ADVANCED_RECOVERY_URL } from '@trezor/urls';
+import TrezorConnect from '@cerberus/connect';
+import { Paragraph } from '@cerberus/components';
+import { HELP_CENTER_ADVANCED_RECOVERY_URL } from '@cerberus/urls';
 import {
     Translation,
     WordInputAdvanced,

@@ -3,7 +3,7 @@ import { Platform } from 'react-native';
 
 import { analytics, EventType } from '@suite-native/analytics';
 import { BottomSheet, Box, Button, Text } from '@suite-native/atoms';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import {
     useIsBiometricsEnabled,
     getIsBiometricsFeatureAvailable,

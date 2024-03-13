@@ -1,6 +1,6 @@
 import styled, { useTheme } from 'styled-components';
 
-import { variables, Icon, Button, motionEasing, LottieAnimation } from '@trezor/components';
+import { variables, Icon, Button, motionEasing, LottieAnimation } from '@cerberus/components';
 import { Translation } from 'src/components/suite';
 import { useDevice, useDispatch } from 'src/hooks/suite';
 import { goto } from 'src/actions/suite/routerActions';

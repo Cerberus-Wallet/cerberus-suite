@@ -4,7 +4,7 @@ import Animated from 'react-native-reanimated';
 import { ScrollView, PanGestureHandler } from 'react-native-gesture-handler';
 import { GestureResponderEvent, Pressable } from 'react-native';
 
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 
 import { Box, BoxProps } from '../Box';
 import { BottomSheetContainer } from './BottomSheetContainer';

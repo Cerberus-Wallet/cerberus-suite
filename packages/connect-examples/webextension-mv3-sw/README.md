@@ -1,6 +1,6 @@
 # Web extension manifest V3 example using service worker
 
-`@trezor/connect-webextension` running in a `service worker` and communicating with `@trezor/popup` (which loads core logic) through `chrome.runtime` messages.
+`@cerberus/connect-webextension` running in a `service worker` and communicating with `@cerberus/popup` (which loads core logic) through `chrome.runtime` messages.
 
 Tested in Chrome
 
@@ -10,10 +10,10 @@ Run the commands below in order to get the webextension ready to be loaded in th
 
 -   `yarn`
 -   `yarn build:libs`
--   `yarn workspace @trezor/connect-webextension build`
+-   `yarn workspace @cerberus/connect-webextension build`
 -   `node packages/connect-examples/update-webextensions-sw.js`
--   `yarn workspace @trezor/connect-iframe build:core-module`
--   `yarn workspace @trezor/connect-popup dev`
+-   `yarn workspace @cerberus/connect-iframe build:core-module`
+-   `yarn workspace @cerberus/connect-popup dev`
 
 This extension is super simple and only reacts to "reload" button.
 

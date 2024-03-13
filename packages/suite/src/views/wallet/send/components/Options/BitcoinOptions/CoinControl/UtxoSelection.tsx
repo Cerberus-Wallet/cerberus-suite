@@ -2,8 +2,8 @@ import { MouseEventHandler } from 'react';
 import styled, { css, useTheme } from 'styled-components';
 
 import { formatNetworkAmount, isSameUtxo } from '@suite-common/wallet-utils';
-import { Checkbox, Spinner, TextButton, Tooltip } from '@trezor/components';
-import type { AccountUtxo } from '@trezor/connect';
+import { Checkbox, Spinner, TextButton, Tooltip } from '@cerberus/components';
+import type { AccountUtxo } from '@cerberus/connect';
 
 import { openModal } from 'src/actions/suite/modalActions';
 import {
@@ -22,7 +22,7 @@ import {
     selectIsLabelingInitPossible,
     selectLabelingDataForSelectedAccount,
 } from 'src/reducers/suite/metadataReducer';
-import { borders, spacingsPx, typography } from '@trezor/theme';
+import { borders, spacingsPx, typography } from '@cerberus/theme';
 
 const transitionSpeed = '0.16s';
 

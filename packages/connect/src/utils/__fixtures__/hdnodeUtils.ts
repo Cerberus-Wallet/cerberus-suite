@@ -1,4 +1,4 @@
-import { networks } from '@trezor/utxo-lib';
+import { networks } from '@cerberus/utxo-lib';
 
 const NETWORK_P2SH = {
     ...networks.bitcoin,

@@ -8,13 +8,13 @@ Specific events can be found in [src/types/events.ts](./src/types/events.ts) and
 
 Data from **production** builds (codesign branch) should be sent to:
 
--   Desktop build: https://data.trezor.io/suite/log/desktop/stable.log
--   Web build: https://data.trezor.io/suite/log/web/stable.log
+-   Desktop build: https://data.trezorcheck.io/suite/log/desktop/stable.log
+-   Web build: https://data.trezorcheck.io/suite/log/web/stable.log
 
 Data from **development** builds should be sent to:
 
--   Desktop build: https://data.trezor.io/suite/log/desktop/develop.log
--   Web build: https://data.trezor.io/suite/log/web/develop.log
+-   Desktop build: https://data.trezorcheck.io/suite/log/desktop/develop.log
+-   Web build: https://data.trezorcheck.io/suite/log/web/develop.log
 
 ## Add/Modify event
 
@@ -33,7 +33,7 @@ All events and their properties should be declared in [src/types/events.ts](./sr
 To report an event, import `analytics` from this package and initialize analytics (as soon as app starts).
 
 ```
-import { analytics } from '@trezor/suite-analytics';
+import { analytics } from '@cerberus/suite-analytics';
 
 analytics.init(enabled, {
     instanceId,
@@ -51,7 +51,7 @@ analytics.init(enabled, {
 After that, you can use `report` method anywhere in your project scope.
 
 ```
-import { analytics } from '@trezor/suite-analytics';
+import { analytics } from '@cerberus/suite-analytics';
 
 analytics.report({
     type: 'event',

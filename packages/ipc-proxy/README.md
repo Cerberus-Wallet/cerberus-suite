@@ -1,4 +1,4 @@
-# @trezor/ipc-proxy
+# @cerberus/ipc-proxy
 
 This package is designed to reflect interface of any EventEmitter-like class or object and implement it in the same way in both web and electron builds.
 
@@ -14,7 +14,7 @@ Each proxy method is async.
 
 When you want to have different implementations of the same interface in electron and web builds, where electron implementation is working in main (nodejs) context and web implementation is working in default DOM context.
 
-Usage examples: @trezor/connect and @trezor/coinjoin in @trezor/suite-desktop
+Usage examples: @cerberus/connect and @cerberus/coinjoin in @cerberus/suite-desktop
 
 <strike>`ipcRenderer.on` listener callback function contains additional param at position 0. (Electron.IpcRendererEvent)
 web callback implementations are not expecting this param therefore `real listener function` needs to be wrapped by another function to strip this param.
@@ -32,7 +32,7 @@ Exposes proxy channel generator to `window` object. Generator used in `createIpc
 
 ```
 import { contextBridge, ipcRenderer } from 'electron';
-import { exposeIpcProxy } from '@trezor/ipc-proxy';
+import { exposeIpcProxy } from '@cerberus/ipc-proxy';
 
 contextBridge.exposeInMainWorld(...exposeIpcProxy(ipcRenderer, ['MyClassChannelName']));
 ```
@@ -45,7 +45,7 @@ Returns function to clean up all listeners
 
 ```
 import { app, ipcMain } from 'electron';
-import { createIpcProxyHandler } from '@trezor/ipc-proxy';
+import { createIpcProxyHandler } from '@cerberus/ipc-proxy';
 import { MyClass } from 'my-class-package';
 
 const unregisterProxy = createIpcProxyHandler<MyClass>(
@@ -84,7 +84,7 @@ Create proxy instance in renderer context and use it as regular _MyClass_ instan
 
 ```
 import { MyClass } from 'my-class-package';
-import { createIpcProxy } from '@trezor/ipc-proxy';
+import { createIpcProxy } from '@cerberus/ipc-proxy';
 
 const initService = () {
     if (isDesktopBuild) {

@@ -1,12 +1,12 @@
 import styled, { useTheme } from 'styled-components';
-import { Icon } from '@trezor/components';
+import { Icon } from '@cerberus/components';
 import { FiatValue, FormattedCryptoAmount, Translation } from 'src/components/suite';
 import { FiatValueWrapper, FormattedCryptoAmountWrapper } from './styled';
 import { useSelector } from 'src/hooks/suite';
 import { selectSelectedAccount } from 'src/reducers/wallet/selectedAccountReducer';
 import { mapTestnetSymbol } from 'src/utils/wallet/coinmarket/coinmarketUtils';
-import { variables } from '@trezor/components/src/config';
-import { borders, spacingsPx } from '@trezor/theme';
+import { variables } from '@cerberus/components/src/config';
+import { borders, spacingsPx } from '@cerberus/theme';
 
 const StyledCard = styled.div`
     border-radius: ${borders.radii.md};

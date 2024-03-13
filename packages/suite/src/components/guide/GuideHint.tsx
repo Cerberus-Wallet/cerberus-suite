@@ -1,8 +1,8 @@
 import { Children, BlockquoteHTMLAttributes, cloneElement, isValidElement } from 'react';
 import styled from 'styled-components';
 
-import { Warning } from '@trezor/components';
-import { typography } from '@trezor/theme';
+import { Warning } from '@cerberus/components';
+import { typography } from '@cerberus/theme';
 
 const StyledWarning = styled(Warning)`
     background: ${({ theme }) => theme.backgroundSurfaceElevation1};

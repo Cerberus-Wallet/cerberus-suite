@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Pressable } from 'react-native';
 
 import { analytics, EventType } from '@suite-native/analytics';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import { HStack } from '@suite-native/atoms';
 import {
     DeviceRootState,

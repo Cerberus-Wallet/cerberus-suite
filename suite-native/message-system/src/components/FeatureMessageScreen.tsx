@@ -5,7 +5,7 @@ import { A, G } from '@mobily/ts-belt';
 
 import { IconName } from '@suite-common/icons/src';
 import { Box, Button, Pictogram, PictogramVariant, VStack } from '@suite-native/atoms';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import { Variant } from '@suite-common/suite-types';
 import { messageSystemActions, selectActiveFeatureMessages } from '@suite-common/message-system';
 import { useTranslate } from '@suite-native/intl';

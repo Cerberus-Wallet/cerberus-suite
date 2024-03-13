@@ -12,7 +12,7 @@ import {
     ScreenSubHeader,
 } from '@suite-native/navigation';
 import { clearStorage } from '@suite-native/storage';
-import { getCommitHash, getSuiteVersion } from '@trezor/env-utils';
+import { getCommitHash, getSuiteVersion } from '@cerberus/env-utils';
 
 import { RenderingUtils } from '../components/RenderingUtils';
 import { FeatureFlags } from '../components/FeatureFlags';

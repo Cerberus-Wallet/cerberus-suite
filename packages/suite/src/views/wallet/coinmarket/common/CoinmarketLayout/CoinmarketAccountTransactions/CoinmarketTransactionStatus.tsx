@@ -4,7 +4,7 @@ import { getStatusMessage as getBuyStatusMessage } from 'src/utils/wallet/coinma
 import { getStatusMessage as getExchangeStatusMessage } from 'src/utils/wallet/coinmarket/exchangeUtils';
 import { getStatusMessage as getSellStatusMessage } from 'src/utils/wallet/coinmarket/sellUtils';
 import { getStatusMessage as getSavingsStatusMessage } from 'src/utils/wallet/coinmarket/savingsUtils';
-import { variables, Icon, SuiteThemeColors } from '@trezor/components';
+import { variables, Icon, SuiteThemeColors } from '@cerberus/components';
 import { Trade } from 'src/types/wallet/coinmarketCommonTypes';
 import {
     BuyTradeStatus,

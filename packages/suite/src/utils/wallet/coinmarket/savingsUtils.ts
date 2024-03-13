@@ -5,8 +5,8 @@ import {
 } from 'src/constants/wallet/coinmarket/savings';
 import BigNumber from 'bignumber.js';
 import type { PaymentFrequencyOption } from 'src/types/wallet/coinmarketCommonTypes';
-import { isDesktop } from '@trezor/env-utils';
-import { desktopApi } from '@trezor/suite-desktop-api';
+import { isDesktop } from '@cerberus/env-utils';
+import { desktopApi } from '@cerberus/suite-desktop-api';
 import { Translation } from 'src/components/suite/Translation';
 import type { PaymentFrequencyTranslationId } from 'src/types/wallet/coinmarketSavingsSetup';
 

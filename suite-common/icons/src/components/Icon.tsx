@@ -2,8 +2,8 @@ import { SharedValue, useDerivedValue } from 'react-native-reanimated';
 
 import { Canvas, ImageSVG, useSVG, Group, Skia, BlendMode } from '@shopify/react-native-skia';
 
-import { useNativeStyles } from '@trezor/styles';
-import { Color, Colors, CSSColor } from '@trezor/theme';
+import { useNativeStyles } from '@cerberus/styles';
+import { Color, Colors, CSSColor } from '@cerberus/theme';
 
 import { useRerenderOnAppStateChange } from '../useRerenderOnAppState';
 import { icons } from '../icons';

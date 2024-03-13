@@ -2,7 +2,7 @@
     "extends": "../../tsconfig.base.json",
     "compilerOptions": {
         "paths": {
-            "@trezor/theme": [
+            "@cerberus/theme": [
                 "./packages/theme/src/*"
             ]
         },

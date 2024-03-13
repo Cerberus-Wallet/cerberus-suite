@@ -4,7 +4,7 @@ import {
     getDeviceType,
     getUserAgent,
     getOsFamily,
-} from '@trezor/env-utils';
+} from '@cerberus/env-utils';
 
 export type InstallerPackage = 'rpm32' | 'rpm64' | 'deb32' | 'deb64' | 'mac' | 'win32' | 'win64';
 

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { analytics, EventType } from '@trezor/suite-analytics';
+import { analytics, EventType } from '@cerberus/suite-analytics';
 
-import { variables, H2, Button, Card, Image } from '@trezor/components';
+import { variables, H2, Button, Card, Image } from '@cerberus/components';
 import { Translation } from 'src/components/suite';
 import { useDispatch } from 'src/hooks/suite';
 import { Account } from 'src/types/wallet';

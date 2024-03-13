@@ -21,7 +21,7 @@ import {
     periodicCheckTokenDefinitionsThunk,
 } from '@suite-common/wallet-core';
 import { analyticsActions, prepareAnalyticsReducer } from '@suite-common/analytics';
-import TrezorConnect from '@trezor/connect';
+import TrezorConnect from '@cerberus/connect';
 
 import { configureStore } from 'src/support/tests/configureStore';
 import { SUITE, ROUTER } from 'src/actions/suite/constants';

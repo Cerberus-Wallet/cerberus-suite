@@ -2,14 +2,14 @@ import { forwardRef, Ref } from 'react';
 import styled from 'styled-components';
 
 import { isTestnet } from '@suite-common/wallet-utils';
-import { spacingsPx, typography } from '@trezor/theme';
+import { spacingsPx, typography } from '@cerberus/theme';
 import {
     CoinLogo,
     SkeletonRectangle,
     SkeletonStack,
     TOOLTIP_DELAY_LONG,
     TruncateWithTooltip,
-} from '@trezor/components';
+} from '@cerberus/components';
 
 import { AccountLabel, CoinBalance, FiatValue } from 'src/components/suite';
 import { useDispatch, useLoadingSkeleton } from 'src/hooks/suite';

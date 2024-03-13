@@ -1,6 +1,6 @@
 # Onboarding
 
-_Incomplete developers guide to Onboarding in Trezor Suite_
+_Incomplete developers guide to Onboarding in Cerberus Suite_
 
 There are few different ways to trigger the onboarding process:
 
@@ -53,12 +53,12 @@ In onboarding, we clear this array after each step (handled in `buttonRequestMid
 ### Before a user connects a device
 
 As a first step we prompt the user to connect his device in normal mode.
-In this step we handle various invalid device modes and problems with transport layer used to facilitate communication with the device (webUSB, Trezor Bridge).
+In this step we handle various invalid device modes and problems with transport layer used to facilitate communication with the device (webUSB, Cerberus Bridge).
 
 #### List of valid states
 
 -   Waiting for a device
-    -   We provide some troubleshooting tips and link to download Trezor Bridge as it may happen that user launched Suite for the first time without installing Trezor Bridge (only in Web environment)
+    -   We provide some troubleshooting tips and link to download Cerberus Bridge as it may happen that user launched Suite for the first time without installing Cerberus Bridge (only in Web environment)
         ![waiting for device](./assets/welcome/waiting_for_device.png)
 -   Device connected in normal mode
     -   Part of happy path. After the device is connected we proceed to [Data analytics (only in initial run)](<###Data-analytics-(only-in-initial-run)>) or to [Device security (genuinity) check](<###Device-security-(genuinity)-check>)
@@ -69,12 +69,12 @@ Invalid device states:
 
 -   Device connected, but in bootloader mode
 -   Device connected, but unreadable
--   [Seedless device setup](https://trezor.io/learn/a/seedless-setup) is not supported in Suite (not to be confused with regular device without seed).
+-   [Seedless device setup](https://cerberus.uraanai.com/learn/a/seedless-setup) is not supported in Suite (not to be confused with regular device without seed).
 
 Invalid transport states:
 
--   No transport available (Trezor Bridge is not running)
-    -   We need to provide link to download Trezor Bridge (only in Web environment)
+-   No transport available (Cerberus Bridge is not running)
+    -   We need to provide link to download Cerberus Bridge (only in Web environment)
 
 ### Data analytics (only in initial run)
 
@@ -133,7 +133,7 @@ Secondary action: Contact support
 
 To provide good user and dev experience firmware flow has its own reducer. It is shared between firmware flow used in onboarding and standalone modal for firmware update. Both flows,fw installation via onboarding and firmware update via standalone modal, reuse same components.
 
-Active sub step of firmware step is stored in `status` field. Explanation of each field and sub steps can be found in [firmwareReducer.ts](https://github.com/trezor/trezor-suite/blob/develop/packages/suite/src/reducers/firmware/firmwareReducer.ts).
+Active sub step of firmware step is stored in `status` field. Explanation of each field and sub steps can be found in [firmwareReducer.ts](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/suite/src/reducers/firmware/firmwareReducer.ts).
 
 ### Note about normal and bootloader mode
 
@@ -205,7 +205,7 @@ At the end of the process the user will be asked to reconnect the device in norm
 
 ##### WebUSB
 
-Support for the WebUSB came pretty late for T1B1 (bootloader [1.6.0](https://github.com/trezor/trezor-firmware/blob/main/legacy/bootloader/CHANGELOG.md#160-september-2018) bundled with FW [1.7.1](https://github.com/trezor/trezor-firmware/blob/main/legacy/firmware/CHANGELOG.md#170-september-2018)). Currently shipped devices won't support WebUSB out of-the-box and user won't be able to pair such device. In this case user needs to install Trezor Bridge. After finishing fw upgrade WebUSB support will be available.
+Support for the WebUSB came pretty late for T1B1 (bootloader [1.6.0](https://github.com/Cerberus-Wallet/cerberus-firmware/blob/main/legacy/bootloader/CHANGELOG.md#160-september-2018) bundled with FW [1.7.1](https://github.com/Cerberus-Wallet/cerberus-firmware/blob/main/legacy/firmware/CHANGELOG.md#170-september-2018)). Currently shipped devices won't support WebUSB out of-the-box and user won't be able to pair such device. In this case user needs to install Cerberus Bridge. After finishing fw upgrade WebUSB support will be available.
 
 #### Caveats
 
@@ -239,7 +239,7 @@ At first it might seem that both options are doing exactly the same, real differ
 
 #### T2T1/T2B1
 
-The entire process is done on device. All we need to do in Suite UI is to show generic "Confirm on your Trezor" bubble.
+The entire process is done on device. All we need to do in Suite UI is to show generic "Confirm on your Cerberus" bubble.
 
 #### T1B1
 
@@ -254,11 +254,11 @@ User needs to confirm that the seed will be safe, there will be no digital copy 
 
 #### T2T1/T2B1
 
-The entire process is done on device. All we need to do in Suite UI is to show generic "Confirm on your Trezor" bubble.
+The entire process is done on device. All we need to do in Suite UI is to show generic "Confirm on your Cerberus" bubble.
 
 #### T1B1
 
-Process consists of clicking "Next" button too many times and writing down words displayed on a trusty seed card. During this process we will display "Confirm on Trezor" prompt and instructions.
+Process consists of clicking "Next" button too many times and writing down words displayed on a trusty seed card. During this process we will display "Confirm on Cerberus" prompt and instructions.
 
 This step is optional and can be skipped and finished later from Suite settings.
 
@@ -278,7 +278,7 @@ The user enters PIN twice, if there is a mismatch, process is stopped and an err
 
 #### T2T1/T2B1
 
-The entire process is done on device (including handling of mismatched pins). All we need to do in Suite UI is to show generic "Confirm on your Trezor" bubble.
+The entire process is done on device (including handling of mismatched pins). All we need to do in Suite UI is to show generic "Confirm on your Cerberus" bubble.
 
 Be aware that after the PIN is set, device auto-lock functionality gets activated (starting from some firmware version). Thus if it's taking the user too long to finish the onboarding process, the device will get auto locked.
 If in the final step, where the user can change device label and/or homescreen, the device is locked and will respond with a request to show a PIN matrix. This is handled globally, in UnexpectedStates component, for the whole onboarding flow.

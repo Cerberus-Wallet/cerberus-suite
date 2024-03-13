@@ -11,7 +11,7 @@ import {
     deleteDB,
 } from 'idb';
 import { BroadcastChannel } from 'broadcast-channel';
-import { isFirefox } from '@trezor/env-utils';
+import { isFirefox } from '@cerberus/env-utils';
 
 import { StorageMessageEvent } from './types';
 

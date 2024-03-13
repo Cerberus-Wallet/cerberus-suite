@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { getFirmwareVersion } from '@trezor/device-utils';
+import { getFirmwareVersion } from '@cerberus/device-utils';
 import { selectDevice } from '@suite-common/wallet-core';
 
 import { OnboardingButtonBack, OnboardingStepBox } from 'src/components/onboarding';

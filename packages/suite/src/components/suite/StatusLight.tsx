@@ -1,5 +1,5 @@
-import { UIVariant } from '@trezor/components/src/config/types';
-import { CSSColor, Color } from '@trezor/theme';
+import { UIVariant } from '@cerberus/components/src/config/types';
+import { CSSColor, Color } from '@cerberus/theme';
 import styled, { DefaultTheme } from 'styled-components';
 
 type StatusLightVariant = Extract<UIVariant, 'primary' | 'warning' | 'destructive'>;

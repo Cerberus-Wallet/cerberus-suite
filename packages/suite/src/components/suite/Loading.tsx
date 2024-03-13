@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Spinner } from '@trezor/components';
+import { Spinner } from '@cerberus/components';
 
 const LoaderWrapper = styled.div`
     margin: auto;

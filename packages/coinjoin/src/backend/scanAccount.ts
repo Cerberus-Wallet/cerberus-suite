@@ -1,5 +1,5 @@
-import { createCooldown } from '@trezor/utils';
-import { transformTransaction } from '@trezor/blockchain-link-utils/lib/blockbook';
+import { createCooldown } from '@cerberus/utils';
+import { transformTransaction } from '@cerberus/blockchain-link-utils/lib/blockbook';
 
 import { getMultiFilter } from './filters';
 import { doesTxContainAddress } from './backendUtils';

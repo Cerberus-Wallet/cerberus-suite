@@ -1,4 +1,4 @@
-import { parseElectrumUrl } from '@trezor/utils';
+import { parseElectrumUrl } from '@cerberus/utils';
 import type {
     CustomBackend,
     BlockchainNetworks,

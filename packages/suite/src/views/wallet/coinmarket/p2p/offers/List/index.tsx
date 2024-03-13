@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { Translation } from 'src/components/suite';
-import { CoinLogo, H2, Icon, variables } from '@trezor/components';
+import { CoinLogo, H2, Icon, variables } from '@cerberus/components';
 import { useCoinmarketP2pOffersContext } from 'src/hooks/wallet/useCoinmarketP2pOffers';
 import { CoinmarketFiatAmount, CoinmarketRefreshTime } from 'src/views/wallet/coinmarket/common';
 import { InvityAPIReloadQuotesAfterSeconds } from 'src/constants/wallet/coinmarket/metadata';

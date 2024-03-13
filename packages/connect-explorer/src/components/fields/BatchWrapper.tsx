@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
-import { THEME, Icon } from '@trezor/components';
+import { THEME, Icon } from '@cerberus/components';
 
 interface BatchWrapperProps {
     children: ReactNode;

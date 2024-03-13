@@ -1,5 +1,5 @@
 {
-    "name": "@trezor/scripts",
+    "name": "@cerberus/scripts",
     "version": "1.0.0",
     "private": true,
     "scripts": {

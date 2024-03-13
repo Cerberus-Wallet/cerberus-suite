@@ -1,7 +1,7 @@
 // TODO: remove whole file, replaced by @suite-components/PrerequisitesGuide/components/DeviceUnreadable
 
 import { goto } from 'src/actions/suite/routerActions';
-import { Button } from '@trezor/components';
+import { Button } from '@cerberus/components';
 import { DeviceInvalidModeLayout, Translation } from 'src/components/suite';
 import { useDispatch } from 'src/hooks/suite';
 

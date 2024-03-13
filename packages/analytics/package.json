@@ -1,5 +1,5 @@
 {
-    "name": "@trezor/analytics",
+    "name": "@cerberus/analytics",
     "version": "1.0.15",
     "license": "See LICENSE.md in repo root",
     "sideEffects": false,
@@ -18,8 +18,8 @@
         "build:lib": "yarn g:rimraf lib && yarn g:tsc --build ./tsconfig.lib.json"
     },
     "dependencies": {
-        "@trezor/env-utils": "workspace:*",
-        "@trezor/utils": "workspace:*"
+        "@cerberus/env-utils": "workspace:*",
+        "@cerberus/utils": "workspace:*"
     },
     "peerDependencies": {
         "tslib": "^2.6.2"

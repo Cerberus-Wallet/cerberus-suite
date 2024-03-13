@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Account } from '@suite-common/wallet-types';
-import { spacingsPx } from '@trezor/theme';
-import { CoinLogo } from '@trezor/components';
+import { spacingsPx } from '@cerberus/theme';
+import { CoinLogo } from '@cerberus/components';
 import {
     MetadataLabeling,
     AccountLabel,

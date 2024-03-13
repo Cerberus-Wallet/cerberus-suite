@@ -1,8 +1,8 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/RecoveryDevice.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/RecoveryDevice.js
 
 import { AbstractMethod } from '../core/AbstractMethod';
 import { UI, createUiMessage } from '../events';
-import { Assert } from '@trezor/schema-utils';
+import { Assert } from '@cerberus/schema-utils';
 import type { PROTO } from '../constants';
 import { RecoveryDevice as RecoveryDeviceSchema } from '../types/api/recoveryDevice';
 

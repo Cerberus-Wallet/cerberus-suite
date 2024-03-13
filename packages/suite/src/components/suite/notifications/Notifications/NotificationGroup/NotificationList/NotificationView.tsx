@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import type { NotificationEntry } from '@suite-common/toast-notifications';
-import { Button, Icon, ButtonProps, IconProps, Paragraph } from '@trezor/components';
+import { Button, Icon, ButtonProps, IconProps, Paragraph } from '@cerberus/components';
 import { Translation, FormattedDateWithBullet } from 'src/components/suite';
 import { getNotificationIcon } from 'src/utils/suite/notification';
 import { useLayoutSize } from 'src/hooks/suite';

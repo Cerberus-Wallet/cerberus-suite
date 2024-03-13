@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-use-before-define */
 
-// origin: https://github.com/trezor/connect/blob/develop/src/js/iframe/iframe.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/iframe/iframe.js
 
 import {
     RESPONSE_EVENT,
@@ -19,17 +19,17 @@ import {
     DeviceEvent,
     CoreRequestMessage,
     CoreEventMessage,
-} from '@trezor/connect';
-import { Core, initCore } from '@trezor/connect/src/core';
-import { DataManager } from '@trezor/connect/src/data/DataManager';
-import { config } from '@trezor/connect/src/data/config';
-import { initLog, LogWriter } from '@trezor/connect/src/utils/debug';
-import { getOrigin } from '@trezor/connect/src/utils/urlUtils';
-import { suggestBridgeInstaller } from '@trezor/connect/src/data/transportInfo';
-import { suggestUdevInstaller } from '@trezor/connect/src/data/udevInfo';
-import { storage, getSystemInfo, getInstallerPackage } from '@trezor/connect-common';
+} from '@cerberus/connect';
+import { Core, initCore } from '@cerberus/connect/src/core';
+import { DataManager } from '@cerberus/connect/src/data/DataManager';
+import { config } from '@cerberus/connect/src/data/config';
+import { initLog, LogWriter } from '@cerberus/connect/src/utils/debug';
+import { getOrigin } from '@cerberus/connect/src/utils/urlUtils';
+import { suggestBridgeInstaller } from '@cerberus/connect/src/data/transportInfo';
+import { suggestUdevInstaller } from '@cerberus/connect/src/data/udevInfo';
+import { storage, getSystemInfo, getInstallerPackage } from '@cerberus/connect-common';
 import { parseConnectSettings, isOriginWhitelisted } from './connectSettings';
-import { analytics, EventType } from '@trezor/connect-analytics';
+import { analytics, EventType } from '@cerberus/connect-analytics';
 // @ts-expect-error (typescript does not know this is worker constructor, this is done by webpack)
 import LogWorker from './sharedLoggerWorker';
 import { initLogWriterWithWorker } from './sharedLoggerUtils';
@@ -57,7 +57,7 @@ const handleMessage = async (event: MessageEvent<CoreRequestMessage>) => {
         postMessage(createPopupMessage(POPUP.CANCEL_POPUP_REQUEST));
     };
 
-    if (data.type === IFRAME.LOG && data.payload.prefix === '@trezor/connect-web') {
+    if (data.type === IFRAME.LOG && data.payload.prefix === '@cerberus/connect-web') {
         if (logWriterProxy) {
             logWriterProxy.add(data.payload);
         }
@@ -83,7 +83,7 @@ const handleMessage = async (event: MessageEvent<CoreRequestMessage>) => {
     // popup handshake initialization process, get reference to message channel
     if (data.type === POPUP.HANDSHAKE && event.origin === window.location.origin) {
         // check if message was received via BroadcastChannel (persistent default channel. see "init")
-        // or reassign _popupMessagePort to current MessagePort (dynamic channel. created by popup. see @trezor/connect-popup initMessageChannel)
+        // or reassign _popupMessagePort to current MessagePort (dynamic channel. created by popup. see @cerberus/connect-popup initMessageChannel)
         // event.target === BroadcastChannel only in if message was sent via BroadcastChannel otherwise event.target = Window message was send via iframe.postMessage
         if (event.target !== _popupMessagePort) {
             if (event.ports?.length < 1) {
@@ -197,7 +197,7 @@ const handleMessage = async (event: MessageEvent<CoreRequestMessage>) => {
     }
 };
 
-// Communication with 3rd party window and Trezor Popup.
+// Communication with 3rd party window and Cerberus Popup.
 const postMessage = (message: CoreEventMessage) => {
     _log.debug('postMessage', message);
 
@@ -239,7 +239,7 @@ const postMessage = (message: CoreEventMessage) => {
     if (!usingPopup || shouldUiEventBeSentToHost(message)) {
         let origin = DataManager.getSettings('origin');
         if (!origin || origin.indexOf('file://') >= 0) origin = '*';
-        message.channel = { here: '@trezor/connect-iframe', peer: '@trezor/connect-web' };
+        message.channel = { here: '@cerberus/connect-iframe', peer: '@cerberus/connect-web' };
         window.parent.postMessage(message, origin);
     }
 };

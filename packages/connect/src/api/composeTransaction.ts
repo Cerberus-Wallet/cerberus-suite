@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/ComposeTransaction.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/ComposeTransaction.js
 
 import BigNumber from 'bignumber.js';
 import { AbstractMethod } from '../core/AbstractMethod';
@@ -25,7 +25,7 @@ import {
     verifyTx,
     parseTransactionHexes,
 } from './bitcoin';
-import type { ComposeOutput } from '@trezor/utxo-lib';
+import type { ComposeOutput } from '@cerberus/utxo-lib';
 import type { BitcoinNetworkInfo, DiscoveryAccount, AccountUtxo } from '../types';
 import type {
     SignedTransaction,
@@ -78,7 +78,7 @@ export default class ComposeTransaction extends AbstractMethod<'composeTransacti
         // set required firmware from coinInfo support
         this.firmwareRange = getFirmwareRange(this.name, coinInfo, this.firmwareRange);
 
-        // validate each output and transform into @trezor/utxo-lib/compose format
+        // validate each output and transform into @cerberus/utxo-lib/compose format
         const outputs: ComposeOutput[] = [];
         let total = new BigNumber(0);
         payload.outputs.forEach(out => {
@@ -149,7 +149,7 @@ export default class ComposeTransaction extends AbstractMethod<'composeTransacti
             skipPermutation,
         });
 
-        // This is mandatory, @trezor/utxo-lib/compose expects current block height
+        // This is mandatory, @cerberus/utxo-lib/compose expects current block height
         // TODO: make it possible without it (offline composing)
         const blockchain = await initBlockchain(this.params.coinInfo, this.postMessage);
         await composer.init(blockchain);

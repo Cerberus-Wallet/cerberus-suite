@@ -4,7 +4,7 @@ import {
     blockchainActions,
     stakeActions,
 } from '@suite-common/wallet-core';
-import { ArrayElement } from '@trezor/type-utils';
+import { ArrayElement } from '@cerberus/type-utils';
 
 import { ReceiveAction } from 'src/actions/wallet/receiveActions';
 import { SignVerifyAction } from 'src/actions/wallet/signVerifyActions';

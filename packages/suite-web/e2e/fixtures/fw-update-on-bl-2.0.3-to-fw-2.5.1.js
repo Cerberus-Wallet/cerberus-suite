@@ -10,7 +10,7 @@ export default [
             headers: [
                 {
                     name: 'Access-Control-Allow-Origin',
-                    value: 'https://suite.trezor.io',
+                    value: 'https://suite.cerberus.uraanai.com',
                 },
                 {
                     name: 'Date',
@@ -44,7 +44,7 @@ export default [
             headers: [
                 {
                     name: 'Access-Control-Allow-Origin',
-                    value: 'https://suite.trezor.io',
+                    value: 'https://suite.cerberus.uraanai.com',
                 },
                 {
                     name: 'Date',
@@ -78,7 +78,7 @@ export default [
             headers: [
                 {
                     name: 'Access-Control-Allow-Origin',
-                    value: 'https://suite.trezor.io',
+                    value: 'https://suite.cerberus.uraanai.com',
                 },
                 {
                     name: 'Date',
@@ -116,7 +116,7 @@ export default [
             headers: [
                 {
                     name: 'Access-Control-Allow-Origin',
-                    value: 'https://suite.trezor.io',
+                    value: 'https://suite.cerberus.uraanai.com',
                 },
                 {
                     name: 'Date',
@@ -154,7 +154,7 @@ export default [
             headers: [
                 {
                     name: 'Access-Control-Allow-Origin',
-                    value: 'https://suite.trezor.io',
+                    value: 'https://suite.cerberus.uraanai.com',
                 },
                 {
                     name: 'Date',
@@ -192,7 +192,7 @@ export default [
             headers: [
                 {
                     name: 'Access-Control-Allow-Origin',
-                    value: 'https://suite.trezor.io',
+                    value: 'https://suite.cerberus.uraanai.com',
                 },
                 {
                     name: 'Date',
@@ -226,7 +226,7 @@ export default [
             headers: [
                 {
                     name: 'Access-Control-Allow-Origin',
-                    value: 'https://suite.trezor.io',
+                    value: 'https://suite.cerberus.uraanai.com',
                 },
                 {
                     name: 'Date',
@@ -264,7 +264,7 @@ export default [
             headers: [
                 {
                     name: 'Access-Control-Allow-Origin',
-                    value: 'https://suite.trezor.io',
+                    value: 'https://suite.cerberus.uraanai.com',
                 },
                 {
                     name: 'Date',
@@ -298,7 +298,7 @@ export default [
             headers: [
                 {
                     name: 'Access-Control-Allow-Origin',
-                    value: 'https://suite.trezor.io',
+                    value: 'https://suite.cerberus.uraanai.com',
                 },
                 {
                     name: 'Date',
@@ -336,7 +336,7 @@ export default [
             headers: [
                 {
                     name: 'Access-Control-Allow-Origin',
-                    value: 'https://suite.trezor.io',
+                    value: 'https://suite.cerberus.uraanai.com',
                 },
                 {
                     name: 'Date',
@@ -374,7 +374,7 @@ export default [
             headers: [
                 {
                     name: 'Access-Control-Allow-Origin',
-                    value: 'https://suite.trezor.io',
+                    value: 'https://suite.cerberus.uraanai.com',
                 },
                 {
                     name: 'Date',
@@ -412,7 +412,7 @@ export default [
             headers: [
                 {
                     name: 'Access-Control-Allow-Origin',
-                    value: 'https://suite.trezor.io',
+                    value: 'https://suite.cerberus.uraanai.com',
                 },
                 {
                     name: 'Date',
@@ -450,7 +450,7 @@ export default [
             headers: [
                 {
                     name: 'Access-Control-Allow-Origin',
-                    value: 'https://suite.trezor.io',
+                    value: 'https://suite.cerberus.uraanai.com',
                 },
                 {
                     name: 'Date',
@@ -488,7 +488,7 @@ export default [
             headers: [
                 {
                     name: 'Access-Control-Allow-Origin',
-                    value: 'https://suite.trezor.io',
+                    value: 'https://suite.cerberus.uraanai.com',
                 },
                 {
                     name: 'Date',
@@ -526,7 +526,7 @@ export default [
             headers: [
                 {
                     name: 'Access-Control-Allow-Origin',
-                    value: 'https://suite.trezor.io',
+                    value: 'https://suite.cerberus.uraanai.com',
                 },
                 {
                     name: 'Date',
@@ -564,7 +564,7 @@ export default [
             headers: [
                 {
                     name: 'Access-Control-Allow-Origin',
-                    value: 'https://suite.trezor.io',
+                    value: 'https://suite.cerberus.uraanai.com',
                 },
                 {
                     name: 'Date',
@@ -602,7 +602,7 @@ export default [
             headers: [
                 {
                     name: 'Access-Control-Allow-Origin',
-                    value: 'https://suite.trezor.io',
+                    value: 'https://suite.cerberus.uraanai.com',
                 },
                 {
                     name: 'Date',
@@ -640,7 +640,7 @@ export default [
             headers: [
                 {
                     name: 'Access-Control-Allow-Origin',
-                    value: 'https://suite.trezor.io',
+                    value: 'https://suite.cerberus.uraanai.com',
                 },
                 {
                     name: 'Date',
@@ -678,7 +678,7 @@ export default [
             headers: [
                 {
                     name: 'Access-Control-Allow-Origin',
-                    value: 'https://suite.trezor.io',
+                    value: 'https://suite.cerberus.uraanai.com',
                 },
                 {
                     name: 'Date',
@@ -716,7 +716,7 @@ export default [
             headers: [
                 {
                     name: 'Access-Control-Allow-Origin',
-                    value: 'https://suite.trezor.io',
+                    value: 'https://suite.cerberus.uraanai.com',
                 },
                 {
                     name: 'Date',
@@ -754,7 +754,7 @@ export default [
             headers: [
                 {
                     name: 'Access-Control-Allow-Origin',
-                    value: 'https://suite.trezor.io',
+                    value: 'https://suite.cerberus.uraanai.com',
                 },
                 {
                     name: 'Date',
@@ -792,7 +792,7 @@ export default [
             headers: [
                 {
                     name: 'Access-Control-Allow-Origin',
-                    value: 'https://suite.trezor.io',
+                    value: 'https://suite.cerberus.uraanai.com',
                 },
                 {
                     name: 'Date',
@@ -830,7 +830,7 @@ export default [
             headers: [
                 {
                     name: 'Access-Control-Allow-Origin',
-                    value: 'https://suite.trezor.io',
+                    value: 'https://suite.cerberus.uraanai.com',
                 },
                 {
                     name: 'Date',
@@ -868,7 +868,7 @@ export default [
             headers: [
                 {
                     name: 'Access-Control-Allow-Origin',
-                    value: 'https://suite.trezor.io',
+                    value: 'https://suite.cerberus.uraanai.com',
                 },
                 {
                     name: 'Date',
@@ -906,7 +906,7 @@ export default [
             headers: [
                 {
                     name: 'Access-Control-Allow-Origin',
-                    value: 'https://suite.trezor.io',
+                    value: 'https://suite.cerberus.uraanai.com',
                 },
                 {
                     name: 'Date',
@@ -940,7 +940,7 @@ export default [
             headers: [
                 {
                     name: 'Access-Control-Allow-Origin',
-                    value: 'https://suite.trezor.io',
+                    value: 'https://suite.cerberus.uraanai.com',
                 },
                 {
                     name: 'Date',
@@ -978,7 +978,7 @@ export default [
             headers: [
                 {
                     name: 'Access-Control-Allow-Origin',
-                    value: 'https://suite.trezor.io',
+                    value: 'https://suite.cerberus.uraanai.com',
                 },
                 {
                     name: 'Date',
@@ -1016,7 +1016,7 @@ export default [
             headers: [
                 {
                     name: 'Access-Control-Allow-Origin',
-                    value: 'https://suite.trezor.io',
+                    value: 'https://suite.cerberus.uraanai.com',
                 },
                 {
                     name: 'Date',
@@ -1050,7 +1050,7 @@ export default [
             headers: [
                 {
                     name: 'Access-Control-Allow-Origin',
-                    value: 'https://suite.trezor.io',
+                    value: 'https://suite.cerberus.uraanai.com',
                 },
                 {
                     name: 'Date',
@@ -1088,7 +1088,7 @@ export default [
             headers: [
                 {
                     name: 'Access-Control-Allow-Origin',
-                    value: 'https://suite.trezor.io',
+                    value: 'https://suite.cerberus.uraanai.com',
                 },
                 {
                     name: 'Date',
@@ -1126,7 +1126,7 @@ export default [
             headers: [
                 {
                     name: 'Access-Control-Allow-Origin',
-                    value: 'https://suite.trezor.io',
+                    value: 'https://suite.cerberus.uraanai.com',
                 },
                 {
                     name: 'Date',
@@ -1164,7 +1164,7 @@ export default [
             headers: [
                 {
                     name: 'Access-Control-Allow-Origin',
-                    value: 'https://suite.trezor.io',
+                    value: 'https://suite.cerberus.uraanai.com',
                 },
                 {
                     name: 'Date',
@@ -1198,7 +1198,7 @@ export default [
             headers: [
                 {
                     name: 'Access-Control-Allow-Origin',
-                    value: 'https://suite.trezor.io',
+                    value: 'https://suite.cerberus.uraanai.com',
                 },
                 {
                     name: 'Date',
@@ -1236,7 +1236,7 @@ export default [
             headers: [
                 {
                     name: 'Access-Control-Allow-Origin',
-                    value: 'https://suite.trezor.io',
+                    value: 'https://suite.cerberus.uraanai.com',
                 },
                 {
                     name: 'Date',
@@ -1270,7 +1270,7 @@ export default [
             headers: [
                 {
                     name: 'Access-Control-Allow-Origin',
-                    value: 'https://suite.trezor.io',
+                    value: 'https://suite.cerberus.uraanai.com',
                 },
                 {
                     name: 'Date',
@@ -1308,7 +1308,7 @@ export default [
             headers: [
                 {
                     name: 'Access-Control-Allow-Origin',
-                    value: 'https://suite.trezor.io',
+                    value: 'https://suite.cerberus.uraanai.com',
                 },
                 {
                     name: 'Date',
@@ -1346,7 +1346,7 @@ export default [
             headers: [
                 {
                     name: 'Access-Control-Allow-Origin',
-                    value: 'https://suite.trezor.io',
+                    value: 'https://suite.cerberus.uraanai.com',
                 },
                 {
                     name: 'Date',
@@ -1384,7 +1384,7 @@ export default [
             headers: [
                 {
                     name: 'Access-Control-Allow-Origin',
-                    value: 'https://suite.trezor.io',
+                    value: 'https://suite.cerberus.uraanai.com',
                 },
                 {
                     name: 'Date',
@@ -1422,7 +1422,7 @@ export default [
             headers: [
                 {
                     name: 'Access-Control-Allow-Origin',
-                    value: 'https://suite.trezor.io',
+                    value: 'https://suite.cerberus.uraanai.com',
                 },
                 {
                     name: 'Date',
@@ -1456,7 +1456,7 @@ export default [
             headers: [
                 {
                     name: 'Access-Control-Allow-Origin',
-                    value: 'https://suite.trezor.io',
+                    value: 'https://suite.cerberus.uraanai.com',
                 },
                 {
                     name: 'Date',

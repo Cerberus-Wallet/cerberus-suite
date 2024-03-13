@@ -3,7 +3,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 
 import { Box, Divider, Text } from '@suite-native/atoms';
 import { AccountAddressFormatter } from '@suite-native/formatters';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import { CoinSymbol, CryptoIcon } from '@suite-common/icons';
 
 import { SummaryRow } from './TransactionDetailStatusSection';

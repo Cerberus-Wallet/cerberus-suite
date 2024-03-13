@@ -1,4 +1,4 @@
-import type { FiatRatesLegacy } from '@trezor/connect';
+import type { FiatRatesLegacy } from '@cerberus/connect';
 import { NetworkSymbol } from '@suite-common/wallet-config';
 
 import { TokenAddress } from './account';

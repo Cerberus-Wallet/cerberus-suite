@@ -1,4 +1,4 @@
-import type { BlockchainLinkResponse } from '@trezor/blockchain-link';
+import type { BlockchainLinkResponse } from '@cerberus/blockchain-link';
 import type { Response } from '../params';
 import type { BlockchainSubscribe } from './blockchainSubscribe';
 

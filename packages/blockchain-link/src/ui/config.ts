@@ -59,7 +59,7 @@ export default [
         blockchain: {
             name: 'Ethereum',
             worker: 'js/blockbook-worker.js',
-            server: ['https://eth1.trezor.io', 'https://eth2.trezor.io'],
+            server: ['https://eth1.trezorcheck.io', 'https://eth2.trezor.io'],
             debug: true,
         },
         data: {
@@ -91,7 +91,7 @@ export default [
         blockchain: {
             name: 'Ethereum Classic',
             worker: 'js/blockbook-worker.js',
-            server: ['https://etc1.trezor.io', 'https://etc2.trezor.io'],
+            server: ['https://etc1.trezorcheck.io', 'https://etc2.trezor.io'],
             debug: true,
         },
         data: {
@@ -114,7 +114,7 @@ export default [
             name: 'Bitcoin',
             worker: 'js/blockbook-worker.js',
             server: [
-                'https://btc1.trezor.io',
+                'https://btc1.trezorcheck.io',
                 'https://btc2.trezor.io',
                 'https://btc3.trezor.io',
                 'https://btc4.trezor.io',
@@ -141,7 +141,7 @@ export default [
         blockchain: {
             name: 'Bitcoin Testnet',
             worker: 'js/blockbook-worker.js',
-            server: ['https://tbtc1.trezor.io', 'https://tbtc2.trezor.io'],
+            server: ['https://tbtc1.trezorcheck.io', 'https://tbtc2.trezor.io'],
             debug: true,
         },
         data: {
@@ -176,7 +176,7 @@ export default [
             name: 'Bitcoin Cash',
             worker: 'js/blockbook-worker.js',
             server: [
-                'https://bch1.trezor.io',
+                'https://bch1.trezorcheck.io',
                 'https://bch2.trezor.io',
                 'https://bch3.trezor.io',
                 'https://bch4.trezor.io',
@@ -203,7 +203,7 @@ export default [
             name: 'Bitcoin Gold',
             worker: 'js/blockbook-worker.js',
             server: [
-                'https://btg1.trezor.io',
+                'https://btg1.trezorcheck.io',
                 'https://btg2.trezor.io',
                 'https://btg3.trezor.io',
                 'https://btg4.trezor.io',
@@ -230,7 +230,7 @@ export default [
             name: 'Dash',
             worker: 'js/blockbook-worker.js',
             server: [
-                'https://dash1.trezor.io',
+                'https://dash1.trezorcheck.io',
                 'https://dash2.trezor.io',
                 'https://dash3.trezor.io',
                 'https://dash4.trezor.io',
@@ -256,7 +256,7 @@ export default [
         blockchain: {
             name: 'DigiByte',
             worker: 'js/blockbook-worker.js',
-            server: ['https://dgb1.trezor.io', 'https://dgb2.trezor.io'],
+            server: ['https://dgb1.trezorcheck.io', 'https://dgb2.trezor.io'],
             debug: true,
         },
         data: {
@@ -278,7 +278,7 @@ export default [
             name: 'Doge',
             worker: 'js/blockbook-worker.js',
             server: [
-                'https://doge1.trezor.io',
+                'https://doge1.trezorcheck.io',
                 'https://doge2.trezor.io',
                 'https://doge3.trezor.io',
                 'https://doge4.trezor.io',
@@ -305,7 +305,7 @@ export default [
             name: 'Litecoin',
             worker: 'js/blockbook-worker.js',
             server: [
-                'https://ltc1.trezor.io',
+                'https://ltc1.trezorcheck.io',
                 'https://ltc2.trezor.io',
                 'https://ltc3.trezor.io',
                 'https://ltc4.trezor.io',
@@ -331,7 +331,7 @@ export default [
         blockchain: {
             name: 'Namecoin',
             worker: 'js/blockbook-worker.js',
-            server: ['https://nmc1.trezor.io', 'https://nmc2.trezor.io'],
+            server: ['https://nmc1.trezorcheck.io', 'https://nmc2.trezor.io'],
             debug: true,
         },
         data: {
@@ -353,7 +353,7 @@ export default [
             name: 'Vertcoin',
             worker: 'js/blockbook-worker.js',
             server: [
-                'https://vtc1.trezor.io',
+                'https://vtc1.trezorcheck.io',
                 'https://vtc2.trezor.io',
                 'https://vtc3.trezor.io',
                 'https://vtc4.trezor.io',
@@ -380,7 +380,7 @@ export default [
             name: 'ZCash',
             worker: 'js/blockbook-worker.js',
             server: [
-                'https://zec1.trezor.io',
+                'https://zec1.trezorcheck.io',
                 'https://zec2.trezor.io',
                 'https://zec3.trezor.io',
                 'https://zec4.trezor.io',
@@ -454,7 +454,7 @@ export default [
             name: 'Solana Mainnet',
             // we do not use path to worker build here because its not used, we use it just to match this config to actual implementation of the worker
             worker: 'solana',
-            server: ['https://solana1.trezor.io'],
+            server: ['https://solana1.trezorcheck.io'],
             debug: true,
         },
         data: {
@@ -507,7 +507,7 @@ export default [
         blockchain: {
             name: 'Polygon PoS',
             worker: 'js/blockbook-worker.js',
-            server: ['https://matic1.trezor.io', 'https://matic2.trezor.io'],
+            server: ['https://matic1.trezorcheck.io', 'https://matic2.trezor.io'],
             debug: true,
         },
         data: {

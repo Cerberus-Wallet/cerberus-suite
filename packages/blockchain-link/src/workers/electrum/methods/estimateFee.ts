@@ -1,6 +1,6 @@
 import { Api, btcToSat } from '../utils';
-import type { EstimateFee as Req } from '@trezor/blockchain-link-types/lib/messages';
-import type { EstimateFee as Res } from '@trezor/blockchain-link-types/lib/responses';
+import type { EstimateFee as Req } from '@cerberus/blockchain-link-types/lib/messages';
+import type { EstimateFee as Res } from '@cerberus/blockchain-link-types/lib/responses';
 
 const estimateFee: Api<Req, Res> = (client, payload) =>
     Promise.all(

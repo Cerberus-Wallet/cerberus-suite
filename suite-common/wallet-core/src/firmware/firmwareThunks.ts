@@ -3,17 +3,17 @@ import {
     getFirmwareVersion,
     hasBitcoinOnlyFirmware,
     isBitcoinOnlyDevice,
-} from '@trezor/device-utils';
-import { Await } from '@trezor/type-utils';
-import { isDesktop } from '@trezor/env-utils';
+} from '@cerberus/device-utils';
+import { Await } from '@cerberus/type-utils';
+import { isDesktop } from '@cerberus/env-utils';
 import { resolveStaticPath } from '@suite-common/suite-utils';
-import { analytics, EventType } from '@trezor/suite-analytics';
+import { analytics, EventType } from '@cerberus/suite-analytics';
 import TrezorConnect, {
     Device,
     DeviceModelInternal,
     FirmwareType,
     Unsuccessful,
-} from '@trezor/connect';
+} from '@cerberus/connect';
 import { createThunk } from '@suite-common/redux-utils';
 import { notificationsActions } from '@suite-common/toast-notifications';
 
@@ -276,7 +276,7 @@ export const validateFirmwareHash = createThunk(
             });
 
             // TODO: move this logic partially into TrezorConnect as described here:
-            // https://github.com/trezor/trezor-suite/issues/5896
+            // https://github.com/Cerberus-Wallet/cerberus-suite/issues/5896
             // we don't want to have false negatives but more importantly false positives.
             // Cases that should not lead to the big red error:
             // - device disconnected, broken cable

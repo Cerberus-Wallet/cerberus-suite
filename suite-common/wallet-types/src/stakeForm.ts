@@ -1,6 +1,6 @@
 import { UseFormReturn, FormState as ReactHookFormState } from 'react-hook-form';
 
-import { FeeLevel } from '@trezor/connect';
+import { FeeLevel } from '@cerberus/connect';
 import { FiatCurrencyCode } from '@suite-common/suite-config';
 import { Network } from '@suite-common/wallet-config';
 

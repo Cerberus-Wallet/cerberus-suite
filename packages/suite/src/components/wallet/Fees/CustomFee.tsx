@@ -9,7 +9,7 @@ import {
     UseFormReturn,
     UseFormSetValue,
 } from 'react-hook-form';
-import { Note, motionEasing, variables } from '@trezor/components';
+import { Note, motionEasing, variables } from '@cerberus/components';
 import { Translation } from 'src/components/suite';
 import { NumberInput } from 'src/components/suite/NumberInput';
 import { getInputState, getFeeUnits, isInteger } from '@suite-common/wallet-utils';

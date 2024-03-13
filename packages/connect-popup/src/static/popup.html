@@ -7,12 +7,12 @@
             name="viewport"
             content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"
         />
-        <title>TrezorConnect | Trezor</title>
+        <title>TrezorConnect | Cerberus</title>
         <meta name="description" content="" />
         <meta name="keywords" content="" />
-        <meta name="author" content="Trezor info@trezor.io" />
+        <meta name="author" content="Cerberus info@cerberus.uraanai.com" />
         <meta name="robots" content="noindex, nofollow" />
-        <meta name="title" content="Trezor Connect" />
+        <meta name="title" content="Cerberus Connect" />
         <meta name="theme-color" content="#ffffff" />
         <meta http-equiv="Pragma" content="no-cache" />
         <meta http-equiv="Expires" content="-1" />
@@ -119,7 +119,7 @@
                         <rect fill="#01B757" x="2" y="7" width="14" height="7" rx="0.5625"></rect>
                     </g>
                 </svg>
-                <p>Connect Trezor to continue</p>
+                <p>Connect Cerberus to continue</p>
                 <div class="webusb">
                     <div class="divider">
                         <span>And</span>
@@ -144,7 +144,7 @@
                             <span class="device-name">#DEVICE NAME</span>
                         </div>
                         <div class="explain">
-                            Please install <a href="<%= htmlWebpackPlugin.options.urls.SUITE_BRIDGE_URL %>">Bridge</a> to use Trezor
+                            Please install <a href="<%= htmlWebpackPlugin.options.urls.SUITE_BRIDGE_URL %>">Bridge</a> to use Cerberus
                         </div>
                     </button> -->
                     </div>
@@ -169,7 +169,7 @@
             <div class="pin">
                 <div class="wrapper">
                     <h3>Enter PIN for <span class="device-name"></span></h3>
-                    <p>The PIN layout is displayed on your Trezor.</p>
+                    <p>The PIN layout is displayed on your Cerberus.</p>
 
                     <div class="pin-input-row">
                         <input
@@ -271,7 +271,7 @@
             <!-- Word: END -->
 
             <!-- Passphrase -->
-            <!-- moved to @trezor/connect-ui -->
+            <!-- moved to @cerberus/connect-ui -->
             <!-- Passphrase: END -->
 
             <!-- invalid passphrase -->
@@ -677,8 +677,8 @@
                     </div>
                     <h3>Select <span>#COIN</span> account</h3>
                     <div class="bech32-warning" style="display: none">
-                        This Account type is supported only in Trezor Suite.<br />
-                        Pick "Segwit account" if you need to use it in Trezor Wallet.
+                        This Account type is supported only in Cerberus Suite.<br />
+                        Pick "Segwit account" if you need to use it in Cerberus Wallet.
                     </div>
                 </div>
                 <div class="wrapper">
@@ -1221,7 +1221,7 @@
             <!-- Initialization -->
             <div class="initialize">
                 <div>
-                    <h3>Trezor not initialized</h3>
+                    <h3>Cerberus not initialized</h3>
                     <p>Please set up your device before using this service.</p>
                 </div>
 
@@ -1234,7 +1234,7 @@
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
                     >
-                        <title>Trezor</title>
+                        <title>Cerberus</title>
                         <defs>
                             <filter
                                 x="0.0%"
@@ -1452,15 +1452,15 @@
             <!-- Seedless -->
             <div class="seedless">
                 <div>
-                    <h3>Trezor is in seedless mode</h3>
+                    <h3>Cerberus is in seedless mode</h3>
                     <p>It is not suitable for this service.</p>
                     <p>
-                        Please contact your Trezor provider or <br /><a
+                        Please contact your Cerberus provider or <br /><a
                             href="<%= htmlWebpackPlugin.options.urls.CERBERUS_SUPPORT_URL %>"
                             target="_blank"
                             rel="noreferrer noopener"
                             onclick="window.closeWindow();"
-                            >Trezor Support</a
+                            >Cerberus Support</a
                         >
                         in case of further questions.
                     </p>
@@ -1841,7 +1841,7 @@
                 <div>
                     <h3>New firmware update available</h3>
                     <p>
-                        A new firmware update is available for your Trezor device. Update now for
+                        A new firmware update is available for your Cerberus device. Update now for
                         the latest features.
                     </p>
                 </div>
@@ -1996,7 +1996,7 @@
             <!-- Firmware not supported -->
             <div class="firmware-not-supported">
                 <div>
-                    <h3>Connected Trezor device not supported</h3>
+                    <h3>Connected Cerberus device not supported</h3>
                     <p>Find more information about coins support.</p>
                 </div>
                 <div class="svg-icon">
@@ -2149,15 +2149,15 @@
             <div class="firmware-not-compatible">
                 <p>
                     The current version of firmware (<span class="fw-version"></span>) may be not
-                    compatible with the running version of Trezor Connect.<br />
+                    compatible with the running version of Cerberus Connect.<br />
                     The current version of firmware contains major changes that could affect the
-                    efficient functionality of Trezor Connect.
+                    efficient functionality of Cerberus Connect.
                 </p>
                 <p>
                     If you’re experiencing any issue as a user, please contact the owner of
                     <strong class="fw-identity"></strong>.<br />
                     If you are a developer of <strong class="fw-identity"></strong> please, update
-                    Trezor Connect to the newest version.
+                    Cerberus Connect to the newest version.
                 </p>
                 <div class="buttons">
                     <button class="confirm">Proceed</button>
@@ -2827,7 +2827,7 @@
             <!-- No backup confirmation -->
             <div class="no-backup">
                 <div class="wrapper">
-                    <h3>Your Trezor is not backed up!</h3>
+                    <h3>Your Cerberus is not backed up!</h3>
                     <p>
                         If your device is ever lost or damaged, your funds will be lost. Backup your
                         device first, to protect your coins against such events.
@@ -3229,7 +3229,7 @@
             <!-- Passphrase on device: END -->
 
             <!-- Iframe not loading failure start-->
-            <!-- moved into @trezor/connect-ui -->
+            <!-- moved into @cerberus/connect-ui -->
             <!-- Iframe not loading failure end -->
         </div>
 
@@ -3237,8 +3237,8 @@
             const message = {
                 type: 'popup-bootstrap',
                 channel: {
-                    here: '@trezor/connect-popup',
-                    peer: '@trezor/connect-web',
+                    here: '@cerberus/connect-popup',
+                    peer: '@cerberus/connect-web',
                 },
             };
             if (window.opener) {

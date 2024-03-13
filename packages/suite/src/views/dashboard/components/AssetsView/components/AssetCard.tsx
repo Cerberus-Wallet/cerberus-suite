@@ -11,9 +11,9 @@ import {
 } from 'src/components/suite';
 import { isTestnet } from '@suite-common/wallet-utils';
 import { CoinmarketBuyButton } from 'src/views/dashboard/components/CoinmarketBuyButton';
-import { borders, spacingsPx, typography } from '@trezor/theme';
+import { borders, spacingsPx, typography } from '@cerberus/theme';
 
-import { Card, H2, Icon, SkeletonRectangle, variables } from '@trezor/components';
+import { Card, H2, Icon, SkeletonRectangle, variables } from '@cerberus/components';
 import { useDispatch } from 'react-redux';
 import { useAccountSearch, useLoadingSkeleton, useSelector } from 'src/hooks/suite';
 import { goto } from 'src/actions/suite/routerActions';

@@ -1,7 +1,7 @@
 import BigNumber from 'bignumber.js';
 import styled, { useTheme } from 'styled-components';
-import { Button, Card, Icon, variables } from '@trezor/components';
-import { spacingsPx } from '@trezor/theme';
+import { Button, Card, Icon, variables } from '@cerberus/components';
+import { spacingsPx } from '@cerberus/theme';
 import { selectAccountStakeTransactions } from '@suite-common/wallet-core';
 import { isPending } from '@suite-common/wallet-utils';
 import { FiatValue, FormattedCryptoAmount, Translation } from 'src/components/suite';

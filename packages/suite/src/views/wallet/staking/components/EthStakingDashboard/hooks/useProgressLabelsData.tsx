@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import styled from 'styled-components';
-import { variables } from '@trezor/components';
+import { variables } from '@cerberus/components';
 import { ProgressLabelData } from '../components/ProgressLabels/types';
 import { Translation } from 'src/components/suite';
 

@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { valid, satisfies } from 'semver';
 
 import { rebootToBootloader } from '@suite-common/wallet-core';
-import { getFirmwareVersion } from '@trezor/device-utils';
+import { getFirmwareVersion } from '@cerberus/device-utils';
 
 import type { TrezorDevice } from 'src/types/suite';
 import { useDispatch, useSelector } from 'src/hooks/suite';

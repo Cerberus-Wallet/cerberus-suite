@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { OnboardingStepBox, OnboardingStepBoxProps } from 'src/components/onboarding';
 import { CoinGroup, TooltipSymbol, Translation } from 'src/components/suite';
 import { useEnabledNetworks } from 'src/hooks/settings/useEnabledNetworks';
-import { CollapsibleBox } from '@trezor/components';
+import { CollapsibleBox } from '@cerberus/components';
 
 const Separator = styled.hr`
     height: 1px;

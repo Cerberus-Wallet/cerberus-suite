@@ -1,7 +1,7 @@
 import { MouseEventHandler } from 'react';
 import styled from 'styled-components';
 
-import { Button } from '@trezor/components';
+import { Button } from '@cerberus/components';
 import { LearnMoreButton } from '../suite/LearnMoreButton';
 
 const Wrapper = styled.div`

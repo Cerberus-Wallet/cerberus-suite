@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { variables } from '@trezor/components';
-import { borders } from '@trezor/theme';
+import { variables } from '@cerberus/components';
+import { borders } from '@cerberus/theme';
 
 const TagRow = styled.div`
     display: flex;

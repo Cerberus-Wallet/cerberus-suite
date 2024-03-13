@@ -1,4 +1,4 @@
-import type { Network } from '@trezor/utxo-lib';
+import type { Network } from '@cerberus/utxo-lib';
 
 // ElectrumX API 1.4
 // https://electrumx.readthedocs.io/en/latest/protocol-methods.html

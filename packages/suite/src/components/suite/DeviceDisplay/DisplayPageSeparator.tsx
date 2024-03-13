@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Translation } from '../Translation';
-import { typography } from '@trezor/theme';
+import { typography } from '@cerberus/theme';
 
 const SEPARATOR_LINE_HEIGHT = 32;
 

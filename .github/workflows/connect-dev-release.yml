@@ -16,7 +16,7 @@ on:
       - "packages/transport"
       - "packages/utxo-lib"
       - "packages/utils"
-      - "submodules/trezor-common"
+      - "submodules/cerberus-common"
       - "yarn.lock"
 
 env:

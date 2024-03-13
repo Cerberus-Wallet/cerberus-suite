@@ -2,7 +2,7 @@ import {
     AbstractMessageChannel,
     AbstractMessageChannelConstructorParams,
     Message,
-} from '@trezor/connect-common';
+} from '@cerberus/connect-common';
 
 /**
  * Communication channel between:
@@ -65,8 +65,8 @@ export class ServiceWorkerWindowChannel<
 
                 const { origin } = sender;
                 const whitelist = [
-                    'https://connect.trezor.io',
-                    'https://staging-connect.trezor.io',
+                    'https://connect.cerberus.uraanai.com',
+                    'https://staging-connect.cerberus.uraanai.com',
                     'https://suite.corp.sldev.cz',
                     'http://localhost:8088',
                 ];

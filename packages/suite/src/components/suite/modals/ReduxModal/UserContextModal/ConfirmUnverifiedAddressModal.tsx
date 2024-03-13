@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
 
-import { ModalProps } from '@trezor/components';
+import { ModalProps } from '@cerberus/components';
 import { openAddressModal, showAddress } from 'src/actions/wallet/receiveActions';
 import { ConfirmUnverifiedModal } from './ConfirmUnverifiedModal';
 

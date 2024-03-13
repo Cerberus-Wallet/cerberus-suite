@@ -2,7 +2,7 @@ import { createContext, useContext, useState, useEffect, useCallback } from 'rea
 
 import type { BankAccount, SellFiatTrade } from 'invity-api';
 
-import { useTimer } from '@trezor/react-utils';
+import { useTimer } from '@cerberus/react-utils';
 import { notificationsActions } from '@suite-common/toast-notifications';
 import { amountToSatoshi } from '@suite-common/wallet-utils';
 import { selectDevice } from '@suite-common/wallet-core';

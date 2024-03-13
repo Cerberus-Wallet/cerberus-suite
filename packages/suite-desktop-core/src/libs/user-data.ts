@@ -3,7 +3,7 @@ import path from 'path';
 import { app, shell } from 'electron';
 
 import { isDevEnv } from '@suite-common/suite-utils';
-import { InvokeResult } from '@trezor/suite-desktop-api';
+import { InvokeResult } from '@cerberus/suite-desktop-api';
 
 export const clearAppCache = () =>
     new Promise<void>((resolve, reject) => {
@@ -14,9 +14,9 @@ export const clearAppCache = () =>
 /**
  * By default, Electron uses the app name from package.json to construct the userData directory.
  * It's overriten in electron-builder-config.js for builds. And here for local development.
- * Default (codesigned builds): @trezor/suite-desktop,
- * Dev (non-production builds): @trezor/suite-desktop-dev
- * Local development: @trezor/suite-desktop-local
+ * Default (codesigned builds): @cerberus/suite-desktop,
+ * Dev (non-production builds): @cerberus/suite-desktop-dev
+ * Local development: @cerberus/suite-desktop-local
  */
 export const initUserData = () => {
     if (isDevEnv) {

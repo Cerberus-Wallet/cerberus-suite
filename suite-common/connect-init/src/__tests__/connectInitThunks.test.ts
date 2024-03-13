@@ -1,5 +1,5 @@
 import { configureMockStore, extraDependenciesMock, testMocks } from '@suite-common/test-utils';
-import { BLOCKCHAIN_EVENT, DEVICE_EVENT, TRANSPORT_EVENT, UI_EVENT } from '@trezor/connect';
+import { BLOCKCHAIN_EVENT, DEVICE_EVENT, TRANSPORT_EVENT, UI_EVENT } from '@cerberus/connect';
 
 import { connectInitThunk } from '../connectInitThunks';
 

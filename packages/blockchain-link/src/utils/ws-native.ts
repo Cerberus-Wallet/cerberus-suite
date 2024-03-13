@@ -18,7 +18,7 @@ class WSWrapper extends EventEmitter {
         // @ts-expect-error
         this._ws = new WebSocket(url, ['wss'], {
             headers: {
-                'User-Agent': 'Trezor Suite Native',
+                'User-Agent': 'Cerberus Suite Native',
             },
         });
 

@@ -6,7 +6,7 @@ import {
     CoinmarketRefreshTime,
     NoOffers,
 } from 'src/views/wallet/coinmarket/common';
-import { variables, Icon, H2 } from '@trezor/components';
+import { variables, Icon, H2 } from '@cerberus/components';
 import { useLayout } from 'src/hooks/suite';
 import { useCoinmarketExchangeOffersContext } from 'src/hooks/wallet/useCoinmarketExchangeOffers';
 import { useCoinmarketNavigation } from 'src/hooks/wallet/useCoinmarketNavigation';
@@ -92,7 +92,7 @@ const Offers = () => {
     } = useCoinmarketExchangeOffersContext();
     const { navigateToExchangeForm } = useCoinmarketNavigation(account);
 
-    useLayout('Trezor Suite | Trade', () => <PageHeader backRoute="wallet-coinmarket-exchange" />);
+    useLayout('Cerberus Suite | Trade', () => <PageHeader backRoute="wallet-coinmarket-exchange" />);
 
     if (!quotesRequest) return null;
     const hasLoadingFailed = !(fixedQuotes && floatQuotes && dexQuotes);

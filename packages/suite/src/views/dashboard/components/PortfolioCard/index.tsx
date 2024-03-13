@@ -1,6 +1,6 @@
 import { memo, useMemo } from 'react';
 import styled from 'styled-components';
-import { Dropdown, Card } from '@trezor/components';
+import { Dropdown, Card } from '@cerberus/components';
 import {
     GraphScaleDropdownItem,
     GraphSkeleton,

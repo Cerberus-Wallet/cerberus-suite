@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { variables } from '@trezor/components';
-import { spacingsPx } from '@trezor/theme';
+import { variables } from '@cerberus/components';
+import { spacingsPx } from '@cerberus/theme';
 import { selectSelectedAccount } from 'src/reducers/wallet/selectedAccountReducer';
 import { useSelector, useEverstakePoolStats, useValidatorsQueue } from 'src/hooks/suite';
 import { Divider, Translation } from 'src/components/suite';

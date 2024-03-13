@@ -1,7 +1,7 @@
 import { ReactNode, useCallback } from 'react';
 import styled from 'styled-components';
 
-import { SkeletonRectangle } from '@trezor/components';
+import { SkeletonRectangle } from '@cerberus/components';
 import { AppState, ExtendedMessageDescriptor } from 'src/types/suite';
 import { useTranslation, useLayout } from 'src/hooks/suite';
 import { PageHeader } from 'src/components/suite/layouts/SuiteLayout';

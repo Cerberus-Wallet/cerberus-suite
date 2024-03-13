@@ -1,14 +1,14 @@
 {
-    "name": "@trezor/suite-data",
+    "name": "@cerberus/suite-data",
     "version": "1.0.0",
     "private": true,
-    "author": "Trezor <info@trezor.io>",
+    "author": "Cerberus <info@cerberus.uraanai.com>",
     "keywords": [
-        "Trezor",
+        "Cerberus",
         "trezor-data"
     ],
     "license": "SEE LICENSE IN LICENSE.md",
-    "description": "Trezor data",
+    "description": "Cerberus data",
     "scripts": {
         "build:lib": "yarn browser-detection && yarn guide-pull-content",
         "browser-detection": "webpack --config ./browser-detection.webpack.ts",
@@ -20,10 +20,10 @@
     "dependencies": {
         "@suite-common/suite-types": "workspace:*",
         "@suite-common/suite-utils": "workspace:*",
-        "@trezor/connect": "workspace:*",
-        "@trezor/env-utils": "workspace:*",
-        "@trezor/urls": "workspace:*",
-        "@trezor/utils": "workspace:*"
+        "@cerberus/connect": "workspace:*",
+        "@cerberus/env-utils": "workspace:*",
+        "@cerberus/urls": "workspace:*",
+        "@cerberus/utils": "workspace:*"
     },
     "devDependencies": {
         "@mobily/ts-belt": "^3.13.1",

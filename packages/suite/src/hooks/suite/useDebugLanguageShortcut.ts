@@ -1,6 +1,6 @@
 import { useCallback, useEffect } from 'react';
 
-import { KEYBOARD_CODE } from '@trezor/components';
+import { KEYBOARD_CODE } from '@cerberus/components';
 import { useSelector } from './useSelector';
 import { useDispatch } from './useDispatch';
 import { setLanguage } from 'src/actions/settings/languageActions';

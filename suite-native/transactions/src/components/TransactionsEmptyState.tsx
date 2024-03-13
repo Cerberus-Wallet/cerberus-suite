@@ -1,7 +1,7 @@
 import { useNavigation } from '@react-navigation/native';
 
 import { Box, Button, Card, Pictogram } from '@suite-native/atoms';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import {
     RootStackParamList,
     RootStackRoutes,

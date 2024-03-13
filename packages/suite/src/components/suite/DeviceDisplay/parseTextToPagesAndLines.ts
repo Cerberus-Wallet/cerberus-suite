@@ -1,4 +1,4 @@
-import { DeviceModelInternal } from '@trezor/connect';
+import { DeviceModelInternal } from '@cerberus/connect';
 import {
     MAX_ROWS_PER_PAGE,
     MAX_CHARACTERS_ON_ROW,

@@ -9,7 +9,7 @@ import Animated, {
 import Lottie from 'lottie-react-native';
 
 import { Box, Text } from '@suite-native/atoms';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 
 import spinnerSuccess from '../assets/spinnerSuccess.json';
 

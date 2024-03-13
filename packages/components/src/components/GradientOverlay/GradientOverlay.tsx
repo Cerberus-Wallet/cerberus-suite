@@ -1,4 +1,4 @@
-import { Elevation, mapElevationToBackground } from '@trezor/theme';
+import { Elevation, mapElevationToBackground } from '@cerberus/theme';
 import styled from 'styled-components';
 import { useElevation } from '../ElevationContext/ElevationContext';
 

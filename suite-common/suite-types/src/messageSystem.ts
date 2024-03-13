@@ -14,12 +14,12 @@ export type FirmwareVariant = '*' | 'bitcoin-only' | 'regular';
 /**
  * Eligible authorized vendors.
  */
-export type Vendor = '*' | 'trezor.io';
+export type Vendor = '*' | 'cerberus.uraanai.com';
 export type Variant = 'info' | 'warning' | 'critical';
 export type Category = 'banner' | 'context' | 'modal' | 'feature';
 
 /**
- * JSON schema of the Trezor Suite messaging system.
+ * JSON schema of the Cerberus Suite messaging system.
  */
 export interface MessageSystem {
     /**
@@ -28,7 +28,7 @@ export interface MessageSystem {
     version: number;
     timestamp: DateTime;
     /**
-     * An increasing counter. Trezor Suite must decline any sequence lower than the latest number. This is to protect against replay attacks, where an attacker could send an older version of the file, and Trezor Suite would accept it.
+     * An increasing counter. Cerberus Suite must decline any sequence lower than the latest number. This is to protect against replay attacks, where an attacker could send an older version of the file, and Cerberus Suite would accept it.
      */
     sequence: number;
     actions: Action[];

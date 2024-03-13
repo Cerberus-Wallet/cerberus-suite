@@ -1,7 +1,7 @@
-import { ObjectValues } from '@trezor/type-utils';
+import { ObjectValues } from '@cerberus/type-utils';
 import { DiscoveryStatus } from '@suite-common/wallet-constants';
 import { Network } from '@suite-common/wallet-config';
-import { Deferred } from '@trezor/utils';
+import { Deferred } from '@cerberus/utils';
 
 import { Account, AccountBackendSpecific } from './account';
 
@@ -33,7 +33,7 @@ export interface Discovery {
 export type PartialDiscovery = { deviceState: string } & Partial<Discovery>;
 
 export type DiscoveryItem = {
-    // @trezor/connect
+    // @cerberus/connect
     path: string;
     unlockPath?: Account['unlockPath'];
     coin: Account['symbol'];

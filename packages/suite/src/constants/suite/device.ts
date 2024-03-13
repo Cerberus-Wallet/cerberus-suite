@@ -1,6 +1,6 @@
-import { DeviceModelInternal } from '@trezor/connect';
+import { DeviceModelInternal } from '@cerberus/connect';
 
-export const DEFAULT_LABEL = 'My Trezor';
+export const DEFAULT_LABEL = 'My Cerberus';
 export const MAX_LABEL_LENGTH = 16;
 export const DEFAULT_PASSPHRASE_PROTECTION = true;
 export const DEFAULT_SKIP_BACKUP = true;
@@ -19,7 +19,7 @@ export const MAX_ROWS_PER_PAGE: Record<DeviceModelInternal, number> = {
 
 export const MAX_CHARACTERS_ON_ROW: Record<DeviceModelInternal, number> = {
     [DeviceModelInternal.T1B1]: 21,
-    [DeviceModelInternal.T2T1]: 17, // -1 for the space for the scrollbar (Trezor T only)
+    [DeviceModelInternal.T2T1]: 17, // -1 for the space for the scrollbar (Cerberus T only)
     [DeviceModelInternal.T2B1]: 18,
 };
 

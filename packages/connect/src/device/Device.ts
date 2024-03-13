@@ -1,8 +1,8 @@
-// original file https://github.com/trezor/connect/blob/develop/src/js/device/Device.js
-import { TypedEmitter } from '@trezor/utils';
-import { createDeferred, Deferred } from '@trezor/utils';
-import { versionUtils } from '@trezor/utils';
-import { TransportProtocol, v1 as v1Protocol, bridge as bridgeProtocol } from '@trezor/protocol';
+// original file https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/device/Device.js
+import { TypedEmitter } from '@cerberus/utils';
+import { createDeferred, Deferred } from '@cerberus/utils';
+import { versionUtils } from '@cerberus/utils';
+import { TransportProtocol, v1 as v1Protocol, bridge as bridgeProtocol } from '@cerberus/protocol';
 import { DeviceCommands, PassphrasePromptResponse } from './DeviceCommands';
 import { PROTO, ERRORS, NETWORK } from '../constants';
 import { DEVICE, DeviceButtonRequestPayload, UI } from '../events';
@@ -15,7 +15,7 @@ import {
     ensureInternalModelFeature,
 } from '../utils/deviceFeaturesUtils';
 import { initLog } from '../utils/debug';
-import type { Transport, Descriptor } from '@trezor/transport';
+import type { Transport, Descriptor } from '@cerberus/transport';
 import {
     Device as DeviceTyped,
     DeviceFirmwareStatus,
@@ -129,7 +129,7 @@ export class Device extends TypedEmitter<DeviceEvents> {
 
     firmwareType?: FirmwareType;
 
-    name = 'Trezor';
+    name = 'Cerberus';
 
     color?: string;
 
@@ -568,9 +568,9 @@ export class Device extends TypedEmitter<DeviceEvents> {
         this.featuresNeedsReload = false;
 
         // Vendor headers have been changed in 2.6.3.
-        if (feat.fw_vendor === 'Trezor Bitcoin-only') {
+        if (feat.fw_vendor === 'Cerberus Bitcoin-only') {
             this.firmwareType = FirmwareType.BitcoinOnly;
-        } else if (feat.fw_vendor === 'Trezor') {
+        } else if (feat.fw_vendor === 'Cerberus') {
             this.firmwareType = FirmwareType.Regular;
         } else if (this.getMode() !== 'bootloader') {
             // Relevant for T1B1, T2T1 and custom firmware with a different vendor header. Capabilities do not work in bootloader mode.
@@ -747,7 +747,7 @@ export class Device extends TypedEmitter<DeviceEvents> {
                 name: this.name,
             };
         }
-        const defaultLabel = 'My Trezor';
+        const defaultLabel = 'My Cerberus';
         const label =
             this.features.label === '' || !this.features.label ? defaultLabel : this.features.label;
         let status: DeviceStatus = this.isUsedElsewhere() ? 'occupied' : 'available';

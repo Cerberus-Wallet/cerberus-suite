@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import { useDevice, useDispatch } from 'src/hooks/suite';
-import { Radio, Button, H3, Paragraph, Warning } from '@trezor/components';
+import { Radio, Button, H3, Paragraph, Warning } from '@cerberus/components';
 import { Translation, Modal, ModalProps } from 'src/components/suite';
 import { applySettings } from 'src/actions/settings/deviceSettingsActions';
 
@@ -29,7 +29,7 @@ const WarningWrapper = styled.div`
 `;
 
 /**
- * A Modal that allows user to set the `safety_checks` feature of connected Trezor.
+ * A Modal that allows user to set the `safety_checks` feature of connected Cerberus.
  * Only supports setting it to `Strict` or `PromptTemporarily`.
  * The third value, `PromptAlways`, is considered an advanced feature that can be
  * set only via command line and trezor-lib.

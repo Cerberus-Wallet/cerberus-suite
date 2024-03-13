@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { breakpointMediaQueries } from '@trezor/styles';
+import { breakpointMediaQueries } from '@cerberus/styles';
 import { useLayout } from 'src/hooks/suite';
 import { AssetsView } from './components/AssetsView';
 import PortfolioCard from './components/PortfolioCard';

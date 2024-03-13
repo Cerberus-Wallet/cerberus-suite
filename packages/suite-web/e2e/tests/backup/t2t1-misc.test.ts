@@ -31,7 +31,7 @@ describe('Backup misc', () => {
     // Error code: 404
     // Message: Error trying to proxy: / Error: HTTPConnectionPool(host='0.0.0.0', port=21325): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fe16a30a460>: Failed to establish a new connection: [Errno 111] Connection refused')).
     // Error code explanation: 404 - Nothing matches the given URI.
-    // issue here: https://github.com/trezor/trezor-user-env/issues/43
+    // issue here: https://github.com/Cerberus-Wallet/cerberus-user-env/issues/43
     it.skip('User is doing backup with device A -> disconnects device A -> connects device B with backup already finished', () => {
         cy.getTestElement('@notification/no-backup/button').click({ force: true });
         cy.getTestElement('@backup/check-item/has-enough-time').click();
@@ -45,7 +45,7 @@ describe('Backup misc', () => {
         cy.getTestElement('@backup/already-finished-message');
     });
 
-    // https://github.com/trezor/trezor-suite/issues/1116#issuecomment-634299789
+    // https://github.com/Cerberus-Wallet/cerberus-suite/issues/1116#issuecomment-634299789
     it('User disconnected device that is remembered. Should not be allowed to initiate backup', () => {
         cy.getTestElement('@dashboard/graph', { timeout: 30000 }).should('be.visible');
         cy.toggleDeviceMenu();

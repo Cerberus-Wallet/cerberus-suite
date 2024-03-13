@@ -8,7 +8,7 @@ import {
     KycFailed,
     KycInProgress,
 } from 'src/views/wallet/coinmarket/common';
-import { Button, SelectBar, variables } from '@trezor/components';
+import { Button, SelectBar, variables } from '@cerberus/components';
 import { useSavingsSetupContinue } from 'src/hooks/wallet/useCoinmarketSavingsSetupContinue';
 import { Translation } from 'src/components/suite';
 import FiatAmount from '../components/FiatAmount';

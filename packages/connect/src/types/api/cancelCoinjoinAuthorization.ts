@@ -1,4 +1,4 @@
-import { Static, Type } from '@trezor/schema-utils';
+import { Static, Type } from '@cerberus/schema-utils';
 import type { PROTO } from '../../constants';
 import type { Params, Response } from '../params';
 

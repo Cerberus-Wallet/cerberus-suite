@@ -1,5 +1,5 @@
-import { BlockchainBlock } from '@trezor/connect';
-import { CARDANO_STAKE_POOL_PREVIEW_URL, CARDANO_STAKE_POOL_MAINNET_URL } from '@trezor/urls';
+import { BlockchainBlock } from '@cerberus/connect';
+import { CARDANO_STAKE_POOL_PREVIEW_URL, CARDANO_STAKE_POOL_MAINNET_URL } from '@cerberus/urls';
 import { CARDANO_STAKING } from 'src/actions/wallet/constants';
 import { PendingStakeTx, PoolsResponse, CardanoNetwork } from 'src/types/wallet/cardanoStaking';
 import { Account, WalletAccountTransaction } from 'src/types/wallet';
@@ -108,7 +108,7 @@ export const fetchTrezorPools = (network: 'ADA' | 'tADA') => async (dispatch: Di
         network: cardanoNetwork,
     });
 
-    // Fetch ID of Trezor stake pool that will be used in delegation transaction
+    // Fetch ID of Cerberus stake pool that will be used in delegation transaction
     const url =
         cardanoNetwork === 'mainnet'
             ? CARDANO_STAKE_POOL_MAINNET_URL
@@ -120,7 +120,7 @@ export const fetchTrezorPools = (network: 'ADA' | 'tADA') => async (dispatch: Di
 
         if (!responseJson || !('next' in responseJson) || !('pools' in responseJson)) {
             // todo: even if this happens, error will be overridden by this bug
-            // https://github.com/trezor/trezor-suite/issues/5485
+            // https://github.com/Cerberus-Wallet/cerberus-suite/issues/5485
             throw new Error('Cardano: fetchTrezorPools: Invalid data format');
         }
 

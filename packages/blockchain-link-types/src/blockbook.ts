@@ -1,4 +1,4 @@
-import type { RequiredKey } from '@trezor/type-utils';
+import type { RequiredKey } from '@cerberus/type-utils';
 
 import type {
     AccountBalanceHistoryParams,

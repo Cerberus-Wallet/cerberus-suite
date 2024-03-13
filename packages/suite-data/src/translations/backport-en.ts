@@ -16,7 +16,7 @@ import path from 'path';
 
 // See comment in list-duplicates.ts
 // eslint-disable-next-line import/no-extraneous-dependencies
-import messages from '@trezor/suite/src/support/messages';
+import messages from '@cerberus/suite/src/support/messages';
 
 const packagesRoot = path.join(__dirname, '../../../');
 const targetPath = path.join(packagesRoot, 'suite/src/support/messages.ts');

@@ -1,6 +1,6 @@
 import { Button } from '../../../index';
 import { Meta, StoryFn } from '@storybook/react';
-import { capitalizeFirstLetter } from '@trezor/utils';
+import { capitalizeFirstLetter } from '@cerberus/utils';
 import { StoryColumn } from '../../../support/Story';
 import { ButtonVariant } from '../buttonStyleUtils';
 

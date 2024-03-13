@@ -1,5 +1,5 @@
 import { ComponentType } from 'react';
-import { Modal as TrezorModal, ModalProps as TrezorModalProps } from '@trezor/components';
+import { Modal as TrezorModal, ModalProps as TrezorModalProps } from '@cerberus/components';
 import { DefaultRenderer } from './DefaultRenderer';
 
 export type ModalProps = TrezorModalProps & {

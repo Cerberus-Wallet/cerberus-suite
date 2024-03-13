@@ -4,7 +4,7 @@
 import { AccountUniqueKey, AccountUniqueParams } from '../types';
 
 /**
- * @description This function will retry the promiseFn until it returns a response with success: true which is Trezor Connect specific.
+ * @description This function will retry the promiseFn until it returns a response with success: true which is Cerberus Connect specific.
  */
 export function retryConnectPromise<T extends { success: boolean }>(
     promiseFn: () => Promise<T>,

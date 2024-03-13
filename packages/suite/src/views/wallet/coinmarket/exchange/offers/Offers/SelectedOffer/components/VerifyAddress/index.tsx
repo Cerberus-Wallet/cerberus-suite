@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 import addressValidator from 'trezor-address-validator';
 
 import { QuestionTooltip, Translation } from 'src/components/suite';
-import { Input, variables, Button } from '@trezor/components';
+import { Input, variables, Button } from '@cerberus/components';
 import { useCoinmarketExchangeOffersContext } from 'src/hooks/wallet/useCoinmarketExchangeOffers';
 import { isHexValid, isInteger } from '@suite-common/wallet-utils';
 import { AddressOptions } from 'src/views/wallet/coinmarket/common';

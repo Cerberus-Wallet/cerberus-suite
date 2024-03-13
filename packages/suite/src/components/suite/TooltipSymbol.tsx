@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
-import { Tooltip, Icon, IconType } from '@trezor/components';
+import { Tooltip, Icon, IconType } from '@cerberus/components';
 
 const InlineTooltip = styled(Tooltip)`
     display: inline-block;

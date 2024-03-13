@@ -1,7 +1,7 @@
-import { isNotUndefined, arrayDistinct, objectPartition } from '@trezor/utils';
+import { isNotUndefined, arrayDistinct, objectPartition } from '@cerberus/utils';
 import { addressToScripthash } from './transform';
-import type { Network } from '@trezor/utxo-lib';
-import type { AccountAddresses, SubscriptionAccountInfo } from '@trezor/blockchain-link-types/lib';
+import type { Network } from '@cerberus/utxo-lib';
+import type { AccountAddresses, SubscriptionAccountInfo } from '@cerberus/blockchain-link-types/lib';
 
 type AddressMap = { [address: string]: string };
 type AccountMap = { [descriptor: string]: AccountAddresses };

@@ -3,12 +3,12 @@ import { createPortal } from 'react-dom';
 import { useIntl } from 'react-intl';
 import styled from 'styled-components';
 
-import TrezorConnect from '@trezor/connect';
+import TrezorConnect from '@cerberus/connect';
 import {
     ConfirmOnDevice,
     Modal as TrezorModal,
     ModalProps as TrezorModalProps,
-} from '@trezor/components';
+} from '@cerberus/components';
 import { Translation } from 'src/components/suite';
 import { selectIsActionAbortable } from 'src/reducers/suite/suiteReducer';
 import { useSelector } from 'src/hooks/suite/useSelector';

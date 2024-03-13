@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { ConfirmKey, toggleCheckboxByKey } from 'src/actions/backup/backupActions';
 import { Translation } from 'src/components/suite/Translation';
-import { variables } from '@trezor/components';
+import { variables } from '@cerberus/components';
 import { useSelector, useDispatch } from 'src/hooks/suite';
 import { BackupSeedCard } from './BackupSeedCard';
 

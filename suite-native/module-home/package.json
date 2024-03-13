@@ -35,7 +35,7 @@
         "@suite-native/navigation": "workspace:*",
         "@suite-native/receive": "workspace:*",
         "@suite-native/theme": "workspace:*",
-        "@trezor/styles": "workspace:*",
+        "@cerberus/styles": "workspace:*",
         "expo-local-authentication": "13.8.0",
         "jotai": "1.9.1",
         "react": "18.2.0",

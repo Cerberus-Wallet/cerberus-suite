@@ -1,4 +1,4 @@
-import * as envUtils from '@trezor/env-utils';
+import * as envUtils from '@cerberus/env-utils';
 
 import { configureStore } from 'src/support/tests/configureStore';
 import { renderWithProviders, findByTestId } from 'src/support/tests/hooksHelper';
@@ -10,7 +10,7 @@ jest.mock('src/components/suite/Translation', () => ({
     Translation: ({ id }: any) => <div data-test={id}>{id}</div>,
 }));
 
-// @trezor/connect fetching ethereum definitions
+// @cerberus/connect fetching ethereum definitions
 
 // Preloader/LottieAnimation fetch videos
 jest.mock('cross-fetch', () => ({

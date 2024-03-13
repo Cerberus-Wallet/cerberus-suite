@@ -4,7 +4,7 @@ import { useSafeAreaInsets, EdgeInsets } from 'react-native-safe-area-context';
 import Animated, { SlideInUp } from 'react-native-reanimated';
 
 import { ScreenHeaderWrapper, VStack } from '@suite-native/atoms';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 
 import { DeviceSwitch } from './DeviceSwitch';
 import { useDeviceManager } from '../hooks/useDeviceManager';

@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 import { useDiscovery } from 'src/hooks/suite';
-import { ProgressBar } from '@trezor/components';
-import { zIndices } from '@trezor/theme';
+import { ProgressBar } from '@cerberus/components';
+import { zIndices } from '@cerberus/theme';
 
 const StyledProgressBar = styled(ProgressBar)`
     height: 0;

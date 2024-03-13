@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/data/ConnectSettings.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/data/ConnectSettings.js
 
 import type { Manifest, ConnectSettings } from '../types';
 import { VERSION, DEFAULT_DOMAIN } from './version';
@@ -41,9 +41,9 @@ const parseManifest = (manifest?: Manifest) => {
     };
 };
 
-// Cors validation copied from Trezor Bridge
-// see: https://github.com/trezor/trezord-go/blob/05991cea5900d18bcc6ece5ae5e319d138fc5551/server/api/api.go#L229
-// Its pointless to allow `@trezor/connect` endpoints { connectSrc } for domains other than listed below
+// Cors validation copied from Cerberus Bridge
+// see: https://github.com/Cerberus-Wallet/cerberusd-go/blob/05991cea5900d18bcc6ece5ae5e319d138fc5551/server/api/api.go#L229
+// Its pointless to allow `@cerberus/connect` endpoints { connectSrc } for domains other than listed below
 // `trezord` will block communication anyway
 export const corsValidator = (url?: string) => {
     if (typeof url !== 'string') return;

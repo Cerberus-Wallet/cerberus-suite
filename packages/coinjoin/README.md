@@ -1,4 +1,4 @@
-# @trezor/coinjoin
+# @cerberus/coinjoin
 
 Coinjoin client library.
 

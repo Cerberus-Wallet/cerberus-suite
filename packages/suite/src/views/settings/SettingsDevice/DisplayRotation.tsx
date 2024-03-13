@@ -1,7 +1,7 @@
-import { analytics, EventType } from '@trezor/suite-analytics';
+import { analytics, EventType } from '@cerberus/suite-analytics';
 
 import { ActionColumn, SectionItem, TextColumn, Translation } from 'src/components/suite';
-import { Button, ButtonGroup } from '@trezor/components';
+import { Button, ButtonGroup } from '@cerberus/components';
 import { useDevice, useDispatch } from 'src/hooks/suite';
 import { applySettings } from 'src/actions/settings/deviceSettingsActions';
 import { useAnchor } from 'src/hooks/suite/useAnchor';

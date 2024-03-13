@@ -1,4 +1,4 @@
-import { Button } from '@trezor/components';
+import { Button } from '@cerberus/components';
 import { AccountExceptionLayout } from 'src/components/wallet';
 import { Translation, TrezorLink } from 'src/components/suite';
 import { Account } from 'src/types/wallet';

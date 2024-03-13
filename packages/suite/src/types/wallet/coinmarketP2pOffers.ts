@@ -1,6 +1,6 @@
 import { P2pProviderInfo, P2pQuote, P2pQuotesRequest } from 'invity-api';
 
-import type { Timer } from '@trezor/react-utils';
+import type { Timer } from '@cerberus/react-utils';
 
 import type { AppState } from 'src/types/suite';
 import type { Account } from 'src/types/wallet';

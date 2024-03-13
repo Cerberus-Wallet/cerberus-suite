@@ -1,18 +1,18 @@
 {
-    "name": "@trezor/transport",
+    "name": "@cerberus/transport",
     "version": "1.1.25",
-    "description": "Low level library facilitating protocol buffers based communication with Trezor devices",
+    "description": "Low level library facilitating protocol buffers based communication with Cerberus devices",
     "npmPublishAccess": "public",
     "license": "SEE LICENSE IN LICENSE.md",
     "repository": {
         "type": "git",
-        "url": "git://github.com/trezor/trezor-suite.git"
+        "url": "git://github.com/Cerberus-Wallet/cerberus-suite.git"
     },
     "bugs": {
-        "url": "https://github.com/trezor/trezor-suite/issues"
+        "url": "https://github.com/Cerberus-Wallet/cerberus-suite/issues"
     },
     "keywords": [
-        "Trezor",
+        "Cerberus",
         "transport"
     ],
     "main": "./lib/index.js",
@@ -43,7 +43,7 @@
         "prepublish": "yarn tsx ../../scripts/prepublish.js"
     },
     "devDependencies": {
-        "@trezor/trezor-user-env-link": "workspace:*",
+        "@cerberus/trezor-user-env-link": "workspace:*",
         "@types/bytebuffer": "^5.0.48",
         "@types/sharedworker": "^0.0.111",
         "@types/w3c-web-usb": "^1.0.10",
@@ -52,9 +52,9 @@
         "tsx": "^4.7.0"
     },
     "dependencies": {
-        "@trezor/protobuf": "workspace:*",
-        "@trezor/protocol": "workspace:*",
-        "@trezor/utils": "workspace:*",
+        "@cerberus/protobuf": "workspace:*",
+        "@cerberus/protocol": "workspace:*",
+        "@cerberus/utils": "workspace:*",
         "json-stable-stringify": "^1.1.1",
         "long": "^4.0.0",
         "protobufjs": "7.2.6",

@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import styled, { useTheme } from 'styled-components';
 
-import { zIndices } from '@trezor/theme';
-import { Icon, variables } from '@trezor/components';
+import { zIndices } from '@cerberus/theme';
+import { Icon, variables } from '@cerberus/components';
 import { DeviceSelector } from '../DeviceSelector/DeviceSelector';
 import { MobileNavigation } from './MobileNavigation';
 import { MobileMenuActions } from './MobileMenuActions';

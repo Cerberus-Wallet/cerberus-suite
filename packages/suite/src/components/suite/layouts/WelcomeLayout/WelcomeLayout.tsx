@@ -2,16 +2,16 @@ import { ReactNode } from 'react';
 import styled from 'styled-components';
 import { AnimatePresence, motion } from 'framer-motion';
 
-import { H2, TrezorLogo, Button, variables, SVG_IMAGES } from '@trezor/components';
-import { useOnce } from '@trezor/react-utils';
+import { H2, TrezorLogo, Button, variables, SVG_IMAGES } from '@cerberus/components';
+import { useOnce } from '@cerberus/react-utils';
 import { Translation } from 'src/components/suite';
 // importing directly, otherwise unit tests fail, seems to be a styled-components issue
 import { TrezorLink } from 'src/components/suite/TrezorLink';
 import { useSelector } from 'src/hooks/suite';
 import { selectBannerMessage } from '@suite-common/message-system';
 import { MessageSystemBanner } from 'src/components/suite/banners';
-import { isWeb } from '@trezor/env-utils';
-import { CERBERUS_URL, SUITE_URL } from '@trezor/urls';
+import { isWeb } from '@cerberus/env-utils';
+import { CERBERUS_URL, SUITE_URL } from '@cerberus/urls';
 import { resolveStaticPath } from '@suite-common/suite-utils';
 import { GuideButton, GuideRouter } from 'src/components/guide';
 import { useGuide } from 'src/hooks/guide';
@@ -178,7 +178,7 @@ export const WelcomeLayout = ({ children }: WelcomeLayoutProps) => {
                                             icon="EXTERNAL_LINK"
                                             iconAlignment="right"
                                         >
-                                            trezor.io
+                                            cerberus.uraanai.com
                                         </Button>
                                     </TrezorLink>
                                 </LinksContainer>

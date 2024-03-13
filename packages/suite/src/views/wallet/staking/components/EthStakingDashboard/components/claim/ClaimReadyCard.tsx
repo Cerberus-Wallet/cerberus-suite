@@ -1,7 +1,7 @@
 import styled, { useTheme } from 'styled-components';
 import { FiatValue, FormattedCryptoAmount, Translation } from 'src/components/suite';
-import { Button, Icon, Paragraph, variables } from '@trezor/components';
-import { borders, spacingsPx } from '@trezor/theme';
+import { Button, Icon, Paragraph, variables } from '@cerberus/components';
+import { borders, spacingsPx } from '@cerberus/theme';
 import { openModal } from 'src/actions/suite/modalActions';
 import { useDispatch, useSelector } from 'src/hooks/suite';
 import { selectSelectedAccount } from 'src/reducers/wallet/selectedAccountReducer';

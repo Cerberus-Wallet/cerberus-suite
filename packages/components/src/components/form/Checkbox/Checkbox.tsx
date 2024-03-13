@@ -1,6 +1,6 @@
 import { EventHandler, SyntheticEvent, KeyboardEvent, ReactNode } from 'react';
 import styled, { useTheme } from 'styled-components';
-import { borders, Color, spacingsPx, typography } from '@trezor/theme';
+import { borders, Color, spacingsPx, typography } from '@cerberus/theme';
 
 import { KEYBOARD_CODE } from '../../../constants/keyboardEvents';
 import { Icon } from '../../assets/Icon/Icon';

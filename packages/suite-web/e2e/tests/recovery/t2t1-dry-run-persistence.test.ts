@@ -12,7 +12,7 @@ describe('Recovery - dry run', () => {
     });
 
     // Test case skipped because it was unstable
-    // See the issue for more details - https://github.com/trezor/trezor-suite/issues/4128
+    // See the issue for more details - https://github.com/Cerberus-Wallet/cerberus-suite/issues/4128
     it.skip('Communication between device and application is automatically established whenever app detects device in recovery mode', () => {
         cy.prefixedVisit('/');
         cy.passThroughInitialRun();

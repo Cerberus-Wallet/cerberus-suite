@@ -1,7 +1,7 @@
 import { useCallback } from 'react';
 
-import { analytics, EventType } from '@trezor/suite-analytics';
-import { UnavailableCapability } from '@trezor/connect';
+import { analytics, EventType } from '@cerberus/suite-analytics';
+import { UnavailableCapability } from '@cerberus/connect';
 import { selectDevice } from '@suite-common/wallet-core';
 import { Account, Network } from 'src/types/wallet';
 import { Translation } from 'src/components/suite';

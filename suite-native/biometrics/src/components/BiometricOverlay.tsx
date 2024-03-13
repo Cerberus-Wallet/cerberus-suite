@@ -1,7 +1,7 @@
 import { Platform, StyleSheet, TouchableOpacity } from 'react-native';
 
 import { Box, Text } from '@suite-native/atoms';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import { Icon } from '@suite-common/icons';
 import { useTranslate, TxKeyPath } from '@suite-native/intl';
 
@@ -58,7 +58,7 @@ export const BiometricOverlay = () => {
 
     const handleReenable = () => {
         // Setting this to true lets useBiometrics to ask for biometrics in case it was canceled by user before
-        // https://github.com/trezor/trezor-suite/issues/10647
+        // https://github.com/Cerberus-Wallet/cerberus-suite/issues/10647
         setIsBiometricsAuthenticationCanceled(false);
     };
     const titleTransKey = getBiometricsTranslationKey({ isFacialEnabled, isFingerprintEnabled });

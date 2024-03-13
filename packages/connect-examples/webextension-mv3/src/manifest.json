@@ -1,5 +1,5 @@
 {
-    "name": "@trezor/connect web extension mv3 example",
+    "name": "@cerberus/connect web extension mv3 example",
     "version": "1.0.0",
     "manifest_version": 3,
     "action": {
@@ -7,7 +7,7 @@
     },
     "content_scripts": [
         {
-            "matches": ["*://connect.trezor.io/9/popup.html", "*://suite.corp.sldev.cz/*"],
+            "matches": ["*://connect.cerberus.uraanai.com/9/popup.html", "*://suite.corp.sldev.cz/*"],
             "js": ["./vendor/trezor-content-script.js"]
         }
     ],

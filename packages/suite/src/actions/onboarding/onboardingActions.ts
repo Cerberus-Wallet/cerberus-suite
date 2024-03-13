@@ -1,5 +1,5 @@
-import { OnboardingAnalytics } from '@trezor/suite-analytics';
-import TrezorConnect from '@trezor/connect';
+import { OnboardingAnalytics } from '@cerberus/suite-analytics';
+import TrezorConnect from '@cerberus/connect';
 import { selectDevice } from '@suite-common/wallet-core';
 
 import { ONBOARDING } from 'src/actions/onboarding/constants';

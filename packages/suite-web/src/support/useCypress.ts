@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import TrezorConnect from '@trezor/connect';
+import TrezorConnect from '@cerberus/connect';
 import { useStore } from 'react-redux';
 
 /**

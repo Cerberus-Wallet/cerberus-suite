@@ -1,4 +1,4 @@
-import { scheduleAction, enumUtils } from '@trezor/utils';
+import { scheduleAction, enumUtils } from '@cerberus/utils';
 
 import { HTTP_REQUEST_TIMEOUT } from '../constants';
 import { WabiSabiProtocolErrorCode } from '../enums';
@@ -69,7 +69,7 @@ export const coordinatorRequest = async <R = void>(
             const method = options.method === 'GET' ? httpGet : httpPost;
             response = await method(requestUrl, body, { ...options, signal });
         } catch (e) {
-            // NOTE: this code probably belongs to @trezor/request-manager package since errors are tightly related to TOR
+            // NOTE: this code probably belongs to @cerberus/request-manager package since errors are tightly related to TOR
             // catch errors from:
             // - nodejs http module (by e.code) like "socket hang up" or "socket disconnected before secure TLS connection was established" (see ./node_modules/@types/node/*/http.d.ts)
             // - socks module (by e.type and e.message) like "Socks5 proxy rejected connection" or "Proxy connection timed out" (see ./node_modules/socks/build/common/constants)
@@ -84,7 +84,7 @@ export const coordinatorRequest = async <R = void>(
                 switchIdentity();
             } else if (options.deadline) {
                 // prevent dead cycles while using "deadline" option in scheduledAction
-                // catch fetch runtime errors like ECONNREFUSED or blocked by @trezor/request-manager
+                // catch fetch runtime errors like ECONNREFUSED or blocked by @cerberus/request-manager
                 // and stop scheduledAction. those errors will not be resolved by retrying
                 return { error: e as Error };
             }

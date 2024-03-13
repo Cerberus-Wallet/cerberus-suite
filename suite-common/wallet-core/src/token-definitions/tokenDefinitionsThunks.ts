@@ -4,7 +4,7 @@ import { D, G } from '@mobily/ts-belt';
 import { createThunk } from '@suite-common/redux-utils';
 import { NetworkSymbol } from '@suite-common/wallet-config';
 import { getNetwork } from '@suite-common/wallet-utils';
-import { isNative } from '@trezor/env-utils';
+import { isNative } from '@cerberus/env-utils';
 import {
     DefinitionType,
     JWS_SIGN_ALGORITHM,
@@ -12,7 +12,7 @@ import {
     TOKEN_DEFINITIONS_SUFFIX_URL,
     getSupportedDefinitionTypes,
 } from '@suite-common/token-definitions';
-import { isCodesignBuild } from '@trezor/env-utils';
+import { isCodesignBuild } from '@cerberus/env-utils';
 
 import { selectNetworkTokenDefinitions } from './tokenDefinitionsSelectors';
 

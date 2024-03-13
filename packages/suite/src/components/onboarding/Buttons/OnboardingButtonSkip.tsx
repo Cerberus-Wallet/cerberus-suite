@@ -1,6 +1,6 @@
 import { HtmlHTMLAttributes } from 'react';
 import styled from 'styled-components';
-import { variables } from '@trezor/components';
+import { variables } from '@cerberus/components';
 
 const StyledSpan = styled.span`
     cursor: pointer;

@@ -1,4 +1,4 @@
-import { isDesktop, isWeb } from '@trezor/env-utils';
+import { isDesktop, isWeb } from '@cerberus/env-utils';
 
 import { SettingsLayout, SettingsSection } from 'src/components/settings';
 import { Translation } from 'src/components/suite';

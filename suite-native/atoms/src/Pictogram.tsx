@@ -1,8 +1,8 @@
 import { ReactNode } from 'react';
 
 import { IconName, Icon } from '@suite-common/icons';
-import { Color, TypographyStyle } from '@trezor/theme';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { Color, TypographyStyle } from '@cerberus/theme';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 
 import { Box } from './Box';
 import { Text } from './Text';

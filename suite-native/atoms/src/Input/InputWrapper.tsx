@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 
 import { Box } from '../Box';
 import { Text } from '../Text';

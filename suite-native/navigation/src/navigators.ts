@@ -3,7 +3,7 @@ import { RequireAllOrNone } from 'type-fest';
 
 import { AccountKey, TokenAddress, XpubAddress } from '@suite-common/wallet-types';
 import { AccountType, Network, NetworkSymbol } from '@suite-common/wallet-config';
-import { AccountInfo, TokenTransfer } from '@trezor/connect';
+import { AccountInfo, TokenTransfer } from '@cerberus/connect';
 
 import {
     AppTabsRoutes,

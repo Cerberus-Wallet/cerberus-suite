@@ -1,4 +1,4 @@
-import { Switch } from '@trezor/components';
+import { Switch } from '@cerberus/components';
 
 import { ActionColumn, SectionItem, TextColumn } from 'src/components/suite';
 import { isTranslationMode, setTranslationMode } from 'src/utils/suite/l10n';

@@ -113,7 +113,7 @@ export const config: webpack.Configuration = {
             Promise: ['es6-promise', 'Promise'],
             process: 'process/browser',
         }),
-        // resolve @trezor/connect modules as "browser"
+        // resolve @cerberus/connect modules as "browser"
         new webpack.NormalModuleReplacementPlugin(/\/workers\/workers$/, resource => {
             resource.request = resource.request.replace(/workers$/, 'workers-browser');
         }),
@@ -123,9 +123,9 @@ export const config: webpack.Configuration = {
         // copy public files
         new CopyWebpackPlugin({
             patterns: [
-                // copy firmware releases, bridge releases from '@trezor/connect-common'
+                // copy firmware releases, bridge releases from '@cerberus/connect-common'
                 { from: COMMON_DATA_SRC, to: `${DIST}/data` },
-                // copy messages.json from '@trezor/transport'
+                // copy messages.json from '@cerberus/transport'
                 { from: MESSAGES_SRC, to: `${DIST}/data/messages`, force: true },
             ],
         }),
@@ -135,7 +135,7 @@ export const config: webpack.Configuration = {
         }),
     ],
 
-    // @trezor/utxo-lib NOTE:
+    // @cerberus/utxo-lib NOTE:
     // When uglifying the javascript, you must exclude the following variable names from being mangled:
     // Array, BigInteger, Boolean, Buffer, ECPair, Function, Number, Point and Script.
     // This is because of the function-name-duck-typing used in typeforce.

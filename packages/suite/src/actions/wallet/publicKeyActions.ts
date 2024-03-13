@@ -1,6 +1,6 @@
 import { UserContextPayload } from '@suite-common/suite-types';
 import { notificationsActions } from '@suite-common/toast-notifications';
-import TrezorConnect, { Success, Unsuccessful } from '@trezor/connect';
+import TrezorConnect, { Success, Unsuccessful } from '@cerberus/connect';
 import { selectDevice } from '@suite-common/wallet-core';
 import { getDerivationType } from '@suite-common/wallet-utils';
 

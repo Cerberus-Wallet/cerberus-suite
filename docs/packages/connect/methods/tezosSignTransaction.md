@@ -1,7 +1,7 @@
 ## Tezos: Sign transaction
 
 Asks device to sign given transaction. User is asked to confirm all transaction
-details on Trezor.
+details on Cerberus.
 
 ```javascript
 const result = await TrezorConnect.tezosSignTransaction(params);
@@ -11,11 +11,11 @@ const result = await TrezorConnect.tezosSignTransaction(params);
 
 [Optional common params](commonParams.md)
 
-[TezosSignTransaction type](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/tezos/index.ts)
+[TezosSignTransaction type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/tezos/index.ts)
 
 -   `path` - _required_ `string | Array<number>`
 -   `branch` - _required_ `string`
--   `operation` - _required_ `Object` type of [TezosOperation](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/tezos/index.ts)
+-   `operation` - _required_ `Object` type of [TezosOperation](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/tezos/index.ts)
 -   `chunkify` — _optional_ `boolean` determines if recipient address will be displayed in chunks of 4 characters. Default is set to `false`
 
 ### Example
@@ -209,7 +209,7 @@ TrezorConnect.tezosSignTransaction({
 
 ### Result
 
-[TezosSignedTx type](https://github.com/trezor/trezor-suite/blob/develop/packages/protobuf/src/messages.ts)
+[TezosSignedTx type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/protobuf/src/messages.ts)
 
 ```javascript
 {

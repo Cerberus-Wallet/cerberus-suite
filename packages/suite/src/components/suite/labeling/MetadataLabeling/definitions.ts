@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { DropdownMenuItemProps } from '@trezor/components';
+import { DropdownMenuItemProps } from '@cerberus/components';
 import { MetadataAddPayload } from 'src/types/suite/metadata';
 
 export interface Props {

@@ -3,7 +3,7 @@ import type { LastWeekRates, TimestampedRates, TickerId } from '@suite-common/wa
 import { RateLimiter } from './limiter';
 import { fetchUrl } from './fetch';
 
-// TODO: generate from @trezor/connect-common/files/coins.json
+// TODO: generate from @cerberus/connect-common/files/coins.json
 const ENDPOINTS = {
     btc: ['btc1', 'btc2', 'btc3', 'btc4', 'btc5'],
 };
@@ -19,7 +19,7 @@ const getQuery = (query?: { currency?: string; timestamp?: number | string }) =>
         .map(([key, val]) => `${key}=${val}`)
         .join('&');
 
-const getApiUrl = (ticker: Ticker) => `https://${randomEndpoint(ticker)}.trezor.io/api/v2`;
+const getApiUrl = (ticker: Ticker) => `https://${randomEndpoint(ticker)}.cerberus.uraanai.com/api/v2`;
 
 const limiter = new RateLimiter(500, 15_000);
 

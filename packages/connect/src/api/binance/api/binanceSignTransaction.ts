@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/BinanceSignTransaction.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/BinanceSignTransaction.js
 
 import { AbstractMethod } from '../../../core/AbstractMethod';
 import { getFirmwareRange } from '../../common/paramsValidator';
@@ -6,7 +6,7 @@ import { getMiscNetwork } from '../../../data/coinInfo';
 import { validatePath } from '../../../utils/pathUtils';
 import * as helper from '../binanceSignTx';
 import { BinanceSignTransaction as BinanceSignTransactionSchema } from '../../../types/api/binance';
-import { AssertWeak } from '@trezor/schema-utils';
+import { AssertWeak } from '@cerberus/schema-utils';
 
 import type { BinancePreparedTransaction } from '../../../types/api/binance';
 

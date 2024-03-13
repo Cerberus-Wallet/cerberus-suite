@@ -4,7 +4,7 @@ import { SEND } from 'src/actions/wallet/constants';
 import { Action } from 'src/types/suite';
 import { FormState, PrecomposedTransactionFinal, TxFinalCardano } from 'src/types/wallet/sendForm';
 import { accountsActions } from '@suite-common/wallet-core';
-import { cloneObject } from '@trezor/utils';
+import { cloneObject } from '@cerberus/utils';
 
 export interface SendState {
     drafts: {

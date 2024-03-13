@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/popup/showPopupRequest.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/popup/showPopupRequest.js
 
 const LAYER_ID = 'TrezorConnectInteractionLayer';
 const HTML = `

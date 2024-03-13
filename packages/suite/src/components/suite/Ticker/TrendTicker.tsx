@@ -1,6 +1,6 @@
 import styled, { useTheme } from 'styled-components';
-import { spacingsPx, typography } from '@trezor/theme';
-import { Icon } from '@trezor/components';
+import { spacingsPx, typography } from '@cerberus/theme';
+import { Icon } from '@cerberus/components';
 import { getFiatRateKey, localizePercentage } from '@suite-common/wallet-utils';
 import { selectFiatRatesByFiatRateKey } from '@suite-common/wallet-core';
 import { FiatValue } from 'src/components/suite';

@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { TrezorDevice } from '@suite-common/suite-types';
-import { variables, DeviceAnimation, Image } from '@trezor/components';
-import { DeviceModelInternal } from '@trezor/connect';
+import { variables, DeviceAnimation, Image } from '@cerberus/components';
+import { DeviceModelInternal } from '@cerberus/connect';
 import { Translation } from 'src/components/suite';
 import styled from 'styled-components';
 
@@ -41,7 +41,7 @@ export const ConfirmedOnTrezor = ({ device }: ConfirmedOnTrezorProps) => {
                 />
             )}
             {deviceModelInternal && deviceModelInternal !== DeviceModelInternal.T2B1 && (
-                <StyledImage alt="Trezor" image={`CERBERUS_${deviceModelInternal}`} />
+                <StyledImage alt="Cerberus" image={`CERBERUS_${deviceModelInternal}`} />
             )}
 
             <Translation id="TR_BUY_CONFIRMED_ON_CERBERUS" />

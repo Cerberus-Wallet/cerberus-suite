@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
-import { Icon } from '@trezor/components';
+import { Icon } from '@cerberus/components';
 
 import type { FieldWithBundle } from '../../types';
 

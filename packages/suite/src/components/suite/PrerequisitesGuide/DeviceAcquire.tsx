@@ -1,8 +1,8 @@
 import { MouseEventHandler } from 'react';
 
 import { acquireDevice } from '@suite-common/wallet-core';
-import { Button } from '@trezor/components';
-import { isDesktop } from '@trezor/env-utils';
+import { Button } from '@cerberus/components';
+import { isDesktop } from '@cerberus/env-utils';
 
 import { Translation, TroubleshootingTips } from 'src/components/suite';
 import { useDevice, useDispatch } from 'src/hooks/suite';

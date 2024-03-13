@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { Button, Switch } from '@trezor/components';
+import { Button, Switch } from '@cerberus/components';
 
 import { ActionColumn, SectionItem, TextColumn } from 'src/components/suite';
 import { useDispatch, useFirmware, useSelector } from 'src/hooks/suite';
@@ -28,7 +28,7 @@ export const CheckFirmwareAuthenticity = () => {
             <SectionItem data-test="@settings/debug/check-firmware-authenticity">
                 <TextColumn
                     title="Check firmware authenticity"
-                    description="Download firmware binary from data.trezor.io and compare its hash with firmware hash provided by Trezor device."
+                    description="Download firmware binary from data.trezorcheck.io and compare its hash with firmware hash provided by Cerberus device."
                 />
                 <ActionColumn>
                     <Button
@@ -43,7 +43,7 @@ export const CheckFirmwareAuthenticity = () => {
             <SectionItem data-test="@settings/debug/check-firmware-authenticity-on-connect/switch">
                 <TextColumn
                     title="Check firmware authenticity regularly"
-                    description="Carry out firmware authenticity check every time you authorize Trezor device"
+                    description="Carry out firmware authenticity check every time you authorize Cerberus device"
                 />
                 <ActionColumn>
                     <Switch

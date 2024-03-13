@@ -4,7 +4,7 @@ import { onReceiveConfirmation } from 'src/actions/suite/modalActions';
 import { goto } from 'src/actions/suite/routerActions';
 import { Translation } from 'src/components/suite';
 import { useDispatch } from 'src/hooks/suite/useDispatch';
-import { Button } from '@trezor/components';
+import { Button } from '@cerberus/components';
 import { SettingsAnchor } from 'src/constants/suite/anchors';
 import { DialogModal } from '../../Modal/DialogRenderer';
 

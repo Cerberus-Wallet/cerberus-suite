@@ -1,20 +1,20 @@
 {
-    "name": "@trezor/connect-webextension",
+    "name": "@cerberus/connect-webextension",
     "version": "9.2.0",
-    "author": "Trezor <info@trezor.io>",
-    "homepage": "https://github.com/trezor/trezor-suite/tree/develop/packages/connect-webextension",
-    "description": "High-level javascript interface for Trezor hardware wallet in webextension serviceworker environment.",
+    "author": "Cerberus <info@cerberus.uraanai.com>",
+    "homepage": "https://github.com/Cerberus-Wallet/cerberus-suite/tree/develop/packages/connect-webextension",
+    "description": "High-level javascript interface for Cerberus hardware wallet in webextension serviceworker environment.",
     "npmPublishAccess": "public",
     "license": "SEE LICENSE IN LICENSE.md",
     "repository": {
         "type": "git",
-        "url": "git://github.com/trezor/trezor-suite.git"
+        "url": "git://github.com/Cerberus-Wallet/cerberus-suite.git"
     },
     "bugs": {
-        "url": "https://github.com/trezor/trezor-suite/issues"
+        "url": "https://github.com/Cerberus-Wallet/cerberus-suite/issues"
     },
     "keywords": [
-        "Trezor",
+        "Cerberus",
         "trezor-connect",
         "javascript",
         "serviceworker",
@@ -38,10 +38,10 @@
         "prepublish": "yarn build"
     },
     "dependencies": {
-        "@trezor/connect": "workspace:*",
-        "@trezor/connect-common": "workspace:*",
-        "@trezor/connect-web": "workspace:*",
-        "@trezor/utils": "workspace:*",
+        "@cerberus/connect": "workspace:*",
+        "@cerberus/connect-common": "workspace:*",
+        "@cerberus/connect-web": "workspace:*",
+        "@cerberus/utils": "workspace:*",
         "events": "^3.3.0"
     },
     "devDependencies": {
@@ -49,8 +49,8 @@
         "@playwright/browser-firefox": "^1.41.2",
         "@playwright/browser-webkit": "^1.41.2",
         "@playwright/test": "^1.41.2",
-        "@trezor/node-utils": "workspace:*",
-        "@trezor/trezor-user-env-link": "workspace:*",
+        "@cerberus/node-utils": "workspace:*",
+        "@cerberus/trezor-user-env-link": "workspace:*",
         "@types/chrome": "^0.0.260",
         "copy-webpack-plugin": "^12.0.2",
         "terser-webpack-plugin": "^5.3.9",

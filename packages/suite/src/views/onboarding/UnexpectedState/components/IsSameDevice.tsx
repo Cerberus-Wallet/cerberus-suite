@@ -1,4 +1,4 @@
-import { Button } from '@trezor/components';
+import { Button } from '@cerberus/components';
 import { OnboardingStepBox } from 'src/components/onboarding';
 import { Translation } from 'src/components/suite';
 import { useOnboarding } from 'src/hooks/suite';

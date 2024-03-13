@@ -1,5 +1,5 @@
-import { AccountInfo, Response as ConnectResponse, Params } from '@trezor/connect';
-import { GetAccountInfo } from '@trezor/connect/lib/types/api/getAccountInfo';
+import { AccountInfo, Response as ConnectResponse, Params } from '@cerberus/connect';
+import { GetAccountInfo } from '@cerberus/connect/lib/types/api/getAccountInfo';
 
 import { accountInfoResult as btcAccountInfoResult } from './btc';
 import { accountInfoResult as xrpAccountInfoResult } from './xrp';

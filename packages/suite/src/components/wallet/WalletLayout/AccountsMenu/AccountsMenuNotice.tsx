@@ -1,4 +1,4 @@
-import { spacingsPx, typography } from '@trezor/theme';
+import { spacingsPx, typography } from '@cerberus/theme';
 import styled from 'styled-components';
 
 export const AccountsMenuNotice = styled.div`

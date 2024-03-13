@@ -1,4 +1,4 @@
-import TrezorConnect from '@trezor/connect';
+import TrezorConnect from '@cerberus/connect';
 import { screen } from '@testing-library/react';
 import { configureMockStore, initPreloadedState } from '@suite-common/test-utils';
 import * as fixtures from '../__fixtures__/useRbfForm';
@@ -12,7 +12,7 @@ import { ChangeFee } from 'src/components/suite/modals/ReduxModal/UserContextMod
 import { useRbfContext } from '../useRbfForm';
 
 // do not mock
-jest.unmock('@trezor/connect');
+jest.unmock('@cerberus/connect');
 
 jest.mock('src/actions/suite/routerActions', () => ({
     goto: () => ({ type: 'mock-redirect' }),
@@ -21,7 +21,7 @@ jest.mock('src/actions/suite/routerActions', () => ({
 // render only Translation['id']
 jest.mock('src/components/suite/Translation', () => ({ Translation: ({ id }: any) => id }));
 
-// since we are NOT(!) mocking @trezor/connect it fetch real bridge at init
+// since we are NOT(!) mocking @cerberus/connect it fetch real bridge at init
 jest.mock('cross-fetch', () => ({
     __esModule: true,
     default: () => Promise.resolve({ ok: false }),
@@ -29,7 +29,7 @@ jest.mock('cross-fetch', () => ({
 
 // TrezorConnect.composeTransaction is trying to connect to blockchain, to get current block height.
 // Mock whole module to avoid internet connection.
-jest.mock('@trezor/blockchain-link', () => ({
+jest.mock('@cerberus/blockchain-link', () => ({
     __esModule: true,
     default: class BlockchainLink {
         name = 'jest-mocked-module';
@@ -108,8 +108,8 @@ describe('useRbfForm hook', () => {
             transportReconnect: false,
             pendingTransportEvent: false,
             manifest: {
-                email: 'info@trezor.io',
-                appUrl: '@trezor/suite',
+                email: 'info@cerberus.uraanai.com',
+                appUrl: '@cerberus/suite',
             },
         });
         jest.spyOn(window, 'scrollTo').mockImplementation(() => {});
@@ -156,7 +156,7 @@ describe('useRbfForm hook', () => {
             // check composeTransaction result
             expect(composedLevels).toMatchObject(f.composedLevels);
 
-            // validate number of calls to '@trezor/connect'
+            // validate number of calls to '@cerberus/connect'
             if (typeof f.composeTransactionCalls === 'number') {
                 expect(composeTransactionSpy).toHaveBeenCalledTimes(f.composeTransactionCalls);
             }

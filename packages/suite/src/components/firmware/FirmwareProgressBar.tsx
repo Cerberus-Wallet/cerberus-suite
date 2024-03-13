@@ -1,7 +1,7 @@
 import { useEffect, useState, ReactNode } from 'react';
-import { Icon, ProgressBar, variables } from '@trezor/components';
+import { Icon, ProgressBar, variables } from '@cerberus/components';
 import styled, { useTheme } from 'styled-components';
-import { borders } from '@trezor/theme';
+import { borders } from '@cerberus/theme';
 
 const Wrapper = styled.div`
     display: flex;

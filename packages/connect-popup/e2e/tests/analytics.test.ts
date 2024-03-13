@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-import { TrezorUserEnvLink } from '@trezor/trezor-user-env-link';
+import { TrezorUserEnvLink } from '@cerberus/trezor-user-env-link';
 
 const url = process.env.URL || 'http://localhost:8088/';
 
@@ -42,7 +42,7 @@ test('reporting', async ({ page }) => {
     let requests = [];
     popup.on('request', request => {
         // ignore other than data trezor requests
-        if (!request.url().startsWith('https://data.trezor.io/')) {
+        if (!request.url().startsWith('https://data.trezorcheck.io/')) {
             return;
         }
         requests.push({ url: request.url() });

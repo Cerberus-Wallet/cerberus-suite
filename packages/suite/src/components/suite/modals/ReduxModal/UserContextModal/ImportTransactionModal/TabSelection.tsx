@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from 'react';
 import styled from 'styled-components';
 import { Translation } from 'src/components/suite';
-import { variables } from '@trezor/components';
+import { variables } from '@cerberus/components';
 
 const TabSelector = styled.div`
     width: 100%;

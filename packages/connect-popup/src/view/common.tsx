@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/popup/view/common.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/popup/view/common.js
 
 import {
     POPUP,
@@ -7,12 +7,12 @@ import {
     createUiResponse,
     CoreRequestMessage,
     CoreEventMessage,
-} from '@trezor/connect';
+} from '@cerberus/connect';
 import { createRoot } from 'react-dom/client';
 
-import { ConnectUI, State, getDefaultState } from '@trezor/connect-ui';
+import { ConnectUI, State, getDefaultState } from '@cerberus/connect-ui';
 import { StyleSheetWrapper } from './react/StylesSheetWrapper';
-import { reactEventBus } from '@trezor/connect-ui/src/utils/eventBus';
+import { reactEventBus } from '@cerberus/connect-ui/src/utils/eventBus';
 
 export const header: HTMLElement = document.getElementsByTagName('header')[0];
 export const container: HTMLElement = document.getElementById('container')!;
@@ -200,8 +200,8 @@ export const postMessage = (message: CoreRequestMessage) => {
 
 export const postMessageToParent = (message: CoreEventMessage) => {
     message.channel = {
-        here: '@trezor/connect-popup',
-        peer: '@trezor/connect-web',
+        here: '@cerberus/connect-popup',
+        peer: '@cerberus/connect-web',
     };
     if (window.opener) {
         // post message to parent and wait for POPUP.INIT message

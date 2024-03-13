@@ -1,11 +1,11 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
-import { Card, LottieAnimation, Paragraph, variables } from '@trezor/components';
+import { Card, LottieAnimation, Paragraph, variables } from '@cerberus/components';
 
 import { useDevice, useSelector } from 'src/hooks/suite';
 import { isWebUsb } from 'src/utils/suite/transport';
 import { WebUsbButton } from 'src/components/suite/WebUsbButton';
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 
 const StyledLottieAnimation = styled(LottieAnimation)`
     margin: 8px 16px 8px 0;

@@ -1,6 +1,6 @@
 ## Browser inline script
 
-`@trezor/connect` running as inline script in html
+`@cerberus/connect` running as inline script in html
 
 ### Run it
 

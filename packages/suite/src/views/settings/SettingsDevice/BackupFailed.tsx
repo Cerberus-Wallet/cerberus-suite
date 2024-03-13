@@ -1,4 +1,4 @@
-import { HELP_CENTER_FAILED_BACKUP_URL } from '@trezor/urls';
+import { HELP_CENTER_FAILED_BACKUP_URL } from '@cerberus/urls';
 
 import {
     ActionButton,

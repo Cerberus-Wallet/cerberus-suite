@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Card } from '@trezor/components';
+import { Card } from '@cerberus/components';
 
 import { Notifications, Translation } from 'src/components/suite';
 import { DashboardSection } from 'src/components/dashboard';

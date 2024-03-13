@@ -1,5 +1,5 @@
 {
-    "name": "@trezor/react-native-usb",
+    "name": "@cerberus/react-native-usb",
     "version": "1.0.0",
     "description": "React Native WebUSB implementation",
     "main": "src/index",
@@ -15,13 +15,13 @@
         "react-native-usb",
         "ReactNativeUsb"
     ],
-    "repository": "https://github.com/trezor/trezor-suite",
+    "repository": "https://github.com/Cerberus-Wallet/cerberus-suite",
     "bugs": {
-        "url": "https://github.com/trezor/trezor-suite/issues"
+        "url": "https://github.com/Cerberus-Wallet/cerberus-suite/issues"
     },
     "author": "Daniel Suchy <daniel.suchy@satoshilabs.com> (@Nodonisko)",
     "license": "MIT",
-    "homepage": "https://github.com/trezor/trezor-suite#readme",
+    "homepage": "https://github.com/Cerberus-Wallet/cerberus-suite#readme",
     "peerDependencies": {
         "expo": "*",
         "expo-modules-core": "*",

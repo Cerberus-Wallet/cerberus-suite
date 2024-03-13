@@ -1,6 +1,6 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/popup/view/passphraseOnDevice.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/popup/view/passphraseOnDevice.js
 
-import { UiRequestDeviceAction } from '@trezor/connect';
+import { UiRequestDeviceAction } from '@cerberus/connect';
 import { container, showView } from './common';
 
 export const passphraseOnDeviceView = (payload: UiRequestDeviceAction['payload']) => {

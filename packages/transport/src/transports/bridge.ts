@@ -1,5 +1,5 @@
-import { versionUtils, createDeferred, Deferred, createTimeoutPromise } from '@trezor/utils';
-import { PROTOCOL_MALFORMED, bridge as bridgeProtocol } from '@trezor/protocol';
+import { versionUtils, createDeferred, Deferred, createTimeoutPromise } from '@cerberus/utils';
+import { PROTOCOL_MALFORMED, bridge as bridgeProtocol } from '@cerberus/protocol';
 import { bridgeApiCall } from '../utils/bridgeApiCall';
 import * as bridgeApiResult from '../utils/bridgeApiResult';
 import { buildBuffers } from '../utils/send';
@@ -296,7 +296,7 @@ export class BridgeTransport extends AbstractTransport {
 
     /**
      * All bridge endpoints use POST methods
-     * For documentation, look here: https://github.com/trezor/trezord-go#api-documentation
+     * For documentation, look here: https://github.com/Cerberus-Wallet/cerberusd-go#api-documentation
      */
     private async post(
         endpoint: '/',

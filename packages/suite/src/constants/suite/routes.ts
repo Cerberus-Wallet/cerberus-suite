@@ -1,4 +1,4 @@
-import { ArrayElement } from '@trezor/type-utils';
+import { ArrayElement } from '@cerberus/type-utils';
 import { Route } from '@suite-common/suite-types';
 import { routes } from '@suite-common/suite-config';
 

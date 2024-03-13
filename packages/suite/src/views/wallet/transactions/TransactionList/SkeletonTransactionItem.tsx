@@ -1,4 +1,4 @@
-import { SkeletonStack, SkeletonSpread, SkeletonRectangle } from '@trezor/components';
+import { SkeletonStack, SkeletonSpread, SkeletonRectangle } from '@cerberus/components';
 
 export const SkeletonTransactionItem = () => (
     <SkeletonStack col childMargin="0px 0px 8px 0px">

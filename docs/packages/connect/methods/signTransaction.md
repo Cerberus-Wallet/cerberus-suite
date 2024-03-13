@@ -2,7 +2,7 @@
 
 Asks device to sign given
 inputs and outputs of pre-composed transaction. User is asked to confirm all transaction
-details on Trezor.
+details on Cerberus.
 
 ```javascript
 const result = await TrezorConnect.signTransaction(params);
@@ -12,17 +12,17 @@ const result = await TrezorConnect.signTransaction(params);
 
 [Optional common params](commonParams.md)
 
-[SignTransaction type](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/bitcoin/index.ts)
+[SignTransaction type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/bitcoin/index.ts)
 
 -   `coin` - _required_ `string`
-    > Determines network definition specified in [coins.json](https://github.com/trezor/trezor-suite/blob/develop/packages/connect-common/files/coins.json) file.
+    > Determines network definition specified in [coins.json](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect-common/files/coins.json) file.
     > Coin `shortcut`, `name` or `label` can be used.
     > See [supported coins](../supported-coins.md)
--   `inputs` - _required_ `Array` of [PROTO.TxInputType](https://github.com/trezor/trezor-suite/blob/develop/packages/protobuf/src/messages.ts),
--   `outputs` - _required_ `Array` of [PROTO.TxOutputType](https://github.com/trezor/trezor-suite/blob/develop/packages/protobuf/src/messages.ts),
--   `paymentRequests` - _optional_ `Array` of [PROTO.TxAckPaymentRequest](https://github.com/trezor/trezor-suite/blob/develop/packages/protobuf/src/messages.ts). See [SLIP-24](https://github.com/satoshilabs/slips/blob/slip24/slip-0024.md)
--   `refTxs` - _optional_ `Array` of [RefTransaction](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/bitcoin/index.ts).
-    > If you don't want to use build-in `blockbook` backend you can optionally provide those data from your own backend transformed to `Trezor` format.
+-   `inputs` - _required_ `Array` of [PROTO.TxInputType](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/protobuf/src/messages.ts),
+-   `outputs` - _required_ `Array` of [PROTO.TxOutputType](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/protobuf/src/messages.ts),
+-   `paymentRequests` - _optional_ `Array` of [PROTO.TxAckPaymentRequest](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/protobuf/src/messages.ts). See [SLIP-24](https://github.com/satoshilabs/slips/blob/slip24/slip-0024.md)
+-   `refTxs` - _optional_ `Array` of [RefTransaction](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/bitcoin/index.ts).
+    > If you don't want to use build-in `blockbook` backend you can optionally provide those data from your own backend transformed to `Cerberus` format.
     > Since Firmware 2.3.0/1.9.0 referenced transactions are required.
     > Zcash and Komodo refTxs should also contains `expiry`, `version_group_id` and `extra_data` fields.
 -   `locktime` - _optional_ `number`,
@@ -35,7 +35,7 @@ const result = await TrezorConnect.signTransaction(params);
 -   `push` - _optional_ `boolean` Broadcast signed transaction to blockchain. Default is set to false
 -   `amountUnit` — _optional_ `PROTO.AmountUnit`
     > show amounts in BTC, mBTC, uBTC, sat
--   `unlockPath` - _optional_ [PROTO.UnlockPath](https://github.com/trezor/trezor-suite/blob/develop/packages/protobuf/src/messages.ts), the result of [TrezorConnect.unlockPath](./unlockPath.md) method.
+-   `unlockPath` - _optional_ [PROTO.UnlockPath](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/protobuf/src/messages.ts), the result of [TrezorConnect.unlockPath](./unlockPath.md) method.
 -   `serialize` - _optional_ `boolean`, default `true` serialize the full transaction, as opposed to only outputting the signatures
 -   `chunkify` — _optional_ `boolean` determines if recipient address will be displayed in chunks of 4 characters. Default is set to `false`
 
@@ -190,7 +190,7 @@ TrezorConnect.signTransaction({
 
 ### Result
 
-[SignedTransaction type](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/bitcoin/index.ts)
+[SignedTransaction type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/bitcoin/index.ts)
 
 ```javascript
 {

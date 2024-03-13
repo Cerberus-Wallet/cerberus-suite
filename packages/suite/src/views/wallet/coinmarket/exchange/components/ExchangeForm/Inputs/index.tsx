@@ -12,7 +12,7 @@ import { CRYPTO_INPUT, FIAT_INPUT } from 'src/types/wallet/coinmarketExchangeFor
 import { Wrapper, Left, Right } from 'src/views/wallet/coinmarket';
 import { useBitcoinAmountUnit } from 'src/hooks/wallet/useBitcoinAmountUnit';
 import { FiatValue, FormattedCryptoAmount, Translation } from 'src/components/suite';
-import { useElevation, variables } from '@trezor/components';
+import { useElevation, variables } from '@cerberus/components';
 import { EvmExplanationBox } from 'src/components/wallet/EvmExplanationBox';
 import { networks } from '@suite-common/wallet-config';
 import {
@@ -21,7 +21,7 @@ import {
 } from 'src/utils/wallet/coinmarket/cryptoSymbolUtils';
 import { useSelector } from 'src/hooks/suite';
 import { selectDeviceAccounts, selectFiatRatesByFiatRateKey } from '@suite-common/wallet-core';
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 import { TokenAddress } from '@suite-common/wallet-types';
 import { FiatCurrencyCode } from '@suite-common/suite-config';
 

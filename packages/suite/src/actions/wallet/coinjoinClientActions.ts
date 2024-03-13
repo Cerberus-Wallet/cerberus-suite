@@ -1,4 +1,4 @@
-import TrezorConnect from '@trezor/connect';
+import TrezorConnect from '@cerberus/connect';
 import {
     CoinjoinStatusEvent,
     CoinjoinClientVersion,
@@ -8,9 +8,9 @@ import {
     CoinjoinResponseEvent,
     CoinjoinClientEvents,
     RoundPhase,
-} from '@trezor/coinjoin';
-import { arrayDistinct, arrayToDictionary, promiseAllSequence } from '@trezor/utils';
-import { getOsName } from '@trezor/env-utils';
+} from '@cerberus/coinjoin';
+import { arrayDistinct, arrayToDictionary, promiseAllSequence } from '@cerberus/utils';
+import { getOsName } from '@cerberus/env-utils';
 import { selectAccountByKey, selectDevices } from '@suite-common/wallet-core';
 import { getUtxoOutpoint } from '@suite-common/wallet-utils';
 import { Account } from '@suite-common/wallet-types';
@@ -204,7 +204,7 @@ export const endCoinjoinSession = (accountKey: string) => (dispatch: Dispatch) =
 };
 
 /**
- * Show "do not disconnect" screen on Trezor.
+ * Show "do not disconnect" screen on Cerberus.
  * Multiple possible setups:
  * - 1 account on 1 device
  * - N accounts on 1 devices (like two passphrases)
@@ -277,10 +277,10 @@ export const pauseCoinjoinSession =
         if (!account) {
             return;
         }
-        // get @trezor/coinjoin client if available
+        // get @cerberus/coinjoin client if available
         const client = getCoinjoinClient(account.symbol);
 
-        // unregister account in @trezor/coinjoin
+        // unregister account in @cerberus/coinjoin
         client?.unregisterAccount(accountKey);
 
         // dispatch data to reducer
@@ -297,9 +297,9 @@ export const stopCoinjoinSession =
             return;
         }
 
-        // get @trezor/coinjoin client if available
+        // get @cerberus/coinjoin client if available
         const client = getCoinjoinClient(account.symbol);
-        // unregister account in @trezor/coinjoin
+        // unregister account in @cerberus/coinjoin
         client?.unregisterAccount(account.key);
 
         // cancelCoinjoinAuthorization should be called only if there is no other registered coinjoin account
@@ -519,7 +519,7 @@ const getOwnershipProof =
                 });
                 if (proof.success) {
                     proof.payload.forEach((p, i) => {
-                        if (!utxos[i]) return; // double check if data from Trezor corresponds with request
+                        if (!utxos[i]) return; // double check if data from Cerberus corresponds with request
                         response.inputs.push({
                             outpoint: utxos[i].outpoint,
                             ownershipProof: p.ownership_proof,
@@ -627,7 +627,7 @@ const signCoinjoinTx =
             groupParamsByDevice.map(
                 ({ device, tx, utxos, roundId, key, network, unlockPath, rawLiquidityClue }) =>
                     async () => {
-                        // notify reducer before signing, failed signing are also counted in Trezor maxRound limit
+                        // notify reducer before signing, failed signing are also counted in Cerberus maxRound limit
                         dispatch(
                             clientSessionTxSigned({
                                 accountKey: key,
@@ -725,7 +725,7 @@ export const initCoinjoinService =
         const knownClient = clients[symbol];
         if (knownClient?.status === 'loading') return;
 
-        // find already running instance of @trezor/coinjoin client
+        // find already running instance of @cerberus/coinjoin client
         const knownService = CoinjoinService.getInstance(symbol);
         if (knownService && knownClient?.status === 'loaded') {
             return knownService;

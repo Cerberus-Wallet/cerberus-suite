@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 import { NetworkSymbol } from '@suite-common/wallet-config';
-import { Paragraph } from '@trezor/components';
-import { spacingsPx } from '@trezor/theme';
+import { Paragraph } from '@cerberus/components';
+import { spacingsPx } from '@cerberus/theme';
 
 import { CoinList } from 'src/components/suite';
 import type { Network } from 'src/types/wallet';

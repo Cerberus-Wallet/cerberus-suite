@@ -5,7 +5,7 @@ import { NetworkSymbol } from '@suite-common/wallet-config';
 import { Ethereum } from '@everstake/wallet-sdk';
 import { fromWei, toHex, toWei } from 'web3-utils';
 import { getEthereumEstimateFeeParams, sanitizeHex } from '@suite-common/wallet-utils';
-import TrezorConnect, { EthereumTransaction } from '@trezor/connect';
+import TrezorConnect, { EthereumTransaction } from '@cerberus/connect';
 import BigNumber from 'bignumber.js';
 
 // Gas reserve ensuring txs are processed
@@ -13,7 +13,7 @@ const GAS_RESERVE = 120000;
 // source is a required parameter for some functions in the Everstake Wallet SDK.
 // This parameter is used for some contract calls.
 // It is a constant which allows the SDK to define which app calls its functions.
-// Each app which integrates the SDK has its own source, e.g. source for Trezor Suite is '1'.
+// Each app which integrates the SDK has its own source, e.g. source for Cerberus Suite is '1'.
 export const WALLET_SDK_SOURCE = '1';
 
 export const getEthNetworkForWalletSdk = (symbol: NetworkSymbol) => {

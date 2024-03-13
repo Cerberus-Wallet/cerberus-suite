@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, ReactNode } from 'react';
 
-import { analytics, AppUpdateEventStatus, EventType } from '@trezor/suite-analytics';
-import { desktopApi } from '@trezor/suite-desktop-api';
+import { analytics, AppUpdateEventStatus, EventType } from '@cerberus/suite-analytics';
+import { desktopApi } from '@cerberus/suite-desktop-api';
 
 import { useActions, useSelector } from 'src/hooks/suite';
 import * as desktopUpdateActions from 'src/actions/suite/desktopUpdateActions';

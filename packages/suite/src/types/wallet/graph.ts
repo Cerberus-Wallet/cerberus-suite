@@ -1,5 +1,5 @@
 import { NetworkSymbol } from '@suite-common/wallet-config';
-import { BlockchainAccountBalanceHistory } from '@trezor/connect';
+import { BlockchainAccountBalanceHistory } from '@cerberus/connect';
 
 export interface AccountHistoryWithBalance extends BlockchainAccountBalanceHistory {
     balance: string;

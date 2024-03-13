@@ -1,6 +1,6 @@
-import type { Network } from '@trezor/utxo-lib';
-import { sortTxsFromLatest } from '@trezor/blockchain-link-utils';
-import { sumAddressValues } from '@trezor/blockchain-link/lib/workers/electrum/methods/getAccountInfo';
+import type { Network } from '@cerberus/utxo-lib';
+import { sortTxsFromLatest } from '@cerberus/blockchain-link-utils';
+import { sumAddressValues } from '@cerberus/blockchain-link/lib/workers/electrum/methods/getAccountInfo';
 
 import { isTxConfirmed, doesTxContainAddress } from './backendUtils';
 import type {

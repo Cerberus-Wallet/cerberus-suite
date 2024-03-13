@@ -1,7 +1,7 @@
 import { app } from 'electron';
 import si from 'systeminformation';
 
-import { bytesToHumanReadable } from '@trezor/utils';
+import { bytesToHumanReadable } from '@cerberus/utils';
 import { isDevEnv } from '@suite-common/suite-utils';
 
 import { b2t } from './utils';

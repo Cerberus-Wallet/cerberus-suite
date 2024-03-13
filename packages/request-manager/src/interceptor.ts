@@ -2,7 +2,7 @@ import net from 'net';
 import http from 'http';
 import https from 'https';
 import tls from 'tls';
-import { getWeakRandomId } from '@trezor/utils';
+import { getWeakRandomId } from '@cerberus/utils';
 import { TorIdentities } from './torIdentities';
 import { InterceptorOptions } from './types';
 import { createRequestPool } from './httpPool';
@@ -224,8 +224,8 @@ const overloadWebsocketHandshake = (
     options?: http.RequestOptions | ((r: http.IncomingMessage) => void),
     callback?: unknown,
 ) => {
-    // @trezor/blockchain-link is adding an SocksProxyAgent to each connection
-    // related to https://github.com/trezor/trezor-suite/issues/7689
+    // @cerberus/blockchain-link is adding an SocksProxyAgent to each connection
+    // related to https://github.com/Cerberus-Wallet/cerberus-suite/issues/7689
     // this condition should be removed once suite will stop using TrezorConnect.setProxy
     if (
         typeof url === 'object' &&

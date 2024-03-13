@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { variables } from '@trezor/components';
+import { variables } from '@cerberus/components';
 import { ExchangeTrade } from 'invity-api';
 import {
     FiatValue,

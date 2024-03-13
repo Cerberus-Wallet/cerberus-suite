@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
-import { NativeSpacing } from '@trezor/theme';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
+import { NativeSpacing } from '@cerberus/theme';
 
 import { Box, BoxProps } from './Box';
 

@@ -1,4 +1,4 @@
-import { DeviceModelInternal } from '@trezor/connect';
+import { DeviceModelInternal } from '@cerberus/connect';
 
 // Firmware does not have support for address chunking, so the address is always displayed as one continuous line.
 export type PaginationCompatibleDeviceModel = Exclude<

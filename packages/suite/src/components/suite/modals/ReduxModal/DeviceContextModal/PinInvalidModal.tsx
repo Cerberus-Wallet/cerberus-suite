@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Paragraph } from '@trezor/components';
+import { Paragraph } from '@cerberus/components';
 import { Translation } from 'src/components/suite/Translation';
 import { DeviceConfirmImage, Modal, ModalProps } from 'src/components/suite';
 import { TrezorDevice } from 'src/types/suite';

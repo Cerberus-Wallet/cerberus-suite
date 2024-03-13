@@ -1,5 +1,5 @@
 import { MouseEventHandler } from 'react';
-import { Button } from '@trezor/components';
+import { Button } from '@cerberus/components';
 
 import { Translation, TroubleshootingTips } from 'src/components/suite';
 import { useDispatch } from 'src/hooks/suite';

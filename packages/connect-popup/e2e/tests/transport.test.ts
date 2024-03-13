@@ -1,5 +1,5 @@
 import { test, expect, firefox, chromium, Page } from '@playwright/test';
-import { TrezorUserEnvLink } from '@trezor/trezor-user-env-link';
+import { TrezorUserEnvLink } from '@cerberus/trezor-user-env-link';
 
 const url = process.env.URL || 'http://localhost:8088/';
 
@@ -21,7 +21,7 @@ const fixtures = [
     {
         browser: chromium,
         description: `iframe and host different origins: false -> bridge`,
-        queryString: '?trezor-connect-src=https://connect.trezor.io/9/',
+        queryString: '?trezor-connect-src=https://connect.cerberus.uraanai.com/9/',
         expect: () => expect(popup.getByRole('heading', { name: 'Install Bridge' })).toBeVisible(),
     },
     {

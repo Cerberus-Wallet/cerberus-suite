@@ -1,5 +1,5 @@
 import { HDNodeResponse } from '../types/api/getPublicKey';
-import { MessagesSchema as Messages } from '@trezor/protobuf';
+import { MessagesSchema as Messages } from '@cerberus/protobuf';
 
 interface Params {
     response: HDNodeResponse;

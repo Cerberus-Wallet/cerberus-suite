@@ -2,7 +2,7 @@ import styled, { useTheme } from 'styled-components';
 import { useDispatch } from 'src/hooks/suite';
 import { transparentize } from 'polished';
 
-import { Button, Icon, variables } from '@trezor/components';
+import { Button, Icon, variables } from '@cerberus/components';
 import { selectAccountByKey } from '@suite-common/wallet-core';
 import { WalletParams } from '@suite-common/wallet-types';
 import { goto } from 'src/actions/suite/routerActions';

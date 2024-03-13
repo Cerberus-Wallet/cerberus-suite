@@ -1,4 +1,4 @@
-import { Type } from '@trezor/schema-utils';
+import { Type } from '@cerberus/schema-utils';
 
 export interface FirmwareRange {
     T1B1: {

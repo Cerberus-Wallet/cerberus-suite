@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { variables } from '@trezor/components';
+import { variables } from '@cerberus/components';
 import {
     GuideHeader,
     GuideContent,

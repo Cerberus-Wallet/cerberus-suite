@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import { Select } from '@trezor/components';
+import { Select } from '@cerberus/components';
 import { Translation } from 'src/components/suite/Translation';
 import { getAccountTypeName, getAccountTypeTech } from '@suite-common/wallet-utils';
 import { AccountTypeDescription } from './AccountTypeDescription';
 import { Network } from 'src/types/wallet';
-import { typography } from '@trezor/theme';
+import { typography } from '@cerberus/theme';
 
 const LabelWrapper = styled.div`
     display: flex;

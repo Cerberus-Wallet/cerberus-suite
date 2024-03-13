@@ -32,7 +32,7 @@ import { STORAGE } from 'src/actions/suite/constants';
 import type { Action as SuiteAction } from 'src/types/suite';
 import type { SellInfo } from 'src/actions/wallet/coinmarketSellActions';
 import type { SavingsInfo } from 'src/actions/wallet/coinmarketSavingsActions';
-import type { FeeLevel } from '@trezor/connect';
+import type { FeeLevel } from '@cerberus/connect';
 import type { Trade } from 'src/types/wallet/coinmarketCommonTypes';
 import { P2pInfo } from 'src/actions/wallet/coinmarketP2pActions';
 

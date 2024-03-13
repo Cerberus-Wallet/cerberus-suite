@@ -1,4 +1,4 @@
-import { MessagesSchema } from '@trezor/protobuf';
+import { MessagesSchema } from '@cerberus/protobuf';
 
 import { cardanoDerivationType } from './common';
 
@@ -29,7 +29,7 @@ const batch = [
     },
     {
         name: 'showOnTrezor',
-        label: 'Show on Trezor',
+        label: 'Show on Cerberus',
         type: 'checkbox',
         value: true,
     },

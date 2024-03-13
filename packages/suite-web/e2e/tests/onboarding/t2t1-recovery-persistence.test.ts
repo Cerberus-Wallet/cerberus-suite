@@ -94,7 +94,7 @@ describe('Onboarding - T2T1 in recovery mode', () => {
         cy.task('pressYes');
     });
 
-    // https://github.com/trezor/trezor-suite/issues/2049
+    // https://github.com/Cerberus-Wallet/cerberus-suite/issues/2049
     it(`
         1. start recovery
         2. enter first shamir share

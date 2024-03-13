@@ -1,13 +1,13 @@
-# @trezor/transport-bridge
+# @cerberus/transport-bridge
 
--   javascript clone of https://github.com/trezor/trezord-go
+-   javascript clone of https://github.com/Cerberus-Wallet/cerberusd-go
 
 ## Build and run module
 
--   `yarn workspace @trezor/transport-bridge build:js`
+-   `yarn workspace @cerberus/transport-bridge build:js`
 -   `node ./packages/transport-bridge/dist/bin.js`
 
 ## Build and run binary
 
--   `yarn workspace @trezor/transport-bridge build`
--   `./packages/transport-bridge/build/\@trezor/transport-bridge-<your-platform>`
+-   `yarn workspace @cerberus/transport-bridge build`
+-   `./packages/transport-bridge/build/\@cerberus/transport-bridge-<your-platform>`

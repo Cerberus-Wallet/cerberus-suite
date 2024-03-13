@@ -11,7 +11,7 @@ const result = await TrezorConnect.ethereumVerifyMessage(params);
 
 [Optional common params](commonParams.md)
 
-[EthereumVerifyMessage type](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/ethereum/index.ts)
+[EthereumVerifyMessage type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/ethereum/index.ts)
 
 -   `address` - _required_ `string` signer address. "0x" prefix is optional
 -   `message` - _required_ `string` signed message in plain text

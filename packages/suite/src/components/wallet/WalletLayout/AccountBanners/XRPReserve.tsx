@@ -2,7 +2,7 @@ import Bignumber from 'bignumber.js';
 import { NotificationCard, Translation } from 'src/components/suite';
 import { formatNetworkAmount } from '@suite-common/wallet-utils';
 import type { Account } from 'src/types/wallet/index';
-import { HELP_CENTER_XRP_URL } from '@trezor/urls';
+import { HELP_CENTER_XRP_URL } from '@cerberus/urls';
 
 interface XRPReserveProps {
     account: Account | undefined;

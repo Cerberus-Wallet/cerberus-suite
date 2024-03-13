@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Button } from '@trezor/components';
+import { Button } from '@cerberus/components';
 
 interface TagProps {
     isSelected: boolean;

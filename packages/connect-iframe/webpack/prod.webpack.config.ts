@@ -7,7 +7,7 @@ import { config as baseConfig } from './base.webpack.config';
 
 const DIST = path.resolve(__dirname, '../build');
 const config: webpack.Configuration = {
-    // common instructions that are able to build correctly imports from @trezor/connect (reusing this in popup)
+    // common instructions that are able to build correctly imports from @cerberus/connect (reusing this in popup)
     entry: {
         iframe: path.resolve(__dirname, '../src/index.ts'),
     },

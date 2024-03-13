@@ -1,5 +1,5 @@
-import { SuiteAnalyticsEvent } from '@trezor/suite-analytics';
-import { urlSearchParams } from '@trezor/suite/src/utils/suite/metadata';
+import { SuiteAnalyticsEvent } from '@cerberus/suite-analytics';
+import { urlSearchParams } from '@cerberus/suite/src/utils/suite/metadata';
 import { EventPayload, Requests } from '../types';
 
 /**
@@ -122,7 +122,7 @@ export const createAccountFromMyAccounts = (coin: string, label: string) => {
 };
 
 export const interceptDataTrezorIo = (requests: Requests) =>
-    cy.intercept({ hostname: 'data.trezor.io', url: '/suite/log/**' }, req => {
+    cy.intercept({ hostname: 'data.trezorcheck.io', url: '/suite/log/**' }, req => {
         const params = urlSearchParams(req.url);
         requests.push(params);
     });
@@ -143,7 +143,7 @@ export const findAnalyticsEventByType = <T extends SuiteAnalyticsEvent>(
 
 export const enterPinOnBlindMatrix = (pinEntryNumber: string) => {
     cy.task('getDebugState').then(state => {
-        // TODO: export and take types from @trezor/user-env-link
+        // TODO: export and take types from @cerberus/user-env-link
         // @ts-expect-error
         const index = state.matrix.indexOf(pinEntryNumber) + 1;
         cy.getTestElement(`@pin/input/${index}`).click();

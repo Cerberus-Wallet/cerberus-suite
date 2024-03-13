@@ -1,5 +1,5 @@
-import { address as addressBjs, Network } from '@trezor/utxo-lib';
-import { arrayPartition } from '@trezor/utils';
+import { address as addressBjs, Network } from '@cerberus/utxo-lib';
+import { arrayPartition } from '@cerberus/utils';
 
 import * as middleware from './middleware';
 import { Transaction, EnhancedVinVout } from '../types/backend';

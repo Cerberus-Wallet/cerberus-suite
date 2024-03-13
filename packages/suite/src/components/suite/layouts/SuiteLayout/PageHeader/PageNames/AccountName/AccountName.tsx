@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { AnimatePresence, MotionProps, motion } from 'framer-motion';
-import { motionEasing } from '@trezor/components';
-import { spacings } from '@trezor/theme';
+import { motionEasing } from '@cerberus/components';
+import { spacings } from '@cerberus/theme';
 import { Account } from '@suite-common/wallet-types';
 import { ACCOUNT_INFO_HEIGHT } from 'src/components/wallet/WalletLayout/AccountTopPanel/AccountTopPanel';
 import { AccountDetails } from './AccountDetails';

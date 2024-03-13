@@ -7,7 +7,7 @@ import { PROTOCOL_SCHEME } from 'src/constants/suite/protocol';
 import * as protocolActions from '../protocolActions';
 import * as protocolConstants from '../constants/protocolConstants';
 
-jest.doMock('@trezor/suite-analytics', () => testMocks.getAnalytics());
+jest.doMock('@cerberus/suite-analytics', () => testMocks.getAnalytics());
 
 export const getInitialState = (state?: ProtocolState) => ({
     protocol: {

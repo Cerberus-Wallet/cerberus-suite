@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { CoinmarketFooter, NoOffers } from 'src/views/wallet/coinmarket/common';
-import { variables } from '@trezor/components';
+import { variables } from '@cerberus/components';
 import { Translation } from 'src/components/suite';
 import { useLayout } from 'src/hooks/suite';
 import { useCoinmarketBuyOffersContext } from 'src/hooks/wallet/useCoinmarketBuyOffers';
@@ -63,7 +63,7 @@ const Offers = () => {
         useCoinmarketBuyOffersContext();
     const { navigateToBuyForm } = useCoinmarketNavigation(account);
 
-    useLayout('Trezor Suite | Trade', () => <PageHeader backRoute="wallet-coinmarket-buy" />);
+    useLayout('Cerberus Suite | Trade', () => <PageHeader backRoute="wallet-coinmarket-buy" />);
 
     const hasLoadingFailed = !(quotes && alternativeQuotes);
     const noOffers = hasLoadingFailed || (quotes.length === 0 && alternativeQuotes.length === 0);

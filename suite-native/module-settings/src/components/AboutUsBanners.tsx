@@ -1,7 +1,7 @@
 import { Card, HStack, IconButton, Text, VStack } from '@suite-native/atoms';
 import { Icon } from '@suite-common/icons';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
-import { Color } from '@trezor/theme';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
+import { Color } from '@cerberus/theme';
 import { useOpenLink } from '@suite-native/link';
 
 const cardStyle = prepareNativeStyle<{ backgroundColor: Color }>((utils, { backgroundColor }) => ({
@@ -35,7 +35,7 @@ export const AboutUsBanners = () => {
                         variant="titleSmall"
                         style={applyStyle(trezorDescriptionTextStyle)}
                     >
-                        Trezor Suite Lite is a safe and secure way to stay connected to the crypto
+                        Cerberus Suite Lite is a safe and secure way to stay connected to the crypto
                         on your hardware wallet. Track coin balances on the go without exposing your
                         private data. Easily create and send payment addresses to anyone.
                     </Text>
@@ -53,7 +53,7 @@ export const AboutUsBanners = () => {
                             iconName="facebook"
                             accessibilityRole="link"
                             accessibilityLabel="facebook"
-                            onPress={() => openLink('https://www.facebook.com/trezor.io')}
+                            onPress={() => openLink('https://www.facebook.com/cerberus.uraanai.com')}
                         />
                         <IconButton
                             size="large"
@@ -61,7 +61,7 @@ export const AboutUsBanners = () => {
                             iconName="twitter"
                             accessibilityRole="link"
                             accessibilityLabel="twitter"
-                            onPress={() => openLink('https://twitter.com/Trezor')}
+                            onPress={() => openLink('https://twitter.com/Cerberus')}
                         />
                         <IconButton
                             size="large"
@@ -69,7 +69,7 @@ export const AboutUsBanners = () => {
                             iconName="github"
                             accessibilityRole="link"
                             accessibilityLabel="github"
-                            onPress={() => openLink('https://github.com/trezor')}
+                            onPress={() => openLink('https://github.com/Cerberus-Wallet')}
                         />
                     </HStack>
                 </VStack>

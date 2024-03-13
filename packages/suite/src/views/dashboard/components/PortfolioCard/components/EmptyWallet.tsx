@@ -1,6 +1,6 @@
 import { HTMLAttributes } from 'react';
 import styled from 'styled-components';
-import { variables, H3, Image } from '@trezor/components';
+import { variables, H3, Image } from '@cerberus/components';
 import { Translation } from 'src/components/suite';
 
 const Wrapper = styled.div`

@@ -81,7 +81,7 @@ const collectedData = [
         item: (
             <FormattedMessage
                 id="TR_DATA_ANALYTICS_CATEGORY_1_ITEM_1"
-                defaultMessage="OS, Trezor model, version etc."
+                defaultMessage="OS, Cerberus model, version etc."
             />
         ),
     },

@@ -1,14 +1,14 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import { Translation } from 'src/components/suite';
-import { useElevation, variables } from '@trezor/components';
+import { useElevation, variables } from '@cerberus/components';
 import { isTestnet } from '@suite-common/wallet-utils';
 import { WalletAccountTransaction, ChainedTransactions } from '@suite-common/wallet-types';
 import { Network } from 'src/types/wallet';
 import { AmountDetails } from './AmountDetails';
 import { IODetails } from './IODetails/IODetails';
 import { ChainedTxs } from '../ChainedTxs';
-import { Elevation, mapElevationToBorder, spacingsPx } from '@trezor/theme';
+import { Elevation, mapElevationToBorder, spacingsPx } from '@cerberus/theme';
 
 const Wrapper = styled.div`
     padding: 0 ${spacingsPx.xl} ${spacingsPx.sm};

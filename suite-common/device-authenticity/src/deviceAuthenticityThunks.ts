@@ -1,4 +1,4 @@
-import TrezorConnect, { AuthenticateDeviceResult } from '@trezor/connect';
+import TrezorConnect, { AuthenticateDeviceResult } from '@cerberus/connect';
 import { createThunk } from '@suite-common/redux-utils';
 import { notificationsActions, ToastPayload } from '@suite-common/toast-notifications';
 

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { transparentize } from 'polished';
 
 import { selectIsAccountWithRatesByKey } from '@suite-common/wallet-core';
-import { Button, variables } from '@trezor/components';
+import { Button, variables } from '@cerberus/components';
 import { FiatValue, FormattedCryptoAmount, Modal, Translation } from 'src/components/suite';
 import { useDispatch } from 'src/hooks/suite/useDispatch';
 import { onCancel } from 'src/actions/suite/modalActions';

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { H3, Paragraph, variables } from '@trezor/components';
+import { H3, Paragraph, variables } from '@cerberus/components';
 import { NetworkSymbol } from '@suite-common/wallet-config';
 import { Translation, FormattedCryptoAmount, FiatValue } from 'src/components/suite';
 

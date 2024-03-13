@@ -7,10 +7,10 @@ import {
     selectFiatRates,
 } from '@suite-common/wallet-core';
 import { useFormatters } from '@suite-common/formatters';
-import { Switch, Box, Icon, variables } from '@trezor/components';
+import { Switch, Box, Icon, variables } from '@cerberus/components';
 import { getAllAccounts, getTotalFiatBalance } from '@suite-common/wallet-utils';
-import { analytics, EventType } from '@trezor/suite-analytics';
-import { spacingsPx } from '@trezor/theme';
+import { analytics, EventType } from '@cerberus/suite-analytics';
+import { spacingsPx } from '@cerberus/theme';
 
 import {
     WalletLabeling,

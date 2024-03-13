@@ -44,7 +44,7 @@ export function sstxcommitment(a: Payment, opts?: PaymentOpts): Payment {
 
     lazy.prop(o, 'output', () => {
         if (!o.hash || !a.amount) return;
-        // https://github.com/trezor/trezor-firmware/blob/c1843f9f9fa16f3ffa91a4beef4bc1133436fb41/core/src/apps/bitcoin/scripts_decred.py
+        // https://github.com/Cerberus-Wallet/cerberus-firmware/blob/c1843f9f9fa16f3ffa91a4beef4bc1133436fb41/core/src/apps/bitcoin/scripts_decred.py
         const buf = Buffer.allocUnsafe(o.hash.length + 10);
         const writer = new BufferWriter(buf);
         writer.writeSlice(o.hash);

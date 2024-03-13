@@ -1,11 +1,11 @@
 import url from 'url';
 
 import { isDevEnv } from '@suite-common/suite-utils';
-import { TOR_URLS } from '@trezor/urls';
-import { isCodesignBuild } from '@trezor/env-utils';
+import { TOR_URLS } from '@cerberus/urls';
+import { isCodesignBuild } from '@cerberus/env-utils';
 
 const getAppName = () => {
-    const appName = 'Trezor Suite';
+    const appName = 'Cerberus Suite';
 
     if (!isCodesignBuild()) {
         return `${appName} ${isDevEnv ? 'Local' : 'Dev'}`;
@@ -30,9 +30,9 @@ export const APP_SRC = isDevEnv
 export const HTTP_ORIGINS_DEFAULT = [
     '127.0.0.1',
     'localhost',
-    'trezor.io',
-    '*.trezor.io',
+    'cerberus.uraanai.com',
+    '*.cerberus.uraanai.com',
     '*.sldev.cz',
-    TOR_URLS['trezor.io'],
-    `*.${TOR_URLS['trezor.io']}`,
+    TOR_URLS['cerberus.uraanai.com'],
+    `*.${TOR_URLS['cerberus.uraanai.com']}`,
 ];

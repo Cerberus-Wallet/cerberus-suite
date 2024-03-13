@@ -1,4 +1,4 @@
-import { parseHostname } from '@trezor/utils';
+import { parseHostname } from '@cerberus/utils';
 
 /**
  * Sorts array of backend urls so the localhost addresses are first,

@@ -47,7 +47,7 @@ const useWatchTimeframeChangeForAnalytics = (
         if (timeframeLabel) {
             if (networkSymbol) {
                 // TODO: Report tokenSymbol and tokenAddress if displaying ERC20 token account graph.
-                // related to issue: https://github.com/trezor/trezor-suite/issues/7839
+                // related to issue: https://github.com/Cerberus-Wallet/cerberus-suite/issues/7839
                 analytics.report({
                     type: EventType.AssetDetailTimeframeChange,
                     payload: { timeframe: timeframeLabel, assetSymbol: networkSymbol },

@@ -15,12 +15,12 @@ const result = await TrezorConnect.ethereumSignTypedData(params);
 
 [Optional common params](commonParams.md)
 
-[EthereumSignTypedData type](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/ethereum/index.ts)
+[EthereumSignTypedData type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/ethereum/index.ts)
 
 > :warning: **Domain-only signing (`data.primaryType` = `"EIP712Domain"`) is supported only on T2T1 with Firmware 2.4.4 or higher!**
 
 -   `path` — _required_ `string | Array<number>` minimum length is `3`. [read more](../path.md)
--   `data` - _required_ `Object` type of [`EthereumSignTypedDataMessage`](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/ethereum/index.ts)`. A JSON Schema definition can be found in the [EIP-712 spec](https://eips.ethereum.org/EIPS/eip-712).
+-   `data` - _required_ `Object` type of [`EthereumSignTypedDataMessage`](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/ethereum/index.ts)`. A JSON Schema definition can be found in the [EIP-712 spec](https://eips.ethereum.org/EIPS/eip-712).
 -   `metamask_v4_compat` - _required_ `boolean` set to `true` for compatibility with [MetaMask's signTypedData_v4](https://docs.metamask.io/guide/signing-data.html#sign-typed-data-v4).
 
 #### Blind signing (optional addition for T1B1 compatibility)
@@ -31,11 +31,11 @@ hashes.
 However, it supports signing pre-constructed hashes.
 
 EIP-712 hashes can be constructed with the plugin function at
-[@trezor/connetct-plugin-ethereum](https://github.com/trezor/trezor-suite/blob/develop/packages/connect-plugin-ethereum).
+[@cerberus/connetct-plugin-ethereum](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect-plugin-ethereum).
 
 You may also wish to contruct your own hashes using a different library.
 
-[EthereumSignTypedHash type](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/ethereum/index.ts)
+[EthereumSignTypedHash type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/ethereum/index.ts)
 
 > :warning: **Domain-only signing (empty `message_hash`) is supported only on T1B1 with Firmware 1.10.6 or higher!**
 
@@ -67,18 +67,18 @@ const eip712Data = {
     },
     primaryType: 'Message',
     domain: {
-        name: 'example.trezor.io',
+        name: 'example.cerberus.uraanai.com',
     },
     message: {
-        'Best Wallet': 'Trezor Model T',
+        'Best Wallet': 'Cerberus Model T',
         // be careful with JavaScript numbers: MAX_SAFE_INTEGER is quite low
         Number: `${2n ** 55n}`,
     },
 };
 
-// This functionality is separate from @trezor/connect, as it requires @metamask/eth-sig-utils,
+// This functionality is separate from @cerberus/connect, as it requires @metamask/eth-sig-utils,
 // which is a large JavaScript dependency
-const transformTypedDataPlugin = require('@trezor/connect-plugin-ethereum');
+const transformTypedDataPlugin = require('@cerberus/connect-plugin-ethereum');
 const { domain_separator_hash, message_hash } = transformTypedDataPlugin(eip712Data, true);
 
 TrezorConnect.ethereumSignTypedData({
@@ -93,7 +93,7 @@ TrezorConnect.ethereumSignTypedData({
 
 ### Result
 
-[EthereumMessageSignature type](https://github.com/trezor/trezor-suite/blob/develop/packages/protobuf/src/messages.ts)
+[EthereumMessageSignature type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/protobuf/src/messages.ts)
 
 ```javascript
 {

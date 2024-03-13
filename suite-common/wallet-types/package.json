@@ -16,10 +16,10 @@
         "@suite-common/token-definitions": "workspace:*",
         "@suite-common/wallet-config": "workspace:*",
         "@suite-common/wallet-constants": "workspace:*",
-        "@trezor/blockchain-link-types": "workspace:*",
-        "@trezor/connect": "workspace:*",
-        "@trezor/type-utils": "workspace:*",
-        "@trezor/utils": "workspace:*",
+        "@cerberus/blockchain-link-types": "workspace:*",
+        "@cerberus/connect": "workspace:*",
+        "@cerberus/type-utils": "workspace:*",
+        "@cerberus/utils": "workspace:*",
         "react": "18.2.0",
         "react-hook-form": "^7.50.1"
     }

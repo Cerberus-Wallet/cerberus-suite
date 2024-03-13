@@ -8,8 +8,8 @@ import {
     selectDevicesCount,
     deviceActions,
 } from '@suite-common/wallet-core';
-import { analytics, EventType } from '@trezor/suite-analytics';
-import { TRANSPORT, DEVICE } from '@trezor/connect';
+import { analytics, EventType } from '@cerberus/suite-analytics';
+import { TRANSPORT, DEVICE } from '@cerberus/connect';
 import {
     getBootloaderHash,
     getBootloaderVersion,
@@ -17,7 +17,7 @@ import {
     getFirmwareVersion,
     hasBitcoinOnlyFirmware,
     isDeviceInBootloaderMode,
-} from '@trezor/device-utils';
+} from '@cerberus/device-utils';
 
 import { SUITE, ROUTER } from 'src/actions/suite/constants';
 import { COINJOIN } from 'src/actions/wallet/constants';

@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 import { getCoinUnavailabilityMessage } from '@suite-common/suite-utils';
-import { Tooltip } from '@trezor/components';
-import { getFirmwareVersion, isDeviceInBootloaderMode } from '@trezor/device-utils';
-import { versionUtils } from '@trezor/utils';
+import { Tooltip } from '@cerberus/components';
+import { getFirmwareVersion, isDeviceInBootloaderMode } from '@cerberus/device-utils';
+import { versionUtils } from '@cerberus/utils';
 
 import { Translation } from 'src/components/suite';
 import { useDevice, useDiscovery, useSelector } from 'src/hooks/suite';

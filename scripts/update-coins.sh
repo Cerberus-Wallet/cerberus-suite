@@ -2,7 +2,7 @@
 
 set -euxo pipefail
 
-SRC='./submodules/trezor-common/tools'
+SRC='./submodules/cerberus-common/tools'
 DIST='./packages/connect-common/files'
 
 # todo:

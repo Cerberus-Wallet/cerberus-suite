@@ -1,4 +1,4 @@
-import { Environment } from '@trezor/env-utils';
+import { Environment } from '@cerberus/env-utils';
 
 export type App = 'suite' | 'connect';
 

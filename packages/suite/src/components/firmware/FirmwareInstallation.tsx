@@ -1,5 +1,5 @@
 import { useCallback, useMemo } from 'react';
-import { Button } from '@trezor/components';
+import { Button } from '@cerberus/components';
 import { getTextForStatus } from 'src/utils/firmware';
 import { Translation, WebUsbButton } from 'src/components/suite';
 import { useDevice, useFirmware } from 'src/hooks/suite';
@@ -8,7 +8,7 @@ import { OnboardingStepBox } from 'src/components/onboarding';
 import { TrezorDevice } from 'src/types/suite';
 import { selectIsActionAbortable } from 'src/reducers/suite/suiteReducer';
 import { useSelector } from 'src/hooks/suite/useSelector';
-import { DeviceModelInternal } from '@trezor/connect';
+import { DeviceModelInternal } from '@cerberus/connect';
 
 interface FirmwareInstallationProps {
     cachedDevice?: TrezorDevice;

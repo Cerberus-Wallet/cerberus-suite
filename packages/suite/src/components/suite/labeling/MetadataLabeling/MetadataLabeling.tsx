@@ -1,7 +1,7 @@
 import { useEffect, useState, useMemo, useRef } from 'react';
 import styled from 'styled-components';
 
-import { Button, DropdownMenuItemProps } from '@trezor/components';
+import { Button, DropdownMenuItemProps } from '@cerberus/components';
 import { useDiscovery, useDispatch, useSelector } from 'src/hooks/suite';
 import { addMetadata, init, setEditing } from 'src/actions/suite/metadataLabelingActions';
 import { MetadataAddPayload } from 'src/types/suite/metadata';
@@ -13,7 +13,7 @@ import {
     selectIsLabelingAvailableForEntity,
     selectIsLabelingInitPossible,
 } from 'src/reducers/suite/metadataReducer';
-import type { Timeout } from '@trezor/type-utils';
+import type { Timeout } from '@cerberus/type-utils';
 
 const LabelValue = styled.div`
     overflow: hidden;

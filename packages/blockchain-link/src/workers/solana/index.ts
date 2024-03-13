@@ -4,23 +4,23 @@ import type {
     Transaction,
     SubscriptionAccountInfo,
     TokenInfo,
-} from '@trezor/blockchain-link-types';
+} from '@cerberus/blockchain-link-types';
 import type {
     SolanaValidParsedTxWithMeta,
     ParsedTransactionWithMeta,
     SolanaTokenAccountInfo,
-} from '@trezor/blockchain-link-types/lib/solana';
-import type * as MessageTypes from '@trezor/blockchain-link-types/lib/messages';
-import { CustomError } from '@trezor/blockchain-link-types/lib/constants/errors';
+} from '@cerberus/blockchain-link-types/lib/solana';
+import type * as MessageTypes from '@cerberus/blockchain-link-types/lib/messages';
+import { CustomError } from '@cerberus/blockchain-link-types/lib/constants/errors';
 import { BaseWorker, ContextType, CONTEXT } from '../baseWorker';
-import { MESSAGES, RESPONSES } from '@trezor/blockchain-link-types/lib/constants';
+import { MESSAGES, RESPONSES } from '@cerberus/blockchain-link-types/lib/constants';
 import { Connection, Message, PublicKey } from '@solana/web3.js';
-import { solanaUtils } from '@trezor/blockchain-link-utils';
+import { solanaUtils } from '@cerberus/blockchain-link-utils';
 
 import {
     transformTokenInfo,
     TOKEN_PROGRAM_PUBLIC_KEY,
-} from '@trezor/blockchain-link-utils/lib/solana';
+} from '@cerberus/blockchain-link-utils/lib/solana';
 import { TOKEN_ACCOUNT_LAYOUT } from './tokenUtils';
 
 export type SolanaAPI = Connection;

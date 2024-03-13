@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
 
-import { variables } from '@trezor/components';
+import { variables } from '@cerberus/components';
 import { GuideCategory } from '@suite-common/suite-types';
 import { GuideNode } from 'src/components/guide';
 

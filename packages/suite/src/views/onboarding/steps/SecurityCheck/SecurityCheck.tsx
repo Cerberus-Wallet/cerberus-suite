@@ -3,8 +3,8 @@ import styled, { useTheme } from 'styled-components';
 
 import { getConnectedDeviceStatus } from '@suite-common/suite-utils';
 import { selectDevice } from '@suite-common/wallet-core';
-import { Icon, Tooltip, variables, H2 } from '@trezor/components';
-import { DeviceModelInternal } from '@trezor/connect';
+import { Icon, Tooltip, variables, H2 } from '@cerberus/components';
+import { DeviceModelInternal } from '@cerberus/connect';
 
 import { goto } from 'src/actions/suite/routerActions';
 import { useDispatch, useOnboarding, useSelector } from 'src/hooks/suite';
@@ -17,7 +17,7 @@ import { SecurityCheckFail } from './SecurityCheckFail';
 import { SecurityCheckButton } from './SecurityCheckButton';
 import { DeviceAuthenticity } from './DeviceAuthenticity';
 import { selectIsOnboadingActive } from 'src/reducers/onboarding/onboardingReducer';
-import { typography } from '@trezor/theme';
+import { typography } from '@cerberus/theme';
 
 const StyledCard = styled(CollapsibleOnboardingCard)`
     max-width: 840px;

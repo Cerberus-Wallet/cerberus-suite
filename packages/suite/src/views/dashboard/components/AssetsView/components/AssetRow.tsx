@@ -1,7 +1,7 @@
 import { memo, ComponentProps } from 'react';
 import styled, { useTheme } from 'styled-components';
 import { Network } from 'src/types/wallet';
-import { Icon, variables, motionAnimation, SkeletonRectangle } from '@trezor/components';
+import { Icon, variables, motionAnimation, SkeletonRectangle } from '@cerberus/components';
 import {
     AmountUnitSwitchWrapper,
     CoinBalance,
@@ -14,7 +14,7 @@ import { CoinmarketBuyButton } from 'src/views/dashboard/components/CoinmarketBu
 import { isTestnet } from '@suite-common/wallet-utils';
 import { goto } from 'src/actions/suite/routerActions';
 import { useAccountSearch, useDispatch, useLoadingSkeleton } from 'src/hooks/suite';
-import { spacingsPx, typography } from '@trezor/theme';
+import { spacingsPx, typography } from '@cerberus/theme';
 import { AssetFiatBalance } from '@suite-common/assets';
 import { AssetTableRowGrid } from './AssetTableRowGrid';
 import { ArrowIcon } from './ArrowIcon';

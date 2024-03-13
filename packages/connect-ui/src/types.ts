@@ -1,6 +1,6 @@
-import { PopupHandshake, PopupMethodInfo, IFrameLoaded } from '@trezor/connect';
-import type { Core } from '@trezor/connect/lib/core';
-import type { OriginBoundState } from '@trezor/connect-common';
+import { PopupHandshake, PopupMethodInfo, IFrameLoaded } from '@cerberus/connect';
+import type { Core } from '@cerberus/connect/lib/core';
+import type { OriginBoundState } from '@cerberus/connect-common';
 
 export type State = Partial<PopupHandshake['payload']> &
     Partial<PopupMethodInfo['payload']> &

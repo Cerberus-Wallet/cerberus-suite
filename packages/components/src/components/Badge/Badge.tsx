@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { css, DefaultTheme, useTheme } from 'styled-components';
 import { IconName } from '@suite-common/icons';
 import { Icon } from '@suite-common/icons/src/webComponents';
-import { borders, Color, CSSColor, spacings, spacingsPx, typography } from '@trezor/theme';
+import { borders, Color, CSSColor, spacings, spacingsPx, typography } from '@cerberus/theme';
 import { focusStyleTransition, getFocusShadowStyle } from '../../utils/utils';
 import type { UISize, UIVariant } from '../../config/types';
 

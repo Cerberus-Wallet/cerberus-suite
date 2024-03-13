@@ -7,7 +7,7 @@ import {
     ProgressInfo,
 } from 'electron-updater';
 
-import { bytesToHumanReadable } from '@trezor/utils';
+import { bytesToHumanReadable } from '@cerberus/utils';
 import { isFeatureFlagEnabled, isDevEnv } from '@suite-common/suite-utils';
 
 import { app, ipcMain } from '../typed-electron';

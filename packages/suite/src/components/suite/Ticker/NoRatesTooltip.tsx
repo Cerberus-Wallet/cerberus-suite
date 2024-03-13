@@ -1,6 +1,6 @@
 import { Translation, TooltipSymbol } from 'src/components/suite';
 import styled from 'styled-components';
-import { Tooltip, variables } from '@trezor/components';
+import { Tooltip, variables } from '@cerberus/components';
 import { TranslationKey } from '../Translation';
 
 const NoRatesMessage = styled.div`

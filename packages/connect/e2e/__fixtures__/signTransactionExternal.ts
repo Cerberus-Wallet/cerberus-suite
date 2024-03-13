@@ -1,4 +1,4 @@
-// fixures: https://github.com/trezor/trezor-firmware/blob/main/tests/device_tests/bitcoin/test_signtx_external.py
+// fixures: https://github.com/Cerberus-Wallet/cerberus-firmware/blob/main/tests/device_tests/bitcoin/test_signtx_external.py
 
 const { ADDRESS_N, TX_CACHE } = global.TestUtils;
 
@@ -282,7 +282,7 @@ export default {
             },
             legacyResults: [
                 {
-                    // bug in prev implementation https://github.com/trezor/trezor-firmware/pull/2034
+                    // bug in prev implementation https://github.com/Cerberus-Wallet/cerberus-firmware/pull/2034
                     rules: ['<2.4.4'],
                     success: true,
                     payload: {
@@ -297,7 +297,7 @@ export default {
             // todo: T1B1 error, tested with 1.10.6:
             // "code": "Failure_DataError",
             // "error": "signing.c:1021:Unsupported script type.",
-            skip: ['1', '<2.4.4'], // bug in prev implementation https://github.com/trezor/trezor-firmware/pull/2034
+            skip: ['1', '<2.4.4'], // bug in prev implementation https://github.com/Cerberus-Wallet/cerberus-firmware/pull/2034
             params: {
                 coin: 'Testnet',
                 inputs: [
@@ -348,7 +348,7 @@ export default {
             // "code": "Failure_DataError",
             // "error": "signing.c:1021:Unsupported script type.",
             description: 'Testnet (P2TR): with proof',
-            skip: ['1', '<2.4.4'], // bug in prev implementation https://github.com/trezor/trezor-firmware/pull/2034
+            skip: ['1', '<2.4.4'], // bug in prev implementation https://github.com/Cerberus-Wallet/cerberus-firmware/pull/2034
             setup: {
                 mnemonic: 'mnemonic_abandon', // <- important, external input is from all-all (previous case)
             },

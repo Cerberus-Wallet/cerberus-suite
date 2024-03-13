@@ -1,6 +1,6 @@
-# @trezor/suite-data
+# @cerberus/suite-data
 
-Collection of static assets and scripts for `@trezor/suite-*` packages.
+Collection of static assets and scripts for `@cerberus/suite-*` packages.
 
 ## files
 

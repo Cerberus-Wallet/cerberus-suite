@@ -1,9 +1,9 @@
 import { useMemo } from 'react';
 import styled from 'styled-components';
 
-import { Select } from '@trezor/components';
+import { Select } from '@cerberus/components';
 import { Translation } from 'src/components/suite';
-import { isDesktop } from '@trezor/env-utils';
+import { isDesktop } from '@cerberus/env-utils';
 
 import type { Network } from 'src/types/wallet';
 import type { BackendOption } from 'src/hooks/settings/backends';

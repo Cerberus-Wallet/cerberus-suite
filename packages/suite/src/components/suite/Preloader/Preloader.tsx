@@ -55,7 +55,7 @@ export const Preloader = ({ children }: PreloaderProps) => {
         return <DatabaseUpgradeModal variant={lifecycle.error} />;
     }
 
-    // @trezor/connect was initialized, but didn't emit "TRANSPORT" event yet (it could take a while)
+    // @cerberus/connect was initialized, but didn't emit "TRANSPORT" event yet (it could take a while)
     // display Loader as full page view
     if (lifecycle.status !== 'ready' || !router.loaded || !transport) {
         return <InitialLoading timeout={90} />;

@@ -1,12 +1,12 @@
 import { useWatch } from 'react-hook-form';
 import styled from 'styled-components';
 
-import { Checkbox, TooltipButton, Warning, variables } from '@trezor/components';
+import { Checkbox, TooltipButton, Warning, variables } from '@cerberus/components';
 import { useDevice } from 'src/hooks/suite';
 import { useSendFormContext } from 'src/hooks/wallet';
 import { isLowAnonymityWarning } from '@suite-common/wallet-utils';
 import { Translation } from 'src/components/suite/Translation';
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 
 const Container = styled.div`
     display: flex;

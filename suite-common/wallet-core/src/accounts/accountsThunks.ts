@@ -1,4 +1,4 @@
-import TrezorConnect, { AccountInfo, TokenInfo } from '@trezor/connect';
+import TrezorConnect, { AccountInfo, TokenInfo } from '@cerberus/connect';
 import { Account, AccountKey } from '@suite-common/wallet-types';
 import { networksCompatibility as NETWORKS } from '@suite-common/wallet-config';
 import {

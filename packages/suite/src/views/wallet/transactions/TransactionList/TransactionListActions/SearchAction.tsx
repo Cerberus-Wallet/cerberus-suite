@@ -9,7 +9,7 @@ import {
     KeyboardEvent,
 } from 'react';
 import styled, { css, useTheme } from 'styled-components';
-import { Input, Icon, KEYBOARD_CODE, motionEasing } from '@trezor/components';
+import { Input, Icon, KEYBOARD_CODE, motionEasing } from '@cerberus/components';
 import { useDispatch } from 'src/hooks/suite';
 import { useTranslation } from 'src/hooks/suite/useTranslation';
 import { notificationsActions } from '@suite-common/toast-notifications';
@@ -17,7 +17,7 @@ import { Account } from 'src/types/wallet';
 import { TooltipSymbol, Translation } from 'src/components/suite';
 import { isFeatureFlagEnabled, getTxsPerPage } from '@suite-common/suite-utils';
 import { fetchTransactionsThunk } from '@suite-common/wallet-core';
-import { borders, spacingsPx } from '@trezor/theme';
+import { borders, spacingsPx } from '@cerberus/theme';
 
 const Container = styled.div`
     display: flex;

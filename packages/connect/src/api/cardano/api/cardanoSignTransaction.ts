@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/CardanoSignTransaction.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/CardanoSignTransaction.js
 
 // allow for...of statements
 
@@ -35,7 +35,7 @@ import {
 import { gatherWitnessPaths } from '../cardanoWitnesses';
 import type { AssetGroupWithTokens } from '../cardanoTokenBundle';
 import { tokenBundleToProto } from '../cardanoTokenBundle';
-import { AssertWeak, Type } from '@trezor/schema-utils';
+import { AssertWeak, Type } from '@cerberus/schema-utils';
 
 // todo: remove when listed firmwares become mandatory for cardanoSignTransaction
 const CardanoSignTransactionFeatures = Object.freeze({
@@ -325,7 +325,7 @@ export default class CardanoSignTransaction extends AbstractMethod<
             params.requiredSigners.length > 0 &&
             params.signingMode !== PROTO.CardanoTxSigningMode.PLUTUS_TRANSACTION
         ) {
-            // Trezor Firmware allowed requiredSigners in non-Plutus txs with the Babbage update
+            // Cerberus Firmware allowed requiredSigners in non-Plutus txs with the Babbage update
             this._ensureFeatureIsSupported('Babbage');
         }
 
@@ -418,7 +418,7 @@ export default class CardanoSignTransaction extends AbstractMethod<
                 this.params.auxiliaryData,
             );
 
-            // TODO: https://github.com/trezor/trezor-suite/issues/5299
+            // TODO: https://github.com/Cerberus-Wallet/cerberus-suite/issues/5299
             const auxiliaryDataType: any = PROTO.CardanoTxAuxiliaryDataSupplementType[message.type];
             if (auxiliaryDataType !== PROTO.CardanoTxAuxiliaryDataSupplementType.NONE) {
                 auxiliaryDataSupplement = {
@@ -475,7 +475,7 @@ export default class CardanoSignTransaction extends AbstractMethod<
                 { path },
             );
             witnesses.push({
-                type: PROTO.CardanoTxWitnessType[message.type] as any, // TODO: https://github.com/trezor/trezor-suite/issues/5299
+                type: PROTO.CardanoTxWitnessType[message.type] as any, // TODO: https://github.com/Cerberus-Wallet/cerberus-suite/issues/5299
                 pubKey: message.pub_key,
                 signature: message.signature,
                 chainCode: message.chain_code,

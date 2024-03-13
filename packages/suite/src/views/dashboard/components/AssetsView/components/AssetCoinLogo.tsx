@@ -3,9 +3,9 @@ import {
     AssetFiatBalanceWithPercentage,
     calculateAssetsPercentage,
 } from '@suite-common/assets';
-import { AssetShareIndicator, SkeletonCircle, Tooltip } from '@trezor/components';
+import { AssetShareIndicator, SkeletonCircle, Tooltip } from '@cerberus/components';
 import { NetworkSymbol } from '@suite-common/wallet-config';
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 import styled from 'styled-components';
 import { localizePercentage } from '@suite-common/wallet-utils';
 import { useSelector } from '../../../../../hooks/suite';

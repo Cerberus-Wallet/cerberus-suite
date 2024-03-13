@@ -2,7 +2,7 @@ import { success, error, unknownError } from './result';
 
 import * as ERRORS from '../errors';
 
-import { PROTOCOL_MALFORMED } from '@trezor/protocol';
+import { PROTOCOL_MALFORMED } from '@cerberus/protocol';
 import { applyContentTypeHeader } from './applyContentTypeHeader';
 
 export type HttpRequestOptions = {
@@ -64,7 +64,7 @@ export async function bridgeApiCall(options: HttpRequestOptions) {
     if (IS_NODE) {
         fetchOptions.headers = {
             ...fetchOptions.headers,
-            Origin: 'https://node.trezor.io',
+            Origin: 'https://node.cerberus.uraanai.com',
         };
     }
 

@@ -6,7 +6,7 @@ import { createLogger } from 'redux-logger';
 
 import { prepareFirmwareReducer } from '@suite-common/wallet-core';
 import { addLog } from '@suite-common/logger';
-import { isCodesignBuild } from '@trezor/env-utils';
+import { isCodesignBuild } from '@cerberus/env-utils';
 
 import suiteMiddlewares from 'src/middlewares/suite';
 import walletMiddlewares from 'src/middlewares/wallet';

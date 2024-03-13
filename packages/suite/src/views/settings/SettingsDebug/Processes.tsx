@@ -1,7 +1,7 @@
 import { useEffect, useState, useMemo } from 'react';
 
-import { Checkbox } from '@trezor/components';
-import { desktopApi } from '@trezor/suite-desktop-api';
+import { Checkbox } from '@cerberus/components';
+import { desktopApi } from '@cerberus/suite-desktop-api';
 
 import { ActionColumn, SectionItem, TextColumn } from 'src/components/suite';
 
@@ -56,7 +56,7 @@ export const Processes = () => {
             <SectionItem data-test="@settings/debug/processes">
                 <TextColumn
                     title="Processes"
-                    description="You may control subprocesses launched by Trezor Suite in this panel"
+                    description="You may control subprocesses launched by Cerberus Suite in this panel"
                 />
             </SectionItem>
             {items.map(item => (

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { H2 } from '@trezor/components';
+import { H2 } from '@cerberus/components';
 import { SelectedAccountException } from '@suite-common/wallet-types';
 
 import { AuthFailed } from './AuthFailed';

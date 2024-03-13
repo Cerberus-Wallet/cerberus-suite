@@ -1,5 +1,5 @@
 {
-    "name": "@trezor/theme",
+    "name": "@cerberus/theme",
     "version": "1.0.0",
     "private": true,
     "license": "See LICENSE.md in repo root",

@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { Box, Button, BottomSheet, BottomSheetProps, VStack } from '@suite-native/atoms';
 import { networks, NetworkSymbol } from '@suite-common/wallet-config';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import { useCopyToClipboard } from '@suite-native/helpers';
 import { isAddressBasedNetwork } from '@suite-common/wallet-utils';
 import { useTranslate } from '@suite-native/intl';

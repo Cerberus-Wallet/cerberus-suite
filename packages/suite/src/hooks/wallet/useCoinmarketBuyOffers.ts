@@ -2,9 +2,9 @@ import { createContext, useContext, useState, useEffect, useCallback } from 'rea
 
 import { BuyTrade } from 'invity-api';
 
-import { useTimer } from '@trezor/react-utils';
+import { useTimer } from '@cerberus/react-utils';
 import { notificationsActions } from '@suite-common/toast-notifications';
-import { isDesktop } from '@trezor/env-utils';
+import { isDesktop } from '@cerberus/env-utils';
 import { selectDevice } from '@suite-common/wallet-core';
 
 import invityAPI from 'src/services/suite/invityAPI';

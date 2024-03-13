@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { variables } from '@trezor/components';
+import { variables } from '@cerberus/components';
 import { Translation, FormattedCryptoAmount, FiatValue, FormattedDate } from 'src/components/suite';
 import { AmountRow } from './AmountRow';
 import { NetworkSymbol, WalletAccountTransaction } from 'src/types/wallet';

@@ -1,6 +1,6 @@
 import { Page, test as testPlaywright } from '@playwright/test';
 
-import { TrezorUserEnvLink } from '@trezor/trezor-user-env-link';
+import { TrezorUserEnvLink } from '@cerberus/trezor-user-env-link';
 
 import { launchSuite } from '../support/common';
 import { sendToAddress, generateBlock, waitForCoinjoinBackend } from '../support/regtest';
@@ -143,7 +143,7 @@ testPlaywright.describe('Coinjoin', () => {
         // here is a bug, race condition. if I proceed with hidden wallet creation immediately before
         // discovery ends, hidden account will not be created. so I am waiting here to see something
         // i know renders only when discovery is finished
-        // https://github.com/trezor/trezor-suite/issues/6748
+        // https://github.com/Cerberus-Wallet/cerberus-suite/issues/6748
         // todo: anonymize should be added to wrapped methods in TrezorConnectActions
         await suite.window.waitForSelector('[data-test="@wallet/menu/wallet-receive"]');
         await suite.window.waitForTimeout(5000);

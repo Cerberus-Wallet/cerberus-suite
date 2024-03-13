@@ -1,5 +1,5 @@
-import TrezorConnect, { CommonParams } from '@trezor/connect';
-import { analytics, EventType } from '@trezor/suite-analytics';
+import TrezorConnect, { CommonParams } from '@cerberus/connect';
+import { analytics, EventType } from '@cerberus/suite-analytics';
 import { notificationsActions } from '@suite-common/toast-notifications';
 import { selectDevice } from '@suite-common/wallet-core';
 

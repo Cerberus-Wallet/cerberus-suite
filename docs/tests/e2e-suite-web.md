@@ -1,6 +1,6 @@
-# @trezor/suite-web e2e tests
+# @cerberus/suite-web e2e tests
 
-@trezor/suite-web uses [Cypress](https://docs.cypress.io/guides/overview/why-cypress.html) to run e2e tests. It also uses [trezor-user-env](https://github.com/trezor/trezor-user-env) which is [daily built](https://gitlab.com/satoshilabs/trezor/trezor-user-env/-/pipelines) into a docker image providing all the necessary instrumentation required to run tests (bridge and emulators).
+@cerberus/suite-web uses [Cypress](https://docs.cypress.io/guides/overview/why-cypress.html) to run e2e tests. It also uses [trezor-user-env](https://github.com/Cerberus-Wallet/cerberus-user-env) which is [daily built](https://gitlab.com/satoshilabs/trezor/trezor-user-env/-/pipelines) into a docker image providing all the necessary instrumentation required to run tests (bridge and emulators).
 
 ## Run it locally
 
@@ -68,13 +68,13 @@ _Note: All paths below are relative to the root of trezor-suite repository, if n
 
 ### On MacOS (ARM)
 
--   currently, it is not possible to run E2E tests only within a Docker container on ARM mac. With `Trezor-user-env` run in Docker, it is possible to run `Suite` and `Cypress` locally.
+-   currently, it is not possible to run E2E tests only within a Docker container on ARM mac. With `Cerberus-user-env` run in Docker, it is possible to run `Suite` and `Cypress` locally.
 
 #### Prerequisites
 
 -   [Docker](https://docs.docker.com/desktop/mac/install/)
 -   [XQuartz](https://www.xquartz.org/) (to share your screen with Docker)
--   [Trezor user env](https://github.com/trezor/trezor-user-env)
+-   [Cerberus user env](https://github.com/Cerberus-Wallet/cerberus-user-env)
 -   No other instance of `Suite` or `trezord` service is running
 
 Steps:

@@ -1,9 +1,9 @@
 import * as routerActions from 'src/actions/suite/routerActions';
-import { Button } from '@trezor/components';
+import { Button } from '@cerberus/components';
 import { NetworkSymbol } from 'src/types/wallet';
 import { Translation } from 'src/components/suite';
 import { useDispatch, useAccountSearch } from 'src/hooks/suite';
-import { EventType, analytics } from '@trezor/suite-analytics';
+import { EventType, analytics } from '@cerberus/suite-analytics';
 import { MouseEvent } from 'react';
 
 interface BuyButtonProps {

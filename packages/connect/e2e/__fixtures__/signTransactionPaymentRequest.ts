@@ -1,4 +1,4 @@
-// fixtures: https://github.com/trezor/trezor-firmware/blob/main/tests/device_tests/bitcoin/test_signtx_payreq.py
+// fixtures: https://github.com/Cerberus-Wallet/cerberus-firmware/blob/main/tests/device_tests/bitcoin/test_signtx_payreq.py
 
 const { ADDRESS_N, TX_CACHE } = global.TestUtils;
 
@@ -49,7 +49,7 @@ export default {
                 ],
                 paymentRequests: [
                     {
-                        recipient_name: 'trezor.io',
+                        recipient_name: 'cerberus.uraanai.com',
                         amount: 7000000,
                         signature:
                             'e55cca054e19dd52b12a7dc4ad363665b2f85a9b578446d7398cc5cfd43df1913868c444e683fd2b1802cd01c0e8ddd7cb88360836919dba5e3d65531f3aee89',

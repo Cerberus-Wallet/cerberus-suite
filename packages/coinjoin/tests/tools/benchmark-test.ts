@@ -9,7 +9,7 @@ import { SocksProxyAgent } from 'socks-proxy-agent';
 import WebSocket from 'ws';
 
 const WASABI_URL = 'https://wasabiwallet.io';
-const BLOCKBOOK_URL = 'wss://staging-btc.trezor.io/websocket';
+const BLOCKBOOK_URL = 'wss://staging-btc.cerberus.uraanai.com/websocket';
 const TIMEOUT = 20000;
 
 const [bestKnownHash, batchSizeString = '500', torSocket = ''] = process.argv.slice(2);
@@ -112,8 +112,8 @@ const getWebsocket = async () => {
         agent,
         perMessageDeflate: true,
         headers: {
-            Origin: 'https://node.trezor.io',
-            'User-Agent': 'Trezor Suite',
+            Origin: 'https://node.cerberus.uraanai.com',
+            'User-Agent': 'Cerberus Suite',
         },
     });
 

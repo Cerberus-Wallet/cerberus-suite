@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import { Translation, TroubleshootingTips } from 'src/components/suite';
-import { IconButton } from '@trezor/components';
+import { IconButton } from '@cerberus/components';
 import { useDispatch } from 'src/hooks/suite';
 import { goto } from 'src/actions/suite/routerActions';
 import { TrezorDevice } from 'src/types/suite';
-import { pickByDeviceModel } from '@trezor/device-utils';
-import { DeviceModelInternal } from '@trezor/connect';
+import { pickByDeviceModel } from '@cerberus/device-utils';
+import { DeviceModelInternal } from '@cerberus/connect';
 
 const WhiteSpace = styled.div`
     min-width: 60px;

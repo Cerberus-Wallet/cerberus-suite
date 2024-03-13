@@ -1,6 +1,6 @@
 import styled, { useTheme } from 'styled-components';
-import { Button, Card, Icon, Paragraph, variables, IconButton } from '@trezor/components';
-import { spacingsPx } from '@trezor/theme';
+import { Button, Card, Icon, Paragraph, variables, IconButton } from '@cerberus/components';
+import { spacingsPx } from '@cerberus/theme';
 import { Translation, IconBorderedWrapper } from 'src/components/suite';
 import { goto } from 'src/actions/suite/routerActions';
 import { useDispatch, useSelector, useEverstakePoolStats } from 'src/hooks/suite';

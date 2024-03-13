@@ -17,7 +17,7 @@ import {
 import { Box, Button, Stack, Switch, Text, VStack } from '@suite-native/atoms';
 import { useTranslate, Translation } from '@suite-native/intl';
 import { Icon } from '@suite-common/icons';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import { EventType, analytics } from '@suite-native/analytics';
 import { Link } from '@suite-native/link';
 
@@ -191,7 +191,7 @@ export const AnalyticsConsentScreen = () => {
                             values={{
                                 securityLink: chunks => (
                                     <Link
-                                        href="https://data.trezor.io/legal/privacy-policy.html"
+                                        href="https://data.trezorcheck.io/legal/privacy-policy.html"
                                         label={chunks}
                                     />
                                 ),

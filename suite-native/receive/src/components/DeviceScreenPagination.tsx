@@ -1,6 +1,6 @@
 import { Group, ImageSVG, useSVG } from '@shopify/react-native-skia';
 
-import { DeviceModelInternal } from '@trezor/connect';
+import { DeviceModelInternal } from '@cerberus/connect';
 
 import { PaginationCompatibleDeviceModel } from '../types';
 

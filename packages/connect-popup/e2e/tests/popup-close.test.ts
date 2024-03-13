@@ -1,6 +1,6 @@
 import { test, expect, Page, BrowserContext } from '@playwright/test';
-import { TrezorUserEnvLink } from '@trezor/trezor-user-env-link';
-import { createDeferred, Deferred, addDashesToSpaces } from '@trezor/utils';
+import { TrezorUserEnvLink } from '@cerberus/trezor-user-env-link';
+import { createDeferred, Deferred, addDashesToSpaces } from '@cerberus/utils';
 import {
     findElementByDataTest,
     waitAndClick,
@@ -46,7 +46,7 @@ test.beforeAll(async () => {
 });
 
 // todo: 2.0.27 version don't have localhost nor sldev whitelisted. So this can't be tested in CI. Possible workarounds:
-// - host bridge that is used in this test on trezor.io domain, or
+// - host bridge that is used in this test on cerberus.uraanai.com domain, or
 // - run it all locally in CI (./docker/docker-compose.connect.explorer.test.yml)
 [/* '2.0.27', */ '2.0.31'].forEach(bridgeVersion => {
     test.beforeEach(async ({ page }) => {
@@ -146,7 +146,7 @@ test.beforeAll(async () => {
 
     // Finish verify message in afterEach. This is here to prove that after the first
     // failed attempt it is possible to retry successfully without any weird bug/race condition/edge-case
-    // we are validating here this commit https://github.com/trezor/connect/commit/fc60c3c03d6e689f3de2d518cc51f62e649a20e2
+    // we are validating here this commit https://github.com/Cerberus-Wallet/connect/commit/fc60c3c03d6e689f3de2d518cc51f62e649a20e2
     test.afterEach(async ({ context: _context }, testInfo) => {
         if (testInfo.status === 'skipped') {
             // skip afterEach of skipped tests
@@ -302,8 +302,8 @@ test.beforeAll(async () => {
     });
 
     // reloading page might end with "closed device" error from here:
-    // https://github.com/trezor/trezord-go/blob/106e5e9af3573ac2b27ebf2082bbee91650949bf/usb/libusb.go#L511
-    // this was probably targeted by this (never merged) trezor-bridge PR https://github.com/trezor/trezord-go/pull/156
+    // https://github.com/Cerberus-Wallet/cerberusd-go/blob/106e5e9af3573ac2b27ebf2082bbee91650949bf/usb/libusb.go#L511
+    // this was probably targeted by this (never merged) trezor-bridge PR https://github.com/Cerberus-Wallet/cerberusd-go/pull/156
     test.skip(`client (connect-explorer) is reloaded by user while popup is active. bridge version ${bridgeVersion}`, async ({
         page,
     }) => {

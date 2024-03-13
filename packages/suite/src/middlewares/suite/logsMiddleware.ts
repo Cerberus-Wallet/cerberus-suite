@@ -2,8 +2,8 @@ import { MiddlewareAPI } from 'redux';
 
 import { deviceActions, discoveryActions } from '@suite-common/wallet-core';
 import { addLog } from '@suite-common/logger';
-import { TRANSPORT, DEVICE } from '@trezor/connect';
-import { redactUserPathFromString } from '@trezor/utils';
+import { TRANSPORT, DEVICE } from '@cerberus/connect';
+import { redactUserPathFromString } from '@cerberus/utils';
 import { analyticsActions } from '@suite-common/analytics';
 
 import { AppState, Action, Dispatch } from 'src/types/suite';

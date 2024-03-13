@@ -3,14 +3,14 @@ import styled from 'styled-components';
 
 import { ExtendedMessageDescriptor } from '@suite-common/intl-types';
 import { getFwUpdateVersion } from '@suite-common/suite-utils';
-import { Note, variables } from '@trezor/components';
+import { Note, variables } from '@cerberus/components';
 import { AcquiredDevice, TrezorDevice } from '@suite-common/suite-types';
 import {
     getFirmwareVersion,
     hasBitcoinOnlyFirmware,
     isBitcoinOnlyDevice,
-} from '@trezor/device-utils';
-import { FirmwareType } from '@trezor/connect';
+} from '@cerberus/device-utils';
+import { FirmwareType } from '@cerberus/connect';
 import { selectDevices } from '@suite-common/wallet-core';
 
 import {
@@ -27,7 +27,7 @@ import {
 } from 'src/components/firmware';
 import { FirmwareButtonsRow } from './Buttons/FirmwareButtonsRow';
 import { FirmwareSwitchWarning } from './FirmwareSwitchWarning';
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 
 const Description = styled.div`
     align-items: center;

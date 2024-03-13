@@ -1,6 +1,6 @@
 ## Solana: get public key
 
-Display requested public key derived by given [BIP44 path](../path.md) on device and return it to the caller. User is presented with a description of the requested public key and asked to confirm the export on Trezor.
+Display requested public key derived by given [BIP44 path](../path.md) on device and return it to the caller. User is presented with a description of the requested public key and asked to confirm the export on Cerberus.
 
 ```javascript
 const result = await TrezorConnect.solanaGetPublicKey(params);
@@ -10,7 +10,7 @@ const result = await TrezorConnect.solanaGetPublicKey(params);
 
 [Optional common params](commonParams.md)
 
-[GetPublicKey type](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/params.ts)
+[GetPublicKey type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/params.ts)
 
 #### Exporting single key
 
@@ -45,7 +45,7 @@ TrezorConnect.solanaGetPublicKey({
 
 ### Result
 
-[SolanaPublicKey type](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/solana/index.ts)
+[SolanaPublicKey type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/solana/index.ts)
 
 Result with only one public key
 

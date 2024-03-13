@@ -8,7 +8,7 @@ import Animated from 'react-native-reanimated';
 import { useSelector } from 'react-redux';
 
 import { Box, VStack } from '@suite-native/atoms';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import { selectDeviceModel } from '@suite-common/wallet-core';
 
 import { UnverifiedAddressDeviceHint } from './UnverifiedAddressDeviceHint';

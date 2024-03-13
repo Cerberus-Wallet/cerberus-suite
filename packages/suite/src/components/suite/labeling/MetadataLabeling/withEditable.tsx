@@ -8,8 +8,8 @@ import {
 } from 'react';
 
 import styled, { useTheme } from 'styled-components';
-import { Icon } from '@trezor/components';
-import { AutoScalingInput } from '@trezor/components/src/components/AutoScalingInput/AutoScalingInput';
+import { Icon } from '@cerberus/components';
+import { AutoScalingInput } from '@cerberus/components/src/components/AutoScalingInput/AutoScalingInput';
 
 const IconWrapper = styled.div<{ bgColor: string }>`
     display: flex;

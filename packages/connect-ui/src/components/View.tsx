@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 
 import styled from 'styled-components';
 
-import { H3, Paragraph, variables } from '@trezor/components';
+import { H3, Paragraph, variables } from '@cerberus/components';
 
 const Title = styled(H3)`
     font-size: 19px;

@@ -1,6 +1,6 @@
 import { createAction } from '@reduxjs/toolkit';
 
-import { AccountInfo } from '@trezor/connect';
+import { AccountInfo } from '@cerberus/connect';
 import { Account, SelectedAccountStatus, DiscoveryItem } from '@suite-common/wallet-types';
 import {
     enhanceAddresses,

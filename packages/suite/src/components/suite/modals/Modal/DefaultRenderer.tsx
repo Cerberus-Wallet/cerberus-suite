@@ -1,6 +1,6 @@
 import { ReactPortal } from 'react';
 import { createPortal } from 'react-dom';
-import { Modal, ModalProps, Icon, colors } from '@trezor/components';
+import { Modal, ModalProps, Icon, colors } from '@cerberus/components';
 import { useGuide } from 'src/hooks/guide';
 import { useLayoutSize } from 'src/hooks/suite/useLayoutSize';
 import { useModalTarget } from 'src/support/suite/ModalContext';

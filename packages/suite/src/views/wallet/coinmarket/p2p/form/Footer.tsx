@@ -1,7 +1,7 @@
 import { Controller } from 'react-hook-form';
 import styled from 'styled-components';
 import { Translation } from 'src/components/suite';
-import { Button, Flag, Select, variables } from '@trezor/components';
+import { Button, Flag, Select, variables } from '@cerberus/components';
 import regional from 'src/constants/wallet/coinmarket/regional';
 import { CountryOption } from 'src/types/wallet/coinmarketCommonTypes';
 import { useCoinmarketP2pFormContext } from 'src/hooks/wallet/useCoinmarketP2pForm';

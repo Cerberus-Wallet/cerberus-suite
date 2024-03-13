@@ -1,6 +1,6 @@
 import { TextProps } from '@suite-native/atoms';
 import { NetworkSymbol } from '@suite-common/wallet-config';
-import { FiatRatesLegacy } from '@trezor/blockchain-link';
+import { FiatRatesLegacy } from '@cerberus/blockchain-link';
 import { useFormatters } from '@suite-common/formatters';
 
 import { FormatterProps } from '../types';

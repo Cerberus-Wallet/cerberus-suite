@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import styled, { css } from 'styled-components';
 import useMeasure from 'react-use/lib/useMeasure';
-import { analytics, EventType } from '@trezor/suite-analytics';
+import { analytics, EventType } from '@cerberus/suite-analytics';
 
 import {
     Button,
@@ -10,7 +10,7 @@ import {
     DropdownRef,
     Tooltip,
     DeviceAnimation,
-} from '@trezor/components';
+} from '@cerberus/components';
 import { Translation, HomescreenGallery } from 'src/components/suite';
 import { OnboardingStepBox } from 'src/components/onboarding';
 import { useDevice, useOnboarding, useSelector } from 'src/hooks/suite';
@@ -18,7 +18,7 @@ import { DEFAULT_LABEL } from 'src/constants/suite/device';
 import { isHomescreenSupportedOnDevice } from 'src/utils/suite/homescreen';
 import { selectIsActionAbortable } from 'src/reducers/suite/suiteReducer';
 import { ChangeDeviceLabel } from 'src/components/suite/ChangeDeviceLabel';
-import { spacingsPx, typography } from '@trezor/theme';
+import { spacingsPx, typography } from '@cerberus/theme';
 
 const Content = styled.div`
     flex-direction: column;

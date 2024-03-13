@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
 import { IconName } from '@suite-common/icons';
-import { NativeStyleObject } from '@trezor/styles';
+import { NativeStyleObject } from '@cerberus/styles';
 
 export type BaseListItem = {
     iconName?: IconName;

@@ -1,4 +1,4 @@
-import { TokenInfo } from '@trezor/connect';
+import { TokenInfo } from '@cerberus/connect';
 import { Account } from 'src/types/wallet';
 import { Dispatch } from 'src/types/suite';
 import * as accountUtils from '@suite-common/wallet-utils';

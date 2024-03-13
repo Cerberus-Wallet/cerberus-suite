@@ -1,4 +1,4 @@
-import { AccountBalanceHistory } from '@trezor/blockchain-link';
+import { AccountBalanceHistory } from '@cerberus/blockchain-link';
 
 import {
     formatBalanceMovementEventsAmounts,

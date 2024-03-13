@@ -7,7 +7,7 @@ import {
     GraphData,
 } from 'src/types/wallet/graph';
 import { ObjectType, TypeName, sumFiatValueMapInPlace } from './utilsShared';
-import type { FiatRatesLegacy } from '@trezor/connect';
+import type { FiatRatesLegacy } from '@cerberus/connect';
 import { toFiatCurrency } from '@suite-common/wallet-utils';
 
 const calcFiatValueMap = (

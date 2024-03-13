@@ -10,7 +10,7 @@ import {
     variables,
     SelectBar,
     Tooltip,
-} from '@trezor/components';
+} from '@cerberus/components';
 
 import { WalletLayout, WalletSubpageHeading } from 'src/components/wallet';
 import { Translation } from 'src/components/suite';
@@ -30,7 +30,7 @@ import {
     MAX_LENGTH_SIGNATURE,
 } from 'src/hooks/wallet/sign-verify/useSignVerifyForm';
 import { getInputState } from '@suite-common/wallet-utils';
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 
 const SwitchWrapper = styled.label`
     display: flex;

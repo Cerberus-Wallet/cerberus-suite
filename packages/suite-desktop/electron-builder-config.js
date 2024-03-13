@@ -10,9 +10,9 @@ module.exports = {
     extraMetadata: {
         version: suiteVersion,
         // distingush between dev and prod builds so different userDataDir is used
-        name: `@trezor/suite-desktop${isCodesignBuild ? '' : '-dev'}`,
+        name: `@cerberus/suite-desktop${isCodesignBuild ? '' : '-dev'}`,
     },
-    productName: 'Trezor Suite',
+    productName: 'Cerberus Suite',
     copyright: 'Copyright © ${author}',
     asar: true,
     asarUnpack: ['**/*.node'],
@@ -48,7 +48,7 @@ module.exports = {
         },
     ],
     protocols: {
-        name: 'Trezor Suite',
+        name: 'Cerberus Suite',
         schemes,
     },
     publish: {
@@ -93,7 +93,7 @@ module.exports = {
             },
         ],
         icon: 'build/static/images/desktop/512x512.icns',
-        artifactName: 'Trezor-Suite-${version}-mac-${arch}.${ext}',
+        artifactName: 'Cerberus-Suite-${version}-mac-${arch}.${ext}',
         hardenedRuntime: true,
         gatekeeperAssess: false,
         darkModeSupport: true,
@@ -117,7 +117,7 @@ module.exports = {
             },
         ],
         icon: 'build/static/images/desktop/512x512.png',
-        artifactName: 'Trezor-Suite-${version}-win-${arch}.${ext}',
+        artifactName: 'Cerberus-Suite-${version}-win-${arch}.${ext}',
         target: ['nsis'],
         signDlls: true,
     },
@@ -141,7 +141,7 @@ module.exports = {
             },
         ],
         icon: 'build/static/images/desktop/512x512.png',
-        artifactName: 'Trezor-Suite-${version}-linux-${arch}.${ext}',
+        artifactName: 'Cerberus-Suite-${version}-linux-${arch}.${ext}',
         executableName: 'trezor-suite',
         category: 'Utility',
         target: ['AppImage'],

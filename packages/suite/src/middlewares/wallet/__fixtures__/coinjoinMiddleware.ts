@@ -1,7 +1,7 @@
 import { accountsActions } from '@suite-common/wallet-core';
 import { SelectedAccountLoaded } from '@suite-common/wallet-types';
-import { AnonymitySet } from '@trezor/blockchain-link';
-import { DEVICE } from '@trezor/connect';
+import { AnonymitySet } from '@cerberus/blockchain-link';
+import { DEVICE } from '@cerberus/connect';
 
 import { SuiteState } from 'src/reducers/suite/suiteReducer';
 import { AcquiredDevice } from 'src/types/suite';

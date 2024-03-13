@@ -2,12 +2,12 @@ import { useEffect, useRef, memo, Children, ReactElement } from 'react';
 import { FixedSizeList as List } from 'react-window';
 import { MenuListProps, SelectInstance, createFilter } from 'react-select';
 import styled from 'styled-components';
-import { Select, variables } from '@trezor/components';
-import { bip39 } from '@trezor/crypto-utils';
+import { Select, variables } from '@cerberus/components';
+import { bip39 } from '@cerberus/crypto-utils';
 import { useTranslation } from 'src/hooks/suite/useTranslation';
 import { useKeyPress } from 'react-use';
-import TrezorConnect, { UI } from '@trezor/connect';
-import { createTimeoutPromise } from '@trezor/utils';
+import TrezorConnect, { UI } from '@cerberus/connect';
+import { createTimeoutPromise } from '@cerberus/utils';
 
 const options = bip39.map(item => ({ label: item, value: item }));
 

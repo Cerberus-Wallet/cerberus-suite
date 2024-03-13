@@ -108,7 +108,7 @@ const config: webpack.Configuration = {
         extensions: ['.ts', '.js'],
         alias: {
             '@emurgo/cardano-serialization-lib-nodejs': '@emurgo/cardano-serialization-lib-browser',
-            '@trezor/connect$': '@trezor/connect/src/index', // alternative for "module": "src/index" in connect's package.json
+            '@cerberus/connect$': '@cerberus/connect/src/index', // alternative for "module": "src/index" in connect's package.json
         },
     },
     performance: {
@@ -145,7 +145,7 @@ const config: webpack.Configuration = {
             'process.env.SUITE_TYPE': JSON.stringify(PROJECT),
             'process.env.IS_CODESIGN_BUILD': `"${isCodesignBuild}"`, // to keep it as string "true"/"false" and not boolean
             'process.env.NODE_BACKEND': JSON.stringify('js'),
-            'process.env.WS_NO_BUFFER_UTIL': true, // ignore bufferutils import in ws lib (https://github.com/trezor/trezor-suite/pull/11225)
+            'process.env.WS_NO_BUFFER_UTIL': true, // ignore bufferutils import in ws lib (https://github.com/Cerberus-Wallet/cerberus-suite/pull/11225)
         }),
     ],
 

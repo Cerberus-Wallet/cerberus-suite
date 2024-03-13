@@ -1,4 +1,4 @@
-import { Select } from '@trezor/components';
+import { Select } from '@cerberus/components';
 import { Controller } from 'react-hook-form';
 import { useCoinmarketExchangeFormContext } from 'src/hooks/wallet/useCoinmarketExchangeForm';
 import { FIAT_CURRENCY } from 'src/types/wallet/coinmarketExchangeForm';

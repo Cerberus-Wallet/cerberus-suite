@@ -1,8 +1,8 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
 
-import { Tooltip, TooltipProps } from '@trezor/components';
-import { typography } from '@trezor/theme';
+import { Tooltip, TooltipProps } from '@cerberus/components';
+import { typography } from '@cerberus/theme';
 
 const Wrapper = styled.div`
     display: flex;

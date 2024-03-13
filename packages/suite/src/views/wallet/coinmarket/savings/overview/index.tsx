@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { darken } from 'polished';
 
 import { KycError, KycFailed, KycInProgress } from 'src/views/wallet/coinmarket/common';
-import { Card, Icon, variables } from '@trezor/components';
+import { Card, Icon, variables } from '@cerberus/components';
 import {
     FiatValue,
     FormattedCryptoAmount,
@@ -21,7 +21,7 @@ import { AllFeesIncluded } from '../AllFeesIncluded';
 import { ProvidedBy } from '../ProvidedBy';
 import { CoinmarketReauthorizationCard } from '../CoinmarketReauthorizationCard';
 import { withCoinmarket, WithCoinmarketProps } from '../withCoinmarket';
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 
 const Wrapper = styled.div`
     display: flex;

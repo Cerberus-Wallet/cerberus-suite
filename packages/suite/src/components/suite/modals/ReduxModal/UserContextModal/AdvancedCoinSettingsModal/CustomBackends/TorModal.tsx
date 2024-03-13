@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { Button, Paragraph } from '@trezor/components';
+import { Button, Paragraph } from '@cerberus/components';
 import { Modal, Translation } from 'src/components/suite';
-import { isDesktop } from '@trezor/env-utils';
+import { isDesktop } from '@cerberus/env-utils';
 import { useSelector } from 'src/hooks/suite/useSelector';
 import { getIsTorLoading } from 'src/utils/suite/tor';
 

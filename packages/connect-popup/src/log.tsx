@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import { createRoot } from 'react-dom/client';
 
-import { ErrorBoundary } from '@trezor/connect-ui/src/support/ErrorBoundary';
-import { GlobalStyle } from '@trezor/connect-ui/src/support/GlobalStyle';
-import { InfoPanel } from '@trezor/connect-ui/src/components/InfoPanel';
-import { View } from '@trezor/connect-ui/src/components/View';
-import { Button, Paragraph, THEME } from '@trezor/components';
-import { LogMessage } from '@trezor/connect/src/utils/debug';
+import { ErrorBoundary } from '@cerberus/connect-ui/src/support/ErrorBoundary';
+import { GlobalStyle } from '@cerberus/connect-ui/src/support/GlobalStyle';
+import { InfoPanel } from '@cerberus/connect-ui/src/components/InfoPanel';
+import { View } from '@cerberus/connect-ui/src/components/View';
+import { Button, Paragraph, THEME } from '@cerberus/components';
+import { LogMessage } from '@cerberus/connect/src/utils/debug';
 
 interface ReactWrapperProps {
     children: React.ReactNode;
@@ -159,7 +159,7 @@ const DebugCenter = () => {
                 >
                     <StyledP>
                         You can download the logs clicking the button below. The logs contain
-                        information about the communication between your Trezor device and your
+                        information about the communication between your Cerberus device and your
                         internet browser.
                     </StyledP>
                 </View>
@@ -179,7 +179,7 @@ const App = () => (
         <GlobalStyle />
         <ThemeWrapper>
             <Layout>
-                <InfoPanel method="Trezor Debug Center" origin={window.origin} />
+                <InfoPanel method="Cerberus Debug Center" origin={window.origin} />
                 <DebugCenter />
             </Layout>
         </ThemeWrapper>

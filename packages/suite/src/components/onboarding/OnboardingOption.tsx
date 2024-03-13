@@ -1,13 +1,13 @@
 import { ReactNode, HTMLAttributes } from 'react';
 import styled, { css } from 'styled-components';
-import { Icon, IconProps, useElevation, variables } from '@trezor/components';
+import { Icon, IconProps, useElevation, variables } from '@cerberus/components';
 import {
     Elevation,
     borders,
     mapElevationToBackground,
     mapElevationToBorder,
     spacingsPx,
-} from '@trezor/theme';
+} from '@cerberus/theme';
 
 const Wrapper = styled.div<{ elevation: Elevation }>`
     display: flex;

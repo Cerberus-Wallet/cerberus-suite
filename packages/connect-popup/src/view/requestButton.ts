@@ -1,6 +1,6 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/popup/view/requestButton.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/popup/view/requestButton.js
 
-import { UiRequestButton } from '@trezor/connect';
+import { UiRequestButton } from '@cerberus/connect';
 import { container, showView } from './common';
 
 let toastTimeout: NodeJS.Timeout | undefined;

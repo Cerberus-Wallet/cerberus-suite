@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Translation } from 'src/components/suite';
 import { SavingsPaymentMethod } from 'invity-api';
-import { Card } from '@trezor/components';
+import { Card } from '@cerberus/components';
 
 const StyledCard = styled(Card)`
     background: rgb(239 201 65 / 10%);

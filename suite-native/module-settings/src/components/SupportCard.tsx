@@ -1,4 +1,4 @@
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import { useOpenLink } from '@suite-native/link';
 import { Button, Card, HStack, Pictogram, Text, VStack } from '@suite-native/atoms';
 import { Translation, useTranslate } from '@suite-native/intl';
@@ -12,7 +12,7 @@ export const SupportCard = () => {
     const { applyStyle } = useNativeStyles();
     const openLink = useOpenLink();
 
-    const handleOpenSupportLink = () => openLink('https://trezor.io/learn/c/trezor-suite-lite');
+    const handleOpenSupportLink = () => openLink('https://cerberus.uraanai.com/learn/c/trezor-suite-lite');
 
     return (
         <Card style={applyStyle(supportCardStyle)}>

@@ -1,4 +1,4 @@
-import { UI_REQUEST, Device } from '@trezor/connect';
+import { UI_REQUEST, Device } from '@cerberus/connect';
 
 import { TransportEventProps } from '../views/Transport';
 import { PassphraseEventProps } from '../views/Passphrase';

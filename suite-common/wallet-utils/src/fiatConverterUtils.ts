@@ -1,6 +1,6 @@
 import BigNumber from 'bignumber.js';
 
-import { FiatRatesLegacy } from '@trezor/connect';
+import { FiatRatesLegacy } from '@cerberus/connect';
 import { Rate } from '@suite-common/wallet-types';
 
 export const toFiatCurrency = (

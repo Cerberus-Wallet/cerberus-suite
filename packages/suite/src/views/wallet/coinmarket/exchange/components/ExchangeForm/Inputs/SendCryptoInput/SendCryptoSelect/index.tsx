@@ -1,4 +1,4 @@
-import { Select, CoinLogo } from '@trezor/components';
+import { Select, CoinLogo } from '@cerberus/components';
 import { Controller } from 'react-hook-form';
 import styled from 'styled-components';
 import { NetworkSymbol, getEthereumTypeNetworkSymbols } from '@suite-common/wallet-config';

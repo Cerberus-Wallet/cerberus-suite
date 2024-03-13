@@ -1,6 +1,6 @@
 import { test, expect, Page } from '@playwright/test';
-import { TrezorUserEnvLink } from '@trezor/trezor-user-env-link';
-import { createDeferred, Deferred } from '@trezor/utils';
+import { TrezorUserEnvLink } from '@cerberus/trezor-user-env-link';
+import { createDeferred, Deferred } from '@cerberus/utils';
 import { log } from '../support/helpers';
 
 const BRIDGE_VERSION = '2.0.31';
@@ -120,7 +120,7 @@ test.beforeEach(async ({ page }) => {
 
 // Finish verify message in afterEach. This is here to prove that after the first
 // failed attempt it is possible to retry successfully without any weird bug/race condition/edge-case
-// we are validating here this commit https://github.com/trezor/connect/commit/fc60c3c03d6e689f3de2d518cc51f62e649a20e2
+// we are validating here this commit https://github.com/Cerberus-Wallet/connect/commit/fc60c3c03d6e689f3de2d518cc51f62e649a20e2
 test.afterEach(async ({ page }) => {
     log('afterEach', `goto: ${url}#/method/verifyMessage`);
     await page.goto(`${url}#/method/verifyMessage`);

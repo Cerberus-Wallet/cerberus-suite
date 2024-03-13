@@ -1,6 +1,6 @@
 import Animated, { FadeInDown, FadeInUp, FadeOutUp } from 'react-native-reanimated';
 
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import { Icon } from '@suite-common/icons';
 import { Text, VStack } from '@suite-native/atoms';
 

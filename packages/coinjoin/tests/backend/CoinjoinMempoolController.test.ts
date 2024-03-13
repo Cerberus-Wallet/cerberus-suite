@@ -1,4 +1,4 @@
-import { networks } from '@trezor/utxo-lib';
+import { networks } from '@cerberus/utxo-lib';
 
 import { AccountAddress } from '../../src/types/backend';
 import { CoinjoinMempoolController } from '../../src/backend/CoinjoinMempoolController';

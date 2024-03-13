@@ -1,8 +1,8 @@
 import { G } from '@mobily/ts-belt';
 
 import { CryptoIcon, CoinSymbol, Icon, IconName, icons, IconSize } from '@suite-common/icons';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
-import { Color } from '@trezor/theme';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
+import { Color } from '@cerberus/theme';
 
 import { Box } from './Box';
 

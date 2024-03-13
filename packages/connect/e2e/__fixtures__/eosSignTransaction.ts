@@ -47,7 +47,7 @@ export default {
                 },
             },
             legacyResults: [
-                // https://github.com/trezor/trezor-firmware/commit/c3f6e8f19fd647c73b414322e287ba23cf8a0c7c
+                // https://github.com/Cerberus-Wallet/cerberus-firmware/commit/c3f6e8f19fd647c73b414322e287ba23cf8a0c7c
                 {
                     rules: ['<2.6.1'],
                     payload: {
@@ -97,7 +97,7 @@ export default {
                 },
             },
             legacyResults: [
-                // https://github.com/trezor/trezor-firmware/commit/c3f6e8f19fd647c73b414322e287ba23cf8a0c7c
+                // https://github.com/Cerberus-Wallet/cerberus-firmware/commit/c3f6e8f19fd647c73b414322e287ba23cf8a0c7c
                 {
                     rules: ['<2.6.1'],
                     payload: {
@@ -146,7 +146,7 @@ export default {
                 },
             },
             legacyResults: [
-                // https://github.com/trezor/trezor-firmware/commit/c3f6e8f19fd647c73b414322e287ba23cf8a0c7c
+                // https://github.com/Cerberus-Wallet/cerberus-firmware/commit/c3f6e8f19fd647c73b414322e287ba23cf8a0c7c
                 {
                     rules: ['<2.6.1'],
                     payload: {
@@ -194,7 +194,7 @@ export default {
                 },
             },
             legacyResults: [
-                // https://github.com/trezor/trezor-firmware/commit/c3f6e8f19fd647c73b414322e287ba23cf8a0c7c
+                // https://github.com/Cerberus-Wallet/cerberus-firmware/commit/c3f6e8f19fd647c73b414322e287ba23cf8a0c7c
                 {
                     rules: ['<2.6.1'],
                     payload: {
@@ -242,7 +242,7 @@ export default {
                 },
             },
             legacyResults: [
-                // https://github.com/trezor/trezor-firmware/commit/c3f6e8f19fd647c73b414322e287ba23cf8a0c7c
+                // https://github.com/Cerberus-Wallet/cerberus-firmware/commit/c3f6e8f19fd647c73b414322e287ba23cf8a0c7c
                 {
                     rules: ['<2.6.1'],
                     payload: {
@@ -289,7 +289,7 @@ export default {
                 },
             },
             legacyResults: [
-                // https://github.com/trezor/trezor-firmware/commit/c3f6e8f19fd647c73b414322e287ba23cf8a0c7c
+                // https://github.com/Cerberus-Wallet/cerberus-firmware/commit/c3f6e8f19fd647c73b414322e287ba23cf8a0c7c
                 {
                     rules: ['<2.6.1'],
                     payload: {
@@ -506,7 +506,7 @@ export default {
                 },
             },
             legacyResults: [
-                // https://github.com/trezor/trezor-firmware/commit/c3f6e8f19fd647c73b414322e287ba23cf8a0c7c
+                // https://github.com/Cerberus-Wallet/cerberus-firmware/commit/c3f6e8f19fd647c73b414322e287ba23cf8a0c7c
                 {
                     rules: ['<2.6.1'],
                     payload: {
@@ -555,7 +555,7 @@ export default {
                 },
             },
             legacyResults: [
-                // https://github.com/trezor/trezor-firmware/commit/c3f6e8f19fd647c73b414322e287ba23cf8a0c7c
+                // https://github.com/Cerberus-Wallet/cerberus-firmware/commit/c3f6e8f19fd647c73b414322e287ba23cf8a0c7c
                 {
                     rules: ['<2.6.1'],
                     payload: {
@@ -684,7 +684,7 @@ export default {
                 },
             },
             legacyResults: [
-                // https://github.com/trezor/trezor-firmware/commit/c3f6e8f19fd647c73b414322e287ba23cf8a0c7c
+                // https://github.com/Cerberus-Wallet/cerberus-firmware/commit/c3f6e8f19fd647c73b414322e287ba23cf8a0c7c
                 {
                     rules: ['<2.6.1'],
                     payload: {
@@ -729,7 +729,7 @@ export default {
                 },
             },
             legacyResults: [
-                // https://github.com/trezor/trezor-firmware/commit/c3f6e8f19fd647c73b414322e287ba23cf8a0c7c
+                // https://github.com/Cerberus-Wallet/cerberus-firmware/commit/c3f6e8f19fd647c73b414322e287ba23cf8a0c7c
                 {
                     rules: ['<2.6.1'],
                     payload: {

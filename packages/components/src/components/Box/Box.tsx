@@ -8,7 +8,7 @@ import {
     mapElevationToBackground,
     mapElevationToBorder,
     spacingsPx,
-} from '@trezor/theme';
+} from '@cerberus/theme';
 import { useElevation } from '../ElevationContext/ElevationContext';
 import { ElevationContext } from '../ElevationContext/ElevationContext';
 import { UIVariant } from '../../config/types';

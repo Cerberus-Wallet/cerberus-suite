@@ -1,7 +1,7 @@
 import { testMocks } from '@suite-common/test-utils';
 import type { TrezorDevice } from 'src/types/suite';
-import { DeviceModelInternal, type FirmwareRelease } from '@trezor/connect';
-import * as URLS from '@trezor/urls';
+import { DeviceModelInternal, type FirmwareRelease } from '@cerberus/connect';
+import * as URLS from '@cerberus/urls';
 
 const { getSuiteDevice } = testMocks;
 
@@ -512,7 +512,7 @@ const parseFirmwareChangelog = [
             fingerprint: '867017bd784cc4e9ce6f0875c61ea86f89b19380d54045c34608b85472998000',
             fingerprint_bitcoinonly:
                 '3f73dfbcfc48f66c8814f6562524d81888230e0acd1c19b52b6e8772c6c67e7f',
-            notes: 'https://blog.trezor.io/trezor-suite-and-firmware-updates-rbf-and-spending-now-live-c2f69c42d7f7',
+            notes: 'https://blog.cerberus.uraanai.com/trezor-suite-and-firmware-updates-rbf-and-spending-now-live-c2f69c42d7f7',
             changelog:
                 '* Replacement transaction signing for replace-by-fee.\n* Support for Output Descriptors export.\n* Show Ypub/Zpub correctly for multisig GetAddress.\n* Show amounts in mBTC, uBTC and sat denominations.',
         } as FirmwareRelease,
@@ -523,7 +523,7 @@ const parseFirmwareChangelog = [
                 'Show Ypub/Zpub correctly for multisig GetAddress.',
                 'Show amounts in mBTC, uBTC and sat denominations.',
             ],
-            notes: 'https://blog.trezor.io/trezor-suite-and-firmware-updates-rbf-and-spending-now-live-c2f69c42d7f7',
+            notes: 'https://blog.cerberus.uraanai.com/trezor-suite-and-firmware-updates-rbf-and-spending-now-live-c2f69c42d7f7',
             url: 'firmware/1/trezor-1.9.4.bin',
             versionString: '1.9.4',
         },
@@ -544,7 +544,7 @@ const getChangelogUrl = [
             },
         } as TrezorDevice,
         revision: 'ab12cd',
-        result: 'https://github.com/trezor/trezor-firmware/blob/ab12cd/core/CHANGELOG.T2B1.md',
+        result: 'https://github.com/Cerberus-Wallet/cerberus-firmware/blob/ab12cd/core/CHANGELOG.T2B1.md',
     },
     {
         description: 'Missing revision, master/legacy firmware',
@@ -554,7 +554,7 @@ const getChangelogUrl = [
                 internal_model: DeviceModelInternal.T1B1,
             },
         } as TrezorDevice,
-        result: 'https://github.com/trezor/trezor-firmware/blob/main/legacy/firmware/CHANGELOG.md',
+        result: 'https://github.com/Cerberus-Wallet/cerberus-firmware/blob/main/legacy/firmware/CHANGELOG.md',
     },
     {
         description: 'Missing revision, core firmware',
@@ -564,7 +564,7 @@ const getChangelogUrl = [
                 internal_model: DeviceModelInternal.T2T1,
             },
         } as TrezorDevice,
-        result: 'https://github.com/trezor/trezor-firmware/blob/main/core/CHANGELOG.T2T1.md',
+        result: 'https://github.com/Cerberus-Wallet/cerberus-firmware/blob/main/core/CHANGELOG.T2T1.md',
     },
 ];
 

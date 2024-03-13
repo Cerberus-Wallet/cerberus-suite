@@ -7,8 +7,8 @@ import {
     formatNetworkAmount,
     isNftTokenTransfer,
 } from '@suite-common/wallet-utils';
-import { copyToClipboard } from '@trezor/dom-utils';
-import { ArrayElement } from '@trezor/type-utils';
+import { copyToClipboard } from '@cerberus/dom-utils';
+import { ArrayElement } from '@cerberus/type-utils';
 import { FiatValue, Translation, MetadataLabeling, AddressLabeling } from 'src/components/suite';
 import { WalletAccountTransaction } from 'src/types/wallet';
 import { useDispatch } from 'src/hooks/suite';

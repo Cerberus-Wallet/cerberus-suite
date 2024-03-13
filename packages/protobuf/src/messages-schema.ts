@@ -1,4 +1,4 @@
-import { Type, Static } from '@trezor/schema-utils';
+import { Type, Static } from '@cerberus/schema-utils';
 
 export enum DeviceModelInternal {
     T1B1 = 'T1B1',

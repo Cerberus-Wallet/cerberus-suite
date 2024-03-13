@@ -1,7 +1,7 @@
 import { G } from '@mobily/ts-belt';
 import * as semver from 'semver';
 
-import { DeviceModelInternal, VersionArray } from '@trezor/connect';
+import { DeviceModelInternal, VersionArray } from '@cerberus/connect';
 
 export const minimalSupportedFirmwareVersion = {
     T1B1: [1, 12, 1] as VersionArray,

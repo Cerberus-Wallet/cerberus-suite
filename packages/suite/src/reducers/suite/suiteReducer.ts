@@ -2,10 +2,10 @@ import produce from 'immer';
 
 import { discoveryActions, DeviceRootState, selectDevice } from '@suite-common/wallet-core';
 import type { InvityServerEnvironment } from '@suite-common/invity';
-import { versionUtils } from '@trezor/utils';
-import { isWeb } from '@trezor/env-utils';
-import { SuiteThemeVariant } from '@trezor/suite-desktop-api';
-import { TRANSPORT, TransportInfo, ConnectSettings } from '@trezor/connect';
+import { versionUtils } from '@cerberus/utils';
+import { isWeb } from '@cerberus/env-utils';
+import { SuiteThemeVariant } from '@cerberus/suite-desktop-api';
+import { TRANSPORT, TransportInfo, ConnectSettings } from '@cerberus/connect';
 
 import { getIsTorEnabled, getIsTorLoading } from 'src/utils/suite/tor';
 import type { OAuthServerEnvironment } from 'src/types/suite/metadata';

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { useState, Ref, ReactNode, TextareaHTMLAttributes } from 'react';
-import { spacingsPx, Elevation } from '@trezor/theme';
+import { spacingsPx, Elevation } from '@cerberus/theme';
 
 import { InputState } from '../inputTypes';
 import {

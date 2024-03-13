@@ -15,9 +15,9 @@ import {
     Paragraph,
     Tooltip,
     variables,
-} from '@trezor/components';
-import { spacingsPx, typography } from '@trezor/theme';
-import { DATA_TOS_URL, ZKSNACKS_TERMS_URL } from '@trezor/urls';
+} from '@cerberus/components';
+import { spacingsPx, typography } from '@cerberus/theme';
+import { DATA_TOS_URL, ZKSNACKS_TERMS_URL } from '@cerberus/urls';
 import { startCoinjoinSession } from 'src/actions/wallet/coinjoinAccountActions';
 import {
     selectCoinjoinClient,

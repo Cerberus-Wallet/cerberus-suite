@@ -1,6 +1,6 @@
 import { deviceActions, selectDevice } from '@suite-common/wallet-core';
-import TrezorConnect, { UI, RecoveryDevice, DeviceModelInternal } from '@trezor/connect';
-import { analytics, EventType } from '@trezor/suite-analytics';
+import TrezorConnect, { UI, RecoveryDevice, DeviceModelInternal } from '@cerberus/connect';
+import { analytics, EventType } from '@cerberus/suite-analytics';
 
 import { RECOVERY } from 'src/actions/recovery/constants';
 import * as onboardingActions from 'src/actions/onboarding/onboardingActions';

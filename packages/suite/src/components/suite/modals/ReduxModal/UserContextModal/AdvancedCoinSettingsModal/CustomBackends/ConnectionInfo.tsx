@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Paragraph } from '@trezor/components';
+import { Paragraph } from '@cerberus/components';
 import { useSelector } from 'src/hooks/suite';
 import { Translation } from 'src/components/suite/Translation';
 import type { Network } from 'src/types/wallet';

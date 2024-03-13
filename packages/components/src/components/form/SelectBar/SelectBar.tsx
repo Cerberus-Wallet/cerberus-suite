@@ -1,7 +1,7 @@
 import { useState, useEffect, ReactNode, useCallback, KeyboardEvent } from 'react';
 import styled, { css } from 'styled-components';
-import { breakpointMediaQueries } from '@trezor/styles';
-import { borders, spacings, spacingsPx, typography } from '@trezor/theme';
+import { breakpointMediaQueries } from '@cerberus/styles';
+import { borders, spacings, spacingsPx, typography } from '@cerberus/theme';
 import { focusStyleTransition, getFocusShadowStyle } from '../../../utils/utils';
 
 const Wrapper = styled.div<{ isFullWidth?: boolean }>`

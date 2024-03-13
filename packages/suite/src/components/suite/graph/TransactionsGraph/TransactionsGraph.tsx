@@ -3,8 +3,8 @@ import { memo, useState } from 'react';
 import styled, { useTheme } from 'styled-components';
 import { ComposedChart, Tooltip, Bar, YAxis, XAxis, Line, CartesianGrid, Cell } from 'recharts';
 
-import { variables, Icon } from '@trezor/components';
-import { zIndices } from '@trezor/theme';
+import { variables, Icon } from '@cerberus/components';
+import { zIndices } from '@cerberus/theme';
 
 import { useGraph } from 'src/hooks/suite';
 import { Account } from 'src/types/wallet';

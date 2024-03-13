@@ -1,6 +1,6 @@
 import EventEmitter from 'events';
 
-// NOTE: @trezor/connect part is intentionally not imported from the index
+// NOTE: @cerberus/connect part is intentionally not imported from the index
 import {
     ERRORS,
     IFRAME,
@@ -10,9 +10,9 @@ import {
     ConnectSettings,
     Manifest,
     CallMethod,
-} from '@trezor/connect/lib/exports';
-import { factory } from '@trezor/connect/lib/factory';
-import { WindowServiceWorkerChannel } from '@trezor/connect-web/lib/channels/window-serviceworker';
+} from '@cerberus/connect/lib/exports';
+import { factory } from '@cerberus/connect/lib/factory';
+import { WindowServiceWorkerChannel } from '@cerberus/connect-web/lib/channels/window-serviceworker';
 
 const eventEmitter = new EventEmitter();
 let _channel: any;
@@ -47,8 +47,8 @@ const init = (settings: Partial<ConnectSettings> = {}): Promise<void> => {
         _channel = new WindowServiceWorkerChannel({
             name: 'trezor-connect-proxy',
             channel: {
-                here: '@trezor/connect-foreground-proxy',
-                peer: '@trezor/connect-service-worker-proxy',
+                here: '@cerberus/connect-foreground-proxy',
+                peer: '@cerberus/connect-service-worker-proxy',
             },
         });
     }
@@ -129,4 +129,4 @@ const TrezorConnect = factory({
 
 // eslint-disable-next-line import/no-default-export
 export default TrezorConnect;
-export * from '@trezor/connect/lib/exports';
+export * from '@cerberus/connect/lib/exports';

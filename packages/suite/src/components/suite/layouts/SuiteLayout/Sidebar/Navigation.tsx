@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import styled from 'styled-components';
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 import { NavigationItem, NavigationItemProps } from './NavigationItem';
 import { NotificationDropdown } from './NotificationDropdown';
 

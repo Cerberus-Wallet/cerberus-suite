@@ -1,4 +1,4 @@
-# @trezor/auth-server
+# @cerberus/auth-server
 
 Authorization endpoints for saving labels in Google Drive via OAuth 2.0.
 
@@ -8,11 +8,11 @@ Google requires `client_secret` specific for an app to grant long term access to
 
 1. Generate your own testing credentials for a Desktop App in [Google Cloud Platform](https://console.cloud.google.com/apis/credentials).
 1. In Google Cloud Platform, add your account as a test user of the app.
-1. Replace `client_secret` in [index.ts](./src/index.ts) and `client_id` in [@trezor/suite](../suite/src/actions/suite/constants/metadataConstants.ts) with generated credentials.
+1. Replace `client_secret` in [index.ts](./src/index.ts) and `client_id` in [@cerberus/suite](../suite/src/actions/suite/constants/metadataConstants.ts) with generated credentials.
 1. Set OAuth API in Suite debug settings to `http://localhost:3005` or override the `authServerUrl` [here](../suite/src/services/google.ts).
-1. Install dependencies via `yarn workspace @trezor/auth-server install`.
-1. Run the server locally via `yarn workspace @trezor/auth-server dev`.
+1. Install dependencies via `yarn workspace @cerberus/auth-server install`.
+1. Run the server locally via `yarn workspace @cerberus/auth-server dev`.
 
 ## Build
 
-`yarn workspace @trezor/auth-server build`
+`yarn workspace @cerberus/auth-server build`

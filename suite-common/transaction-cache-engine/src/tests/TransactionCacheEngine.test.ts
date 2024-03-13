@@ -1,4 +1,4 @@
-import TrezorConnect from '@trezor/connect';
+import TrezorConnect from '@cerberus/connect';
 
 import { TransactionCacheEngine } from '../TransactionCacheEngine';
 import { MemoryStorage } from '../MemoryStorage';
@@ -6,10 +6,10 @@ import { accountBalanceHistoryResult as btcAccountBalanceHistoryResult } from '.
 import { AccountBalanceHistory, AccountUniqueParams } from '../types';
 import { accountBalanceHistoryResult as rippleAccountBalanceHistoryResult } from './__fixtures__/xrp';
 
-jest.mock('@trezor/connect', () => {
+jest.mock('@cerberus/connect', () => {
     // eslint-disable-next-line @typescript-eslint/no-var-requires
     const { connectGetAccountInfoMock } = require('./__fixtures__');
-    const { DeviceModelInternal } = jest.requireActual('@trezor/connect');
+    const { DeviceModelInternal } = jest.requireActual('@cerberus/connect');
 
     return {
         __esModule: true,

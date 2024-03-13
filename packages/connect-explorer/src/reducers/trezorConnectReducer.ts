@@ -1,4 +1,4 @@
-import TrezorConnect, { DEVICE } from '@trezor/connect-web';
+import TrezorConnect, { DEVICE } from '@cerberus/connect-web';
 import * as ACTIONS from '../actions/index';
 import { TrezorConnectDevice, Action, Field } from '../types';
 
@@ -56,8 +56,8 @@ const onOptionChange = <T>(state: ConnectState, field: Field<T>, value: T): Conn
     if (!newState.options) {
         newState.options = {
             manifest: {
-                email: 'info@trezor.io',
-                appUrl: '@trezor/suite',
+                email: 'info@cerberus.uraanai.com',
+                appUrl: '@cerberus/suite',
             },
         };
     }

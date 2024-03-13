@@ -5,8 +5,8 @@ import {
     firmwareActionsPrefix,
 } from '@suite-common/wallet-core';
 import * as deviceUtils from '@suite-common/suite-utils';
-import TrezorConnect from '@trezor/connect';
-import { analytics, EventType } from '@trezor/suite-analytics';
+import TrezorConnect from '@cerberus/connect';
+import { analytics, EventType } from '@cerberus/suite-analytics';
 import { notificationsActions } from '@suite-common/toast-notifications';
 
 import * as modalActions from 'src/actions/suite/modalActions';
@@ -111,7 +111,7 @@ export const wipeDevice = () => async (dispatch: Dispatch, getState: GetState) =
     });
 
     if (result.success) {
-        // Wiping a device triggers device.id change and this change is propagated to device reducer via @trezor/connect DEVICE.CHANGE event.
+        // Wiping a device triggers device.id change and this change is propagated to device reducer via @cerberus/connect DEVICE.CHANGE event.
         // Accounts data are related to the old device.id in order to properly clear reducers and indexed db
         // we need to retrieve device objects BEFORE and AFTER the wipe process.
         // and call SUITE.FORGET_DEVICE on ALL devices (with old and new device.id)

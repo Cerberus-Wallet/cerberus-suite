@@ -1,4 +1,4 @@
-import { getFirmwareVersion } from '@trezor/device-utils';
+import { getFirmwareVersion } from '@cerberus/device-utils';
 
 import {
     getCommitHash,
@@ -7,10 +7,10 @@ import {
     getSuiteVersion,
     getUserAgent,
     isDesktop,
-} from '@trezor/env-utils';
+} from '@cerberus/env-utils';
 import type { TrezorDevice } from 'src/types/suite';
-import type { TransportInfo } from '@trezor/connect';
-import { GITHUB_REPO_URL } from '@trezor/urls';
+import type { TransportInfo } from '@cerberus/connect';
+import { GITHUB_REPO_URL } from '@cerberus/urls';
 
 type DebugInfo = {
     device?: TrezorDevice;
@@ -22,7 +22,7 @@ const getDeviceInfo = (device?: TrezorDevice) => {
         return '';
     }
 
-    return `Trezor ${device.features.internal_model} ${getFirmwareVersion(device)} ${
+    return `Cerberus ${device.features.internal_model} ${getFirmwareVersion(device)} ${
         device.firmwareType
     } (revision ${device.features.revision})`;
 };

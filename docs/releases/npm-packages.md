@@ -1,11 +1,11 @@
-# Publishing @trezor package to npm registry
+# Publishing @cerberus package to npm registry
 
 `yarn npm publish` should be done only on [gitlab CI](https://gitlab.com/satoshilabs/trezor/trezor-suite/-/pipelines/) in `deploy npm` phase.
 
 ### Purpose
 
-@trezor packages are dependencies of `@trezor/connect` public API.
-Publish is required to distribute changes to `@trezor/connect` and make them available for 3rd party implementations.
+@cerberus packages are dependencies of `@cerberus/connect` public API.
+Publish is required to distribute changes to `@cerberus/connect` and make them available for 3rd party implementations.
 
 ### Prerequisites
 
@@ -15,7 +15,7 @@ Publish is required to distribute changes to `@trezor/connect` and make them ava
 ### Production
 
 1. Create new branch with `npm-release/` prefix.
-1. Commit your changes as `release: @trezor/<PACKAGE-NAME> X.X.X`.
+1. Commit your changes as `release: @cerberus/<PACKAGE-NAME> X.X.X`.
 1. Use `<PACKAGE-NAME> deploy npm` job.
 
 ### Beta
@@ -25,5 +25,5 @@ If you want to publish to npm as `beta` (from any branch) do the following:
 1. Change the version in `packages/<PACKAGE-NAME>/package.json` from `X.X.X` to `X.X.(X + 1)-beta.1`.
    The `-beta.<n>` suffix is important because NPM registry doesn't allow overriding already published versions.
    With this suffix we can publish multiple beta versions for a single patch.
-1. Commit your changes as `release: @trezor/<PACKAGE-NAME> X.X.X-beta.X`.
+1. Commit your changes as `release: @cerberus/<PACKAGE-NAME> X.X.X-beta.X`.
 1. Use `beta <PACKAGE-NAME> deploy npm` job.

@@ -1,6 +1,6 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/tx/outputs.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/tx/outputs.js
 
-import { ComposeOutput as ComposeOutputBase } from '@trezor/utxo-lib';
+import { ComposeOutput as ComposeOutputBase } from '@cerberus/utxo-lib';
 import { getOutputScriptType, fixPath, getHDPath } from '../../utils/pathUtils';
 import { isValidAddress } from '../../utils/addressUtils';
 import { convertMultisigPubKey } from '../../utils/hdnodeUtils';
@@ -122,7 +122,7 @@ export const validateHDOutput = (
 };
 
 /** *****
- * Transform the result of @trezor/utxo-lib `composeTx` to Trezor protobuf
+ * Transform the result of @cerberus/utxo-lib `composeTx` to Cerberus protobuf
  ****** */
 export const outputToTrezor = (
     output: ComposeResultFinal['outputs'][number],

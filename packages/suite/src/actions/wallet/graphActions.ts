@@ -4,7 +4,7 @@ import { Account } from 'src/types/wallet';
 
 import { isTrezorConnectBackendType } from '@suite-common/wallet-utils';
 
-import TrezorConnect from '@trezor/connect';
+import TrezorConnect from '@cerberus/connect';
 
 import {
     ACCOUNT_GRAPH_SUCCESS,

@@ -1,7 +1,7 @@
 {
     "name": "connect-example-electron-main",
     "version": "1.0.0",
-    "description": "Example of electron app with @trezor/connect",
+    "description": "Example of electron app with @cerberus/connect",
     "main": "src/electron.js",
     "author": "Satoshilabs s.r.o <info@satoshilabs.com>",
     "license": "MIT",
@@ -52,7 +52,7 @@
         }
     },
     "dependencies": {
-        "@trezor/connect": "workspace:*"
+        "@cerberus/connect": "workspace:*"
     },
     "devDependencies": {
         "electron": "27.0.4",

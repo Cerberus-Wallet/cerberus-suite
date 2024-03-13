@@ -1,7 +1,7 @@
 import { TxWeightCalculator } from './compose.utils';
 
 // fixtures from:
-// https://github.com/trezor/trezor-firmware/blob/1fceca73da523c5bf2bb0f398c91e00c728bdbe0/core/tests/test_apps.bitcoin.txweight.py
+// https://github.com/Cerberus-Wallet/cerberus-firmware/blob/1fceca73da523c5bf2bb0f398c91e00c728bdbe0/core/tests/test_apps.bitcoin.txweight.py
 
 describe('TxWeightCalculator', () => {
     it('p2pkh', () => {

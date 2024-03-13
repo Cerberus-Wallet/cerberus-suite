@@ -7,8 +7,8 @@ import {
     AccountTransaction,
     AccountUtxo,
     PrecomposedTransactionFinalCardano,
-} from '@trezor/connect';
-import { arrayDistinct, bufferUtils } from '@trezor/utils';
+} from '@cerberus/connect';
+import { arrayDistinct, bufferUtils } from '@cerberus/utils';
 import {
     networksCompatibility as NETWORKS,
     Network,
@@ -32,7 +32,7 @@ import {
     HELP_CENTER_ADDRESSES_URL,
     HELP_CENTER_COINJOIN_URL,
     HELP_CENTER_TAPROOT_URL,
-} from '@trezor/urls';
+} from '@cerberus/urls';
 
 import { toFiatCurrency } from './fiatConverterUtils';
 import { getFiatRateKey } from './fiatRatesUtils';
@@ -478,7 +478,7 @@ export const enhanceAddresses = (
     // These addresses are derived on a backend (Blockbook/Blockfrost) from a public key.
     // In bitcoin an account index is encoded directly in a public key, so blockbook will extract it
     // and return full derivation path for each derived address.
-    // (https://github.com/trezor/blockbook/blob/b82dc92522eee957b7a139c38269a1844fe102f8/bchain/coins/btc/bitcoinparser.go#L428)
+    // (https://github.com/Cerberus-Wallet/blockbook/blob/b82dc92522eee957b7a139c38269a1844fe102f8/bchain/coins/btc/bitcoinparser.go#L428)
     // Since cardano account public key doesn't encode information about the account index, like Bitcoin does,
     // Blockfrost backend returns partial derivation path where account index is replaced with character 'i'.
     // So we rely on the client (this function) to replace it with correct account index.

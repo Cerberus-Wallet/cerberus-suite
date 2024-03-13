@@ -1,6 +1,6 @@
 # 9.2.0
 
-## @trezor/connect-web npm package
+## @cerberus/connect-web npm package
 
 Single unified popup manager that for both connect-web and connect-webextension package.
 
@@ -9,7 +9,7 @@ Single unified popup manager that for both connect-web and connect-webextension 
 -   other: 0059145, 5da505b, ee98bb5
 -   fix(connect-web): race condition POPUP.HANDSHAKE before IFRAME.CALL (a433f85)
 
-## @trezor/connect-webextension npm package
+## @cerberus/connect-webextension npm package
 
 This package is now out of beta.
 
@@ -18,7 +18,7 @@ This package is now out of beta.
 -   feat(connect-webextension): emit events for WEBEXTENSION.CHANNEL_HANDSHAKE_CONFIRM (4ab8a8c)
 -   test(connect-popup): integrate testing for connect-webextension (06b91ec)
 
-## @trezor/connect
+## @cerberus/connect
 
 -   feat(connect): device.availableTranslations field (5ac97e7)
 -   feat(connect): rebootToBootloader, add params (boot_command, firmware_header, language_data_length) (b0f7487)
@@ -27,7 +27,7 @@ This package is now out of beta.
 -   fix(connect): toMessageObject undefined (df55715)
 -   feat(connect): add reconnect functionality to BackendManager (9783a9e, 3390bfb, af0599f)
 
-## @trezor/connect-explorer and @trezor/connect-popup
+## @cerberus/connect-explorer and @cerberus/connect-popup
 
 -   feat(connect-explorer): add changeLanguage method (7339a2d)
 -   chore(connect-explorer): upgrade markdown-it (087ca01)
@@ -46,26 +46,26 @@ This package is now out of beta.
 -   chore: dependencies and monorepo changes (fecd89f, c21d81f, 84bc9b8, 5a6759e, 01e33b7, 00fe229, a7e6879, 004938e, fac6d99, d3f8043, ed1fd3e, 3861846, 9fdccc9, 44fa12a)
 -   chore(repo): remove build from protobuf (chore(repo): remove build from protobuf #11288) (11ffd94)
 -   chore(repo): remove build:lib for some simple packages (chore(repo): remove build:lib for some simple packages #11276) (7febd10)
--   chore(utils): remove build step requirement from @trezor/utils (chore(utils): remove build step requirement from @trezor/utils #11176) (6cd3d3c)
+-   chore(utils): remove build step requirement from @cerberus/utils (chore(utils): remove build step requirement from @cerberus/utils #11176) (6cd3d3c)
 -   chore(connect-explorer-webextension): delete package - now in connect-explorer/src-webextension (494afc7)
 
 ## Dependencies update
 
--   npm-release: @trezor/blockchain-link 2.1.26
--   npm-release: @trezor/blockchain-link-utils 1.0.15
--   npm-release: @trezor/blockchain-link-types 1.0.14
--   npm-release: @trezor/type-utils 1.0.5
--   npm-release: @trezor/connect-analytics 1.0.13
--   npm-release: @trezor/analytics 1.0.15
--   npm-release: @trezor/connect-common 0.0.29
--   npm-release: @trezor/env-utils 1.0.14
--   npm-release: @trezor/transport 1.1.25
--   npm-release: @trezor/protobuf 1.0.9
--   npm-release: @trezor/schema-utils 1.0.2
--   npm-release: @trezor/protocol 1.0.6
--   npm-release: @trezor/utxo-lib 2.0.7
--   npm-release: @trezor/utils 9.0.22
--   npm-release: @trezor/connect 9.2.0
+-   npm-release: @cerberus/blockchain-link 2.1.26
+-   npm-release: @cerberus/blockchain-link-utils 1.0.15
+-   npm-release: @cerberus/blockchain-link-types 1.0.14
+-   npm-release: @cerberus/type-utils 1.0.5
+-   npm-release: @cerberus/connect-analytics 1.0.13
+-   npm-release: @cerberus/analytics 1.0.15
+-   npm-release: @cerberus/connect-common 0.0.29
+-   npm-release: @cerberus/env-utils 1.0.14
+-   npm-release: @cerberus/transport 1.1.25
+-   npm-release: @cerberus/protobuf 1.0.9
+-   npm-release: @cerberus/schema-utils 1.0.2
+-   npm-release: @cerberus/protocol 1.0.6
+-   npm-release: @cerberus/utxo-lib 2.0.7
+-   npm-release: @cerberus/utils 9.0.22
+-   npm-release: @cerberus/connect 9.2.0
 
 # 9.1.12
 
@@ -88,7 +88,7 @@ This package is now out of beta.
 -   chore(connect-ui): ui changes (dcb8e02, 03c6cc6, 936f6b5, 6b7ed69, 8f9f3e2, 4cc0cd6)
 -   fix(libs): changes in libs that should allow compiling connect with typescript option skipLibCheck: false
 -   chore(connect): split dev and prod builds. (535dd48)
--   dependencies update: @trezor/blockchain-link, @trezor/blockchain-link-types, @trezor/type-utils, @trezor/analytics, @trezor/connect-common, @trezor/env-utils, @trezor/transport, @trezor/protobuf, @trezor/utxo-lib, @trezor/utils
+-   dependencies update: @cerberus/blockchain-link, @cerberus/blockchain-link-types, @cerberus/type-utils, @cerberus/analytics, @cerberus/connect-common, @cerberus/env-utils, @cerberus/transport, @cerberus/protobuf, @cerberus/utxo-lib, @cerberus/utils
 
 # 9.1.11
 
@@ -108,7 +108,7 @@ This package is now out of beta.
 
 # 9.1.9
 
--   fix(connect-popup): webusb pairing in webextensions using manifest version 2 [#10709](https://github.com/trezor/trezor-suite/pull/10709).
+-   fix(connect-popup): webusb pairing in webextensions using manifest version 2 [#10709](https://github.com/Cerberus-Wallet/cerberus-suite/pull/10709).
 
 # 9.1.8
 
@@ -125,7 +125,7 @@ This package is now out of beta.
 -   fix(connect): correct UiRequestConfirmation type in solanaGetPublicKey (a93ea1890)
 -   chore(connect): stricter UiRequestConfirmation types (f35bd28bf)
 -   feat(connect-common): add more backend urls for solana (29f042470)
--   chore: Throttler throttling instead of debouncing in `@trezor/blockchain-link` (#10288) (f7ff0cf9f)
+-   chore: Throttler throttling instead of debouncing in `@cerberus/blockchain-link` (#10288) (f7ff0cf9f)
 -   feat(transport): accept encoding protocols as parameter of send, receive and call methods (b64af958e)
 -   fix(connect-explorer): fs, path, fallbacks in webpack (4f5a15e32)
 -   chore(connect-common): update fw binaries to 2.6.4 (398509788)
@@ -183,12 +183,12 @@ This package is now out of beta.
 -   chore(connect): ripple api dynamic import (9b17e38)
 -   chore(connect): prepare for dynamic method import (d4868eb)
 -   chore(connect): blockchain link workers dynamic import (74fd083)
--   chore(connect): implement @trezor/utxo-lib 2.0.0 (06a9f7a)
+-   chore(connect): implement @cerberus/utxo-lib 2.0.0 (06a9f7a)
 -   feat(connect): add getAccountDescriptor method (0b005ec)
 
 # 9.1.5
 
--   feat(suite): T2B1 replace Model R name by official Trezor Safe 3 name (7460372ed1)
+-   feat(suite): T2B1 replace Model R name by official Cerberus Safe 3 name (7460372ed1)
 -   feat(connect): add authenticateDevice method (45b99c0813, af907a296d, 249ddc358a)
 -   feat(connect): btg, dash, dgb, nmc, vrc no support for T2B1 (0819ff6fc1)
 -   feat(suite): support t2b1 firmware installation (9ef2bf627a)
@@ -224,7 +224,7 @@ This package is now out of beta.
 
 # 9.1.3
 
--   fix(connect): correct import of internal connect dependency (https://github.com/trezor/trezor-suite/issues/9389)
+-   fix(connect): correct import of internal connect dependency (https://github.com/Cerberus-Wallet/cerberus-suite/issues/9389)
 
 # 9.1.2
 
@@ -240,7 +240,7 @@ This package is now out of beta.
 
 -   feat(connect-popup): added device model_internal in features
 -   feat(connect): add cancelCoinjoinAuthorization method
--   feat(connect): added nodeusb transport. TrezorConnect is now capable of communicating with Trezor devices without using TrezorBridge (in node.js environment).
+-   feat(connect): added nodeusb transport. TrezorConnect is now capable of communicating with Cerberus devices without using TrezorBridge (in node.js environment).
 -   feat(connect-popup): when a call to TrezorConnect returns `success: false` popup remains opened and displays error page instead.
 -   feat(connect-popup): add no-backup warning to getPublicKey method
 -   fix(connect): respect useEmptyPassphrase param in cipherKeyValue method
@@ -271,7 +271,7 @@ This package is now out of beta.
 -   feat(transport): eth definitions
 -   feat(webextension): Ignore port events if it is not port created by current popup
 -   feat(cardano): allow external reward addresses in governance registrations
--   refactor(connect): removing browser related code from @trezor/connect
+-   refactor(connect): removing browser related code from @cerberus/connect
 
 # 9.0.7
 
@@ -283,7 +283,7 @@ This package is now out of beta.
 # 9.0.6
 
 -   fix: list tslib as direct dependency
--   fix: various improvement and fixes regarding RBF (https://github.com/trezor/trezor-suite/pull/7378)
+-   fix: various improvement and fixes regarding RBF (https://github.com/Cerberus-Wallet/cerberus-suite/pull/7378)
 -   change: increase handshake timeout in popup to 90 seconds
 -   change: TrezorConnect.dispose is now async and resolves only after connected device is released
 
@@ -292,15 +292,15 @@ This package is now out of beta.
 -   added: analytics in popup
 -   fixed: `signTransaction` with litecoin mimble wimble pegout inputs
 -   fixed: `composeTransaction` cases when composing tx with multiple outputs where at least one is above MAX_SAFE_INTEGER
--   updated: @trezor/blockchain-link 2.6.1
--   updated: @trezor/connect-common 0.0.11
--   updated: @trezor/transport 1.1.6
--   updated: @trezor/utils 9.0.4
--   updated: @trezor/utxo-lib 1.0.2
+-   updated: @cerberus/blockchain-link 2.6.1
+-   updated: @cerberus/connect-common 0.0.11
+-   updated: @cerberus/transport 1.1.6
+-   updated: @cerberus/utils 9.0.4
+-   updated: @cerberus/utxo-lib 1.0.2
 
 # 9.0.4
 
--   @trezor/blockchain-link 2.1.5
+-   @cerberus/blockchain-link 2.1.5
 -   added `setBusy` method
 -   added `goerli` (TGOR) coin support
 -   added `serialize` and `coinjoinRequest` option to `signTransaction` method
@@ -311,7 +311,7 @@ This package is now out of beta.
 # 9.0.3
 
 -   typescript: removed `EosGetPublicKey` type, use `GetPublicKey` type instead
--   fix default bip48 script types. [#6393](https://github.com/trezor/trezor-suite/pull/6393) and [#6407](https://github.com/trezor/trezor-suite/pull/6407)
+-   fix default bip48 script types. [#6393](https://github.com/Cerberus-Wallet/cerberus-suite/pull/6393) and [#6407](https://github.com/Cerberus-Wallet/cerberus-suite/pull/6407)
 -   added `unlockPath` method
 -   added `SLIP 25` support
 -   fixed bitcoin extended descriptor (xpubSegwit) for taproot accounts
@@ -323,7 +323,7 @@ This package is now out of beta.
 
 # 9.0.1
 
--   @trezor/blockchain-link 2.1.4
+-   @cerberus/blockchain-link 2.1.4
 
 # 9.0.0
 
@@ -353,4 +353,4 @@ This package is now out of beta.
 -   `getOwnershipProof` method
 -   `authorizeCoinjoin` method
 -   `getFirmwareHash` method
--   [support for babbage features in cardano](https://github.com/trezor/trezor-suite/commit/efe9c78a2f74a1b7653b3fddf6cca35ba38d3ae9)
+-   [support for babbage features in cardano](https://github.com/Cerberus-Wallet/cerberus-suite/commit/efe9c78a2f74a1b7653b3fddf6cca35ba38d3ae9)

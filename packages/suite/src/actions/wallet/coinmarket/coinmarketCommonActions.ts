@@ -1,6 +1,6 @@
-import { isDesktop } from '@trezor/env-utils';
+import { isDesktop } from '@cerberus/env-utils';
 import { notificationsActions } from '@suite-common/toast-notifications';
-import { PROTO } from '@trezor/connect';
+import { PROTO } from '@cerberus/connect';
 import {
     amountToSatoshi,
     formatAmount,

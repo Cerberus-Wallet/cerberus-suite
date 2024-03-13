@@ -9,7 +9,7 @@ import {
 } from '@react-navigation/native';
 
 import { analytics, EventType } from '@suite-native/analytics';
-import { useNativeStyles } from '@trezor/styles';
+import { useNativeStyles } from '@cerberus/styles';
 
 export const NavigationContainerWithAnalytics = ({ children }: { children: ReactNode }) => {
     const navigationContainerRef = useNavigationContainerRef();

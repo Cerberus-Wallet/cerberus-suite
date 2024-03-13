@@ -1,5 +1,5 @@
-import { Button, Card, CardProps, Icon, IconProps, variables } from '@trezor/components';
-import { spacingsPx, typography } from '@trezor/theme';
+import { Button, Card, CardProps, Icon, IconProps, variables } from '@cerberus/components';
+import { spacingsPx, typography } from '@cerberus/theme';
 import { ReactNode } from 'react';
 import styled, { useTheme } from 'styled-components';
 

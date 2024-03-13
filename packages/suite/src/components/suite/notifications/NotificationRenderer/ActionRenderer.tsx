@@ -1,5 +1,5 @@
 import { acquireDevice, selectDeviceThunk } from '@suite-common/wallet-core';
-import { DEVICE } from '@trezor/connect';
+import { DEVICE } from '@cerberus/connect';
 
 import { useDispatch } from 'src/hooks/suite';
 import { NotificationRendererProps, NotificationViewProps } from 'src/components/suite';

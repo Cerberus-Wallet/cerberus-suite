@@ -1,6 +1,6 @@
 import { TouchableOpacity, TouchableOpacityProps, View } from 'react-native';
 
-import { NativeStyleObject, prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { NativeStyleObject, prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 
 import { ACCESSIBILITY_FONTSIZE_MULTIPLIER } from './Text';
 

@@ -8,8 +8,8 @@ import {
     transactionsActions,
 } from '@suite-common/wallet-core';
 import { analyticsActions } from '@suite-common/analytics';
-import type { ObjectValues } from '@trezor/type-utils';
-import type { UiEvent, DeviceEvent, TransportEvent, BlockchainEvent } from '@trezor/connect';
+import type { ObjectValues } from '@cerberus/type-utils';
+import type { UiEvent, DeviceEvent, TransportEvent, BlockchainEvent } from '@cerberus/connect';
 import { notificationsActions } from '@suite-common/toast-notifications';
 import { messageSystemActions } from '@suite-common/message-system';
 import { deviceAuthenticityActions } from '@suite-common/device-authenticity';
@@ -35,7 +35,7 @@ import type { GuideAction } from 'src/actions/suite/guideActions';
 // reexport
 export type { ExtendedMessageDescriptor } from 'src/components/suite/Translation';
 export type { AppState } from 'src/reducers/store';
-export type { SuiteThemeColors } from '@trezor/components';
+export type { SuiteThemeColors } from '@cerberus/components';
 export type { PrerequisiteType } from 'src/utils/suite/prerequisites';
 export type { Route };
 export type {
@@ -119,7 +119,7 @@ export type ForegroundAppProps = {
 
 export type ToastNotificationVariant = 'success' | 'info' | 'warning' | 'error' | 'transparent';
 
-export { TorStatus } from '@trezor/suite-desktop-api/src/enums';
+export { TorStatus } from '@cerberus/suite-desktop-api/src/enums';
 export interface TorBootstrap {
     current: number;
     total: number;

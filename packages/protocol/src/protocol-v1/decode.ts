@@ -20,7 +20,7 @@ const readHeaderChunked = (buffer: Buffer) => {
     return { magic, sharp1, sharp2, typeId, length };
 };
 
-// Parses first raw input that comes from Trezor and returns some information about the whole message.
+// Parses first raw input that comes from Cerberus and returns some information about the whole message.
 // [compatibility]: accept Buffer just like decode does. But this would require changes in lower levels
 export const decode: TransportProtocolDecode = bytes => {
     const buffer = Buffer.from(bytes);

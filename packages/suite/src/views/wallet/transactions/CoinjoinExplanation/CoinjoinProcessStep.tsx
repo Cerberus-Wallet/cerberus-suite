@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
-import { H3, Image, ImageType, Paragraph, variables } from '@trezor/components';
+import { H3, Image, ImageType, Paragraph, variables } from '@cerberus/components';
 import { Translation } from 'src/components/suite/Translation';
 
 const StyledImage = styled(Image)`

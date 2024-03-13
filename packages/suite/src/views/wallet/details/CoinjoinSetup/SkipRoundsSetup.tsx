@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { Translation } from 'src/components/suite';
 import { useSelector } from 'src/hooks/suite/useSelector';
-import { Switch, variables } from '@trezor/components';
+import { Switch, variables } from '@cerberus/components';
 import { coinjoinAccountToggleSkipRounds } from 'src/actions/wallet/coinjoinAccountActions';
 import { selectCurrentCoinjoinSession } from 'src/reducers/wallet/coinjoinReducer';
 

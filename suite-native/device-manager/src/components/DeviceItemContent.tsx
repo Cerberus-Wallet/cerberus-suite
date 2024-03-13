@@ -11,7 +11,7 @@ import {
     selectDeviceLabelById,
 } from '@suite-common/wallet-core';
 import { TrezorDevice } from '@suite-common/suite-types';
-import { TypographyStyle } from '@trezor/theme';
+import { TypographyStyle } from '@cerberus/theme';
 import { useActiveColorScheme } from '@suite-native/theme';
 
 type DeviceItemContentProps = {

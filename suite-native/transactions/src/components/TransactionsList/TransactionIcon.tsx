@@ -1,8 +1,8 @@
 import { Box, RoundedIcon } from '@suite-native/atoms';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import { TransactionType } from '@suite-common/wallet-types';
 import { CoinSymbol, CryptoIcon, IconName } from '@suite-common/icons';
-import { Color } from '@trezor/theme';
+import { Color } from '@cerberus/theme';
 
 import { TransactionIconSpinner } from './TransactionIconSpinner';
 

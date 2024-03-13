@@ -1,9 +1,9 @@
-const TrezorConnect = require('@trezor/connect').default;
-const { TRANSPORT_EVENT, DEVICE_EVENT } = require('@trezor/connect');
+const TrezorConnect = require('@cerberus/connect').default;
+const { TRANSPORT_EVENT, DEVICE_EVENT } = require('@cerberus/connect');
 
 /**
  * Please note, that this example needs:
- * - Trezor bridge running
+ * - Cerberus bridge running
  * - Device connected to USB
  */
 const runExample = async () => {

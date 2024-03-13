@@ -2,10 +2,10 @@ import { useEffect } from 'react';
 import styled from 'styled-components';
 import { useSelector } from 'src/hooks/suite';
 import { Account } from 'src/types/wallet';
-import { variables } from '@trezor/components';
+import { variables } from '@cerberus/components';
 import { useCoinmarketRedirect } from 'src/hooks/wallet/useCoinmarketRedirect';
 import { Translation } from 'src/components/suite';
-import { FeeLevel } from '@trezor/connect';
+import { FeeLevel } from '@cerberus/connect';
 import { CryptoSymbol } from 'invity-api';
 
 const Wrapper = styled.div`

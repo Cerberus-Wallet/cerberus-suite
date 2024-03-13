@@ -5,10 +5,10 @@ import { createRoot } from 'react-dom/client';
 import { init as initSentry } from '@sentry/electron/renderer';
 
 import { SENTRY_CONFIG } from '@suite-common/sentry';
-import { desktopApi } from '@trezor/suite-desktop-api';
+import { desktopApi } from '@cerberus/suite-desktop-api';
 import { FormatterProvider } from '@suite-common/formatters';
-import { createIpcProxy } from '@trezor/ipc-proxy';
-import TrezorConnect from '@trezor/connect';
+import { createIpcProxy } from '@cerberus/ipc-proxy';
+import TrezorConnect from '@cerberus/connect';
 
 import { initStore } from 'src/reducers/store';
 import { preloadStore } from 'src/support/suite/preloadStore';
@@ -121,9 +121,9 @@ export const init = async (container: HTMLElement) => {
 
     store.dispatch(desktopHandshake(loadModules.payload));
 
-    // create ipc-proxy for @trezor/connect
+    // create ipc-proxy for @cerberus/connect
     const proxy = await createIpcProxy<typeof TrezorConnect>('TrezorConnect');
-    // override each method of @trezor/connect using ipc-proxy
+    // override each method of @cerberus/connect using ipc-proxy
     Object.keys(TrezorConnect).forEach(method => {
         // @ts-expect-error key vs union of values endless problem
         TrezorConnect[method] = proxy[method];

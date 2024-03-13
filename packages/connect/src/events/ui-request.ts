@@ -1,7 +1,7 @@
 /*
  * messages to UI emitted as UI_EVENT
  */
-import type { EventTypeDeviceSelected } from '@trezor/connect-analytics';
+import type { EventTypeDeviceSelected } from '@cerberus/connect-analytics';
 
 import type { PROTO } from '../constants';
 import type { Device, CoinInfo, BitcoinNetworkInfo, SelectFeeLevel } from '../types';

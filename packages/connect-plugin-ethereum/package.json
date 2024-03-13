@@ -1,19 +1,19 @@
 {
-    "name": "@trezor/connect-plugin-ethereum",
+    "name": "@cerberus/connect-plugin-ethereum",
     "version": "9.0.3",
-    "author": "Trezor <info@trezor.io>",
-    "homepage": "https://github.com/trezor/trezor-suite/tree/develop/packages/connect-plugin-ethereum",
-    "description": "@trezor/connect plugin for Ethereum",
+    "author": "Cerberus <info@cerberus.uraanai.com>",
+    "homepage": "https://github.com/Cerberus-Wallet/cerberus-suite/tree/develop/packages/connect-plugin-ethereum",
+    "description": "@cerberus/connect plugin for Ethereum",
     "license": "SEE LICENSE IN LICENSE.md",
     "repository": {
         "type": "git",
-        "url": "git://github.com/trezor/trezor-suite.git"
+        "url": "git://github.com/Cerberus-Wallet/cerberus-suite.git"
     },
     "bugs": {
-        "url": "https://github.com/trezor/trezor-suite/issues"
+        "url": "https://github.com/Cerberus-Wallet/cerberus-suite/issues"
     },
     "keywords": [
-        "Trezor",
+        "Cerberus",
         "trezor-connect",
         "Ethereum"
     ],

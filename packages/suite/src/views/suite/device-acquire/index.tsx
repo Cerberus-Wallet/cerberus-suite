@@ -1,7 +1,7 @@
 // TODO: remove whole file, replaced by @suite-components/PrerequisitesGuide/components/DeviceAcquire
 
 import { acquireDevice } from '@suite-common/wallet-core';
-import { Button } from '@trezor/components';
+import { Button } from '@cerberus/components';
 
 import { useDevice, useDispatch } from 'src/hooks/suite';
 import { Translation, DeviceInvalidModeLayout } from 'src/components/suite';

@@ -18,7 +18,7 @@ export * from './api/solana';
 export * from './api/stellar';
 export * from './api/tezos';
 
-// types used in @trezor/suite. if you need a type, reexport it from ./api/<method>
+// types used in @cerberus/suite. if you need a type, reexport it from ./api/<method>
 export type {
     ComposeOutput,
     PrecomposeResultError,
@@ -41,4 +41,4 @@ export type {
     FiatRatesLegacy,
     Target as TransactionTarget,
     AccountBalanceHistory as BlockchainAccountBalanceHistory,
-} from '@trezor/blockchain-link';
+} from '@cerberus/blockchain-link';

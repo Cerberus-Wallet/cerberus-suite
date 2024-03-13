@@ -1,7 +1,7 @@
 import type { ThunkDispatch } from 'redux-thunk';
 import type { AppState as AppState$ } from '../reducers';
 
-import type { KnownDevice, UnknownDevice, UnreadableDevice } from '@trezor/connect-web';
+import type { KnownDevice, UnknownDevice, UnreadableDevice } from '@cerberus/connect-web';
 
 import type { DocsAction } from '../actions/docsActions';
 import type { DOMAction } from '../actions/DOMActions';

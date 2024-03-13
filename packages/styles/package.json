@@ -1,5 +1,5 @@
 {
-    "name": "@trezor/styles",
+    "name": "@cerberus/styles",
     "version": "1.0.0",
     "private": true,
     "license": "SEE ROOT LICENSE.md",
@@ -12,7 +12,7 @@
     },
     "dependencies": {
         "@mobily/ts-belt": "^3.13.1",
-        "@trezor/theme": "workspace:*",
+        "@cerberus/theme": "workspace:*",
         "css-in-js-utils": "^3.1.0",
         "csstype": "^3.1.2",
         "fela": "^12.2.1",

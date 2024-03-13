@@ -1,6 +1,6 @@
 import { isAnyOf } from '@reduxjs/toolkit';
 
-import { isNative } from '@trezor/env-utils';
+import { isNative } from '@cerberus/env-utils';
 import { createMiddlewareWithExtraDeps } from '@suite-common/redux-utils';
 
 import {

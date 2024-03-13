@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import { Translation } from 'src/components/suite';
 import { useSelector } from 'src/hooks/suite/useSelector';
-import { Card, Radio, motionAnimation, motionEasing, Warning } from '@trezor/components';
+import { Card, Radio, motionAnimation, motionEasing, Warning } from '@cerberus/components';
 import { coinjoinAccountUpdateSetupOption } from 'src/actions/wallet/coinjoinAccountActions';
 import { AnonymityLevelSetup } from './AnonymityLevelSetup';
 import { MaxMiningFeeSetup } from './MaxMiningFeeSetup';

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import styled, { CSSObject, css } from 'styled-components';
 import { useElevation } from '../components/ElevationContext/ElevationContext';
-import { Color, Elevation, mapElevationToBackground } from '@trezor/theme';
+import { Color, Elevation, mapElevationToBackground } from '@cerberus/theme';
 
 const ShadowContainer = styled.div`
     overflow: auto;

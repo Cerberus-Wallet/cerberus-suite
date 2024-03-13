@@ -2,8 +2,8 @@ import { View, ViewProps, ViewStyle } from 'react-native';
 
 import { D, pipe } from '@mobily/ts-belt';
 
-import { NativeStyleObject, prepareNativeStyle, useNativeStyles } from '@trezor/styles';
-import { NativeSpacing } from '@trezor/theme';
+import { NativeStyleObject, prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
+import { NativeSpacing } from '@cerberus/theme';
 
 import { useDebugView, DebugView } from './DebugView';
 import { TestProps } from './types';

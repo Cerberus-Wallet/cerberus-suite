@@ -3,8 +3,8 @@ import { ReactNode } from 'react';
 
 import styled from 'styled-components';
 
-import { Button, CollapsibleBox, colors, Icon, IconProps, variables } from '@trezor/components';
-import { isFirefox } from '@trezor/env-utils';
+import { Button, CollapsibleBox, colors, Icon, IconProps, variables } from '@cerberus/components';
+import { isFirefox } from '@cerberus/env-utils';
 
 const WhiteCollapsibleBox = styled(CollapsibleBox)`
     background: ${({ theme }) => theme.BG_WHITE};
@@ -172,11 +172,11 @@ const getTroubleshootingTips = (props: ErrorViewProps) => {
                     <Step>
                         Try downloading and setting up{' '}
                         <a
-                            href="https://suite.trezor.io/web/bridge/"
+                            href="https://suite.cerberus.uraanai.com/web/bridge/"
                             target="_blank"
                             rel="noreferrer"
                         >
-                            Trezor Bridge
+                            Cerberus Bridge
                         </a>{' '}
                         for the best experience
                     </Step>,

@@ -5,7 +5,7 @@ import { G, N } from '@mobily/ts-belt';
 
 import { Card, Text } from '@suite-native/atoms';
 import { CryptoAmountFormatter, SignValueFormatter } from '@suite-native/formatters';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import { GroupedBalanceMovementEventPayload } from '@suite-common/graph';
 import { EventTooltipComponentProps } from '@suite-native/react-native-graph/src/LineGraphProps';
 import { SignValue } from '@suite-common/suite-types';

@@ -98,7 +98,7 @@ const transformMemo = (memo: Memo) => {
 const transformTimebounds = (timebounds: Transaction['timeBounds']) => {
     if (!timebounds) return undefined;
 
-    // those values are defined in Trezor firmware messages as numbers
+    // those values are defined in Cerberus firmware messages as numbers
     return {
         minTime: Number.parseInt(timebounds.minTime, 10),
         maxTime: Number.parseInt(timebounds.maxTime, 10),

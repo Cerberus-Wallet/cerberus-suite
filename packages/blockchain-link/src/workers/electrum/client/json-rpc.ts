@@ -1,5 +1,5 @@
 import { EventEmitter } from 'events';
-import { throwError } from '@trezor/utils';
+import { throwError } from '@cerberus/utils';
 import type { ISocket } from '../sockets/interface';
 
 type Callback = (error: any, result?: any) => void;

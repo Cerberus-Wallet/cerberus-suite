@@ -1,4 +1,4 @@
-// TODO: https://github.com/trezor/trezor-suite/issues/4786
+// TODO: https://github.com/Cerberus-Wallet/cerberus-suite/issues/4786
 export type UnionToIntersection<U> = (U extends any ? (k: U) => void : never) extends (
     k: infer I,
 ) => void

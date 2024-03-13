@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/prefer-ts-expect-error */
-import { networks } from '@trezor/utxo-lib';
+import { networks } from '@cerberus/utxo-lib';
 // @ts-ignore
 import tx43d273 from '../../../../e2e/__txcache__/testnet/43d273d3caf41759ad843474f960fbf80ff2ec961135d018b61e9fab3ad1fc06.json';
 // @ts-ignore
@@ -205,7 +205,7 @@ export const validateReferencedTransactions = [
         description: 'transform AccountTransaction with opreturn output to OrigTransaction',
         params: {
             transactions: [
-                // see https://tbtc1.trezor.io/tx/ba917a2b563966e324ab37ed7de5f5cd7503b970b0f0bb9a5208f5835557e99c
+                // see https://tbtc1.trezorcheck.io/tx/ba917a2b563966e324ab37ed7de5f5cd7503b970b0f0bb9a5208f5835557e99c
                 {
                     txid: 'ba917a2b563966e324ab37ed7de5f5cd7503b970b0f0bb9a5208f5835557e99c',
                     details: {

@@ -1,4 +1,4 @@
-import type { Network } from '@trezor/utxo-lib';
+import type { Network } from '@cerberus/utxo-lib';
 import type {
     Address,
     Utxo,
@@ -6,12 +6,12 @@ import type {
     AccountAddresses,
     AccountInfo as AccountInfoBase,
     EnhancedVinVout,
-} from '@trezor/blockchain-link-types';
+} from '@cerberus/blockchain-link-types';
 import type {
     Transaction as BlockbookTransaction,
     VinVout,
     FilterResponse,
-} from '@trezor/blockchain-link-types/lib/blockbook';
+} from '@cerberus/blockchain-link-types/lib/blockbook';
 
 import type { CoinjoinBackendClient } from '../backend/CoinjoinBackendClient';
 import type { MempoolController } from '../backend/CoinjoinMempoolController';

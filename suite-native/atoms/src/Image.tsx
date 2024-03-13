@@ -1,6 +1,6 @@
 import { Image as ExImage, ImageProps as ExImageProps } from 'expo-image';
 
-import { NativeStyleObject, prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { NativeStyleObject, prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 
 type ImageProps = {
     width?: number;

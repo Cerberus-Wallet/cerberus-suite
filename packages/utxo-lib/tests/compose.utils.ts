@@ -1,8 +1,8 @@
 // This class is a 1:1 copy of trezor-firmware tx weight calculation.
 // It is used to verify that compose process returns correct values in estimated tx virtual bytes.
 // multisig and external is not used for now in therefore its not 100% done.
-// https://github.com/trezor/trezor-firmware/blob/1fceca73da523c5bf2bb0f398c91e00c728bdbe0/core/src/apps/bitcoin/sign_tx/tx_weight.py
-// https://github.com/trezor/trezor-firmware/blob/1fceca73da523c5bf2bb0f398c91e00c728bdbe0/core/tests/test_apps.bitcoin.txweight.py
+// https://github.com/Cerberus-Wallet/cerberus-firmware/blob/1fceca73da523c5bf2bb0f398c91e00c728bdbe0/core/src/apps/bitcoin/sign_tx/tx_weight.py
+// https://github.com/Cerberus-Wallet/cerberus-firmware/blob/1fceca73da523c5bf2bb0f398c91e00c728bdbe0/core/tests/test_apps.bitcoin.txweight.py
 
 import * as baddress from '../src/address';
 import { OUTPUT_SCRIPT_LENGTH } from '../src/coinselect/coinselectUtils';

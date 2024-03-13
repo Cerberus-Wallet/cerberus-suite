@@ -7,7 +7,7 @@
  */
 
 import { METADATA_PROVIDER } from 'src/actions/suite/constants';
-import { isDesktop } from '@trezor/env-utils';
+import { isDesktop } from '@cerberus/env-utils';
 import { OAuthServerEnvironment, Tokens } from 'src/types/suite/metadata';
 import {
     extractCredentialsFromAuthorizationFlow,
@@ -100,8 +100,8 @@ class Client {
     static refreshToken: string;
     static authServerUrl: string;
     static servers = {
-        production: 'https://suite-auth.trezor.io',
-        staging: 'https://staging-suite-auth.trezor.io',
+        production: 'https://suite-auth.cerberus.uraanai.com',
+        staging: 'https://staging-suite-auth.cerberus.uraanai.com',
         localhost: 'http://localhost:3005',
     };
 

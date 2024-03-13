@@ -12,7 +12,7 @@ import {
     RootStackRoutes,
     StackToTabCompositeProps,
 } from '@suite-native/navigation';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 
 type AccountImportImportedAccountProps = {
     account: Account;

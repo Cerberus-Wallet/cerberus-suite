@@ -1,5 +1,5 @@
 import { useSelector } from 'src/hooks/suite';
-import { Icon, variables } from '@trezor/components';
+import { Icon, variables } from '@cerberus/components';
 import { useState } from 'react';
 import styled, { useTheme } from 'styled-components';
 import { Translation } from 'src/components/suite';

@@ -1,4 +1,4 @@
-# @trezor/schema-utils
+# @cerberus/schema-utils
 
 A schema definition and validation library for TypeScript, based on [TypeBox](https://github.com/sinclairzx81/typebox).
 
@@ -22,7 +22,7 @@ export interface Example {
 The schema for this type can be defined as follows:
 
 ```typescript
-import { Type, Static } from '@trezor/schema-utils';
+import { Type, Static } from '@cerberus/schema-utils';
 // ...
 
 export const Example = Type.Object({
@@ -50,7 +50,7 @@ We have two main functions for validation: `Assert` and `Validate`.
 Assert throws an error if the payload does not match the schema, also functioning as a type assertion.
 
 ```typescript
-import { Assert } from '@trezor/schema-utils';
+import { Assert } from '@cerberus/schema-utils';
 
 Assert(Example, payload);
 // payload now must be of type Example
@@ -59,7 +59,7 @@ Assert(Example, payload);
 Validate does not throw, but simply returns a boolean. It can also be used as a type guard.
 
 ```typescript
-import { Validate } from '@trezor/schema-utils';
+import { Validate } from '@cerberus/schema-utils';
 
 if (Validate(Example, payload)) {
     // payload now must be of type Example
@@ -71,7 +71,7 @@ if (Validate(Example, payload)) {
 To generate schemas from TypeScript types automatically, you can use the code generation tool.
 
 ```bash
-yarn workspace @trezor/schema-utils codegen <file>
+yarn workspace @cerberus/schema-utils codegen <file>
 ```
 
 This tool is also used in Protobuf code generation to generate schemas for the messages.

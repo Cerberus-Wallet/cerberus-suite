@@ -1,6 +1,6 @@
 import { Account, Network, NetworkSymbol } from 'src/types/wallet';
 import { NETWORKS } from 'src/config/wallet';
-import TrezorConnect, { TokenInfo } from '@trezor/connect';
+import TrezorConnect, { TokenInfo } from '@cerberus/connect';
 import regional from 'src/constants/wallet/coinmarket/regional';
 import { TrezorDevice } from 'src/types/suite';
 import { CryptoSymbol } from 'invity-api';

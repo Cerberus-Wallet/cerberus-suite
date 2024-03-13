@@ -1,6 +1,6 @@
 import styled, { useTheme } from 'styled-components';
 import { CSSProperties, MouseEventHandler, forwardRef } from 'react';
-import { DeviceModelInternal } from '@trezor/connect';
+import { DeviceModelInternal } from '@cerberus/connect';
 import { AnimationWrapper, Shape } from './AnimationPrimitives';
 import { resolveStaticPath } from '../../utils/resolveStaticPath';
 
@@ -37,7 +37,7 @@ export const DeviceAnimation = forwardRef<HTMLVideoElement, DeviceAnimationProps
             type,
             loop = false,
             shape,
-            // if no Trezor available, show flagship model
+            // if no Cerberus available, show flagship model
             deviceModelInternal = DeviceModelInternal.T2T1,
             deviceUnitColor,
             onVideoMouseOver,

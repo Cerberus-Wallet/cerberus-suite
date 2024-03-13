@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/popup/view/selectFee.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/popup/view/selectFee.js
 
 import {
     UI,
@@ -7,8 +7,8 @@ import {
     UpdateCustomFee,
     BitcoinNetworkInfo,
     SelectFeeLevel,
-} from '@trezor/connect';
-import { formatAmount, formatTime } from '@trezor/connect/src/utils/formatUtils';
+} from '@cerberus/connect';
+import { formatAmount, formatTime } from '@cerberus/connect/src/utils/formatUtils';
 import { container, showView, postMessage } from './common';
 
 const fees: SelectFeeLevel[] = [];

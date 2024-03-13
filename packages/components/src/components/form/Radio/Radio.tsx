@@ -1,6 +1,6 @@
 import { EventHandler, KeyboardEvent, ReactNode, SyntheticEvent } from 'react';
 import styled from 'styled-components';
-import { Color, borders } from '@trezor/theme';
+import { Color, borders } from '@cerberus/theme';
 
 import { KEYBOARD_CODE } from '../../../constants/keyboardEvents';
 import { getFocusShadowStyle } from '../../../utils/utils';

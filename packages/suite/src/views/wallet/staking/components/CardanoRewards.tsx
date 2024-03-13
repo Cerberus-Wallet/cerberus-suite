@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 
 import { formatNetworkAmount } from '@suite-common/wallet-utils';
-import { Icon } from '@trezor/components';
-import { DeviceModelInternal } from '@trezor/connect';
+import { Icon } from '@cerberus/components';
+import { DeviceModelInternal } from '@cerberus/connect';
 
 import { getReasonForDisabledAction, useCardanoStaking } from 'src/hooks/wallet/useCardanoStaking';
 import { Translation } from 'src/components/suite/Translation';

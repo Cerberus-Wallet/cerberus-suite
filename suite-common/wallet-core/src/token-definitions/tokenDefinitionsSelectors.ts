@@ -1,6 +1,6 @@
 import { NetworkSymbol } from '@suite-common/wallet-config';
 import { isTokenDefinitionKnown } from '@suite-common/token-definitions';
-import { TokenInfo } from '@trezor/connect';
+import { TokenInfo } from '@cerberus/connect';
 
 import { TokenDefinitionsRootState } from './tokenDefinitionsTypes';
 

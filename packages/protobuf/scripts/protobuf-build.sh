@@ -6,7 +6,7 @@ echo $#
 
 PARENT_PATH=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 
-SRC="../../submodules/trezor-common/protob"
+SRC="../../submodules/cerberus-common/protob"
 DIST="."
 
 if [[ $# -ne 0 && $# -ne 2 ]]
@@ -22,7 +22,7 @@ if [[ $# -eq 2 ]]
 fi
 
 # BUILD combined messages.proto file from protobuf files
-# this code was copied from ./submodules/trezor-common/protob Makekile
+# this code was copied from ./submodules/cerberus-common/protob Makekile
 # clear protobuf syntax and remove unknown values to be able to work with proto2js
 echo 'syntax = "proto2";' > "$DIST"/messages.proto
 echo 'import "google/protobuf/descriptor.proto";' >> "$DIST"/messages.proto

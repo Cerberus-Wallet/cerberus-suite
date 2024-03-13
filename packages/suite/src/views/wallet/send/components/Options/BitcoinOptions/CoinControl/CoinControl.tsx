@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import styled, { useTheme } from 'styled-components';
 
-import { typography } from '@trezor/theme';
+import { typography } from '@cerberus/theme';
 import { COMPOSE_ERROR_TYPES } from '@suite-common/wallet-constants';
 import { fetchTransactionsThunk } from '@suite-common/wallet-core';
 import { getTxsPerPage } from '@suite-common/suite-utils';
@@ -9,7 +9,7 @@ import { amountToSatoshi, formatNetworkAmount } from '@suite-common/wallet-utils
 import { FormattedCryptoAmount, Translation } from 'src/components/suite';
 import { useDispatch, useSelector } from 'src/hooks/suite';
 import { Pagination } from 'src/components/wallet';
-import { Card, Checkbox, Icon, Switch, variables } from '@trezor/components';
+import { Card, Checkbox, Icon, Switch, variables } from '@cerberus/components';
 import { useSendFormContext } from 'src/hooks/wallet';
 import { useBitcoinAmountUnit } from 'src/hooks/wallet/useBitcoinAmountUnit';
 import { selectCurrentTargetAnonymity } from 'src/reducers/wallet/coinjoinReducer';

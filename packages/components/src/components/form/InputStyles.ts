@@ -5,7 +5,7 @@ import {
     typography,
     Elevation,
     mapElevationToBackground,
-} from '@trezor/theme';
+} from '@cerberus/theme';
 
 import { FONT_WEIGHT, FONT_SIZE } from '../../config/variables';
 import { InputState, InputSize } from './inputTypes';

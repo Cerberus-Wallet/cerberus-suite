@@ -1,11 +1,11 @@
-import { desktopApi } from '@trezor/suite-desktop-api';
+import { desktopApi } from '@cerberus/suite-desktop-api';
 import { getPrefixedURL } from 'src/utils/suite/router';
 import { METADATA_PROVIDER } from 'src/actions/suite/constants';
-import { Deferred, createDeferred } from '@trezor/utils';
+import { Deferred, createDeferred } from '@cerberus/utils';
 import { urlHashParams, urlSearchParams } from 'src/utils/suite/metadata';
 
 /**
- * For web, use oauth_receiver.html hosted on the same origin (localhost/sldev/trezor.io)
+ * For web, use oauth_receiver.html hosted on the same origin (localhost/sldev/cerberus.uraanai.com)
  */
 export const getOauthReceiverUrl = () => {
     if (!desktopApi.available) {

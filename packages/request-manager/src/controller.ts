@@ -1,7 +1,7 @@
 import { EventEmitter } from 'events';
 import path from 'path';
 
-import { createTimeoutPromise } from '@trezor/utils';
+import { createTimeoutPromise } from '@cerberus/utils';
 
 import { TorControlPort } from './torControlPort';
 import {

@@ -39,12 +39,12 @@ export const prepareFirmwareMiddleware = createMiddlewareWithExtraDeps(
             }
 
             // this if section takes care of incremental update, how does it work:
-            // 1. I realize that I can't update to the latest firmware (see @trezor/connect/src/api/firmware)
-            // 2. I use special intermediary firmware instead of using normal one (see @trezor/connect/src/api/firmware)
+            // 1. I realize that I can't update to the latest firmware (see @cerberus/connect/src/api/firmware)
+            // 2. I use special intermediary firmware instead of using normal one (see @cerberus/connect/src/api/firmware)
             // 3. Intermediary firmware updates bootloader to the latest and keeps device in bootloader mode after reconnect
             // 4. This point happens here. After I reconnect the device, firmware middleware finds that the newly connected
             // device does not have the latest firmware, proceed with subsequent updated automatically
-            // todo: this is a 'client side' implementation. It would be nicer to have it in @trezor/connect
+            // todo: this is a 'client side' implementation. It would be nicer to have it in @cerberus/connect
             // todo: but this would require reworking the entire TRAKTOR
 
             if (

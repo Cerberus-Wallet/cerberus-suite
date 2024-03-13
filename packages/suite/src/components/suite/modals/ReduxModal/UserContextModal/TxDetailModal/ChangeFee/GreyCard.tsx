@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
-import { Card } from '@trezor/components';
+import { Card } from '@cerberus/components';
 
 const Wrapper = styled(Card)`
     display: flex;

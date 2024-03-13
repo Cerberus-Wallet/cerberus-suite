@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { Color, TypographyStyle } from '@trezor/theme';
+import { Color, TypographyStyle } from '@cerberus/theme';
 
 import { Box } from './Box';
 import { Text } from './Text';

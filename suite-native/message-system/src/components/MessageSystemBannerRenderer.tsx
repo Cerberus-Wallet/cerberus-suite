@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { A } from '@mobily/ts-belt';
 
 import { VStack } from '@suite-native/atoms';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import { selectActiveBannerMessages } from '@suite-common/message-system';
 
 import { MessageBanner } from './MessageBanner';

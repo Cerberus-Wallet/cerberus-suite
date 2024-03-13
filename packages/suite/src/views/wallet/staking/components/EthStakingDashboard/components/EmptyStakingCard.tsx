@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import styled, { useTheme } from 'styled-components';
-import { Button, Card, Icon, Paragraph } from '@trezor/components';
-import { spacingsPx } from '@trezor/theme';
+import { Button, Card, Icon, Paragraph } from '@cerberus/components';
+import { spacingsPx } from '@cerberus/theme';
 import { Translation, StakingFeature } from 'src/components/suite';
 import { openModal } from 'src/actions/suite/modalActions';
 import { useDispatch, useEverstakePoolStats } from 'src/hooks/suite';

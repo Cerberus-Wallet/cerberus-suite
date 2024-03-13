@@ -1,10 +1,10 @@
 # AWS Analytics: Info
 
-_For a deeper technical writeup of analytics processes intended for developers, please see [README.md](https://github.com/trezor/trezor-suite/blob/develop/packages/analytics/README.md)._
+_For a deeper technical writeup of analytics processes intended for developers, please see [README.md](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/analytics/README.md)._
 
-Trezor Suite can be set to collect real-world data to improve the performance of both web and desktop apps. This anonymous data is only shared by users who have usage data tracking enabled.
+Cerberus Suite can be set to collect real-world data to improve the performance of both web and desktop apps. This anonymous data is only shared by users who have usage data tracking enabled.
 
-During the first run Trezor Suite prompts the user whether they wish to participate in the data collection and such setting can be changed later on in Settings at any time.
+During the first run Cerberus Suite prompts the user whether they wish to participate in the data collection and such setting can be changed later on in Settings at any time.
 
 ## Anonymous data
 
@@ -17,7 +17,7 @@ Among the data **not collected** by analytics:
 -   Particular amounts
 -   Transaction IDs
 
-When data tracking is enabled, Trezor Suite collects functional information that can be used to directly improve the app, such as:
+When data tracking is enabled, Cerberus Suite collects functional information that can be used to directly improve the app, such as:
 
 -   Events triggered by a user during a session
 -   Hardware, operating system and setup of the connected device

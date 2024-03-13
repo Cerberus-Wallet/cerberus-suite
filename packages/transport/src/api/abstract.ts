@@ -1,4 +1,4 @@
-import { TypedEmitter } from '@trezor/utils';
+import { TypedEmitter } from '@cerberus/utils';
 import type { AnyError, AsyncResultWithTypedError, Success, Logger } from '../types';
 import { success, error, unknownError } from '../utils/result';
 

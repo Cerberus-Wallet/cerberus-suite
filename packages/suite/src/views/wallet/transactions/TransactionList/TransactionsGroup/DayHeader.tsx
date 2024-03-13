@@ -2,8 +2,8 @@ import { FormattedDate } from 'react-intl';
 import styled from 'styled-components';
 import BigNumber from 'bignumber.js';
 
-import { variables } from '@trezor/components';
-import { zIndices } from '@trezor/theme';
+import { variables } from '@cerberus/components';
+import { zIndices } from '@cerberus/theme';
 import { useFormatters } from '@suite-common/formatters';
 import { parseTransactionDateKey, isTestnet } from '@suite-common/wallet-utils';
 

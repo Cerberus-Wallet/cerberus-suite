@@ -1,7 +1,7 @@
 import styled, { useTheme } from 'styled-components';
 import { SellFiatTrade } from 'invity-api';
 
-import { Button, variables, Icon, H3, Card } from '@trezor/components';
+import { Button, variables, Icon, H3, Card } from '@cerberus/components';
 import {
     CoinmarketPaymentType,
     CoinmarketProviderInfo,

@@ -17,8 +17,8 @@ import {
     rect,
 } from '@shopify/react-native-skia';
 
-import { useNativeStyles } from '@trezor/styles';
-import { nativeBorders } from '@trezor/theme';
+import { useNativeStyles } from '@cerberus/styles';
+import { nativeBorders } from '@cerberus/theme';
 
 type BoxSkeletonProps = {
     height: number;

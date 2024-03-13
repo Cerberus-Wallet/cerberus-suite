@@ -5,10 +5,10 @@ import { captureException } from '@sentry/electron';
 import { session } from 'electron';
 import path from 'path';
 
-import { TorStatus, BootstrapTorEvent, HandshakeTorModule } from '@trezor/suite-desktop-api';
-import { BootstrapEvent } from '@trezor/request-manager';
-import TrezorConnect from '@trezor/connect';
-import { getFreePort } from '@trezor/node-utils';
+import { TorStatus, BootstrapTorEvent, HandshakeTorModule } from '@cerberus/suite-desktop-api';
+import { BootstrapEvent } from '@cerberus/request-manager';
+import TrezorConnect from '@cerberus/connect';
+import { getFreePort } from '@cerberus/node-utils';
 
 import { TorProcess, TorProcessStatus } from '../libs/processes/TorProcess';
 import { app, ipcMain } from '../typed-electron';

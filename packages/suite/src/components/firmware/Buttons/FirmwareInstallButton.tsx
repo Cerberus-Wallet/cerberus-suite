@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Button, ButtonProps, Tooltip } from '@trezor/components';
+import { Button, ButtonProps, Tooltip } from '@cerberus/components';
 import { Translation } from 'src/components/suite';
 import { useTranslation } from 'src/hooks/suite';
 

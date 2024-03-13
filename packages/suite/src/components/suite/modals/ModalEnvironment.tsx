@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import FocusLock from 'react-focus-lock';
-import { Backdrop } from '@trezor/components';
+import { Backdrop } from '@cerberus/components';
 
 type ModalEnvironmentProps = {
     onClickBackdrop?: () => void;

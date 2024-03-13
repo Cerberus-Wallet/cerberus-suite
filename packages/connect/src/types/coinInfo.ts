@@ -1,8 +1,8 @@
-import { Type, Static } from '@trezor/schema-utils';
+import { Type, Static } from '@cerberus/schema-utils';
 import { FeeLevel } from './fees';
 
 // TODO: refactor in utxo-lib
-// import { Network } from '@trezor/utxo-lib';
+// import { Network } from '@cerberus/utxo-lib';
 export type Bip32 = Static<typeof Bip32>;
 export const Bip32 = Type.Object({
     public: Type.Number(),

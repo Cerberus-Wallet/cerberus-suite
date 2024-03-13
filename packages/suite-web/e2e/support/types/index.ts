@@ -1,5 +1,5 @@
-import { SuiteAnalyticsEvent } from '@trezor/suite-analytics';
-import { urlSearchParams } from '@trezor/suite/src/utils/suite/metadata';
+import { SuiteAnalyticsEvent } from '@cerberus/suite-analytics';
+import { urlSearchParams } from '@cerberus/suite/src/utils/suite/metadata';
 
 export type Requests = ReturnType<typeof urlSearchParams>[];
 

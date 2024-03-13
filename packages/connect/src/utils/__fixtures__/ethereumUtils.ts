@@ -1,5 +1,5 @@
-import coinsJSON from '@trezor/connect-common/files/coins.json';
-import coinsJSONEth from '@trezor/connect-common/files/coins-eth.json';
+import coinsJSON from '@cerberus/connect-common/files/coins.json';
+import coinsJSONEth from '@cerberus/connect-common/files/coins-eth.json';
 
 import { getNetworkLabel } from '../ethereumUtils';
 

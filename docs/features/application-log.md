@@ -1,6 +1,6 @@
 # Application Log
 
-Application Log findable in Settings > General in Trezor Suite provides valuable info to the Support Team when helping our users.
+Application Log findable in Settings > General in Cerberus Suite provides valuable info to the Support Team when helping our users.
 
 The application log is in JSON format. It starts with App & Platform information and below it, it contains the last 200 meaningful redux actions ordered from the oldest one to the newest one.
 
@@ -19,7 +19,7 @@ See `getApplicationInfo` method in `logsUtils.ts` in `suite` package.
 
 ## Redux actions
 
-Hundreds of redux actions are fired when using Trezor Suite. The actions, which should help the Support Team understand the user's problem, are logged.
+Hundreds of redux actions are fired when using Cerberus Suite. The actions, which should help the Support Team understand the user's problem, are logged.
 Each log record consists of:
 
 -   `type` which should express the type of user's action.

@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import styled from 'styled-components';
-import { zIndices } from '@trezor/theme';
+import { zIndices } from '@cerberus/theme';
 import { goto } from 'src/actions/suite/routerActions';
 import { messageSystemActions } from '@suite-common/message-system';
 import { Message } from '@suite-common/suite-types';

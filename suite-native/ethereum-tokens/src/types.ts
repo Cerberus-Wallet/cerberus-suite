@@ -1,4 +1,4 @@
-import { TokenTransfer } from '@trezor/blockchain-link';
+import { TokenTransfer } from '@cerberus/blockchain-link';
 import {
     TokenAddress,
     TokenSymbol,

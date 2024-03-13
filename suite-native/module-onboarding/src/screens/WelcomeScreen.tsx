@@ -15,7 +15,7 @@ import {
 } from '@suite-native/navigation';
 import { Translation, useTranslate } from '@suite-native/intl';
 import { Icon } from '@suite-common/icons';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import { useActiveColorScheme } from '@suite-native/theme';
 
 import { OnboardingFooter } from '../components/OnboardingFooter';
@@ -123,7 +123,7 @@ export const WelcomeScreen = () => {
                                 id="moduleOnboarding.welcomeScreen.trezorLink"
                                 values={{
                                     trezorLink: chunks => (
-                                        <Link href="https://trezor.io" label={chunks} />
+                                        <Link href="https://cerberus.uraanai.com" label={chunks} />
                                     ),
                                 }}
                             />

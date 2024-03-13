@@ -1,7 +1,7 @@
 ## NEM: Sign transaction
 
 Asks device to sign given transaction. User is asked to confirm all transaction
-details on Trezor.
+details on Cerberus.
 
 ```javascript
 const result = await TrezorConnect.nemSignTransaction(params);
@@ -11,10 +11,10 @@ const result = await TrezorConnect.nemSignTransaction(params);
 
 [Optional common params](commonParams.md)
 
-[NEMSignTransaction type](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/nem/index.ts)
+[NEMSignTransaction type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/nem/index.ts)
 
 -   `path` - _required_ `string | Array<number>`
--   `transaction` - _required_ `Object` type of [NEMTransaction](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/nem/index.ts)
+-   `transaction` - _required_ `Object` type of [NEMTransaction](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/nem/index.ts)
 -   `chunkify` — _optional_ `boolean` determines if recipient address will be displayed in chunks of 4 characters. Default is set to `false`
 
 ### Example
@@ -81,7 +81,7 @@ TrezorConnect.nemSignTransaction(
 
 ### Result
 
-[NEMSignedTx type](https://github.com/trezor/trezor-suite/blob/develop/packages/protobuf/src/messages.ts)
+[NEMSignedTx type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/protobuf/src/messages.ts)
 
 ```javascript
 {

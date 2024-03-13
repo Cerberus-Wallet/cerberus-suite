@@ -20,7 +20,7 @@ export default meta;
 
 export const PassphraseTypeCard: StoryObj<PassphraseTypeCardProps> = {
     args: {
-        title: 'My Trezor',
+        title: 'My Cerberus',
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ornare quam in justo auctor, in malesuada quam rhoncus. Phasellus sem eros, volutpat laoreet posuere non, feugiat et augue. ',
         submitLabel: 'Yes please',

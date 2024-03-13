@@ -3,7 +3,7 @@
 
 import { PROTO } from '../../../constants';
 import { DerivationPath } from '../../params';
-import { Type, Static } from '@trezor/schema-utils';
+import { Type, Static } from '@cerberus/schema-utils';
 
 export type StellarAsset = Static<typeof StellarAsset>;
 export const StellarAsset = Type.Object({

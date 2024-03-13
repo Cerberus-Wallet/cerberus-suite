@@ -2,14 +2,14 @@ import { ReactNode } from 'react';
 import styled, { css, useTheme } from 'styled-components';
 import { Image } from '../Image/Image';
 import { Icon } from '../assets/Icon/Icon';
-import { DeviceModelInternal } from '@trezor/connect';
+import { DeviceModelInternal } from '@cerberus/connect';
 import {
     Elevation,
     borders,
     mapElevationToBackground,
     spacingsPx,
     typography,
-} from '@trezor/theme';
+} from '@cerberus/theme';
 import { DeviceAnimation } from '../animations/DeviceAnimation';
 import { useElevation } from '../ElevationContext/ElevationContext';
 
@@ -137,7 +137,7 @@ export const ConfirmOnDeviceContent = ({
                     />
                 )}
                 {deviceModelInternal && deviceModelInternal !== DeviceModelInternal.T2B1 && (
-                    <StyledImage alt="Trezor" image={`CERBERUS_${deviceModelInternal}`} />
+                    <StyledImage alt="Cerberus" image={`CERBERUS_${deviceModelInternal}`} />
                 )}
             </Left>
 

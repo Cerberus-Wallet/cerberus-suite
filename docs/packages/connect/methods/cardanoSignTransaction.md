@@ -1,7 +1,7 @@
 ## Cardano: Sign transaction
 
 Asks device to sign given transaction. User is asked to confirm all transaction
-details on Trezor.
+details on Cerberus.
 
 ```javascript
 const result = await TrezorConnect.cardanoSignTransaction(params);
@@ -11,26 +11,26 @@ const result = await TrezorConnect.cardanoSignTransaction(params);
 
 [Optional common params](commonParams.md)
 
-[CardanoSignTransaction type](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)
+[CardanoSignTransaction type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)
 
 -   `signingMode` - _required_ [CardanoTxSigningMode](#CardanoTxSigningMode)
--   `inputs` - _required_ `Array` of [CardanoInput](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)
--   `outputs` - _required_ `Array` of [CardanoOutput](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)
+-   `inputs` - _required_ `Array` of [CardanoInput](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)
+-   `outputs` - _required_ `Array` of [CardanoOutput](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)
 -   `fee` - _required_ `String`
 -   `protocolMagic` - _required_ `Integer` 764824073 for Mainnet, 1 for Preprod Testnet, 2 for Preview Testnet
 -   `networkId` - _required_ `Integer` 1 for Mainnet, 0 for Testnet
 -   `ttl` - _optional_ `String`
 -   `validityIntervalStart` - _optional_ `String`
--   `certificates` - _optional_ `Array` of [CardanoCertificate](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)
--   `withdrawals` - _optional_ `Array` of [CardanoWithdrawal](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)
--   `auxiliaryData` - _optional_ [CardanoAuxiliaryData](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)
--   `mint` - _optional_ [CardanoMint](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)
+-   `certificates` - _optional_ `Array` of [CardanoCertificate](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)
+-   `withdrawals` - _optional_ `Array` of [CardanoWithdrawal](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)
+-   `auxiliaryData` - _optional_ [CardanoAuxiliaryData](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)
+-   `mint` - _optional_ [CardanoMint](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)
 -   `scriptDataHash` - _optional_ `String`
--   `collateralInputs` - _optional_ `Array` of [CardanoCollateralInput](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)
--   `requiredSigners` - _optional_ `Array` of [CardanoRequiredSigner](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)
--   `collateralReturn` - _optional_ [CardanoOutput](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)
+-   `collateralInputs` - _optional_ `Array` of [CardanoCollateralInput](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)
+-   `requiredSigners` - _optional_ `Array` of [CardanoRequiredSigner](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)
+-   `collateralReturn` - _optional_ [CardanoOutput](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)
 -   `totalCollateral` - _optional_ `String`
--   `referenceInputs` - _optional_ `Array` of [CardanoReferenceInput](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)
+-   `referenceInputs` - _optional_ `Array` of [CardanoReferenceInput](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)
 -   `additionalWitnessRequests` - _optional_ `Array` of `string | Array<number>` (paths). Used for multi-sig and token minting witness requests as those can not be determined from the transaction parameters.
 -   `metadata` - _removed_ - use `auxiliaryData` instead
 -   `derivationType` — _optional_ `CardanoDerivationType` enum. Determines used derivation type. Default is set to ICARUS_CERBERUS=2.
@@ -97,7 +97,7 @@ Note: `requiredSigners` are meant for Plutus transactions (from the blockchain p
 
 ### Stake pool registration certificate specifics
 
-Trezor supports signing of stake pool registration certificates as a pool owner. The transaction may contain external inputs (e.g. belonging to the pool operator) and Trezor is not able to verify whether they are actually external or not, so if we allowed signing the transaction with a spending key, there is the risk of losing funds from an input that the user did not intend to spend from. Moreover there is the risk of inadvertedly signing a withdrawal in the transaction if there's any. To mitigate those risks, we introduced special validation rules for stake pool registration transactions which are validated on Trezor as well. The validation rules are the following:
+Cerberus supports signing of stake pool registration certificates as a pool owner. The transaction may contain external inputs (e.g. belonging to the pool operator) and Cerberus is not able to verify whether they are actually external or not, so if we allowed signing the transaction with a spending key, there is the risk of losing funds from an input that the user did not intend to spend from. Moreover there is the risk of inadvertedly signing a withdrawal in the transaction if there's any. To mitigate those risks, we introduced special validation rules for stake pool registration transactions which are validated on Cerberus as well. The validation rules are the following:
 
 1. The transaction must not contain any other certificates, not even another stake pool registration
 1. The transaction must not contain any withdrawals
@@ -106,12 +106,12 @@ Trezor supports signing of stake pool registration certificates as a pool owner.
 
 ### CIP-36 vote key registration (Catalyst and other)
 
-Trezor supports signing transactions with auxiliary data containing a vote key registration. Vote key registrations used to follow [CIP-15](https://cips.cardano.org/cips/cip15/), which has been superseded by [CIP-36](https://cips.cardano.org/cips/cip36/). Currently, Trezor supports both CIP-15 and CIP-36 formats, the intended standard can be specified in the `format` field (with CIP-15 being the default). They differ in the following:
+Cerberus supports signing transactions with auxiliary data containing a vote key registration. Vote key registrations used to follow [CIP-15](https://cips.cardano.org/cips/cip15/), which has been superseded by [CIP-36](https://cips.cardano.org/cips/cip36/). Currently, Cerberus supports both CIP-15 and CIP-36 formats, the intended standard can be specified in the `format` field (with CIP-15 being the default). They differ in the following:
 
--   CIP-36 allows delegating the voting power to several vote public keys with different voting power ([CardanoCVoteRegistrationDelegation](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)) as an alternative to providing only a single vote public key. Note that Trezor Firmware supports at most 32 delegations in a single registration.
--   CIP-36 registrations contain the [votingPurpose](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts) field. The value 0 is intended for Catalyst voting and the value 1 is intended for other purposes. If no value is provided, Trezor serializes 0 by default (if the CIP-36 format is used).
+-   CIP-36 allows delegating the voting power to several vote public keys with different voting power ([CardanoCVoteRegistrationDelegation](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)) as an alternative to providing only a single vote public key. Note that Cerberus Firmware supports at most 32 delegations in a single registration.
+-   CIP-36 registrations contain the [votingPurpose](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts) field. The value 0 is intended for Catalyst voting and the value 1 is intended for other purposes. If no value is provided, Cerberus serializes 0 by default (if the CIP-36 format is used).
 
-Trezor does not support the 1694 derivation paths at the moment.
+Cerberus does not support the 1694 derivation paths at the moment.
 
 The payment address to receive rewards can be provided either as a `paymentAddress` string or as a `paymentAddressParameters` object. For the smoothest user experience, we recommend providing `paymentAddressParameters` of a BASE address owned by the device.
 
@@ -246,7 +246,7 @@ TrezorConnect.cardanoSignTransaction({
                 rewardAccount: 'stake1uya87zwnmax0v6nnn8ptqkl6ydx4522kpsc3l3wmf3yswygwx45el', // bech32-encoded stake pool reward account
                 owners: [
                     {
-                        stakingKeyPath: "m/1852'/1815'/0'/2/0", // this is the path to the owner's key that will be signing the tx on Trezor
+                        stakingKeyPath: "m/1852'/1815'/0'/2/0", // this is the path to the owner's key that will be signing the tx on Cerberus
                     },
                     {
                         stakingKeyHash: '3a7f09d3df4cf66a7399c2b05bfa234d5a29560c311fc5db4c490711', // other owner
@@ -547,9 +547,9 @@ TrezorConnect.cardanoSignTransaction({
 
 ### Result
 
-Since transaction streaming has been introduced to the Cardano implementation on Trezor because of memory constraints, Trezor no longer returns the whole serialized transaction as a result of the `CardanoSignTransaction` call. Instead the transaction hash, transaction witnesses and auxiliary data supplement are returned and the serialized transaction needs to be assembled by the client.
+Since transaction streaming has been introduced to the Cardano implementation on Cerberus because of memory constraints, Cerberus no longer returns the whole serialized transaction as a result of the `CardanoSignTransaction` call. Instead the transaction hash, transaction witnesses and auxiliary data supplement are returned and the serialized transaction needs to be assembled by the client.
 
-[CardanoSignedTxData type](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)
+[CardanoSignedTxData type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)
 
 ```javascript
 {

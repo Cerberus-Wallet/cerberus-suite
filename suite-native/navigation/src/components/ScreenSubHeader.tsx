@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
 import { Box, Text } from '@suite-native/atoms';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 
 import { GoBackIcon } from './GoBackIcon';
 

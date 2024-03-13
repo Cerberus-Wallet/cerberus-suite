@@ -4,8 +4,8 @@ import { createInput } from '../fixtures/input.fixture';
 import { createCoinjoinRound } from '../fixtures/round.fixture';
 
 // mock random delay function
-jest.mock('@trezor/utils', () => {
-    const originalModule = jest.requireActual('@trezor/utils');
+jest.mock('@cerberus/utils', () => {
+    const originalModule = jest.requireActual('@cerberus/utils');
 
     return {
         __esModule: true,

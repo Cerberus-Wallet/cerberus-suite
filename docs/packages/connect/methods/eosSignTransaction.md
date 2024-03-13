@@ -1,7 +1,7 @@
 ## Eos: sign transaction
 
 Asks device to sign given transaction using the private key derived by given [BIP44 path](../path.md). User is asked to confirm all transaction
-details on Trezor.
+details on Cerberus.
 
 ```javascript
 const result = await TrezorConnect.eosSignTransaction(params);
@@ -11,10 +11,10 @@ const result = await TrezorConnect.eosSignTransaction(params);
 
 [Optional common params](commonParams.md)
 
-[EosSignTransaction type](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/eos/index.ts)
+[EosSignTransaction type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/eos/index.ts)
 
 -   `path` — _required_ `string | Array<number>` minimum length is `3`. [read more](../path.md)
--   `transaction` - _required_ `Object` type of [EosSDKTransaction](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/eos/index.ts)
+-   `transaction` - _required_ `Object` type of [EosSDKTransaction](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/eos/index.ts)
 -   `chunkify` — _optional_ `boolean` determines if recipient address will be displayed in chunks of 4 characters. Default is set to `false`
 
 ### Transfer example
@@ -56,7 +56,7 @@ TrezorConnect.eosSignTransaction({
 
 ### Result
 
-[EosSignedTx type](https://github.com/trezor/trezor-suite/blob/develop/packages/protobuf/src/messages.ts)
+[EosSignedTx type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/protobuf/src/messages.ts)
 
 ```javascript
 {

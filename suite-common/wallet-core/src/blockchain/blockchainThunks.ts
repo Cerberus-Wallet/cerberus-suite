@@ -17,10 +17,10 @@ import TrezorConnect, {
     BlockchainError,
     BlockchainNotification,
     FeeLevel,
-} from '@trezor/connect';
-import { arrayDistinct } from '@trezor/utils';
+} from '@cerberus/connect';
+import { arrayDistinct } from '@cerberus/utils';
 import type { Account, CustomBackend, NetworksFees } from '@suite-common/wallet-types';
-import type { Timeout } from '@trezor/type-utils';
+import type { Timeout } from '@cerberus/type-utils';
 import { notificationsActions } from '@suite-common/toast-notifications';
 
 import { selectAccounts } from '../accounts/accountsReducer';
@@ -36,7 +36,7 @@ const ACCOUNTS_SYNC_INTERVAL = 60 * 1000;
 // if so starts subscription to proper networks
 
 // sort FeeLevels in reversed order (Low > High)
-// TODO: consider to use same order in @trezor/connect to avoid double sorting
+// TODO: consider to use same order in @cerberus/connect to avoid double sorting
 const order: FeeLevel['label'][] = ['low', 'economy', 'normal', 'high'];
 const sortLevels = (levels: FeeLevel[]) =>
     levels.sort((levelA, levelB) => order.indexOf(levelA.label) - order.indexOf(levelB.label));
@@ -95,8 +95,8 @@ export const updateFeeInfoThunk = createThunk(
         let newFeeInfo;
 
         if (network.networkType === 'ethereum') {
-            // NOTE: ethereum smart fees are not implemented properly in @trezor/connect Issue: https://github.com/trezor/trezor-suite/issues/5340
-            // create raw call to @trezor/blockchain-link, receive data and create FeeLevel.normal from it
+            // NOTE: ethereum smart fees are not implemented properly in @cerberus/connect Issue: https://github.com/Cerberus-Wallet/cerberus-suite/issues/5340
+            // create raw call to @cerberus/blockchain-link, receive data and create FeeLevel.normal from it
 
             const result = await TrezorConnect.blockchainEstimateFee({
                 coin: network.symbol,
@@ -113,7 +113,7 @@ export const updateFeeInfoThunk = createThunk(
                     ...result.payload,
                     levels: result.payload.levels.map(l => ({
                         ...l,
-                        blocks: -1, // NOTE: @trezor/connect returns -1 for ethereum default
+                        blocks: -1, // NOTE: @cerberus/connect returns -1 for ethereum default
                         label: 'normal' as const,
                     })),
                 };

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styled, { useTheme } from 'styled-components';
 import useTimeoutFn from 'react-use/lib/useTimeoutFn';
-import { variables, CoinLogo, Select, Icon } from '@trezor/components';
+import { variables, CoinLogo, Select, Icon } from '@cerberus/components';
 import {
     FiatValue,
     Translation,

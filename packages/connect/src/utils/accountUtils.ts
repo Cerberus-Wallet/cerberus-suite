@@ -1,4 +1,4 @@
-//  origin: https://github.com/trezor/connect/blob/develop/src/js/utils/accountUtils.js
+//  origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/utils/accountUtils.js
 
 import { fromHardened, toHardened } from './pathUtils';
 import { getCoinName } from '../data/coinInfo';
@@ -36,7 +36,7 @@ export const getAccountAddressN = (
         return [toHardened(options.purpose), toHardened(options.coinType), toHardened(0), 0, index];
     }
     if (coinInfo.shortcut === 'tXRP') {
-        // FW bug: https://github.com/trezor/trezor-firmware/issues/321
+        // FW bug: https://github.com/Cerberus-Wallet/cerberus-firmware/issues/321
         return [toHardened(options.purpose), toHardened(144), toHardened(index), 0, 0];
     }
 

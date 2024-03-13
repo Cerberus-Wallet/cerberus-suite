@@ -1,9 +1,9 @@
 import styled, { useTheme } from 'styled-components';
 
 import { Translation } from 'src/components/suite';
-import { Icon, Box, variables } from '@trezor/components';
+import { Icon, Box, variables } from '@cerberus/components';
 import { PrecomposedTransactionFinal, TxFinalCardano } from 'src/types/wallet/sendForm';
-import { borders, zIndices } from '@trezor/theme';
+import { borders, zIndices } from '@cerberus/theme';
 
 const TransactionDetailsWrapper = styled.div`
     display: flex;

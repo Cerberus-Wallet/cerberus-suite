@@ -8,7 +8,7 @@ import {
     ChangeEvent,
 } from 'react';
 import styled from 'styled-components';
-import { Input, InputProps, variables } from '@trezor/components';
+import { Input, InputProps, variables } from '@cerberus/components';
 
 const LevelContainer = styled.div`
     width: 64px;

@@ -1,10 +1,10 @@
-# @trezor/utxo-lib
+# @cerberus/utxo-lib
 
-[![NPM](https://img.shields.io/npm/v/@trezor/utxo-lib.svg)](https://www.npmjs.org/package/@trezor/utxo-lib)
+[![NPM](https://img.shields.io/npm/v/@cerberus/utxo-lib.svg)](https://www.npmjs.org/package/@cerberus/utxo-lib)
 
 Javascript Bitcoin and Bitcoin-like altcoins library for node.js and browsers.
 
-This library is a fork of the `bitcoinjs-lib` and it is profiled to work with `Trezor` environment.
+This library is a fork of the `bitcoinjs-lib` and it is profiled to work with `Cerberus` environment.
 
 It enables standard operations such as generating addresses, creating transactions, importing/exporting keys etc.
 
@@ -22,9 +22,9 @@ _You probably don't want to use this package directly. Try one of the alternativ
 This is the fifth and hopefully the ultimate attempt to fork and maintain `bitcoinjs-lib`.
 
 1. https://www.npmjs.com/package/bitcoinjs-lib-zcash
-1. https://github.com/trezor/bitcoinjs-trezor
+1. https://github.com/Cerberus-Wallet/bitcoinjs-trezor
 1. https://github.com/BitGo/bitgo-utxo-lib
-1. https://github.com/trezor/trezor-utxo-lib
+1. https://github.com/Cerberus-Wallet/cerberus-utxo-lib
 
 ## Main differences
 
@@ -33,11 +33,11 @@ Differences are explicitly described in each file.
 -   `Transaction` class is extended by each custom `altcoin` implementation.
 -   `Transaction` class is parsing amounts as strings.
 -   `address` module uses different encoding for `Decred` and handles `Bitcoin Cash` addresses.
--   added `coinselect` and `compose` modules (origin source: https://github.com/trezor/hd-wallet/tree/master/src/build-tx)
+-   added `coinselect` and `compose` modules (origin source: https://github.com/Cerberus-Wallet/hd-wallet/tree/master/src/build-tx)
 -   removed unused modules: `block`, `classify`, `ecpair`, `psbt`.
 
 ## Publishing
 
-This package is published to the npm registry because it is a dependency of [@trezor/connect](https://github.com/trezor/trezor-suite/issues/5440) which can be installed as a standalone package.
+This package is published to the npm registry because it is a dependency of [@cerberus/connect](https://github.com/Cerberus-Wallet/cerberus-suite/issues/5440) which can be installed as a standalone package.
 
-[Follow instructions](../../docs/releases/npm-packages.md) how to publish @trezor package to npm registry.
+[Follow instructions](../../docs/releases/npm-packages.md) how to publish @cerberus package to npm registry.

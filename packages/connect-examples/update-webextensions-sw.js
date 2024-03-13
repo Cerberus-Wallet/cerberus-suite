@@ -12,7 +12,7 @@ const trezorConnectSrcIndex = process.argv.indexOf('--trezor-connect-src');
 const buildFolderIndex = process.argv.indexOf('--build-folder');
 const npmSrcIndex = process.argv.indexOf('--npm-src');
 
-const DEFAULT_SRC = 'https://connect.trezor.io/9/';
+const DEFAULT_SRC = 'https://connect.cerberus.uraanai.com/9/';
 let trezorConnectSrc = DEFAULT_SRC;
 
 if (trezorConnectSrcIndex > -1) {

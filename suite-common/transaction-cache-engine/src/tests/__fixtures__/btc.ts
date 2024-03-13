@@ -2,10 +2,10 @@ import {
     AccountInfo,
     Response as ConnectResponse,
     BlockchainAccountBalanceHistory,
-} from '@trezor/connect';
+} from '@cerberus/connect';
 
 export const accountInfoResult: ConnectResponse<AccountInfo> = {
-    // @ts-expect-error wrong types in Trezor Connect
+    // @ts-expect-error wrong types in Cerberus Connect
     id: 1,
     success: true,
     payload: {

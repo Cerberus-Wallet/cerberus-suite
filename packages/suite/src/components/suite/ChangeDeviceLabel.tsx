@@ -1,15 +1,15 @@
 import { useState, ChangeEventHandler } from 'react';
-import { analytics, EventType } from '@trezor/suite-analytics';
+import { analytics, EventType } from '@cerberus/suite-analytics';
 import styled from 'styled-components';
 
-import { Button, Input } from '@trezor/components';
+import { Button, Input } from '@cerberus/components';
 import { Translation } from 'src/components/suite';
 import { useDevice, useDispatch, useTranslation } from 'src/hooks/suite';
 import { applySettings } from 'src/actions/settings/deviceSettingsActions';
 import { MAX_LABEL_LENGTH } from 'src/constants/suite/device';
-import { isAscii } from '@trezor/utils';
-import { spacingsPx } from '@trezor/theme';
-import { breakpointMediaQueries } from '@trezor/styles';
+import { isAscii } from '@cerberus/utils';
+import { spacingsPx } from '@cerberus/theme';
+import { breakpointMediaQueries } from '@cerberus/styles';
 
 const Container = styled.div<{ isVertical?: boolean }>`
     display: flex;

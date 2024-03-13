@@ -1,4 +1,4 @@
-import { ArrayElement } from '@trezor/type-utils';
+import { ArrayElement } from '@cerberus/type-utils';
 import { Translation, AddressLabeling } from 'src/components/suite';
 import { WalletAccountTransaction } from 'src/types/wallet';
 import { BlurWrapper } from '../TransactionItemBlurWrapper';

@@ -1,5 +1,5 @@
 import { NotificationCard } from 'src/components/suite';
-import { Link } from '@trezor/components';
+import { Link } from '@cerberus/components';
 import { useSelector } from 'src/hooks/suite';
 import { selectContextMessageContent, Context } from '@suite-common/message-system';
 import { selectLanguage } from 'src/reducers/suite/suiteReducer';

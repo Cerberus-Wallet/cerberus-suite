@@ -1,8 +1,8 @@
 import { ReactNode, ReactElement } from 'react';
 import styled, { useTheme } from 'styled-components';
-import { Paragraph, Icon, IconType, H3, Card } from '@trezor/components';
-import { spacings, spacingsPx } from '@trezor/theme';
-import { breakpointMediaQueries } from '@trezor/styles';
+import { Paragraph, Icon, IconType, H3, Card } from '@cerberus/components';
+import { spacings, spacingsPx } from '@cerberus/theme';
+import { breakpointMediaQueries } from '@cerberus/styles';
 
 const Wrapper = styled.div`
     margin-bottom: ${spacingsPx.xxxl};

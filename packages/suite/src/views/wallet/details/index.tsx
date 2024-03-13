@@ -6,11 +6,11 @@ import {
     getAccountTypeUrl,
     getAccountTypeDesc,
 } from '@suite-common/wallet-utils';
-import { Paragraph, variables, Card } from '@trezor/components';
+import { Paragraph, variables, Card } from '@cerberus/components';
 
 import { ActionButton, ActionColumn, TextColumn, Translation } from 'src/components/suite';
 
-import { HELP_CENTER_BIP32_URL, HELP_CENTER_XPUB_URL } from '@trezor/urls';
+import { HELP_CENTER_BIP32_URL, HELP_CENTER_XPUB_URL } from '@cerberus/urls';
 import { showXpub } from 'src/actions/wallet/publicKeyActions';
 import { WalletLayout } from 'src/components/wallet';
 import { NETWORKS } from 'src/config/wallet';

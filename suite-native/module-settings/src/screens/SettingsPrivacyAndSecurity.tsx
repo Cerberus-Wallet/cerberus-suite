@@ -5,7 +5,7 @@ import { analytics, EventType } from '@suite-native/analytics';
 import { Screen, ScreenSubHeader } from '@suite-native/navigation';
 import { selectIsAnalyticsEnabled } from '@suite-common/analytics';
 import { Box, Card, DiscreetCanvas, Text, useDiscreetMode } from '@suite-native/atoms';
-import { useNativeStyles } from '@trezor/styles';
+import { useNativeStyles } from '@cerberus/styles';
 import { useBiometricsSettings, useIsBiometricsEnabled } from '@suite-native/biometrics';
 import { useTranslate } from '@suite-native/intl';
 
@@ -78,7 +78,7 @@ const AnalyticsSwitchRow = () => {
             iconName="database"
             description={
                 <RowDescription>
-                    All collected data is anonymous and is only used to improve the Trezor
+                    All collected data is anonymous and is only used to improve the Cerberus
                     ecosystem.
                 </RowDescription>
             }

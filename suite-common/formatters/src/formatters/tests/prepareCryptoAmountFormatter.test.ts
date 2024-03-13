@@ -1,5 +1,5 @@
 import { NetworkSymbol } from '@suite-common/wallet-config';
-import { PROTO } from '@trezor/connect';
+import { PROTO } from '@cerberus/connect';
 
 import { prepareCryptoAmountFormatter } from '../prepareCryptoAmountFormatter';
 

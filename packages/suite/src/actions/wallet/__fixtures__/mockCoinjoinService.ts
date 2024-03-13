@@ -2,7 +2,7 @@ import { EventEmitter } from 'events';
 
 export const mockCoinjoinService = () => {
     const allowed = ['btc', 'test'];
-    const clients: Record<string, any> = {}; // @trezor/coinjoin CoinjoinClient
+    const clients: Record<string, any> = {}; // @cerberus/coinjoin CoinjoinClient
     const clientEmitter = new EventEmitter();
     clientEmitter.setMaxListeners(Infinity);
 

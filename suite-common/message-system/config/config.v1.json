@@ -30,16 +30,16 @@
                 "variant": "critical",
                 "category": "banner",
                 "content": {
-                    "en-GB": "Essential update of Trezor Suite is required for your new Trezor Safe 3.",
-                    "en": "Essential update of Trezor Suite is required for your new Trezor Safe 3.",
-                    "es": "Es necesario que actualices Trezor Suite para tu nuevo Trezor Safe 3.",
-                    "cs": "Pro nový Trezor Safe 3 je nutná aktualizace Trezor Suite.",
-                    "ru": "Для нового Trezor Safe 3 требуется обновление Trezor Suite.",
-                    "ja": "新しいTrezor Safe 3を使用するには、Trezor Suiteの必須アップデートが必要です。",
-                    "hu": "A Trezor Suite alapvető frissítése szükséges az új Trezor Safe 3 készülékhez.",
-                    "it": "Per il nuovo Trezor Safe 3 è necessario un aggiornamento essenziale di Trezor Suite.",
-                    "fr": "Une mise à jour essentielle de Trezor Suite est nécessaire pour votre nouveau portefeuille Trezor Safe 3.",
-                    "de": "Für deinen neuen Trezor Safe 3 ist ein wichtiges Update der Trezor Suite erforderlich."
+                    "en-GB": "Essential update of Cerberus Suite is required for your new Cerberus Safe 3.",
+                    "en": "Essential update of Cerberus Suite is required for your new Cerberus Safe 3.",
+                    "es": "Es necesario que actualices Cerberus Suite para tu nuevo Cerberus Safe 3.",
+                    "cs": "Pro nový Cerberus Safe 3 je nutná aktualizace Cerberus Suite.",
+                    "ru": "Для нового Cerberus Safe 3 требуется обновление Cerberus Suite.",
+                    "ja": "新しいTrezor Safe 3を使用するには、Cerberus Suiteの必須アップデートが必要です。",
+                    "hu": "A Cerberus Suite alapvető frissítése szükséges az új Cerberus Safe 3 készülékhez.",
+                    "it": "Per il nuovo Cerberus Safe 3 è necessario un aggiornamento essenziale di Cerberus Suite.",
+                    "fr": "Une mise à jour essentielle de Cerberus Suite est nécessaire pour votre nouveau portefeuille Cerberus Safe 3.",
+                    "de": "Für deinen neuen Cerberus Safe 3 ist ein wichtiges Update der Cerberus Suite erforderlich."
                 },
                 "cta": {
                     "action": "internal-link",
@@ -87,16 +87,16 @@
                 "variant": "critical",
                 "category": "banner",
                 "content": {
-                    "en-GB": "An update is available for your Trezor device. Make sure you’ve got your recovery seed ready as you’ll need it to regain access to your coins.",
-                    "en": "An update is available for your Trezor device. Make sure you’ve got your recovery seed ready as you’ll need it to regain access to your coins.",
-                    "es": "Hay una actualización disponible para tu dispositivo Trezor. Asegúrate de que la semilla de recuperación está lista, ya que la necesitarás para recuperar el acceso a tus monedas.",
-                    "cs": "Pro zařízení Trezor je k dispozici aktualizace. Ujistěte se, že máte připravený recovery seed, protože jej budete potřebovat k obnovení přístupu k mincím.",
-                    "ru": "Для устройства Trezor доступно обновление. Убедитесь, что у вас наготове семена восстановления, поскольку они понадобятся для восстановления доступа к монетам.",
+                    "en-GB": "An update is available for your Cerberus device. Make sure you’ve got your recovery seed ready as you’ll need it to regain access to your coins.",
+                    "en": "An update is available for your Cerberus device. Make sure you’ve got your recovery seed ready as you’ll need it to regain access to your coins.",
+                    "es": "Hay una actualización disponible para tu dispositivo Cerberus. Asegúrate de que la semilla de recuperación está lista, ya que la necesitarás para recuperar el acceso a tus monedas.",
+                    "cs": "Pro zařízení Cerberus je k dispozici aktualizace. Ujistěte se, že máte připravený recovery seed, protože jej budete potřebovat k obnovení přístupu k mincím.",
+                    "ru": "Для устройства Cerberus доступно обновление. Убедитесь, что у вас наготове семена восстановления, поскольку они понадобятся для восстановления доступа к монетам.",
                     "ja": "お使いのTrezorデバイスにアップデートが提供されています。コインへのアクセスを回復するにはリカバリーのシードが必要です。",
-                    "hu": "Frissítés érhető el a Trezor készülékéhez. Győződjön meg róla, hogy készenlétben tartja a helyreállítási magot, mivel szüksége lesz rá, hogy újra hozzáférjen az érméihez.",
-                    "it": "È disponibile un aggiornamento per il vostro dispositivo Trezor. Assicuratevi di avere pronto il seme di ripristino, che vi servirà per riavere accesso alle monete.",
-                    "fr": "Une mise à jour est disponible pour votre dispositif Trezor. Assurez-vous d’avoir votre seed de récupération à portée de main, car vous en aurez besoin pour accéder à nouveau à vos coins.",
-                    "de": "Es gibt ein Update für dein Trezor Gerät. Halte deinen Recovery Seed bereit. Du brauchst ihn, um wieder auf deine Coins zuzugreifen."
+                    "hu": "Frissítés érhető el a Cerberus készülékéhez. Győződjön meg róla, hogy készenlétben tartja a helyreállítási magot, mivel szüksége lesz rá, hogy újra hozzáférjen az érméihez.",
+                    "it": "È disponibile un aggiornamento per il vostro dispositivo Cerberus. Assicuratevi di avere pronto il seme di ripristino, che vi servirà per riavere accesso alle monete.",
+                    "fr": "Une mise à jour est disponible pour votre dispositif Cerberus. Assurez-vous d’avoir votre seed de récupération à portée de main, car vous en aurez besoin pour accéder à nouveau à vos coins.",
+                    "de": "Es gibt ein Update für dein Cerberus Gerät. Halte deinen Recovery Seed bereit. Du brauchst ihn, um wieder auf deine Coins zuzugreifen."
                 },
                 "cta": {
                     "action": "internal-link",
@@ -275,31 +275,31 @@
                 "variant": "critical",
                 "category": "banner",
                 "content": {
-                    "en-GB": "Update required! Install the latest version of Trezor Suite for enhanced security and an improved user experience.",
-                    "en": "Update required! Install the latest version of Trezor Suite for enhanced security and an improved user experience.",
-                    "es": "Es necesaria una actualización. Instala la última versión de Trezor Suite para mejorar la seguridad y la experiencia de usuario.",
-                    "cs": "Nutná aktualizace! Nainstalujte si nejnovější verzi Trezor Suite a získejte lepší zabezpečení a komfortnější používání.",
-                    "ru": "Требуется обновление! Установите последнюю версию Trezor Suite для улучшения безопасности и удобства использования.",
-                    "ja": "アップデートが必要です！Trezor Suiteの最新バージョンをインストールして、セキュリティと使いやすさを向上させましょう。",
-                    "hu": "Frissítés szükséges! Telepítse a Trezor Suite legújabb verzióját a nagyobb biztonság és a jobb felhasználói élmény érdekében.",
-                    "it": "È necessario un aggiornamento! Installate l'ultima versione di Trezor Suite per una maggiore sicurezza e una migliore esperienza d'uso.",
-                    "fr": "Mise à jour requise ! Installez la dernière version de Trezor Suite pour une sécurité renforcée et une expérience utilisateur améliorée.",
-                    "de": "Update erforderlich! Installiere die neueste Version von Trezor Suite, um Sicherheit und Benutzerfreundlichkeit zu verbessern."
+                    "en-GB": "Update required! Install the latest version of Cerberus Suite for enhanced security and an improved user experience.",
+                    "en": "Update required! Install the latest version of Cerberus Suite for enhanced security and an improved user experience.",
+                    "es": "Es necesaria una actualización. Instala la última versión de Cerberus Suite para mejorar la seguridad y la experiencia de usuario.",
+                    "cs": "Nutná aktualizace! Nainstalujte si nejnovější verzi Cerberus Suite a získejte lepší zabezpečení a komfortnější používání.",
+                    "ru": "Требуется обновление! Установите последнюю версию Cerberus Suite для улучшения безопасности и удобства использования.",
+                    "ja": "アップデートが必要です！Cerberus Suiteの最新バージョンをインストールして、セキュリティと使いやすさを向上させましょう。",
+                    "hu": "Frissítés szükséges! Telepítse a Cerberus Suite legújabb verzióját a nagyobb biztonság és a jobb felhasználói élmény érdekében.",
+                    "it": "È necessario un aggiornamento! Installate l'ultima versione di Cerberus Suite per una maggiore sicurezza e una migliore esperienza d'uso.",
+                    "fr": "Mise à jour requise ! Installez la dernière version de Cerberus Suite pour une sécurité renforcée et une expérience utilisateur améliorée.",
+                    "de": "Update erforderlich! Installiere die neueste Version von Cerberus Suite, um Sicherheit und Benutzerfreundlichkeit zu verbessern."
                 },
                 "cta": {
                     "action": "external-link",
-                    "link": "https://trezor.io/trezor-suite",
+                    "link": "https://cerberus.uraanai.com/trezor-suite",
                     "label": {
-                        "en-GB": "Go to trezor.io/trezor-suite",
-                        "en": "Go to trezor.io/trezor-suite",
-                        "es": "Visita trezor.io/trezor-suite",
-                        "cs": "Přejít na trezor.io/trezor-suite",
-                        "ru": "Перейти на trezor.io/trezor-suite",
-                        "ja": "trezor.io/trezor-suite に移動",
-                        "hu": "Tovább a trezor.io/trezor-suite oldalra",
-                        "it": "Vai a trezor.io/trezor-suite",
-                        "fr": "Accédez à trezor.io/trezor-suite",
-                        "de": "Gehe zu trezor.io/trezor-suite"
+                        "en-GB": "Go to cerberus.uraanai.com/trezor-suite",
+                        "en": "Go to cerberus.uraanai.com/trezor-suite",
+                        "es": "Visita cerberus.uraanai.com/trezor-suite",
+                        "cs": "Přejít na cerberus.uraanai.com/trezor-suite",
+                        "ru": "Перейти на cerberus.uraanai.com/trezor-suite",
+                        "ja": "cerberus.uraanai.com/trezor-suite に移動",
+                        "hu": "Tovább a cerberus.uraanai.com/trezor-suite oldalra",
+                        "it": "Vai a cerberus.uraanai.com/trezor-suite",
+                        "fr": "Accédez à cerberus.uraanai.com/trezor-suite",
+                        "de": "Gehe zu cerberus.uraanai.com/trezor-suite"
                     }
                 }
             }
@@ -321,16 +321,16 @@
                 "variant": "warning",
                 "category": "banner",
                 "content": {
-                    "en-GB": "Update Trezor Suite for enhanced security, all the latest features, and to keep everything running as smoothly as possible.",
-                    "en": "Update Trezor Suite for enhanced security, all the latest features, and to keep everything running as smoothly as possible.",
-                    "es": "Actualiza Trezor Suite para mejorar la seguridad, disfrutar de las funciones más recientes y para que todo funcione sin problemas.",
-                    "cs": "Aktualizujte Trezor Suite, abyste získali lepší zabezpečení a nejnovější funkce.",
-                    "ru": "Обновите Trezor Suite, чтобы улучшить безопасность, использовать все новейшие функции и обеспечить максимально эффективную работу.",
-                    "ja": "Trezor Suiteをアップデートすることで、セキュリティの強化、最新機能の搭載、スムーズな動作が可能になります。",
-                    "hu": "Frissítse a Trezor Suite-ot a fokozott biztonság, a legújabb funkciók és a lehető leggördülékenyebb működés érdekében.",
-                    "it": "Aggiornate Trezor Suite per ottenere una maggiore sicurezza, tutte le funzioni più recenti e per far funzionare tutto nel modo più fluido possibile.",
-                    "fr": "Mettez à jour Trezor Suite pour bénéficier d’une sécurité renforcée, de toutes les dernières fonctionnalités, et pour garantir un fonctionnement optimal.",
-                    "de": "Aktualisiere Trezor Suite für mehr Sicherheit, neue Funktionen und reibungslose Abläufe."
+                    "en-GB": "Update Cerberus Suite for enhanced security, all the latest features, and to keep everything running as smoothly as possible.",
+                    "en": "Update Cerberus Suite for enhanced security, all the latest features, and to keep everything running as smoothly as possible.",
+                    "es": "Actualiza Cerberus Suite para mejorar la seguridad, disfrutar de las funciones más recientes y para que todo funcione sin problemas.",
+                    "cs": "Aktualizujte Cerberus Suite, abyste získali lepší zabezpečení a nejnovější funkce.",
+                    "ru": "Обновите Cerberus Suite, чтобы улучшить безопасность, использовать все новейшие функции и обеспечить максимально эффективную работу.",
+                    "ja": "Cerberus Suiteをアップデートすることで、セキュリティの強化、最新機能の搭載、スムーズな動作が可能になります。",
+                    "hu": "Frissítse a Cerberus Suite-ot a fokozott biztonság, a legújabb funkciók és a lehető leggördülékenyebb működés érdekében.",
+                    "it": "Aggiornate Cerberus Suite per ottenere una maggiore sicurezza, tutte le funzioni più recenti e per far funzionare tutto nel modo più fluido possibile.",
+                    "fr": "Mettez à jour Cerberus Suite pour bénéficier d’une sécurité renforcée, de toutes les dernières fonctionnalités, et pour garantir un fonctionnement optimal.",
+                    "de": "Aktualisiere Cerberus Suite für mehr Sicherheit, neue Funktionen und reibungslose Abläufe."
                 },
                 "cta": {
                     "action": "internal-link",
@@ -368,16 +368,16 @@
                 "variant": "critical",
                 "category": "banner",
                 "content": {
-                    "en-GB": "WARNING: You are currently using a fake version of Trezor Suite. EXIT THIS PROGRAM IMMEDIATELY!",
-                    "en": "WARNING: You are currently using a fake version of Trezor Suite. EXIT THIS PROGRAM IMMEDIATELY!",
-                    "es": "ADVERTENCIA: Actualmente estás utilizando una versión falsa de Trezor Suite. CIERRA EL PROGRAMA INMEDIATAMENTE.",
-                    "cs": "VAROVÁNÍ: Momentálně používáte falešnou verzi Trezor Suite. OKAMŽITĚ UKONČETE TENTO PROGRAM!",
-                    "ru": "ВНИМАНИЕ: Вы сейчас используете поддельную версию Trezor Suite. НЕМЕДЛЕННО ВЫЙДИТЕ ИЗ ЭТОЙ ПРОГРАММЫ!",
-                    "ja": "警告：あなたは現在、Trezor Suiteの偽バージョンを使用しています。このプログラムを直ちに終了してください。",
-                    "hu": "FIGYELMEZTETÉS: Ön jelenleg a Trezor Suite hamis verzióját használja. AZONNAL LÉPJEN KI A PROGRAMBÓL!",
-                    "it": "AVVERTENZA: Si sta utilizzando una versione contraffatta di Trezor Suite. USCITE IMMEDIATAMENTE DA QUESTO PROGRAMMA!",
-                    "fr": "AVERTISSEMENT : vous utilisez actuellement une version contrefaite de Trezor Suite. QUITTEZ CE PROGRAMME IMMÉDIATEMENT !",
-                    "de": "WARNUNG: Du verwendest momentan eine gefälschte Version von Trezor Suite. BEENDE DIESES PROGRAMM SOFORT!"
+                    "en-GB": "WARNING: You are currently using a fake version of Cerberus Suite. EXIT THIS PROGRAM IMMEDIATELY!",
+                    "en": "WARNING: You are currently using a fake version of Cerberus Suite. EXIT THIS PROGRAM IMMEDIATELY!",
+                    "es": "ADVERTENCIA: Actualmente estás utilizando una versión falsa de Cerberus Suite. CIERRA EL PROGRAMA INMEDIATAMENTE.",
+                    "cs": "VAROVÁNÍ: Momentálně používáte falešnou verzi Cerberus Suite. OKAMŽITĚ UKONČETE TENTO PROGRAM!",
+                    "ru": "ВНИМАНИЕ: Вы сейчас используете поддельную версию Cerberus Suite. НЕМЕДЛЕННО ВЫЙДИТЕ ИЗ ЭТОЙ ПРОГРАММЫ!",
+                    "ja": "警告：あなたは現在、Cerberus Suiteの偽バージョンを使用しています。このプログラムを直ちに終了してください。",
+                    "hu": "FIGYELMEZTETÉS: Ön jelenleg a Cerberus Suite hamis verzióját használja. AZONNAL LÉPJEN KI A PROGRAMBÓL!",
+                    "it": "AVVERTENZA: Si sta utilizzando una versione contraffatta di Cerberus Suite. USCITE IMMEDIATAMENTE DA QUESTO PROGRAMMA!",
+                    "fr": "AVERTISSEMENT : vous utilisez actuellement une version contrefaite de Cerberus Suite. QUITTEZ CE PROGRAMME IMMÉDIATEMENT !",
+                    "de": "WARNUNG: Du verwendest momentan eine gefälschte Version von Cerberus Suite. BEENDE DIESES PROGRAMM SOFORT!"
                 }
             }
         },
@@ -609,16 +609,16 @@
                 "variant": "critical",
                 "category": "banner",
                 "content": {
-                    "en-GB": "CAUTION: Unofficial firmware detected! Your Trezor may be counterfeit. Contact help@trezor.io immediately.",
-                    "en": "CAUTION: Unofficial firmware detected! Your Trezor may be counterfeit. Contact help@trezor.io immediately.",
-                    "es": "ATENCIÓN: Se ha detectado un firmware no oficial. Tu Trezor puede ser una falsificación. Ponte en contacto con help@trezor.io inmediatamente.",
-                    "cs": "UPOZORNĚNÍ: Byl detekován neoficiální firmware! Váš Trezor může být padělaný. Okamžitě kontaktujte help@trezor.io.",
-                    "ru": "ВНИМАНИЕ: Обнаружено неофициальное ПО! Ваш Trezor может быть подделкой. Свяжитесь с нами немедленно на help@trezor.io.",
-                    "ja": "注意：非公式のファームウェアが検出されました！お使いのTrezorは偽物かもしれません。直ちにhelp@trezor.ioに連絡してください。",
-                    "hu": "FIGYELEM: Nem hivatalos firmware-t észleltek! Lehet, hogy a Trezorod hamisítvány. Azonnal lépjen kapcsolatba a help@trezor.io címen.",
-                    "it": "ATTENZIONE: rilevato un firmware non ufficiale! Il vostro Trezor potrebbe essere contraffatto. Contattare immediatamente help@trezor.io.",
-                    "fr": "ATTENTION : micrologiciel non officiel détecté ! Votre Trezor est peut-être une contrefaçon. Contactez immédiatement help@trezor.io.",
-                    "de": "ACHTUNG: Inoffizielle Firmware erkannt! Dein Trezor könnte eine Fälschung sein. Wende dich sofort an help@trezor.io."
+                    "en-GB": "CAUTION: Unofficial firmware detected! Your Cerberus may be counterfeit. Contact help@cerberus.uraanai.com immediately.",
+                    "en": "CAUTION: Unofficial firmware detected! Your Cerberus may be counterfeit. Contact help@cerberus.uraanai.com immediately.",
+                    "es": "ATENCIÓN: Se ha detectado un firmware no oficial. Tu Cerberus puede ser una falsificación. Ponte en contacto con help@cerberus.uraanai.com inmediatamente.",
+                    "cs": "UPOZORNĚNÍ: Byl detekován neoficiální firmware! Váš Cerberus může být padělaný. Okamžitě kontaktujte help@cerberus.uraanai.com.",
+                    "ru": "ВНИМАНИЕ: Обнаружено неофициальное ПО! Ваш Cerberus может быть подделкой. Свяжитесь с нами немедленно на help@cerberus.uraanai.com.",
+                    "ja": "注意：非公式のファームウェアが検出されました！お使いのTrezorは偽物かもしれません。直ちにhelp@cerberus.uraanai.comに連絡してください。",
+                    "hu": "FIGYELEM: Nem hivatalos firmware-t észleltek! Lehet, hogy a Trezorod hamisítvány. Azonnal lépjen kapcsolatba a help@cerberus.uraanai.com címen.",
+                    "it": "ATTENZIONE: rilevato un firmware non ufficiale! Il vostro Cerberus potrebbe essere contraffatto. Contattare immediatamente help@cerberus.uraanai.com.",
+                    "fr": "ATTENTION : micrologiciel non officiel détecté ! Votre Cerberus est peut-être une contrefaçon. Contactez immédiatement help@cerberus.uraanai.com.",
+                    "de": "ACHTUNG: Inoffizielle Firmware erkannt! Dein Cerberus könnte eine Fälschung sein. Wende dich sofort an help@cerberus.uraanai.com."
                 }
             }
         },
@@ -802,16 +802,16 @@
                 "variant": "critical",
                 "category": "banner",
                 "content": {
-                    "en-GB": "Update required! This version of Trezor Suite isn’t compatible with your device. Update to continue.",
-                    "en": "Update required! This version of Trezor Suite isn’t compatible with your device. Update to continue.",
-                    "es": "Es necesaria una actualización. Esta versión de Trezor Suite no es compatible con tu dispositivo. Instala la actualización para continuar.",
-                    "cs": "Nutná aktualizace! Tato verze Trezor Suite není kompatibilní s vaším zařízením. Chcete-li pokračovat, proveďte aktualizaci.",
-                    "ru": "Требуется обновление! Данная версия Trezor Suite несовместима с вашим устройством. Обновите программу, чтобы продолжить.",
+                    "en-GB": "Update required! This version of Cerberus Suite isn’t compatible with your device. Update to continue.",
+                    "en": "Update required! This version of Cerberus Suite isn’t compatible with your device. Update to continue.",
+                    "es": "Es necesaria una actualización. Esta versión de Cerberus Suite no es compatible con tu dispositivo. Instala la actualización para continuar.",
+                    "cs": "Nutná aktualizace! Tato verze Cerberus Suite není kompatibilní s vaším zařízením. Chcete-li pokračovat, proveďte aktualizaci.",
+                    "ru": "Требуется обновление! Данная версия Cerberus Suite несовместима с вашим устройством. Обновите программу, чтобы продолжить.",
                     "ja": "アップデートが必要です！このバージョンのTrezor Suiteは、お使いのデバイスと互換性がありません。続行するには、アップデートしてください。",
-                    "hu": "Frissítés szükséges! A Trezor Suite ezen verziója nem kompatibilis az Ön készülékével. A folytatáshoz frissítsen.",
-                    "it": "È necessario un aggiornamento! Questa versione di Trezor Suite non è compatibile con il vostro dispositivo. Aggiornare per continuare.",
-                    "fr": "Mise à jour requise ! Cette version de Trezor Suite n’est pas compatible avec votre dispositif. Procédez à la mise à jour pour continuer.",
-                    "de": "Update erforderlich! Diese Version von Trezor Suite ist nicht mit deinem Gerät kompatibel. Aktualisiere, um fortzufahren."
+                    "hu": "Frissítés szükséges! A Cerberus Suite ezen verziója nem kompatibilis az Ön készülékével. A folytatáshoz frissítsen.",
+                    "it": "È necessario un aggiornamento! Questa versione di Cerberus Suite non è compatibile con il vostro dispositivo. Aggiornare per continuare.",
+                    "fr": "Mise à jour requise ! Cette version de Cerberus Suite n’est pas compatible avec votre dispositif. Procédez à la mise à jour pour continuer.",
+                    "de": "Update erforderlich! Diese Version von Cerberus Suite ist nicht mit deinem Gerät kompatibel. Aktualisiere, um fortzufahren."
                 },
                 "cta": {
                     "action": "internal-link",

@@ -12,7 +12,7 @@ import {
 } from 'react';
 import { createPortal } from 'react-dom';
 import styled from 'styled-components';
-import { useOnClickOutside } from '@trezor/react-utils';
+import { useOnClickOutside } from '@cerberus/react-utils';
 import { Menu, MenuProps, DropdownMenuItemProps } from './Menu';
 import { Coords, getAdjustedCoords } from './getAdjustedCoords';
 import { IconButton } from '../buttons/IconButton/IconButton';

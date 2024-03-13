@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { variables, Spinner, Button, Link } from '@trezor/components';
+import { variables, Spinner, Button, Link } from '@cerberus/components';
 import { Translation } from 'src/components/suite/Translation';
 
 const Wrapper = styled.div`

@@ -1,6 +1,6 @@
 import { PROTO } from '../../../constants';
 import { DerivationPath } from '../../params';
-import { Type, Static } from '@trezor/schema-utils';
+import { Type, Static } from '@cerberus/schema-utils';
 
 // BinanceSDKTransaction from https://github.com/binance-chain/javascript-sdk/blob/master/src/tx/index.js
 

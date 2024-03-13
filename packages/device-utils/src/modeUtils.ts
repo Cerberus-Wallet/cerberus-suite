@@ -1,4 +1,4 @@
-import { Device } from '@trezor/connect';
+import { Device } from '@cerberus/connect';
 
 export const isDeviceInBootloaderMode = (device?: Device) => !!device?.features?.bootloader_mode;
 

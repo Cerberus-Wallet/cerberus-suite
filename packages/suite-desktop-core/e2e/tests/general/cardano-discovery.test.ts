@@ -5,7 +5,7 @@ import {
     Page,
 } from '@playwright/test';
 
-import { TrezorUserEnvLink } from '@trezor/trezor-user-env-link/src';
+import { TrezorUserEnvLink } from '@cerberus/trezor-user-env-link/src';
 
 import { launchSuite, rmDirRecursive } from '../../support/common';
 import { onDashboardPage } from '../../support/pageActions/dashboardActions';

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Image, SuiteThemeColors } from '@trezor/components';
+import { Image, SuiteThemeColors } from '@cerberus/components';
 import { OnlineStatus } from 'invity-api';
 
 const Wrapper = styled.div`

@@ -7,8 +7,8 @@ import * as SystemUI from 'expo-system-ui';
 import * as NavigationBar from 'expo-navigation-bar';
 import { BottomTabBarHeightContext } from '@react-navigation/bottom-tabs';
 
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
-import { Color, nativeSpacings } from '@trezor/theme';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
+import { Color, nativeSpacings } from '@cerberus/theme';
 import { selectIsAnyBannerMessageActive } from '@suite-common/message-system';
 import { Box } from '@suite-native/atoms';
 

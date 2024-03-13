@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 import { SelectedAccountLoaded } from '@suite-common/wallet-types';
 import { StakeEthFormContext, useStakeEthForm } from 'src/hooks/wallet/useStakeEthForm';
 import { StakeEthForm } from './StakeEthForm/StakeEthForm';

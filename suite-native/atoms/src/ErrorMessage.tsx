@@ -1,4 +1,4 @@
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import { Icon } from '@suite-common/icons';
 
 import { Box } from './Box';

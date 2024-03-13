@@ -10,10 +10,10 @@ const result = await TrezorConnect.pushTransaction(params);
 
 [Optional common params](commonParams.md)
 
-[PushTransaction type](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/pushTransaction.ts)
+[PushTransaction type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/pushTransaction.ts)
 
 -   `tx` - _required_ `string` serialized transaction,
--   `coin` - _required_ `string` Determines network definition specified in [coins.json](https://github.com/trezor/trezor-suite/blob/develop/packages/connect-common/files/coins.json) file. Coin `shortcut`, `name` or `label` can be used.
+-   `coin` - _required_ `string` Determines network definition specified in [coins.json](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect-common/files/coins.json) file. Coin `shortcut`, `name` or `label` can be used.
 
 ### Example
 
@@ -26,7 +26,7 @@ TrezorConnect.pushTransaction({
 
 ### Result
 
-[PushedTransaction type](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/pushTransaction.ts)
+[PushedTransaction type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/pushTransaction.ts)
 
 ```javascript
 {

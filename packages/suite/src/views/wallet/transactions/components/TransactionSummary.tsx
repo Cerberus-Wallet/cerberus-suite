@@ -12,7 +12,7 @@ import { useDispatch, useSelector } from 'src/hooks/suite';
 import { getGraphDataForInterval, updateGraphData } from 'src/actions/wallet/graphActions';
 
 import { calcTicks, calcTicksFromData } from '@suite-common/suite-utils';
-import { variables, Button, Card } from '@trezor/components';
+import { variables, Button, Card } from '@cerberus/components';
 
 import { TransactionSummaryDropdown } from './TransactionSummaryDropdown';
 import { SummaryCards } from './SummaryCards';

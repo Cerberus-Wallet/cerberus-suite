@@ -1,4 +1,4 @@
-import { arrayShuffle } from '@trezor/utils';
+import { arrayShuffle } from '@cerberus/utils';
 
 import * as coordinator from '../coordinator';
 import * as middleware from '../middleware';

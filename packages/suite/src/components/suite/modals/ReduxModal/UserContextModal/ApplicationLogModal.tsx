@@ -2,13 +2,13 @@ import { useRef, useState } from 'react';
 import styled from 'styled-components';
 
 import { selectLogs } from '@suite-common/logger';
-import { Switch, Button, variables } from '@trezor/components';
+import { Switch, Button, variables } from '@cerberus/components';
 
 import { ActionColumn, Modal, TextColumn, Translation } from 'src/components/suite';
 import { SectionItem } from 'src/components/suite/section';
 import { useSelector } from 'src/hooks/suite';
 import { getApplicationInfo, getApplicationLog, prettifyLog } from 'src/utils/suite/logsUtils';
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 
 const LogWrapper = styled.pre`
     padding: 20px;

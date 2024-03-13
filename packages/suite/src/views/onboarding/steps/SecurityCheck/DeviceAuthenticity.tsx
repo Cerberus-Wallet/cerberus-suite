@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { checkDeviceAuthenticityThunk } from '@suite-common/device-authenticity';
 import { selectDevice, selectDeviceAuthenticity } from '@suite-common/wallet-core';
-import { variables } from '@trezor/components';
+import { variables } from '@cerberus/components';
 
 import { OnboardingButtonCta, OnboardingStepBox } from 'src/components/onboarding';
 import { CollapsibleOnboardingCard } from 'src/components/onboarding/CollapsibleOnboardingCard';

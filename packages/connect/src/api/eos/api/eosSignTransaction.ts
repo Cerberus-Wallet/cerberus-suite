@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/EosSignTransaction.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/EosSignTransaction.js
 
 import { AbstractMethod } from '../../../core/AbstractMethod';
 import { getFirmwareRange } from '../../common/paramsValidator';
@@ -6,7 +6,7 @@ import { getMiscNetwork } from '../../../data/coinInfo';
 import { validatePath } from '../../../utils/pathUtils';
 import * as helper from '../eosSignTx';
 import type { PROTO } from '../../../constants';
-import { AssertWeak } from '@trezor/schema-utils';
+import { AssertWeak } from '@cerberus/schema-utils';
 import { EosSignTransaction as EosSignTransactionSchema } from '../../../types/api/eos';
 
 type Params = {

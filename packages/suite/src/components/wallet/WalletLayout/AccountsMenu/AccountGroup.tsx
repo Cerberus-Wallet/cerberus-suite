@@ -1,10 +1,10 @@
 import { useState, forwardRef, useRef, Ref, ReactNode } from 'react';
 import styled, { useTheme } from 'styled-components';
 import { Translation } from 'src/components/suite';
-import { Icon } from '@trezor/components';
+import { Icon } from '@cerberus/components';
 import { Account } from 'src/types/wallet';
 import { AnimationWrapper } from './AnimationWrapper';
-import { spacingsPx, typography } from '@trezor/theme';
+import { spacingsPx, typography } from '@cerberus/theme';
 
 const Container = styled.div`
     padding: ${spacingsPx.xs};

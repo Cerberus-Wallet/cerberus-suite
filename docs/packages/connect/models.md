@@ -2,17 +2,17 @@
 
 ## The pipeline
 
-Do not change `@trezor/connect/src/data/models.ts` manually.
+Do not change `@cerberus/connect/src/data/models.ts` manually.
 
-The one and only source of truth is `models.json` definition declared and maintained in the [firmware repository](https://github.com/trezor/trezor-firmware/tree/main/common).
+The one and only source of truth is `models.json` definition declared and maintained in the [firmware repository](https://github.com/Cerberus-Wallet/cerberus-firmware/tree/main/common).
 
-These are exported to a read-only [trezor-common](https://github.com/trezor/trezor-common) repository.
+These are exported to a read-only [cerberus-common](https://github.com/Cerberus-Wallet/cerberus-common) repository.
 
-`trezor-common` is included as git submodule mounted at `submodules/trezor-common`.
+`cerberus-common` is included as git submodule mounted at `submodules/cerberus-common`.
 
-## Update and maintenance in @trezor/connect
+## Update and maintenance in @cerberus/connect
 
-1. Update `trezor-common` submodule:
+1. Update `cerberus-common` submodule:
 
 ```
  yarn update-submodules

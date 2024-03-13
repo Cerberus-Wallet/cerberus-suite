@@ -16,7 +16,7 @@ const result = await TrezorConnect.getOwnershipId(params);
 
 -   `path` — _required_ `string | Array<number>` minimum length is `5`. [read more](../path.md)
 -   `coin` - _optional_ `string`
-    > Determines network definition specified in [coins.json](https://github.com/trezor/trezor-suite/blob/develop/packages/connect-common/files/coins.json) file.
+    > Determines network definition specified in [coins.json](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect-common/files/coins.json) file.
     > Coin `shortcut`, `name` or `label` can be used.
 -   `scriptType` — _optional_ `InputScriptType`
 -   `multisig` — _optional_ `MultisigRedeemScriptType`
@@ -49,7 +49,7 @@ TrezorConnect.getOwnershipId({
 
 ### Result
 
-[OwnershipId type](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/getOwnershipId.ts)
+[OwnershipId type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/getOwnershipId.ts)
 
 Result with single id:
 

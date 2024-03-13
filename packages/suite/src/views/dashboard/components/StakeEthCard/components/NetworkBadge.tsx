@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
-import { CoinLogo, CoinType, Paragraph } from '@trezor/components';
+import { CoinLogo, CoinType, Paragraph } from '@cerberus/components';
 
 const Flex = styled.div`
     display: flex;

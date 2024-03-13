@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { borders, spacingsPx } from '@trezor/theme';
+import { borders, spacingsPx } from '@cerberus/theme';
 
 const Container = styled.div<{ maxWidth: number }>`
     display: flex;

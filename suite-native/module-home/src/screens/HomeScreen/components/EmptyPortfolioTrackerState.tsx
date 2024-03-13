@@ -5,7 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 
 import { Text, Card, Image, VStack, Button } from '@suite-native/atoms';
 import { useActiveColorScheme } from '@suite-native/theme';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import { Translation, useTranslate } from '@suite-native/intl';
 import {
     AccountsImportStackRoutes,

@@ -1,6 +1,6 @@
-import { analytics, EventType } from '@trezor/suite-analytics';
-import { LoadingContent, Switch, Tooltip } from '@trezor/components';
-import { HELP_CENTER_LABELING } from '@trezor/urls';
+import { analytics, EventType } from '@cerberus/suite-analytics';
+import { LoadingContent, Switch, Tooltip } from '@cerberus/components';
+import { HELP_CENTER_LABELING } from '@cerberus/urls';
 
 import { ActionColumn, SectionItem, TextColumn, Translation } from 'src/components/suite';
 import { useSelector, useDispatch, useDevice, useDiscovery } from 'src/hooks/suite';

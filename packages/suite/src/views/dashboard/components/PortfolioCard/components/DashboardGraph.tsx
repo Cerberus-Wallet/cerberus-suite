@@ -3,7 +3,7 @@ import { memo, useState, useEffect, useCallback } from 'react';
 import { getUnixTime } from 'date-fns';
 import styled from 'styled-components';
 
-import { variables, Button } from '@trezor/components';
+import { variables, Button } from '@cerberus/components';
 import { calcTicks, calcTicksFromData } from '@suite-common/suite-utils';
 import { selectDevice } from '@suite-common/wallet-core';
 

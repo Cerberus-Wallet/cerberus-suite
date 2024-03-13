@@ -5,9 +5,9 @@ import { goto } from 'src/actions/suite/routerActions';
 import { Translation } from 'src/components/suite';
 import { SettingsAnchor } from 'src/constants/suite/anchors';
 import { useDevice, useDispatch } from 'src/hooks/suite';
-import { Box, Button } from '@trezor/components';
-import { hasBitcoinOnlyFirmware } from '@trezor/device-utils';
-import { spacingsPx, typography } from '@trezor/theme';
+import { Box, Button } from '@cerberus/components';
+import { hasBitcoinOnlyFirmware } from '@cerberus/device-utils';
+import { spacingsPx, typography } from '@cerberus/theme';
 
 const Row = styled.div`
     display: flex;

@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/CardanoGetPublicKey.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/CardanoGetPublicKey.js
 
 import { PROTO } from '../../../constants';
 import { AbstractMethod, MethodReturnType } from '../../../core/AbstractMethod';
@@ -6,7 +6,7 @@ import { getFirmwareRange } from '../../common/paramsValidator';
 import { getMiscNetwork } from '../../../data/coinInfo';
 import { validatePath, fromHardened, getSerializedPath } from '../../../utils/pathUtils';
 import { UI, createUiMessage } from '../../../events';
-import { Assert } from '@trezor/schema-utils';
+import { Assert } from '@cerberus/schema-utils';
 import { Bundle } from '../../../types';
 import { CardanoGetPublicKey as CardanoGetPublicKeySchema } from '../../../types/api/cardano';
 

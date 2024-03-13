@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styled, { useTheme } from 'styled-components';
 import { QuestionTooltip, Translation } from 'src/components/suite';
-import { variables, Button, Select, Icon } from '@trezor/components';
+import { variables, Button, Select, Icon } from '@cerberus/components';
 import { useCoinmarketSellOffersContext } from 'src/hooks/wallet/useCoinmarketSellOffers';
 import { BankAccount } from 'invity-api';
 import { formatIban } from 'src/utils/wallet/coinmarket/sellUtils';

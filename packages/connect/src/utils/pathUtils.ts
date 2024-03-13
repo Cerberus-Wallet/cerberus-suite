@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/utils/pathUtils.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/utils/pathUtils.js
 
 import { PROTO, ERRORS } from '../constants';
 import type {

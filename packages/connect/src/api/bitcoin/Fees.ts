@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/tx/Fees.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/tx/Fees.js
 
 import BigNumber from 'bignumber.js';
 import { Blockchain } from '../../backend/BlockchainLink';
@@ -69,7 +69,7 @@ export class FeeLevels {
     coinInfo: CoinInfo;
 
     levels: FeeLevel[];
-    longTermFeeRate?: string; // long term fee rate is used by @trezor/utxo-lib composeTx module
+    longTermFeeRate?: string; // long term fee rate is used by @cerberus/utxo-lib composeTx module
 
     blocks: Blocks = [];
 
@@ -88,7 +88,7 @@ export class FeeLevels {
                 // validate `feePerUnit` from the backend
                 // should be lower than `coinInfo.maxFee` and higher than `coinInfo.minFee`
                 // xrp sends values from 1 to very high number occasionally
-                // see: https://github.com/trezor/trezor-suite/blob/develop/packages/blockchain-link/src/workers/ripple/index.ts#L316
+                // see: https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/blockchain-link/src/workers/ripple/index.ts#L316
                 feePerUnit: Math.min(
                     this.coinInfo.maxFee,
                     Math.max(this.coinInfo.minFee, parseInt(response.feePerUnit, 10)),

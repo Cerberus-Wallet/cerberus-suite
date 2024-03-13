@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import { EdgeInsets, useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 
 import { Box, BoxProps } from './Box';
 

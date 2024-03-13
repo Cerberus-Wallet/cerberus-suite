@@ -23,13 +23,13 @@ const result = await TrezorConnect.authorizeCoinjoin(params);
 -   `coordinator` — _required_ `string`
     > coordinator identifier to approve as a prefix in commitment data (max. 36 ASCII characters)
 -   `maxRounds` — _required_ `number`
-    > maximum number of rounds that Trezor is authorized to take part in
+    > maximum number of rounds that Cerberus is authorized to take part in
 -   `maxCoordinatorFeeRate` — _required_ `number`
     > maximum coordination fee rate in units of 10\*\*6 percent
 -   `maxFeePerKvbyte` — _required_ `number`
     > maximum mining fee rate in units of satoshis per 1000 vbytes
 -   `coin` - _optional_ `string`
-    > Determines network definition specified in [coins.json](https://github.com/trezor/trezor-suite/blob/develop/packages/connect-common/files/coins.json) file.
+    > Determines network definition specified in [coins.json](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect-common/files/coins.json) file.
     > Coin `shortcut`, `name` or `label` can be used.
 -   `scriptType` — _optional_ `PROTO.InputScriptType`
     > used to distinguish between various address formats (non-segwit, segwit, etc.)

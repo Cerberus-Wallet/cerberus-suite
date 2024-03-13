@@ -1,6 +1,6 @@
 import { runCLI } from 'jest';
 
-import { TrezorUserEnvLink } from '@trezor/trezor-user-env-link';
+import { TrezorUserEnvLink } from '@cerberus/trezor-user-env-link';
 
 import argv from './jest.config';
 

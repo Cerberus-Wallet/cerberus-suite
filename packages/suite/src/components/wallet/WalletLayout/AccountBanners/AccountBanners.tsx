@@ -10,7 +10,7 @@ import { AccountOutOfSync } from './AccountOutOfSync';
 import { TorDisconnected } from './TorDisconnected';
 import { CoinjoinContextMessage } from './CoinjoinContextMessage';
 import { StakeEthBanner } from './StakeEthBanner';
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 import { EvmExplanationBanner } from './EvmExplanationBanner';
 import { TaprootBanner } from './TaprootBanner';
 

@@ -1,7 +1,7 @@
 ## Stellar: Sign transaction
 
 Asks device to sign given transaction. User is asked to confirm all transaction
-details on Trezor.
+details on Cerberus.
 
 ```javascript
 const result = await TrezorConnect.stellarSignTransaction(params);
@@ -11,16 +11,16 @@ const result = await TrezorConnect.stellarSignTransaction(params);
 
 [Optional common params](commonParams.md)
 
-[StellarSignTransaction type](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/stellar/index.ts)
+[StellarSignTransaction type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/stellar/index.ts)
 
 -   `path` — _required_ `string | Array<number>` minimum length is `3`. [read more](../path.md)
 -   `networkPassphrase` - _required_ `string` network passphrase
--   `transaction` - _required_ `Object` type of [StellarTransaction](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/stellar/index.ts)
+-   `transaction` - _required_ `Object` type of [StellarTransaction](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/stellar/index.ts)
 
 ### Stellar SDK compatibility
 
 `@stellar/stellar-sdk` is not a part of `trezor-connect` repository.
-To transform `StellarSDK.Transaction` object into `TrezorConnect.StellarTransaction`, install [@trezor/connect-plugin-stellar](https://github.com/trezor/trezor-suite/tree/develop/packages/connect-plugin-stellar) into your project.
+To transform `StellarSDK.Transaction` object into `TrezorConnect.StellarTransaction`, install [@cerberus/connect-plugin-stellar](https://github.com/Cerberus-Wallet/cerberus-suite/tree/develop/packages/connect-plugin-stellar) into your project.
 
 ```javascript
 import * as StellarSDK from '@stellar/stellar-sdk';
@@ -65,7 +65,7 @@ TrezorConnect.stellarSignTransaction(
 
 ### Result
 
-[StellarSignedTx type](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/stellar/index.ts)
+[StellarSignedTx type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/stellar/index.ts)
 
 ```javascript
 {

@@ -3,9 +3,9 @@ import { UseFormReturn, Control, Controller } from 'react-hook-form';
 import type { MenuPlacement } from 'react-select';
 import styled from 'styled-components';
 
-import type { AccountAddress } from '@trezor/connect';
+import type { AccountAddress } from '@cerberus/connect';
 import { Translation, FiatValue, FormattedCryptoAmount } from 'src/components/suite';
-import { variables, Select } from '@trezor/components';
+import { variables, Select } from '@cerberus/components';
 import { formatNetworkAmount } from '@suite-common/wallet-utils';
 import type { Account } from 'src/types/wallet';
 import { useAccountAddressDictionary } from 'src/hooks/wallet/useAccounts';

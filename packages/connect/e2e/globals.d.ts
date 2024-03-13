@@ -11,7 +11,7 @@ declare namespace globalThis {
         version: string;
     };
 
-    var Trezor: {
+    var Cerberus: {
         getController: (testName?: string) => any;
         setup: (controller: any, options: any) => any;
         skipTest: (rules: any) => any;

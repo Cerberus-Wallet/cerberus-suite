@@ -8,7 +8,7 @@ import {
     SendContextValues,
     FormState,
 } from '@suite-common/wallet-types';
-import type { AccountUtxo, PROTO } from '@trezor/connect';
+import type { AccountUtxo, PROTO } from '@cerberus/connect';
 import { getUtxoOutpoint, isSameUtxo } from '@suite-common/wallet-utils';
 import { useCoinjoinRegisteredUtxos } from './useCoinjoinRegisteredUtxos';
 

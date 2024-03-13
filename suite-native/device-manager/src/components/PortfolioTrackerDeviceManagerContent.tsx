@@ -45,7 +45,7 @@ export const PortfolioTrackerDeviceManagerContent = () => {
     };
 
     const handleOpenEduLink = () => {
-        openLink('https://trezor.io/learn');
+        openLink('https://cerberus.uraanai.com/learn');
         analytics.report({
             type: EventType.DeviceManagerClick,
             payload: { action: 'educationLink' },
@@ -53,7 +53,7 @@ export const PortfolioTrackerDeviceManagerContent = () => {
     };
 
     const handleOpenEshopLink = () => {
-        openLink('https://trezor.io/');
+        openLink('https://cerberus.uraanai.com/');
         analytics.report({
             type: EventType.DeviceManagerClick,
             payload: { action: 'eshopLink' },

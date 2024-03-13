@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { BuyTrade, BuyProviderInfo } from 'invity-api';
-import { variables, CoinLogo } from '@trezor/components';
+import { variables, CoinLogo } from '@cerberus/components';
 import {
     CoinmarketPaymentType,
     CoinmarketProviderInfo,

@@ -9,7 +9,7 @@ import {
     getOsVersion,
     getSuiteVersion,
     Environment as EnvironmentType,
-} from '@trezor/env-utils';
+} from '@cerberus/env-utils';
 import type {
     TrezorDevice,
     Duration,
@@ -22,12 +22,12 @@ import type {
     Environment,
 } from '@suite-common/suite-types';
 import type { Network } from '@suite-common/wallet-config';
-import type { TransportInfo } from '@trezor/connect';
+import type { TransportInfo } from '@cerberus/connect';
 import {
     getBootloaderVersion,
     getFirmwareRevision,
     getFirmwareVersion,
-} from '@trezor/device-utils';
+} from '@cerberus/device-utils';
 
 import { ValidMessagesPayload } from './messageSystemActions';
 
@@ -139,7 +139,7 @@ export const validateTransportCompatibility = (
     const { version } = transport;
     const type = transport.type.toLowerCase();
 
-    // transport names were changed in https://github.com/trezor/trezor-suite/pull/7411
+    // transport names were changed in https://github.com/Cerberus-Wallet/cerberus-suite/pull/7411
     // to avoid breaking changes with v1 messaging system schema, we introduce this translation
     let legacyTransportType: 'bridge' | 'webusbplugin' | undefined;
 

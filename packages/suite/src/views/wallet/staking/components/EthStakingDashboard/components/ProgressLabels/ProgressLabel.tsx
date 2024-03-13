@@ -1,8 +1,8 @@
 import { ReactNode, useEffect, useRef, useState } from 'react';
 import styled, { DefaultTheme, useTheme } from 'styled-components';
-import { Icon, variables } from '@trezor/components';
+import { Icon, variables } from '@cerberus/components';
 import { ProgressLabelState } from './types';
-import { borders, spacingsPx } from '@trezor/theme';
+import { borders, spacingsPx } from '@cerberus/theme';
 
 const DEFAULT_LABEL_HEIGHT = 48;
 

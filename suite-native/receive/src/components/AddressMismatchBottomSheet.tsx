@@ -16,7 +16,7 @@ export const AddressMismatchBottomSheet = ({
     const openLink = useOpenLink();
     const { translate } = useTranslate();
 
-    const handleOpenSupportLink = () => openLink('https://trezor.io/learn/c/trezor-suite-lite');
+    const handleOpenSupportLink = () => openLink('https://cerberus.uraanai.com/learn/c/trezor-suite-lite');
 
     return (
         <BottomSheet

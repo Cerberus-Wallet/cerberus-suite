@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import styled, { useTheme } from 'styled-components';
-import { analytics, EventType } from '@trezor/suite-analytics';
-import { spacingsPx, typography, zIndices } from '@trezor/theme';
+import { analytics, EventType } from '@cerberus/suite-analytics';
+import { spacingsPx, typography, zIndices } from '@cerberus/theme';
 import { Translation } from 'src/components/suite';
 import { setView } from 'src/actions/suite/guideActions';
 import { useDispatch, useSelector } from 'src/hooks/suite';
-import { Icon } from '@trezor/components';
+import { Icon } from '@cerberus/components';
 import {
     GuideHeader,
     GuideContent,

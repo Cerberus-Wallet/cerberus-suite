@@ -1,4 +1,4 @@
-import { Assert } from '@trezor/schema-utils';
+import { Assert } from '@cerberus/schema-utils';
 import { SolanaTxAdditionalInfo } from '../../types/api/solana';
 
 export const transformAdditionalInfo = (additionalInfo?: SolanaTxAdditionalInfo) => {

@@ -64,7 +64,7 @@ const DEFAULT = {
     'get-liquidity-clue': { LiquidityClue: 1 },
     // payment request server
     'payment-request': {
-        recipient_name: 'trezor.io',
+        recipient_name: 'cerberus.uraanai.com',
         signature: 'AA',
     },
     // coordinator

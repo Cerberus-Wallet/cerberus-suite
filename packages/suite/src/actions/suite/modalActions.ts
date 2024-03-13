@@ -1,7 +1,7 @@
 import { createAction } from '@reduxjs/toolkit';
 
-import TrezorConnect, { UI } from '@trezor/connect';
-import { createDeferred, DeferredResponse } from '@trezor/utils';
+import TrezorConnect, { UI } from '@cerberus/connect';
+import { createDeferred, DeferredResponse } from '@cerberus/utils';
 import { UserContextPayload } from '@suite-common/suite-types';
 
 import { MODAL } from 'src/actions/suite/constants';
@@ -24,7 +24,7 @@ export const preserve = () => ({ type: MODAL.PRESERVE });
 
 /**
  * Called from <PinModal /> component
- * Sends pin to `@trezor/connect`
+ * Sends pin to `@cerberus/connect`
  * @param {string} payload
  * @returns
  */

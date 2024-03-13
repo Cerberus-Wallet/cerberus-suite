@@ -1,6 +1,6 @@
 import { differenceInMilliseconds } from 'date-fns';
 
-import { scheduleAction } from '@trezor/utils';
+import { scheduleAction } from '@cerberus/utils';
 
 export class RateLimiter {
     // Poor man's rate limiter

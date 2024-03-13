@@ -13,7 +13,7 @@ import {
     TokenInfoBranded,
     TokenSymbol,
 } from '@suite-common/wallet-types';
-import { TokenInfo, TokenTransfer } from '@trezor/blockchain-link';
+import { TokenInfo, TokenTransfer } from '@cerberus/blockchain-link';
 import {
     FiatRatesRootState,
     selectFiatRatesByFiatRateKey,
@@ -51,7 +51,7 @@ export const selectEthereumAccountTokenSymbol = (
 
     // FIXME: This is the only place in the codebase where we change case of token symbol.
     // The `toUpperCase()` operation is necessary because we are receiving wrongly formatted token symbol from connect.
-    // Can be removed at the moment when desktop issue https://github.com/trezor/trezor-suite/issues/8037 is resolved.
+    // Can be removed at the moment when desktop issue https://github.com/Cerberus-Wallet/cerberus-suite/issues/8037 is resolved.
     return tokenInfo.symbol.toUpperCase() as TokenSymbol;
 };
 

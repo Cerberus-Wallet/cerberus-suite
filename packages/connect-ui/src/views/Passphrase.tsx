@@ -2,9 +2,9 @@ import { FormattedMessage } from 'react-intl';
 
 import styled from 'styled-components';
 
-import { analytics, EventType } from '@trezor/connect-analytics';
-import { UI, UiEvent, CoreRequestMessage } from '@trezor/connect';
-import { variables, PassphraseTypeCard } from '@trezor/components';
+import { analytics, EventType } from '@cerberus/connect-analytics';
+import { UI, UiEvent, CoreRequestMessage } from '@cerberus/connect';
+import { variables, PassphraseTypeCard } from '@cerberus/components';
 
 import { View } from '../components/View';
 

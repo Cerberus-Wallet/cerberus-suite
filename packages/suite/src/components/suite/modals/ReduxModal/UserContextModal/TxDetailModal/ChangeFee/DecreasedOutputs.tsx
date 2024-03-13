@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
 import { AnimatePresence, motion } from 'framer-motion';
-import { Icon, variables, Radio, motionAnimation } from '@trezor/components';
+import { Icon, variables, Radio, motionAnimation } from '@cerberus/components';
 import { FormattedCryptoAmount, HiddenPlaceholder } from 'src/components/suite';
 import { Translation, TranslationKey } from 'src/components/suite/Translation';
 import { formatNetworkAmount } from '@suite-common/wallet-utils';

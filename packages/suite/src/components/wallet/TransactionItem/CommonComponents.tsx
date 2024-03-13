@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { variables } from '@trezor/components';
+import { variables } from '@cerberus/components';
 import { FormattedCryptoAmount, FormattedNftAmount, HiddenPlaceholder } from 'src/components/suite';
 import { MIN_ROW_HEIGHT } from './TransactionTargetLayout';
 

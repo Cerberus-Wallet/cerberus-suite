@@ -1,5 +1,5 @@
 import { Box, Pictogram } from '@suite-native/atoms';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 
 const overlayStyle = prepareNativeStyle(utils => ({
     justifyContent: 'center',

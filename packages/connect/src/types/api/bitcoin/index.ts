@@ -1,9 +1,9 @@
-import type { AccountAddresses } from '@trezor/blockchain-link';
-import type { Transaction as BlockbookTransaction } from '@trezor/blockchain-link-types/lib/blockbook';
+import type { AccountAddresses } from '@cerberus/blockchain-link';
+import type { Transaction as BlockbookTransaction } from '@cerberus/blockchain-link-types/lib/blockbook';
 import type { PROTO } from '../../../constants';
 import type { AccountTransaction } from '../../account';
 import { DerivationPath, ProtoWithDerivationPath } from '../../params';
-import { Static, Type } from '@trezor/schema-utils';
+import { Static, Type } from '@cerberus/schema-utils';
 
 // signMessage
 

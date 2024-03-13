@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 import { ProgressLabelData } from './types';
 import { ProgressLabel } from './ProgressLabel';
 

@@ -4,11 +4,11 @@ import { FormattedRelativeTime } from 'react-intl';
 
 import { getMainnets } from '@suite-common/wallet-config';
 import { selectFiatRatesByFiatRateKey } from '@suite-common/wallet-core';
-import { spacingsPx, typography } from '@trezor/theme';
+import { spacingsPx, typography } from '@cerberus/theme';
 import { useSelector } from 'src/hooks/suite';
 import { Account } from 'src/types/wallet';
 import { Translation } from 'src/components/suite';
-import { Card, CoinLogo, variables } from '@trezor/components';
+import { Card, CoinLogo, variables } from '@cerberus/components';
 import { TradeBoxMenu } from './TradeBoxMenu';
 import { TradeBoxPrices } from './TradeBoxPrices';
 import { getFiatRateKey } from '@suite-common/wallet-utils';

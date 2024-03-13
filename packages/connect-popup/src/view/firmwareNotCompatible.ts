@@ -1,8 +1,8 @@
-// origin https://github.com/trezor/connect/blob/develop/src/js/popup/view/firmwareNotCompatible.js
+// origin https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/popup/view/firmwareNotCompatible.js
 
-import { UI, createUiResponse, UiRequestUnexpectedDeviceMode } from '@trezor/connect';
+import { UI, createUiResponse, UiRequestUnexpectedDeviceMode } from '@cerberus/connect';
 import { showView, postMessage, getState } from './common';
-import { getFirmwareVersion } from '@trezor/device-utils';
+import { getFirmwareVersion } from '@cerberus/device-utils';
 
 export const firmwareNotCompatible = (device: UiRequestUnexpectedDeviceMode['payload']) => {
     const view = showView('firmware-not-compatible');

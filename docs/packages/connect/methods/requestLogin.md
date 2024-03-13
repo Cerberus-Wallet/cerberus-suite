@@ -1,6 +1,6 @@
 ## Request login
 
-Challenge-response authentication via Trezor. To protect against replay attacks
+Challenge-response authentication via Cerberus. To protect against replay attacks
 you should use a server-side generated and randomized `challengeHidden` for every
 attempt. You can also provide a visual challenge that will be shown on the
 device.
@@ -32,7 +32,7 @@ Common parameter `useEmptyPassphrase` - is always set to `true` and it will be i
 #### Login without async challenge
 
 -   `challengeHidden` - _required_ `string` hexadecimal value
--   `challengeVisual` - _required_ `string` text displayed on Trezor
+-   `challengeVisual` - _required_ `string` text displayed on Cerberus
 
 ### Example
 
@@ -61,7 +61,7 @@ TrezorConnect.requestLogin({
 
 ### Result
 
-[Login type](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/requestLogin.ts)
+[Login type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/requestLogin.ts)
 
 ```javascript
 {

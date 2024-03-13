@@ -1,4 +1,4 @@
-import SuiteDB, { OnUpgradeFunc } from '@trezor/suite-storage';
+import SuiteDB, { OnUpgradeFunc } from '@cerberus/suite-storage';
 import { reloadApp } from 'src/utils/suite/reload';
 import { migrate } from './migrations';
 

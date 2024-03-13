@@ -15,6 +15,6 @@
         "@suite-common/wallet-core": "workspace:*",
         "@suite-common/wallet-types": "workspace:*",
         "@suite-common/wallet-utils": "workspace:*",
-        "@trezor/connect": "workspace:*"
+        "@cerberus/connect": "workspace:*"
     }
 }

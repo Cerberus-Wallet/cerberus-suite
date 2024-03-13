@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { Translation, FormattedDate, FormattedCryptoAmount } from 'src/components/suite';
-import { variables } from '@trezor/components';
+import { variables } from '@cerberus/components';
 import { CoinmarketProviderInfo } from 'src/views/wallet/coinmarket/common';
 import { SellProviderInfo } from 'invity-api';
 import { TradeSpend } from 'src/types/wallet/coinmarketCommonTypes';

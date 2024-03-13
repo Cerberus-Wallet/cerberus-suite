@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react';
-import { Spinner, Dropdown } from '@trezor/components';
-import { analytics, EventType } from '@trezor/suite-analytics';
+import { Spinner, Dropdown } from '@cerberus/components';
+import { analytics, EventType } from '@cerberus/suite-analytics';
 import { Translation } from 'src/components/suite';
 import { useDispatch } from 'src/hooks/suite';
 import { useTranslation } from 'src/hooks/suite/useTranslation';

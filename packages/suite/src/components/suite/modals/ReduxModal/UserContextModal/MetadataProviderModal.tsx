@@ -1,14 +1,14 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import { Paragraph, Button, variables } from '@trezor/components';
+import { Paragraph, Button, variables } from '@cerberus/components';
 
 import { Translation, Modal } from 'src/components/suite';
 import { useDispatch } from 'src/hooks/suite';
 import { connectProvider } from 'src/actions/suite/metadataProviderActions';
-import type { Deferred } from '@trezor/utils';
+import type { Deferred } from '@cerberus/utils';
 import { MetadataProviderType } from 'src/types/suite/metadata';
 import { isFeatureFlagEnabled } from '@suite-common/suite-utils';
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 
 const { FONT_SIZE, FONT_WEIGHT } = variables;
 
@@ -24,7 +24,7 @@ const Error = styled.div`
     color: ${({ theme }) => theme.TYPE_RED};
 `;
 
-// todo: can't use button from @trezor/components directly, probably inconsistent design again
+// todo: can't use button from @cerberus/components directly, probably inconsistent design again
 // background-color is not even in components color palette
 const StyledButton = styled(Button)`
     padding: 10px;

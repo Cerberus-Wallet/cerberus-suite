@@ -69,7 +69,7 @@ module.exports = {
                         group: 'external',
                         position: 'before',
                     },
-                    { pattern: '@trezor/**', group: 'internal' }, // Translates to /packages/** */
+                    { pattern: '@cerberus/**', group: 'internal' }, // Translates to /packages/** */
                     { pattern: '@suite-native/**', group: 'internal' },
                     { pattern: '@suite-common/**', group: 'internal' },
                     { pattern: 'src/**', group: 'internal', position: 'after' },
@@ -225,10 +225,10 @@ module.exports = {
                 paths: [{ name: '.' }, { name: '..' }, { name: '../..' }],
                 patterns: [
                     '**/libDev/src',
-                    '@trezor/utils/lib',
-                    '@trezor/utils/lib/*',
-                    '@trezor/protobuf/lib',
-                    '@trezor/protobuf/lib/*',
+                    '@cerberus/utils/lib',
+                    '@cerberus/utils/lib/*',
+                    '@cerberus/protobuf/lib',
+                    '@cerberus/protobuf/lib/*',
                 ],
             },
         ],

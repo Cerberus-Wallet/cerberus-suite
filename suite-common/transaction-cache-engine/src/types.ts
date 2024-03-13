@@ -1,7 +1,7 @@
 import BigNumber from 'bignumber.js';
 
 import { NetworkSymbol } from '@suite-common/wallet-config';
-import { AccountTransaction, AccountInfo } from '@trezor/connect';
+import { AccountTransaction, AccountInfo } from '@cerberus/connect';
 
 export type AccountUniqueKey = `${NetworkSymbol}-${AccountInfo['descriptor']}` & {
     __accountKey: 'AccountKey';

@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/data/UdevInfo.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/data/UdevInfo.js
 
 // This file is using format of ./data/bridge/releases.json
 // udev rules are changed occasionally and since there is no releases.json for udev rules its ok to make it hardcoded here

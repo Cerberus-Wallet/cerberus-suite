@@ -2,8 +2,8 @@ import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 
 import { selectHasUserAllowedTracking } from '@suite-common/analytics';
-import { Switch } from '@trezor/components';
-import { analytics } from '@trezor/suite-analytics';
+import { Switch } from '@cerberus/components';
+import { analytics } from '@cerberus/suite-analytics';
 
 import { ActionColumn, SectionItem, TextColumn, Translation } from 'src/components/suite';
 import { useAnchor } from 'src/hooks/suite/useAnchor';

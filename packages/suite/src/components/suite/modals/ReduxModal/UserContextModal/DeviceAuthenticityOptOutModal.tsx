@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import { Button, Image, Paragraph } from '@trezor/components';
+import { Button, Image, Paragraph } from '@cerberus/components';
 import { Translation, CheckItem, Modal } from 'src/components/suite';
 import { deviceAutenticityOptOut } from 'src/actions/suite/suiteActions';
 import { useDispatch } from 'src/hooks/suite';

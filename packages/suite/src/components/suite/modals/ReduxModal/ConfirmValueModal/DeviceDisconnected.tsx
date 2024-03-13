@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-import { Paragraph, Image, variables } from '@trezor/components';
+import { Paragraph, Image, variables } from '@cerberus/components';
 import { Translation } from 'src/components/suite';
-import { borders } from '@trezor/theme';
+import { borders } from '@cerberus/theme';
 
 const Wrapper = styled.div`
     display: flex;

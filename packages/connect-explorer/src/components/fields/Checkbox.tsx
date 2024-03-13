@@ -1,4 +1,4 @@
-import { Checkbox as CheckboxComponent } from '@trezor/components';
+import { Checkbox as CheckboxComponent } from '@cerberus/components';
 
 import type { Field } from '../../types';
 import { onFieldChange } from '../../actions/methodActions';

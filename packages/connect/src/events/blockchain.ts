@@ -3,7 +3,7 @@ import type {
     BlockEvent,
     FiatRatesLegacy,
     NotificationEvent,
-} from '@trezor/blockchain-link';
+} from '@cerberus/blockchain-link';
 import type { CoinInfo } from '../types/coinInfo';
 import type { MessageFactoryFn } from '../types/utils';
 

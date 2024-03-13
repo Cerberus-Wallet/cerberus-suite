@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/utils/promiseUtils.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/utils/promiseUtils.js
 
 export const resolveAfter = (msec: number, value?: any) => {
     let timeout: ReturnType<typeof setTimeout> | undefined;

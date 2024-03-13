@@ -1,7 +1,7 @@
 import styled, { useTheme } from 'styled-components';
-import { Icon, Tooltip } from '@trezor/components';
-import { isDesktop } from '@trezor/env-utils';
-import { borders, spacingsPx, typography } from '@trezor/theme';
+import { Icon, Tooltip } from '@cerberus/components';
+import { isDesktop } from '@cerberus/env-utils';
+import { borders, spacingsPx, typography } from '@cerberus/theme';
 import { useDispatch, useSelector, useTranslation } from 'src/hooks/suite';
 import { goto } from 'src/actions/suite/routerActions';
 import { SettingsAnchor } from 'src/constants/suite/anchors';

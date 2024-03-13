@@ -16,7 +16,7 @@ import {
     selectTransactionByTxidAndAccountKey,
     TransactionsRootState,
 } from '@suite-common/wallet-core';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import { analytics, EventType } from '@suite-native/analytics';
 import { EthereumTokenTransfer, WalletAccountTransaction } from '@suite-native/ethereum-tokens';
 import { TokenAddress, TokenSymbol } from '@suite-common/wallet-types';

@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import styled, { useTheme } from 'styled-components';
-import { Icon } from '@trezor/components';
-import { spacingsPx, typography } from '@trezor/theme';
+import { Icon } from '@cerberus/components';
+import { spacingsPx, typography } from '@cerberus/theme';
 
 interface BannerPointsProps {
     points: ReactNode[];

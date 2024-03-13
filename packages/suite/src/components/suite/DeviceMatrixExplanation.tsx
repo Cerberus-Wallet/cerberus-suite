@@ -1,8 +1,8 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
-import { Image, Icon, IconProps, variables } from '@trezor/components';
+import { Image, Icon, IconProps, variables } from '@cerberus/components';
 import { useGuide } from 'src/hooks/guide';
-import { DeviceModelInternal } from '@trezor/connect';
+import { DeviceModelInternal } from '@cerberus/connect';
 
 const Wrapper = styled.div<{ isGuideOpen?: boolean }>`
     display: flex;
@@ -89,7 +89,7 @@ export const DeviceMatrixExplanation = ({ items }: DeviceMatrixExplanationProps)
                         ) : (
                             item.deviceModelInternal && (
                                 <StyledImage
-                                    alt="Trezor"
+                                    alt="Cerberus"
                                     image={`CERBERUS_${item.deviceModelInternal}`}
                                 />
                             )

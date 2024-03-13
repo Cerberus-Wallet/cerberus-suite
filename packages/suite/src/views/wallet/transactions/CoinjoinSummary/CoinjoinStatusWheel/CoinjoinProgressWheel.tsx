@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react';
 import styled, { css, DefaultTheme, keyframes } from 'styled-components';
-import { Tooltip } from '@trezor/components';
+import { Tooltip } from '@cerberus/components';
 import {
     CoinjoinProgressContent,
     Container as ProgressContentContainer,

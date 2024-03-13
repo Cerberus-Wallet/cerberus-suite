@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Paths
-JSON_PATH='./submodules/trezor-common/models.json'
+JSON_PATH='./submodules/cerberus-common/models.json'
 TS_PATH='./packages/connect/src/data/models.ts'
 
 # Check if the JSON file exists

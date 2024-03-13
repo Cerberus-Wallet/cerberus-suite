@@ -1,8 +1,8 @@
-import * as messages from '@trezor/protobuf/messages.json';
-// testing build. yarn workspace @trezor/transport build:lib is a required step therefore
-import { TrezorUserEnvLink } from '@trezor/trezor-user-env-link';
+import * as messages from '@cerberus/protobuf/messages.json';
+// testing build. yarn workspace @cerberus/transport build:lib is a required step therefore
+import { TrezorUserEnvLink } from '@cerberus/trezor-user-env-link';
 
-// testing build. yarn workspace @trezor/transport build:lib is a required step therefore
+// testing build. yarn workspace @cerberus/transport build:lib is a required step therefore
 import { BridgeTransport } from '../../lib';
 
 // todo: introduce global jest config for e2e
@@ -31,8 +31,8 @@ describe('bridge', () => {
         TrezorUserEnvLink.disconnect();
     });
 
-    // there might be more versions of bridge out there, see https://github.com/trezor/webwallet-data/tree/master/bridge
-    // but they are not available from trezor-user-env, see https://github.com/trezor/trezor-user-env/tree/master/src/binaries/trezord-go/bin
+    // there might be more versions of bridge out there, see https://github.com/Cerberus-Wallet/webwallet-data/tree/master/bridge
+    // but they are not available from trezor-user-env, see https://github.com/Cerberus-Wallet/cerberus-user-env/tree/master/src/binaries/trezord-go/bin
     ['2.0.26', '2.0.27', undefined].forEach(bridgeVersion => {
         describe(bridgeVersion || 'latest', () => {
             let bridge: any;
@@ -83,7 +83,7 @@ describe('bridge', () => {
                     payload: {
                         type: 'Features',
                         message: {
-                            vendor: 'trezor.io',
+                            vendor: 'cerberus.uraanai.com',
                             label: 'TrezorT',
                         },
                     },
@@ -101,7 +101,7 @@ describe('bridge', () => {
                     payload: {
                         type: 'Features',
                         message: {
-                            vendor: 'trezor.io',
+                            vendor: 'cerberus.uraanai.com',
                             label: 'TrezorT',
                         },
                     },
@@ -148,7 +148,7 @@ describe('bridge', () => {
                     payload: {
                         type: 'Features',
                         message: {
-                            vendor: 'trezor.io',
+                            vendor: 'cerberus.uraanai.com',
                             label: 'TrezorT',
                         },
                     },
@@ -192,7 +192,7 @@ describe('bridge', () => {
                     payload: {
                         type: 'Features',
                         message: {
-                            vendor: 'trezor.io',
+                            vendor: 'cerberus.uraanai.com',
                             label: 'TrezorT',
                         },
                     },

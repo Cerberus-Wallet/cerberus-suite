@@ -32,7 +32,7 @@ export const transformUtxos = (utxos: AccountUtxo[]): types.Utxo[] => {
 };
 
 export const prepareCertificates = (certs: CardanoCertificate[]) => {
-    // convert @trezor/connect certificate format to cardano coin-selection lib format
+    // convert @cerberus/connect certificate format to cardano coin-selection lib format
     const convertedCerts: types.Certificate[] = [];
     certs.forEach(cert => {
         switch (cert.type) {

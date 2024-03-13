@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import { H2, variables } from '@trezor/components';
-import { CERBERUS_SUPPORT_URL } from '@trezor/urls';
+import { H2, variables } from '@cerberus/components';
+import { CERBERUS_SUPPORT_URL } from '@cerberus/urls';
 
 import { Translation, TrezorLink } from 'src/components/suite';
 import { SecurityChecklist } from './SecurityChecklist';

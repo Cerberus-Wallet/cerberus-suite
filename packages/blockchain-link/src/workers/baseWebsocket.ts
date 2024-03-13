@@ -1,9 +1,9 @@
 import WebSocket from 'ws';
-import { createDeferred } from '@trezor/utils';
-import { createDeferredManager } from '@trezor/utils';
-import { TypedEmitter } from '@trezor/utils';
+import { createDeferred } from '@cerberus/utils';
+import { createDeferredManager } from '@cerberus/utils';
+import { TypedEmitter } from '@cerberus/utils';
 
-import { CustomError } from '@trezor/blockchain-link-types/lib/constants/errors';
+import { CustomError } from '@cerberus/blockchain-link-types/lib/constants/errors';
 
 interface Subscription<T> {
     id: string;

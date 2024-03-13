@@ -1,8 +1,8 @@
 import { useState, ReactNode } from 'react';
 import { DateRange } from 'react-date-range';
 import styled, { css } from 'styled-components';
-import { mediaQueries } from '@trezor/styles';
-import { borders, spacingsPx, zIndices } from '@trezor/theme';
+import { mediaQueries } from '@cerberus/styles';
+import { borders, spacingsPx, zIndices } from '@cerberus/theme';
 
 import type { Locale } from 'date-fns';
 

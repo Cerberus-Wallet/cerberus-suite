@@ -1,4 +1,4 @@
-import { CARDANO, PROTO } from '@trezor/connect';
+import { CARDANO, PROTO } from '@cerberus/connect';
 
 import {
     getAddressType,

@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import styled from 'styled-components';
 import { TooltipProps } from 'recharts';
 
-import { variables } from '@trezor/components';
+import { variables } from '@cerberus/components';
 
 import { Translation, FormattedDate } from 'src/components/suite';
 import { CommonAggregatedHistory, GraphRange } from 'src/types/wallet/graph';

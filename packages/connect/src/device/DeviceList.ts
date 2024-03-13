@@ -1,6 +1,6 @@
-// original file https://github.com/trezor/connect/blob/develop/src/js/device/DeviceList.js
+// original file https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/device/DeviceList.js
 
-import { TypedEmitter } from '@trezor/utils';
+import { TypedEmitter } from '@cerberus/utils';
 import {
     BridgeTransport,
     WebUsbTransport,
@@ -11,7 +11,7 @@ import {
     Descriptor,
     TRANSPORT_ERROR,
     isTransportInstance,
-} from '@trezor/transport';
+} from '@cerberus/transport';
 import { ERRORS } from '../constants';
 import { DEVICE, TransportInfo } from '../events';
 import { Device } from './Device';
@@ -76,9 +76,9 @@ export class DeviceList extends TypedEmitter<DeviceListEvents> {
             transports = ['BridgeTransport'];
         }
 
-        const transportLogger = initLog('@trezor/transport', debug);
+        const transportLogger = initLog('@cerberus/transport', debug);
 
-        // mapping of provided transports[] to @trezor/transport classes
+        // mapping of provided transports[] to @cerberus/transport classes
         transports.forEach(transportType => {
             if (typeof transportType === 'string') {
                 switch (transportType) {
@@ -138,7 +138,7 @@ export class DeviceList extends TypedEmitter<DeviceListEvents> {
     }
 
     /**
-     * Init @trezor/transport and do something with its results
+     * Init @cerberus/transport and do something with its results
      */
     async init() {
         try {
@@ -168,7 +168,7 @@ export class DeviceList extends TypedEmitter<DeviceListEvents> {
             }
 
             /**
-             * listen to change of descriptors reported by @trezor/transport
+             * listen to change of descriptors reported by @cerberus/transport
              * we can say that this part lets connect know about
              * "external activities with trezor devices" such as device was connected/disconnected
              * or it was acquired or released by another application.

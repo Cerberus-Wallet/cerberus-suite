@@ -1,6 +1,6 @@
 import TrezorConnect from '../../../src';
 
-const { getController, setup, conditionalTest, initTrezorConnect } = global.Trezor;
+const { getController, setup, conditionalTest, initTrezorConnect } = global.Cerberus;
 const { ADDRESS_N } = global.TestUtils;
 
 const controller = getController();

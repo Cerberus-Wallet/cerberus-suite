@@ -1,6 +1,6 @@
 # Sentry
 
-Trezor Suite uses [Sentry.io](https://sentry.io/) to track errors and monitor app performance on the machines of users who have enabled anonymous data collection. This allows us to optimize Trezor Suite and fix compatibility issues across many different usage environments.
+Cerberus Suite uses [Sentry.io](https://sentry.io/) to track errors and monitor app performance on the machines of users who have enabled anonymous data collection. This allows us to optimize Cerberus Suite and fix compatibility issues across many different usage environments.
 
 No data is shared with Sentry if users have disabled usage data tracking [^1].
 
@@ -102,7 +102,7 @@ Browser (User Agent), System and HW specifications, Suite version, instance id s
       session_id: [redacted],
       unfinished_backup: False,
       unlocked: True,
-      vendor: trezor.io,
+      vendor: cerberus.uraanai.com,
       wipe_code_protection: False,
     },
   firmware: valid,

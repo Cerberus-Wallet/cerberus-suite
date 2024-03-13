@@ -1,5 +1,5 @@
 {
-    "name": "@trezor/transport-native",
+    "name": "@cerberus/transport-native",
     "version": "1.0.0",
     "private": true,
     "license": "See LICENSE.md in repo root",
@@ -10,7 +10,7 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
-        "@trezor/react-native-usb": "workspace:*",
-        "@trezor/transport": "workspace:*"
+        "@cerberus/react-native-usb": "workspace:*",
+        "@cerberus/transport": "workspace:*"
     }
 }

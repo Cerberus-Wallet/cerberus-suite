@@ -89,7 +89,7 @@ export type UnreadableDevice = {
 export type Device = KnownDevice | UnknownDevice | UnreadableDevice;
 export type Features = PROTO.Features;
 
-export { DeviceModelInternal } from '@trezor/protobuf';
+export { DeviceModelInternal } from '@cerberus/protobuf';
 
 type FeaturesNarrowing =
     | {

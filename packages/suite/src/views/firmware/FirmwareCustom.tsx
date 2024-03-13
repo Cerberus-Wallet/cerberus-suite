@@ -3,7 +3,7 @@ import { useState, useMemo, useCallback } from 'react';
 import styled from 'styled-components';
 
 import { acquireDevice } from '@suite-common/wallet-core';
-import { ConfirmOnDevice } from '@trezor/components';
+import { ConfirmOnDevice } from '@cerberus/components';
 
 import { useDevice, useDispatch, useFirmware } from 'src/hooks/suite';
 import { Translation, Modal } from 'src/components/suite';

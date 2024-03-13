@@ -1,5 +1,5 @@
 import { deviceModelInformation } from 'src/utils/suite/homescreen';
-import { DeviceModelInternal } from '@trezor/connect';
+import { DeviceModelInternal } from '@cerberus/connect';
 
 export const isValidImageFormat = [
     {

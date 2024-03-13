@@ -15,9 +15,9 @@ import {
     messageSystemActions,
 } from '@suite-common/message-system';
 import { addToast } from '@suite-common/toast-notifications';
-import { RoundPhase, SessionPhase } from '@trezor/coinjoin';
-import { UI, DEVICE } from '@trezor/connect';
-import { arrayDistinct } from '@trezor/utils';
+import { RoundPhase, SessionPhase } from '@cerberus/coinjoin';
+import { UI, DEVICE } from '@cerberus/connect';
+import { arrayDistinct } from '@cerberus/utils';
 
 import { SUITE, ROUTER } from 'src/actions/suite/constants';
 import {

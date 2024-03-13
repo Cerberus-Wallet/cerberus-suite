@@ -1,4 +1,4 @@
-import { isWeb } from '@trezor/env-utils';
+import { isWeb } from '@cerberus/env-utils';
 
 import { SettingsSection, SettingsLayout } from 'src/components/settings';
 

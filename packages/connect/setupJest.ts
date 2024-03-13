@@ -3,7 +3,7 @@
 import { DeviceModelInternal, type Features, type FirmwareRelease } from './src/types';
 
 export const getDeviceFeatures = (feat?: Partial<Features>): Features => ({
-    vendor: 'trezor.io',
+    vendor: 'cerberus.uraanai.com',
     major_version: 2,
     minor_version: 1,
     patch_version: 1,
@@ -12,7 +12,7 @@ export const getDeviceFeatures = (feat?: Partial<Features>): Features => ({
     pin_protection: false,
     passphrase_protection: false,
     language: 'en-US',
-    label: 'My Trezor',
+    label: 'My Cerberus',
     initialized: true,
     revision: 'df0963ec',
     bootloader_hash: '7447a41717022e3eb32011b00b2a68ebb9c7f603cdc730e7307850a3f4d62a5c',

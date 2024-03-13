@@ -5,7 +5,7 @@ import { onAccountsPage } from '../../support/pageObjects/accountsObject';
 import { onSettingsCryptoPage } from '../../support/pageObjects/settingsCryptoObject';
 import { onNavBar } from '../../support/pageObjects/topBarObject';
 import { NetworkSymbol } from '@suite-common/wallet-config';
-import { EventType } from '@trezor/suite-analytics';
+import { EventType } from '@cerberus/suite-analytics';
 import { ExtractByEventType, Requests } from '../../support/types';
 
 let requests: Requests;
@@ -95,7 +95,7 @@ describe('Account types suite', () => {
         });
     });
 
-    // please @trezor/qa fix this, example how to do this is in the previous test
+    // please @cerberus/qa fix this, example how to do this is in the previous test
     /**
      * Test case
      * 1. go to Settings

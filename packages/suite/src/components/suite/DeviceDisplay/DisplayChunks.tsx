@@ -1,7 +1,7 @@
 import { ClipboardEvent } from 'react';
 import styled from 'styled-components';
 import { DeviceDisplayText } from './DeviceDisplayText';
-import { splitStringEveryNCharacters } from '@trezor/utils';
+import { splitStringEveryNCharacters } from '@cerberus/utils';
 
 const Row = styled.div<{ isAlignedRight?: boolean }>`
     display: flex;

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { spacingsPx, typography } from '@trezor/theme';
-import { FeeLevel } from '@trezor/connect';
+import { spacingsPx, typography } from '@cerberus/theme';
+import { FeeLevel } from '@cerberus/connect';
 import { Translation } from 'src/components/suite';
 import { getFeeUnits } from '@suite-common/wallet-utils';
 import { formatDuration } from '@suite-common/suite-utils';

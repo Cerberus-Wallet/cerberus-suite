@@ -95,7 +95,7 @@ describe('Passphrase numbering', () => {
         cy.getTestElement('@switch-device/wallet-on-index/2').should('contain', 'Hidden wallet #3');
     });
 
-    // https://github.com/trezor/trezor-suite/issues/3133
+    // https://github.com/Cerberus-Wallet/cerberus-suite/issues/3133
     it('when user adds hidden wallet first (no pre-existing standard wallet)', () => {
         const passphrase = 'abc{enter}';
 

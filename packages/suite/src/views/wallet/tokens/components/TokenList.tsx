@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import styled, { css, useTheme } from 'styled-components';
-import { variables, Icon, Card } from '@trezor/components';
+import { variables, Icon, Card } from '@cerberus/components';
 import {
     FiatValue,
     FormattedCryptoAmount,
@@ -11,8 +11,8 @@ import { Account } from 'src/types/wallet';
 import { useSelector } from 'src/hooks/suite';
 import { selectCoinDefinitions } from '@suite-common/wallet-core';
 import { NoRatesTooltip } from 'src/components/suite/Ticker/NoRatesTooltip';
-import { TokenInfo } from '@trezor/blockchain-link-types';
-import { spacingsPx } from '@trezor/theme';
+import { TokenInfo } from '@cerberus/blockchain-link-types';
+import { spacingsPx } from '@cerberus/theme';
 import { NetworkSymbol, getNetworkFeatures } from '@suite-common/wallet-config';
 import { enhanceTokensWithRates, sortTokensWithRates } from 'src/utils/wallet/tokenUtils';
 import { Rate } from '@suite-common/wallet-types';

@@ -1,6 +1,6 @@
 import { test as testPlaywright, expect as expectPlaywright } from '@playwright/test';
 
-import { TrezorUserEnvLink } from '@trezor/trezor-user-env-link';
+import { TrezorUserEnvLink } from '@cerberus/trezor-user-env-link';
 
 import { launchSuite, waitForDataTestSelector } from '../support/common';
 
@@ -15,7 +15,7 @@ testPlaywright.describe.serial('Bridge', () => {
     testPlaywright('App spawns bundled bridge and stops it after app quit', async ({ request }) => {
         const suite = await launchSuite();
         const title = await suite.window.title();
-        expectPlaywright(title).toContain('Trezor Suite');
+        expectPlaywright(title).toContain('Cerberus Suite');
 
         // We wait for `@welcome/title` or `@dashboard/graph` since
         // one or the other will be display depending on the state of the app

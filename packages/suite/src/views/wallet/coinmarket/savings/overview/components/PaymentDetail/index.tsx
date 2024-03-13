@@ -2,12 +2,12 @@ import { useState } from 'react';
 import parseISO from 'date-fns/parseISO';
 import format from 'date-fns/format';
 import styled from 'styled-components';
-import { Button, Icon, Image } from '@trezor/components';
+import { Button, Icon, Image } from '@cerberus/components';
 import { Translation } from 'src/components/suite';
 import type { SavingsTradePlannedPayment } from 'invity-api';
 import type { ExtendedMessageDescriptor } from 'src/types/suite';
 import { useCoinmarketSavingsPaymentInfoCopy } from 'src/hooks/wallet/useCoinmarketSavingsPaymentInfoCopy';
-import { borders } from '@trezor/theme';
+import { borders } from '@cerberus/theme';
 
 const Wrapper = styled.div`
     margin-top: 18px;

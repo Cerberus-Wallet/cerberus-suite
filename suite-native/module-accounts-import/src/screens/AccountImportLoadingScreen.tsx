@@ -10,7 +10,7 @@ import {
     Screen,
     StackToStackCompositeScreenProps,
 } from '@suite-native/navigation';
-import TrezorConnect, { AccountInfo } from '@trezor/connect';
+import TrezorConnect, { AccountInfo } from '@cerberus/connect';
 import { TokenAddress } from '@suite-common/wallet-types';
 
 import { AccountImportLoader } from '../components/AccountImportLoader';

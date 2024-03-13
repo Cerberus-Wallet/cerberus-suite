@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { ExchangeTrade } from 'invity-api';
-import { variables } from '@trezor/components';
+import { variables } from '@cerberus/components';
 import {
     CoinmarketProviderInfo,
     CoinmarketTransactionId,
@@ -14,7 +14,7 @@ import {
 } from 'src/components/suite';
 import { ExchangeInfo } from 'src/actions/wallet/coinmarketExchangeActions';
 import invityAPI from 'src/services/suite/invityAPI';
-import { typography } from '@trezor/theme';
+import { typography } from '@cerberus/theme';
 import { cryptoToCoinSymbol } from 'src/utils/wallet/coinmarket/cryptoSymbolUtils';
 
 const Wrapper = styled.div`

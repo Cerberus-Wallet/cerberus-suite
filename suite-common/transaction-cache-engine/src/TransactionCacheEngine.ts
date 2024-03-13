@@ -1,7 +1,7 @@
 /* eslint-disable require-await */
 import { A, D, pipe } from '@mobily/ts-belt';
 
-import TrezorConnect, { AccountInfo, AccountTransaction } from '@trezor/connect';
+import TrezorConnect, { AccountInfo, AccountTransaction } from '@cerberus/connect';
 import { getNetworkType } from '@suite-common/wallet-config';
 
 import {

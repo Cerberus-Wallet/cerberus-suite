@@ -1,5 +1,5 @@
 import BigNumber from 'bignumber.js';
-import { Input, Icon } from '@trezor/components';
+import { Input, Icon } from '@cerberus/components';
 import { Translation } from 'src/components/suite';
 import { useSendFormContext } from 'src/hooks/wallet';
 import { getInputState, isInteger } from '@suite-common/wallet-utils';

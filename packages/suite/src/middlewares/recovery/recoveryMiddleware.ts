@@ -1,6 +1,6 @@
 import { MiddlewareAPI } from 'redux';
 
-import { UI } from '@trezor/connect';
+import { UI } from '@cerberus/connect';
 import { deviceActions } from '@suite-common/wallet-core';
 
 import { SUITE } from 'src/actions/suite/constants';

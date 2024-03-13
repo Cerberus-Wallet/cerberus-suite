@@ -395,7 +395,7 @@ export const getOwnershipProof = [
     },
     {
         description:
-            'getOwnershipProof unsuccessful with error from Trezor and one unresolved request',
+            'getOwnershipProof unsuccessful with error from Cerberus and one unresolved request',
         connect: [
             {
                 success: false,
@@ -707,7 +707,7 @@ export const signCoinjoinTx = [
                     ],
                 },
             ],
-            // this will be sent back to @trezor/coinjoin
+            // this will be sent back to @cerberus/coinjoin
             response: {
                 type: 'signature',
                 roundId: '1',
@@ -735,7 +735,7 @@ export const signCoinjoinTx = [
         },
     },
     {
-        description: 'signCoinjoinTx unsuccessful with error from Trezor',
+        description: 'signCoinjoinTx unsuccessful with error from Cerberus',
         connect: [
             {
                 success: false,
@@ -814,7 +814,7 @@ export const signCoinjoinTx = [
                     ],
                 },
             ],
-            // this will be sent back to @trezor/coinjoin
+            // this will be sent back to @cerberus/coinjoin
             response: {
                 type: 'signature',
                 roundId: '1',
@@ -962,7 +962,7 @@ export const signCoinjoinTx = [
                     ],
                 },
             ],
-            // this will be sent back to @trezor/coinjoin
+            // this will be sent back to @cerberus/coinjoin
             response: {
                 type: 'signature',
                 roundId: '1',

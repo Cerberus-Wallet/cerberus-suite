@@ -1,4 +1,4 @@
-import { Switch } from '@trezor/components';
+import { Switch } from '@cerberus/components';
 
 import { useSelector, useDispatch } from 'src/hooks/suite';
 import { ActionColumn, SectionItem, TextColumn } from 'src/components/suite';

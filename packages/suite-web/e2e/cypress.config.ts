@@ -4,18 +4,18 @@ import { defineConfig } from 'cypress';
 import fs from 'fs';
 import path from 'path';
 import { addMatchImageSnapshotPlugin } from 'cypress-image-snapshot/plugin';
-import { BridgeTransport } from '@trezor/transport';
-import * as messages from '@trezor/protobuf/src/messages';
+import { BridgeTransport } from '@cerberus/transport';
+import * as messages from '@cerberus/protobuf/src/messages';
 
-import { TrezorUserEnvLink } from '@trezor/trezor-user-env-link';
-import * as metadataUtils from '@trezor/suite/src/utils/suite/metadata';
+import { TrezorUserEnvLink } from '@cerberus/trezor-user-env-link';
+import * as metadataUtils from '@cerberus/suite/src/utils/suite/metadata';
 
 import {
     TrezorBridgeMock,
     DropboxMock,
     GoogleMock,
     BackendWebsocketServerMock,
-} from '@trezor/e2e-utils';
+} from '@cerberus/e2e-utils';
 
 const mocked = {
     bridge: new TrezorBridgeMock(),

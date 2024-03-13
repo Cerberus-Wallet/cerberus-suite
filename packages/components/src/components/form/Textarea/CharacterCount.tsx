@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { borders, spacings, spacingsPx, typography } from '@trezor/theme';
+import { borders, spacings, spacingsPx, typography } from '@cerberus/theme';
 
 const Container = styled.div`
     position: absolute;

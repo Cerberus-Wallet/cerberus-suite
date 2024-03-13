@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import { useDispatch, useSelector } from 'src/hooks/suite';
 import { CheckItem, Translation } from 'src/components/suite';
 import { ConfirmKey, toggleCheckboxByKey } from 'src/actions/backup/backupActions';
-import { variables } from '@trezor/components';
-import { spacings } from '@trezor/theme';
+import { variables } from '@cerberus/components';
+import { spacings } from '@cerberus/theme';
 
 const CheckboxWrapper = styled.div`
     margin-top: 38px;

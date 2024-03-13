@@ -1,6 +1,6 @@
 import EventEmitter from 'events';
 
-// NOTE: @trezor/connect part is intentionally not imported from the index so we do include the whole library.
+// NOTE: @cerberus/connect part is intentionally not imported from the index so we do include the whole library.
 import {
     POPUP,
     IFRAME,
@@ -11,12 +11,12 @@ import {
     Manifest,
     UiResponseEvent,
     CallMethod,
-} from '@trezor/connect/lib/exports';
-import { factory } from '@trezor/connect/lib/factory';
-import { initLog, setLogWriter, LogMessage, LogWriter } from '@trezor/connect/lib/utils/debug';
+} from '@cerberus/connect/lib/exports';
+import { factory } from '@cerberus/connect/lib/factory';
+import { initLog, setLogWriter, LogMessage, LogWriter } from '@cerberus/connect/lib/utils/debug';
 // Import as src not lib due to webpack issues with inlining content script later
-import { ServiceWorkerWindowChannel } from '@trezor/connect-web/src/channels/serviceworker-window';
-import * as popup from '@trezor/connect-web/src/popup';
+import { ServiceWorkerWindowChannel } from '@cerberus/connect-web/src/channels/serviceworker-window';
+import * as popup from '@cerberus/connect-web/src/popup';
 
 import { parseConnectSettings } from './connectSettings';
 
@@ -29,8 +29,8 @@ let _settings = parseConnectSettings();
  * - service worker -> content script -> popup -> sharedworker
  * todo: this could be simplified by injecting additional content script into log.html
  */
-const logger = initLog('@trezor/connect-webextension');
-const popupManagerLogger = initLog('@trezor/connect-webextension/popupManager');
+const logger = initLog('@cerberus/connect-webextension');
+const popupManagerLogger = initLog('@cerberus/connect-webextension/popupManager');
 let _popupManager: popup.PopupManager;
 
 const logWriterFactory = (popupManager: popup.PopupManager): LogWriter => ({
@@ -196,8 +196,8 @@ const initProxyChannel = () => {
     }>({
         name: 'trezor-connect-proxy',
         channel: {
-            here: '@trezor/connect-service-worker-proxy',
-            peer: '@trezor/connect-foreground-proxy',
+            here: '@cerberus/connect-service-worker-proxy',
+            peer: '@cerberus/connect-foreground-proxy',
         },
         lazyHandshake: true,
         allowSelfOrigin: true,
@@ -235,4 +235,4 @@ initProxyChannel();
 
 // eslint-disable-next-line import/no-default-export
 export default TrezorConnect;
-export * from '@trezor/connect/lib/exports';
+export * from '@cerberus/connect/lib/exports';

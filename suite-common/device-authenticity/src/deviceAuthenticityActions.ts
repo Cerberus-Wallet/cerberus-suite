@@ -1,7 +1,7 @@
 import { createAction } from '@reduxjs/toolkit';
 
 import { TrezorDevice } from '@suite-common/suite-types';
-import { AuthenticateDeviceResult } from '@trezor/connect';
+import { AuthenticateDeviceResult } from '@cerberus/connect';
 
 export const ACTION_PREFIX = '@device-authenticity';
 

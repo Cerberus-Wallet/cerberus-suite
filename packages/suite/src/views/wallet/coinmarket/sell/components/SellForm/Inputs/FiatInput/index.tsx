@@ -1,6 +1,6 @@
 import { fiatCurrencies } from '@suite-common/suite-config';
 import { NumberInput } from 'src/components/suite';
-import { Select } from '@trezor/components';
+import { Select } from '@cerberus/components';
 import { buildFiatOption } from 'src/utils/wallet/coinmarket/coinmarketUtils';
 import { Controller } from 'react-hook-form';
 import { useCoinmarketSellFormContext } from 'src/hooks/wallet/useCoinmarketSellForm';

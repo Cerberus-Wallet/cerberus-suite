@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/BackupDevice.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/BackupDevice.js
 
 import { AbstractMethod } from '../core/AbstractMethod';
 import { UI, createUiMessage } from '../events';

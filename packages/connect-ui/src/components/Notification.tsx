@@ -2,8 +2,8 @@ import { useState } from 'react';
 
 import styled from 'styled-components';
 
-import { Icon, Button } from '@trezor/components';
-import { SUITE_FIRMWARE_URL, SUITE_BRIDGE_URL, SUITE_BACKUP_URL } from '@trezor/urls';
+import { Icon, Button } from '@cerberus/components';
+import { SUITE_FIRMWARE_URL, SUITE_BRIDGE_URL, SUITE_BACKUP_URL } from '@cerberus/urls';
 
 const NotificationBox = styled.div`
     background-color: ${({ color }) => color};
@@ -121,7 +121,7 @@ export const FirmwareUpdateNotification = () => (
     <Notification
         variant="warning"
         header="New firmware update available"
-        body="A new firmware update is available for your Trezor device. Update now
+        body="A new firmware update is available for your Cerberus device. Update now
 for the latest features."
         cta={{ desc: 'Update my firmware', url: SUITE_FIRMWARE_URL }}
     />
@@ -130,7 +130,7 @@ for the latest features."
 export const BackupNotification = () => (
     <Notification
         variant="warning"
-        header="Your Trezor is not backed up"
+        header="Your Cerberus is not backed up"
         body=""
         cta={{
             desc: 'Create a backup in 3 minutes',

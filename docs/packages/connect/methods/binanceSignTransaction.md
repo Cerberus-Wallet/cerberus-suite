@@ -1,7 +1,7 @@
 ## Binance: sign transaction
 
 Asks device to sign given transaction using the private key derived by given [BIP44 path](../path.md). User is asked to confirm all transaction
-details on Trezor.
+details on Cerberus.
 
 ```javascript
 const result = await TrezorConnect.binanceSignTransaction(params);
@@ -12,7 +12,7 @@ const result = await TrezorConnect.binanceSignTransaction(params);
 [Optional common params](commonParams.md)
 
 -   `path` — _required_ `string | Array<number>` minimum length is `5`. [read more](../path.md)
--   `transaction` - _required_ `Object` type of [BinanceSDKTransaction](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/binance/index.ts)
+-   `transaction` - _required_ `Object` type of [BinanceSDKTransaction](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/binance/index.ts)
 -   `chunkify` — _optional_ `boolean` determines if recipient address will be displayed in chunks of 4 characters. Default is set to `false`
 
 ### Transfer example
@@ -91,7 +91,7 @@ TrezorConnect.binanceSignTransaction({
 
 ### Result
 
-[BinanceSignedTx type](https://github.com/trezor/trezor-suite/blob/develop/packages/protobuf/src/messages.ts)
+[BinanceSignedTx type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/protobuf/src/messages.ts)
 
 ```javascript
 {

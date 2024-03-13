@@ -1,19 +1,19 @@
-import { CustomError } from '@trezor/blockchain-link-types/lib/constants/errors';
-import { MESSAGES, RESPONSES } from '@trezor/blockchain-link-types/lib/constants';
+import { CustomError } from '@cerberus/blockchain-link-types/lib/constants/errors';
+import { MESSAGES, RESPONSES } from '@cerberus/blockchain-link-types/lib/constants';
 import { BaseWorker, CONTEXT, ContextType } from '../baseWorker';
 import { BlockfrostAPI } from './websocket';
 import {
     transformUtxos,
     transformAccountInfo,
     transformTransaction,
-} from '@trezor/blockchain-link-utils/lib/blockfrost';
-import type { SubscriptionAccountInfo } from '@trezor/blockchain-link-types/lib/common';
-import type { Response } from '@trezor/blockchain-link-types';
+} from '@cerberus/blockchain-link-utils/lib/blockfrost';
+import type { SubscriptionAccountInfo } from '@cerberus/blockchain-link-types/lib/common';
+import type { Response } from '@cerberus/blockchain-link-types';
 import type {
     BlockfrostTransaction,
     BlockContent,
-} from '@trezor/blockchain-link-types/lib/blockfrost';
-import type * as MessageTypes from '@trezor/blockchain-link-types/lib/messages';
+} from '@cerberus/blockchain-link-types/lib/blockfrost';
+import type * as MessageTypes from '@cerberus/blockchain-link-types/lib/messages';
 
 type Context = ContextType<BlockfrostAPI>;
 type Request<T> = T & Context;

@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { Select, variables, Button, SelectProps, ButtonProps } from '@trezor/components';
+import { Select, variables, Button, SelectProps, ButtonProps } from '@cerberus/components';
 
 const { SCREEN_SIZE } = variables;
 

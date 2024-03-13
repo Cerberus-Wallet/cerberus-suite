@@ -2,7 +2,7 @@ import React from 'react';
 
 import Lottie from 'lottie-react-native';
 
-import { NativeStyleObject } from '@trezor/styles';
+import { NativeStyleObject } from '@cerberus/styles';
 
 import connectDeviceLottie from '../assets/connectDeviceLottie.json';
 

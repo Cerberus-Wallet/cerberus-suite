@@ -1,12 +1,12 @@
 import { WebUSB } from 'usb';
 
-import { v1 as protocolV1, bridge as protocolBridge } from '@trezor/protocol';
-import { receive as receiveUtil } from '@trezor/transport/src/utils/receive';
-import { SessionsBackground } from '@trezor/transport/src/sessions/background';
-import { SessionsClient } from '@trezor/transport/src/sessions/client';
-import { UsbApi } from '@trezor/transport/src/api/usb';
-import { UdpApi } from '@trezor/transport/src/api/udp';
-import { AcquireInput, ReleaseInput } from '@trezor/transport/src/transports/abstract';
+import { v1 as protocolV1, bridge as protocolBridge } from '@cerberus/protocol';
+import { receive as receiveUtil } from '@cerberus/transport/src/utils/receive';
+import { SessionsBackground } from '@cerberus/transport/src/sessions/background';
+import { SessionsClient } from '@cerberus/transport/src/sessions/client';
+import { UsbApi } from '@cerberus/transport/src/api/usb';
+import { UdpApi } from '@cerberus/transport/src/api/udp';
+import { AcquireInput, ReleaseInput } from '@cerberus/transport/src/transports/abstract';
 
 export const sessionsBackground = new SessionsBackground();
 

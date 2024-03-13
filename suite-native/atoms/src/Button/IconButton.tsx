@@ -8,7 +8,7 @@ import {
     prepareNativeStyle,
     mergeNativeStyles,
     useNativeStyles,
-} from '@trezor/styles';
+} from '@cerberus/styles';
 
 import {
     ButtonColorScheme,

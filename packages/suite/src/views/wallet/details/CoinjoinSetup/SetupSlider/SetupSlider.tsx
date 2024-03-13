@@ -2,7 +2,7 @@ import { useRef, ReactNode, KeyboardEventHandler, ChangeEventHandler } from 'rea
 import styled from 'styled-components';
 
 import { useSelector } from 'src/hooks/suite/useSelector';
-import { Range, RangeProps, variables } from '@trezor/components';
+import { Range, RangeProps, variables } from '@cerberus/components';
 import { selectCurrentCoinjoinSession } from 'src/reducers/wallet/coinjoinReducer';
 import { SliderInput, SliderInputProps } from './SliderInput';
 

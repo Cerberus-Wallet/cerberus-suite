@@ -169,11 +169,11 @@ const config: webpack.Configuration = {
             'process.env.__CERBERUS_CONNECT_SRC': JSON.stringify(process.env.__CERBERUS_CONNECT_SRC),
             'process.env.COMMIT_HASH': JSON.stringify(commitHash),
         }),
-        // Imports from @trezor/connect-web in @trezor/connect-explorer package need to be replaced by imports from @trezor/connect-webextension/lib/proxy
-        // in order to work properly with @trezor/connect-webextension service worker.
+        // Imports from @cerberus/connect-web in @cerberus/connect-explorer package need to be replaced by imports from @cerberus/connect-webextension/lib/proxy
+        // in order to work properly with @cerberus/connect-webextension service worker.
         new webpack.NormalModuleReplacementPlugin(
-            /@trezor\/connect-web$/,
-            '@trezor/connect-webextension/lib/proxy',
+            /@cerberus\/connect-web$/,
+            '@cerberus/connect-webextension/lib/proxy',
         ),
     ],
 };

@@ -96,7 +96,7 @@ export default {
                         { amount: '2787', script_type: 'PAYTOWITNESS' },
                         { amount: '6497', script_type: 'PAYTOADDRESS' },
                     ],
-                    outputsPermutation: [1, 0], // default permutation from @trezor/utxo-lib/compose
+                    outputsPermutation: [1, 0], // default permutation from @cerberus/utxo-lib/compose
                 },
             ],
         },

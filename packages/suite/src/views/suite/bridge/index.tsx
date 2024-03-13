@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import { DATA_URL, HELP_CENTER_TOR_URL, GITHUB_BRIDGE_CHANGELOG_URL } from '@trezor/urls';
+import { DATA_URL, HELP_CENTER_TOR_URL, GITHUB_BRIDGE_CHANGELOG_URL } from '@cerberus/urls';
 import { Translation, TrezorLink, Modal, Metadata } from 'src/components/suite';
-import { Button, Paragraph, Link, Select, Image, variables, Spinner } from '@trezor/components';
+import { Button, Paragraph, Link, Select, Image, variables, Spinner } from '@cerberus/components';
 import { goto } from 'src/actions/suite/routerActions';
-import { isDesktop, isWeb } from '@trezor/env-utils';
+import { isDesktop, isWeb } from '@cerberus/env-utils';
 import { useDispatch, useSelector } from 'src/hooks/suite';
 import { selectTorState } from 'src/reducers/suite/suiteReducer';
-import { DeviceModelInternal } from '@trezor/connect';
+import { DeviceModelInternal } from '@cerberus/connect';
 
 const Content = styled.div`
     display: flex;
@@ -139,7 +139,7 @@ export const InstallBridge = () => {
             description={<Translation id="TR_NEW_COMMUNICATION_TOOL" />}
             data-test="@modal/bridge"
         >
-            <Metadata title="Download Bridge | Trezor Suite" />
+            <Metadata title="Download Bridge | Cerberus Suite" />
             <Content>
                 <Version show={!!data.currentVersion}>
                     <Translation

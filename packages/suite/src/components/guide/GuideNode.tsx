@@ -1,14 +1,14 @@
 import { ReactNode } from 'react';
 import styled, { useTheme } from 'styled-components';
-import { analytics, EventType } from '@trezor/suite-analytics';
+import { analytics, EventType } from '@cerberus/suite-analytics';
 import { resolveStaticPath } from '@suite-common/suite-utils';
 
-import { Icon, variables } from '@trezor/components';
+import { Icon, variables } from '@cerberus/components';
 import { useDispatch, useSelector } from 'src/hooks/suite';
 import { openNode } from 'src/actions/suite/guideActions';
 import { GuideNode as GuideNodeType } from '@suite-common/suite-types';
 import { getNodeTitle } from 'src/utils/suite/guide';
-import { borders } from '@trezor/theme';
+import { borders } from '@cerberus/theme';
 import { selectLanguage } from 'src/reducers/suite/suiteReducer';
 
 const NodeButton = styled.button`

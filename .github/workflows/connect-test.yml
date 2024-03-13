@@ -15,7 +15,7 @@ on:
       - "packages/utils"
       - "packages/utxo-lib"
       - "docker"
-      - "submodules/trezor-common"
+      - "submodules/cerberus-common"
       - "yarn.lock"
 
 jobs:

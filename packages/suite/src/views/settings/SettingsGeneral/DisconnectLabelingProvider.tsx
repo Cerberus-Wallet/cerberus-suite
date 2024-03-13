@@ -1,4 +1,4 @@
-import { capitalizeFirstLetter } from '@trezor/utils';
+import { capitalizeFirstLetter } from '@cerberus/utils';
 
 import {
     ActionButton,

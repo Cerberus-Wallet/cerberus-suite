@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { FieldPath, UseFormReturn } from 'react-hook-form';
-import { FeeLevel } from '@trezor/connect';
+import { FeeLevel } from '@cerberus/connect';
 import { setLastUsedFeeLevel } from 'src/actions/settings/walletSettingsActions';
 import { useDispatch } from 'src/hooks/suite';
 import {

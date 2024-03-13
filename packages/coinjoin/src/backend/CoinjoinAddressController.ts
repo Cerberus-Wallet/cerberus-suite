@@ -1,6 +1,6 @@
 /* eslint no-underscore-dangle: ["error", { "allowAfterThis": true }] */
 
-import type { Network } from '@trezor/utxo-lib';
+import type { Network } from '@cerberus/utxo-lib';
 
 import { deriveAddresses } from './backendUtils';
 import { getAddressScript } from './filters';

@@ -2,7 +2,7 @@ import type { ComponentType } from 'react';
 
 import type { NotificationEntry } from '@suite-common/toast-notifications';
 import { deviceActions } from '@suite-common/wallet-core';
-import { DEVICE } from '@trezor/connect';
+import { DEVICE } from '@cerberus/connect';
 
 import { NotificationViewProps } from 'src/components/suite';
 import type { ExtendedMessageDescriptor } from 'src/types/suite';

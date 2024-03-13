@@ -3,7 +3,7 @@ import styled, { DefaultTheme, useTheme } from 'styled-components';
 
 import { Icon, IconType } from '../assets/Icon/Icon';
 import { variables } from '../../config';
-import { CSSColor, Color, borders, spacingsPx, typography } from '@trezor/theme';
+import { CSSColor, Color, borders, spacingsPx, typography } from '@cerberus/theme';
 import { UIVariant } from '../../config/types';
 
 export type WarningVariant = Extract<UIVariant, 'primary' | 'info' | 'warning' | 'destructive'>;

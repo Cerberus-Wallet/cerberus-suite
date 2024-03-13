@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styled, { useTheme } from 'styled-components';
-import { variables, Icon } from '@trezor/components';
-import { HELP_CENTER_ZERO_VALUE_ATTACKS } from '@trezor/urls';
+import { variables, Icon } from '@cerberus/components';
+import { HELP_CENTER_ZERO_VALUE_ATTACKS } from '@cerberus/urls';
 import {
     FormattedCryptoAmount,
     TooltipSymbol,

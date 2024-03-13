@@ -8,13 +8,13 @@ import {
     mapElevationToBorder,
     spacingsPx,
     typography,
-} from '@trezor/theme';
+} from '@cerberus/theme';
 import { WalletAccountTransaction } from '@suite-common/wallet-types';
 import { formatAmount, formatNetworkAmount, isNftTokenTransfer } from '@suite-common/wallet-utils';
 import { FormattedCryptoAmount, Translation } from 'src/components/suite';
 import { useSelector } from 'src/hooks/suite/useSelector';
-import { AnonymitySet, TokenTransfer } from '@trezor/blockchain-link';
-import { Icon, CollapsibleBox, useElevation } from '@trezor/components';
+import { AnonymitySet, TokenTransfer } from '@cerberus/blockchain-link';
+import { Icon, CollapsibleBox, useElevation } from '@cerberus/components';
 import { UtxoAnonymity } from 'src/components/wallet';
 import { AnalyzeInExplorerBanner } from './AnalyzeInExplorerBanner';
 import { FormattedNftAmount } from 'src/components/suite/FormattedNftAmount';

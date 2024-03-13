@@ -1,7 +1,7 @@
 import * as url from 'url';
 
-import { xssFilters } from '@trezor/utils';
-import { HttpServer, allowOrigins } from '@trezor/node-utils';
+import { xssFilters } from '@cerberus/utils';
+import { HttpServer, allowOrigins } from '@cerberus/node-utils';
 
 import { HTTP_ORIGINS_DEFAULT } from './constants';
 
@@ -25,7 +25,7 @@ const applyTemplate = (content: string, options?: TemplateOptions) => {
         <!DOCTYPE html>
         <html>
             <head>
-                <title>${options?.title ?? 'Trezor Suite'}</title>
+                <title>${options?.title ?? 'Cerberus Suite'}</title>
                 ${options?.script || ''}
             </head>
             <body>

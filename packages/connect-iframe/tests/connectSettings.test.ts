@@ -9,9 +9,9 @@ describe('connect-iframe parseConnectSettings', () => {
         delete window.location;
         window.location = {
             protocol: 'https:',
-            hostname: 'connect.trezor.io',
-            href: 'https://connect.trezor.io',
-            toString: () => 'https://connect.trezor.io',
+            hostname: 'connect.cerberus.uraanai.com',
+            href: 'https://connect.cerberus.uraanai.com',
+            toString: () => 'https://connect.cerberus.uraanai.com',
         };
         navigator.usb = {};
     });
@@ -65,7 +65,7 @@ describe('connect-iframe parseConnectSettings', () => {
 
     it('trustedHost + popup + debug (iframe online location)', () => {
         expect(
-            parseConnectSettings({ popup: false, debug: true }, 'https://connect.trezor.io'),
+            parseConnectSettings({ popup: false, debug: true }, 'https://connect.cerberus.uraanai.com'),
         ).toMatchObject({
             trustedHost: true,
             popup: false,
@@ -73,7 +73,7 @@ describe('connect-iframe parseConnectSettings', () => {
         });
 
         expect(
-            parseConnectSettings({ popup: true, debug: true }, 'https://connect.trezor.io'),
+            parseConnectSettings({ popup: true, debug: true }, 'https://connect.cerberus.uraanai.com'),
         ).toMatchObject({
             trustedHost: true, // because of whitelisted origin
             popup: true,
@@ -88,8 +88,8 @@ describe('connect-iframe parseConnectSettings', () => {
     });
 
     it('priority', () => {
-        expect(parseConnectSettings({}, 'https://connect.trezor.io')).toMatchObject({
-            origin: 'https://connect.trezor.io',
+        expect(parseConnectSettings({}, 'https://connect.cerberus.uraanai.com')).toMatchObject({
+            origin: 'https://connect.cerberus.uraanai.com',
             priority: 0,
         });
         expect(parseConnectSettings({}, 'https://3rdparty.site')).toMatchObject({

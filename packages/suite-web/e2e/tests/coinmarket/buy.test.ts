@@ -36,8 +36,8 @@ describe('Coinmarket buy', () => {
      * 5. Picks one offer and clicks “Get this deal”.
      * 6. Verifies that a modal opens.
      * 7. Clicks the checkbox and “Confirm”.
-     * 8. Clicks “Confirm on Trezor”  in Suite and on the emulator.
-     * 9. Verifies “Confirmed on Trezor” text.
+     * 8. Clicks “Confirm on Cerberus”  in Suite and on the emulator.
+     * 9. Verifies “Confirmed on Cerberus” text.
      * 10. Verifies the amount, currency, crypto, provider and payment method all match the mocked/given data.
      * 11. Clicks “Finish transaction”.
      * 12. Simulates interaction with the partner's site

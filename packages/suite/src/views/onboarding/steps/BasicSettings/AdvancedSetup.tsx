@@ -1,9 +1,9 @@
 import { useState, ReactNode } from 'react';
 import styled, { useTheme } from 'styled-components';
 import { Translation } from 'src/components/suite';
-import { Icon } from '@trezor/components';
+import { Icon } from '@cerberus/components';
 import { useSelector } from 'src/hooks/suite';
-import { isDesktop, isWeb } from '@trezor/env-utils';
+import { isDesktop, isWeb } from '@cerberus/env-utils';
 import { TorSection } from './TorSection';
 import { getIsTorEnabled } from 'src/utils/suite/tor';
 import { CollapsibleOnboardingCard } from 'src/components/onboarding/CollapsibleOnboardingCard';

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Button, ButtonProps } from '@trezor/components';
+import { Button, ButtonProps } from '@cerberus/components';
 import { Translation } from 'src/components/suite';
 
 const StyledButton = styled(Button)`

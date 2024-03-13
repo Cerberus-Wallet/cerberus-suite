@@ -2,7 +2,7 @@ import { createAction } from '@reduxjs/toolkit';
 
 import { NetworkSymbol } from '@suite-common/wallet-config';
 import type { CustomBackend, NetworksFees } from '@suite-common/wallet-types';
-import type { Timeout } from '@trezor/type-utils';
+import type { Timeout } from '@cerberus/type-utils';
 
 export const blockchainActionsPrefix = '@common/wallet-core/blockchain';
 

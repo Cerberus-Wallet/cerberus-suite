@@ -1,6 +1,6 @@
 import produce from 'immer';
-import { DEVICE, Device } from '@trezor/connect';
-import { OnboardingAnalytics } from '@trezor/suite-analytics';
+import { DEVICE, Device } from '@cerberus/connect';
+import { OnboardingAnalytics } from '@cerberus/suite-analytics';
 
 import { ONBOARDING } from 'src/actions/onboarding/constants';
 import * as STEP from 'src/constants/onboarding/steps';

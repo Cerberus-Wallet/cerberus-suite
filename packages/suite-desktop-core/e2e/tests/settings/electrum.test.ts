@@ -1,6 +1,6 @@
 import { test as testPlaywright, ElectronApplication, Page } from '@playwright/test';
 
-import { TrezorUserEnvLink } from '@trezor/trezor-user-env-link';
+import { TrezorUserEnvLink } from '@cerberus/trezor-user-env-link';
 
 import { launchSuite, rmDirRecursive } from '../../support/common';
 import { onTopBar } from '../../support/pageActions/topBarActions';

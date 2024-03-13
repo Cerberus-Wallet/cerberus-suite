@@ -2,7 +2,7 @@ import { useCallback, useState, ReactNode, useEffect } from 'react';
 
 import styled, { css, useTheme } from 'styled-components';
 import { useEvent } from 'react-use';
-import { borders, spacings, spacingsPx, typography } from '@trezor/theme';
+import { borders, spacings, spacingsPx, typography } from '@cerberus/theme';
 
 import { Icon, IconType } from '../../assets/Icon/Icon';
 import { Stepper } from '../../loaders/Stepper/Stepper';

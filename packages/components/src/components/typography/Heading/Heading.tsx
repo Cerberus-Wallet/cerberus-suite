@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { typography } from '@trezor/theme';
+import { typography } from '@cerberus/theme';
 
 const H1 = styled.h1`
     ${typography.titleLarge};

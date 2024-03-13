@@ -10,7 +10,7 @@ Constants of all types can be imported from package
 ES6
 
 ```javascript
-import TrezorConnect, { DEVICE_EVENT, DEVICE } from '@trezor/connect';
+import TrezorConnect, { DEVICE_EVENT, DEVICE } from '@cerberus/connect';
 
 TrezorConnect.on(DEVICE_EVENT, event => {
     if (event.type === DEVICE.CONNECT) {
@@ -24,6 +24,6 @@ TrezorConnect.on(DEVICE_EVENT, event => {
 Full list of events is unfortunately beyond the scope of this documentation
 but you may refer to the source code for:
 
--   [device events](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/events/device.ts)
--   [transport events](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/events/transport.ts)
--   [blockchain events](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/events/blockchain.ts)
+-   [device events](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/events/device.ts)
+-   [transport events](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/events/transport.ts)
+-   [blockchain events](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/events/blockchain.ts)

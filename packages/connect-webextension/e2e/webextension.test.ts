@@ -2,8 +2,8 @@
 import { test, expect, chromium } from '@playwright/test';
 import path from 'path';
 
-import { TrezorUserEnvLink } from '@trezor/trezor-user-env-link';
-import { ensureDirectoryExists } from '@trezor/node-utils';
+import { TrezorUserEnvLink } from '@cerberus/trezor-user-env-link';
+import { ensureDirectoryExists } from '@cerberus/node-utils';
 
 let dir: string;
 test.beforeAll(async () => {

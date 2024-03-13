@@ -3,7 +3,7 @@ import { Platform } from 'react-native';
 
 import { BarCodeEvent, BarCodeScanner, PermissionStatus } from 'expo-barcode-scanner';
 
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import { Box, Loader } from '@suite-native/atoms';
 
 import { CameraPermissionError } from './CameraPermissionError';

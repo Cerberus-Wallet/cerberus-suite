@@ -2,9 +2,9 @@ import * as http from 'http';
 import * as net from 'net';
 import * as url from 'url';
 
-import type { RequiredKey } from '@trezor/type-utils';
-import { TypedEmitter } from '@trezor/utils';
-import { arrayPartition } from '@trezor/utils';
+import type { RequiredKey } from '@cerberus/type-utils';
+import { TypedEmitter } from '@cerberus/utils';
+import { arrayPartition } from '@cerberus/utils';
 
 import { getFreePort } from './getFreePort';
 

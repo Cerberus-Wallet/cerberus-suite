@@ -10,7 +10,7 @@ import onboardingMiddlewares from 'src/middlewares/onboarding';
 
 const middlewares = [...onboardingMiddlewares];
 
-jest.mock('@trezor/suite-storage', () => ({
+jest.mock('@cerberus/suite-storage', () => ({
     __esModule: true, // this property makes it work
     default: () => {},
 }));

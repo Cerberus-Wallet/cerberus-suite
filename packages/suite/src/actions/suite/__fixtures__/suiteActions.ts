@@ -1,6 +1,6 @@
 import { testMocks } from '@suite-common/test-utils';
 import { discoveryActions, deviceActions } from '@suite-common/wallet-core';
-import { DEVICE, TRANSPORT } from '@trezor/connect';
+import { DEVICE, TRANSPORT } from '@cerberus/connect';
 import { notificationsActions } from '@suite-common/toast-notifications';
 
 import { SUITE, MODAL } from 'src/actions/suite/constants';
@@ -319,7 +319,7 @@ const selectDevice = [
         },
     },
     {
-        description: `two instances of device (@trezor/connect Device)`,
+        description: `two instances of device (@cerberus/connect Device)`,
         state: {
             device: {
                 devices: [
@@ -1022,7 +1022,7 @@ const createDeviceInstance = [
         result: deviceActions.createDeviceInstance.type,
     },
     {
-        description: `without passphrase_protection and @trezor/connect error`,
+        description: `without passphrase_protection and @cerberus/connect error`,
         state: {
             device: {
                 selectedDevice: getSuiteDevice({

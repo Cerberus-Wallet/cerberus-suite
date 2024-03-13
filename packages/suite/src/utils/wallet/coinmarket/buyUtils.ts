@@ -1,9 +1,9 @@
 import { v4 as uuidv4 } from 'uuid';
-import { desktopApi } from '@trezor/suite-desktop-api';
+import { desktopApi } from '@cerberus/suite-desktop-api';
 import { Account } from 'src/types/wallet';
 import { AmountLimits } from 'src/types/wallet/coinmarketCommonTypes';
 import { BuyTrade, BuyTradeQuoteRequest, BuyTradeStatus, CryptoSymbol } from 'invity-api';
-import { isDesktop, getLocationOrigin } from '@trezor/env-utils';
+import { isDesktop, getLocationOrigin } from '@cerberus/env-utils';
 import {
     cryptoToNetworkSymbol,
     cryptoToCoinSymbol,

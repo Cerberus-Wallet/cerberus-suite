@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import { transparentize } from 'polished';
 
 import { selectAccountTransactionsWithNulls } from '@suite-common/wallet-core';
-import { Icon, variables, IconType } from '@trezor/components';
+import { Icon, variables, IconType } from '@cerberus/components';
 import { useSelector } from 'src/hooks/suite';
-import type { AccountUtxo } from '@trezor/connect';
+import type { AccountUtxo } from '@cerberus/connect';
 import { useSendFormContext } from 'src/hooks/wallet';
 import { UtxoSelection } from './UtxoSelection';
 

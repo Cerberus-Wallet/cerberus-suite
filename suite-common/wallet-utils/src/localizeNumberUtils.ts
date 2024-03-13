@@ -1,6 +1,6 @@
 import BigNumber from 'bignumber.js';
 
-import { getLocaleSeparators } from '@trezor/utils';
+import { getLocaleSeparators } from '@cerberus/utils';
 
 export const localizeNumber = (
     value: number | string | BigNumber,

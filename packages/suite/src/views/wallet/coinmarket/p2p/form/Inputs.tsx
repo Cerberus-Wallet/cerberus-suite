@@ -4,7 +4,7 @@ import { fiatCurrencies } from '@suite-common/suite-config';
 import { Translation, NumberInput } from 'src/components/suite';
 import { formInputsMaxLength } from '@suite-common/validators';
 import { getInputState } from '@suite-common/wallet-utils';
-import { CoinLogo, Select } from '@trezor/components';
+import { CoinLogo, Select } from '@cerberus/components';
 import { useCoinmarketP2pFormContext } from 'src/hooks/wallet/useCoinmarketP2pForm';
 import { Wrapper } from 'src/views/wallet/coinmarket';
 import { buildFiatOption } from 'src/utils/wallet/coinmarket/coinmarketUtils';

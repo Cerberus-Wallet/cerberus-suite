@@ -1,5 +1,5 @@
-import { analytics, EventType, getRandomId } from '@trezor/connect-analytics';
-import { storage } from '@trezor/connect-common';
+import { analytics, EventType, getRandomId } from '@cerberus/connect-analytics';
+import { storage } from '@cerberus/connect-common';
 import {
     getBrowserName,
     getBrowserVersion,
@@ -10,7 +10,7 @@ import {
     getWindowWidth,
     getWindowHeight,
     getPlatformLanguages,
-} from '@trezor/env-utils';
+} from '@cerberus/env-utils';
 
 const saveTrackingEnablement = (enablement: boolean) => {
     storage.save(state => ({

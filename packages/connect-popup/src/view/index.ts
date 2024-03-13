@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/popup/view/index.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/popup/view/index.js
 
 export { showView, postMessage } from './common';
 export { initPinView } from './pin';

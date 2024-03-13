@@ -1,4 +1,4 @@
-import { FirmwareType, Device, VersionArray } from '@trezor/connect';
+import { FirmwareType, Device, VersionArray } from '@cerberus/connect';
 
 import { isDeviceInBootloaderMode } from './modeUtils';
 

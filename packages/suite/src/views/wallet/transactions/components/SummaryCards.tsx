@@ -4,7 +4,7 @@ import { Translation, HiddenPlaceholder, FormattedDate } from 'src/components/su
 import { Account } from 'src/types/wallet';
 
 import { useFormatters } from '@suite-common/formatters';
-import { variables } from '@trezor/components';
+import { variables } from '@cerberus/components';
 
 import { InfoCard } from './InfoCard';
 import { AggregatedAccountHistory, GraphRange } from 'src/types/wallet/graph';

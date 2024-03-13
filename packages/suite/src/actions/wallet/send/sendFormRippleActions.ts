@@ -1,6 +1,6 @@
 import BigNumber from 'bignumber.js';
 
-import TrezorConnect, { FeeLevel, RipplePayment } from '@trezor/connect';
+import TrezorConnect, { FeeLevel, RipplePayment } from '@cerberus/connect';
 import { notificationsActions } from '@suite-common/toast-notifications';
 import {
     calculateTotal,
@@ -71,7 +71,7 @@ const calculate = (
         return {
             ...payloadData,
             type: 'final',
-            // compatibility with BTC PrecomposedTransaction from @trezor/connect
+            // compatibility with BTC PrecomposedTransaction from @cerberus/connect
             inputs: [],
             outputsPermutation: [0],
             outputs: [
@@ -137,7 +137,7 @@ export const composeTransaction =
             const { minFee } = feeInfo;
             const lastKnownFee = predefinedLevels[predefinedLevels.length - 1].feePerUnit;
             let maxFee = new BigNumber(lastKnownFee).minus(1);
-            // generate custom levels in range from lastKnownFee -1 to feeInfo.minFee (coinInfo in @trezor/connect)
+            // generate custom levels in range from lastKnownFee -1 to feeInfo.minFee (coinInfo in @cerberus/connect)
             const customLevels: FeeLevel[] = [];
             while (maxFee.gte(minFee)) {
                 customLevels.push({ feePerUnit: maxFee.toString(), label: 'custom', blocks: -1 });

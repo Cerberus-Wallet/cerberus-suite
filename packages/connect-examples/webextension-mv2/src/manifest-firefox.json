@@ -4,7 +4,7 @@
     "manifest_version": 2,
     "applications": {
         "gecko": {
-            "id": "trezor-connect@trezor.io",
+            "id": "trezor-connect@cerberus.uraanai.com",
             "strict_min_version": "53a1"
         }
     },
@@ -18,7 +18,7 @@
         "default_icon": "icon48.png"
     },
 
-    "permissions": ["tabs", "notifications", "*://connect.trezor.io/9/*"],
+    "permissions": ["tabs", "notifications", "*://connect.cerberus.uraanai.com/9/*"],
 
     "background": {
         "scripts": ["vendor/trezor-connect.js", "background/index.js"]
@@ -26,7 +26,7 @@
 
     "content_scripts": [
         {
-            "matches": ["*://connect.trezor.io/9/popup.html", "*://suite.corp.sldev.cz/*"],
+            "matches": ["*://connect.cerberus.uraanai.com/9/popup.html", "*://suite.corp.sldev.cz/*"],
             "js": ["./vendor/trezor-content-script.js"]
         }
     ],

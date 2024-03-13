@@ -12,7 +12,7 @@ export default [
                 name: 'label',
                 type: 'input',
                 optional: true,
-                value: 'My Trezor',
+                value: 'My Cerberus',
             },
             {
                 name: 'passphrase_source',

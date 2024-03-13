@@ -1,4 +1,4 @@
-import { WindowServiceWorkerChannel } from '@trezor/connect-web/lib/channels/window-serviceworker';
+import { WindowServiceWorkerChannel } from '@cerberus/connect-web/lib/channels/window-serviceworker';
 
 /**
  * communication between service worker and both webextension and popup manager
@@ -6,8 +6,8 @@ import { WindowServiceWorkerChannel } from '@trezor/connect-web/lib/channels/win
 const channel = new WindowServiceWorkerChannel({
     name: 'trezor-connect',
     channel: {
-        here: '@trezor/connect-content-script',
-        peer: '@trezor/connect-webextension',
+        here: '@cerberus/connect-content-script',
+        peer: '@cerberus/connect-webextension',
     },
 });
 
@@ -33,7 +33,7 @@ channel.init().then(() => {
      */
     window.addEventListener('message', event => {
         if (
-            event.data?.channel?.here === '@trezor/connect-webextension' ||
+            event.data?.channel?.here === '@cerberus/connect-webextension' ||
             event.data?.type === 'popup-content-script-loaded'
         ) {
             return;

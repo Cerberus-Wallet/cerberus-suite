@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import { pickByDeviceModel } from '@trezor/device-utils';
-import { DeviceModelInternal } from '@trezor/connect';
+import { pickByDeviceModel } from '@cerberus/device-utils';
+import { DeviceModelInternal } from '@cerberus/connect';
 import { selectDevice } from '@suite-common/wallet-core';
 
 import { OnboardingButtonCta } from 'src/components/onboarding';

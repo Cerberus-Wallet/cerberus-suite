@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/helpers/uploadFirmware.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/helpers/uploadFirmware.js
 
 import { UI, DEVICE, createUiMessage, CoreEventMessage } from '../../events';
 import { PROTO, ERRORS } from '../../constants';

@@ -1,4 +1,4 @@
-import { Type, Static } from '@trezor/schema-utils';
+import { Type, Static } from '@cerberus/schema-utils';
 
 export type FeeInfo = Static<typeof FeeInfo>;
 export const FeeInfo = Type.Object({

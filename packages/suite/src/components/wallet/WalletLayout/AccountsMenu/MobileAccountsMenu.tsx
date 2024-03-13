@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styled, { css, useTheme } from 'styled-components';
-import { H2, variables, Icon } from '@trezor/components';
-import { zIndices, spacingsPx } from '@trezor/theme';
+import { H2, variables, Icon } from '@cerberus/components';
+import { zIndices, spacingsPx } from '@cerberus/theme';
 import { selectDevice } from '@suite-common/wallet-core';
 import { Translation } from 'src/components/suite';
 import { useDiscovery, useSelector } from 'src/hooks/suite';

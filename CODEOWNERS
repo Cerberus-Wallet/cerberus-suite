@@ -38,7 +38,7 @@
 
 /packages/connect-webextension @mroz22 @karliatto @martykan
 
-/packages/icons @trezor/suite-mobile
+/packages/icons @cerberus/suite-mobile
 
 /suite-common/message-system @tomasklim @matejkriz
 
@@ -56,7 +56,7 @@
 
 /packages/suite-desktop-api @szymonlesisz @marekrjpolak
 
-/suite-native @trezor/suite-mobile
+/suite-native @cerberus/suite-mobile
 
 /packages/suite-storage @matejkriz
 
@@ -64,7 +64,7 @@
 
 /packages/transport @mroz22
 
-/packages/transport-native @trezor/suite-mobile @Nodonisko
+/packages/transport-native @cerberus/suite-mobile @Nodonisko
 
 /packages/theme @Nodonisko
 
@@ -82,7 +82,7 @@
 
 /packages/suite/src/support/messages.ts @alex-jerechinsky
 
-/suite-common/graph @trezor/suite-mobile @Nodonisko
+/suite-common/graph @cerberus/suite-mobile @Nodonisko
 
 /packages/connect/src/data/deviceAuthenticityConfig.ts @tsusanka
 

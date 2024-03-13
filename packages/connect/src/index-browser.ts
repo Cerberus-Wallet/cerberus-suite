@@ -1,7 +1,7 @@
 import { TypedError } from './constants/errors';
 import { factory } from './factory';
 
-// Throw error from each method. use @trezor/connect-web instead.
+// Throw error from each method. use @cerberus/connect-web instead.
 const fallback = () => {
     throw TypedError('Method_InvalidPackage');
 };

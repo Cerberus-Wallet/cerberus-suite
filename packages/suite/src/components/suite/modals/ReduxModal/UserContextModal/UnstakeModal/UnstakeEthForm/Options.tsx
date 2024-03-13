@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import { FiatValue, FormattedCryptoAmount, Translation } from 'src/components/suite';
-import { Paragraph, Radio } from '@trezor/components';
-import { spacingsPx } from '@trezor/theme';
+import { Paragraph, Radio } from '@cerberus/components';
+import { spacingsPx } from '@cerberus/theme';
 import { Inputs } from './Inputs';
 import { NetworkSymbol } from '@suite-common/wallet-config';
 import { mapTestnetSymbol } from 'src/utils/wallet/coinmarket/coinmarketUtils';

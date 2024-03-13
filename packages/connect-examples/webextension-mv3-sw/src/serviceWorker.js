@@ -1,7 +1,7 @@
 // import connect
 importScripts('vendor/trezor-connect-webextension.js');
 
-const connectSrc = 'https://connect.trezor.io/9/';
+const connectSrc = 'https://connect.cerberus.uraanai.com/9/';
 
 // call connect once extension is started. and thats all
 chrome.runtime.onInstalled.addListener(details => {

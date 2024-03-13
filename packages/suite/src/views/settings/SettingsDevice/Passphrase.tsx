@@ -1,8 +1,8 @@
-import { HELP_CENTER_PASSPHRASE_URL } from '@trezor/urls';
-import { analytics, EventType } from '@trezor/suite-analytics';
+import { HELP_CENTER_PASSPHRASE_URL } from '@cerberus/urls';
+import { analytics, EventType } from '@cerberus/suite-analytics';
 
 import { ActionColumn, SectionItem, TextColumn, Translation } from 'src/components/suite';
-import { Switch } from '@trezor/components';
+import { Switch } from '@cerberus/components';
 import { useDevice, useDispatch } from 'src/hooks/suite';
 import { applySettings } from 'src/actions/settings/deviceSettingsActions';
 import { useAnchor } from 'src/hooks/suite/useAnchor';

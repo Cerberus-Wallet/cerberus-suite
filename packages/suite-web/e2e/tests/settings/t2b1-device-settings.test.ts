@@ -5,7 +5,7 @@
 // - focus this test on testing what is different from T2T1: (background image, display rotation)
 // - implement these differences in suite in the first place. both suite and T2B1 will happily accept
 //   request to change display rotation but it has no effect. It should be at least hidden on client.
-// https://github.com/trezor/trezor-suite/issues/6567
+// https://github.com/Cerberus-Wallet/cerberus-suite/issues/6567
 
 describe('T2B1 - Device settings', () => {
     const startEmuOpts = {

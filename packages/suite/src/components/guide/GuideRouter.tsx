@@ -2,8 +2,8 @@ import styled, { css, keyframes } from 'styled-components';
 import { AnimatePresence, motion } from 'framer-motion';
 import { FreeFocusInside } from 'react-focus-lock';
 
-import { variables, Backdrop } from '@trezor/components';
-import { useOnce } from '@trezor/react-utils';
+import { variables, Backdrop } from '@cerberus/components';
+import { useOnce } from '@cerberus/react-utils';
 import { useSelector } from 'src/hooks/suite';
 import {
     SupportFeedbackSelection,
@@ -13,7 +13,7 @@ import {
     Feedback,
 } from 'src/components/guide';
 import { useGuide, GUIDE_ANIMATION_DURATION_MS } from 'src/hooks/guide';
-import { zIndices } from '@trezor/theme';
+import { zIndices } from '@cerberus/theme';
 
 const fullHeightStyle = css`
     position: absolute;

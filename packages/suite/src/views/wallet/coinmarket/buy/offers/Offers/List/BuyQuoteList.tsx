@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { variables, Icon, H2 } from '@trezor/components';
+import { variables, Icon, H2 } from '@cerberus/components';
 import { BuyTrade } from 'invity-api';
 import { useCoinmarketBuyOffersContext } from 'src/hooks/wallet/useCoinmarketBuyOffers';
 import { Translation } from 'src/components/suite';

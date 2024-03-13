@@ -1,4 +1,4 @@
-import { arrayPartition, arrayToDictionary } from '@trezor/utils';
+import { arrayPartition, arrayToDictionary } from '@cerberus/utils';
 
 import { Account } from '../Account';
 import { Alice } from '../Alice';

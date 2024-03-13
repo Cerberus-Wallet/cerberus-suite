@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/NEMSignTransaction.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/NEMSignTransaction.js
 
 import { AbstractMethod } from '../../../core/AbstractMethod';
 import { getFirmwareRange } from '../../common/paramsValidator';
@@ -6,7 +6,7 @@ import { getMiscNetwork } from '../../../data/coinInfo';
 import { validatePath } from '../../../utils/pathUtils';
 import * as helper from '../nemSignTx';
 import type { PROTO } from '../../../constants';
-import { AssertWeak } from '@trezor/schema-utils';
+import { AssertWeak } from '@cerberus/schema-utils';
 import { NEMSignTransaction as NEMSignTransactionSchema } from '../../../types/api/nem';
 
 export default class NEMSignTransaction extends AbstractMethod<

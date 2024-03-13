@@ -1,5 +1,5 @@
 import { TrezorDevice } from 'src/types/suite';
-import { Image, ImageProps } from '@trezor/components';
+import { Image, ImageProps } from '@cerberus/components';
 
 interface DeviceConfirmImageProps extends Omit<ImageProps, 'image'> {
     device: TrezorDevice;

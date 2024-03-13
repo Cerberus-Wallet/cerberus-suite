@@ -1,4 +1,4 @@
-import { HELP_CENTER_RECOVERY_SEED_URL } from '@trezor/urls';
+import { HELP_CENTER_RECOVERY_SEED_URL } from '@cerberus/urls';
 
 import {
     ActionButton,

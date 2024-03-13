@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
 
-import { Dropdown, DropdownRef, CoinLogo } from '@trezor/components';
+import { Dropdown, DropdownRef, CoinLogo } from '@cerberus/components';
 import { Translation, StatusLight } from 'src/components/suite';
 import { useDispatch, useSelector, useTranslation } from 'src/hooks/suite';
 import { goto } from 'src/actions/suite/routerActions';
@@ -9,7 +9,7 @@ import { BlockchainState } from '@suite-common/wallet-core';
 import type { CustomBackend } from 'src/types/wallet';
 import { ActionButton } from './ActionButton';
 import { openModal } from 'src/actions/suite/modalActions';
-import { spacingsPx, typography } from '@trezor/theme';
+import { spacingsPx, typography } from '@cerberus/theme';
 
 const StyledDropdown = styled(Dropdown)`
     display: block;

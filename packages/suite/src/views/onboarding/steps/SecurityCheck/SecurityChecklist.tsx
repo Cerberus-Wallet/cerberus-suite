@@ -1,5 +1,5 @@
 import styled, { useTheme } from 'styled-components';
-import { Icon, IconType, variables } from '@trezor/components';
+import { Icon, IconType, variables } from '@cerberus/components';
 
 const Items = styled.div`
     display: flex;

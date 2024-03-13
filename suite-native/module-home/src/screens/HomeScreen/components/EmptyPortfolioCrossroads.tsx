@@ -10,7 +10,7 @@ import {
     StackToStackCompositeNavigationProps,
 } from '@suite-native/navigation';
 import { VStack, Card, Button, Text, Box } from '@suite-native/atoms';
-import { useNativeStyles, prepareNativeStyle } from '@trezor/styles';
+import { useNativeStyles, prepareNativeStyle } from '@cerberus/styles';
 import { Translation, useTranslate } from '@suite-native/intl';
 import { analytics, EventType } from '@suite-native/analytics';
 import { useActiveColorScheme } from '@suite-native/theme';

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import styled from 'styled-components';
-import { Button, Paragraph, Warning } from '@trezor/components';
+import { Button, Paragraph, Warning } from '@cerberus/components';
 import { Translation, FiatValue, FormattedCryptoAmount } from 'src/components/suite';
 import { FeesInfo } from 'src/components/wallet/FeesInfo';
 import { mapTestnetSymbol } from 'src/utils/wallet/coinmarket/coinmarketUtils';
@@ -8,7 +8,7 @@ import { useSelector } from 'src/hooks/suite';
 import { useClaimEthFormContext } from 'src/hooks/wallet/useClaimEthForm';
 import { selectSelectedAccountEverstakeStakingPool } from 'src/reducers/wallet/selectedAccountReducer';
 import { CRYPTO_INPUT } from 'src/types/wallet/stakeForms';
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 
 const AmountInfo = styled.div`
     display: flex;

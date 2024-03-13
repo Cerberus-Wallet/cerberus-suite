@@ -1,4 +1,4 @@
-import { TypedEmitter } from '@trezor/utils';
+import { TypedEmitter } from '@cerberus/utils';
 
 import { Status } from './Status';
 import { Account } from './Account';

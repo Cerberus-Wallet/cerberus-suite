@@ -9,7 +9,7 @@ import { AccountKey, TokenAddress } from '@suite-common/wallet-types';
 import { groupTransactionsByDate, MonthKey } from '@suite-common/wallet-utils';
 import { Box, Loader } from '@suite-native/atoms';
 import { EthereumTokenTransfer, WalletAccountTransaction } from '@suite-native/ethereum-tokens';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 
 import { TransactionsEmptyState } from '../TransactionsEmptyState';
 import { TokenTransferListItem } from './TokenTransferListItem';

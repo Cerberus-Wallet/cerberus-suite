@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import invityAPI from 'src/services/suite/invityAPI';
 import { NumberInput } from 'src/components/suite';
-import { Select, CoinLogo } from '@trezor/components';
+import { Select, CoinLogo } from '@cerberus/components';
 import { Controller } from 'react-hook-form';
 import { useCoinmarketSellFormContext } from 'src/hooks/wallet/useCoinmarketSellForm';
 import { getEthereumTypeNetworkSymbols } from '@suite-common/wallet-config';

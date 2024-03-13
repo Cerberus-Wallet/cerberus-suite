@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { FeeLevel } from '@trezor/connect';
+import { FeeLevel } from '@cerberus/connect';
 import {
     Control,
     FieldErrors,
@@ -8,9 +8,9 @@ import {
     UseFormReturn,
     UseFormSetValue,
 } from 'react-hook-form';
-import { SelectBar } from '@trezor/components';
+import { SelectBar } from '@cerberus/components';
 import { FormState } from '@suite-common/wallet-types';
-import { spacingsPx, typography } from '@trezor/theme';
+import { spacingsPx, typography } from '@cerberus/theme';
 import { FiatValue, FormattedCryptoAmount, Translation } from 'src/components/suite';
 import { formatNetworkAmount } from '@suite-common/wallet-utils';
 import { Account } from 'src/types/wallet';

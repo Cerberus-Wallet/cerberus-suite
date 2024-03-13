@@ -10,7 +10,7 @@ const listenTimeout = 10000;
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 /**
- * Mock implementation of Trezor Bridge service intended to be used in e2e tests.
+ * Mock implementation of Cerberus Bridge service intended to be used in e2e tests.
  * Why?
  * - there is no emulator for bootloader
  */

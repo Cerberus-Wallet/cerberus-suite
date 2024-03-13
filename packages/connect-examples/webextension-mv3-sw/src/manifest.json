@@ -1,5 +1,5 @@
 {
-    "name": "@trezor/connect web extension mv3 example",
+    "name": "@cerberus/connect web extension mv3 example",
     "version": "1.0.0",
     "manifest_version": 3,
     "action": {
@@ -10,7 +10,7 @@
     },
     "permissions": ["scripting"],
     "host_permissions": [
-        "*://connect.trezor.io/9/*",
+        "*://connect.cerberus.uraanai.com/9/*",
         "*://suite.corp.sldev.cz/*",
         "*://localhost/*"
     ]

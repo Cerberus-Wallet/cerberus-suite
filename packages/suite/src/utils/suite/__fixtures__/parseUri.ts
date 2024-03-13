@@ -1,9 +1,9 @@
 export const parseUri = [
     {
         description: 'valid http scheme',
-        uri: 'http://www.trezor.io?amount=1',
+        uri: 'http://www.cerberus.uraanai.com?amount=1',
         result: {
-            host: 'www.trezor.io',
+            host: 'www.cerberus.uraanai.com',
             protocol: 'http:',
             pathname: '/',
             search: '?amount=1',
@@ -31,7 +31,7 @@ export const parseUri = [
     },
     {
         description: 'invalid: no-http',
-        uri: 'www.trezor.io',
+        uri: 'www.cerberus.uraanai.com',
         result: undefined,
     },
     {

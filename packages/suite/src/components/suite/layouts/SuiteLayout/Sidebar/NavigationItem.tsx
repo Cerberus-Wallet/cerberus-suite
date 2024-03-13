@@ -2,15 +2,15 @@ import styled, { css } from 'styled-components';
 import { IconName } from '@suite-common/icons';
 import { Icon } from '@suite-common/icons/src/webComponents';
 import { ExtendedMessageDescriptor, TranslationKey } from '@suite-common/intl-types';
-import { Elevation, borders, mapElevationToBackground, spacingsPx } from '@trezor/theme';
-import { getFocusShadowStyle } from '@trezor/components/src/utils/utils';
+import { Elevation, borders, mapElevationToBackground, spacingsPx } from '@cerberus/theme';
+import { getFocusShadowStyle } from '@cerberus/components/src/utils/utils';
 import { Translation } from 'src/components/suite/Translation';
 import { Route } from '@suite-common/suite-types';
 import { useDispatch, useSelector } from 'src/hooks/suite';
 import { goto } from 'src/actions/suite/routerActions';
 import { MouseEvent } from 'react';
 import { selectRouteName } from 'src/reducers/suite/routerReducer';
-import { useElevation } from '@trezor/components';
+import { useElevation } from '@cerberus/components';
 
 export const NavigationItemBase = styled.div.attrs(() => ({
     tabIndex: 0,

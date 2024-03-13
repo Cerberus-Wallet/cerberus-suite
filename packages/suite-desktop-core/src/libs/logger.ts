@@ -5,7 +5,7 @@ import chalk from 'chalk';
 import { app } from 'electron';
 
 import { isDevEnv } from '@suite-common/suite-utils';
-import { ensureDirectoryExists } from '@trezor/node-utils';
+import { ensureDirectoryExists } from '@cerberus/node-utils';
 
 import { getBuildInfo, getComputerInfo } from './info';
 

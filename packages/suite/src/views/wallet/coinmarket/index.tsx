@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Icon, variables, SelectBar, Card } from '@trezor/components';
+import { Icon, variables, SelectBar, Card } from '@cerberus/components';
 
 interface ResponsiveSize {
     responsiveSize: keyof typeof variables.SCREEN_SIZE;

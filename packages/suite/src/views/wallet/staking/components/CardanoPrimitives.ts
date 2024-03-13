@@ -1,5 +1,5 @@
-import { variables, H2, Card } from '@trezor/components';
-import { borders } from '@trezor/theme';
+import { variables, H2, Card } from '@cerberus/components';
+import { borders } from '@cerberus/theme';
 import styled from 'styled-components';
 
 export const Heading = styled.div`

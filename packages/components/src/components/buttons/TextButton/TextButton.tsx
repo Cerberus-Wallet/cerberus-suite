@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { borders, spacingsPx, typography } from '@trezor/theme';
+import { borders, spacingsPx, typography } from '@cerberus/theme';
 import { ButtonProps } from '../Button/Button';
 import { ButtonSize, getIconSize, IconAlignment } from '../buttonStyleUtils';
 import { Icon } from '../../assets/Icon/Icon';

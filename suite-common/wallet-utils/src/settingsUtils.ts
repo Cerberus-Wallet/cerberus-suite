@@ -1,4 +1,4 @@
-import { PROTO } from '@trezor/connect';
+import { PROTO } from '@cerberus/connect';
 import { Account } from '@suite-common/wallet-types';
 
 import { hasNetworkFeatures } from './accountUtils';

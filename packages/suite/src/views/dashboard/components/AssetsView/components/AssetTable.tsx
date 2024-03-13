@@ -4,7 +4,7 @@ import { AssetTableHeader } from './AssetTableHeader';
 import { Network } from '@suite-common/wallet-config';
 import BigNumber from 'bignumber.js';
 import styled from 'styled-components';
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 
 const Table = styled.div`
     padding-left: ${spacingsPx.xxs};

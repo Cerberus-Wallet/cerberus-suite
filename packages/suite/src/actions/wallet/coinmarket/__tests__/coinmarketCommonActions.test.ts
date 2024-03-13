@@ -11,7 +11,7 @@ import {
 import { transactionsReducer, accountsReducer } from 'src/reducers/wallet';
 import { State as DeviceState } from '@suite-common/wallet-core';
 import { SuiteState } from 'src/reducers/suite/suiteReducer';
-import type { DeepPartial } from '@trezor/type-utils';
+import type { DeepPartial } from '@cerberus/type-utils';
 
 interface InitialState {
     device?: DeepPartial<DeviceState>;

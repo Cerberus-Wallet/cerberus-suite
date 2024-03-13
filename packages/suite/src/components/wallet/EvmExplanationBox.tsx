@@ -1,6 +1,6 @@
 import { NetworkSymbol } from '@suite-common/wallet-config';
-import { Card, CoinLogo, useElevation, variables } from '@trezor/components';
-import { Elevation, mapElevationToBackground } from '@trezor/theme';
+import { Card, CoinLogo, useElevation, variables } from '@cerberus/components';
+import { Elevation, mapElevationToBackground } from '@cerberus/theme';
 import { HTMLAttributes, ReactNode, forwardRef, ComponentProps } from 'react';
 import styled, { css } from 'styled-components';
 

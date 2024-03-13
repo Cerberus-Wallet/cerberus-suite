@@ -16,14 +16,14 @@ import {
     CoinjoinAccount,
     CoinjoinSessionParameters,
 } from 'src/types/wallet/coinjoin';
-import { AnonymitySet } from '@trezor/blockchain-link';
+import { AnonymitySet } from '@cerberus/blockchain-link';
 import {
     CoinjoinStatusEvent,
     RegisterAccountParams,
     CoinjoinTransactionData,
     SessionPhase,
     RoundPhase,
-} from '@trezor/coinjoin';
+} from '@cerberus/coinjoin';
 
 export type CoinjoinBalanceBreakdown = {
     notAnonymized: string;
@@ -124,7 +124,7 @@ export const transformCoinjoinStatus = ({
     rounds: rounds.map(({ Id: id, Phase: phase }) => ({ id, phase })),
 });
 
-// convert suite account type to @trezor/coinjoin RegisterAccountParams scriptType
+// convert suite account type to @cerberus/coinjoin RegisterAccountParams scriptType
 const getCoinjoinAccountScriptType = (path: string) => {
     const bip43 = getBip43Type(path);
     switch (bip43) {
@@ -138,7 +138,7 @@ const getCoinjoinAccountScriptType = (path: string) => {
     }
 };
 
-// use only confirmed utxos, map to @trezor/coinjoin RegisterAccountParams utxos
+// use only confirmed utxos, map to @cerberus/coinjoin RegisterAccountParams utxos
 const getCoinjoinAccountUtxos = (
     utxos: Account['utxo'],
     anonymitySet: AnonymitySet | undefined = {},
@@ -163,7 +163,7 @@ type GetRegisterAccountParamsOptions = { session: CoinjoinSessionParameters } & 
 >;
 
 /**
- * Transform from suite Account to @trezor/coinjoin RegisterAccountParams
+ * Transform from suite Account to @cerberus/coinjoin RegisterAccountParams
  */
 export const getRegisterAccountParams = (
     account: Account,
@@ -194,7 +194,7 @@ export const getMaxRounds = (roundsNeeded: number, roundsFailRateBuffer: number)
     );
 };
 
-// transform boolean to skip rounds value used by @trezor/coinjoin
+// transform boolean to skip rounds value used by @cerberus/coinjoin
 export const getSkipRounds = (enabled: boolean) =>
     enabled ? SKIP_ROUNDS_VALUE_WHEN_ENABLED : undefined;
 
@@ -228,7 +228,7 @@ export const getSessionDeadline = ({
 };
 
 /**
- * Transform @trezor/coinjoin CoinjoinRequestEvent.CoinjoinTransactionData to @trezor/connect signTransaction params
+ * Transform @cerberus/coinjoin CoinjoinRequestEvent.CoinjoinTransactionData to @cerberus/connect signTransaction params
  * Params are profiled by account since multiple account can participate in one CoinjoinRound
  */
 export const prepareCoinjoinTransaction = (
@@ -242,7 +242,7 @@ export const prepareCoinjoinTransaction = (
     const isInternalOutput = (output: CoinjoinTransactionData['outputs'][0]) =>
         output.path && account.addresses?.change.find(a => a.address === output.address);
 
-    // TODO: early validation of inputs/outputs before it's sent to Trezor to not waste signing count
+    // TODO: early validation of inputs/outputs before it's sent to Cerberus to not waste signing count
 
     const { affiliateRequest } = transaction;
 

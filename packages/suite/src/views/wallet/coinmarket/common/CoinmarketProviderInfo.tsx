@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { variables } from '@trezor/components';
+import { variables } from '@cerberus/components';
 import invityApi from 'src/services/suite/invityAPI';
 
 const Wrapper = styled.div`

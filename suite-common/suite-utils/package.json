@@ -16,10 +16,10 @@
         "@suite-common/suite-types": "workspace:*",
         "@suite-common/wallet-config": "workspace:*",
         "@suite-common/wallet-types": "workspace:*",
-        "@trezor/blockchain-link": "workspace:*",
-        "@trezor/connect": "workspace:*",
-        "@trezor/urls": "workspace:*",
-        "@trezor/utils": "workspace:*",
+        "@cerberus/blockchain-link": "workspace:*",
+        "@cerberus/connect": "workspace:*",
+        "@cerberus/urls": "workspace:*",
+        "@cerberus/utils": "workspace:*",
         "bignumber.js": "^9.1.2",
         "date-fns": "^2.30.0"
     }

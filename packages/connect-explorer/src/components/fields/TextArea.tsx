@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Textarea as TextareaComponent } from '@trezor/components';
+import { Textarea as TextareaComponent } from '@cerberus/components';
 
 import { Field } from '../../types';
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import TrezorConnect from '@trezor/connect';
-import { Button } from '@trezor/components';
+import TrezorConnect from '@cerberus/connect';
+import { Button } from '@cerberus/components';
 
 import * as metadataUtils from 'src/utils/suite/metadata';
 import type { PasswordEntry as PasswordEntryType } from 'src/types/suite/metadata';
@@ -36,7 +36,7 @@ interface PasswordEntryProps extends PasswordEntryType {
 }
 
 const getDisplayKey = (title: string, username: string) =>
-    // todo: implement this for the other category too: https://github.com/trezor/trezor-password-manager/blob/6266f685226bc5d5e0d8c7f08490b282f64ad1d1/source/background/classes/trezor_mgmt.js#L389-L390
+    // todo: implement this for the other category too: https://github.com/Cerberus-Wallet/cerberus-password-manager/blob/6266f685226bc5d5e0d8c7f08490b282f64ad1d1/source/background/classes/trezor_mgmt.js#L389-L390
     `Unlock ${title} for user ${username}?`;
 
 export const PasswordEntry = ({

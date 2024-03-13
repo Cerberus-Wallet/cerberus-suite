@@ -2,8 +2,8 @@ import { A, pipe } from '@mobily/ts-belt';
 import { fromUnixTime, getUnixTime } from 'date-fns';
 
 import { NetworkSymbol, getNetworkType } from '@suite-common/wallet-config';
-import TrezorConnect from '@trezor/connect';
-import { AccountBalanceHistory as AccountMovementHistory } from '@trezor/blockchain-link';
+import TrezorConnect from '@cerberus/connect';
+import { AccountBalanceHistory as AccountMovementHistory } from '@cerberus/blockchain-link';
 import {
     AccountBalanceHistory,
     TransactionCacheEngine,
@@ -129,7 +129,7 @@ export const getAccountMovementEvents = async ({
             groupBy: 1,
             // we don't need currencies at all here, this will just reduce transferred data size
             // TODO: doesn't work at all, fix it in connect or blockchain-link?
-            // issue: https://github.com/trezor/trezor-suite/issues/8888
+            // issue: https://github.com/Cerberus-Wallet/cerberus-suite/issues/8888
             currencies: ['usd'],
         });
 

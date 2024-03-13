@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import { variables, Button } from '@trezor/components';
-import { copyToClipboard } from '@trezor/dom-utils';
+import { variables, Button } from '@cerberus/components';
+import { copyToClipboard } from '@cerberus/dom-utils';
 import { useDispatch } from 'src/hooks/suite';
 import { Translation } from 'src/components/suite';
 import { notificationsActions } from '@suite-common/toast-notifications';
-import { typography } from '@trezor/theme';
+import { typography } from '@cerberus/theme';
 
 const Wrapper = styled.div`
     display: flex;

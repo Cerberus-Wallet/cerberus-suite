@@ -1,14 +1,14 @@
 import { createThunk } from '@suite-common/redux-utils';
 import { DiscoveryStatus } from '@suite-common/wallet-constants';
 import { notificationsActions } from '@suite-common/toast-notifications';
-import TrezorConnect, { AccountInfo, BundleProgress, UI } from '@trezor/connect';
+import TrezorConnect, { AccountInfo, BundleProgress, UI } from '@cerberus/connect';
 import { TrezorDevice } from '@suite-common/suite-types';
 import { getDerivationType, isTrezorConnectBackendType } from '@suite-common/wallet-utils';
 import { Discovery, DiscoveryItem, PartialDiscovery } from '@suite-common/wallet-types';
 import { getTxsPerPage } from '@suite-common/suite-utils';
 import { networksCompatibility, NetworkSymbol } from '@suite-common/wallet-config';
-import { getFirmwareVersion } from '@trezor/device-utils';
-import { versionUtils } from '@trezor/utils';
+import { getFirmwareVersion } from '@cerberus/device-utils';
+import { versionUtils } from '@cerberus/utils';
 
 import {
     DISCOVERY_MODULE_PREFIX,
@@ -185,7 +185,7 @@ export const getBundleThunk = createThunk(
         const accountsByDeviceState = accounts.filter(a => a.deviceState === discovery.deviceState);
 
         // corner-case: discovery is running so it's at least second iteration
-        // progress event wasn't emitted from '@trezor/connect' so there are no accounts, neither loaded or failed
+        // progress event wasn't emitted from '@cerberus/connect' so there are no accounts, neither loaded or failed
         // return empty bundle to complete discovery
         if (
             discovery.status === DiscoveryStatus.RUNNING &&
@@ -461,7 +461,7 @@ export const startDiscoveryThunk = createThunk(
             }),
         );
 
-        // handle @trezor/connect event
+        // handle @cerberus/connect event
         const onBundleProgress = (event: ProgressEvent) => {
             const { progress } = event;
             // pass more parameters to handler

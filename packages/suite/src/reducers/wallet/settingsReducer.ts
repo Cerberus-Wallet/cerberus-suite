@@ -5,7 +5,7 @@ import * as walletSettingsActions from 'src/actions/settings/walletSettingsActio
 import { Action, AppState } from 'src/types/suite';
 
 import { WalletSettings } from '@suite-common/wallet-types';
-import { PROTO } from '@trezor/connect';
+import { PROTO } from '@cerberus/connect';
 
 export type State = WalletSettings;
 

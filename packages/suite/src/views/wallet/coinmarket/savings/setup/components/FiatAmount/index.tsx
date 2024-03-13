@@ -1,7 +1,7 @@
 import { useCallback } from 'react';
 import styled from 'styled-components';
 import { CustomPaymentAmountKey } from 'src/constants/wallet/coinmarket/savings';
-import { variables } from '@trezor/components';
+import { variables } from '@cerberus/components';
 import { Control, Controller, FieldError } from 'react-hook-form';
 import { Translation, NumberInput } from 'src/components/suite';
 import { StyledSelectBar } from 'src/views/wallet/coinmarket';

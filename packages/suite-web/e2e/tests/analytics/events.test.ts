@@ -1,7 +1,7 @@
 // @group:suite
 // @retry=2
 
-import { EventType } from '@trezor/suite-analytics';
+import { EventType } from '@cerberus/suite-analytics';
 import { ExtractByEventType, Requests } from '../../support/types';
 
 let requests: Requests;
@@ -56,7 +56,7 @@ describe('Analytics Events', () => {
             expect(deviceConnectEvent.firmware).to.equal('2.6.0'); // 2.6.0 is hardcoded in startEmu to always match
             expect(deviceConnectEvent.firmwareRevision).to.equal(
                 // good to check because of phishing
-                '88e1f8c7a5c7615723664c64b0a25adc0c409dee', // https://github.com/trezor/trezor-firmware/releases/tag/core%2Fv2.6.0
+                '88e1f8c7a5c7615723664c64b0a25adc0c409dee', // https://github.com/Cerberus-Wallet/cerberus-firmware/releases/tag/core%2Fv2.6.0
             );
             expect(deviceConnectEvent.bootloaderHash).to.equal('');
             expect(deviceConnectEvent.backup_type).to.equal('Bip39');

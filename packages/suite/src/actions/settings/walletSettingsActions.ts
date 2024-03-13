@@ -4,8 +4,8 @@ import type { Network } from 'src/types/wallet';
 import { createAction } from '@reduxjs/toolkit';
 
 import { UNIT_ABBREVIATIONS } from '@suite-common/suite-constants';
-import { FeeLevel, PROTO } from '@trezor/connect';
-import { analytics, EventType } from '@trezor/suite-analytics';
+import { FeeLevel, PROTO } from '@cerberus/connect';
+import { analytics, EventType } from '@cerberus/suite-analytics';
 import { FiatCurrencyCode } from '@suite-common/suite-config';
 
 import { WALLET_SETTINGS } from './constants';

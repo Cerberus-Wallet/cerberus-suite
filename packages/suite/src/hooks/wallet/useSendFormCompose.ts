@@ -11,10 +11,10 @@ import {
     PrecomposedLevels,
     PrecomposedLevelsCardano,
 } from '@suite-common/wallet-types';
-import { useAsyncDebounce } from '@trezor/react-utils';
+import { useAsyncDebounce } from '@cerberus/react-utils';
 import { isChanged } from '@suite-common/suite-utils';
 import { findComposeErrors } from '@suite-common/wallet-utils';
-import { FeeLevel } from '@trezor/connect';
+import { FeeLevel } from '@cerberus/connect';
 import { COMPOSE_ERROR_TYPES } from '@suite-common/wallet-constants';
 
 import { TranslationKey } from 'src/components/suite/Translation';

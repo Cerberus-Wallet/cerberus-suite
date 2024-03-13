@@ -1,4 +1,4 @@
-import { networks } from '@trezor/utxo-lib';
+import { networks } from '@cerberus/utxo-lib';
 
 import { analyzeTransactions } from '../../src/client/analyzeTransactions';
 import { createServer } from '../mocks/server';

@@ -1,5 +1,5 @@
 import { TrezorDevice } from 'src/types/suite/index';
-import { DeviceModelInternal } from '@trezor/connect';
+import { DeviceModelInternal } from '@cerberus/connect';
 import { deflateRaw } from 'pako';
 
 export const deviceModelInformation = {
@@ -155,7 +155,7 @@ const toig = (imageData: ImageData, deviceModelInternal: DeviceModelInternal) =>
         windowBits: 10,
     });
 
-    // https://github.com/trezor/trezor-firmware/blob/master/docs/misc/toif.md
+    // https://github.com/Cerberus-Wallet/cerberus-firmware/blob/master/docs/misc/toif.md
     let header = '544f4947'; // 'TOIG' (indicating grayscale mode)
     header += rightPad(4, width.toString(16));
     header += rightPad(4, height.toString(16));

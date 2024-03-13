@@ -1,4 +1,4 @@
-import type { Transaction } from '@trezor/blockchain-link-types';
+import type { Transaction } from '@cerberus/blockchain-link-types';
 
 // export const transformServerInfo = (payload: GetServerInfoResponse) => {
 export const transformServerInfo = (payload: any) => ({

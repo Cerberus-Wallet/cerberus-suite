@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import { checkDeviceAuthenticityThunk } from '@suite-common/device-authenticity';
-import { Button } from '@trezor/components';
+import { Button } from '@cerberus/components';
 
 import { onCancel, openModal } from 'src/actions/suite/modalActions';
 import { DeviceAuthenticationExplainer, Modal, Translation } from 'src/components/suite';

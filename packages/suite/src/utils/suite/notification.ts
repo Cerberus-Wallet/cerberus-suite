@@ -1,5 +1,5 @@
 import { NotificationEntry } from '@suite-common/toast-notifications';
-import { colors } from '@trezor/components';
+import { colors } from '@cerberus/components';
 import { ToastNotificationVariant, AppState } from 'src/types/suite';
 import type { NotificationViewProps } from 'src/components/suite';
 

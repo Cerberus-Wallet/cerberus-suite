@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import styled from 'styled-components';
 
 import { WalletLayout, WalletSubpageHeading } from 'src/components/wallet';
-import { Card, Button, variables } from '@trezor/components';
+import { Card, Button, variables } from '@cerberus/components';
 import { CoinmarketLayoutNavigation } from './CoinmarketLayoutNavigation';
 import { CoinmarketAccountTransactions } from './CoinmarketAccountTransactions/CoinmarketAccountTransactions';
 import { Translation } from 'src/components/suite';

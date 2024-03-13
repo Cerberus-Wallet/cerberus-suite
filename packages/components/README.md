@@ -1,12 +1,12 @@
-# @trezor/components
+# @cerberus/components
 
-This repository contains components, images and hooks that do not depend on Suite-specific context, i.e. can be used in other Trezor-related projects as well. So far, they have only been used in Suite and @trezor/connect-ui.
+This repository contains components, images and hooks that do not depend on Suite-specific context, i.e. can be used in other Cerberus-related projects as well. So far, they have only been used in Suite and @cerberus/connect-ui.
 
 ## Storybook
 
 Each component can be inspected separately in [Storybook](https://storybook.js.org/). Stories are deployed automatically by a nightly pipeline via `storybook-build` command to https://suite.corp.sldev.cz/components/develop. To see your local changes, run Storybook locally:
 
-`yarn workspace @trezor/components storybook`
+`yarn workspace @cerberus/components storybook`
 
 ## Icons
 

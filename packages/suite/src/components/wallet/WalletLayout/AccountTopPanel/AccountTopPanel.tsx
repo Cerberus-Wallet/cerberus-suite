@@ -1,9 +1,9 @@
 import styled, { useTheme } from 'styled-components';
 import { forwardRef } from 'react';
 
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 import { NetworkSymbol } from '@suite-common/wallet-config';
-import { CoinLogo, Icon, SkeletonCircle, SkeletonRectangle } from '@trezor/components';
+import { CoinLogo, Icon, SkeletonCircle, SkeletonRectangle } from '@cerberus/components';
 
 import {
     FormattedCryptoAmount,

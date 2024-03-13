@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import { Card, variables } from '@trezor/components';
+import { Card, variables } from '@cerberus/components';
 import VerifyAddress from './components/VerifyAddress';
 import { useCoinmarketBuyOffersContext } from 'src/hooks/wallet/useCoinmarketBuyOffers';
 import { CoinmarketBuyOfferInfo } from '../../../components/CoinmarketBuyOfferInfo';
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 
 const Wrapper = styled.div`
     display: flex;

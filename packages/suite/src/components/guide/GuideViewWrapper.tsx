@@ -1,6 +1,6 @@
 import { createContext, useCallback, useState, ReactNode, UIEventHandler } from 'react';
 import styled from 'styled-components';
-import { variables } from '@trezor/components';
+import { variables } from '@cerberus/components';
 
 const Wrapper = styled.div`
     background: ${({ theme }) => theme.backgroundSurfaceElevation0};

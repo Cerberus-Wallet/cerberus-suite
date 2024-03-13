@@ -8,7 +8,7 @@ import {
     StackNavigationProps,
 } from '@suite-native/navigation';
 import { useTranslate } from '@suite-native/intl';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import { ConnectDeviceAnimation } from '@suite-native/device';
 
 import { OnboardingFooter } from '../components/OnboardingFooter';

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import { Button } from '@trezor/components';
-import { GITHUB_FW_BINARIES_URL } from '@trezor/urls';
+import { Button } from '@cerberus/components';
+import { GITHUB_FW_BINARIES_URL } from '@cerberus/urls';
 import { Translation, TrezorLink } from 'src/components/suite';
 import { DropZone } from 'src/components/suite/DropZone';
 import type { TrezorDevice, ExtendedMessageDescriptor } from 'src/types/suite';

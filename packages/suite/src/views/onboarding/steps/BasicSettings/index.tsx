@@ -4,7 +4,7 @@ import { useDevice, useOnboarding, useSelector } from 'src/hooks/suite';
 import { BasicSettingsStepBox } from './BasicSettingsStepBox';
 import { AdvancedSetup } from './AdvancedSetup';
 import { getIsTorLoading } from 'src/utils/suite/tor';
-import { hasBitcoinOnlyFirmware } from '@trezor/device-utils';
+import { hasBitcoinOnlyFirmware } from '@cerberus/device-utils';
 
 const BasicSettings = () => {
     const enabledNetworks = useSelector(state => state.wallet.settings.enabledNetworks);

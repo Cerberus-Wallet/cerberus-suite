@@ -642,7 +642,7 @@ export const fixtures = [
     ...binanceGetAddress,
     ...binanceSignTransaction,
     ...stellarGetAddress,
-    // todo: error in params. probably we should implement @trezor/connect-stellar-plugin
+    // todo: error in params. probably we should implement @cerberus/connect-stellar-plugin
     // ...stellarSignTransaction,
     ...rippleGetAddress,
     ...rippleSignTransaction,

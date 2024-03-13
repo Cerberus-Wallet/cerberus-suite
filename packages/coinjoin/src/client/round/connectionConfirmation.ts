@@ -103,7 +103,7 @@ const confirmInput = async (
 
 // Because of the nature of coordinator successful registration process requires
 // to call `/connection-confirmation` in intervals less than connectionConfirmationTimeout * 0.5 to prevent AliceTimeout error on coordinator
-// https://github.com/trezor/WalletWasabi/blob/master/WalletWasabi/WabiSabi/Client/AliceClient.cs
+// https://github.com/Cerberus-Wallet/WalletWasabi/blob/master/WalletWasabi/WabiSabi/Client/AliceClient.cs
 export const confirmationInterval = (
     round: CoinjoinRound,
     input: Alice,

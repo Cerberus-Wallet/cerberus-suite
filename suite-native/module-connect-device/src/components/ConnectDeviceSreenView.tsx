@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 
 import { Box } from '@suite-native/atoms';
 import { Screen } from '@suite-native/navigation';
-import { prepareNativeStyle, useNativeStyles, NativeStyleObject } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles, NativeStyleObject } from '@cerberus/styles';
 
 import { ConnectDeviceScreenHeader } from './ConnectDeviceScreenHeader';
 

@@ -1,4 +1,4 @@
-import { Card } from '@trezor/components';
+import { Card } from '@cerberus/components';
 
 import { Fees } from 'src/components/wallet/Fees/Fees';
 import { useSendFormContext } from 'src/hooks/wallet';

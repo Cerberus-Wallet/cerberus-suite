@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Elevation, mapElevationToBorder, spacingsPx } from '@trezor/theme';
+import { Elevation, mapElevationToBorder, spacingsPx } from '@cerberus/theme';
 import { useElevation } from '../ElevationContext/ElevationContext';
 
 const Line = styled.div<{ elevation: Elevation }>`

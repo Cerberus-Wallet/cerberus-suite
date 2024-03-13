@@ -152,7 +152,7 @@ buck-out/
 !.yarn/sdks
 !.yarn/versions
 
-# @trezor/suite-data
+# @cerberus/suite-data
 packages/suite-data/files/browser-detection
 packages/suite-data/files/guide
 packages/suite-data/files/translations/master.json

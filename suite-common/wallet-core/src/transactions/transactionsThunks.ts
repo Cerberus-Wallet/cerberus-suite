@@ -20,9 +20,9 @@ import {
     advancedSearchTransactions,
 } from '@suite-common/wallet-utils';
 import { AccountLabels } from '@suite-common/metadata-types';
-import TrezorConnect from '@trezor/connect';
-import { blockbookUtils } from '@trezor/blockchain-link-utils';
-import { Transaction } from '@trezor/blockchain-link-types/lib/blockbook';
+import TrezorConnect from '@cerberus/connect';
+import { blockbookUtils } from '@cerberus/blockchain-link-utils';
+import { Transaction } from '@cerberus/blockchain-link-types/lib/blockbook';
 import { createThunk } from '@suite-common/redux-utils';
 
 import { accountsActions } from '../accounts/accountsActions';
@@ -38,9 +38,9 @@ import { selectNetworkTokenDefinitions } from '../token-definitions/tokenDefinit
  * sender account and receiver account(s)
  */
 interface ReplaceTransactionThunkParams {
-    precomposedTx: PrecomposedTransactionFinal; // tx params signed by @trezor/connect
+    precomposedTx: PrecomposedTransactionFinal; // tx params signed by @cerberus/connect
     newTxid: string; // new txid
-    signedTransaction?: Transaction; // tx returned from @trezor/connect (only in bitcoin-like)
+    signedTransaction?: Transaction; // tx returned from @cerberus/connect (only in bitcoin-like)
 }
 
 export const replaceTransactionThunk = createThunk<ReplaceTransactionThunkParams>(
@@ -191,7 +191,7 @@ export const addFakePendingCardanoTxThunk = createThunk(
         const blockHeight = selectBlockchainHeightBySymbol(getState(), account.symbol);
 
         // Used in cardano send form and staking tab until Blockfrost supports pending txs on its backend
-        // https://github.com/trezor/trezor-suite/issues/4932
+        // https://github.com/Cerberus-Wallet/cerberus-suite/issues/4932
         const fakeTx = {
             type: 'sent' as const,
             txid,
@@ -244,7 +244,7 @@ export const exportTransactionsThunk = createThunk(
         const tokenDefinitions = selectNetworkTokenDefinitions(getState(), account.symbol) || {};
 
         // TODO: this is not nice (copy-paste)
-        // metadata reducer is still not part of trezor-common and I can not import it
+        // metadata reducer is still not part of cerberus-common and I can not import it
         // here. so either followup, or maybe when I have a moment I'll refactor it  before merging this
         // eslint-disable-next-line no-restricted-syntax
         const provider = getState().metadata?.providers.find(

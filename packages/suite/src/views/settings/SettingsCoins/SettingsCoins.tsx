@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import { AnimatePresence, MotionProps, motion } from 'framer-motion';
-import { hasBitcoinOnlyFirmware, isBitcoinOnlyDevice } from '@trezor/device-utils';
+import { hasBitcoinOnlyFirmware, isBitcoinOnlyDevice } from '@cerberus/device-utils';
 import { selectDeviceSupportedNetworks, startDiscoveryThunk } from '@suite-common/wallet-core';
-import { Button, motionEasing } from '@trezor/components';
+import { Button, motionEasing } from '@cerberus/components';
 
 import { DeviceBanner, SettingsLayout, SettingsSection } from 'src/components/settings';
 import { CoinGroup, SectionItem, TooltipSymbol, Translation } from 'src/components/suite';
@@ -18,7 +18,7 @@ import {
 } from 'src/hooks/suite';
 
 import { FirmwareTypeSuggestion } from './FirmwareTypeSuggestion';
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 
 const StyledButton = styled(Button)`
     margin-top: ${spacingsPx.xl};

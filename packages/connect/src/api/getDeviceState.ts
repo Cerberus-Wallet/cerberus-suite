@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/GetDeviceState.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/GetDeviceState.js
 
 import { AbstractMethod } from '../core/AbstractMethod';
 

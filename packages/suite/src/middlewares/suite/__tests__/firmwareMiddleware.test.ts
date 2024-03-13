@@ -71,9 +71,9 @@ const initStore = (state: State) => {
 };
 
 // do not mock
-jest.unmock('@trezor/connect');
+jest.unmock('@cerberus/connect');
 
-jest.doMock('@trezor/suite-analytics', () => testMocks.getAnalytics());
+jest.doMock('@cerberus/suite-analytics', () => testMocks.getAnalytics());
 jest.spyOn(console, 'warn').mockImplementation(() => {});
 
 describe('firmware middleware', () => {

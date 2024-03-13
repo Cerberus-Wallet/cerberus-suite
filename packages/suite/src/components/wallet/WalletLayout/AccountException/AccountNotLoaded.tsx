@@ -8,7 +8,7 @@ import { AccountExceptionLayout } from 'src/components/wallet';
  * Handler for 'bundle-exception' in discovery
  * Account couldn't be loaded for multiple reasons:
  * - Discovery throws bundle-exception with code or runtime error
- * - Other @trezor/connect runtime error
+ * - Other @cerberus/connect runtime error
  */
 export const AccountNotLoaded = () => {
     const dispatch = useDispatch();

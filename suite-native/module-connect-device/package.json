@@ -23,8 +23,8 @@
         "@suite-native/intl": "workspace:*",
         "@suite-native/link": "workspace:*",
         "@suite-native/navigation": "workspace:*",
-        "@trezor/connect": "workspace:*",
-        "@trezor/styles": "workspace:*",
+        "@cerberus/connect": "workspace:*",
+        "@cerberus/styles": "workspace:*",
         "react": "18.2.0",
         "react-native": "0.73.2",
         "react-redux": "8.0.7"

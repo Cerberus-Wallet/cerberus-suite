@@ -1,4 +1,4 @@
-import { getWeakRandomId } from '@trezor/utils';
+import { getWeakRandomId } from '@cerberus/utils';
 
 /**
  * Generate code_challenge for Oauth2

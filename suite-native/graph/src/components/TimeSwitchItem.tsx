@@ -1,7 +1,7 @@
 import { TouchableOpacity } from 'react-native';
 
 import { Text } from '@suite-native/atoms';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 
 export type TimeSwitchValue = number | null;
 

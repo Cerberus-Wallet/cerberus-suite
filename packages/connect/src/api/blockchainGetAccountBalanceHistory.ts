@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/blockchain/BlockchainGetAccountBalanceHistory.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/blockchain/BlockchainGetAccountBalanceHistory.js
 
 import { Payload, AbstractMethod } from '../core/AbstractMethod';
 import { validateParams } from './common/paramsValidator';

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-use-before-define */
 
-// origin: https://github.com/trezor/connect/blob/develop/src/js/popup/popup.js/
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/popup/popup.js/
 import {
     POPUP,
     IFRAME,
@@ -16,16 +16,16 @@ import {
     IFrameCallMessage,
     IFrameLogRequest,
     CoreEventMessage,
-} from '@trezor/connect/lib/exports';
-import type { Core } from '@trezor/connect/lib/core';
-import { config } from '@trezor/connect/lib/data/config';
-import { parseConnectSettings } from '@trezor/connect-iframe/src/connectSettings';
-import { initLogWriterWithSrcPath } from '@trezor/connect-iframe/src/sharedLoggerUtils';
+} from '@cerberus/connect/lib/exports';
+import type { Core } from '@cerberus/connect/lib/core';
+import { config } from '@cerberus/connect/lib/data/config';
+import { parseConnectSettings } from '@cerberus/connect-iframe/src/connectSettings';
+import { initLogWriterWithSrcPath } from '@cerberus/connect-iframe/src/sharedLoggerUtils';
 
-import { reactEventBus } from '@trezor/connect-ui/src/utils/eventBus';
-import { ErrorViewProps } from '@trezor/connect-ui/src/views/Error';
-import { analytics, EventType } from '@trezor/connect-analytics';
-import { getSystemInfo } from '@trezor/connect-common';
+import { reactEventBus } from '@cerberus/connect-ui/src/utils/eventBus';
+import { ErrorViewProps } from '@cerberus/connect-ui/src/views/Error';
+import { analytics, EventType } from '@cerberus/connect-analytics';
+import { getSystemInfo } from '@cerberus/connect-common';
 
 import * as view from './view';
 import {
@@ -37,10 +37,10 @@ import {
     showView,
 } from './view/common';
 import { isPhishingDomain } from './utils/isPhishingDomain';
-import { initLog, setLogWriter, LogWriter } from '@trezor/connect/lib/utils/debug';
+import { initLog, setLogWriter, LogWriter } from '@cerberus/connect/lib/utils/debug';
 
-const log = initLog('@trezor/connect-popup');
-const proxyLogger = initLog('@trezor/connect-webextension');
+const log = initLog('@cerberus/connect-popup');
+const proxyLogger = initLog('@cerberus/connect-webextension');
 
 let handshakeTimeout: ReturnType<typeof setTimeout>;
 let renderConnectUIPromise: Promise<void> | undefined;
@@ -542,8 +542,8 @@ window.closeWindow = () => {
             {
                 type: POPUP.CLOSE_WINDOW,
                 channel: {
-                    here: '@trezor/connect-popup',
-                    peer: '@trezor/connect-web',
+                    here: '@cerberus/connect-popup',
+                    peer: '@cerberus/connect-web',
                 },
             },
             window.location.origin,

@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import BigNumber from 'bignumber.js';
-import { AccountUtxo } from '@trezor/connect';
+import { AccountUtxo } from '@cerberus/connect';
 
 import { getUtxoOutpoint } from '@suite-common/wallet-utils';
 import { Account } from '@suite-common/wallet-types';

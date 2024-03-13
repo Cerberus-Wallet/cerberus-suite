@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import TrezorConnect, { BlockchainLink } from '@trezor/connect';
+import TrezorConnect, { BlockchainLink } from '@cerberus/connect';
 import type { Network } from 'src/types/wallet';
 
 export const useDefaultUrls = (

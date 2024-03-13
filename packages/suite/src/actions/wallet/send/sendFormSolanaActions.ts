@@ -1,5 +1,5 @@
-import TrezorConnect, { FeeLevel } from '@trezor/connect';
-import type { TokenInfo, TokenAccount } from '@trezor/blockchain-link-types';
+import TrezorConnect, { FeeLevel } from '@cerberus/connect';
+import type { TokenInfo, TokenAccount } from '@cerberus/blockchain-link-types';
 import {
     FormState,
     PrecomposedTransactionFinal,
@@ -25,7 +25,7 @@ import {
     buildTokenTransferTransaction,
     getAssociatedTokenAccountAddress,
 } from 'src/utils/wallet/solanaUtils';
-import { SYSTEM_PROGRAM_PUBLIC_KEY } from '@trezor/blockchain-link-utils/lib/solana';
+import { SYSTEM_PROGRAM_PUBLIC_KEY } from '@cerberus/blockchain-link-utils/lib/solana';
 
 const calculate = (
     availableBalance: string,
@@ -71,7 +71,7 @@ const calculate = (
         return {
             ...payloadData,
             type: 'final',
-            // compatibility with BTC PrecomposedTransaction from @trezor/connect
+            // compatibility with BTC PrecomposedTransaction from @cerberus/connect
             inputs: [],
             outputsPermutation: [0],
             outputs: [

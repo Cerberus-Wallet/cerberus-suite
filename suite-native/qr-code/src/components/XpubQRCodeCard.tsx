@@ -1,4 +1,4 @@
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import { Box, Card, Text } from '@suite-native/atoms';
 
 import { QRCode } from './QRCode';

@@ -49,7 +49,7 @@ export default defineMessages({
     },
     TR_ACCOUNT_EXCEPTION_AUTH_ERROR_DESC: {
         defaultMessage:
-            'The authorization process for this device failed. Please click "Retry" or reconnect your Trezor device.',
+            'The authorization process for this device failed. Please click "Retry" or reconnect your Cerberus device.',
         id: 'TR_ACCOUNT_EXCEPTION_AUTH_ERROR_DESC',
     },
     TR_ACCOUNT_EXCEPTION_DISCOVERY_EMPTY: {
@@ -94,24 +94,24 @@ export default defineMessages({
         id: 'TR_ACCOUNT_PASSPHRASE_DISABLED',
     },
     TR_ACQUIRE_DEVICE: {
-        defaultMessage: 'Use Trezor here',
+        defaultMessage: 'Use Cerberus here',
         description:
             'call-to-action to use device in current window when it is used in other window',
         id: 'TR_ACQUIRE_DEVICE',
     },
     TR_ACQUIRE_DEVICE_DESCRIPTION: {
         defaultMessage:
-            'Your Trezor seems to be in use in another window. Please close all other windows or tabs that might be using your Trezor.',
+            'Your Cerberus seems to be in use in another window. Please close all other windows or tabs that might be using your Cerberus.',
         id: 'TR_ACQUIRE_DEVICE_DESCRIPTION',
     },
     TR_RECONNECT_DEVICE_DESCRIPTION: {
         defaultMessage:
-            'If closing tabs and refreshing this page didn’t help, try reconnecting your Trezor.',
+            'If closing tabs and refreshing this page didn’t help, try reconnecting your Cerberus.',
         id: 'TR_RECONNECT_DEVICE_DESCRIPTION',
     },
     TR_RECONNECT_DEVICE_DESCRIPTION_DESKTOP: {
         defaultMessage:
-            "If closing tabs and reopening Trezor Suite doesn't help, please try reconnecting your Trezor.",
+            "If closing tabs and reopening Cerberus Suite doesn't help, please try reconnecting your Cerberus.",
         id: 'TR_RECONNECT_DEVICE_DESCRIPTION_DESKTOP',
     },
     TR_ACQUIRE_DEVICE_TITLE: {
@@ -209,7 +209,7 @@ export default defineMessages({
     },
     TR_SPEND_PROVIDER_CONTENT_WINDOW: {
         defaultMessage:
-            'Spend content is fully provided by our partner Bitrefill. You’ll choose your purchase on their website and finish the transaction in Trezor Suite.',
+            'Spend content is fully provided by our partner Bitrefill. You’ll choose your purchase on their website and finish the transaction in Cerberus Suite.',
         id: 'TR_SPEND_PROVIDER_CONTENT_WINDOW',
     },
     TR_SPEND_STATUS_FINISHED: {
@@ -312,7 +312,7 @@ export default defineMessages({
         dynamic: true,
     },
     TR_EXCHANGE_MODAL_SECURITY_HEADER: {
-        defaultMessage: 'Security first with your Trezor',
+        defaultMessage: 'Security first with your Cerberus',
         id: 'TR_EXCHANGE_MODAL_SECURITY_HEADER',
         dynamic: true,
     },
@@ -373,7 +373,7 @@ export default defineMessages({
         dynamic: true,
     },
     TR_EXCHANGE_DEX_MODAL_SECURITY_HEADER: {
-        defaultMessage: 'Security first with your Trezor',
+        defaultMessage: 'Security first with your Cerberus',
         id: 'TR_EXCHANGE_DEX_MODAL_SECURITY_HEADER',
         dynamic: true,
     },
@@ -666,7 +666,7 @@ export default defineMessages({
         id: 'TR_EXCHANGE_SWAP_SLIPPAGE_NOT_IN_RANGE',
     },
     TR_EXCHANGE_CONFIRM_ON_CERBERUS_SEND: {
-        defaultMessage: 'Confirm on Trezor & send',
+        defaultMessage: 'Confirm on Cerberus & send',
         id: 'TR_EXCHANGE_CONFIRM_ON_CERBERUS_SEND',
     },
     TR_EXCHANGE_RECEIVE_ACCOUNT_QUESTION_TOOLTIP: {
@@ -705,7 +705,7 @@ export default defineMessages({
     TR_EXCHANGE_RECEIVE_ADDRESS_QUESTION_TOOLTIP: {
         id: 'TR_EXCHANGE_RECEIVE_ADDRESS_QUESTION_TOOLTIP',
         defaultMessage:
-            'This is the specific alphanumeric address that will receive your coins. Verify this address on your Trezor.',
+            'This is the specific alphanumeric address that will receive your coins. Verify this address on your Cerberus.',
     },
     TR_EXCHANGE_EXTRA_FIELD: {
         defaultMessage: '{extraFieldName}',
@@ -732,7 +732,7 @@ export default defineMessages({
         id: 'TR_EXCHANGE_USE_NON_SUITE_ACCOUNT',
     },
     TR_EXCHANGE_CONFIRM_ON_CERBERUS: {
-        defaultMessage: 'Confirm on Trezor',
+        defaultMessage: 'Confirm on Cerberus',
         id: 'TR_EXCHANGE_CONFIRM_ON_CERBERUS',
     },
     TR_EXCHANGE_GO_TO_PAYMENT: {
@@ -810,7 +810,7 @@ export default defineMessages({
         dynamic: true,
     },
     TR_SELL_MODAL_SECURITY_HEADER: {
-        defaultMessage: 'Security first with your Trezor',
+        defaultMessage: 'Security first with your Cerberus',
         id: 'TR_SELL_MODAL_SECURITY_HEADER',
         dynamic: true,
     },
@@ -925,7 +925,7 @@ export default defineMessages({
         id: 'TR_SELL_SEND_TO',
     },
     TR_SELL_CONFIRM_ON_CERBERUS_SEND: {
-        defaultMessage: 'Confirm on Trezor & Send',
+        defaultMessage: 'Confirm on Cerberus & Send',
         id: 'TR_SELL_CONFIRM_ON_CERBERUS_SEND',
     },
     TR_SELL_BANK_ACCOUNT: {
@@ -1172,7 +1172,7 @@ export default defineMessages({
         dynamic: true,
     },
     TR_P2P_MODAL_SECURITY_HEADER: {
-        defaultMessage: 'Security first with your Trezor',
+        defaultMessage: 'Security first with your Cerberus',
         id: 'TR_P2P_MODAL_SECURITY_HEADER',
         dynamic: true,
     },
@@ -1249,7 +1249,7 @@ export default defineMessages({
     },
     TR_P2P_GET_STARTED_ATTENTION: {
         defaultMessage:
-            'Attention: Do NOT close Trezor Suite at any time during the process or you will have to start over.',
+            'Attention: Do NOT close Cerberus Suite at any time during the process or you will have to start over.',
         id: 'TR_P2P_GET_STARTED_ATTENTION',
     },
     TR_P2P_GO_TO_PROVIDER: {
@@ -1393,7 +1393,7 @@ export default defineMessages({
         id: 'TR_SAVINGS_SETUP_KYC_ERROR_HEADER',
     },
     TR_SAVINGS_SETUP_KYC_ERROR_DESCRIPTION: {
-        defaultMessage: 'Something went wrong during the KYC check. Please contact Trezor Support.',
+        defaultMessage: 'Something went wrong during the KYC check. Please contact Cerberus Support.',
         id: 'TR_SAVINGS_SETUP_KYC_ERROR_DESCRIPTION',
     },
     TR_SAVINGS_PAYMENT_INFO_HEADER: {
@@ -1452,7 +1452,7 @@ export default defineMessages({
     },
     TR_SAVINGS_OVERVIEW_COIN_TRANSFER_DELAYED: {
         defaultMessage:
-            'Coins are in {providerName} custody and will be transferred to your Trezor automatically.',
+            'Coins are in {providerName} custody and will be transferred to your Cerberus automatically.',
         id: 'TR_SAVINGS_OVERVIEW_COIN_TRANSFER_DELAYED',
     },
     TR_SAVINGS_AUTHORIZATION_ERROR: {
@@ -1532,7 +1532,7 @@ export default defineMessages({
         dynamic: true,
     },
     TR_SAVINGS_MODAL_SECURITY_HEADER: {
-        defaultMessage: 'Security first with your Trezor',
+        defaultMessage: 'Security first with your Cerberus',
         id: 'TR_SAVINGS_MODAL_SECURITY_HEADER',
         dynamic: true,
     },
@@ -1629,7 +1629,7 @@ export default defineMessages({
         dynamic: true,
     },
     TR_BUY_MODAL_SECURITY_HEADER: {
-        defaultMessage: 'Security first with your Trezor',
+        defaultMessage: 'Security first with your Cerberus',
         id: 'TR_BUY_MODAL_SECURITY_HEADER',
         dynamic: true,
     },
@@ -1812,7 +1812,7 @@ export default defineMessages({
         id: 'TR_BUY_RECEIVING_ADDRESS',
     },
     TR_BUY_CONFIRMED_ON_CERBERUS: {
-        defaultMessage: 'Confirmed on Trezor',
+        defaultMessage: 'Confirmed on Cerberus',
         id: 'TR_BUY_CONFIRMED_ON_CERBERUS',
     },
     TR_BUY_OFFERS_FOR: {
@@ -1828,7 +1828,7 @@ export default defineMessages({
         id: 'TR_BUY_SHOW_OFFERS',
     },
     TR_BUY_CONFIRM_ON_CERBERUS: {
-        defaultMessage: 'Confirm on Trezor',
+        defaultMessage: 'Confirm on Cerberus',
         id: 'TR_BUY_CONFIRM_ON_CERBERUS',
     },
     TR_BUY_GO_TO_PAYMENT: {
@@ -2003,7 +2003,7 @@ export default defineMessages({
         id: 'TR_ADVANCED_RECOVERY',
     },
     TR_ADVANCED_RECOVERY_OPTION: {
-        defaultMessage: 'Spell out each word of your recovery seed using your Trezor device.',
+        defaultMessage: 'Spell out each word of your recovery seed using your Cerberus device.',
         description: 'Button for selecting advanced recovery option',
         id: 'TR_ADVANCED_RECOVERY_OPTION',
     },
@@ -2021,7 +2021,7 @@ export default defineMessages({
     },
     TR_ALLOW_ANALYTICS_DESCRIPTION: {
         defaultMessage:
-            'All data is kept strictly anonymous; we only use it to improve the Trezor ecosystem.',
+            'All data is kept strictly anonymous; we only use it to improve the Cerberus ecosystem.',
         id: 'TR_ALLOW_ANALYTICS_DESCRIPTION',
     },
     TR_ADDRESS_DISPLAY: {
@@ -2090,7 +2090,7 @@ export default defineMessages({
     },
     TR_BACKUP_FINISHED_TEXT: {
         defaultMessage:
-            'If you have written down your recovery seed, your Trezor is almost ready. Do not lose your recovery seed, otherwise your funds could be inaccessible.',
+            'If you have written down your recovery seed, your Cerberus is almost ready. Do not lose your recovery seed, otherwise your funds could be inaccessible.',
         description: 'Text that appears after backup is finished',
         id: 'TR_BACKUP_FINISHED_TEXT',
     },
@@ -2100,7 +2100,7 @@ export default defineMessages({
     },
     TR_BACKUP_SUBHEADING_1: {
         defaultMessage:
-            'A recovery seed backup is a series of randomly generated words created by your Trezor. It’s important that you write down your recovery seed and keep it safe, as it is the only way to recover and access your funds.',
+            'A recovery seed backup is a series of randomly generated words created by your Cerberus. It’s important that you write down your recovery seed and keep it safe, as it is the only way to recover and access your funds.',
         description: 'Explanation what recovery seed is',
         id: 'TR_BACKUP_SUBHEADING_1',
     },
@@ -2136,7 +2136,7 @@ export default defineMessages({
         id: 'TR_CHANGELOG',
     },
     TR_CHECK_FOR_DEVICES: {
-        defaultMessage: 'Find Trezor',
+        defaultMessage: 'Find Cerberus',
         id: 'TR_CHECK_FOR_DEVICES',
     },
     TR_CHECK_PGP_SIGNATURE: {
@@ -2152,7 +2152,7 @@ export default defineMessages({
         id: 'TR_CHECK_SEED',
     },
     TR_CHECK_YOUR_DEVICE: {
-        defaultMessage: 'Check your Trezor screen',
+        defaultMessage: 'Check your Cerberus screen',
         description: 'Placeholder in seed input asking user to pay attention to his device',
         id: 'TR_CHECK_YOUR_DEVICE',
     },
@@ -2178,7 +2178,7 @@ export default defineMessages({
         id: 'TR_CONFIRM',
     },
     TR_CONFIRM_ACTION_ON_YOUR: {
-        defaultMessage: 'Follow the instructions on your Trezor screen',
+        defaultMessage: 'Follow the instructions on your Cerberus screen',
         id: 'TR_CONFIRM_ACTION_ON_YOUR',
     },
     TR_CONFIRM_EMPTY_HIDDEN_WALLET: {
@@ -2202,12 +2202,12 @@ export default defineMessages({
         id: 'TR_CONFIRMED_TX',
     },
     TR_CONNECT_YOUR_DEVICE: {
-        defaultMessage: 'Connect your Trezor',
+        defaultMessage: 'Connect your Cerberus',
         description: 'Prompt to user to connect his device.',
         id: 'TR_CONNECT_YOUR_DEVICE',
     },
     TR_RECONNECT_YOUR_DEVICE: {
-        defaultMessage: 'Reconnect your Trezor',
+        defaultMessage: 'Reconnect your Cerberus',
         description: 'Prompt to user to reconnect his device.',
         id: 'TR_RECONNECT_YOUR_DEVICE',
     },
@@ -2217,7 +2217,7 @@ export default defineMessages({
         id: 'TR_CONNECTED',
     },
     TR_CONTACT_OUR_SUPPORT_LINK: {
-        defaultMessage: 'contact Trezor support',
+        defaultMessage: 'contact Cerberus support',
         description: 'Part of sentence TR_DID_YOU_PURCHASE. Link to support',
         id: 'TR_CONTACT_OUR_SUPPORT_LINK',
     },
@@ -2236,11 +2236,11 @@ export default defineMessages({
         id: 'TR_YES_CONTINUE',
     },
     TR_SETUP_MY_CERBERUS: {
-        defaultMessage: 'Set up my Trezor',
+        defaultMessage: 'Set up my Cerberus',
         id: 'TR_SETUP_MY_CERBERUS',
     },
     TR_YES_SETUP_MY_CERBERUS: {
-        defaultMessage: 'Yes, set up my Trezor',
+        defaultMessage: 'Yes, set up my Cerberus',
         id: 'TR_YES_SETUP_MY_CERBERUS',
     },
     TR_COPY_TO_CLIPBOARD: {
@@ -2263,7 +2263,7 @@ export default defineMessages({
     },
     TR_DEVICE_DISCONNECTED_DURING_ACTION_DESCRIPTION: {
         defaultMessage:
-            'Your Trezor was disconnected during the backup process. We strongly recommend that you use the factory reset option in Device settings to wipe your device and start the wallet backup process again.',
+            'Your Cerberus was disconnected during the backup process. We strongly recommend that you use the factory reset option in Device settings to wipe your device and start the wallet backup process again.',
         description: 'Error message. Instruction what to do.',
         id: 'TR_DEVICE_DISCONNECTED_DURING_ACTION_DESCRIPTION',
     },
@@ -2292,27 +2292,27 @@ export default defineMessages({
         id: 'TR_EDIT',
     },
     TR_NEEDS_ATTENTION_BOOTLOADER: {
-        defaultMessage: 'Trezor is in Bootloader mode.',
+        defaultMessage: 'Cerberus is in Bootloader mode.',
         id: 'TR_NEEDS_ATTENTION_BOOTLOADER',
     },
     TR_NEEDS_ATTENTION_INITIALIZE: {
-        defaultMessage: 'Trezor has not been set up.',
+        defaultMessage: 'Cerberus has not been set up.',
         id: 'TR_NEEDS_ATTENTION_INITIALIZE',
     },
     TR_NEEDS_ATTENTION_SEEDLESS: {
-        defaultMessage: 'Trezor does not have a recovery seed.',
+        defaultMessage: 'Cerberus does not have a recovery seed.',
         id: 'TR_NEEDS_ATTENTION_SEEDLESS',
     },
     TR_NEEDS_ATTENTION_USED_IN_OTHER_WINDOW: {
-        defaultMessage: 'Trezor is already in use.',
+        defaultMessage: 'Cerberus is already in use.',
         id: 'TR_NEEDS_ATTENTION_USED_IN_OTHER_WINDOW',
     },
     TR_NEEDS_ATTENTION_WAS_USED_IN_OTHER_WINDOW: {
-        defaultMessage: 'Trezor is already in use.',
+        defaultMessage: 'Cerberus is already in use.',
         id: 'TR_NEEDS_ATTENTION_WAS_USED_IN_OTHER_WINDOW',
     },
     TR_NEEDS_ATTENTION_UNACQUIRED: {
-        defaultMessage: 'Trezor is already in use in another window.',
+        defaultMessage: 'Cerberus is already in use in another window.',
         id: 'TR_NEEDS_ATTENTION_UNACQUIRED',
     },
     TR_NEEDS_ATTENTION_FIRMWARE_REQUIRED: {
@@ -2320,11 +2320,11 @@ export default defineMessages({
         id: 'TR_NEEDS_ATTENTION_FIRMWARE_REQUIRED',
     },
     TR_NEEDS_ATTENTION_UNAVAILABLE: {
-        defaultMessage: 'Trezor is not available.',
+        defaultMessage: 'Cerberus is not available.',
         id: 'TR_NEEDS_ATTENTION_UNAVAILABLE',
     },
     TR_NEEDS_ATTENTION_UNREADABLE: {
-        defaultMessage: 'Trezor is not readable.',
+        defaultMessage: 'Cerberus is not readable.',
         id: 'TR_NEEDS_ATTENTION_UNREADABLE',
     },
     TR_UDEV_DOWNLOAD_TITLE: {
@@ -2333,7 +2333,7 @@ export default defineMessages({
     },
     TR_UDEV_DOWNLOAD_DESC: {
         defaultMessage:
-            'In some cases, Linux users need to install udev rules to access their device. Please install the following package and reconnect your Trezor.',
+            'In some cases, Linux users need to install udev rules to access their device. Please install the following package and reconnect your Cerberus.',
         id: 'TR_UDEV_DOWNLOAD_DESC',
     },
     TR_UDEV_DOWNLOAD_MANUAL: {
@@ -2358,7 +2358,7 @@ export default defineMessages({
     },
     TR_DEVICE_SETTINGS_CUSTOM_FIRMWARE_DESCRIPTION: {
         defaultMessage:
-            'It is possible to install custom firmware for your Trezor device if needed. Installing custom firmware will erase its memory and may make it unusable. Never use this process unless you really know what you are doing.',
+            'It is possible to install custom firmware for your Cerberus device if needed. Installing custom firmware will erase its memory and may make it unusable. Never use this process unless you really know what you are doing.',
         id: 'TR_DEVICE_SETTINGS_CUSTOM_FIRMWARE_DESCRIPTION',
     },
     TR_DEVICE_SETTINGS_DEVICE_EDIT_LABEL: {
@@ -2425,7 +2425,7 @@ export default defineMessages({
         id: 'TR_SAFETY_CHECKS_STRICT_LEVEL',
     },
     TR_SAFETY_CHECKS_STRICT_LEVEL_DESC: {
-        defaultMessage: 'Full Trezor security.',
+        defaultMessage: 'Full Cerberus security.',
         id: 'TR_SAFETY_CHECKS_STRICT_LEVEL_DESC',
     },
     TR_SAFETY_CHECKS_PROMPT_LEVEL: {
@@ -2438,7 +2438,7 @@ export default defineMessages({
     },
     TR_SAFETY_CHECKS_PROMPT_LEVEL_DESC: {
         defaultMessage:
-            'Allow potentially unsafe actions, such as mismatching keys or allowing extreme fees, by manually approving them on your Trezor.',
+            'Allow potentially unsafe actions, such as mismatching keys or allowing extreme fees, by manually approving them on your Cerberus.',
         id: 'TR_SAFETY_CHECKS_PROMPT_LEVEL_DESC',
     },
     TR_SAFETY_CHECKS_DISABLED_WARNING: {
@@ -2499,7 +2499,7 @@ export default defineMessages({
         id: 'TR_DID_YOU_PURCHASE',
     },
     TR_DISCONNECT_YOUR_DEVICE: {
-        defaultMessage: 'Disconnect your Trezor',
+        defaultMessage: 'Disconnect your Cerberus',
         description: 'Prompt to disconnect device.',
         id: 'TR_DISCONNECT_YOUR_DEVICE',
     },
@@ -2530,7 +2530,7 @@ export default defineMessages({
         id: 'TR_ENTER_PASSPHRASE',
     },
     TR_ENTER_PASSPHRASE_ON_DEVICE: {
-        defaultMessage: 'Enter passphrase on Trezor',
+        defaultMessage: 'Enter passphrase on Cerberus',
         id: 'TR_ENTER_PASSPHRASE_ON_DEVICE',
     },
     TR_ENTER_PASSPHRASE_ON_DEVICE_LABEL: {
@@ -2544,7 +2544,7 @@ export default defineMessages({
     },
     TR_ENTER_SEED_WORDS_INSTRUCTION: {
         defaultMessage:
-            'Enter the words from your recovery seed here in the order displayed on your Trezor.',
+            'Enter the words from your recovery seed here in the order displayed on your Cerberus.',
         description:
             'User is instructed to enter words from seed (backup) into the form in browser',
         id: 'TR_ENTER_SEED_WORDS_INSTRUCTION',
@@ -2562,7 +2562,7 @@ export default defineMessages({
         defaultMessage: '7d change',
     },
     TR_FAILED_BACKUP: {
-        defaultMessage: 'Backup failed. Please wipe your Trezor and start the setup process again.',
+        defaultMessage: 'Backup failed. Please wipe your Cerberus and start the setup process again.',
         id: 'TR_FAILED_BACKUP',
     },
     TR_BACKUP_SUCCESSFUL: {
@@ -2619,7 +2619,7 @@ export default defineMessages({
     },
     TR_FIRMWARE_SUBHEADING_NONE: {
         defaultMessage:
-            'Your Trezor is shipped without firmware. Install the latest firmware in order to use your device safely. For Bitcoin-only users, we recommend installing <button>{bitcoinOnly} firmware</button>.',
+            'Your Cerberus is shipped without firmware. Install the latest firmware in order to use your device safely. For Bitcoin-only users, we recommend installing <button>{bitcoinOnly} firmware</button>.',
         description: 'Main text on firmware page for devices without firmware',
         id: 'TR_FIRMWARE_SUBHEADING_NONE',
     },
@@ -2631,7 +2631,7 @@ export default defineMessages({
     },
     TR_FIRMWARE_SUBHEADING_UNKNOWN: {
         defaultMessage:
-            'Your Trezor is shipped without firmware. Install the latest firmware in order to use your device safely. For Bitcoin-only users, we recommend installing <button>{bitcoinOnly} firmware</button>.',
+            'Your Cerberus is shipped without firmware. Install the latest firmware in order to use your device safely. For Bitcoin-only users, we recommend installing <button>{bitcoinOnly} firmware</button>.',
         description:
             'Main text on firmware page for devices in bootloader mode, i.e. when Suite cannot determine current firmware type',
         id: 'TR_FIRMWARE_SUBHEADING_UNKNOWN',
@@ -2747,7 +2747,7 @@ export default defineMessages({
         id: 'TR_I_UNDERSTAND_PASSPHRASE',
     },
     TR_IF_YOUR_DEVICE_IS_EVER_LOST: {
-        defaultMessage: 'If your Trezor is lost or damaged, your funds may be irreversibly lost.',
+        defaultMessage: 'If your Cerberus is lost or damaged, your funds may be irreversibly lost.',
         id: 'TR_IF_YOUR_DEVICE_IS_EVER_LOST',
     },
     TR_INCOMING: {
@@ -2780,7 +2780,7 @@ export default defineMessages({
         id: 'TR_FIRMWARE_TYPE_BITCOIN_ONLY',
     },
     TR_DO_NOT_DISCONNECT: {
-        defaultMessage: 'Do not disconnect your Trezor.',
+        defaultMessage: 'Do not disconnect your Cerberus.',
         description: 'Message that is visible when installing process is in progress.',
         id: 'TR_DO_NOT_DISCONNECT',
     },
@@ -2794,7 +2794,7 @@ export default defineMessages({
     },
     TR_LANGUAGE_DESCRIPTION: {
         defaultMessage:
-            'A big thanks to the Trezor community for helping out with this translation. You can always refer to one of the official languages if needed.',
+            'A big thanks to the Cerberus community for helping out with this translation. You can always refer to one of the official languages if needed.',
         id: 'TR_LANGUAGE_DESCRIPTION',
     },
     TR_LANGUAGE_CREDITS: {
@@ -2824,7 +2824,7 @@ export default defineMessages({
     },
     TR_LEARN_MORE: {
         defaultMessage: 'Learn more',
-        description: 'Link to Trezor wiki.',
+        description: 'Link to Cerberus wiki.',
         id: 'TR_LEARN_MORE',
     },
     TR_NORMAL_ACCOUNTS: {
@@ -3047,20 +3047,20 @@ export default defineMessages({
     },
     TR_SOLANA_DEVNET_SHORTCUT_WARNING: {
         defaultMessage:
-            'DSOL will display SOL on your Trezor due to network limitations. Check the provided blockhash on devnet explorer if you want to verify the transaction network.',
+            'DSOL will display SOL on your Cerberus due to network limitations. Check the provided blockhash on devnet explorer if you want to verify the transaction network.',
         id: 'TR_SOLANA_DEVNET_SHORTCUT_WARNING',
     },
     TR_NEW_COMMUNICATION_TOOL: {
         defaultMessage:
-            'New communication tool to facilitate the connection between your Trezor and your internet browser.',
+            'New communication tool to facilitate the connection between your Cerberus and your internet browser.',
         id: 'TR_NEW_COMMUNICATION_TOOL',
     },
     TR_NEW_CERBERUS_BRIDGE_IS_AVAILABLE: {
-        defaultMessage: 'New Trezor Bridge is available.',
+        defaultMessage: 'New Cerberus Bridge is available.',
         id: 'TR_NEW_CERBERUS_BRIDGE_IS_AVAILABLE',
     },
     TR_NEW_CERBERUS_FIRMWARE_IS_AVAILABLE_DOT: {
-        defaultMessage: 'New Trezor firmware is available! Please update your device.',
+        defaultMessage: 'New Cerberus firmware is available! Please update your device.',
         id: 'TR_NEW_CERBERUS_FIRMWARE_IS_AVAILABLE_DOT',
     },
     TR_NO_PASSPHRASE_WALLET: {
@@ -3161,13 +3161,13 @@ export default defineMessages({
     },
     TR_PIN_SET_SUCCESS: {
         defaultMessage:
-            'Write your PIN down and keep it safe. Use it to unlock your Trezor when you need to access your funds.',
+            'Write your PIN down and keep it safe. Use it to unlock your Cerberus when you need to access your funds.',
         description: 'Longer text indicating PIN was set successfully.',
         id: 'TR_PIN_SET_SUCCESS',
     },
     TR_PIN_SUBHEADING: {
         defaultMessage:
-            'Using a strong PIN protects your Trezor from unauthorized physical access.',
+            'Using a strong PIN protects your Cerberus from unauthorized physical access.',
         description: 'Subheading on PIN page',
         id: 'TR_PIN_SUBHEADING',
     },
@@ -3224,7 +3224,7 @@ export default defineMessages({
         id: 'TR_GOT_IT',
     },
     TR_RECONNECT_HEADER: {
-        defaultMessage: 'Reconnect your Trezor',
+        defaultMessage: 'Reconnect your Cerberus',
         id: 'TR_RECONNECT_HEADER',
     },
     TR_RECOVER_SUBHEADING_COMPUTER: {
@@ -3255,14 +3255,14 @@ export default defineMessages({
     },
     TR_RECOVERY_TYPES_DESCRIPTION: {
         defaultMessage:
-            'Both methods are secure; advanced recovery allows you to input your recovery seed using your Trezor screen and takes longer.',
+            'Both methods are secure; advanced recovery allows you to input your recovery seed using your Cerberus screen and takes longer.',
         description:
             'There are two methods of recovery for T1B1. This is a short explanation text.',
         id: 'TR_RECOVERY_TYPES_DESCRIPTION',
     },
     TR_REMEMBER_ALLOWS_YOU_TO: {
         defaultMessage:
-            'Stores wallet for watch-only mode. You will see your wallet even if your Trezor is disconnected.',
+            'Stores wallet for watch-only mode. You will see your wallet even if your Cerberus is disconnected.',
         id: 'TR_REMEMBER_ALLOWS_YOU_TO',
     },
     TR_RESELLERS_LINK: {
@@ -3300,7 +3300,7 @@ export default defineMessages({
     },
     TR_SECURITY_SUBHEADING: {
         defaultMessage:
-            "You've successfully set up your Trezor and created your wallet. You should never use your Trezor without backing it up: it is the only way to recover a lost wallet.",
+            "You've successfully set up your Cerberus and created your wallet. You should never use your Cerberus without backing it up: it is the only way to recover a lost wallet.",
         description: 'Text in security page',
         id: 'TR_SECURITY_SUBHEADING',
     },
@@ -3358,7 +3358,7 @@ export default defineMessages({
         id: 'TR_SETTINGS_DEVICE_BANNER_TITLE_BOOTLOADER',
     },
     TR_SETTINGS_DEVICE_BANNER_TITLE_REMEMBERED: {
-        defaultMessage: 'Connect your Trezor to change Device settings',
+        defaultMessage: 'Connect your Cerberus to change Device settings',
         id: 'TR_SETTINGS_DEVICE_BANNER_TITLE_REMEMBERED',
     },
     TR_SETTINGS_DEVICE_BANNER_DESCRIPTION_BOOTLOADER_NO_BUTTONS: {
@@ -3494,21 +3494,21 @@ export default defineMessages({
     },
     TR_THIS_HIDDEN_WALLET_IS_EMPTY_SOURCE: {
         defaultMessage:
-            'This hidden wallet is empty. To make sure you are in the correct hidden wallet, please re-enter the passphrase on your Trezor.',
+            'This hidden wallet is empty. To make sure you are in the correct hidden wallet, please re-enter the passphrase on your Cerberus.',
         id: 'TR_THIS_HIDDEN_WALLET_IS_EMPTY_SOURCE',
     },
     TR_TO_FIND_YOUR_ACCOUNTS_AND: {
-        defaultMessage: 'Trezor is running a coin discovery check to find your accounts and funds.',
+        defaultMessage: 'Cerberus is running a coin discovery check to find your accounts and funds.',
         id: 'TR_TO_FIND_YOUR_ACCOUNTS_AND',
     },
     TR_ADDRESS_PHISHING_WARNING: {
         defaultMessage:
-            'To prevent phishing attacks, you should verify the address on your Trezor. {claim}',
+            'To prevent phishing attacks, you should verify the address on your Cerberus. {claim}',
         id: 'TR_ADDRESS_PHISHING_WARNING',
     },
     TR_XPUB_PHISHING_WARNING: {
         defaultMessage:
-            'To prevent phishing attacks, you should verify the public key on your Trezor. {claim}',
+            'To prevent phishing attacks, you should verify the public key on your Cerberus. {claim}',
         id: 'TR_XPUB_PHISHING_WARNING',
     },
     TR_TOO_LONG: {
@@ -3528,7 +3528,7 @@ export default defineMessages({
         id: 'TR_TRANSACTION_DETAILS',
     },
     TR_CERBERUS_BRIDGE_IS_NOT_RUNNING: {
-        defaultMessage: 'Trezor Bridge is not running',
+        defaultMessage: 'Cerberus Bridge is not running',
         description: '',
         id: 'TR_CERBERUS_BRIDGE_IS_NOT_RUNNING',
     },
@@ -3618,7 +3618,7 @@ export default defineMessages({
         id: 'TR_VERIFY_MESSAGE',
     },
     TR_WAIT_FOR_REBOOT: {
-        defaultMessage: 'Restarting Trezor',
+        defaultMessage: 'Restarting Cerberus',
         description: 'Info what is happening with users device.',
         id: 'TR_WAIT_FOR_REBOOT',
     },
@@ -3717,7 +3717,7 @@ export default defineMessages({
         id: 'TR_YOUR_NEW_VERSION_IS_READY',
     },
     TR_YOUR_CERBERUS_IS_NOT_BACKED_UP: {
-        defaultMessage: 'Your Trezor wallet is not backed up.',
+        defaultMessage: 'Your Cerberus wallet is not backed up.',
         id: 'TR_YOUR_CERBERUS_IS_NOT_BACKED_UP',
     },
     TR_YOUR_WALLET_IS_READY_WHAT: {
@@ -3768,7 +3768,7 @@ export default defineMessages({
     TR_ACCOUNT_TYPE_BIP84_DESC: {
         id: 'TR_ACCOUNT_TYPE_BIP84_DESC',
         defaultMessage:
-            'SegWit is the default address type in Trezor Suite. It reduces transaction size, boosts capacity, and enhances scalability while enabling smaller transaction fees, but may not work with some older services.',
+            'SegWit is the default address type in Cerberus Suite. It reduces transaction size, boosts capacity, and enhances scalability while enabling smaller transaction fees, but may not work with some older services.',
     },
     TR_ACCOUNT_TYPE_BIP86_DESC: {
         id: 'TR_ACCOUNT_TYPE_BIP86_DESC',
@@ -3804,7 +3804,7 @@ export default defineMessages({
     },
     TR_ACCOUNT_TYPE_NO_SUPPORT: {
         id: 'TR_ACCOUNT_TYPE_NO_SUPPORT',
-        defaultMessage: 'This account type is not supported on this Trezor model.',
+        defaultMessage: 'This account type is not supported on this Cerberus model.',
     },
     TR_ACCOUNT_TYPE_UPDATE_REQUIRED: {
         id: 'TR_ACCOUNT_TYPE_UPDATE_REQUIRED',
@@ -4090,7 +4090,7 @@ export default defineMessages({
     TR_TOR_DISABLE_ONIONS_ONLY_TITLE: {
         id: 'TR_TOR_DISABLE_ONIONS_ONLY_TITLE',
         defaultMessage:
-            'Disabling Tor now will reset all Onion backends to the default Trezor servers.',
+            'Disabling Tor now will reset all Onion backends to the default Cerberus servers.',
     },
     TR_TOR_DISABLE_ONIONS_ONLY_DESCRIPTION: {
         id: 'TR_TOR_DISABLE_ONIONS_ONLY_DESCRIPTION',
@@ -4148,7 +4148,7 @@ export default defineMessages({
     },
     TR_ONION_LINKS_TITLE: {
         id: 'TR_ONION_LINKS_TITLE',
-        defaultMessage: 'Open trezor.io links as .onion links',
+        defaultMessage: 'Open cerberus.uraanai.com links as .onion links',
     },
     TR_TOR_ENABLE_TITLE: {
         id: 'TR_TOR_ENABLE_TITLE',
@@ -4161,7 +4161,7 @@ export default defineMessages({
     TR_ONION_LINKS_DESCRIPTION: {
         id: 'TR_ONION_LINKS_DESCRIPTION',
         defaultMessage:
-            'With this setting enabled, all trezor.io links will be opened as .onion links.',
+            'With this setting enabled, all cerberus.uraanai.com links will be opened as .onion links.',
     },
     TR_TOR_BRIDGE: {
         id: 'TR_TOR_BRIDGE',
@@ -4194,16 +4194,16 @@ export default defineMessages({
     },
     TR_CERBERUS_BRIDGE_DOWNLOAD: {
         id: 'TR_CERBERUS_BRIDGE_DOWNLOAD',
-        defaultMessage: 'Trezor Bridge Download',
+        defaultMessage: 'Cerberus Bridge Download',
     },
     TR_CURRENTLY_INSTALLED_CERBERUS: {
         id: 'TR_CURRENTLY_INSTALLED_CERBERUS',
-        defaultMessage: 'Currently installed: Trezor Bridge {version}',
+        defaultMessage: 'Currently installed: Cerberus Bridge {version}',
     },
     TR_OUTDATED_BRIDGE_DESKTOP: {
         id: 'TR_OUTDATED_BRIDGE_DESKTOP',
         defaultMessage:
-            'Trezor Suite is bundled with Trezor Bridge. If you only use the Trezor Suite application, we recommend uninstalling Trezor Bridge in order to use the bundled one. If you are also using Trezor in your browser, updating Trezor Bridge is recommended.',
+            'Cerberus Suite is bundled with Cerberus Bridge. If you only use the Cerberus Suite application, we recommend uninstalling Cerberus Bridge in order to use the bundled one. If you are also using Cerberus in your browser, updating Cerberus Bridge is recommended.',
     },
     EVENT_DEVICE_CONNECT: {
         id: 'EVENT_DEVICE_CONNECT',
@@ -4243,7 +4243,7 @@ export default defineMessages({
     TR_WIPE_DEVICE_CHECKBOX_2_DESCRIPTION: {
         id: 'TR_WIPE_DEVICE_CHECKBOX_2_DESCRIPTION',
         defaultMessage:
-            "Your recovery seed (wallet backup) is absolutely essential for regaining access to your funds in case of device loss, theft, or damage. Without it, there's nothing anybody can do, not even Trezor Support. Write it down on paper or your recovery seed card and store it somewhere safe and secure. Just remember where you stashed it.",
+            "Your recovery seed (wallet backup) is absolutely essential for regaining access to your funds in case of device loss, theft, or damage. Without it, there's nothing anybody can do, not even Cerberus Support. Write it down on paper or your recovery seed card and store it somewhere safe and secure. Just remember where you stashed it.",
     },
     TR_CANCEL: {
         id: 'TR_CANCEL',
@@ -4255,12 +4255,12 @@ export default defineMessages({
     },
     TR_FOLLOW_INSTRUCTIONS_ON_DEVICE: {
         id: 'TR_FOLLOW_INSTRUCTIONS_ON_DEVICE',
-        defaultMessage: 'Check your Trezor screen',
+        defaultMessage: 'Check your Cerberus screen',
     },
     TR_ADVANCED_RECOVERY_TEXT: {
         id: 'TR_ADVANCED_RECOVERY_TEXT',
         defaultMessage:
-            'Spell each word of your recovery seed using the keypad below, according to where the letters are shown on your Trezor screen.',
+            'Spell each word of your recovery seed using the keypad below, according to where the letters are shown on your Cerberus screen.',
     },
     TR_ADVANCED_RECOVERY_NOT_SURE: {
         id: 'TR_ADVANCED_RECOVERY_NOT_SURE',
@@ -4305,7 +4305,7 @@ export default defineMessages({
     TR_SEED_WORDS_ENTER_COMPUTER: {
         id: 'TR_SEED_WORDS_ENTER_COMPUTER',
         defaultMessage:
-            'Enter the words from your recovery seed in the order displayed on your Trezor.',
+            'Enter the words from your recovery seed in the order displayed on your Cerberus.',
     },
     TR_SEED_WORDS_ENTER_TOUCHSCREEN: {
         id: 'TR_SEED_WORDS_ENTER_TOUCHSCREEN',
@@ -4358,7 +4358,7 @@ export default defineMessages({
     TR_DRY_RUN_CHECK_ITEM_DESCRIPTION: {
         id: 'TR_DRY_RUN_CHECK_ITEM_DESCRIPTION',
         defaultMessage:
-            'Note that this test is precisely the same as the normal recovery process. You should only trust the information and instructions displayed on your Trezor screen.',
+            'Note that this test is precisely the same as the normal recovery process. You should only trust the information and instructions displayed on your Cerberus screen.',
     },
     TR_ACCOUNT_TYPE: {
         id: 'TR_ACCOUNT_TYPE',
@@ -4420,7 +4420,7 @@ export default defineMessages({
     },
     MODAL_ADD_ACCOUNT_COINJOIN_DESKTOP_ONLY: {
         id: 'MODAL_ADD_ACCOUNT_COINJOIN_DESKTOP_ONLY',
-        defaultMessage: 'Coinjoin account only available on Trezor Suite desktop app.',
+        defaultMessage: 'Coinjoin account only available on Cerberus Suite desktop app.',
     },
     TR_DEVICE_IN_RECOVERY_MODE: {
         id: 'TR_DEVICE_IN_RECOVERY_MODE',
@@ -4577,7 +4577,7 @@ export default defineMessages({
     },
     TR_SET_STRONG_PIN_NUMBER_AGAINST: {
         id: 'TR_SET_STRONG_PIN_NUMBER_AGAINST',
-        defaultMessage: 'Protects your Trezor against unauthorized access',
+        defaultMessage: 'Protects your Cerberus against unauthorized access',
     },
     TR_CHANGE_PIN_IN_SETTINGS: {
         id: 'TR_CHANGE_PIN_IN_SETTINGS',
@@ -4640,7 +4640,7 @@ export default defineMessages({
     TR_BUY_RECEIVE_ADDRESS_QUESTION_TOOLTIP: {
         id: 'TR_BUY_RECEIVE_ADDRESS_QUESTION_TOOLTIP',
         defaultMessage:
-            'This is the specific alphanumeric address that will receive your coins. Verify this address on your Trezor.',
+            'This is the specific alphanumeric address that will receive your coins. Verify this address on your Cerberus.',
     },
     TR_TRADE_SELECT_COIN: {
         id: 'TR_TRADE_SELECT_COIN',
@@ -4781,11 +4781,11 @@ export default defineMessages({
     },
     TR_REBOOT_INTO_BOOTLOADER: {
         id: 'TR_REBOOT_INTO_BOOTLOADER',
-        defaultMessage: 'Restart your Trezor in bootloader mode',
+        defaultMessage: 'Restart your Cerberus in bootloader mode',
     },
     TR_RECONNECT_IN_BOOTLOADER: {
         id: 'TR_RECONNECT_IN_BOOTLOADER',
-        defaultMessage: 'Reconnect your Trezor in bootloader mode',
+        defaultMessage: 'Reconnect your Cerberus in bootloader mode',
     },
     TR_RECONNECT_IN_BOOTLOADER_SUCCESS: {
         id: 'TR_RECONNECT_IN_BOOTLOADER_SUCCESS',
@@ -4834,7 +4834,7 @@ export default defineMessages({
     TR_CONTINUE_ONLY_WITH_SEED_DESCRIPTION: {
         id: 'TR_CONTINUE_ONLY_WITH_SEED_DESCRIPTION',
         defaultMessage:
-            "If you don't have your recovery seed, not even Trezor Support can help you recover your funds if your device is reset. If you have multiple recovery seeds, please make sure that you have the correct one ready and easily accessible to recover this specific Trezor device.",
+            "If you don't have your recovery seed, not even Cerberus Support can help you recover your funds if your device is reset. If you have multiple recovery seeds, please make sure that you have the correct one ready and easily accessible to recover this specific Cerberus device.",
     },
     TR_CONTINUE_ONLY_WITH_SEED_DESCRIPTION_2: {
         id: 'TR_CONTINUE_ONLY_WITH_SEED_DESCRIPTION_2',
@@ -4849,7 +4849,7 @@ export default defineMessages({
     TR_SWITCH_FIRMWARE_NO_BACKUP_2: {
         id: 'TR_SWITCH_FIRMWARE_NO_BACKUP_2',
         defaultMessage:
-            'In all cases, we strongly recommend <button>creating a wallet backup in Settings</button>. With a wallet backup, your coins are safe and secure even if your Trezor is lost, damaged, or stolen.',
+            'In all cases, we strongly recommend <button>creating a wallet backup in Settings</button>. With a wallet backup, your coins are safe and secure even if your Cerberus is lost, damaged, or stolen.',
     },
     TR_IMPORTANT: {
         id: 'TR_IMPORTANT',
@@ -4915,11 +4915,11 @@ export default defineMessages({
     TR_YOUR_DEVICE_IS_CONNECTED_BUT_UNREADABLE: {
         id: 'TR_YOUR_DEVICE_IS_CONNECTED_BUT_UNREADABLE',
         defaultMessage:
-            'Your device is connected properly, but your internet browser can not communicate with it at the moment. You will need to install Trezor Bridge.',
+            'Your device is connected properly, but your internet browser can not communicate with it at the moment. You will need to install Cerberus Bridge.',
     },
     TR_DEVICE_NOT_INITIALIZED: {
         id: 'TR_DEVICE_NOT_INITIALIZED',
-        defaultMessage: 'Trezor is not set up',
+        defaultMessage: 'Cerberus is not set up',
         description:
             'Device not initialized means that it has no cryptographic secret lives in it and it must be either recovered from seed or newly generated.',
     },
@@ -4950,7 +4950,7 @@ export default defineMessages({
     TR_UNREADABLE_EXPLAINED: {
         id: 'TR_UNREADABLE_EXPLAINED',
         defaultMessage:
-            'We cannot see details about your Trezor device. It may be running old firmware, or another USB device may be interfering. To make communication possible, you will need to install Trezor Bridge.',
+            'We cannot see details about your Cerberus device. It may be running old firmware, or another USB device may be interfering. To make communication possible, you will need to install Cerberus Bridge.',
     },
     TR_SEE_DETAILS: {
         id: 'TR_SEE_DETAILS',
@@ -5020,7 +5020,7 @@ export default defineMessages({
     TR_BACKUP_SEED_IS_ULTIMATE: {
         id: 'TR_BACKUP_SEED_IS_ULTIMATE',
         defaultMessage:
-            "If you ever need to restore your wallet to access your funds, it's necessary to have your recovery seed (wallet backup) by your side. Don’t lose or misplace it. Once it's gone, it's gone. No one can help you recover it, not even Trezor Support. So, be responsible and make sure you keep your recovery seed tucked away like your life depends on it.",
+            "If you ever need to restore your wallet to access your funds, it's necessary to have your recovery seed (wallet backup) by your side. Don’t lose or misplace it. Once it's gone, it's gone. No one can help you recover it, not even Cerberus Support. So, be responsible and make sure you keep your recovery seed tucked away like your life depends on it.",
     },
     TR_FIRMWARE_IS_POTENTIALLY_RISKY: {
         id: 'TR_FIRMWARE_IS_POTENTIALLY_RISKY',
@@ -5029,12 +5029,12 @@ export default defineMessages({
     },
     ONBOARDING_UNEXPECTED_DEVICE_DIFFERENT_HEADING: {
         id: 'ONBOARDING_UNEXPECTED_DEVICE_DIFFERENT_HEADING',
-        defaultMessage: 'You are using a different Trezor',
+        defaultMessage: 'You are using a different Cerberus',
     },
     ONBOARDING_UNEXPECTED_DEVICE_DIFFERENT_P1: {
         id: 'ONBOARDING_UNEXPECTED_DEVICE_DIFFERENT_P1',
         defaultMessage:
-            "This isn't the same Trezor you've been using. Please reconnect the right one.",
+            "This isn't the same Cerberus you've been using. Please reconnect the right one.",
     },
     ONBOARDING_UNEXPECTED_DEVICE_DIFFERENT_P2: {
         id: 'ONBOARDING_UNEXPECTED_DEVICE_DIFFERENT_P2',
@@ -5053,7 +5053,7 @@ export default defineMessages({
     TR_ONBOARDING_GENERATE_SEED_DESCRIPTION: {
         id: 'TR_ONBOARDING_GENERATE_SEED_DESCRIPTION',
         defaultMessage:
-            'Choose how to back up your Trezor. This process will also create a standard wallet for you.',
+            'Choose how to back up your Cerberus. This process will also create a standard wallet for you.',
         description:
             'Used for button triggering seed creation (reset device call), user chooses between single seed and shamir',
     },
@@ -5091,7 +5091,7 @@ export default defineMessages({
     TR_ONBOARDING_NEW_FW_DESCRIPTION: {
         id: 'TR_ONBOARDING_NEW_FW_DESCRIPTION',
         defaultMessage:
-            'A new firmware version is available. You can also update your Trezor directly from Suite once you have finished setting up your device.',
+            'A new firmware version is available. You can also update your Cerberus directly from Suite once you have finished setting up your device.',
     },
     TR_FIRMWARE_NEW_FW_DESCRIPTION: {
         id: 'TR_FIRMWARE_NEW_FW_DESCRIPTION',
@@ -5140,7 +5140,7 @@ export default defineMessages({
     TR_EARLY_ACCESS_DESCRIPTION: {
         id: 'TR_EARLY_ACCESS_DESCRIPTION',
         defaultMessage:
-            'Join to test the latest product features before we release them to all Trezor users.',
+            'Join to test the latest product features before we release them to all Cerberus users.',
     },
     TR_EARLY_ACCESS_DESCRIPTION_ENABLED: {
         id: 'TR_EARLY_ACCESS_DESCRIPTION_ENABLED',
@@ -5336,20 +5336,20 @@ export default defineMessages({
     },
     TR_CONFIRM_ON_CERBERUS: {
         id: 'TR_CONFIRM_ON_CERBERUS',
-        defaultMessage: 'Confirm on Trezor',
+        defaultMessage: 'Confirm on Cerberus',
     },
     TR_CONFIRM_BEFORE_COPY: {
         id: 'TR_CONFIRM_BEFORE_COPY',
-        defaultMessage: 'Confirm on Trezor before copying',
+        defaultMessage: 'Confirm on Cerberus before copying',
     },
     TR_QR_RECEIVE_ADDRESS_CONFIRM: {
         id: 'TR_QR_RECEIVE_ADDRESS_CONFIRM',
-        defaultMessage: 'Confirm on Trezor before scanning',
+        defaultMessage: 'Confirm on Cerberus before scanning',
     },
     TR_QR_RECEIVE_ADDRESS_CONFIRM_EXPLANATION: {
         id: 'TR_QR_RECEIVE_ADDRESS_CONFIRM_EXPLANATION',
         defaultMessage:
-            "Please confirm the receiving address on your Trezor device first, as its trusted display can't be hacked.",
+            "Please confirm the receiving address on your Cerberus device first, as its trusted display can't be hacked.",
     },
     TR_MY_ASSETS: {
         id: 'TR_MY_ASSETS',
@@ -5470,11 +5470,11 @@ export default defineMessages({
     },
     TR_BRIDGE_DEV_MODE_START: {
         id: 'TR_BRIDGE_DEV_MODE_START',
-        defaultMessage: 'Starting Trezor Bridge on port 21324',
+        defaultMessage: 'Starting Cerberus Bridge on port 21324',
     },
     TR_BRIDGE_DEV_MODE_STOP: {
         id: 'TR_BRIDGE_DEV_MODE_STOP',
-        defaultMessage: 'Starting Trezor Bridge on default port',
+        defaultMessage: 'Starting Cerberus Bridge on default port',
     },
     TR_TO_ADD_NEW_ACCOUNT_WAIT_FOR_DISCOVERY: {
         id: 'TR_TO_ADD_NEW_ACCOUNT_WAIT_FOR_DISCOVERY',
@@ -5917,7 +5917,7 @@ export default defineMessages({
     },
     TR_YOUR_LABELING_IS_SYNCED: {
         defaultMessage:
-            'Your labels are synced with a cloud storage provider. Your data is safe, as only your Trezor can decrypt it.',
+            'Your labels are synced with a cloud storage provider. Your data is safe, as only your Cerberus can decrypt it.',
         id: 'TR_YOUR_LABELING_IS_SYNCED',
     },
     TR_YOUR_LABELING_IS_SYNCED_LOCALLY: {
@@ -5954,7 +5954,7 @@ export default defineMessages({
         id: 'METADATA_MODAL_HEADING',
     },
     METADATA_MODAL_DESCRIPTION: {
-        defaultMessage: 'Select how to sync your labels. Your data is encrypted by Trezor.',
+        defaultMessage: 'Select how to sync your labels. Your data is encrypted by Cerberus.',
         id: 'METADATA_MODAL_DESCRIPTION',
     },
     TR_DISABLED_SWITCH_TOOLTIP: {
@@ -5990,11 +5990,11 @@ export default defineMessages({
     SETTINGS_ADV_COIN_BLOCKBOOK_DESCRIPTION: {
         id: 'SETTINGS_ADV_COIN_BLOCKBOOK_DESCRIPTION',
         defaultMessage:
-            'Trezor Suite uses Trezor Blockbook for the wallet backend. You can also use your own custom blockbook.',
+            'Cerberus Suite uses Cerberus Blockbook for the wallet backend. You can also use your own custom blockbook.',
     },
     SETTINGS_ADV_COIN_BLOCKFROST_DESCRIPTION: {
         id: 'SETTINGS_ADV_COIN_BLOCKFROST_DESCRIPTION',
-        defaultMessage: 'Trezor Suite uses Blockfrost websocket-link for the wallet backend.',
+        defaultMessage: 'Cerberus Suite uses Blockfrost websocket-link for the wallet backend.',
     },
     SETTINGS_ADV_COIN_URL_INPUT_PLACEHOLDER: {
         id: 'SETTINGS_ADV_COIN_URL_INPUT_PLACEHOLDER',
@@ -6015,7 +6015,7 @@ export default defineMessages({
     },
     TR_BACKEND_DEFAULT_SERVERS: {
         id: 'TR_BACKEND_DEFAULT_SERVERS',
-        defaultMessage: 'Trezor servers (default)',
+        defaultMessage: 'Cerberus servers (default)',
     },
     TR_BACKEND_CUSTOM_SERVERS: {
         id: 'TR_BACKEND_CUSTOM_SERVERS',
@@ -6359,7 +6359,7 @@ export default defineMessages({
     },
     TR_UPDATE_MODAL_RESTART_NEEDED: {
         id: 'TR_UPDATE_MODAL_RESTART_NEEDED',
-        defaultMessage: 'This requires restarting Trezor Suite.',
+        defaultMessage: 'This requires restarting Cerberus Suite.',
     },
     SETTINGS_UPDATE_CHECKING: {
         id: 'SETTINGS_UPDATE_CHECKING',
@@ -6388,7 +6388,7 @@ export default defineMessages({
     TR_BACKUP_CHECKBOX_1_TITLE: {
         id: 'TR_BACKUP_CHECKBOX_1_TITLE',
         defaultMessage:
-            'Your recovery seed (wallet backup) lets you recover your funds in case of Trezor loss or damage.',
+            'Your recovery seed (wallet backup) lets you recover your funds in case of Cerberus loss or damage.',
     },
     TR_BACKUP_CHECKBOX_1_DESCRIPTION: {
         id: 'TR_BACKUP_CHECKBOX_1_DESCRIPTION',
@@ -6608,12 +6608,12 @@ export default defineMessages({
     },
     TR_ANALYZE_IN_BLOCKBOOK: {
         id: 'TR_ANALYZE_IN_BLOCKBOOK',
-        defaultMessage: 'Analyze in Trezor Blockbook',
+        defaultMessage: 'Analyze in Cerberus Blockbook',
     },
     TR_ANALYZE_IN_BLOCKBOOK_DESC: {
         id: 'TR_ANALYZE_IN_BLOCKBOOK_DESC',
         defaultMessage:
-            'See inputs and outputs in Trezor Blockbook as it might be easier to analyze there.',
+            'See inputs and outputs in Cerberus Blockbook as it might be easier to analyze there.',
     },
     TR_ANALYZE_IN_BLOCKBOOK_OPEN: {
         id: 'TR_ANALYZE_IN_BLOCKBOOK_OPEN',
@@ -6714,7 +6714,7 @@ export default defineMessages({
     TR_SUITE_META_DESCRIPTION: {
         id: 'TR_SUITE_META_DESCRIPTION',
         defaultMessage:
-            'New desktop & browser app for Trezor hardware wallets. Trezor Suite brings big improvements across our three key pillars of usability, security and privacy.',
+            'New desktop & browser app for Cerberus hardware wallets. Cerberus Suite brings big improvements across our three key pillars of usability, security and privacy.',
     },
     TR_DATABASE_UPGRADE_BLOCKED: {
         id: 'TR_DATABASE_UPGRADE_BLOCKED',
@@ -6731,7 +6731,7 @@ export default defineMessages({
     },
     TR_WAIT_FOR_REBOOT_WEBUSB_DESCRIPTION: {
         id: 'TR_WAIT_FOR_REBOOT_WEBUSB_DESCRIPTION',
-        defaultMessage: 'Please wait for Trezor to restart and pair the device again.',
+        defaultMessage: 'Please wait for Cerberus to restart and pair the device again.',
     },
     TR_BUG: {
         id: 'TR_BUG',
@@ -6759,11 +6759,11 @@ export default defineMessages({
     },
     TR_GUIDE_FORUM: {
         id: 'TR_GUIDE_FORUM',
-        defaultMessage: 'Trezor Forum',
+        defaultMessage: 'Cerberus Forum',
     },
     TR_GUIDE_FORUM_LABEL: {
         id: 'TR_GUIDE_FORUM_LABEL',
-        defaultMessage: 'Connect with the Trezor community',
+        defaultMessage: 'Connect with the Cerberus community',
     },
     TR_GUIDE_SUPPORT_AND_FEEDBACK: {
         id: 'TR_GUIDE_SUPPORT_AND_FEEDBACK',
@@ -6843,11 +6843,11 @@ export default defineMessages({
     },
     TR_RECOVERY_MATRIX_DISPLAYED_ON_CERBERUS: {
         id: 'TR_RECOVERY_MATRIX_DISPLAYED_ON_CERBERUS',
-        defaultMessage: 'The letters are displayed on your Trezor',
+        defaultMessage: 'The letters are displayed on your Cerberus',
     },
     TR_PIN_MATRIX_DISPLAYED_ON_CERBERUS: {
         id: 'TR_PIN_MATRIX_DISPLAYED_ON_CERBERUS',
-        defaultMessage: 'The numbers are displayed on your Trezor',
+        defaultMessage: 'The numbers are displayed on your Cerberus',
     },
     TR_DEVICE_CONNECTED: {
         id: 'TR_DEVICE_CONNECTED',
@@ -6897,7 +6897,7 @@ export default defineMessages({
     },
     TR_USED_CERBERUS_BEFORE: {
         id: 'TR_USED_CERBERUS_BEFORE',
-        defaultMessage: 'Have you used this Trezor before?',
+        defaultMessage: 'Have you used this Cerberus before?',
     },
     TR_ONBOARDING_DEVICE_CHECK_1: {
         id: 'TR_ONBOARDING_DEVICE_CHECK_1',
@@ -6905,7 +6905,7 @@ export default defineMessages({
     },
     TR_ONBOARDING_DEVICE_CHECK_2: {
         id: 'TR_ONBOARDING_DEVICE_CHECK_2',
-        defaultMessage: 'My device was bought from the official Trezor Shop or a trusted reseller.',
+        defaultMessage: 'My device was bought from the official Cerberus Shop or a trusted reseller.',
     },
     TR_ONBOARDING_DEVICE_CHECK_3: {
         id: 'TR_ONBOARDING_DEVICE_CHECK_3',
@@ -6915,7 +6915,7 @@ export default defineMessages({
         id: 'TR_ONBOARDING_DEVICE_CHECK_4',
         description: 'Shown only if device has firmware already installed',
         defaultMessage:
-            'Firmware is already installed on the connected Trezor. Only continue with setup if you have used this Trezor before.',
+            'Firmware is already installed on the connected Cerberus. Only continue with setup if you have used this Cerberus before.',
     },
     TR_I_HAVE_NOT_USED_IT: {
         id: 'TR_I_HAVE_NOT_USED_IT',
@@ -6932,7 +6932,7 @@ export default defineMessages({
     TR_DEVICE_COMPROMISED_TEXT: {
         id: 'TR_DEVICE_COMPROMISED_TEXT',
         defaultMessage:
-            "Contact Trezor Support to figure out what's going on with your device and what to do next.",
+            "Contact Cerberus Support to figure out what's going on with your device and what to do next.",
     },
     TR_DEVICE_COMPROMISED_HEADING_SOFT: {
         id: 'TR_PLAY_IT_SAFE',
@@ -6941,7 +6941,7 @@ export default defineMessages({
     TR_DEVICE_COMPROMISED_TEXT_SOFT: {
         id: 'TR_DEVICE_COMPROMISED_TEXT_SOFT',
         defaultMessage:
-            'We want to be sure that your device is in tip-top shape before you start using it. Reach out to Trezor Support to find out what to do next.',
+            'We want to be sure that your device is in tip-top shape before you start using it. Reach out to Cerberus Support to find out what to do next.',
     },
     TR_DISCONNECT_DEVICE: {
         id: 'TR_DISCONNECT_DEVICE',
@@ -6969,7 +6969,7 @@ export default defineMessages({
     },
     TR_CONTACT_CERBERUS_SUPPORT: {
         id: 'TR_CONTACT_CERBERUS_SUPPORT',
-        defaultMessage: 'Contact Trezor Support',
+        defaultMessage: 'Contact Cerberus Support',
     },
     TR_LETS_CHECK_YOUR_DEVICE: {
         id: 'TR_LETS_CHECK_YOUR_DEVICE',
@@ -6981,7 +6981,7 @@ export default defineMessages({
     },
     TR_AUTHENTICATE_DEVICE_DESCRIPTION: {
         id: 'TR_AUTHENTICATE_DEVICE_DESCRIPTION',
-        defaultMessage: 'We just want to make sure that your Trezor is legit.',
+        defaultMessage: 'We just want to make sure that your Cerberus is legit.',
     },
     TR_DEVICE_AUTHENTICITY_ITEM_1: {
         id: 'TR_DEVICE_AUTHENTICITY_ITEM_1',
@@ -6991,12 +6991,12 @@ export default defineMessages({
     TR_DEVICE_AUTHENTICITY_ITEM_2: {
         id: 'TR_DEVICE_AUTHENTICITY_ITEM_2',
         defaultMessage:
-            'This confirms that the chip inside your hardware wallet is genuine and from Trezor.',
+            'This confirms that the chip inside your hardware wallet is genuine and from Cerberus.',
     },
     TR_DEVICE_AUTHENTICITY_ITEM_3: {
         id: 'TR_DEVICE_AUTHENTICITY_ITEM_3',
         defaultMessage:
-            'Once your device has been given a clean bill of health, you’re all set to Trezor with confidence.',
+            'Once your device has been given a clean bill of health, you’re all set to Cerberus with confidence.',
     },
     TR_START_CHECK: {
         id: 'TR_START_CHECK',
@@ -7017,7 +7017,7 @@ export default defineMessages({
     TR_CHECK_DEVICE_ORIGIN_DESCRIPTION: {
         id: 'TR_CHECK_DEVICE_ORIGIN_DESCRIPTION',
         defaultMessage:
-            "We'll verify the integrity of your Trezor device, ensuring its safety and confirming the authenticity of the chip.",
+            "We'll verify the integrity of your Cerberus device, ensuring its safety and confirming the authenticity of the chip.",
     },
     TR_CHECK_ORIGIN: {
         id: 'TR_CHECK_ORIGIN',
@@ -7064,7 +7064,7 @@ export default defineMessages({
     TR_DEVICE_AUTHENTICITY_OPT_OUT_MODAL_DESCRIPTION_1: {
         id: 'TR_DEVICE_AUTHENTICITY_OPT_OUT_MODAL_DESCRIPTION_1',
         defaultMessage:
-            "Only turn off the device check if you're fully aware of what you're doing and have clear reasons for doing so. If you're uncertain, contact Trezor Support for assistance.",
+            "Only turn off the device check if you're fully aware of what you're doing and have clear reasons for doing so. If you're uncertain, contact Cerberus Support for assistance.",
     },
     TR_DEVICE_AUTHENTICITY_OPT_OUT_MODAL_DESCRIPTION_2: {
         id: 'TR_DEVICE_AUTHENTICITY_OPT_OUT_MODAL_DESCRIPTION_2',
@@ -7074,7 +7074,7 @@ export default defineMessages({
     TR_DEVICE_AUTHENTICITY_OPT_OUT_MODAL_DESCRIPTION_3: {
         id: 'TR_DEVICE_AUTHENTICITY_OPT_OUT_MODAL_DESCRIPTION_3',
         defaultMessage:
-            'Trezor Support will never ask you to turn off the device check. This feature has been designed to ensure your security.',
+            'Cerberus Support will never ask you to turn off the device check. This feature has been designed to ensure your security.',
     },
     TR_ONBOARDING_COINS_STEP: {
         id: 'TR_ONBOARDING_COINS_STEP',
@@ -7083,12 +7083,12 @@ export default defineMessages({
     TR_ONBOARDING_COINS_STEP_DESCRIPTION: {
         id: 'TR_ONBOARDING_COINS_STEP_DESCRIPTION',
         defaultMessage:
-            'Select which coins to show in Trezor Suite. You can change this setting anytime. Some coins are ERC20 tokens and can be used by enabling Ethereum below.',
+            'Select which coins to show in Cerberus Suite. You can change this setting anytime. Some coins are ERC20 tokens and can be used by enabling Ethereum below.',
     },
     TR_ONBOARDING_COINS_STEP_DESCRIPTION_BITCOIN_ONLY: {
         id: 'TR_ONBOARDING_COINS_STEP_DESCRIPTION_BITCOIN_ONLY',
         defaultMessage:
-            'Select which coins to show in Trezor Suite. You can change this setting anytime.',
+            'Select which coins to show in Cerberus Suite. You can change this setting anytime.',
     },
     TR_WHAT_DATA_WE_COLLECT: {
         id: 'TR_WHAT_DATA_WE_COLLECT',
@@ -7102,7 +7102,7 @@ export default defineMessages({
     },
     TR_STILL_DONT_SEE_YOUR_CERBERUS: {
         id: 'TR_STILL_DONT_SEE_YOUR_CERBERUS',
-        defaultMessage: 'Still don’t see your Trezor?',
+        defaultMessage: 'Still don’t see your Cerberus?',
     },
     TR_ONBOARDING_ADVANCED: {
         id: 'TR_ONBOARDING_ADVANCED',
@@ -7122,7 +7122,7 @@ export default defineMessages({
     },
     TR_DATA_ANALYTICS_CATEGORY_1_ITEM_1: {
         id: 'TR_DATA_ANALYTICS_CATEGORY_1_ITEM_1',
-        defaultMessage: 'OS, Trezor model, version etc.',
+        defaultMessage: 'OS, Cerberus model, version etc.',
     },
     TR_DATA_ANALYTICS_CATEGORY_2: {
         id: 'TR_DATA_ANALYTICS_CATEGORY_2',
@@ -7141,33 +7141,33 @@ export default defineMessages({
         defaultMessage: 'Language, user count, etc.',
     },
     TR_TROUBLESHOOTING_BRIDGE_IS_NOT_RUNNING: {
-        defaultMessage: 'Steps to make sure Trezor Bridge is running',
+        defaultMessage: 'Steps to make sure Cerberus Bridge is running',
         id: 'TR_TROUBLESHOOTING_BRIDGE_IS_NOT_RUNNING',
     },
     TR_TROUBLESHOOTING_TIP_BRIDGE_STATUS_TITLE: {
-        defaultMessage: 'Ensure the Trezor Bridge process is running',
+        defaultMessage: 'Ensure the Cerberus Bridge process is running',
         id: 'TR_TROUBLESHOOTING_TIP_BRIDGE_STATUS_TITLE',
     },
     TR_TROUBLESHOOTING_TIP_BRIDGE_STATUS_DESCRIPTION: {
-        defaultMessage: 'Visit <a>Trezor Bridge status page</a>',
+        defaultMessage: 'Visit <a>Cerberus Bridge status page</a>',
         id: 'TR_TROUBLESHOOTING_TIP_BRIDGE_STATUS_DESCRIPTION',
     },
     TR_TROUBLESHOOTING_TIP_BRIDGE_INSTALL_TITLE: {
         id: 'TR_TROUBLESHOOTING_TIP_BRIDGE_INSTALL_TITLE',
-        defaultMessage: 'If you can’t see Trezor Bridge running, download and install it',
+        defaultMessage: 'If you can’t see Cerberus Bridge running, download and install it',
     },
     TR_TROUBLESHOOTING_TIP_BRIDGE_INSTALL_DESCRIPTION: {
         id: 'TR_TROUBLESHOOTING_TIP_BRIDGE_INSTALL_DESCRIPTION',
-        defaultMessage: '<a>Download Trezor Bridge</a>',
+        defaultMessage: '<a>Download Cerberus Bridge</a>',
     },
     TR_TROUBLESHOOTING_TIP_BRIDGE_USE_TITLE: {
         id: 'TR_TROUBLESHOOTING_TIP_BRIDGE_USE_TITLE',
         defaultMessage:
-            'If the above tips didn’t work, you can try using Trezor Bridge instead of WebUSB',
+            'If the above tips didn’t work, you can try using Cerberus Bridge instead of WebUSB',
     },
     TR_TROUBLESHOOTING_TIP_BRIDGE_USE_DESCRIPTION: {
         id: 'TR_TROUBLESHOOTING_TIP_BRIDGE_USE_DESCRIPTION',
-        defaultMessage: '<a>Download Trezor Bridge</a> and click the button below.',
+        defaultMessage: '<a>Download Cerberus Bridge</a> and click the button below.',
     },
     TR_TROUBLESHOOTING_TIP_UDEV_INSTALL_DESCRIPTION: {
         id: 'TR_TROUBLESHOOTING_TIP_UDEV_INSTALL_DESCRIPTION',
@@ -7175,7 +7175,7 @@ export default defineMessages({
             'Try installing <a>udev rules</a>. Make sure they are saved to the desktop before opening.',
     },
     TR_TROUBLESHOOTING_CLOSE_TABS: {
-        defaultMessage: 'Close other tabs and windows that might be using your Trezor',
+        defaultMessage: 'Close other tabs and windows that might be using your Cerberus',
         id: 'TR_TROUBLESHOOTING_CLOSE_TABS',
     },
     TR_TROUBLESHOOTING_CLOSE_TABS_DESCRIPTION: {
@@ -7184,7 +7184,7 @@ export default defineMessages({
     },
     TR_TROUBLESHOOTING_CLOSE_TABS_DESCRIPTION_DESKTOP: {
         defaultMessage:
-            'After closing other browser tabs and windows, try quitting and reopening Trezor Suite.',
+            'After closing other browser tabs and windows, try quitting and reopening Cerberus Suite.',
         id: 'TR_TROUBLESHOOTING_CLOSE_TABS_DESCRIPTION_DESKTOP',
     },
     TR_TROUBLESHOOTING_TIP_CABLE_TITLE: {
@@ -7210,7 +7210,7 @@ export default defineMessages({
     },
     TR_TROUBLESHOOTING_TIP_COMPUTER_DESCRIPTION: {
         id: 'TR_TROUBLESHOOTING_TIP_COMPUTER_DESCRIPTION',
-        defaultMessage: 'With Trezor Bridge installed.',
+        defaultMessage: 'With Cerberus Bridge installed.',
     },
     TR_TROUBLESHOOTING_TIP_RESTART_COMPUTER_TITLE: {
         id: 'TR_TROUBLESHOOTING_TIP_RESTART_COMPUTER_TITLE',
@@ -7223,7 +7223,7 @@ export default defineMessages({
     TR_TROUBLESHOOTING_UNREADABLE_WEBUSB: {
         id: 'TR_TROUBLESHOOTING_UNREADABLE_WEBUSB',
         defaultMessage:
-            'Your device is connected properly, but your internet browser cannot communicate with it at the moment. You will need to install Trezor Bridge.',
+            'Your device is connected properly, but your internet browser cannot communicate with it at the moment. You will need to install Cerberus Bridge.',
     },
     TR_TROUBLESHOOTING_UNREADABLE_UDEV: {
         id: 'TR_TROUBLESHOOTING_UNREADABLE_UDEV',
@@ -7239,7 +7239,7 @@ export default defineMessages({
     },
     TR_SEEDLESS_SETUP_IS_NOT_SUPPORTED_TITLE: {
         id: 'TR_SEEDLESS_SETUP_IS_NOT_SUPPORTED_TITLE',
-        defaultMessage: 'Seedless setup is not supported by Trezor Suite',
+        defaultMessage: 'Seedless setup is not supported by Cerberus Suite',
     },
     TR_VERIFYING_PIN: {
         id: 'TR_VERIFYING_PIN',
@@ -7256,7 +7256,7 @@ export default defineMessages({
     TR_SEEDLESS_SETUP_IS_NOT_SUPPORTED_DESCRIPTION: {
         id: 'TR_SEEDLESS_SETUP_IS_NOT_SUPPORTED_DESCRIPTION',
         defaultMessage:
-            'Devices set up in seedless mode cannot access Trezor Suite. This is to avoid irreversible coin loss, which happens when using an improperly setup device for the wrong purpose.',
+            'Devices set up in seedless mode cannot access Cerberus Suite. This is to avoid irreversible coin loss, which happens when using an improperly setup device for the wrong purpose.',
     },
     TR_DO_YOU_REALLY_WANT_TO_SKIP: {
         id: 'TR_DO_YOU_REALLY_WANT_TO_SKIP',
@@ -7269,11 +7269,11 @@ export default defineMessages({
     TR_FORMAT_TOOLTIP: {
         id: 'TR_FORMAT_TOOLTIP',
         defaultMessage:
-            '<FormatDescription> <span>Trezor</span> – standard signature format according to BIP137 </FormatDescription> <FormatDescription> <span>Electrum</span> – compatibility signature format </FormatDescription>',
+            '<FormatDescription> <span>Cerberus</span> – standard signature format according to BIP137 </FormatDescription> <FormatDescription> <span>Electrum</span> – compatibility signature format </FormatDescription>',
     },
     TR_BIP_SIG_FORMAT: {
         id: 'TR_BIP_SIG_FORMAT',
-        defaultMessage: 'Trezor',
+        defaultMessage: 'Cerberus',
     },
     TR_COMPATIBILITY_SIG_FORMAT: {
         id: 'TR_COMPATIBILITY_SIG_FORMAT',
@@ -7366,7 +7366,7 @@ export default defineMessages({
     },
     TR_STAKING_CERBERUS_POOL_FAIL: {
         id: 'TR_STAKING_CERBERUS_POOL_FAIL',
-        defaultMessage: 'Cannot reach Trezor stake pool to delegate on.',
+        defaultMessage: 'Cannot reach Cerberus stake pool to delegate on.',
     },
     TR_STAKING_TX_PENDING: {
         id: 'TR_STAKING_TX_PENDING',
@@ -7380,7 +7380,7 @@ export default defineMessages({
     TR_STAKING_ON_3RD_PARTY_DESCRIPTION: {
         id: 'TR_STAKING_ON_3RD_PARTY_DESCRIPTION',
         defaultMessage:
-            'By staking on a Trezor stake pool you are directly supporting Trezor and the Cardano ecosystem within Trezor Suite.',
+            'By staking on a Cerberus stake pool you are directly supporting Cerberus and the Cardano ecosystem within Cerberus Suite.',
     },
     TR_STAKING_POOL_OVERSATURATED_TITLE: {
         id: 'TR_STAKING_POOL_OVERSATURATED_TITLE',
@@ -7456,7 +7456,7 @@ export default defineMessages({
     },
     TR_CARDANO_CERBERUS_AMOUNT_HEADLINE: {
         id: 'TR_CARDANO_CERBERUS_AMOUNT_HEADLINE',
-        defaultMessage: 'Trezor amount',
+        defaultMessage: 'Cerberus amount',
     },
     TR_CARDANO_FINGERPRINT_HEADLINE: {
         id: 'TR_CARDANO_FINGERPRINT_HEADLINE',
@@ -7481,7 +7481,7 @@ export default defineMessages({
     TR_FIRMWARE_HASH_MISMATCH: {
         id: 'TR_FIRMWARE_HASH_MISMATCH',
         defaultMessage:
-            'Your Trezor is running unofficial firmware. Please contact help@trezor.io immediately.',
+            'Your Cerberus is running unofficial firmware. Please contact help@cerberus.uraanai.com immediately.',
     },
     TR_TO_SATOSHIS: {
         id: 'TR_TO_SATOSHIS',
@@ -7615,12 +7615,12 @@ export default defineMessages({
     TR_COINJOIN_TILE_3_TITLE: {
         id: 'TR_COINJOIN_TILE_3_TITLE',
         description: 'Tile in coinjoin settings',
-        defaultMessage: 'Protected by your Trezor',
+        defaultMessage: 'Protected by your Cerberus',
     },
     TR_COINJOIN_TILE_1_DESCRIPTION: {
         id: 'TR_COINJOIN_TILE_1_DESCRIPTION',
         description: 'Tile in coinjoin settings',
-        defaultMessage: 'You can keep your laptop and Trezor locked',
+        defaultMessage: 'You can keep your laptop and Cerberus locked',
     },
     TR_COINJOIN_TILE_2_DESCRIPTION: {
         id: 'TR_COINJOIN_TILE_2_DESCRIPTION',
@@ -7650,7 +7650,7 @@ export default defineMessages({
     TR_SKIP_ROUNDS_HEADING: {
         id: 'TR_SKIP_ROUNDS_HEADING',
         description: 'Heading in coin join settings',
-        defaultMessage: 'Allow Trezor to skip rounds',
+        defaultMessage: 'Allow Cerberus to skip rounds',
     },
     TR_SKIP_ROUNDS_DESCRIPTION: {
         id: 'TR_SKIP_ROUNDS_DESCRIPTION',
@@ -7667,7 +7667,7 @@ export default defineMessages({
         id: 'TR_TERMS_AND_PRIVACY_CONFIRMATION',
         description: 'Checkbox in coinjoin settings',
         defaultMessage:
-            'I agree to the <trezor>Trezor Suite Terms</trezor> and <coordinator>zkSNACKs Coordinator Terms</coordinator>',
+            'I agree to the <trezor>Cerberus Suite Terms</trezor> and <coordinator>zkSNACKs Coordinator Terms</coordinator>',
     },
     TR_CONFIRM_CONDITIONS: {
         id: 'TR_CONFIRM_CONDITIONS',
@@ -7943,13 +7943,13 @@ export default defineMessages({
         id: 'TR_LOADING_FACT_0',
         description: '140 symbols max',
         defaultMessage:
-            'Private funds will be hidden after you leave Trezor Suite. To find them again, use the “Hidden funds” button.',
+            'Private funds will be hidden after you leave Cerberus Suite. To find them again, use the “Hidden funds” button.',
     },
     TR_LOADING_FACT_1: {
         id: 'TR_LOADING_FACT_1',
         description: '140 symbols max',
         defaultMessage:
-            'The Trezor Model One was the world’s first hardware wallet, released on July 29, 2014. The follow-up Trezor Model T launched in 2018.',
+            'The Cerberus Model One was the world’s first hardware wallet, released on July 29, 2014. The follow-up Cerberus Model T launched in 2018.',
     },
     TR_LOADING_FACT_2: {
         id: 'TR_LOADING_FACT_2',
@@ -8235,7 +8235,7 @@ export default defineMessages({
     },
     TR_COINJOIN_STEP_2_DESCRIPTION: {
         id: 'TR_COINJOIN_STEP_2_DESCRIPTION',
-        defaultMessage: 'Click the button and confirm it on your Trezor.',
+        defaultMessage: 'Click the button and confirm it on your Cerberus.',
     },
     TR_COINJOIN_STEP_3_TITLE: {
         id: 'TR_COINJOIN_STEP_3_TITLE',
@@ -8320,7 +8320,7 @@ export default defineMessages({
     },
     TR_DESKTOP_APP_PROMO_HEADING: {
         id: 'TR_DESKTOP_APP_PROMO_HEADING',
-        defaultMessage: 'Get the most out of Trezor Suite',
+        defaultMessage: 'Get the most out of Cerberus Suite',
     },
     TR_DESKTOP_APP_PROMO_TEXT: {
         id: 'TR_DESKTOP_APP_PROMO_TEXT',
@@ -8336,7 +8336,7 @@ export default defineMessages({
     },
     TR_MOBILE_APP_PROMO_TEXT_FOOTER: {
         id: 'TR_MOBILE_APP_PROMO_TEXT_FOOTER',
-        defaultMessage: 'Sync & track on your phone with <b>Trezor Suite Lite</b>',
+        defaultMessage: 'Sync & track on your phone with <b>Cerberus Suite Lite</b>',
     },
     TR_CANDIDATE_TRANSACTION_HEADER: {
         id: 'TR_CANDIDATE_TRANSACTION_HEADER',
@@ -8369,7 +8369,7 @@ export default defineMessages({
     },
     TR_CERBERUS_DEVICE_TUTORIAL_HEADING: {
         id: 'TR_CERBERUS_DEVICE_TUTORIAL_HEADING',
-        defaultMessage: 'Know your Trezor',
+        defaultMessage: 'Know your Cerberus',
     },
     TR_CERBERUS_DEVICE_TUTORIAL_DESCRIPTION: {
         id: 'TR_CERBERUS_DEVICE_TUTORIAL_DESCRIPTION',
@@ -8377,7 +8377,7 @@ export default defineMessages({
     },
     TR_CONTINUE_ON_CERBERUS: {
         id: 'TR_CONTINUE_ON_CERBERUS',
-        defaultMessage: 'Continue on Trezor',
+        defaultMessage: 'Continue on Cerberus',
     },
     TR_CERBERUS_DEVICE_TUTORIAL_COMPLETED_HEADING: {
         id: 'TR_CERBERUS_DEVICE_TUTORIAL_COMPLETED_HEADING',
@@ -8510,7 +8510,7 @@ export default defineMessages({
     },
     TR_STAKE_ETH_SEE_MONEY_DANCE_DESC: {
         id: 'TR_STAKE_ETH_SEE_MONEY_DANCE_DESC',
-        defaultMessage: 'Earn {apyPercent}% APY* by staking your Ethereum with Trezor.',
+        defaultMessage: 'Earn {apyPercent}% APY* by staking your Ethereum with Cerberus.',
     },
     TR_STAKE_APY_DESC: {
         id: 'TR_STAKE_APY_DESC',

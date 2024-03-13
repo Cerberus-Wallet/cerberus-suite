@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/EthereumSignMessage.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/EthereumSignMessage.js
 
 import { AbstractMethod } from '../../../core/AbstractMethod';
 import { getFirmwareRange } from '../../common/paramsValidator';
@@ -12,8 +12,8 @@ import {
     EthereumNetworkInfo,
     EthereumSignMessage as EthereumSignMessageSchema,
 } from '../../../types';
-import { MessagesSchema } from '@trezor/protobuf';
-import { Assert } from '@trezor/schema-utils';
+import { MessagesSchema } from '@cerberus/protobuf';
+import { Assert } from '@cerberus/schema-utils';
 
 type Params = PROTO.EthereumSignMessage & {
     network?: EthereumNetworkInfo;

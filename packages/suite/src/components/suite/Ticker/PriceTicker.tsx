@@ -2,10 +2,10 @@ import styled from 'styled-components';
 import { differenceInMinutes } from 'date-fns';
 import { FormattedRelativeTime } from 'react-intl';
 
-import { Tooltip } from '@trezor/components';
+import { Tooltip } from '@cerberus/components';
 import { FiatValue, Translation } from 'src/components/suite';
 import { NoRatesTooltip } from './NoRatesTooltip';
-import { typography } from '@trezor/theme';
+import { typography } from '@cerberus/theme';
 
 const FiatRateWrapper = styled.span`
     display: flex;

@@ -11,7 +11,7 @@ import {
     selectDeviceThunk,
 } from '@suite-common/wallet-core';
 import { notificationsActions } from '@suite-common/toast-notifications';
-import { DEVICE, DeviceModelInternal } from '@trezor/connect';
+import { DEVICE, DeviceModelInternal } from '@cerberus/connect';
 
 import { SUITE, ROUTER, METADATA } from 'src/actions/suite/constants';
 import { AppState, Action, Dispatch } from 'src/types/suite';

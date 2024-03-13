@@ -13,7 +13,7 @@ import {
     getAddressParameters,
 } from '@suite-common/wallet-utils';
 import { notificationsActions } from '@suite-common/toast-notifications';
-import trezorConnect, { PROTO } from '@trezor/connect';
+import trezorConnect, { PROTO } from '@cerberus/connect';
 import { addFakePendingCardanoTxThunk, selectDevice } from '@suite-common/wallet-core';
 
 import { ActionAvailability, CardanoStaking } from 'src/types/wallet/cardanoStaking';

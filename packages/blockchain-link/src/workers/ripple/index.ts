@@ -1,12 +1,12 @@
 import { RippleAPI, APIOptions } from 'ripple-lib';
 import { RippleError } from 'ripple-lib/dist/npm/common/errors';
 import BigNumber from 'bignumber.js';
-import { CustomError } from '@trezor/blockchain-link-types/lib/constants/errors';
-import { MESSAGES, RESPONSES } from '@trezor/blockchain-link-types/lib/constants';
+import { CustomError } from '@cerberus/blockchain-link-types/lib/constants/errors';
+import { MESSAGES, RESPONSES } from '@cerberus/blockchain-link-types/lib/constants';
 import { BaseWorker, CONTEXT, ContextType } from '../baseWorker';
-import * as utils from '@trezor/blockchain-link-utils/lib/ripple';
-import type { Response, SubscriptionAccountInfo, AccountInfo } from '@trezor/blockchain-link-types';
-import type * as MessageTypes from '@trezor/blockchain-link-types/lib/messages';
+import * as utils from '@cerberus/blockchain-link-utils/lib/ripple';
+import type { Response, SubscriptionAccountInfo, AccountInfo } from '@cerberus/blockchain-link-types';
+import type * as MessageTypes from '@cerberus/blockchain-link-types/lib/messages';
 
 type Context = ContextType<RippleAPI>;
 type Request<T> = T & Context;
@@ -86,7 +86,7 @@ const getAccountInfo = async (request: Request<MessageTypes.GetAccountInfo>) => 
         balance: '0', // default balance
         availableBalance: '0', // default balance
         empty: true,
-        // tokens: [], // XRP tokens are not implemented in Trezor firmware
+        // tokens: [], // XRP tokens are not implemented in Cerberus firmware
         history: {
             // default history
             total: -1,
@@ -442,7 +442,7 @@ class RippleWorker extends BaseWorker<RippleAPI> {
         };
         // proxy agent is available only in suite because of the patch.
         // it will fail in standalone trezor-connect implementation where this patch is not present.
-        // TODO: https://github.com/trezor/trezor-suite/issues/4942
+        // TODO: https://github.com/Cerberus-Wallet/cerberus-suite/issues/4942
         if (RippleAPI._ALLOW_AGENT) {
             options.agent = this.proxyAgent;
         }

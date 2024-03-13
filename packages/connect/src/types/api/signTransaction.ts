@@ -1,7 +1,7 @@
 /**
  * Bitcoin and Bitcoin-like
  * Asks device to sign given inputs and outputs of pre-composed transaction.
- * User is asked to confirm all transaction details on Trezor.
+ * User is asked to confirm all transaction details on Cerberus.
  */
 
 import type { Params, Response } from '../params';

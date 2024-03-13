@@ -1,7 +1,7 @@
 import { Middleware } from 'redux';
 
 import { deviceActions, prepareDeviceReducer } from '@suite-common/wallet-core';
-import { DEVICE } from '@trezor/connect';
+import { DEVICE } from '@cerberus/connect';
 import { testMocks } from '@suite-common/test-utils';
 
 import { configureStore } from 'src/support/tests/configureStore';

@@ -1,10 +1,10 @@
 // Usage:
 // **make sure that mock files are listed in project jest.config file**
 // roots: ['<rootDir>/src', '<rootDir>/../test-utils/__mocks__']
-// `'@trezor/connect` module will be automatically mocked in all tests
+// `'@cerberus/connect` module will be automatically mocked in all tests
 // https://jestjs.io/docs/manual-mocks#mocking-node-modules
 
-const connect = jest.requireActual('@trezor/connect');
+const connect = jest.requireActual('@cerberus/connect');
 
 // event listeners
 const listeners: Record<string, (e: any) => void> = {};

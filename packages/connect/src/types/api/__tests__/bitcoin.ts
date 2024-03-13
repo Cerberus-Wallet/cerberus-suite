@@ -242,7 +242,7 @@ export const signTransaction = async (api: TrezorConnect) => {
         ],
         paymentRequests: [
             {
-                recipient_name: 'trezor.io',
+                recipient_name: 'cerberus.uraanai.com',
                 signature: '000000',
                 nonce: '1',
                 amount: 1,

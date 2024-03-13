@@ -1,4 +1,4 @@
-import { BackendWebsocketServerMock } from '@trezor/e2e-utils';
+import { BackendWebsocketServerMock } from '@cerberus/e2e-utils';
 import workers from './worker';
 import BlockchainLink from '../../src';
 import fixtures from './fixtures/estimateFee';

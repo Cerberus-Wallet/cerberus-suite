@@ -1,5 +1,5 @@
-import TrezorConnect from '@trezor/connect';
-import { ButtonProps, Button } from '@trezor/components';
+import TrezorConnect from '@cerberus/connect';
+import { ButtonProps, Button } from '@cerberus/components';
 import { Translation } from './Translation';
 
 export const WebUsbButton = (props: Omit<ButtonProps, 'children'>) => (

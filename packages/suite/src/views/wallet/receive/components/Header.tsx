@@ -1,4 +1,4 @@
-import { H2, Paragraph } from '@trezor/components';
+import { H2, Paragraph } from '@cerberus/components';
 import { Account } from 'src/types/wallet';
 import styled from 'styled-components';
 import { Translation } from 'src/components/suite';

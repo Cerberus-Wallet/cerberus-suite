@@ -1,4 +1,4 @@
-import { Link, LinkProps } from '@trezor/components';
+import { Link, LinkProps } from '@cerberus/components';
 import { useExternalLink } from 'src/hooks/suite';
 
 export const TrezorLink = (props: LinkProps) => {

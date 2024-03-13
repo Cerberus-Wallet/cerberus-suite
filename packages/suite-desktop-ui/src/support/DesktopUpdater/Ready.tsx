@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Button, H2, variables } from '@trezor/components';
+import { Button, H2, variables } from '@cerberus/components';
 
 import { Translation, Modal } from 'src/components/suite';
 import { useDispatch } from 'src/hooks/suite';

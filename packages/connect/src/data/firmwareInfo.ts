@@ -1,6 +1,6 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/data/FirmwareInfo.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/data/FirmwareInfo.js
 
-import { versionUtils } from '@trezor/utils';
+import { versionUtils } from '@cerberus/utils';
 import {
     filterSafeListByFirmware,
     filterSafeListByBootloader,

@@ -1,8 +1,8 @@
 import { fromWei, toWei } from 'web3-utils';
 
-import { CardanoOutput } from '@trezor/connect';
-import { getFirmwareVersion } from '@trezor/device-utils';
-import { versionUtils } from '@trezor/utils';
+import { CardanoOutput } from '@cerberus/connect';
+import { getFirmwareVersion } from '@cerberus/device-utils';
+import { versionUtils } from '@cerberus/utils';
 import { TrezorDevice } from 'src/types/suite/index';
 import { FormState, PrecomposedTransactionFinal, TxFinalCardano } from 'src/types/wallet/sendForm';
 import { Account } from 'src/types/wallet/index';

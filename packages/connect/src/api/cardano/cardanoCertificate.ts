@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/helpers/cardanoCertificate.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/helpers/cardanoCertificate.js
 
 import { validatePath } from '../../utils/pathUtils';
 import { PROTO, ERRORS } from '../../constants';
@@ -8,7 +8,7 @@ import {
     CardanoPoolOwner,
     CardanoPoolRelay,
 } from '../../types/api/cardano';
-import { Assert } from '@trezor/schema-utils';
+import { Assert } from '@cerberus/schema-utils';
 
 const ipv4AddressToHex = (ipv4Address: string) =>
     Buffer.from(ipv4Address.split('.').map(ipPart => parseInt(ipPart, 10))).toString('hex');

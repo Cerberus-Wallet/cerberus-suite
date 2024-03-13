@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import { desktopApi } from '@trezor/suite-desktop-api';
-import { IconButton } from '@trezor/components';
-import { spacingsPx } from '@trezor/theme';
+import { desktopApi } from '@cerberus/suite-desktop-api';
+import { IconButton } from '@cerberus/components';
+import { spacingsPx } from '@cerberus/theme';
 import { setDebugMode } from 'src/actions/suite/suiteActions';
 import { Translation } from 'src/components/suite';
 import { useDispatch, useSelector } from 'src/hooks/suite';

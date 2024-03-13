@@ -2,7 +2,7 @@ import { TouchableOpacity, View } from 'react-native';
 import { ReactNode } from 'react';
 
 import { useTranslate } from '@suite-native/intl';
-import { useNativeStyles, prepareNativeStyle } from '@trezor/styles';
+import { useNativeStyles, prepareNativeStyle } from '@cerberus/styles';
 
 import { Card } from './Card/Card';
 import { VStack } from './Stack';

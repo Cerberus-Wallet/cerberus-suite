@@ -1,6 +1,6 @@
 ## Cardano: get native script hash
 
-Display native script components on Trezor, display the calculated native script hash and return the hash to the caller.
+Display native script components on Cerberus, display the calculated native script hash and return the hash to the caller.
 
 ```javascript
 const result = await TrezorConnect.cardanoGetNativeScriptHash(params);
@@ -10,7 +10,7 @@ const result = await TrezorConnect.cardanoGetNativeScriptHash(params);
 
 [Optional common params](commonParams.md)
 
-[CardanoGetNativeScriptHash type](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)
+[CardanoGetNativeScriptHash type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)
 
 -   `script` — _required_ `CardanoNativeScript` see description below.
 -   `displayFormat` — _required_ `CardanoNativeScriptHashDisplayFormat` enum.
@@ -18,7 +18,7 @@ const result = await TrezorConnect.cardanoGetNativeScriptHash(params);
 
 #### CardanoNativeScript
 
-[CardanoNativeScript type](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)
+[CardanoNativeScript type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)
 
 -   `type` - _required_ `CardanoNativeScriptType`/`number`.
 -   `scripts` — _optional_ `Array` of nested `CardanoNativeScript`s.
@@ -104,7 +104,7 @@ TrezorConnect.cardanoGetAddress({
 
 ### Result
 
-[CardanoNativeScriptHash type](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)
+[CardanoNativeScriptHash type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/cardano/index.ts)
 
 ```javascript
 {

@@ -2,7 +2,7 @@ import styled, { useTheme } from 'styled-components';
 import { darken } from 'polished';
 import { useDispatch, useSelector } from 'src/hooks/suite';
 import { FiatValue, FormattedCryptoAmount, Translation } from 'src/components/suite';
-import { Button, Icon, variables, Warning } from '@trezor/components';
+import { Button, Icon, variables, Warning } from '@cerberus/components';
 import { hideCoinjoinReceiveWarning } from 'src/actions/suite/suiteActions';
 import { formatAmount, getAccountDecimals } from '@suite-common/wallet-utils';
 import { UNECONOMICAL_COINJOIN_THRESHOLD } from 'src/services/coinjoin';

@@ -2,8 +2,8 @@ import { ReactNode } from 'react';
 import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 import { HiddenPlaceholder } from 'src/components/suite';
-import { motionAnimation } from '@trezor/components';
-import { borders, spacingsPx, typography } from '@trezor/theme';
+import { motionAnimation } from '@cerberus/components';
+import { borders, spacingsPx, typography } from '@cerberus/theme';
 
 export const MIN_ROW_HEIGHT = '23px';
 

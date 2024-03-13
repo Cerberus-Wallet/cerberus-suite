@@ -2,8 +2,8 @@ import { lazy, Suspense, useState } from 'react';
 
 import styled from 'styled-components';
 
-import { HELP_CENTER_QR_CODE_URL } from '@trezor/urls';
-import { Icon, colors, Paragraph, Button, Textarea, SelectBar } from '@trezor/components';
+import { HELP_CENTER_QR_CODE_URL } from '@cerberus/urls';
+import { Icon, colors, Paragraph, Button, Textarea, SelectBar } from '@cerberus/components';
 import { UserContextPayload } from '@suite-common/suite-types';
 
 import { TrezorLink, Translation, Modal, BundleLoader } from 'src/components/suite';

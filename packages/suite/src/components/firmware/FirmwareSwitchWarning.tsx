@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Image, variables } from '@trezor/components';
+import { Image, variables } from '@cerberus/components';
 
 const Row = styled.div`
     display: flex;

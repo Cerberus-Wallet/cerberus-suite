@@ -1,14 +1,14 @@
 import { useCallback } from 'react';
 import styled, { css } from 'styled-components';
 
-import { Button, LoadingContent } from '@trezor/components';
+import { Button, LoadingContent } from '@cerberus/components';
 
 import { GraphRangeSelector, Translation } from 'src/components/suite';
 import { updateGraphData } from 'src/actions/wallet/graphActions';
 import { useFastAccounts } from 'src/hooks/wallet';
 import { GraphRange } from 'src/types/wallet/graph';
 import { FiatHeader } from '../../FiatHeader';
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 
 const Wrapper = styled.div<{ hideBorder: boolean }>`
     display: flex;

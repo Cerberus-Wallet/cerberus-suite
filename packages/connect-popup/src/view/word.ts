@@ -1,8 +1,8 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/popup/view/word.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/popup/view/word.js
 
-import { UI, createUiResponse, UiRequestDeviceAction } from '@trezor/connect';
+import { UI, createUiResponse, UiRequestDeviceAction } from '@cerberus/connect';
 import { container, showView, postMessage } from './common';
-import { bip39 } from '@trezor/crypto-utils';
+import { bip39 } from '@cerberus/crypto-utils';
 
 const initWordPlainView = (payload: UiRequestDeviceAction['payload']) => {
     showView('word-plain');

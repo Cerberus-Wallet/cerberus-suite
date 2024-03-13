@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/helpers/cardanoAuxiliaryData.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/helpers/cardanoAuxiliaryData.js
 
 import {
     addressParametersToProto,
@@ -13,7 +13,7 @@ import {
     CardanoCVoteRegistrationDelegation,
     CardanoCVoteRegistrationParameters,
 } from '../../types/api/cardano';
-import { Assert } from '@trezor/schema-utils';
+import { Assert } from '@cerberus/schema-utils';
 
 const MAX_DELEGATION_COUNT = 32;
 

@@ -1,4 +1,4 @@
-import { getRandomNumberInRange } from '@trezor/utils';
+import { getRandomNumberInRange } from '@cerberus/utils';
 
 import {
     getCommitmentData,
@@ -12,8 +12,8 @@ import { ROUND_REGISTRATION_END_OFFSET } from '../../src/constants';
 import { DEFAULT_ROUND, STATUS_EVENT, STATUS_TRANSFORMED } from '../fixtures/round.fixture';
 
 // mock random delay function
-jest.mock('@trezor/utils', () => {
-    const originalModule = jest.requireActual('@trezor/utils');
+jest.mock('@cerberus/utils', () => {
+    const originalModule = jest.requireActual('@cerberus/utils');
 
     return {
         __esModule: true,
@@ -105,7 +105,7 @@ describe('roundUtils', () => {
         });
     });
 
-    // fixtures: https://github.com/trezor/coinjoin-affiliate-server/blob/coordinator-integration/tests/test_response.py
+    // fixtures: https://github.com/Cerberus-Wallet/coinjoin-affiliate-server/blob/coordinator-integration/tests/test_response.py
     it('getAffiliateRequest', () => {
         const response = getAffiliateRequest(
             {

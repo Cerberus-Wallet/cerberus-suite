@@ -2,7 +2,7 @@
  * Bitcoin, Bitcoin-like, Ethereum-like, Ripple
  * Broadcasts the transaction to the selected network.
  */
-import { Static, Type } from '@trezor/schema-utils';
+import { Static, Type } from '@cerberus/schema-utils';
 import type { Params, Response } from '../params';
 
 export type PushTransaction = Static<typeof PushTransaction>;

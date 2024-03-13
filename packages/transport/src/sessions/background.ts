@@ -9,8 +9,8 @@
  * - we can say we trust the caller but not really thats why we implement auto-unlock
  */
 
-import { createDeferred, Deferred } from '@trezor/utils';
-import { TypedEmitter } from '@trezor/utils';
+import { createDeferred, Deferred } from '@cerberus/utils';
+import { TypedEmitter } from '@cerberus/utils';
 
 import type {
     EnumerateDoneRequest,

@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
-import { H3, Icon, Paragraph, Tooltip, variables } from '@trezor/components';
-import { spacingsPx } from '@trezor/theme';
+import { H3, Icon, Paragraph, Tooltip, variables } from '@cerberus/components';
+import { spacingsPx } from '@cerberus/theme';
 import { formatNetworkAmount } from '@suite-common/wallet-utils';
 import { FormattedCryptoAmount, FiatValue, Translation } from 'src/components/suite';
 import { mapTestnetSymbol } from 'src/utils/wallet/coinmarket/coinmarketUtils';

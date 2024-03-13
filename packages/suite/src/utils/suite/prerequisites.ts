@@ -1,5 +1,5 @@
-import type { TransportInfo } from '@trezor/connect';
-import { DefinedUnionMember } from '@trezor/type-utils';
+import type { TransportInfo } from '@cerberus/connect';
+import { DefinedUnionMember } from '@cerberus/type-utils';
 import { RouterState } from 'src/reducers/suite/routerReducer';
 import type { TrezorDevice, AppState } from 'src/types/suite';
 
@@ -39,7 +39,7 @@ export const getPrerequisiteName = ({
 
     // similar to initialize, there is no seed in device
     // difference is it is in recovery mode.
-    // todo: this could be added to @trezor/connect to device.mode I think.
+    // todo: this could be added to @cerberus/connect to device.mode I think.
     if (device.features.recovery_mode) return 'device-recovery-mode';
 
     // device is not initialized

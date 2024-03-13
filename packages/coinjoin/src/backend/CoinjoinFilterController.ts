@@ -1,4 +1,4 @@
-import { createCooldown } from '@trezor/utils';
+import { createCooldown } from '@cerberus/utils';
 
 import { PROGRESS_INFO_COOLDOWN } from '../constants';
 import type {

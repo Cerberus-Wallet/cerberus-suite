@@ -4,8 +4,8 @@ import TrezorConnect, {
     DEVICE_EVENT,
     TRANSPORT_EVENT,
     UI_EVENT,
-} from '@trezor/connect';
-import { getSynchronize } from '@trezor/utils';
+} from '@cerberus/connect';
+import { getSynchronize } from '@cerberus/utils';
 
 import { cardanoConnectPatch } from './cardanoConnectPatch';
 

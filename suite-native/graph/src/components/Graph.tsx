@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from 'react';
 import * as Haptics from 'expo-haptics';
 
 import { GraphPoint, LineGraph } from '@suite-native/react-native-graph';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import { Box, Loader } from '@suite-native/atoms';
 import {
     FiatGraphPoint,

@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 
 import styled from 'styled-components';
 
-import TrezorConnect from '@trezor/connect';
+import TrezorConnect from '@cerberus/connect';
 import { selectDeviceButtonRequests } from '@suite-common/wallet-core';
 
 import { PinMatrix, Modal, Translation, ModalProps } from 'src/components/suite';

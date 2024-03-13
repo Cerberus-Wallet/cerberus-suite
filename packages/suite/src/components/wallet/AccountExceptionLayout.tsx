@@ -1,6 +1,6 @@
 import { ReactText } from 'react';
 import styled from 'styled-components';
-import { variables, H2, Button, Card, ButtonProps, Image, ImageProps } from '@trezor/components';
+import { variables, H2, Button, Card, ButtonProps, Image, ImageProps } from '@cerberus/components';
 
 const StyledCard = styled(Card)`
     width: 100%;

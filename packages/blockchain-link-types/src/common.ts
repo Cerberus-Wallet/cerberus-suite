@@ -129,7 +129,7 @@ export interface AccountAddresses {
     change: Address[];
     used: Address[];
     unused: Address[];
-    // NOTE: anonymitySet currently is not calculated by @trezor/blockchain-link
+    // NOTE: anonymitySet currently is not calculated by @cerberus/blockchain-link
     // format: key -> address, value -> anonymityLevel
     anonymitySet?: AnonymitySet;
 }

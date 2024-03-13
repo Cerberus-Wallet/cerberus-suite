@@ -4,7 +4,7 @@
 -   fix(connect-common): remove confusing log in AbstractMessageChannel (6d3b60c73)
 -   chore(repo): remove build:lib for some simple packages (#11276) (7febd10cf)
 -   chore(suite): autofix newlines (c82455e74)
--   chore(utils): remove build step requirement from @trezor/utils (#11176) (6cd3d3c81)
+-   chore(utils): remove build step requirement from @cerberus/utils (#11176) (6cd3d3c81)
 -   fix(connect-web): workaround to work with older content-script (5da505b02)
 -   fix(connect-web): reconnect message channel (ee98bb51c)
 -   chore(connect-web): refactor popupmanager (af1723e4f)
@@ -64,7 +64,7 @@
 
 # 0.0.19
 
--   chore(connect): update coins.json (trezor-common f2374ae) (3b21c4308)
+-   chore(connect): update coins.json (cerberus-common f2374ae) (3b21c4308)
 -   chore(connect-\*): change model to internal model (8edb0a59d)
 -   feat(suite): add Sepolia (bc2236c1c)
 -   fix(connect-common): put back goerli and etc records for suite/blockchain-link (23783a3ef)

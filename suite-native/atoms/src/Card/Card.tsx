@@ -3,7 +3,7 @@ import { View } from 'react-native';
 
 import { RequireAllOrNone } from 'type-fest';
 
-import { NativeStyleObject, prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { NativeStyleObject, prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 
 import { AlertBox, AlertBoxProps } from '../AlertBox';
 

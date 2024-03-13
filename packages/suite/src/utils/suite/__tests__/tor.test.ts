@@ -1,4 +1,4 @@
-import { TOR_URLS } from '@trezor/urls';
+import { TOR_URLS } from '@cerberus/urls';
 import { getTorUrlIfAvailable, getIsTorDomain, isOnionUrl } from 'src/utils/suite/tor';
 
 describe('tor', () => {
@@ -14,28 +14,29 @@ describe('tor', () => {
         const fixtures = [
             {
                 desc: 'simple domain',
-                in: 'https://trezor.io/',
-                out: `http://${TOR_URLS['trezor.io']}/`,
+                in: 'https://cerberus.uraanai.com/',
+                out: `http://${TOR_URLS['cerberus.uraanai.com']}/`,
             },
             {
                 desc: 'subdomain',
-                in: 'https://cdn.trezor.io/static/medium/images/max/1024/1*RPmW1VsUphMbk83oKWXpLw.png',
-                out: `http://cdn.${TOR_URLS['trezor.io']}/static/medium/images/max/1024/1*RPmW1VsUphMbk83oKWXpLw.png`,
+                in: 'https://cdn.trezorcheck.io/static/medium/images/max/1024/1*RPmW1VsUphMbk83oKWXpLw.png',
+                out: `http://cdn.${TOR_URLS['cerberus.uraanai.com']}/static/medium/images/max/1024/1*RPmW1VsUphMbk83oKWXpLw.png`,
             },
             {
                 desc: 'subsubdomain',
-                in: 'http://alpha.beta.trezor.io',
-                out: `http://alpha.beta.${TOR_URLS['trezor.io']}`,
+                in: 'http://alpha.beta.cerberus.uraanai.com',
+                out: `http://alpha.beta.${TOR_URLS['cerberus.uraanai.com']}`,
             },
             {
                 desc: 'with query - blockbook',
-                in: 'https://btc1.trezor.io/api/v2/multi-tickers/?timestamp=12345678',
-                out: `http://btc1.${TOR_URLS['trezor.io']}/api/v2/multi-tickers/?timestamp=12345678`,
+                in: 'https://btc1.trezorcheck.io/api/v2/multi-tickers/?timestamp=12345678',
+                out: `http://btc1.${TOR_URLS['cerberus.uraanai.com']}/api/v2/multi-tickers/?timestamp=12345678`,
             },
             {
                 desc: 'with query - coingecko',
-                in: 'https://cdn.trezor.io/dynamic/coingecko/api/v3/coins/bitcoin/history?date=13-1-2021',
-                out: `http://cdn.${TOR_URLS['trezor.io']}/dynamic/coingecko/api/v3/coins/bitcoin/history?date=13-1-2021`,
+                // in: 'https://cdn.trezorcheck.io/dynamic/coingecko/api/v3/coins/bitcoin/history?date=13-1-2021',
+                in: 'https://api.coingecko.com/api/v3/coins/bitcoin/history?date=13-1-2021',
+                out: `http://cdn.${TOR_URLS['cerberus.uraanai.com']}/dynamic/coingecko/api/v3/coins/bitcoin/history?date=13-1-2021`,
             },
             {
                 desc: 'not valid domain',
@@ -55,7 +56,7 @@ describe('tor', () => {
         const fixtures = [
             {
                 desc: 'yes',
-                in: TOR_URLS['trezor.io'],
+                in: TOR_URLS['cerberus.uraanai.com'],
                 out: true,
             },
             {
@@ -76,7 +77,7 @@ describe('tor', () => {
         const fixtures = [
             {
                 desc: 'yes',
-                in: `https://${TOR_URLS['trezor.io']}`,
+                in: `https://${TOR_URLS['cerberus.uraanai.com']}`,
                 out: true,
             },
             {
@@ -86,7 +87,7 @@ describe('tor', () => {
             },
             {
                 desc: 'yes with params',
-                in: `https://${TOR_URLS['trezor.io']}/foo/bar?foo=bar`,
+                in: `https://${TOR_URLS['cerberus.uraanai.com']}/foo/bar?foo=bar`,
                 out: true,
             },
             {

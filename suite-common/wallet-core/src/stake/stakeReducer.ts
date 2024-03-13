@@ -1,6 +1,6 @@
 import { createReducerWithExtraDeps } from '@suite-common/redux-utils';
 import { StakeFormState, PrecomposedTransactionFinal } from '@suite-common/wallet-types';
-import { cloneObject } from '@trezor/utils';
+import { cloneObject } from '@cerberus/utils';
 
 import { stakeActions } from './stakeActions';
 

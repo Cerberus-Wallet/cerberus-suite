@@ -2,7 +2,7 @@
 
 exports[`codegen should generate code for protobuf messages example 1`] = `
 "/* eslint-disable camelcase */
-import { Type, Static } from '@trezor/schema-utils';
+import { Type, Static } from '@cerberus/schema-utils';
 
 
 export type Type.Uint() = Static<typeof Type.Uint()>

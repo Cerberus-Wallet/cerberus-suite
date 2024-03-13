@@ -1,10 +1,10 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/ResetDevice.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/ResetDevice.js
 
 import { AbstractMethod } from '../core/AbstractMethod';
 import { UI, createUiMessage } from '../events';
 import { getFirmwareRange } from './common/paramsValidator';
 import type { PROTO } from '../constants';
-import { Assert } from '@trezor/schema-utils';
+import { Assert } from '@cerberus/schema-utils';
 import { ResetDevice as ResetDeviceSchema } from '../types/api/resetDevice';
 
 export default class ResetDevice extends AbstractMethod<'resetDevice', PROTO.ResetDevice> {

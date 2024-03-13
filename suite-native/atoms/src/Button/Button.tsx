@@ -4,8 +4,8 @@ import Animated from 'react-native-reanimated';
 
 import { MergeExclusive } from 'type-fest';
 
-import { Color, TypographyStyle, nativeSpacings } from '@trezor/theme';
-import { NativeStyleObject, prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { Color, TypographyStyle, nativeSpacings } from '@cerberus/theme';
+import { NativeStyleObject, prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import { Icon, IconColor, IconName, IconSize } from '@suite-common/icons';
 
 import { Text } from '../Text';

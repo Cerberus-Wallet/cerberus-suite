@@ -29,11 +29,11 @@ import {
     ListItemSkeleton,
     AlertBox,
 } from '@suite-native/atoms';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import { Screen, ScreenSubHeader } from '@suite-native/navigation';
 import { CryptoIcon, tokenIcons, Icon, IconName, icons } from '@suite-common/icons';
 import { isDevelopOrDebugEnv } from '@suite-native/config';
-import { TypographyStyle } from '@trezor/theme';
+import { TypographyStyle } from '@cerberus/theme';
 import { TokenAddress } from '@suite-common/wallet-types';
 
 const inputStackStyle = prepareNativeStyle(utils => ({
@@ -335,7 +335,7 @@ export const DemoScreen = () => {
                                         Info AlerBox with a longer text that does not fit one row
                                         and it can also contain{' '}
                                         <Link
-                                            href="https://trezor.io"
+                                            href="https://cerberus.uraanai.com"
                                             label="for example link"
                                             isUnderlined
                                             textColor="textDefault"

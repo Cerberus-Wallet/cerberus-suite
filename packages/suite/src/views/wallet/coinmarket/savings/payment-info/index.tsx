@@ -1,6 +1,6 @@
 import { KycError, KycFailed, KycInProgress } from 'src/views/wallet/coinmarket/common';
 import { useSavingsPaymentInfo } from 'src/hooks/wallet/useCoinmarketSavingsPaymentInfo';
-import { Button } from '@trezor/components';
+import { Button } from '@cerberus/components';
 import styled from 'styled-components';
 import { Translation } from 'src/components/suite';
 import { useFormatters } from '@suite-common/formatters';

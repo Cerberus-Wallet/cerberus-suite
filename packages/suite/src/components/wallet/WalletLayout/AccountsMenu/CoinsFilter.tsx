@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-import { CoinLogo, TOOLTIP_DELAY_NORMAL, Tooltip, motionEasing } from '@trezor/components';
+import { CoinLogo, TOOLTIP_DELAY_NORMAL, Tooltip, motionEasing } from '@cerberus/components';
 import { motion, AnimatePresence, MotionProps } from 'framer-motion';
-import { borders, spacingsPx } from '@trezor/theme';
+import { borders, spacingsPx } from '@cerberus/theme';
 import { selectDevice } from '@suite-common/wallet-core';
 
 import { useSelector, useAccountSearch } from 'src/hooks/suite';

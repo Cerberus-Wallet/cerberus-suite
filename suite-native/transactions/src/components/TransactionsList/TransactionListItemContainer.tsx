@@ -6,7 +6,7 @@ import { RequireExactlyOne } from 'type-fest';
 import { useNavigation } from '@react-navigation/native';
 
 import { AccountKey, TransactionType } from '@suite-common/wallet-types';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import {
     RootStackParamList,
     RootStackRoutes,
@@ -23,7 +23,7 @@ import {
 } from '@suite-common/wallet-core';
 import { NetworkSymbol } from '@suite-common/wallet-config';
 import { EthereumTokenTransfer } from '@suite-native/ethereum-tokens';
-import { Color } from '@trezor/theme';
+import { Color } from '@cerberus/theme';
 import { useTranslate } from '@suite-native/intl';
 
 import { TransactionIcon } from './TransactionIcon';

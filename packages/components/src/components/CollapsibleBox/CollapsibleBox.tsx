@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback, ReactNode, FC } from 'react';
 import { motion } from 'framer-motion';
 import styled, { css } from 'styled-components';
-import { typography, spacingsPx, borders } from '@trezor/theme';
+import { typography, spacingsPx, borders } from '@cerberus/theme';
 import { Icon } from '@suite-common/icons/src/webComponents';
 import { motionEasing } from '../../config/motion';
 

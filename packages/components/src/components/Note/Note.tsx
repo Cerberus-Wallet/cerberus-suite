@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import styled, { useTheme } from 'styled-components';
 
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 
 import { Icon } from '../assets/Icon/Icon';
 import { Paragraph } from '../typography/Paragraph/Paragraph';

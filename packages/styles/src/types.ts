@@ -5,7 +5,7 @@ import type * as CSS from 'csstype';
 // TODO: In the future, we might want to move the `theme` to a standalone module and instead
 // use an ambient module declaration instead of importing it here, just like Emotion does.
 // https://emotion.sh/docs/typescript#define-a-theme
-import type { Theme, NativeTheme, CSSColor } from '@trezor/theme';
+import type { Theme, NativeTheme, CSSColor } from '@cerberus/theme';
 
 import type { multiply, getValueAndUnit, sum, negative, isDarkColor } from './utils';
 import type { mediaQueries } from './mediaQueries';

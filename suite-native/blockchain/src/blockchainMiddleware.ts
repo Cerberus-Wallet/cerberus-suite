@@ -4,7 +4,7 @@ import {
     onBlockchainDisconnectThunk,
     selectAllPendingTransactions,
 } from '@suite-common/wallet-core';
-import { BlockchainEvent, BLOCKCHAIN as CERBERUS_CONNECT_BLOCKCHAIN_ACTIONS } from '@trezor/connect';
+import { BlockchainEvent, BLOCKCHAIN as CERBERUS_CONNECT_BLOCKCHAIN_ACTIONS } from '@cerberus/connect';
 import { NetworkSymbol } from '@suite-common/wallet-config';
 
 import {

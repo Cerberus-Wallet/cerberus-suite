@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
-import { Tooltip, TOOLTIP_DELAY_NONE, TOOLTIP_DELAY_NORMAL } from '@trezor/components';
-import { mediaQueries } from '@trezor/styles';
+import { Tooltip, TOOLTIP_DELAY_NONE, TOOLTIP_DELAY_NORMAL } from '@cerberus/components';
+import { mediaQueries } from '@cerberus/styles';
 import { Translation } from './Translation';
 import { goto } from 'src/actions/suite/routerActions';
 import { useDispatch } from 'src/hooks/suite';

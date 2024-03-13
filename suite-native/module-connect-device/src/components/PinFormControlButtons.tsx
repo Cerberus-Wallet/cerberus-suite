@@ -6,7 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 import { Box, Button, HStack, IconButton } from '@suite-native/atoms';
 import { useFormContext } from '@suite-native/forms';
 import { useTranslate } from '@suite-native/intl';
-import TrezorConnect, { UI } from '@trezor/connect';
+import TrezorConnect, { UI } from '@cerberus/connect';
 import {
     ConnectDeviceStackParamList,
     ConnectDeviceStackRoutes,

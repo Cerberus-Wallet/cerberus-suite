@@ -10,10 +10,10 @@ import {
     useElevation,
     IconType,
     ElevationContext,
-} from '@trezor/components';
-import { Elevation, borders, spacingsPx, typography } from '@trezor/theme';
+} from '@cerberus/components';
+import { Elevation, borders, spacingsPx, typography } from '@cerberus/theme';
 import { TrezorLink } from './TrezorLink';
-import { UIVariant } from '@trezor/components/src/config/types';
+import { UIVariant } from '@cerberus/components/src/config/types';
 
 // TODO: move to components
 

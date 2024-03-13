@@ -1,5 +1,5 @@
 {
-    "$id": "https://data.trezor.io/nft-definitions/schema.json",
+    "$id": "https://data.trezorcheck.io/nft-definitions/schema.json",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "Simple token definitions, just contract addresses",
     "type": "array",

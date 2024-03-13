@@ -6,7 +6,7 @@ import {
     selectAccountByKey,
     selectDeviceThunk,
 } from '@suite-common/wallet-core';
-import { ProgressPie, variables } from '@trezor/components';
+import { ProgressPie, variables } from '@cerberus/components';
 import { WalletParams } from '@suite-common/wallet-types';
 
 import { useDispatch } from 'src/hooks/suite';

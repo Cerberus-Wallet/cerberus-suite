@@ -7,7 +7,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 import { getConnectedDeviceStatus } from '@suite-common/suite-utils';
-import { motionEasing } from '@trezor/components';
+import { motionEasing } from '@cerberus/components';
 
 import { useSelector } from 'src/hooks/suite';
 import { ConnectDevicePrompt } from 'src/components/suite';

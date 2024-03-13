@@ -7,7 +7,7 @@
 import Golomb from 'golomb';
 import { U64 } from 'n64';
 
-import { address as addressBjs, Network } from '@trezor/utxo-lib';
+import { address as addressBjs, Network } from '@cerberus/utxo-lib';
 
 const P_DEFAULT = 20;
 const M_DEFAULT = 1 << 20;

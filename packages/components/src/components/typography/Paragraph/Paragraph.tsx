@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { typography, TypographyStyle } from '@trezor/theme';
+import { typography, TypographyStyle } from '@cerberus/theme';
 
 export type ParagraphProps = {
     type?: TypographyStyle;

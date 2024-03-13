@@ -1,5 +1,5 @@
 {
-    "name": "@trezor/connect-explorer",
+    "name": "@cerberus/connect-explorer",
     "version": "1.0.0",
     "private": true,
     "scripts": {
@@ -11,11 +11,11 @@
         "type-check": "yarn g:tsc --build tsconfig.json"
     },
     "dependencies": {
-        "@trezor/components": "workspace:*",
-        "@trezor/connect-web": "workspace:*",
-        "@trezor/connect-webextension": "workspace:^",
-        "@trezor/protobuf": "workspace:*",
-        "@trezor/utils": "workspace:^",
+        "@cerberus/components": "workspace:*",
+        "@cerberus/connect-web": "workspace:*",
+        "@cerberus/connect-webextension": "workspace:^",
+        "@cerberus/protobuf": "workspace:*",
+        "@cerberus/utils": "workspace:^",
         "copy-webpack-plugin": "^12.0.2",
         "markdown-it": "^14.0.0",
         "markdown-it-imsize": "^2.0.1",

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { GradientOverlay, useElevation } from '@trezor/components';
+import { GradientOverlay, useElevation } from '@cerberus/components';
 import type { AddressItem } from 'src/hooks/wallet/sign-verify/useSignAddressOptions';
-import { borders, nextElevation, spacingsPx } from '@trezor/theme';
+import { borders, nextElevation, spacingsPx } from '@cerberus/theme';
 
 const StyledGradientOverlay = styled(GradientOverlay)`
     margin: -${spacingsPx.xs};

@@ -1,5 +1,5 @@
 import { Params, BundledParams, Response, DerivationPath } from '../params';
-import { Static, Type } from '@trezor/schema-utils';
+import { Static, Type } from '@cerberus/schema-utils';
 
 export type CipherKeyValue = Static<typeof CipherKeyValue>;
 export const CipherKeyValue = Type.Object({

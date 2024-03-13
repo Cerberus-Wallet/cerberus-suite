@@ -13,4 +13,4 @@
 9.0.0
 
 -   initial release
--   migrated from https://github.com/trezor/connect
+-   migrated from https://github.com/Cerberus-Wallet/connect

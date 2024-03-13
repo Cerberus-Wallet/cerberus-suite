@@ -63,7 +63,7 @@ const TransactionListHeaderContent = ({
     const isTokenAccount = !!tokenContract;
 
     // Graph is temporarily hidden also for ERC20 tokens.
-    // Will be solved in issue: https://github.com/trezor/trezor-suite/issues/7839
+    // Will be solved in issue: https://github.com/Cerberus-Wallet/cerberus-suite/issues/7839
     const isGraphDisplayed = accountHasTransactions && !isTestnetAccount && !isTokenAccount;
 
     if (isGraphDisplayed) {

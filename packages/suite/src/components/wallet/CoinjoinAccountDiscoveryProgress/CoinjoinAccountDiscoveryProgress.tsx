@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import styled, { useTheme } from 'styled-components';
 
-import { Card, H3, Icon, LottieAnimation, ProgressBar, variables } from '@trezor/components';
+import { Card, H3, Icon, LottieAnimation, ProgressBar, variables } from '@cerberus/components';
 import { localizeNumber } from '@suite-common/wallet-utils';
 import { Translation } from 'src/components/suite';
 import { useCoinjoinAccountLoadingProgress } from 'src/hooks/coinjoin';

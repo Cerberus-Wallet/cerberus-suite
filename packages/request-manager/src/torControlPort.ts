@@ -3,7 +3,7 @@ import fs from 'fs';
 import crypto from 'crypto';
 import util from 'util';
 import path from 'path';
-import { promiseAllSequence } from '@trezor/utils';
+import { promiseAllSequence } from '@cerberus/utils';
 import { TorConnectionOptions, TorCommandResponse } from './types';
 
 const readFile = util.promisify(fs.readFile);

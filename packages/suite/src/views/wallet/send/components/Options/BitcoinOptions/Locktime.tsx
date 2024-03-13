@@ -2,11 +2,11 @@ import BigNumber from 'bignumber.js';
 import styled from 'styled-components';
 import { NumberInput, Translation } from 'src/components/suite';
 import { useSendFormContext } from 'src/hooks/wallet';
-import { Card, Icon, IconButton, Paragraph, Switch } from '@trezor/components';
+import { Card, Icon, IconButton, Paragraph, Switch } from '@cerberus/components';
 import { getInputState, isInteger } from '@suite-common/wallet-utils';
 import { isFeatureFlagEnabled } from '@suite-common/suite-utils';
 import { useTranslation } from 'src/hooks/suite';
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 
 const RbfIcon = styled(Icon)`
     padding-top: ${spacingsPx.xs};

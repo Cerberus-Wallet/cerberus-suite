@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { useDevice, useDispatch } from 'src/hooks/suite';
 import { Translation } from 'src/components/suite';
 import { goto } from 'src/actions/suite/routerActions';
-import { Button, GradientOverlay, variables } from '@trezor/components';
+import { Button, GradientOverlay, variables } from '@cerberus/components';
 import { useCoinmarketP2pOffersContext } from 'src/hooks/wallet/useCoinmarketP2pOffers';
 import { showAddress } from 'src/actions/wallet/receiveActions';
 import { getUnusedAddressFromAccount } from 'src/utils/wallet/coinmarket/coinmarketUtils';

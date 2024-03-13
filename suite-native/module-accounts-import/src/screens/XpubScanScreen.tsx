@@ -13,7 +13,7 @@ import {
     Screen,
     StackProps,
 } from '@suite-native/navigation';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import { getNetworkType } from '@suite-common/wallet-config';
 import { isAddressValid, isAddressBasedNetwork } from '@suite-common/wallet-utils';
 import { Alert, useAlert } from '@suite-native/alerts';

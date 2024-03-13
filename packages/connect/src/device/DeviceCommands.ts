@@ -1,9 +1,9 @@
-// original file https://github.com/trezor/connect/blob/develop/src/js/device/DeviceCommands.js
+// original file https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/device/DeviceCommands.js
 
 import { randomBytes } from 'crypto';
-import { Transport } from '@trezor/transport';
-import { MessagesSchema as Messages } from '@trezor/protobuf';
-import { versionUtils } from '@trezor/utils';
+import { Transport } from '@cerberus/transport';
+import { MessagesSchema as Messages } from '@cerberus/protobuf';
+import { versionUtils } from '@cerberus/utils';
 import { ERRORS, NETWORK } from '../constants';
 import { DEVICE } from '../events';
 import * as hdnodeUtils from '../utils/hdnodeUtils';
@@ -22,7 +22,7 @@ import { initLog } from '../utils/debug';
 import type { Device } from './Device';
 import type { CoinInfo, BitcoinNetworkInfo, Network } from '../types';
 import type { HDNodeResponse } from '../types/api/getPublicKey';
-import { Assert } from '@trezor/schema-utils';
+import { Assert } from '@cerberus/schema-utils';
 import { resolveDescriptorForTaproot } from './resolveDescriptorForTaproot';
 
 type MessageType = Messages.MessageType;
@@ -405,7 +405,7 @@ export class DeviceCommands {
             filterForLog(res.payload.type, res.payload.message),
         );
 
-        // TODO: https://github.com/trezor/trezor-suite/issues/5301
+        // TODO: https://github.com/Cerberus-Wallet/cerberus-suite/issues/5301
         // @ts-expect-error
         return res.payload;
     }
@@ -464,14 +464,14 @@ export class DeviceCommands {
             const { code } = res.message;
             let { message } = res.message;
             // T1B1 does not send any message in firmware update
-            // https://github.com/trezor/trezor-firmware/issues/1334
-            // @ts-expect-error, TODO: https://github.com/trezor/trezor-suite/issues/5299
+            // https://github.com/Cerberus-Wallet/cerberus-firmware/issues/1334
+            // @ts-expect-error, TODO: https://github.com/Cerberus-Wallet/cerberus-suite/issues/5299
             if (code === 'Failure_FirmwareError' && !message) {
                 message = 'Firmware installation failed';
             }
             // Failure_ActionCancelled message could be also missing
-            // https://github.com/trezor/connect/issues/865
-            // @ts-expect-error, TODO: https://github.com/trezor/trezor-suite/issues/5299
+            // https://github.com/Cerberus-Wallet/connect/issues/865
+            // @ts-expect-error, TODO: https://github.com/Cerberus-Wallet/cerberus-suite/issues/5299
             if (code === 'Failure_ActionCancelled' && !message) {
                 message = 'Action cancelled by user';
             }

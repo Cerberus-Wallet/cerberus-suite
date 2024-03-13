@@ -40,7 +40,7 @@
         "**/coverage",
         "**/public",
         "**/protobuf-patches",
-        "**/trezor-common",
+        "**/cerberus-common",
         "**/jest.config.*js"
     ],
     "ts-node": {

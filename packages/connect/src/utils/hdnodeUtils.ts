@@ -1,7 +1,7 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/utils/hdnodeUtils.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/utils/hdnodeUtils.js
 
-import { bip32 } from '@trezor/utxo-lib';
-import type { Network, BIP32Interface } from '@trezor/utxo-lib';
+import { bip32 } from '@cerberus/utxo-lib';
+import type { Network, BIP32Interface } from '@cerberus/utxo-lib';
 import { PROTO, ERRORS } from '../constants';
 
 const pubNode2bjsNode = (node: PROTO.HDNodeType, network?: Network) => {

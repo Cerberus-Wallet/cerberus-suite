@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { Route } from '@suite-common/suite-types';
-import { spacingsPx, zIndices } from '@trezor/theme';
+import { spacingsPx, zIndices } from '@cerberus/theme';
 import { useSelector } from 'src/hooks/suite';
 import { selectSelectedAccount } from 'src/reducers/wallet/selectedAccountReducer';
 import { selectIsAccountTabPage } from 'src/reducers/suite/routerReducer';

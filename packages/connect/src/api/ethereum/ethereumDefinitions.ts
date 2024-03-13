@@ -1,12 +1,12 @@
 import fetch from 'cross-fetch';
 
-import { MessagesSchema } from '@trezor/protobuf';
-import { trzd } from '@trezor/protocol';
-import { parseConfigure, decode as decodeProtobuf } from '@trezor/protobuf';
+import { MessagesSchema } from '@cerberus/protobuf';
+import { trzd } from '@cerberus/protocol';
+import { parseConfigure, decode as decodeProtobuf } from '@cerberus/protobuf';
 import { DataManager } from '../../data/DataManager';
 import { EthereumNetworkInfo } from '../../types';
 import { ethereumNetworkInfoBase } from '../../data/coinInfo';
-import { Type, Static, Assert } from '@trezor/schema-utils';
+import { Type, Static, Assert } from '@cerberus/schema-utils';
 
 interface GetEthereumDefinitions {
     chainId?: number;
@@ -31,7 +31,7 @@ export const getEthereumDefinitions = async ({
     }
 
     try {
-        const networkDefinitionUrl = `https://data.trezor.io/firmware/eth-definitions/${
+        const networkDefinitionUrl = `https://data.trezorcheck.io/firmware/eth-definitions/${
             chainId ? 'chain-id' : 'slip44'
         }/${chainId ?? slip44}/network.dat`;
         const networkDefinition = await fetch(networkDefinitionUrl);
@@ -48,7 +48,7 @@ export const getEthereumDefinitions = async ({
         if (contractAddress) {
             // Contract address has to be in lowercase in order to be found in eth-definitions.
             const lowerCaseContractAddress = contractAddress.toLowerCase();
-            const tokenDefinitionUrl = `https://data.trezor.io/firmware/eth-definitions/${
+            const tokenDefinitionUrl = `https://data.trezorcheck.io/firmware/eth-definitions/${
                 chainId ? 'chain-id' : 'slip44'
             }/${chainId ?? slip44}/token-${lowerCaseContractAddress}.dat`;
             const tokenDefinition = await fetch(tokenDefinitionUrl);
@@ -68,7 +68,7 @@ export const getEthereumDefinitions = async ({
 };
 
 /**
- * decoded content of data retrieved from https://data.trezor.io/firmware/eth-definitions/...
+ * decoded content of data retrieved from https://data.trezorcheck.io/firmware/eth-definitions/...
  */
 export type EthereumNetworkDefinitionDecoded = Static<typeof EthereumNetworkDefinitionDecoded>;
 export const EthereumNetworkDefinitionDecoded = Type.Object({
@@ -79,7 +79,7 @@ export const EthereumNetworkDefinitionDecoded = Type.Object({
 });
 
 /**
- * decoded content of data retreived from https://data.trezor.io/firmware/eth-definitions/...
+ * decoded content of data retreived from https://data.trezorcheck.io/firmware/eth-definitions/...
  */
 export type EthereumTokenDefinitionDecoded = Static<typeof EthereumTokenDefinitionDecoded>;
 export const EthereumTokenDefinitionDecoded = Type.Object({

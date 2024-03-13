@@ -1,4 +1,4 @@
-import type { HandshakeElectron } from '@trezor/suite-desktop-api';
+import type { HandshakeElectron } from '@cerberus/suite-desktop-api';
 
 import { SUITE } from 'src/actions/suite/constants';
 import { Action } from 'src/types/suite';

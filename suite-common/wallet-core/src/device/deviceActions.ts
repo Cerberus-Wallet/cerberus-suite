@@ -1,6 +1,6 @@
 import { createAction } from '@reduxjs/toolkit';
 
-import { Device, DEVICE } from '@trezor/connect';
+import { Device, DEVICE } from '@cerberus/connect';
 import { ButtonRequest, TrezorDevice } from '@suite-common/suite-types';
 
 export const MODULE_PREFIX = '@suite/device';

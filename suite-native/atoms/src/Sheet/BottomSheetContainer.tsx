@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import { KeyboardAvoidingView, Modal as RNModal, Platform } from 'react-native';
 import { gestureHandlerRootHOC } from 'react-native-gesture-handler';
 
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 
 type SheetProps = {
     children: ReactNode;

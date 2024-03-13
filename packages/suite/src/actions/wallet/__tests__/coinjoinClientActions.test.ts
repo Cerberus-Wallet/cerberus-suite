@@ -1,7 +1,7 @@
 import { combineReducers, createReducer } from '@reduxjs/toolkit';
 
 import { configureMockStore, initPreloadedState, testMocks } from '@suite-common/test-utils';
-import { promiseAllSequence } from '@trezor/utils';
+import { promiseAllSequence } from '@cerberus/utils';
 import { prepareMessageSystemReducer } from '@suite-common/message-system';
 
 import { db } from 'src/storage';
@@ -398,7 +398,7 @@ describe('coinjoinClientActions', () => {
         store.dispatch(stopCoinjoinSession('account-A'));
     });
 
-    it('stopCoinjoinSession with error from Trezor', async () => {
+    it('stopCoinjoinSession with error from Cerberus', async () => {
         const store = initStore({
             accounts: [{ key: 'account-A', symbol: 'btc', deviceState: 'device-state' }],
         } as any);

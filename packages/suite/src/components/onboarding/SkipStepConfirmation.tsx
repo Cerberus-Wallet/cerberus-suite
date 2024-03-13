@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 import * as STEP from 'src/constants/onboarding/steps';
 import { AnyStepId } from 'src/types/onboarding';
-import { Button } from '@trezor/components';
+import { Button } from '@cerberus/components';
 import { Translation, Modal } from 'src/components/suite';
 import { useOnboarding } from 'src/hooks/suite';
-import { typography } from '@trezor/theme';
+import { typography } from '@cerberus/theme';
 
 const Wrapper = styled.div`
     display: flex;

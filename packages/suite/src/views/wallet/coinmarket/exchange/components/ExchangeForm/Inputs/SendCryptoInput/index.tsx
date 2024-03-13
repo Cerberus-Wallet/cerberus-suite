@@ -17,7 +17,7 @@ import {
     validateReserveOrBalance,
 } from 'src/utils/suite/validation';
 import { useFormatters } from '@suite-common/formatters';
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 
 const StyledInput = styled(NumberInput)<{ isWithRate: boolean }>`
     ${({ isWithRate }) =>

@@ -1,8 +1,8 @@
 import { useRef, useState, ReactNode } from 'react';
 import styled from 'styled-components';
 
-import { variables } from '@trezor/components';
-import { spacingsPx } from '@trezor/theme';
+import { variables } from '@cerberus/components';
+import { spacingsPx } from '@cerberus/theme';
 import { SuiteBanners } from 'src/components/suite/banners';
 import { Metadata } from 'src/components/suite';
 import { GuideRouter, GuideButton } from 'src/components/guide';

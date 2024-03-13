@@ -12,7 +12,7 @@ import { D } from '@mobily/ts-belt';
 import { ThunkDispatch } from 'redux-thunk';
 
 import { createMiddleware, ExtraDependenciesPartial } from '@suite-common/redux-utils';
-import { mergeDeepObject } from '@trezor/utils';
+import { mergeDeepObject } from '@cerberus/utils';
 
 import { extraDependenciesMock } from './extraDependenciesMock';
 

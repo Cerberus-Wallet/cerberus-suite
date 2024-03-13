@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { analytics, EventType } from '@trezor/suite-analytics';
+import { analytics, EventType } from '@cerberus/suite-analytics';
 
 import {
     ActionColumn,
@@ -15,8 +15,8 @@ import { setAutodetect } from 'src/actions/suite/suiteActions';
 import { setLanguage } from 'src/actions/settings/languageActions';
 import { useAnchor } from 'src/hooks/suite/useAnchor';
 import { SettingsAnchor } from 'src/constants/suite/anchors';
-import { getPlatformLanguages } from '@trezor/env-utils';
-import { CROWDIN_URL } from '@trezor/urls';
+import { getPlatformLanguages } from '@cerberus/env-utils';
+import { CROWDIN_URL } from '@cerberus/urls';
 import { selectLanguage } from 'src/reducers/suite/suiteReducer';
 
 const onlyOfficial = (locale: [string, LocaleInfo]): locale is [Locale, LocaleInfo] =>

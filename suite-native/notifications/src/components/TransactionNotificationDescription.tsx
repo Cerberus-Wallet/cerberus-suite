@@ -1,7 +1,7 @@
 import { Box, Text } from '@suite-native/atoms';
 import { CryptoAmountFormatter, AccountAddressFormatter } from '@suite-native/formatters';
 import { NetworkSymbol } from '@suite-common/wallet-config';
-import { useNativeStyles, prepareNativeStyle } from '@trezor/styles';
+import { useNativeStyles, prepareNativeStyle } from '@cerberus/styles';
 
 type TransactionNotificationDescriptionProps = {
     amount: string | null;

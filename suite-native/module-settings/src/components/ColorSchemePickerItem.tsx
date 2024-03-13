@@ -1,8 +1,8 @@
 import { TouchableOpacity } from 'react-native';
 
 import { Box, Text } from '@suite-native/atoms';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
-import { colorVariants, CSSColor } from '@trezor/theme';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
+import { colorVariants, CSSColor } from '@cerberus/theme';
 import { useSystemColorScheme, useUserColorScheme, AppColorScheme } from '@suite-native/theme';
 
 type ColorSchemePickerItemProps = {

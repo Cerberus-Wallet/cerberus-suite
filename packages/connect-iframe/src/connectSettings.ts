@@ -1,7 +1,7 @@
-import { parseConnectSettings as parseSettings, ConnectSettings } from '@trezor/connect';
-import { config } from '@trezor/connect/src/data/config';
-import { DEFAULT_PRIORITY } from '@trezor/connect/src/data/connectSettings';
-import { getHost } from '@trezor/connect/src/utils/urlUtils';
+import { parseConnectSettings as parseSettings, ConnectSettings } from '@cerberus/connect';
+import { config } from '@cerberus/connect/src/data/config';
+import { DEFAULT_PRIORITY } from '@cerberus/connect/src/data/connectSettings';
+import { getHost } from '@cerberus/connect/src/utils/urlUtils';
 
 export const isOriginWhitelisted = (origin: string) => {
     const host = getHost(origin);
@@ -20,7 +20,7 @@ const getPriority = (whitelist?: (typeof config)['whitelist'][0]) => {
 const getHostLabel = (origin: string) => config.knownHosts.find(host => host.origin === origin);
 
 /**
- * Receive settings from @trezor/connect-web hosted on 3rd party domain and validate sensitive values (origin, popup etc.)
+ * Receive settings from @cerberus/connect-web hosted on 3rd party domain and validate sensitive values (origin, popup etc.)
  * Returned settings are considered as safe since this script runs on trusted domain.
  * @param input Partial<ConnectSettings>
  */

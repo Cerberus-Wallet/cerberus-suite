@@ -4,7 +4,7 @@ import { Dimensions, View } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 
 import { useDiscreetMode } from '@suite-native/atoms';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import { FiatAmountFormatter } from '@suite-native/formatters';
 
 type AxisLabelProps = {

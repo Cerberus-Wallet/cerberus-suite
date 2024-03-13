@@ -1,7 +1,7 @@
 // @group:metadata
 // @retry=2
 
-import * as METADATA_LABELING from '@trezor/suite/src/actions/suite/constants/metadataLabelingConstants';
+import * as METADATA_LABELING from '@cerberus/suite/src/actions/suite/constants/metadataLabelingConstants';
 
 import { rerouteMetadataToMockProvider, stubOpen } from '../../stubs/metadata';
 

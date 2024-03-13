@@ -1,4 +1,4 @@
-import { Select } from '@trezor/components';
+import { Select } from '@cerberus/components';
 
 import type { Field } from '../../types';
 import { onFieldChange } from '../../actions/methodActions';

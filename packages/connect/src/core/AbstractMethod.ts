@@ -1,6 +1,6 @@
-import { storage } from '@trezor/connect-common';
-import { versionUtils } from '@trezor/utils';
-import { Deferred } from '@trezor/utils';
+import { storage } from '@cerberus/connect-common';
+import { versionUtils } from '@cerberus/utils';
+import { Deferred } from '@cerberus/utils';
 import { DataManager } from '../data/DataManager';
 import { ERRORS, NETWORK } from '../constants';
 import {

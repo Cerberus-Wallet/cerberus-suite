@@ -1,7 +1,7 @@
 import { decode, verify } from 'jws';
 
-import { getEnvironment, isCodesignBuild } from '@trezor/env-utils';
-import { scheduleAction } from '@trezor/utils';
+import { getEnvironment, isCodesignBuild } from '@cerberus/env-utils';
+import { scheduleAction } from '@cerberus/utils';
 import { createThunk } from '@suite-common/redux-utils';
 import { MessageSystem } from '@suite-common/suite-types';
 

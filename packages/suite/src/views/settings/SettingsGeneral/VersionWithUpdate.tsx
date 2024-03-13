@@ -1,5 +1,5 @@
 import { isDevEnv } from '@suite-common/suite-utils';
-import { desktopApi } from '@trezor/suite-desktop-api';
+import { desktopApi } from '@cerberus/suite-desktop-api';
 
 import { installUpdate, setUpdateWindow } from 'src/actions/suite/desktopUpdateActions';
 import {
@@ -15,7 +15,7 @@ import { UpdateState } from 'src/reducers/suite/desktopUpdateReducer';
 import { useAnchor } from 'src/hooks/suite/useAnchor';
 import { SettingsAnchor } from 'src/constants/suite/anchors';
 
-import { Button } from '@trezor/components';
+import { Button } from '@cerberus/components';
 import { getReleaseUrl } from 'src/services/github';
 
 const getUpdateStateMessage = (state: UpdateState) => {

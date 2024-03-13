@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { IconButton } from '@trezor/components';
+import { IconButton } from '@cerberus/components';
 import { Account } from '@suite-common/wallet-types';
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 import { useDispatch } from 'src/hooks/suite';
 import { AccountDetails } from './AccountDetails';
 import { goto } from 'src/actions/suite/routerActions';

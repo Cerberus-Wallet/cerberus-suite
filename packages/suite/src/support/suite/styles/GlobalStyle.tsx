@@ -1,7 +1,7 @@
-import { typography } from '@trezor/theme';
+import { typography } from '@cerberus/theme';
 import animations from './animations';
 import tooltips from './tooltips';
-import { SuiteThemeColors } from '@trezor/components';
+import { SuiteThemeColors } from '@cerberus/components';
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle<{ theme: SuiteThemeColors }>`

@@ -1,5 +1,5 @@
-import { analytics, EventType } from '@trezor/suite-analytics';
-import { createDeferred } from '@trezor/utils';
+import { analytics, EventType } from '@cerberus/suite-analytics';
+import { createDeferred } from '@cerberus/utils';
 import { notificationsActions } from '@suite-common/toast-notifications';
 
 import { METADATA, METADATA_PROVIDER } from 'src/actions/suite/constants';

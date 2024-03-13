@@ -1,16 +1,16 @@
 /**
- * Uses @trezor/coinjoin package in nodejs context
+ * Uses @cerberus/coinjoin package in nodejs context
  */
 
 import { app, ipcMain } from 'electron';
 import { captureMessage, withScope } from '@sentry/electron';
 
 import { coinjoinReportTag, coinjoinNetworkTag } from '@suite-common/sentry';
-import { createIpcProxyHandler, IpcProxyHandlerOptions } from '@trezor/ipc-proxy';
-import { CoinjoinClient, CoinjoinBackend, CoinjoinBackendSettings } from '@trezor/coinjoin';
-import { getSynchronize } from '@trezor/utils';
-import { getFreePort } from '@trezor/node-utils';
-import { InterceptedEvent } from '@trezor/request-manager';
+import { createIpcProxyHandler, IpcProxyHandlerOptions } from '@cerberus/ipc-proxy';
+import { CoinjoinClient, CoinjoinBackend, CoinjoinBackendSettings } from '@cerberus/coinjoin';
+import { getSynchronize } from '@cerberus/utils';
+import { getFreePort } from '@cerberus/node-utils';
+import { InterceptedEvent } from '@cerberus/request-manager';
 
 import { CoinjoinProcess } from '../libs/processes/CoinjoinProcess';
 import { PowerSaveBlocker } from '../libs/power-save-blocker';
@@ -18,7 +18,7 @@ import { ThreadProxy } from '../libs/thread-proxy';
 
 import type { Module } from './index';
 
-export const SERVICE_NAME = '@trezor/coinjoin';
+export const SERVICE_NAME = '@cerberus/coinjoin';
 
 const CLIENT_CHANNEL = 'CoinjoinClient';
 const BACKEND_CHANNEL = 'CoinjoinBackend';

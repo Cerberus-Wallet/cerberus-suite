@@ -1,7 +1,7 @@
 import { css } from 'styled-components';
 
-import { Color, Colors, Elevation, spacings, spacingsPx } from '@trezor/theme';
-import { capitalizeFirstLetter } from '@trezor/utils';
+import { Color, Colors, Elevation, spacings, spacingsPx } from '@cerberus/theme';
+import { capitalizeFirstLetter } from '@cerberus/utils';
 import type { UIHorizontalAlignment, UISize, UIVariant } from '../../config/types';
 
 export type ButtonVariant = Extract<

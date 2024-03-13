@@ -11,7 +11,7 @@ import Svg, {
     SvgProps,
 } from 'react-native-svg';
 
-import { useNativeStyles } from '@trezor/styles';
+import { useNativeStyles } from '@cerberus/styles';
 
 const SVG_HEIGHT = Dimensions.get('screen').height * 0.35;
 

@@ -1,5 +1,5 @@
 /**
- * Set tor proxy for @trezor/blockchain-link connections
+ * Set tor proxy for @cerberus/blockchain-link connections
  */
 
 import type { PROTO } from '../../constants';

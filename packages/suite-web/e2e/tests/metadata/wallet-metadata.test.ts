@@ -106,7 +106,7 @@ describe('Metadata - wallet labeling', () => {
             );
 
             // remember wallet, reload app, and observe that labels were loaded
-            // https://github.com/trezor/trezor-suite/pull/9560
+            // https://github.com/Cerberus-Wallet/cerberus-suite/pull/9560
             cy.getTestElement('@switch-device/wallet-on-index/0/toggle-remember-switch').click({
                 force: true,
             });

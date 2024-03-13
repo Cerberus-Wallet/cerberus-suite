@@ -1,4 +1,4 @@
-# Integrate @trezor/connect with a web extension
+# Integrate @cerberus/connect with a web extension
 
 **Note: only manifest version 2 is supported for now**
 
@@ -8,17 +8,17 @@ Basic implementation is same for both Google Chrome & Firefox. However, few addi
 
 1. Configure your manifest file
 
-    - Because Trezor Connect is served from the `https://connect.trezor.io/` domain you must grant permissions to `://connect.trezor.io/*` URL in your manifest file.
+    - Because Cerberus Connect is served from the `https://connect.cerberus.uraanai.com/` domain you must grant permissions to `://connect.cerberus.uraanai.com/*` URL in your manifest file.
 
         ```JSON
         {
             "permissions": [
-                "*://connect.trezor.io/*"
+                "*://connect.cerberus.uraanai.com/*"
             ]
         }
         ```
 
-    - Include Trezor Connect as one of your background scripts
+    - Include Cerberus Connect as one of your background scripts
 
         If you're using a bundler only include final `index.js` file
 
@@ -32,7 +32,7 @@ Basic implementation is same for both Google Chrome & Firefox. However, few addi
         }
         ```
 
-        If you're not using a bundler you have to include Trezor Connect manually
+        If you're not using a bundler you have to include Cerberus Connect manually
 
         ```JSON
         {
@@ -47,14 +47,14 @@ Basic implementation is same for both Google Chrome & Firefox. However, few addi
 
     - Include `trezor-content-script.js` in a `"content-scripts"`
 
-        Trezor Connect may present a popup tab for certain actions. Since your code & Connect is running in a background script you need to allow communication between popup tab and background script explicitly using this Javascript [file](./trezor-content-script.js).
+        Cerberus Connect may present a popup tab for certain actions. Since your code & Connect is running in a background script you need to allow communication between popup tab and background script explicitly using this Javascript [file](./trezor-content-script.js).
 
         ```JSON
         {
             "content_scripts": [
                 {
                 "matches": [
-                    "*://connect.trezor.io/*/popup.html"
+                    "*://connect.cerberus.uraanai.com/*/popup.html"
                 ],
                 "js": ["trezor-content-script.js"]
                 }
@@ -62,11 +62,11 @@ Basic implementation is same for both Google Chrome & Firefox. However, few addi
         }
         ```
 
-        Snippet above is basically saying _"Inject `trezor-content-script.js` into `connect.trezor.io/*/popup.html`"_.
+        Snippet above is basically saying _"Inject `trezor-content-script.js` into `connect.cerberus.uraanai.com/*/popup.html`"_.
 
-2. Now you're able to use Trezor Connect in your code
+2. Now you're able to use Cerberus Connect in your code
 
-    You can access `TrezorConnect` as a global variable if you included Trezor Connect in your project manually
+    You can access `TrezorConnect` as a global variable if you included Cerberus Connect in your project manually
 
     ```javascript
     function onClick() {
@@ -91,10 +91,10 @@ Basic implementation is same for both Google Chrome & Firefox. However, few addi
     chrome.browserAction.onClicked.addListener(onClick);
     ```
 
-    If you're using a package manager you will probably want to import Trezor Connect into your code using an `import` statement
+    If you're using a package manager you will probably want to import Cerberus Connect into your code using an `import` statement
 
     ```javascript
-    import TrezorConnect from '@trezor/connect'; // Import Trezor Connect
+    import TrezorConnect from '@cerberus/connect'; // Import Cerberus Connect
 
     function onClick() {
         TrezorConnect.getAddress({
@@ -118,13 +118,13 @@ Basic implementation is same for both Google Chrome & Firefox. However, few addi
     chrome.browserAction.onClicked.addListener(onClick);
     ```
 
-This is all that must be done in order to make Trezor Connect work with a web extension on Firefox.
+This is all that must be done in order to make Cerberus Connect work with a web extension on Firefox.
 However, if you're creating a Google Chrome extension you must complete one additional step.
 
 ## Google Chrome WebUSB
 
 Chrome extension requires a special `trezor-usb-permissions.html` file served from the root of your extension. You can get the file [here](./trezor-usb-permissions.html).
 
-This page will be displayed in case where user is using Trezor without `Trezor Bridge` installed and `navigator.usb` is available.
+This page will be displayed in case where user is using Cerberus without `Cerberus Bridge` installed and `navigator.usb` is available.
 
 Lastly, you have to place [this](./trezor-usb-permissions.js) Javascript file into your `vendor/` directory. This directory could be changed, but then you need to remember to change script src accordingly inside `trezor-usb-permissions.html` file.

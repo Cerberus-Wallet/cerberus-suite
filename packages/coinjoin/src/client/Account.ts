@@ -1,4 +1,4 @@
-import { Network } from '@trezor/utxo-lib';
+import { Network } from '@cerberus/utxo-lib';
 
 import { getScriptPubKeyFromAddress, prefixScriptPubKey } from '../utils/coordinatorUtils';
 import { getRoundEvents, compareOutpoint } from '../utils/roundUtils';

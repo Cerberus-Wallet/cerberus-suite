@@ -29,9 +29,9 @@
         "@suite-native/module-settings": "workspace:*",
         "@suite-native/navigation": "workspace:*",
         "@suite-native/storage": "workspace:*",
-        "@trezor/env-utils": "workspace:*",
-        "@trezor/styles": "workspace:*",
-        "@trezor/theme": "workspace:*",
+        "@cerberus/env-utils": "workspace:*",
+        "@cerberus/styles": "workspace:*",
+        "@cerberus/theme": "workspace:*",
         "react": "18.2.0",
         "react-native": "0.73.2",
         "react-redux": "8.0.7"

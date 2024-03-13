@@ -1,6 +1,6 @@
 import { components } from 'react-select';
 import styled from 'styled-components';
-import { Select, SelectProps } from '@trezor/components';
+import { Select, SelectProps } from '@cerberus/components';
 import type { Account } from 'src/types/wallet';
 import type { State as RevealedAddresses } from 'src/reducers/wallet/receiveReducer';
 import {

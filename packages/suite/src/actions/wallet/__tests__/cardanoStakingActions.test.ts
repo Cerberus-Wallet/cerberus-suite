@@ -5,7 +5,7 @@ import cardanoStakingReducer from 'src/reducers/wallet/cardanoStakingReducer';
 import * as cardanoStakingActions from 'src/actions/wallet/cardanoStakingActions';
 import { CARDANO_STAKING } from '../constants';
 import { WalletAccountTransaction } from 'src/types/wallet';
-import { BlockchainBlock } from '@trezor/connect';
+import { BlockchainBlock } from '@cerberus/connect';
 import { transactionsReducer } from 'src/reducers/wallet';
 import { getUnixTime } from 'date-fns';
 

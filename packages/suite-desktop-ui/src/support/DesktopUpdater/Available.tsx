@@ -2,9 +2,9 @@ import ReactMarkdown from 'react-markdown';
 
 import styled from 'styled-components';
 
-import { Button, H2, variables, Link } from '@trezor/components';
-import { desktopApi, UpdateInfo } from '@trezor/suite-desktop-api';
-import { borders } from '@trezor/theme';
+import { Button, H2, variables, Link } from '@cerberus/components';
+import { desktopApi, UpdateInfo } from '@cerberus/suite-desktop-api';
+import { borders } from '@cerberus/theme';
 
 import { Translation, Modal } from 'src/components/suite';
 import { useDispatch } from 'src/hooks/suite';

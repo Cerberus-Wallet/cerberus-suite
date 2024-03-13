@@ -7,7 +7,7 @@ import {
     deviceActions,
 } from '@suite-common/wallet-core';
 import * as deviceUtils from '@suite-common/suite-utils';
-import { DEVICE } from '@trezor/connect';
+import { DEVICE } from '@cerberus/connect';
 import { notificationsActions, removeAccountEventsThunk } from '@suite-common/toast-notifications';
 
 import { SUITE } from 'src/actions/suite/constants';
@@ -32,7 +32,7 @@ const eventsMiddleware =
         }
 
         if (action.type === DEVICE.CONNECT || action.type === DEVICE.CONNECT_UNACQUIRED) {
-            // get TrezorDevice from @trezor/connect:Device object
+            // get TrezorDevice from @cerberus/connect:Device object
             const devices = selectDevices(api.getState());
             const device = devices.find(d => d.path === action.payload.path);
             if (!device) return action; // this shouldn't happen

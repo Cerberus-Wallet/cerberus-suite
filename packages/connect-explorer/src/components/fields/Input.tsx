@@ -1,4 +1,4 @@
-import { Input as InputComponent } from '@trezor/components';
+import { Input as InputComponent } from '@cerberus/components';
 
 import { Field } from '../../types';
 import { Row } from './Row';

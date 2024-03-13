@@ -107,7 +107,7 @@ const useRbfState = ({ selectedAccount, rbfParams, finalize, chainedTxs }: UseRb
         const rbfAccount = {
             ...account,
             utxo: rbfParams.utxo.concat(availableUtxo),
-            // make sure that the exact same change output will be picked by @trezor/connect > hd-wallet during the tx compose process
+            // make sure that the exact same change output will be picked by @cerberus/connect > hd-wallet during the tx compose process
             // fallback to default if change address is not present
             addresses: account.addresses
                 ? {

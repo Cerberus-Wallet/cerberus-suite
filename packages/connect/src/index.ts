@@ -1,6 +1,6 @@
 import EventEmitter from 'events';
 
-import { createDeferredManager } from '@trezor/utils';
+import { createDeferredManager } from '@cerberus/utils';
 
 import { Core, initCore } from './core';
 import { factory } from './factory';
@@ -25,7 +25,7 @@ import { ERRORS } from './constants';
 import type { ConnectSettings, Manifest } from './types';
 
 export const eventEmitter = new EventEmitter();
-const _log = initLog('@trezor/connect');
+const _log = initLog('@cerberus/connect');
 
 let _settings = parseConnectSettings();
 let _core: Core | null = null;

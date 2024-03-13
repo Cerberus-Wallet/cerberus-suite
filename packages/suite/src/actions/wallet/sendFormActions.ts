@@ -1,6 +1,6 @@
 import BigNumber from 'bignumber.js';
 
-import TrezorConnect, { PROTO, SignedTransaction } from '@trezor/connect';
+import TrezorConnect, { PROTO, SignedTransaction } from '@cerberus/connect';
 import {
     accountsActions,
     addFakePendingCardanoTxThunk,
@@ -26,7 +26,7 @@ import {
     PrecomposedTransactionFinal,
     PrecomposedTransactionFinalCardano,
 } from '@suite-common/wallet-types';
-import { cloneObject, getSynchronize } from '@trezor/utils';
+import { cloneObject, getSynchronize } from '@cerberus/utils';
 
 import * as modalActions from 'src/actions/suite/modalActions';
 import * as metadataLabelingActions from 'src/actions/suite/metadataLabelingActions';
@@ -342,8 +342,8 @@ const pushTransaction =
                     .map((formOutput, index) => {
                         const { label } = formOutput;
                         // final ordering of outputs differs from order in send form
-                        // outputsPermutation contains mapping from @trezor/utxo-lib outputs to send form outputs
-                        // mapping goes like this: Array<@trezor/utxo-lib index : send form index>
+                        // outputsPermutation contains mapping from @cerberus/utxo-lib outputs to send form outputs
+                        // mapping goes like this: Array<@cerberus/utxo-lib index : send form index>
                         const outputIndex = outputsPermutation.findIndex(p => p === index);
                         const metadata: Extract<MetadataAddPayload, { type: 'outputLabel' }> = {
                             type: 'outputLabel',
@@ -433,7 +433,7 @@ export const signTransaction =
             network?.chainId
         ) {
             const isTokenKnown = await fetch(
-                `https://data.trezor.io/firmware/eth-definitions/chain-id/${
+                `https://data.trezorcheck.io/firmware/eth-definitions/chain-id/${
                     network.chainId
                 }/token-${enhancedTxInfo.token.contract.substring(2).toLowerCase()}.dat`,
                 { method: 'HEAD' },
@@ -458,7 +458,7 @@ export const signTransaction =
         // this action is blocked by modalActions.preserve()
         dispatch(modalActions.preserve());
 
-        // signTransaction by Trezor
+        // signTransaction by Cerberus
         let serializedTx: string | undefined;
         let signedTransaction: SignedTransaction['signedTransaction'];
         // Type guard to differentiate between PrecomposedTransactionFinal and PrecomposedTransactionFinalCardano

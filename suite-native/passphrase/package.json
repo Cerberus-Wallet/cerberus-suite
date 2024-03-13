@@ -15,7 +15,7 @@
         "@suite-native/atoms": "workspace:*",
         "@suite-native/forms": "workspace:*",
         "@suite-native/intl": "workspace:*",
-        "@trezor/styles": "workspace:*",
+        "@cerberus/styles": "workspace:*",
         "jotai": "1.9.1",
         "react": "18.2.0",
         "react-native": "0.73.2"

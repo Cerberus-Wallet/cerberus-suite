@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import BigNumber from 'bignumber.js';
 import { useTheme } from 'styled-components';
-import { Icon } from '@trezor/components';
+import { Icon } from '@cerberus/components';
 import { Translation } from 'src/components/suite';
 import { useSelector } from 'src/hooks/suite';
 import { selectSelectedAccountAutocompoundBalance } from 'src/reducers/wallet/selectedAccountReducer';

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styled, { useTheme } from 'styled-components';
-import { Button, Checkbox, H2, Icon, Divider } from '@trezor/components';
-import { spacingsPx } from '@trezor/theme';
+import { Button, Checkbox, H2, Icon, Divider } from '@cerberus/components';
+import { spacingsPx } from '@cerberus/theme';
 import { Modal, Translation, TrezorLink } from 'src/components/suite';
 import { useDispatch } from 'src/hooks/suite';
 import { openModal } from 'src/actions/suite/modalActions';

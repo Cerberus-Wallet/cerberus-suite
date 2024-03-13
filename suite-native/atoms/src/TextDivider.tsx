@@ -1,6 +1,6 @@
 import { View } from 'react-native';
 
-import { NativeStyleObject, prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { NativeStyleObject, prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 
 import { Box, BoxProps } from './Box';
 import { Divider } from './Divider';

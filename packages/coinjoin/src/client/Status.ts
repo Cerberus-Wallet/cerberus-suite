@@ -1,4 +1,4 @@
-import { TypedEmitter } from '@trezor/utils';
+import { TypedEmitter } from '@cerberus/utils';
 
 import * as coordinator from './coordinator';
 import { transformStatus } from '../utils/roundUtils';

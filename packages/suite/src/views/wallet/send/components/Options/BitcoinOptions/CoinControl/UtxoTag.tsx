@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { Icon, Tooltip, IconType } from '@trezor/components';
+import { Icon, Tooltip, IconType } from '@cerberus/components';
 
 interface UtxoTagProps {
     icon: IconType;

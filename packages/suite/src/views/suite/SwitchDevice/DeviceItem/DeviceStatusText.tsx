@@ -1,8 +1,8 @@
 import styled, { css, useTheme } from 'styled-components';
 import { TrezorDevice } from '@suite-common/suite-types';
 import * as deviceUtils from '@suite-common/suite-utils';
-import { Icon, TOOLTIP_DELAY_LONG, TruncateWithTooltip } from '@trezor/components';
-import { spacingsPx, typography } from '@trezor/theme';
+import { Icon, TOOLTIP_DELAY_LONG, TruncateWithTooltip } from '@cerberus/components';
+import { spacingsPx, typography } from '@cerberus/theme';
 import React, { MouseEventHandler } from 'react';
 import { Translation, WalletLabeling, useGetWalletLabel } from 'src/components/suite';
 

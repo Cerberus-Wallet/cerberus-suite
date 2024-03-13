@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
-import { Warning } from '@trezor/components';
+import { Warning } from '@cerberus/components';
 
 import { useSelector } from 'src/hooks/suite';
 import { WalletLayout } from 'src/components/wallet';
@@ -16,8 +16,8 @@ import {
     selectRegisteredUtxosByAccountKey,
 } from 'src/reducers/wallet/coinjoinReducer';
 import { Translation } from 'src/components/suite';
-import { spacingsPx } from '@trezor/theme';
-import { breakpointMediaQueries } from '@trezor/styles';
+import { spacingsPx } from '@cerberus/theme';
+import { breakpointMediaQueries } from '@cerberus/styles';
 import { ConfirmEvmExplanationModal } from 'src/components/suite/modals';
 
 const SendLayout = styled(WalletLayout)`

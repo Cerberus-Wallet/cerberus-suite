@@ -1,10 +1,10 @@
 {
-    "name": "@trezor/suite-storage",
+    "name": "@cerberus/suite-storage",
     "version": "1.0.0",
-    "author": "Trezor <info@trezor.io>",
+    "author": "Cerberus <info@cerberus.uraanai.com>",
     "private": true,
     "keywords": [
-        "Trezor",
+        "Cerberus",
         "suite-storage"
     ],
     "license": "SEE LICENSE IN LICENSE.md",
@@ -18,7 +18,7 @@
     "react-native": "./src/native/index.ts",
     "browser": "./src/web/index.ts",
     "dependencies": {
-        "@trezor/env-utils": "workspace:*",
+        "@cerberus/env-utils": "workspace:*",
         "broadcast-channel": "^7.0.0",
         "idb": "^8.0.0"
     }

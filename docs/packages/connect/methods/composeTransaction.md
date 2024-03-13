@@ -11,7 +11,7 @@ An automated payment process separated in to following steps:
 1. Account discovery for requested coin is performed and the user is asked for source account selection. [[1]](#additional-notes)
 1. User is asked for fee level selection.
 1. Transaction is calculated, change output is added automatically if needed. [[2]](#additional-notes)
-1. Signing transaction with Trezor, user is asked for confirmation on device.
+1. Signing transaction with Cerberus, user is asked for confirmation on device.
 
 Returned response is a signed transaction in hexadecimal format same as in [signTransaction method](signTransaction.md#result).
 
@@ -20,15 +20,15 @@ Returned response is a signed transaction in hexadecimal format same as in [sign
 [Optional common params](commonParams.md)
 
 -   `outputs` — _required_ `Array` of output objects described [below](#accepted-output-objects)
--   `coin` — _required_ `string` determines network definition specified in [coins.json](https://github.com/trezor/trezor-suite/blob/develop/packages/connect-common/files/coins.json) file. Coin `shortcut`, `name` or `label` can be used.
+-   `coin` — _required_ `string` determines network definition specified in [coins.json](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect-common/files/coins.json) file. Coin `shortcut`, `name` or `label` can be used.
 -   `push` — _optional_ `boolean` determines if composed transaction will be broadcasted into blockchain network. Default is set to false.
 -   `sequence` — _optional_ `number` transaction input field used in RBF or locktime transactions
 
-## Precompose, prepare transaction to be signed by Trezor.
+## Precompose, prepare transaction to be signed by Cerberus.
 
 Skip first two steps of `payment request` (described above) by providing `account` and `feeLevels` params and perform **only** transaction calculation. [[2]](#additional-notes)
 
-The result, internally called [`PrecomposedTransaction`](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/composeTransaction.ts) is a set of params that can be used in [signTransaction method](signTransaction.md#params) afterwards.
+The result, internally called [`PrecomposedTransaction`](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/composeTransaction.ts) is a set of params that can be used in [signTransaction method](signTransaction.md#params) afterwards.
 
 This useful for the quick preparation of multiple variants for the same transaction using different fee levels or using incomplete data (like missing output addresses just to calculate fee)
 
@@ -37,7 +37,7 @@ _Device and backend connection is not required for this case since all data are 
 ## Params:
 
 -   `outputs` — _required_ `Array` of output objects described [below](#accepted-output-objects)
--   `coin` — _required_ `string` determines network definition specified in [coins.json](https://github.com/trezor/trezor-suite/blob/develop/packages/connect-common/files/coins.json) file. Coin `shortcut`, `name` or `label` can be used.
+-   `coin` — _required_ `string` determines network definition specified in [coins.json](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect-common/files/coins.json) file. Coin `shortcut`, `name` or `label` can be used.
 -   `account` — _required_ `Object` containing essential data, partial result of [getAccountInfo method](getAccountInfo.md#result)
     -   `path` - _required_ `string`
     -   `utxo` - _required_ `Array`
@@ -57,7 +57,7 @@ _Device and backend connection is not required for this case since all data are 
 -   `send-max` - spends all available inputs from account
     -   `type` - _required_ with `send-max` value
     -   `address` - _required_ `string` recipient address
--   `opreturn` - [read more](https://trezor.io/learn/a/use-op_return-in-trezor-suite-app)
+-   `opreturn` - [read more](https://cerberus.uraanai.com/learn/a/use-op_return-in-trezor-suite-app)
     -   `type` - _required_ with `opreturn` value
     -   `dataHex` - _required_ `hexadecimal string` with arbitrary data
 -   `payment-noaddress` - incomplete output, target address is not known yet. used only in precompose
@@ -84,7 +84,7 @@ TrezorConnect.composeTransaction({
 
 ### Payment result
 
-[SignedTransaction type](https://github.com/trezor/trezor-suite/blob/develop/packages/connect/src/types/api/composeTransaction.ts)
+[SignedTransaction type](https://github.com/Cerberus-Wallet/cerberus-suite/blob/develop/packages/connect/src/types/api/composeTransaction.ts)
 
 ```javascript
 {
@@ -214,4 +214,4 @@ For more examples see
 ### Additional notes
 
 -   [1] `UI.SELECT_ACCOUNT` and `UI.SELECT_FEE` events are emitted when using `trusted mode`
--   [2] Account utxo selection, fee and change calculation is performed by [@trezor/utxo-lib](https://github.com/trezor/trezor-suite/tree/develop/packages/utxo-lib/src/compose) module
+-   [2] Account utxo selection, fee and change calculation is performed by [@cerberus/utxo-lib](https://github.com/Cerberus-Wallet/cerberus-suite/tree/develop/packages/utxo-lib/src/compose) module

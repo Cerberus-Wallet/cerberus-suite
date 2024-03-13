@@ -1,7 +1,7 @@
-import { CoinjoinBackend, CoinjoinClient, CoinjoinPrisonInmate } from '@trezor/coinjoin';
-import { createIpcProxy } from '@trezor/ipc-proxy';
-import { PartialRecord } from '@trezor/type-utils';
-import { isDesktop } from '@trezor/env-utils';
+import { CoinjoinBackend, CoinjoinClient, CoinjoinPrisonInmate } from '@cerberus/coinjoin';
+import { createIpcProxy } from '@cerberus/ipc-proxy';
+import { PartialRecord } from '@cerberus/type-utils';
+import { isDesktop } from '@cerberus/env-utils';
 import { CoinjoinServerEnvironment } from 'src/types/wallet/coinjoin';
 import { NetworkSymbol } from 'src/types/wallet';
 import { getCoinjoinConfig } from './config';
@@ -14,7 +14,7 @@ const loadInstance = (settings: ReturnType<typeof getCoinjoinConfig>) => {
         ] as const);
     }
 
-    return import(/* webpackChunkName: "coinjoin" */ '@trezor/coinjoin').then(
+    return import(/* webpackChunkName: "coinjoin" */ '@cerberus/coinjoin').then(
         pkg => [new pkg.CoinjoinBackend(settings), new pkg.CoinjoinClient(settings)] as const,
     );
 };

@@ -3,7 +3,7 @@ import BlockchainLink, {
     SubscriptionAccountInfo,
     BlockchainLinkParams,
     BlockchainLinkResponse,
-} from '@trezor/blockchain-link';
+} from '@cerberus/blockchain-link';
 import { createBlockchainMessage, BLOCKCHAIN, CoreEventMessage } from '../events';
 import { ERRORS } from '../constants';
 import {

@@ -10,7 +10,7 @@ export default meta;
 export const Link: StoryObj<LinkProps> = {
     args: {
         children: 'This is a link.',
-        href: 'https://trezor.io',
+        href: 'https://cerberus.uraanai.com',
     },
     argTypes: {
         target: {

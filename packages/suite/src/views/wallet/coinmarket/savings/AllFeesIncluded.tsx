@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import { Link, Tooltip } from '@trezor/components';
-import { INVITY_SCHEDULE_OF_FEES } from '@trezor/urls';
+import { Link, Tooltip } from '@cerberus/components';
+import { INVITY_SCHEDULE_OF_FEES } from '@cerberus/urls';
 import { Translation } from 'src/components/suite';
-import { typography } from '@trezor/theme';
+import { typography } from '@cerberus/theme';
 
 const StyledTooltip = styled(Tooltip)`
     display: inline-block;

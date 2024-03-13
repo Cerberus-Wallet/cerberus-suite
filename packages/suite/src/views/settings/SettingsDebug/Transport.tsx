@@ -1,9 +1,9 @@
 import { useMemo } from 'react';
 
-import { Checkbox } from '@trezor/components';
-import { isDesktop } from '@trezor/env-utils';
+import { Checkbox } from '@cerberus/components';
+import { isDesktop } from '@cerberus/env-utils';
 import { useDispatch, useSelector } from 'src/hooks/suite';
-import { ArrayElement } from '@trezor/type-utils';
+import { ArrayElement } from '@cerberus/type-utils';
 
 import { setDebugMode } from 'src/actions/suite/suiteActions';
 import { DebugModeOptions } from 'src/reducers/suite/suiteReducer';
@@ -12,7 +12,7 @@ import { ActionColumn, SectionItem, TextColumn } from 'src/components/suite';
 type TransportMenuItem = {
     name: ArrayElement<NonNullable<DebugModeOptions['transports']>>;
     // todo: this is not true, at the moment it means something like "registered by connect"
-    // @trezor/connect is actively using this transport
+    // @cerberus/connect is actively using this transport
     active?: boolean;
 };
 

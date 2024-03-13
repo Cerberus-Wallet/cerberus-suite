@@ -1,7 +1,7 @@
 import { createAction } from '@reduxjs/toolkit';
 
 import { createThunk, ExtraDependencies } from '@suite-common/redux-utils';
-import { PROTO } from '@trezor/connect';
+import { PROTO } from '@cerberus/connect';
 
 import { testMocks } from './mocks';
 
@@ -118,7 +118,7 @@ export const extraDependenciesMock: ExtraDependencies = {
         connectInitSettings: {
             debug: false,
             manifest: {
-                email: 'info@trezor.io',
+                email: 'info@cerberus.uraanai.com',
                 appUrl: '@suite-native/app',
             },
         },

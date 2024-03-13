@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { Link, H2, Paragraph } from '@trezor/components';
+import { Link, H2, Paragraph } from '@cerberus/components';
 import { Modal } from 'src/components/suite';
-import { getCommitHash, getSuiteVersion } from '@trezor/env-utils';
+import { getCommitHash, getSuiteVersion } from '@cerberus/env-utils';
 
 const Wrapper = styled.div`
     display: flex;
@@ -21,7 +21,7 @@ export const Version = () => (
             <Line />
             <Paragraph type="callout">LAST COMMIT HASH</Paragraph>
             <Link
-                href={`https://github.com/trezor/trezor-suite/commits/${getCommitHash()}`}
+                href={`https://github.com/Cerberus-Wallet/cerberus-suite/commits/${getCommitHash()}`}
                 data-test="@version/commit-hash-link"
             >
                 <H2>{getCommitHash()}</H2>

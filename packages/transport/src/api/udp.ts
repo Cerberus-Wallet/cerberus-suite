@@ -1,5 +1,5 @@
 import UDP from 'dgram';
-import { isNotUndefined } from '@trezor/utils';
+import { isNotUndefined } from '@cerberus/utils';
 
 import { AbstractApi, AbstractApiConstructorParams } from './abstract';
 import { AsyncResultWithTypedError, ResultWithTypedError } from '../types';

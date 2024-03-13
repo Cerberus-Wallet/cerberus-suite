@@ -5,7 +5,7 @@ import type { AppState } from '../types';
 import * as methodActions from '../actions/methodActions';
 import { useActions } from '../hooks';
 
-// todo: @trezor/utils candidate
+// todo: @cerberus/utils candidate
 const copy = data => {
     const el = document.createElement('textarea');
     el.value = data;

@@ -1,5 +1,5 @@
 import { MouseEventHandler } from 'react';
-import { Button } from '@trezor/components';
+import { Button } from '@cerberus/components';
 import { Translation, TroubleshootingTips } from 'src/components/suite';
 import { rerun } from 'src/actions/recovery/recoveryActions';
 import { useDevice, useDispatch, useSelector } from 'src/hooks/suite';

@@ -1,11 +1,11 @@
-# @trezor/suite-web
+# @cerberus/suite-web
 
 Build target for web environment.
 
 ## Development
 
 ```
-yarn workspace @trezor/suite-web dev
+yarn workspace @cerberus/suite-web dev
 ```
 
 ## Bundle analysis
@@ -13,5 +13,5 @@ yarn workspace @trezor/suite-web dev
 Visualize size of output files with [Webpack Bundle Analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer)
 
 ```
-yarn workspace @trezor/suite-web analyze
+yarn workspace @cerberus/suite-web analyze
 ```

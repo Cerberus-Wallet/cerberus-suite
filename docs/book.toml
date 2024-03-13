@@ -1,6 +1,6 @@
 [book]
-title = "Trezor Suite"
-description = "Documentation of Trezor Suite."
+title = "Cerberus Suite"
+description = "Documentation of Cerberus Suite."
 src = "."
 
 [build]

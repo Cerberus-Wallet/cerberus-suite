@@ -2,7 +2,7 @@ import { A } from '@mobily/ts-belt';
 
 import { networks, NetworkSymbol } from '@suite-common/wallet-config';
 import { amountToSatoshi, formatAmount } from '@suite-common/wallet-utils';
-import { PROTO } from '@trezor/connect';
+import { PROTO } from '@cerberus/connect';
 
 import { makeFormatter } from '../makeFormatter';
 import { FormatterConfig } from '../types';

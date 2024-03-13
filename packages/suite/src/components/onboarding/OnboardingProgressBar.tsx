@@ -1,7 +1,7 @@
 import { ReactNode, Fragment } from 'react';
 import styled, { css, useTheme } from 'styled-components';
-import { Icon, variables } from '@trezor/components';
-import { spacingsPx, typography } from '@trezor/theme';
+import { Icon, variables } from '@cerberus/components';
+import { spacingsPx, typography } from '@cerberus/theme';
 
 const ProgressBarWrapper = styled.div`
     display: flex;

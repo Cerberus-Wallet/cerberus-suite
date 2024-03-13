@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Translation } from 'src/components/suite';
-import { Button, variables } from '@trezor/components';
+import { Button, variables } from '@cerberus/components';
 import { useCoinmarketP2pOffersContext } from 'src/hooks/wallet/useCoinmarketP2pOffers';
 
 const Wrapper = styled.div`

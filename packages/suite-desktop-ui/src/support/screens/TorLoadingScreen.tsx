@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Modal } from '@trezor/components';
+import { Modal } from '@cerberus/components';
 
 import { ThemeProvider } from 'src/support/suite/ThemeProvider';
 import { TorLoader } from 'src/components/suite';

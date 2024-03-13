@@ -9,7 +9,7 @@ import {
     isValidImageWidth,
 } from 'src/utils/suite/homescreen';
 import * as fixtures from '../__fixtures__/homescreen';
-import { DeviceModelInternal } from '@trezor/connect';
+import { DeviceModelInternal } from '@cerberus/connect';
 
 describe('homescreen', () => {
     describe('fileToDataUrl', () => {

@@ -10,7 +10,7 @@ import {
     GetAccountDescriptorParams,
     GetAccountDescriptorResponse,
 } from '../types/api/getAccountDescriptor';
-import { Assert } from '@trezor/schema-utils';
+import { Assert } from '@cerberus/schema-utils';
 
 type Request = GetAccountDescriptorParams & { address_n: number[]; coinInfo: CoinInfo };
 

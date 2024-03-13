@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 
 const Container = styled.div`
     display: flex;

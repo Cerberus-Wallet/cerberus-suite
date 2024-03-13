@@ -3,7 +3,7 @@ import { TouchableOpacity } from 'react-native';
 
 import { Box, Text, Switch, RoundedIcon } from '@suite-native/atoms';
 import { IconName } from '@suite-common/icons';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 
 type TouchableSwitchRowProps = {
     isChecked: boolean;

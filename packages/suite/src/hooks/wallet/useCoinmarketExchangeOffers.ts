@@ -2,7 +2,7 @@ import { createContext, useContext, useState, useEffect, useCallback } from 'rea
 
 import { ExchangeTrade } from 'invity-api';
 
-import { useTimer } from '@trezor/react-utils';
+import { useTimer } from '@cerberus/react-utils';
 import { notificationsActions } from '@suite-common/toast-notifications';
 import { networksCompatibility as networks } from '@suite-common/wallet-config';
 import { amountToSatoshi } from '@suite-common/wallet-utils';

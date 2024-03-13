@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { Card, Paragraph, variables } from '@trezor/components';
-import { borders, spacingsPx } from '@trezor/theme';
+import { Card, Paragraph, variables } from '@cerberus/components';
+import { borders, spacingsPx } from '@cerberus/theme';
 
 export const StyledCard = styled(Card)`
     padding: ${spacingsPx.sm};

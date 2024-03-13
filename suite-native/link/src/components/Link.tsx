@@ -6,8 +6,8 @@ import Animated, {
     useSharedValue,
 } from 'react-native-reanimated';
 
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
-import { Color } from '@trezor/theme';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
+import { Color } from '@cerberus/theme';
 
 import { useOpenLink } from '../useOpenLink';
 

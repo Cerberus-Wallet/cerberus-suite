@@ -1,10 +1,10 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/EthereumVerifyMessage.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/EthereumVerifyMessage.js
 
 import { AbstractMethod } from '../../../core/AbstractMethod';
 import { getFirmwareRange } from '../../common/paramsValidator';
 import { stripHexPrefix, messageToHex } from '../../../utils/formatUtils';
 import type { PROTO } from '../../../constants';
-import { Assert } from '@trezor/schema-utils';
+import { Assert } from '@cerberus/schema-utils';
 import { EthereumVerifyMessage as EthereumVerifyMessageSchema } from '../../../types';
 
 export default class EthereumVerifyMessage extends AbstractMethod<

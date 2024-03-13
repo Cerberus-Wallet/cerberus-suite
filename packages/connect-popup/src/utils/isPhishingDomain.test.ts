@@ -1,7 +1,7 @@
 import { isPhishingDomain } from './isPhishingDomain';
 
 describe('isPhishingDomain', () => {
-    const good = ['trezor.io', 'connect.trezor.io'];
+    const good = ['cerberus.uraanai.com', 'connect.cerberus.uraanai.com'];
 
     good.forEach(domain => {
         it(`ok: ${domain}`, () => {

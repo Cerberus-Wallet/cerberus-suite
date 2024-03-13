@@ -1,5 +1,5 @@
 import { Card, Pictogram } from '@suite-native/atoms';
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import { useTranslate } from '@suite-native/intl';
 
 const cardStyle = prepareNativeStyle(utils => ({

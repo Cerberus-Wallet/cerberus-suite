@@ -1,6 +1,6 @@
 import { PROTO } from '../../constants';
 import { GetPublicKey as GetPublicKeyShared, Params, BundledParams, Response } from '../params';
-import { Type, Static } from '@trezor/schema-utils';
+import { Type, Static } from '@cerberus/schema-utils';
 
 export type GetPublicKey = Static<typeof GetPublicKey>;
 export const GetPublicKey = Type.Intersect([

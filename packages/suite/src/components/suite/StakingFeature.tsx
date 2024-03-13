@@ -1,8 +1,8 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
-import { H3, Paragraph, variables } from '@trezor/components';
+import { H3, Paragraph, variables } from '@cerberus/components';
 import { IconBorderedWrapper } from 'src/components/suite';
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 
 const StyledH3 = styled(H3)<{ size?: string }>`
     margin-top: ${spacingsPx.lg};

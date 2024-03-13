@@ -1,4 +1,4 @@
-import * as envUtils from '@trezor/env-utils';
+import * as envUtils from '@cerberus/env-utils';
 
 import * as messageSystem from '../messageSystemUtils';
 import * as fixtures from '../__fixtures__/messageSystemUtils';

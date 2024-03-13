@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Button, Tooltip } from '@trezor/components';
+import { Button, Tooltip } from '@cerberus/components';
 import { useSendFormContext } from 'src/hooks/wallet';
 import { Translation } from 'src/components/suite';
 import { DestinationTag } from './DestinationTag';

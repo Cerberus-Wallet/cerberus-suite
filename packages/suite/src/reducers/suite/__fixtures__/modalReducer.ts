@@ -1,5 +1,5 @@
 import { testMocks } from '@suite-common/test-utils';
-import { DEVICE, UI } from '@trezor/connect';
+import { DEVICE, UI } from '@cerberus/connect';
 
 import { MODAL } from 'src/actions/suite/constants';
 

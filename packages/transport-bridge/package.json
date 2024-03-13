@@ -1,5 +1,5 @@
 {
-    "name": "@trezor/transport-bridge",
+    "name": "@cerberus/transport-bridge",
     "version": "3.0.0",
     "main": "src/index",
     "license": "See LICENSE.md in repo root",
@@ -17,10 +17,10 @@
         "pkg": "^5.8.1"
     },
     "dependencies": {
-        "@trezor/node-utils": "workspace:*",
-        "@trezor/protocol": "workspace:*",
-        "@trezor/transport": "workspace:*",
-        "@trezor/utils": "workspace:*",
+        "@cerberus/node-utils": "workspace:*",
+        "@cerberus/protocol": "workspace:*",
+        "@cerberus/transport": "workspace:*",
+        "@cerberus/utils": "workspace:*",
         "usb": "^2.11.0"
     },
     "pkg": {

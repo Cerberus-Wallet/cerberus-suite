@@ -25,11 +25,11 @@ function init() {
     mainWindow.webContents.on(
         'new-window',
         (event, url, frameName, disposition, options, _additionalFeatures) => {
-            if (url.indexOf('connect.trezor.io') > 0) {
+            if (url.indexOf('connect.cerberus.uraanai.com') > 0) {
                 event.preventDefault();
                 const connectPopup = new BrowserWindow(options);
                 event.newGuest = connectPopup;
-                // handle external links from @trezor/connect popup
+                // handle external links from @cerberus/connect popup
                 connectPopup.webContents.on('new-window', (_event, windowUrl) => {
                     event.preventDefault();
                     shell.openExternal(windowUrl);

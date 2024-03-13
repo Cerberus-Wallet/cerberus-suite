@@ -1,10 +1,10 @@
 import path from 'path';
 
-import { isNotUndefined } from '@trezor/utils';
-import { TypedEmitter } from '@trezor/utils';
-import { InterceptedEvent } from '@trezor/request-manager';
+import { isNotUndefined } from '@cerberus/utils';
+import { TypedEmitter } from '@cerberus/utils';
+import { InterceptedEvent } from '@cerberus/request-manager';
 import { isDevEnv } from '@suite-common/suite-utils';
-import type { HandshakeClient, TorStatus } from '@trezor/suite-desktop-api';
+import type { HandshakeClient, TorStatus } from '@cerberus/suite-desktop-api';
 
 import { StrictBrowserWindow } from '../typed-electron';
 import type { Store } from '../libs/store';

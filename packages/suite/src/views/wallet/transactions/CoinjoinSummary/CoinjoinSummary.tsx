@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { H3 } from '@trezor/components';
+import { H3 } from '@cerberus/components';
 import { Translation } from 'src/components/suite/Translation';
 
 import { CoinjoinBalanceSection } from './CoinjoinBalanceSection';

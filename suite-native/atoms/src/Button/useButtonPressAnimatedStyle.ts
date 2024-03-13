@@ -5,8 +5,8 @@ import {
     withTiming,
 } from 'react-native-reanimated';
 
-import { useNativeStyles } from '@trezor/styles';
-import { Color } from '@trezor/theme';
+import { useNativeStyles } from '@cerberus/styles';
+import { Color } from '@cerberus/theme';
 
 export const BUTTON_PRESS_ANIMATION_DURATION = 70;
 

@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/utils/formatUtils.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/utils/formatUtils.js
 
 import BigNumber from 'bignumber.js';
 import type { CoinInfo } from '../types';

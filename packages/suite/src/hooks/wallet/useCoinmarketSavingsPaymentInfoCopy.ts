@@ -1,5 +1,5 @@
 import type { SavingsPaymentInfo } from 'invity-api';
-import { copyToClipboard } from '@trezor/dom-utils';
+import { copyToClipboard } from '@cerberus/dom-utils';
 import { useDispatch } from 'src/hooks/suite';
 import { notificationsActions } from '@suite-common/toast-notifications';
 

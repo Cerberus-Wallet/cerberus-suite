@@ -1,11 +1,11 @@
 import { app, ipcMain } from 'electron';
 
-import TrezorConnect from '@trezor/connect';
-import { createIpcProxyHandler, IpcProxyHandlerOptions } from '@trezor/ipc-proxy';
+import TrezorConnect from '@cerberus/connect';
+import { createIpcProxyHandler, IpcProxyHandlerOptions } from '@cerberus/ipc-proxy';
 
 import type { Module } from './index';
 
-export const SERVICE_NAME = '@trezor/connect';
+export const SERVICE_NAME = '@cerberus/connect';
 
 export const init: Module = ({ store }) => {
     const { logger } = global;

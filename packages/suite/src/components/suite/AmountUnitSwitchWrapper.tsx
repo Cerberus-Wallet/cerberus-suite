@@ -1,10 +1,10 @@
 import { MouseEvent, ReactNode } from 'react';
 import styled from 'styled-components';
-import { TOOLTIP_DELAY_NONE, TOOLTIP_DELAY_NORMAL, Tooltip } from '@trezor/components';
+import { TOOLTIP_DELAY_NONE, TOOLTIP_DELAY_NORMAL, Tooltip } from '@cerberus/components';
 import { useBitcoinAmountUnit } from 'src/hooks/wallet/useBitcoinAmountUnit';
 import { NetworkSymbol } from 'src/types/wallet';
 import { Translation } from './Translation';
-import { mediaQueries } from '@trezor/styles';
+import { mediaQueries } from '@cerberus/styles';
 
 const Container = styled.div`
     position: relative;

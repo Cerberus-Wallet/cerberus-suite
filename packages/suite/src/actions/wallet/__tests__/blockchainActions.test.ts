@@ -1,4 +1,4 @@
-import { PROTO } from '@trezor/connect';
+import { PROTO } from '@cerberus/connect';
 import { testMocks } from '@suite-common/test-utils';
 import { notificationsActions, notificationsReducer } from '@suite-common/toast-notifications';
 import {
@@ -151,7 +151,7 @@ describe('Blockchain Actions', () => {
 
     fixtures.onBlock.forEach(f => {
         it(`onBlock: ${f.description}`, async () => {
-            // set fixtures in @trezor/connect
+            // set fixtures in @cerberus/connect
             if (Array.isArray(f.connect)) {
                 testMocks.setTrezorConnectFixtures(
                     f.connect.map(payload => ({ success: true, payload })),

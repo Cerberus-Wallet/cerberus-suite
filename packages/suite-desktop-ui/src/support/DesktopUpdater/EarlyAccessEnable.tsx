@@ -2,9 +2,9 @@ import { useCallback, useState } from 'react';
 
 import styled from 'styled-components';
 
-import { analytics, EventType } from '@trezor/suite-analytics';
-import { desktopApi } from '@trezor/suite-desktop-api';
-import { Button, Paragraph, Tooltip, Image } from '@trezor/components';
+import { analytics, EventType } from '@cerberus/suite-analytics';
+import { desktopApi } from '@cerberus/suite-desktop-api';
+import { Button, Paragraph, Tooltip, Image } from '@cerberus/components';
 
 import { CheckItem, Translation, Modal } from 'src/components/suite';
 import { DialogModal } from 'src/components/suite/modals/Modal/DialogRenderer';

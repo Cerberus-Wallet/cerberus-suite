@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Button } from '@trezor/components';
+import { Button } from '@cerberus/components';
 
 import * as trezorConnectActions from '../actions/trezorConnectActions';
 import { useSelector, useActions } from '../hooks';

@@ -8,7 +8,7 @@ import {
     selectCurrentCoinjoinWheelStates,
     selectCurrentSessionDeadlineInfo,
 } from 'src/reducers/wallet/coinjoinReducer';
-import { typography, spacingsPx } from '@trezor/theme';
+import { typography, spacingsPx } from '@cerberus/theme';
 
 const Cointainer = styled.div`
     height: 40px;

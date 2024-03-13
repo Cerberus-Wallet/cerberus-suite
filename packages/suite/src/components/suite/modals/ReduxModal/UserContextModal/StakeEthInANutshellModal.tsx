@@ -1,10 +1,10 @@
 import styled, { useTheme } from 'styled-components';
-import { Button, Icon, IconType, Paragraph } from '@trezor/components';
+import { Button, Icon, IconType, Paragraph } from '@cerberus/components';
 import { Modal, Translation } from 'src/components/suite';
 import { TranslationKey } from '@suite-common/intl-types';
 import { useDispatch } from 'src/hooks/suite';
 import { openModal } from 'src/actions/suite/modalActions';
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 
 const StyledModal = styled(Modal)`
     width: 380px;

@@ -1,5 +1,5 @@
-import { DeviceModelInternal } from '@trezor/connect';
-import { Environment } from '@trezor/env-utils';
+import { DeviceModelInternal } from '@cerberus/connect';
+import { Environment } from '@cerberus/env-utils';
 
 /**
  * A group of Guide content.

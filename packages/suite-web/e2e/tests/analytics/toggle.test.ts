@@ -1,8 +1,8 @@
 // @group:other
 // @retry=2
 
-import { EventType } from '@trezor/suite-analytics';
-import { urlSearchParams } from '@trezor/suite/src/utils/suite/metadata';
+import { EventType } from '@cerberus/suite-analytics';
+import { urlSearchParams } from '@cerberus/suite/src/utils/suite/metadata';
 
 type Requests = ReturnType<typeof urlSearchParams>[];
 let requests: Requests;

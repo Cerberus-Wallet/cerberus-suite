@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-import { spacingsPx } from '@trezor/theme';
+import { spacingsPx } from '@cerberus/theme';
 
-import { Card, Image, Note, Paragraph, Switch } from '@trezor/components';
+import { Card, Image, Note, Paragraph, Switch } from '@cerberus/components';
 import { Translation } from 'src/components/suite';
 
 const Container = styled(Card)`

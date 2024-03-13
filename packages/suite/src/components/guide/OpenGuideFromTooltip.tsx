@@ -2,8 +2,8 @@ import { MouseEvent } from 'react';
 import styled, { useTheme } from 'styled-components';
 import { transparentize } from 'polished';
 
-import { Icon } from '@trezor/components';
-import { borders, spacingsPx, typography } from '@trezor/theme';
+import { Icon } from '@cerberus/components';
+import { borders, spacingsPx, typography } from '@cerberus/theme';
 import { Translation } from 'src/components/suite';
 import { useGuideOpenNode } from 'src/hooks/guide';
 

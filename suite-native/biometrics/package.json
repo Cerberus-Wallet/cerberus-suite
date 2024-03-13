@@ -18,7 +18,7 @@
         "@suite-native/atoms": "workspace:*",
         "@suite-native/intl": "workspace:*",
         "@suite-native/storage": "workspace:*",
-        "@trezor/styles": "workspace:*",
+        "@cerberus/styles": "workspace:*",
         "expo-local-authentication": "13.8.0",
         "jotai": "1.9.1",
         "react": "18.2.0",

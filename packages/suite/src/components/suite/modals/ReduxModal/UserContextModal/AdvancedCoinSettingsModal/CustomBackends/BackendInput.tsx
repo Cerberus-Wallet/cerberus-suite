@@ -1,4 +1,4 @@
-import { Input, Spinner, Tooltip } from '@trezor/components';
+import { Input, Spinner, Tooltip } from '@cerberus/components';
 import { Translation, StatusLight } from 'src/components/suite';
 
 const ActiveStatus = (

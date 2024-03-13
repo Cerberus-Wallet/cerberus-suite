@@ -1,7 +1,7 @@
 import { Translation } from 'src/components/suite';
 
 import { useLayoutSize } from 'src/hooks/suite';
-import { Button, variables } from '@trezor/components';
+import { Button, variables } from '@cerberus/components';
 import { useState } from 'react';
 import styled from 'styled-components';
 

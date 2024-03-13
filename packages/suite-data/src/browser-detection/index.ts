@@ -5,8 +5,8 @@ import {
     CHROME_UPDATE_URL,
     FIREFOX_UPDATE_URL,
     CHROME_ANDROID_URL,
-} from '@trezor/urls';
-import { getDeviceType, getBrowserName, getBrowserVersion, getOsNameWeb } from '@trezor/env-utils';
+} from '@cerberus/urls';
+import { getDeviceType, getBrowserName, getBrowserVersion, getOsNameWeb } from '@cerberus/env-utils';
 
 import style from './styles.css';
 import iconChrome from '../../files/images/browsers/chrome.svg';
@@ -55,8 +55,8 @@ window.addEventListener('load', () => {
     const getSupportedDevicesList = (props: MainHtmlProps) =>
         props.supportedDevicesList
             ? `<ul class=${style.list}>
-                <li>Trezor Suite desktop app</li>
-                <li>Trezor Suite for web </li>
+                <li>Cerberus Suite desktop app</li>
+                <li>Cerberus Suite for web </li>
                 <li>Mobile web app for Chrome on Android</li>
             </ul>`
             : '';
@@ -116,11 +116,11 @@ window.addEventListener('load', () => {
     const titleOutdated = 'Your browser is outdated';
 
     const primarySubtitle =
-        'We recommend using the Trezor Suite desktop app for the best experience.';
+        'We recommend using the Cerberus Suite desktop app for the best experience.';
     const secondarySubtitleDownload =
-        'Alternatively, download a supported browser to use the Trezor Suite web app.';
+        'Alternatively, download a supported browser to use the Cerberus Suite web app.';
     const secondarySubtitleUpdate =
-        'Alternatively, update your web browser to the latest version to use the Trezor Suite web app.';
+        'Alternatively, update your web browser to the latest version to use the Cerberus Suite web app.';
 
     const unsupportedBrowser = getMainHtml({
         title: titleUnsupported,
@@ -147,7 +147,7 @@ window.addEventListener('load', () => {
 
     const getChromeAndroid = getMainHtml({
         title: titleUnsupported,
-        subtitle: 'The Trezor Suite mobile web app is only supported in Chrome for Android.',
+        subtitle: 'The Cerberus Suite mobile web app is only supported in Chrome for Android.',
         supportedBrowsers: [chromeMobile],
         continueToSuite: true,
     });
@@ -155,7 +155,7 @@ window.addEventListener('load', () => {
     const iOS = getMainHtml({
         title: 'Suite doesn’t work on iOS yet',
         subtitle:
-            'We’re working hard to bring the Trezor Suite mobile web app to iOS. In the meantime, you can use Trezor Suite on the following platforms:',
+            'We’re working hard to bring the Cerberus Suite mobile web app to iOS. In the meantime, you can use Cerberus Suite on the following platforms:',
         supportedDevicesList: true,
     });
 

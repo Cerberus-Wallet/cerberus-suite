@@ -1,4 +1,4 @@
-import { PROTO } from '@trezor/connect';
+import { PROTO } from '@cerberus/connect';
 import { SEND } from 'src/actions/wallet/constants';
 import { Account } from '@suite-common/wallet-types';
 import { FormState as SendFormState, Output } from 'src/types/wallet/sendForm';

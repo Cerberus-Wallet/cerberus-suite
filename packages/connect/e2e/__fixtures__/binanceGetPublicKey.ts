@@ -13,7 +13,7 @@ export default {
             'offer caution gift cross surge pretty orange during eye soldier popular holiday mention east eight office fashion ill parrot vault rent devote earth cousin',
     },
     tests: [
-        // https://github.com/trezor/trezor-firmware/blob/main/tests/device_tests/binance/test_get_public_key.py
+        // https://github.com/Cerberus-Wallet/cerberus-firmware/blob/main/tests/device_tests/binance/test_get_public_key.py
         {
             description: 'binanceGetPublicKey',
             params: {

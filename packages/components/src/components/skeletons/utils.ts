@@ -1,4 +1,4 @@
-import { Elevation, mapElevationToBackground } from '@trezor/theme';
+import { Elevation, mapElevationToBackground } from '@cerberus/theme';
 import { css, keyframes } from 'styled-components';
 import { mapElevationToSkeletonForeground } from './colors';
 

@@ -1,4 +1,4 @@
-// https://github.com/trezor/connect/blob/develop/src/js/env/node/networkUtils.js
+// https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/env/node/networkUtils.js
 
 import fetch from 'cross-fetch';
 import { promises as fs } from 'fs';

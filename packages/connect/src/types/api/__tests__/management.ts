@@ -3,7 +3,7 @@ import { TrezorConnect } from '../../..';
 export const management = async (api: TrezorConnect) => {
     const reset = await api.resetDevice({
         strength: 1,
-        label: 'My Trezor',
+        label: 'My Cerberus',
         u2f_counter: 0,
         pin_protection: true,
         passphrase_protection: true,
@@ -25,7 +25,7 @@ export const management = async (api: TrezorConnect) => {
         homescreen: 'string',
         display_rotation: 180,
         use_passphrase: true,
-        label: 'My Trezor',
+        label: 'My Cerberus',
         safety_checks: 'Strict',
     });
     if (settings.success) settings.payload.message.toLowerCase();
@@ -64,7 +64,7 @@ export const management = async (api: TrezorConnect) => {
     const recovery = await api.recoveryDevice({
         passphrase_protection: true,
         pin_protection: true,
-        label: 'My Trezor',
+        label: 'My Cerberus',
         type: 1,
         dry_run: true,
         word_count: 24,

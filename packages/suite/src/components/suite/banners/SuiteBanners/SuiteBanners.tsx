@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-import { isDesktop } from '@trezor/env-utils';
+import { isDesktop } from '@cerberus/env-utils';
 import { selectBannerMessage } from '@suite-common/message-system';
 import { selectDevice } from '@suite-common/wallet-core';
 
@@ -69,7 +69,7 @@ export const SuiteBanners = () => {
         device?.connected &&
         device?.features?.safety_checks === 'PromptTemporarily'
     ) {
-        // PromptTemporarily was probably set intentionally via Suite and will change back to Strict when Trezor reboots.
+        // PromptTemporarily was probably set intentionally via Suite and will change back to Strict when Cerberus reboots.
         // Let the user dismiss the warning.
         banner = <SafetyChecksBanner onDismiss={() => setSafetyChecksDismissed(true)} />;
         priority = 50;

@@ -7,14 +7,14 @@ export const Changelog = () => {
 
     return (
         <section>
-            <a href="https://www.npmjs.org/package/@trezor/connect-web" rel="nofollow">
+            <a href="https://www.npmjs.org/package/@cerberus/connect-web" rel="nofollow">
                 <img
                     src="https://img.shields.io/npm/v/%40trezor/connect-web/latest?label=connect-web"
                     alt="NPM"
                 />
             </a>
             &nbsp;
-            <a href="https://www.npmjs.org/package/@trezor/connect" rel="nofollow">
+            <a href="https://www.npmjs.org/package/@cerberus/connect" rel="nofollow">
                 <img
                     src="https://img.shields.io/npm/v/%40trezor/connect/latest?label=connect"
                     alt="NPM"

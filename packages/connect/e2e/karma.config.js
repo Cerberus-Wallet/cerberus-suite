@@ -125,7 +125,7 @@ module.exports = config => {
                 // replace ws module used in ./tests/websocket-client.js
                 new webpack.NormalModuleReplacementPlugin(
                     /ws$/,
-                    '@trezor/blockchain-link/lib/utils/ws',
+                    '@cerberus/blockchain-link/lib/utils/ws',
                 ),
 
                 new webpack.DefinePlugin({

@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
-import { analytics, EventType } from '@trezor/suite-analytics';
+import { analytics, EventType } from '@cerberus/suite-analytics';
 
-import { desktopApi, SuiteThemeVariant } from '@trezor/suite-desktop-api';
+import { desktopApi, SuiteThemeVariant } from '@cerberus/suite-desktop-api';
 import { setAutodetect, setTheme } from 'src/actions/suite/suiteActions';
 import {
     ActionColumn,

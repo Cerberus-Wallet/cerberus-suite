@@ -6,8 +6,8 @@ import Animated, {
     withTiming,
 } from 'react-native-reanimated';
 
-import { prepareNativeStyle, useNativeStyles } from '@trezor/styles';
-import { Color } from '@trezor/theme';
+import { prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
+import { Color } from '@cerberus/theme';
 
 import { ButtonIcon, ButtonProps, ButtonSize, buttonToTextSizeMap } from './Button';
 import { BUTTON_PRESS_ANIMATION_DURATION } from './useButtonPressAnimatedStyle';

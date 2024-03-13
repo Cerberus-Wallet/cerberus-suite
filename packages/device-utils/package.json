@@ -1,5 +1,5 @@
 {
-    "name": "@trezor/device-utils",
+    "name": "@cerberus/device-utils",
     "version": "1.0.0",
     "private": true,
     "license": "See LICENSE.md in repo root",
@@ -10,6 +10,6 @@
         "type-check": "yarn g:tsc --build"
     },
     "dependencies": {
-        "@trezor/connect": "workspace:*"
+        "@cerberus/connect": "workspace:*"
     }
 }

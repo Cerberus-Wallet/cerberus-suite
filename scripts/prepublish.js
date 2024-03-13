@@ -10,10 +10,10 @@ console.log('prepublish script running for package: ' + process.env.npm_package_
 //  test all d.ts files for existence of non-resolvable imports such as:
 //  import("packages/protobuf/lib").MessageType
 //  in the example "packages" segment is not resolvable. "packages" is a folder in the monorepo root and typescript
-//  compiler does not replace it with absolute import starting with "@trezor".
-//  there were issues with this in the past: https://github.com/trezor/trezor-suite/issues/10389
+//  compiler does not replace it with absolute import starting with "@cerberus".
+//  there were issues with this in the past: https://github.com/Cerberus-Wallet/cerberus-suite/issues/10389
 //  There are two ways to fix this:
-//  1. rename "packages" folder in monorepo to "@trezor"
+//  1. rename "packages" folder in monorepo to "@cerberus"
 //  2. find and replace all the problematic occurrences before actual release.
 //     not very good solution and yarn advices against doing it https://yarnpkg.com/advanced/lifecycle-scripts
 

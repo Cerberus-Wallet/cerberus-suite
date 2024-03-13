@@ -1,7 +1,7 @@
-import { analytics, EventType } from '@trezor/suite-analytics';
+import { analytics, EventType } from '@cerberus/suite-analytics';
 import { useSelector } from 'react-redux';
 
-import { HELP_CENTER_WIPE_CODE_URL } from '@trezor/urls';
+import { HELP_CENTER_WIPE_CODE_URL } from '@cerberus/urls';
 import { changeWipeCode } from 'src/actions/settings/deviceSettingsActions';
 import {
     ActionButton,

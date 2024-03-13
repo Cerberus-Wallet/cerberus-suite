@@ -3,7 +3,7 @@
 import WebSocket from 'ws';
 import { EventEmitter } from 'events';
 
-import { createDeferred, Deferred } from '@trezor/utils';
+import { createDeferred, Deferred } from '@cerberus/utils';
 
 import { api } from './api';
 

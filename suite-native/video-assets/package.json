@@ -13,7 +13,7 @@
     },
     "dependencies": {
         "@suite-native/atoms": "workspace:*",
-        "@trezor/styles": "workspace:*",
+        "@cerberus/styles": "workspace:*",
         "expo-av": "13.10.5",
         "prettier": "3.2.5",
         "react": "18.2.0",

@@ -1,4 +1,4 @@
-import { Dropdown } from '@trezor/components';
+import { Dropdown } from '@cerberus/components';
 
 import { GraphScaleDropdownItem, Translation } from 'src/components/suite';
 

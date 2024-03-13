@@ -11,8 +11,8 @@ import { useCallback, useEffect } from 'react';
 import { PanGestureHandlerGestureEvent } from 'react-native-gesture-handler';
 import { NativeScrollEvent } from 'react-native';
 
-import { useNativeStyles } from '@trezor/styles';
-import { getScreenHeight } from '@trezor/env-utils';
+import { useNativeStyles } from '@cerberus/styles';
+import { getScreenHeight } from '@cerberus/env-utils';
 
 type GestureHandlerContext = {
     translatePanY: number;

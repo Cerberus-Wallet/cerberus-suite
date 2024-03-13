@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { H2, variables } from '@trezor/components';
+import { H2, variables } from '@cerberus/components';
 import { selectIsDiscoveryAuthConfirmationRequired } from '@suite-common/wallet-core';
 
 import { Translation } from 'src/components/suite/Translation';

@@ -1,8 +1,8 @@
-import { mergeDeepObject } from '@trezor/utils';
+import { mergeDeepObject } from '@cerberus/utils';
 import { connectInitThunk } from '@suite-common/connect-init';
 import { testMocks } from '@suite-common/test-utils';
 import { notificationsActions } from '@suite-common/toast-notifications';
-import { CommonParams, DeviceModelInternal } from '@trezor/connect';
+import { CommonParams, DeviceModelInternal } from '@cerberus/connect';
 
 import { configureStore } from 'src/support/tests/configureStore';
 import { SUITE } from 'src/actions/suite/constants';

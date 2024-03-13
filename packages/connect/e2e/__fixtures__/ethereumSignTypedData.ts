@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/prefer-ts-expect-error */
 // @ts-ignore
-import commonFixtures from '../../../../submodules/trezor-common/tests/fixtures/ethereum/sign_typed_data.json';
+import commonFixtures from '../../../../submodules/cerberus-common/tests/fixtures/ethereum/sign_typed_data.json';
 
 const ethereumDefinitionFixture = [
     {
@@ -31,8 +31,8 @@ const ethereumDefinitionFixture = [
 const fixtures = [...ethereumDefinitionFixture, ...commonFixtures.tests]
     .filter(
         f =>
-            // TODO: probably newly added fixtures to trezor-common
-            // https://github.com/trezor/trezor-suite/issues/5181
+            // TODO: probably newly added fixtures to cerberus-common
+            // https://github.com/Cerberus-Wallet/cerberus-suite/issues/5181
             !['array_of_structs', 'injective_testcase'].includes(f.name),
     )
     .flatMap(({ name, parameters, result }) => {

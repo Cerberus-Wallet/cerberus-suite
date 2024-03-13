@@ -1,6 +1,6 @@
 # Web extension manifest V3 example
 
-`@trezor/connect` running in an `html` page from the extension and communicating with `@trezor/popup` through `chrome.runtime` messages.
+`@cerberus/connect` running in an `html` page from the extension and communicating with `@cerberus/popup` through `chrome.runtime` messages.
 
 Tested in Chrome
 
@@ -10,8 +10,8 @@ Run the commands below in order to get the MV2 and MV3 webextension ready to be 
 
 -   `yarn`
 -   `yarn build:libs`
--   `yarn workspace @trezor/connect-web build:webextension`
--   `yarn workspace @trezor/connect-web build:inline`
+-   `yarn workspace @cerberus/connect-web build:webextension`
+-   `yarn workspace @cerberus/connect-web build:inline`
 -   `node packages/connect-examples/update-webextensions.js`
 
 ## Browsers

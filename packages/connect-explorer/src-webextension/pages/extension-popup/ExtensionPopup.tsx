@@ -5,7 +5,7 @@ export const ExtensionPopup = () => {
 
     return (
         <div className="App">
-            <p>Welcome to Trezor Connect Explorer extension!</p>
+            <p>Welcome to Cerberus Connect Explorer extension!</p>
 
             <button type="button" onClick={openExplorerTab}>
                 Open Connect Explorer

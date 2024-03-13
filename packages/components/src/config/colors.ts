@@ -1,7 +1,7 @@
 // TODO: button hover color could be derived from its based color by applying something like opacity/darkening
 // same goes for gradients
 
-import { boxShadows, colorVariants } from '@trezor/theme';
+import { boxShadows, colorVariants } from '@cerberus/theme';
 
 type LightThemeProps = typeof THEME.light;
 type DarkThemeProps = typeof THEME.dark;

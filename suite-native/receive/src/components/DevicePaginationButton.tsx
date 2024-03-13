@@ -1,9 +1,9 @@
 import { Pressable } from 'react-native';
 
-import { NativeStyle, prepareNativeStyle, useNativeStyles } from '@trezor/styles';
+import { NativeStyle, prepareNativeStyle, useNativeStyles } from '@cerberus/styles';
 import { Icon, IconName } from '@suite-common/icons';
-import { CSSColor, nativeBorders } from '@trezor/theme';
-import { DeviceModelInternal } from '@trezor/connect';
+import { CSSColor, nativeBorders } from '@cerberus/theme';
+import { DeviceModelInternal } from '@cerberus/connect';
 
 import { DevicePaginationActivePage, PaginationCompatibleDeviceModel } from '../types';
 import { DEVICE_SCREEN_BACKGROUND_COLOR, DEVICE_TEXT_COLOR } from '../constants';

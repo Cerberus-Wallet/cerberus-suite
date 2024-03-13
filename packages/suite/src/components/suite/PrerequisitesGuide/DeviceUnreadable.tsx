@@ -1,7 +1,7 @@
 import { useState, MouseEvent } from 'react';
-import { Button } from '@trezor/components';
-import { desktopApi } from '@trezor/suite-desktop-api';
-import { isDesktop, isLinux } from '@trezor/env-utils';
+import { Button } from '@cerberus/components';
+import { desktopApi } from '@cerberus/suite-desktop-api';
+import { isDesktop, isLinux } from '@cerberus/env-utils';
 import { Translation, TroubleshootingTips, UdevDownload } from 'src/components/suite';
 import {
     TROUBLESHOOTING_TIP_BRIDGE_STATUS,

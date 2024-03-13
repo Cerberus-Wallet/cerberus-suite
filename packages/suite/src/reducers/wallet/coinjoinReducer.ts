@@ -1,8 +1,8 @@
 import produce from 'immer';
 import BigNumber from 'bignumber.js';
 
-import { getInputSize, getOutputSize, RoundPhase } from '@trezor/coinjoin';
-import { PartialRecord } from '@trezor/type-utils';
+import { getInputSize, getOutputSize, RoundPhase } from '@cerberus/coinjoin';
+import { PartialRecord } from '@cerberus/type-utils';
 import { Account, AccountKey } from '@suite-common/wallet-types';
 import {
     accountsActions,

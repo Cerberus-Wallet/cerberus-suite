@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
-import { CERBERUS_FORUM_URL, CERBERUS_SUPPORT_URL } from '@trezor/urls';
-import { analytics, EventType } from '@trezor/suite-analytics';
+import { CERBERUS_FORUM_URL, CERBERUS_SUPPORT_URL } from '@cerberus/urls';
+import { analytics, EventType } from '@cerberus/suite-analytics';
 import { resolveStaticPath, isDevEnv } from '@suite-common/suite-utils';
-import { Icon, Link, variables } from '@trezor/components';
-import { isDesktop } from '@trezor/env-utils';
-import { getFirmwareVersion } from '@trezor/device-utils';
+import { Icon, Link, variables } from '@cerberus/components';
+import { isDesktop } from '@cerberus/env-utils';
+import { getFirmwareVersion } from '@cerberus/device-utils';
 import { selectDevice } from '@suite-common/wallet-core';
 
 import { Translation } from 'src/components/suite';
@@ -13,7 +13,7 @@ import { setView } from 'src/actions/suite/guideActions';
 import { useDispatch, useSelector } from 'src/hooks/suite';
 import { GuideViewWrapper, GuideHeader, GuideContent } from 'src/components/guide';
 import { UpdateState } from 'src/reducers/suite/desktopUpdateReducer';
-import { borders } from '@trezor/theme';
+import { borders } from '@cerberus/theme';
 
 const Section = styled.div`
     & + & {

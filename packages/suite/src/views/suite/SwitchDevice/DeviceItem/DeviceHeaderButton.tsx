@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import * as deviceUtils from '@suite-common/suite-utils';
-import { IconButton } from '@trezor/components';
+import { IconButton } from '@cerberus/components';
 
 import { NotificationCard, Translation } from 'src/components/suite';
 import { TrezorDevice } from 'src/types/suite';

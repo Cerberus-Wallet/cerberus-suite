@@ -1,7 +1,7 @@
 import styled, { useTheme } from 'styled-components';
 import { ExchangeProviderInfo } from 'invity-api';
 
-import { Button, Icon, variables } from '@trezor/components';
+import { Button, Icon, variables } from '@cerberus/components';
 import { CoinmarketProviderInfo } from 'src/views/wallet/coinmarket/common';
 import { TradeExchange } from 'src/types/wallet/coinmarketCommonTypes';
 import { goto } from 'src/actions/suite/routerActions';

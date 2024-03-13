@@ -1,7 +1,7 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/core/methods/ChangePin.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/core/methods/ChangePin.js
 
 import { AbstractMethod } from '../core/AbstractMethod';
-import { Assert } from '@trezor/schema-utils';
+import { Assert } from '@cerberus/schema-utils';
 import { PROTO } from '../constants';
 
 export default class ChangePin extends AbstractMethod<'changePin', PROTO.ChangePin> {

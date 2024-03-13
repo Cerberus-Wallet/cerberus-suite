@@ -1,6 +1,6 @@
 import { NETWORK_IDS, PROTOCOL_MAGICS } from '../../src/constants/cardano';
 
-import { MessagesSchema } from '@trezor/protobuf';
+import { MessagesSchema } from '@cerberus/protobuf';
 
 const {
     CardanoAddressType,
@@ -10,7 +10,7 @@ const {
     CardanoTxSigningMode,
 } = MessagesSchema;
 
-// vectors from https://github.com/trezor/trezor-firmware/tree/main/python/trezorlib/tests/device_tests/test_msg_cardano_sign_transaction.py
+// vectors from https://github.com/Cerberus-Wallet/cerberus-firmware/tree/main/python/trezorlib/tests/device_tests/test_msg_cardano_sign_transaction.py
 
 const SAMPLE_INPUTS = {
     byron_input: {

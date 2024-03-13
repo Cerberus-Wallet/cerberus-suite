@@ -1,5 +1,5 @@
 {
-    "name": "@trezor/connect web extension mv2 example",
+    "name": "@cerberus/connect web extension mv2 example",
     "version": "1.0.0",
     "manifest_version": 2,
     "icons": {
@@ -11,7 +11,7 @@
     "permissions": [
         "tabs",
         "notifications",
-        "*://connect.trezor.io/9/*",
+        "*://connect.cerberus.uraanai.com/9/*",
         "*://suite.corp.sldev.cz/*"
     ],
     "background": {
@@ -19,7 +19,7 @@
     },
     "content_scripts": [
         {
-            "matches": ["*://connect.trezor.io/9/popup.html", "*://suite.corp.sldev.cz/*"],
+            "matches": ["*://connect.cerberus.uraanai.com/9/popup.html", "*://suite.corp.sldev.cz/*"],
             "js": ["./vendor/trezor-content-script.js"]
         }
     ],

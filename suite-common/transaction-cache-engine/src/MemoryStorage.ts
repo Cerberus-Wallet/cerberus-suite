@@ -1,7 +1,7 @@
 /* eslint-disable require-await */
 import { A, F, pipe } from '@mobily/ts-belt';
 
-import { AccountTransaction } from '@trezor/connect';
+import { AccountTransaction } from '@cerberus/connect';
 
 import { AccountUniqueKey, AccountUniqueParams, TransactionCacheEngineStorage } from './types';
 import { getAccountUniqueKey } from './utils/asyncUtils';

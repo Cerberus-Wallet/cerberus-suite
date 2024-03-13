@@ -2,7 +2,7 @@ import { A, pipe, S } from '@mobily/ts-belt';
 import { RequireAllOrNone } from 'type-fest';
 
 import { splitAddressToChunks } from '@suite-native/helpers';
-import { DeviceModelInternal } from '@trezor/connect';
+import { DeviceModelInternal } from '@cerberus/connect';
 
 import { DevicePaginationActivePage } from './types';
 

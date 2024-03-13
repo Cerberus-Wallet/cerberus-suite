@@ -1,6 +1,6 @@
-import { HttpServer, parseBodyJSON, parseBodyText, Handler } from '@trezor/node-utils';
-import { Descriptor } from '@trezor/transport/src/types';
-import { arrayPartition } from '@trezor/utils';
+import { HttpServer, parseBodyJSON, parseBodyText, Handler } from '@cerberus/node-utils';
+import { Descriptor } from '@cerberus/transport/src/types';
+import { arrayPartition } from '@cerberus/utils';
 
 import { sessionsClient, createApi } from './core';
 

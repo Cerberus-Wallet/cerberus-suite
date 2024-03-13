@@ -1,5 +1,5 @@
-import { parseElectrumUrl } from '@trezor/utils';
-import { CustomError } from '@trezor/blockchain-link-types/lib/constants/errors';
+import { parseElectrumUrl } from '@cerberus/utils';
+import { CustomError } from '@cerberus/blockchain-link-types/lib/constants/errors';
 import { TcpSocket } from './tcp';
 import { TlsSocket } from './tls';
 import { TorSocket } from './tor';

@@ -15,7 +15,7 @@ import {
 } from 'src/constants/wallet/coinmarket/savings';
 import invityAPI, { SavingsTradeKYCFinalStatuses } from 'src/services/suite/invityAPI';
 import { createReturnLink } from 'src/utils/wallet/coinmarket/savingsUtils';
-import { isDesktop } from '@trezor/env-utils';
+import { isDesktop } from '@cerberus/env-utils';
 
 export const useCoinmarketSavingsSetupWaiting = ({
     selectedAccount,

@@ -5,10 +5,10 @@ import {
     getFwUpdateVersion,
     parseFirmwareChangelog,
 } from '@suite-common/suite-utils';
-import { Icon, Tooltip, variables } from '@trezor/components';
-import { getFirmwareVersion } from '@trezor/device-utils';
+import { Icon, Tooltip, variables } from '@cerberus/components';
+import { getFirmwareVersion } from '@cerberus/device-utils';
 import { AcquiredDevice } from '@suite-common/suite-types';
-import { FirmwareType } from '@trezor/connect';
+import { FirmwareType } from '@cerberus/connect';
 
 import { Translation, TrezorLink } from 'src/components/suite';
 import { FirmwareChangelog } from 'src/components/firmware';

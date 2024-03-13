@@ -1,4 +1,4 @@
-// origin: https://github.com/trezor/connect/blob/develop/src/js/webusb/button.js
+// origin: https://github.com/Cerberus-Wallet/connect/blob/develop/src/js/webusb/button.js
 
 const render = (className = '', url: string) => {
     const query = className || '.trezor-webusb-button';
