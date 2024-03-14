@@ -64,7 +64,7 @@ test.beforeEach(async ({ page }) => {
     // Subscribe to 'request' and 'response' events.
     page.on('request', request => {
         // ignore other than bridge requests
-        if (!request.url().startsWith('http://127.0.0.1:21325')) {
+        if (!request.url().startsWith('http://127.0.0.1:21425')) {
             return;
         }
         requests.push({ url: request.url() });
@@ -73,7 +73,7 @@ test.beforeEach(async ({ page }) => {
     let requestIndex = 0;
     page.on('response', async response => {
         // ignore other than bridge requests
-        if (!response.url().startsWith('http://127.0.0.1:21325')) {
+        if (!response.url().startsWith('http://127.0.0.1:21425')) {
             return;
         }
         if (response.url().endsWith('release/2')) {
@@ -157,7 +157,7 @@ test(`popup closed by user with bridge version ${BRIDGE_VERSION}`, async ({ page
     await page.waitForTimeout(WAIT_AFTER_TEST);
 
     log('checking responses');
-    expect(responses[12].url).toEqual('http://127.0.0.1:21325/post/2');
+    expect(responses[12].url).toEqual('http://127.0.0.1:21425/post/2');
     await page.waitForSelector('text=Method_Interrupted');
 });
 
@@ -199,7 +199,7 @@ test(`device disconnected during device interaction with bridge version ${BRIDGE
 
     // 'device disconnected during action' error
     expect(responses[12]).toMatchObject({
-        url: 'http://127.0.0.1:21325/call/2',
+        url: 'http://127.0.0.1:21425/call/2',
         status: 400,
     });
 

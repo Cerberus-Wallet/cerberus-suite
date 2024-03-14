@@ -94,7 +94,7 @@ test.beforeAll(async () => {
         // Subscribe to 'request' and 'response' events.
         explorerPage.on('request', request => {
             // ignore other than bridge requests
-            if (!request.url().startsWith('http://127.0.0.1:21325')) {
+            if (!request.url().startsWith('http://127.0.0.1:21425')) {
                 return;
             }
             requests.push({ url: request.url() });
@@ -103,7 +103,7 @@ test.beforeAll(async () => {
         let requestIndex = 0;
         explorerPage.on('response', async response => {
             // ignore other than bridge requests
-            if (!response.url().startsWith('http://127.0.0.1:21325')) {
+            if (!response.url().startsWith('http://127.0.0.1:21425')) {
                 return;
             }
             if (response.url().endsWith('release/2')) {
@@ -216,7 +216,7 @@ test.beforeAll(async () => {
             if (!isWebExtension) {
                 // Responses in webextension with service-worker and core running in popup ara happening in
                 // popup and this test is expecting those to happen in explorer. So we skip those for webextension for now.
-                expect(responses[12].url).toEqual('http://127.0.0.1:21325/post/2');
+                expect(responses[12].url).toEqual('http://127.0.0.1:21425/post/2');
             }
             await explorerPage.waitForSelector('text=Method_Interrupted');
         }
@@ -263,7 +263,7 @@ test.beforeAll(async () => {
         if (!isWebExtension) {
             // 'device disconnected during action' error
             expect(responses[12]).toMatchObject({
-                url: 'http://127.0.0.1:21325/call/2',
+                url: 'http://127.0.0.1:21425/call/2',
                 status: 400,
             });
         }
@@ -313,7 +313,7 @@ test.beforeAll(async () => {
     });
 
     // just like the previous skipped test.
-    // request: http://127.0.0.1:21325/call/3
+    // request: http://127.0.0.1:21425/call/3
     // response {"error":"closed device"}
     test.skip(`popup is reloaded by user. bridge version ${bridgeVersion}`, async () => {
         log(`test: ${test.info().title}`);

@@ -29,7 +29,7 @@ describe('Backup misc', () => {
     // post request to / should not get response like this
     // Error response
     // Error code: 404
-    // Message: Error trying to proxy: / Error: HTTPConnectionPool(host='0.0.0.0', port=21325): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fe16a30a460>: Failed to establish a new connection: [Errno 111] Connection refused')).
+    // Message: Error trying to proxy: / Error: HTTPConnectionPool(host='0.0.0.0', port=21425): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fe16a30a460>: Failed to establish a new connection: [Errno 111] Connection refused')).
     // Error code explanation: 404 - Nothing matches the given URI.
     // issue here: https://github.com/Cerberus-Wallet/cerberus-user-env/issues/43
     it.skip('User is doing backup with device A -> disconnects device A -> connects device B with backup already finished', () => {

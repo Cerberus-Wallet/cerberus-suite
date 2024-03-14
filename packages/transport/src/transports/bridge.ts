@@ -13,7 +13,7 @@ import {
 import * as ERRORS from '../errors';
 import { AnyError, AsyncResultWithTypedError, Descriptor } from '../types';
 
-const DEFAULT_URL = 'http://127.0.0.1:21325';
+const DEFAULT_URL = 'http://127.0.0.1:21425';
 
 type BridgeEndpoint =
     | '/'

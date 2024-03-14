@@ -6,17 +6,17 @@
 set -euo pipefail
 
 # Running standalone instance of trezor-user-env
-# docker run -it -e SDL_VIDEODRIVER="dummy" -p "9001:9001" -p "21326:21326" -p "21325:21326" registry.gitlab.com/satoshilabs/trezor/trezor-user-env/trezor-user-env
+# docker run -it -e SDL_VIDEODRIVER="dummy" -p "9001:9001" -p "21326:21326" -p "21425:21326" registry.gitlab.com/satoshilabs/trezor/trezor-user-env/trezor-user-env
 
 # Tweaking trezor-user-env locally
-# docker run -it -e SDL_VIDEODRIVER="dummy" -p "9001:9001" -p "21326:21326" -p "21325:21326" registry.gitlab.com/satoshilabs/trezor/trezor-user-env/trezor-user-env nix-shell
+# docker run -it -e SDL_VIDEODRIVER="dummy" -p "9001:9001" -p "21326:21326" -p "21425:21326" registry.gitlab.com/satoshilabs/trezor/trezor-user-env/trezor-user-env nix-shell
 # do your changes using `vi` and run:
 # [nix-shell:/trezor-user-env]# ./run.sh
 
 # Ports
 # 9001  - websocket server, communication test case > user-env (setup etc...)
 # 21326 - trezord proxy. beacuse of trezord CORS check
-# 21325 - original trezord port redirected to trezor-user-env proxy
+# 21425 - original trezord port redirected to trezor-user-env proxy
 
 ENVIRONMENT=$1
 
@@ -85,7 +85,7 @@ while getopts ":p:i:e:f:u:m:D:hdc" opt; do
     ;;
   m)
     FIRMWARE_MODEL=$OPTARG
-    ;;  
+    ;;
   h) # Script usage
     show_usage
     exit 0

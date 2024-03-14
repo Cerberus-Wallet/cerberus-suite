@@ -5,7 +5,7 @@ import { arrayPartition } from '@cerberus/utils';
 import { sessionsClient, createApi } from './core';
 
 const defaults = {
-    port: 21325,
+    port: 21425,
 };
 
 const str = (value: Record<string, any> | string) => JSON.stringify(value);

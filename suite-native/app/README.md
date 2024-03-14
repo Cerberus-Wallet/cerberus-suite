@@ -19,7 +19,7 @@ It's good to have some tools installed before you begin:
 
 ### Optional:
 
-If you're using [Cerberus User Env](https://github.com/Cerberus-Wallet/cerberus-user-env) while running the app, you might need to map the ports for data transport between Cerberus emulator and Android device emulator by running `adb reverse tcp:21325 tcp:21325`. If you're running the app from device over Wi-Fi, you will instead need to call `adb reverse tcp:8081 tcp:8081`.
+If you're using [Cerberus User Env](https://github.com/Cerberus-Wallet/cerberus-user-env) while running the app, you might need to map the ports for data transport between Cerberus emulator and Android device emulator by running `adb reverse tcp:21425 tcp:21425`. If you're running the app from device over Wi-Fi, you will instead need to call `adb reverse tcp:8081 tcp:8081`.
 
 ## Running app on iOS
 

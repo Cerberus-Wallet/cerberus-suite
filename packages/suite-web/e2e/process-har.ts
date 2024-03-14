@@ -10,11 +10,11 @@ const raw = fs.readFileSync(path.join(filePath, fileName), 'utf-8');
 const json = JSON.parse(raw);
 
 const requests = json.log.entries
-    .filter((entry: any) => entry.request.url.startsWith('http://127.0.0.1:21325'))
+    .filter((entry: any) => entry.request.url.startsWith('http://127.0.0.1:21425'))
     .map((entry: any) => ({
         request: {
             method: entry.request.method,
-            url: entry.request.url.replace('http://127.0.0.1:21325', ''),
+            url: entry.request.url.replace('http://127.0.0.1:21425', ''),
             postData: entry.request.postData,
         },
         response: {

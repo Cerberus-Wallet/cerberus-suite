@@ -27,14 +27,14 @@ testPlaywright.describe.serial('Bridge', () => {
         ]);
 
         // bridge is running
-        const bridgeRes1 = await request.get('http://127.0.0.1:21325/status/');
+        const bridgeRes1 = await request.get('http://127.0.0.1:21425/status/');
         await expectPlaywright(bridgeRes1).toBeOK();
 
         await suite.electronApp.close();
 
         // bridge is not running
         try {
-            await request.get('http://127.0.0.1:21325/status/');
+            await request.get('http://127.0.0.1:21425/status/');
             throw new Error('should have thrown!');
         } catch (err) {
             // ok

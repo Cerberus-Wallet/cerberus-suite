@@ -46,7 +46,7 @@ const BridgeStatus = () => (
             id="TR_TROUBLESHOOTING_TIP_BRIDGE_STATUS_DESCRIPTION"
             values={{
                 a: chunks => (
-                    <CerberusLink variant="underline" href="http://127.0.0.1:21325/status/">
+                    <CerberusLink variant="underline" href="http://127.0.0.1:21425/status/">
                         {chunks}
                     </CerberusLink>
                 ),

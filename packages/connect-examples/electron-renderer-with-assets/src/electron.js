@@ -27,7 +27,7 @@ function init() {
         // filter all requests to cerberus-bridge and change origin
         // cerberus-bridge does not accept origin "file://"
         const filter = {
-            urls: ['http://127.0.0.1:21325/*'],
+            urls: ['http://127.0.0.1:21425/*'],
         };
 
         session.defaultSession.webRequest.onBeforeSendHeaders(filter, (details, callback) => {

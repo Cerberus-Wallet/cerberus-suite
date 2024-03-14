@@ -62,7 +62,7 @@ beforeEach(() => {
 
     if (Cypress.env('USE_CERBERUS_USER_ENV_BRIDGE')) {
         cy.intercept('*', { hostname: '127.0.0.1' }, req => {
-            req.url = req.url.replace('21325', '21326');
+            req.url = req.url.replace('21425', '21326');
         });
     }
 

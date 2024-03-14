@@ -44,7 +44,7 @@ const start = async (bridge: BridgeProcess | CerberusdNode) => {
 
 const getBridgeInstance = () => {
     if (bridgeNode || bridgeNodeTest) {
-        return new CerberusdNode({ port: 21325, api: bridgeNodeTest ? 'udp' : 'usb' });
+        return new CerberusdNode({ port: 21425, api: bridgeNodeTest ? 'udp' : 'usb' });
     }
 
     return new BridgeProcess();

@@ -10,7 +10,7 @@ export class BridgeProcess extends BaseProcess {
     async status(): Promise<Status> {
         // service
         try {
-            const resp = await fetch(`http://127.0.0.1:21325/`, {
+            const resp = await fetch(`http://127.0.0.1:21425/`, {
                 method: 'POST',
                 headers: {
                     Origin: 'https://electron.cerberus.uraanai.com',
