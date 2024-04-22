@@ -67,7 +67,7 @@ export const openNode = (payload: GuideNode) => (dispatch: Dispatch) => {
 
 const getUrl = (feedbackType: FeedbackType) => {
     const typeUri = feedbackType === 'BUG' ? 'bugs' : 'feedback';
-    const base = `https://data.trezer.io/suite/${typeUri}`;
+    const base = `https://data.trezor.io/suite/${typeUri}`;
 
     if (isCodesignBuild()) {
         return `${base}/stable.log`;

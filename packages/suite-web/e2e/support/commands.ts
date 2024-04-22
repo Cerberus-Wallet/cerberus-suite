@@ -69,7 +69,7 @@ beforeEach(() => {
     cy.task('resetCRI');
 
     // disable messaging system on develop
-    cy.intercept('https://data.trezer.io/config/develop/config.v1.jws', req => {
+    cy.intercept('https://data.trezor.io/config/develop/config.v1.jws', req => {
         const mock =
             'eyJhbGciOiJFUzI1NiJ9.ewogICAgInZlcnNpb24iOiAxLAogICAgInRpbWVzdGFtcCI6ICIyMDIyLTA0LTA0VDAwOjAwOjAwKzAwOjAwIiwKICAgICJzZXF1ZW5jZSI6IDEwMCwKICAgICJhY3Rpb25zIjogW10KfQo.6LBUsZIxdDGLxVuHQNvFmphVdRwxMpmEHhRC-vU4horpzWwIlvex8R7w48YInk231OxxovrHX8pVvCDWPaoWRA';
         req.continue(res => {
@@ -77,7 +77,7 @@ beforeEach(() => {
         });
     });
     // disable messaging system in codesign build
-    cy.intercept('https://data.trezer.io/config/stable/config.v1.jws', req => {
+    cy.intercept('https://data.trezor.io/config/stable/config.v1.jws', req => {
         const mock =
             'eyJhbGciOiJFUzI1NiJ9.ewogICAgInZlcnNpb24iOiAxLAogICAgInRpbWVzdGFtcCI6ICIyMDIyLTA0LTA0VDAwOjAwOjAwKzAwOjAwIiwKICAgICJzZXF1ZW5jZSI6IDEwMCwKICAgICJhY3Rpb25zIjogW10KfQo.rM_IWzbu3iRelYC9fB7YA3sHtCWXTJAKTgxJ5WszUj__BTEIvBbd5iBFSaDoNrY4CZejxNCbnzMTLnb5x6ZN2A';
         req.continue(res => {

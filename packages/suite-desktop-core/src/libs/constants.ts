@@ -19,7 +19,7 @@ export const APP_NAME = getAppName();
 export const FILE_PROTOCOL = 'file';
 
 export const APP_SRC = isDevEnv
-    ? 'http://localhost:8000/'
+    ? 'http://localhost:8001/'
     : url.format({
           pathname: 'index.html',
           protocol: FILE_PROTOCOL,

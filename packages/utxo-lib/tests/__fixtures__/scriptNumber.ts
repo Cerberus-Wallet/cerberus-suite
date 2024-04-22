@@ -24,7 +24,7 @@ export const fixtures = [
         number: 127,
     },
     {
-        hex: '8000',
+        hex: '8001',
         number: 128,
     },
     {

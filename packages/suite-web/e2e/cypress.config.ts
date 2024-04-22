@@ -62,7 +62,7 @@ const store: { [key: string]: any } = {};
 export default defineConfig({
     e2e: {
         specPattern: '**/*.test.{js,jsx,ts,tsx}',
-        baseUrl: 'http://localhost:8000',
+        baseUrl: 'http://localhost:8001',
         fixturesFolder: './fixtures',
         downloadsFolder: './downloads',
         supportFile: './support/index.ts',

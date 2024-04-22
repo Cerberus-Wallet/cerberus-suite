@@ -191,7 +191,7 @@ export const AnalyticsConsentScreen = () => {
                             values={{
                                 securityLink: chunks => (
                                     <Link
-                                        href="https://data.trezer.io/legal/privacy-policy.html"
+                                        href="https://data.trezor.io/legal/privacy-policy.html"
                                         label={chunks}
                                     />
                                 ),

@@ -64,7 +64,7 @@ To ensure the authenticity of a configuration file, JSON Web Signatures are used
     -   in CI job in `prebuild` phase for distribution and
     -   manually by `yarn message-system-sign-config` (or `yarn build:libs`) script for local development.
 -   The results are saved into `suite-common/message-system/files` as two files:
-    -   `config.v1.jws` to be uploaded to `https://data.trezer.io/config/$environment/config.vX.jws`
+    -   `config.v1.jws` to be uploaded to `https://data.trezor.io/config/$environment/config.vX.jws`
     -   `config.v1.ts` to be bundled with application
 -   Development private key is baked into project structure together with public keys for both development and production.
 -   Production private key is available only on `codesign` branch in CI (both Gitlab and Github).

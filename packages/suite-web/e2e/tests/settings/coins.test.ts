@@ -37,7 +37,7 @@ describe('Coin Settings', () => {
             // 'sol', FIXME: disabled till available in cerberus-user-env
             'test',
             'tsep',
-            'tgor',
+            'vanry',
             'thol',
             'txrp',
             'tada',

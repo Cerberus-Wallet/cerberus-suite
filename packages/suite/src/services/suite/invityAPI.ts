@@ -63,7 +63,7 @@ class InvityAPI {
     unknownCountry = 'unknown';
 
     servers = {
-        production: 'https://exchange.trezer.io',
+        production: 'https://exchange.trezor.io',
         staging: 'https://staging-exchange.invity.io',
         dev: 'https://dev-exchange.invity.io',
         localhost: 'http://localhost:3330',

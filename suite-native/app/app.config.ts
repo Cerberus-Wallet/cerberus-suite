@@ -95,7 +95,7 @@ export default ({ config }: ConfigContext): ExpoConfig => {
                         localhost: {
                             NSExceptionAllowsInsecureHTTPLoads: true,
                         },
-                        'data.trezer.io': {
+                        'data.trezor.io': {
                             NSExceptionAllowsInsecureHTTPLoads: true,
                             NSIncludesSubdomains: true,
                         },

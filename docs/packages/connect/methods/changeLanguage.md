@@ -11,7 +11,7 @@ const result = await CerberusConnect.changeLanguage(params);
 [Optional common params](commonParams.md)
 
 -   `language` — _required_ `string`. (cs-CZ, de-DE) whatever language variant is available for given model and firmware version
--   `baseUrl` - _optional_ `string`. where language blob should be downloaded from. Default value is https://data.trezer.io
+-   `baseUrl` - _optional_ `string`. where language blob should be downloaded from. Default value is https://data.trezor.io
 
 or
 

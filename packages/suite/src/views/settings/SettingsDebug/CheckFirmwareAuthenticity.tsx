@@ -28,7 +28,7 @@ export const CheckFirmwareAuthenticity = () => {
             <SectionItem data-test="@settings/debug/check-firmware-authenticity">
                 <TextColumn
                     title="Check firmware authenticity"
-                    description="Download firmware binary from data.trezer.io and compare its hash with firmware hash provided by Cerberus device."
+                    description="Download firmware binary from data.trezor.io and compare its hash with firmware hash provided by Cerberus device."
                 />
                 <ActionColumn>
                     <Button

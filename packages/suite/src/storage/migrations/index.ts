@@ -506,7 +506,7 @@ export const migrate: OnUpgradeFunc<SuiteDBSchema> = async (
     }
 
     if (oldVersion < 35) {
-        const accountsToUpdate = ['eth', 'etc', 'trop', 'tgor'];
+        const accountsToUpdate = ['eth', 'etc', 'trop', 'vanry'];
 
         // remove ethereum network transactions
         await updateAll<'txs', DBWalletAccountTransactionCompatible>(transaction, 'txs', tx => {

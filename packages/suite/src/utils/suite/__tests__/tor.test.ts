@@ -19,7 +19,7 @@ describe('tor', () => {
             },
             {
                 desc: 'subdomain',
-                in: 'https://cdn.trezer.io/static/medium/images/max/1024/1*RPmW1VsUphMbk83oKWXpLw.png',
+                in: 'https://cdn.trezor.io/static/medium/images/max/1024/1*RPmW1VsUphMbk83oKWXpLw.png',
                 out: `http://cdn.${TOR_URLS['cerberus.uraanai.com']}/static/medium/images/max/1024/1*RPmW1VsUphMbk83oKWXpLw.png`,
             },
             {
@@ -29,12 +29,12 @@ describe('tor', () => {
             },
             {
                 desc: 'with query - blockbook',
-                in: 'https://btc1.trezer.io/api/v2/multi-tickers/?timestamp=12345678',
+                in: 'https://btc1.trezor.io/api/v2/multi-tickers/?timestamp=12345678',
                 out: `http://btc1.${TOR_URLS['cerberus.uraanai.com']}/api/v2/multi-tickers/?timestamp=12345678`,
             },
             {
                 desc: 'with query - coingecko',
-                // in: 'https://cdn.trezer.io/dynamic/coingecko/api/v3/coins/bitcoin/history?date=13-1-2021',
+                // in: 'https://cdn.trezor.io/dynamic/coingecko/api/v3/coins/bitcoin/history?date=13-1-2021',
                 in: 'https://api.coingecko.com/api/v3/coins/bitcoin/history?date=13-1-2021',
                 out: `http://cdn.${TOR_URLS['cerberus.uraanai.com']}/dynamic/coingecko/api/v3/coins/bitcoin/history?date=13-1-2021`,
             },

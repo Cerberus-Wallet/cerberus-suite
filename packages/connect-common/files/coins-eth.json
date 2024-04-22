@@ -41,12 +41,12 @@
     {
         "blockchain_link": {
             "type": "blockbook",
-            "url": ["https://goerli1.trezor.io", "https://goerli2.trezor.io"]
+            "url": ["https://vanguard.cerberus.uraanai.com"]
         },
-        "chain": "gor",
-        "chain_id": 5,
-        "name": "G\u00f6rli",
-        "shortcut": "tGOR",
+        "chain": "vanry",
+        "chain_id": 78600,
+        "name": "Vanar Vanguard",
+        "shortcut": "VANRY",
         "slip44": 1,
         "support": {
             "connect": true,
@@ -55,7 +55,7 @@
             "T2T1": "2.5.2",
             "T2B1": "2.6.1"
         },
-        "url": "https://goerli.net/#about"
+        "url": "https://vanarchain.com/en/"
     },
     {
         "blockchain_link": {

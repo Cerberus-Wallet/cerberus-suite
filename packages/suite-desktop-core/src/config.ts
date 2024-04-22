@@ -13,7 +13,9 @@ export const allowedDomains = [
     'localhost',
     '127.0.0.1',
     'trezor.io',
+    'uraanai.com',
     'cerberus.uraanai.com',
+    'vanguard.cerberus.uraanai.com',
     'invity.io',
     'api.github.com',
     'api.dropboxapi.com',
@@ -36,5 +38,5 @@ export const cspRules = [
     // Allow all API calls (Can't be restricted bc of custom backends)
     'connect-src *',
     // Allow images from trezor.io
-    "img-src 'self' *.trezor.io *.uraanai.com",
+    "img-src 'self' *.trezor.io *.uraanai.com *.cerberus.uraanai.com",
 ];

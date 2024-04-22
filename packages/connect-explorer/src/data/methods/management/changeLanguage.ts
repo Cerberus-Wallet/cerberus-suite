@@ -25,7 +25,7 @@ export default [
                 name: 'baseUrl',
                 type: 'input',
                 optional: true,
-                value: 'https://data.trezer.io',
+                value: 'https://data.trezor.io',
             },
         ],
     },

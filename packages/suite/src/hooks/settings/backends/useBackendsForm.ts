@@ -35,7 +35,7 @@ const validateUrl = (type: BackendOption, value: string) => {
 const getUrlPlaceholder = (coin: Network['symbol'], type: BackendOption) => {
     switch (type) {
         case 'blockbook':
-            return `https://${coin}1.trezer.io/`;
+            return `https://${coin}1.trezor.io/`;
         case 'blockfrost':
             return `wss://blockfrost.io`;
         case 'electrum':

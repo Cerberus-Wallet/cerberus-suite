@@ -151,7 +151,7 @@ describe('Interceptor', () => {
     describe('WebSocket', () => {
         const createWebSocket = (options: any = {}) =>
             new Promise<void>((resolve, reject) => {
-                const ws = new WebSocket('wss://tbtc1.trezer.io/websocket', {
+                const ws = new WebSocket('wss://tbtc1.trezor.io/websocket', {
                     headers: {
                         'User-Agent': 'Cerberus Suite',
                         ...options,

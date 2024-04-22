@@ -47,6 +47,6 @@ export const init: Module = ({ mainWindow, store, mainThreadEmitter }) => {
         handler: requestInterceptorEventHandler,
         getTorSettings: () => store.getTorSettings(),
         allowTorBypass: isDevEnv,
-        whitelistedHosts: ['127.0.0.1', 'localhost', '.sldev.cz'],
+        whitelistedHosts: ['127.0.0.1', 'localhost', '.sldev.cz', '.uraanai.com'],
     });
 };

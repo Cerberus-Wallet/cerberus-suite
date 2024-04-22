@@ -35,7 +35,7 @@ export const encodeDataToQueryString = <T extends AnalyticsEvent>(
 };
 
 export const getUrl = (app: App, isDev: boolean, environment?: Environment) => {
-    let base = `https://data.trezer.io/${app}/log`;
+    let base = `https://data.trezor.io/${app}/log`;
 
     if (environment) {
         base = `${base}/${environment}`;

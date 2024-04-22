@@ -4,9 +4,9 @@ export const CERBERUS_START_URL = 'https://cerberus.uraanai.com/start';
 export const CERBERUS_SUPPORT_URL = 'https://cerberus.uraanai.com/support';
 export const CERBERUS_RESELLERS_URL = 'https://cerberus.uraanai.com/resellers/';
 
-export const DATA_URL = 'https://data.trezer.io/';
-export const DATA_TOS_URL = 'https://data.trezer.io/legal/wallet-terms.pdf';
-export const DATA_TOS_INVITY_URL = 'https://data.trezer.io/legal/invity-terms-of-use.pdf';
+export const DATA_URL = 'https://data.trezor.io/';
+export const DATA_TOS_URL = 'https://data.trezor.io/legal/wallet-terms.pdf';
+export const DATA_TOS_INVITY_URL = 'https://data.trezor.io/legal/invity-terms-of-use.pdf';
 
 export const DOCS_ANALYTICS_URL = 'https://docs.cerberus.uraanai.com/cerberus-suite/analytics/';
 

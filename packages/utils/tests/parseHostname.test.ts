@@ -3,7 +3,7 @@ import { parseHostname } from '../src/parseHostname';
 const fixtures = [
     ['localHOst', 'localhost'],
     ['localhost.cz:3', 'localhost.cz'],
-    ['wss://btc1.trezer.io/foo', 'btc1.trezer.io'],
+    ['wss://btc1.trezor.io/foo', 'btc1.trezor.io'],
     ['127.0.0.1:9050/?a=b', '127.0.0.1'],
     ['http://suite.cerberus.uraanai.com/', 'suite.cerberus.uraanai.com'],
     ['electrum.exAMple.com:50001:t', 'electrum.example.com'],

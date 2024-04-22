@@ -1001,7 +1001,7 @@ export const composeAndSign = [
         tx: PREPARE_TX({
             utxo: [
                 {
-                    amount: '8000',
+                    amount: '8001',
                     txid: DCBA,
                     vout: 0,
                     address: 'address',

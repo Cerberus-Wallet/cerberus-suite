@@ -122,7 +122,7 @@ export const createAccountFromMyAccounts = (coin: string, label: string) => {
 };
 
 export const interceptDataCerberusIo = (requests: Requests) =>
-    cy.intercept({ hostname: 'data.trezer.io', url: '/suite/log/**' }, req => {
+    cy.intercept({ hostname: 'data.trezor.io', url: '/suite/log/**' }, req => {
         const params = urlSearchParams(req.url);
         requests.push(params);
     });

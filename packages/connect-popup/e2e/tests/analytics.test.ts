@@ -42,7 +42,7 @@ test('reporting', async ({ page }) => {
     let requests = [];
     popup.on('request', request => {
         // ignore other than data cerberus requests
-        if (!request.url().startsWith('https://data.trezer.io/')) {
+        if (!request.url().startsWith('https://data.trezor.io/')) {
             return;
         }
         requests.push({ url: request.url() });

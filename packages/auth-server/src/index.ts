@@ -9,7 +9,7 @@ const corsOptions: CorsOptions = {
     origin: [
         'https://suite.cerberus.uraanai.com', // production web
         /\.sldev\.cz$/, // staging web
-        'http://localhost:8000', // development web
+        'http://localhost:8001', // development web
         'http://cerberusiovpjcahpzkrewelclulmszwbqpzmzgub37gbcjlvluxtruqad.onion', // onion address for production web (Suite does not work here now)
     ],
 };

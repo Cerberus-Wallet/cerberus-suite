@@ -13,6 +13,7 @@ export const prepareTokenDefinitionsMiddleware = createMiddlewareWithExtraDeps(
 
         if (action.type === CHANGE_NETWORKS) {
             action.payload.forEach((networkSymbol: NetworkSymbol) => {
+                console.log(networkSymbol)
                 const tokenDefinitions = selectNetworkTokenDefinitions(getState(), networkSymbol);
 
                 if (!tokenDefinitions) {

@@ -140,7 +140,7 @@ export const others = async (api: CerberusConnect) => {
         coin: 'btc',
         blockchainLink: {
             type: 'blockbook',
-            url: ['https://btc1.trezer.io/'],
+            url: ['https://btc1.trezor.io/'],
         },
     });
 };

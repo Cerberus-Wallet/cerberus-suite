@@ -18,10 +18,10 @@ _Note: All paths below are relative to the root of cerberus-suite repository, if
 1. Run `docker/docker-suite-install.sh`.
 1. Run `docker/docker-suite-test.sh`.
     - A Cypress window should open.
-    - Wait until the project is built (a warning about "http://localhost:8000/ is not available", should disappear on the retry button click).
+    - Wait until the project is built (a warning about "http://localhost:8001/ is not available", should disappear on the retry button click).
 1. Start a test by clicking its name in the Cypress window.
     - It should open a browser window.
-    - If the Suite web app is not loading even after two retries. Stop tests, open a new tab, navigate to http://localhost:8000/, refresh the page until the app is loaded. Close the tab and run tests again.
+    - If the Suite web app is not loading even after two retries. Stop tests, open a new tab, navigate to http://localhost:8001/, refresh the page until the app is loaded. Close the tab and run tests again.
 
 #### Troubleshooting
 
@@ -52,10 +52,10 @@ _Note: All paths below are relative to the root of cerberus-suite repository, if
     - `export DISPLAY=${HOSTNAME}:0`
 1. In terminal window run `docker/docker-suite-test.sh`
     - A Cypress window should open.
-    - Wait until the project is built (a warning about "http://localhost:8000/ is not available", should disappear on the retry button click).
+    - Wait until the project is built (a warning about "http://localhost:8001/ is not available", should disappear on the retry button click).
 1. Start a test by clicking its name in the Cypress window.
     - It should open a browser window.
-    - If the Suite web app is not loading even after two retries. Stop tests, open a new tab, navigate to http://localhost:8000/, refresh the page until the app is loaded. Close the tab and run tests again.
+    - If the Suite web app is not loading even after two retries. Stop tests, open a new tab, navigate to http://localhost:8001/, refresh the page until the app is loaded. Close the tab and run tests again.
 
 #### Troubleshooting
 
@@ -90,7 +90,7 @@ Steps:
     - `export DISPLAY=${HOSTNAME}:0`
 1. In terminal window, navigate to `cerberus-user-env` repo root and run `./run.sh`.
 1. In another window, run web `Suite` with `yarn suite:dev`.
-1. In a third window, run `npx cypress open --project packages/suite-web/e2e --config 'baseUrl=http://localhost:8000'`.
+1. In a third window, run `npx cypress open --project packages/suite-web/e2e --config 'baseUrl=http://localhost:8001'`.
 
 #### Troubleshooting
 

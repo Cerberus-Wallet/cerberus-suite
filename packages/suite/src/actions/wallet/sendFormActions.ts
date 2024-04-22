@@ -433,7 +433,7 @@ export const signTransaction =
             network?.chainId
         ) {
             const isTokenKnown = await fetch(
-                `https://data.trezer.io/firmware/eth-definitions/chain-id/${
+                `https://data.trezor.io/firmware/eth-definitions/chain-id/${
                     network.chainId
                 }/token-${enhancedTxInfo.token.contract.substring(2).toLowerCase()}.dat`,
                 { method: 'HEAD' },
